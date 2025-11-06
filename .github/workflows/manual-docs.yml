@@ -130,18 +130,18 @@ jobs:
         # Add a custom landing page if YARD didn't create one
         if [ ! -f docs/index.html ]; then
           echo "Creating custom index.html..."
-          cat > docs/index.html << 'EOF'
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Lich-5 Documentation</title>
-  <meta http-equiv="refresh" content="0; url=frames.html">
-</head>
-<body>
-  <p>Redirecting to <a href="frames.html">documentation</a>...</p>
-</body>
-</html>
-EOF
+          cat > docs/index.html <<'EOF'
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Lich-5 Documentation</title>
+          <meta http-equiv="refresh" content="0; url=frames.html">
+        </head>
+        <body>
+          <p>Redirecting to <a href="frames.html">documentation</a>...</p>
+        </body>
+        </html>
+        EOF
         fi
 
         # Clean up temporary directory
