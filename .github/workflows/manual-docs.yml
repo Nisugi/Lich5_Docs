@@ -1,0 +1,136 @@
+name: Manual Documentation Generation
+
+on:
+  workflow_dispatch:
+    inputs:
+      provider:
+        description: 'LLM Provider to use'
+        required: true
+        default: 'gemini'
+        type: choice
+        options:
+          - gemini
+          - openai
+          - mock
+      source_repo:
+        description: 'Source repository (owner/repo)'
+        required: true
+        default: 'elanthia-online/lich-5'
+      source_branch:
+        description: 'Branch to document'
+        required: true
+        default: 'main'
+      full_rebuild:
+        description: 'Full rebuild (vs incremental)'
+        required: true
+        type: boolean
+        default: false
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout documentation repo
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Clone Lich repository
+      run: |
+        git clone https://github.com/${{ inputs.source_repo }}.git lich-source
+        cd lich-source
+        git checkout ${{ inputs.source_branch }}
+
+    - name: Validate environment
+      env:
+        LLM_PROVIDER: ${{ inputs.provider }}
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: |
+        python -c "
+        import os
+        import sys
+        sys.path.insert(0, 'src')
+        from providers import ProviderFactory
+
+        validation = ProviderFactory.validate_environment()
+        print(f'Provider: {validation[\"provider\"]}')
+        print(f'Valid: {validation[\"valid\"]}')
+
+        if not validation['valid']:
+            print(f'Missing: {validation[\"missing\"]}')
+            sys.exit(1)
+
+        for warning in validation.get('warnings', []):
+            print(f'Warning: {warning}')
+        "
+
+    - name: Generate documentation
+      env:
+        LLM_PROVIDER: ${{ inputs.provider }}
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: |
+        echo "Generating documentation with ${{ inputs.provider }} provider"
+        python generate_docs.py lich-source/src/lib --provider ${{ inputs.provider }} --yard
+
+    - name: Prepare documentation for GitHub Pages
+      run: |
+        # Find the latest output directory
+        OUTPUT_DIR=$(ls -td output/* | head -1)
+        echo "Using output directory: $OUTPUT_DIR"
+
+        # Copy documented files to docs directory
+        rm -rf docs/*
+        cp -r $OUTPUT_DIR/documented/* docs/ 2>/dev/null || true
+        cp -r $OUTPUT_DIR/yard/* docs/ 2>/dev/null || true
+
+        # Generate index if needed
+        python -c "
+        import os
+        from pathlib import Path
+
+        docs_dir = Path('docs')
+        if docs_dir.exists():
+            files = sorted(docs_dir.glob('*.rb'))
+            with open(docs_dir / 'index.md', 'w') as f:
+                f.write('# Lich5 Documentation\n\n')
+                f.write('Generated with ' + os.environ.get('LLM_PROVIDER', 'unknown') + '\n\n')
+                f.write('## Files\n\n')
+                for file in files:
+                    f.write(f'- [{file.name}]({file.name})\n')
+        "
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: 'Update documentation [skip ci]'
+        branch: docs-update-${{ github.run_number }}
+        title: 'Documentation Update from ${{ inputs.source_repo }}'
+        body: |
+          ## Documentation Update
+
+          - **Provider:** ${{ inputs.provider }}
+          - **Source:** ${{ inputs.source_repo }} @ ${{ inputs.source_branch }}
+          - **Type:** ${{ inputs.full_rebuild && 'Full rebuild' || 'Incremental' }}
+          - **Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          Please review the generated documentation before merging.
+        labels: documentation, automated
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: documentation-${{ github.run_number }}
+        path: output/
+        retention-days: 30

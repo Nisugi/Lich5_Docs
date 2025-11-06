@@ -1,0 +1,85 @@
+name: Check for Lich Updates
+
+on:
+  schedule:
+    # Run weekly on Monday at 3 AM UTC
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+
+jobs:
+  check-updates:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Check for new Lich releases
+      id: check-release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        LICH_REPO: elanthia-online/lich-5
+      run: |
+        # Get latest release from Lich repository
+        LATEST_RELEASE=$(curl -s \
+          -H "Authorization: token $GITHUB_TOKEN" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/$LICH_REPO/releases/latest \
+          | jq -r '.tag_name // "unknown"')
+
+        echo "Latest Lich release: $LATEST_RELEASE"
+
+        # Check if we have a record of the last documented version
+        LAST_DOCUMENTED=""
+        if [ -f ".last_documented_version" ]; then
+          LAST_DOCUMENTED=$(cat .last_documented_version)
+        fi
+
+        echo "Last documented version: ${LAST_DOCUMENTED:-none}"
+
+        # Compare versions
+        if [ "$LATEST_RELEASE" != "unknown" ] && [ "$LATEST_RELEASE" != "$LAST_DOCUMENTED" ]; then
+          echo "new_release=true" >> $GITHUB_OUTPUT
+          echo "latest_version=$LATEST_RELEASE" >> $GITHUB_OUTPUT
+          echo "last_version=$LAST_DOCUMENTED" >> $GITHUB_OUTPUT
+        else
+          echo "new_release=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Get recent commits
+      if: steps.check-release.outputs.new_release == 'true'
+      id: get-commits
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        LICH_REPO: elanthia-online/lich-5
+      run: |
+        # Get commit messages since last documented version
+        if [ -n "${{ steps.check-release.outputs.last_version }}" ]; then
+          COMMITS=$(curl -s \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$LICH_REPO/compare/${{ steps.check-release.outputs.last_version }}...${{ steps.check-release.outputs.latest_version }}" \
+            | jq -r '.commits[]?.commit.message' \
+            | head -10 \
+            | sed 's/^/- /')
+        else
+          COMMITS="(No previous version to compare)"
+        fi
+
+        # Save to file for the issue body
+        echo "$COMMITS" > commits.txt
+
+    - name: Create issue for new release
+      if: steps.check-release.outputs.new_release == 'true'
+      uses: peter-evans/create-issue-from-file@v4
+      with:
+        title: "New Lich Release: ${{ steps.check-release.outputs.latest_version }}"
+        content-filepath: .github/ISSUE_TEMPLATE/new_release.md
+        labels: documentation, needs-update
+
+    - name: Send notification (optional)
+      if: steps.check-release.outputs.new_release == 'true'
+      run: |
+        echo "New Lich release detected: ${{ steps.check-release.outputs.latest_version }}"
+        echo "To generate documentation, run the manual workflow:"
+        echo "https://github.com/${{ github.repository }}/actions/workflows/manual-docs.yml"
