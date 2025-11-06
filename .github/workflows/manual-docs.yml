@@ -168,8 +168,16 @@ EOF
           - **Type:** ${{ inputs.full_rebuild && 'Full rebuild' || 'Incremental' }}
           - **Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
+          ### Files Included:
+          - `docs/` - HTML documentation for GitHub Pages
+          - `output/latest/` - Generated YARD files and manifest for incremental builds
+          - `output/latest/manifest.json` - Tracks processed files for next run
+
           Please review the generated documentation before merging.
         labels: documentation, automated
+        add-paths: |
+          docs/**
+          output/latest/**
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4

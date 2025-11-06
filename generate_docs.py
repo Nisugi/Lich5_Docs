@@ -13,6 +13,7 @@ import json
 import logging
 import re
 import time
+import hashlib
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Any, Optional
@@ -94,8 +95,36 @@ class Lich5DocumentationGenerator:
         except Exception as e:
             logger.error(f"Failed to save manifest: {e}")
 
+    def compute_code_hash(self, content: str) -> str:
+        """
+        Compute hash of Ruby code excluding YARD comments
+        This allows us to detect actual code changes vs documentation changes
+        """
+        lines = content.split('\n')
+        code_lines = []
+        in_yard_comment = False
+
+        for line in lines:
+            stripped = line.strip()
+
+            # Skip YARD comment blocks
+            if stripped.startswith('#') and any(tag in stripped for tag in ['@param', '@return', '@example', '@note', '@see', '@yield']):
+                continue
+            # Skip regular comment lines that look like documentation
+            elif stripped.startswith('#') and len(stripped) > 1 and stripped[1] == ' ':
+                # But keep shebang and encoding comments
+                if stripped.startswith('#!') or 'coding:' in stripped or 'encoding:' in stripped:
+                    code_lines.append(line)
+            else:
+                # Include actual code lines
+                code_lines.append(line)
+
+        # Compute hash of the actual code
+        code_content = '\n'.join(code_lines)
+        return hashlib.sha256(code_content.encode('utf-8')).hexdigest()[:16]
+
     def is_file_processed(self, file_path: Path) -> bool:
-        """Check if a file has already been processed"""
+        """Check if a file has already been processed and hasn't changed"""
         if not self.incremental:
             return False
 
@@ -103,23 +132,56 @@ class Lich5DocumentationGenerator:
         if relative_path in self.manifest.get('processed_files', {}):
             # Check if output file actually exists
             output_file = self.output_dir / 'documented' / file_path.name
-            if output_file.exists():
-                logger.info(f"  Skipping (already processed): {file_path.name}")
-                return True
-            else:
+            if not output_file.exists():
                 logger.info(f"  Output file missing, reprocessing: {file_path.name}")
                 return False
+
+            # Check if source file has changed by comparing hashes
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    current_content = f.read()
+                current_hash = self.compute_code_hash(current_content)
+
+                stored_info = self.manifest['processed_files'][relative_path]
+                stored_hash = stored_info.get('content_hash')
+
+                if current_hash != stored_hash:
+                    logger.info(f"  Source file changed, reprocessing: {file_path.name}")
+                    logger.debug(f"    Hash changed: {stored_hash} -> {current_hash}")
+                    return False
+                else:
+                    logger.info(f"  Skipping (unchanged): {file_path.name}")
+                    return True
+
+            except Exception as e:
+                logger.warning(f"  Error checking file hash, reprocessing: {e}")
+                return False
+
         return False
 
-    def mark_file_processed(self, file_path: Path, success: bool = True):
-        """Mark a file as processed in the manifest"""
+    def mark_file_processed(self, file_path: Path, success: bool = True, content: str = None):
+        """Mark a file as processed in the manifest with content hash"""
         relative_path = str(file_path)
         if success:
             if 'processed_files' not in self.manifest:
                 self.manifest['processed_files'] = {}
+
+            # Compute hash of the source file (without comments)
+            content_hash = None
+            if content:
+                content_hash = self.compute_code_hash(content)
+            else:
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content_hash = self.compute_code_hash(f.read())
+                except Exception as e:
+                    logger.warning(f"Could not compute hash for {file_path}: {e}")
+
             self.manifest['processed_files'][relative_path] = {
                 'timestamp': datetime.now().isoformat(),
-                'provider': self.provider_name
+                'provider': self.provider_name,
+                'content_hash': content_hash,
+                'file_name': file_path.name
             }
         else:
             if 'failed_files' not in self.manifest:

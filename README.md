@@ -1,14 +1,14 @@
 # Lich5 Documentation Automation
 
-Automated YARD documentation generation for the Lich5 Ruby scripting framework using AI (primarily Google Gemini's free tier).
+Automated YARD documentation generation for the Lich5 Ruby scripting framework using AI-powered providers.
 
 ## Features
 
-- **Multi-provider support**: Gemini (free), OpenAI, or Mock for testing
-- **Smart chunking**: Handles large Ruby files by splitting at logical boundaries
-- **GitHub Actions automation**: Manual trigger with optional update monitoring
-- **Cost-conscious**: Optimized for Gemini's free tier (1500 requests/day)
-- **YARD-compatible**: Generates standard Ruby documentation format
+- **Multi-provider support**: OpenAI (recommended), Anthropic Claude, or Mock for testing
+- **Incremental processing**: Smart change detection only reprocesses modified files
+- **GitHub Actions automation**: Manual trigger with full/incremental rebuild options
+- **YARD HTML generation**: Creates browsable documentation website with search
+- **GitHub Pages deployment**: Automatic deployment of documentation to web
 
 ## Quick Start
 
@@ -20,12 +20,17 @@ cd lich5-docs-auto
 pip install -r requirements.txt
 ```
 
-### 2. Get API Key (Free)
+### 2. Get API Key
 
-Get a **free** Google Gemini API key:
-1. Go to https://aistudio.google.com/app/apikey
-2. Click "Create API Key"
-3. Copy your key
+**Recommended: OpenAI**
+1. Go to https://platform.openai.com/api-keys
+2. Create an API key
+3. With $20 credit, you can document thousands of files
+
+**Alternative: Anthropic Claude**
+1. Go to https://console.anthropic.com/
+2. Create an API key
+3. High quality but costs vary by model
 
 ### 3. Configure
 
@@ -33,8 +38,10 @@ Get a **free** Google Gemini API key:
 # Copy example config
 cp .env.example .env
 
-# Edit .env and add your Gemini API key
-GEMINI_API_KEY=your_key_here
+# Edit .env and add your API key
+OPENAI_API_KEY=your_key_here
+# Or for Claude:
+# ANTHROPIC_API_KEY=your_key_here
 ```
 
 ### 4. Test
@@ -43,8 +50,8 @@ GEMINI_API_KEY=your_key_here
 # Test with mock provider (no API needed)
 python test_provider.py --provider mock
 
-# Test with Gemini
-python test_provider.py --provider gemini --file tests/samples/version.rb
+# Test with OpenAI
+python test_provider.py --provider openai --file tests/samples/version.rb
 ```
 
 ### 5. Generate Documentation
@@ -121,28 +128,28 @@ lich5-docs-auto/
 
 ```bash
 # Provider selection
-LLM_PROVIDER=gemini  # or openai, mock
+LLM_PROVIDER=openai  # or anthropic, mock
 
 # API Keys (only set what you need)
-GEMINI_API_KEY=your_gemini_key
-OPENAI_API_KEY=your_openai_key  # Optional
+OPENAI_API_KEY=your_openai_key      # Recommended
+ANTHROPIC_API_KEY=your_anthropic_key  # Alternative
+# GEMINI_API_KEY=your_gemini_key    # Not recommended (severe limits)
 
 # Repository settings
 LICH_REPO_OWNER=elanthia-online
 LICH_REPO_NAME=lich-5
 ```
 
-### Cost Management
+### Provider Comparison
 
-**Gemini Free Tier Limits:**
-- 15 requests per minute
-- 1500 requests per day
-- ~50-100 files per day depending on size
+| Provider | Cost | Speed | Quality | Rate Limits |
+|----------|------|-------|---------|-------------|
+| **OpenAI** | ~$0.50-2.00/run | Fast | Excellent | 60 req/min |
+| **Anthropic** | ~$0.25-1.00/run | Fast | Excellent | 50 req/min |
+| **Gemini** | Free | Slow | Good | 10 req/min, 200/day |
+| **Mock** | Free | Instant | N/A | None |
 
-The generator will:
-- Warn when approaching limits
-- Estimate if job can complete
-- Suggest splitting large jobs
+**Recommendation:** Use OpenAI for best results. Gemini's free tier is too limited for real projects.
 
 ## Command Line Usage
 
@@ -150,7 +157,7 @@ The generator will:
 
 ```bash
 # Test single provider
-python test_provider.py --provider gemini --file path/to/file.rb
+python test_provider.py --provider openai --file path/to/file.rb
 
 # Test all providers
 python test_provider.py --all-providers --file tests/samples/version.rb
@@ -159,15 +166,18 @@ python test_provider.py --all-providers --file tests/samples/version.rb
 ### Generate Documentation
 
 ```bash
-# Basic usage
+# Basic usage (incremental by default)
 python generate_docs.py input_directory
 
 # With options
 python generate_docs.py input_directory \
-  --provider gemini \
-  --output output/custom \
+  --provider openai \
+  --output output/latest \
   --pattern "*.rb" \
   --yard
+
+# Force full rebuild
+python generate_docs.py input_directory --force-rebuild
 ```
 
 ### Options
