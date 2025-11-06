@@ -14,6 +14,8 @@ import logging
 import re
 import time
 import hashlib
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Any, Optional
@@ -32,7 +34,7 @@ class Lich5DocumentationGenerator:
     """Main documentation generator for Lich5 Ruby code"""
 
     def __init__(self, provider_name: Optional[str] = None, output_dir: Optional[str] = None,
-                 incremental: bool = True, force_rebuild: bool = False):
+                 incremental: bool = True, force_rebuild: bool = False, parallel_workers: int = None):
         """
         Initialize the documentation generator
 
@@ -41,10 +43,26 @@ class Lich5DocumentationGenerator:
             output_dir: Output directory for documentation (defaults to 'output/latest')
             incremental: Enable incremental processing (skip already documented files)
             force_rebuild: Force reprocessing of all files even if already documented
+            parallel_workers: Number of parallel workers (None = auto-detect based on provider)
         """
         self.provider_name = provider_name or os.environ.get('LLM_PROVIDER', 'openai')
         self.incremental = incremental and not force_rebuild
         self.force_rebuild = force_rebuild
+
+        # Thread safety - use RLock (reentrant) to allow nested acquisitions
+        self.manifest_lock = threading.RLock()
+        self.file_lock = threading.RLock()
+
+        # Auto-detect parallel workers based on provider rate limits
+        if parallel_workers is None:
+            if self.provider_name == 'openai':
+                self.parallel_workers = 8  # With 400 RPM, we can handle 8 parallel workers easily
+            elif self.provider_name == 'anthropic':
+                self.parallel_workers = 4  # More conservative with 50 RPM
+            else:
+                self.parallel_workers = 1  # Sequential for other providers
+        else:
+            self.parallel_workers = parallel_workers
 
         # Set up output directory
         if output_dir:
@@ -88,12 +106,13 @@ class Lich5DocumentationGenerator:
         return {'processed_files': {}, 'failed_files': [], 'timestamp': datetime.now().isoformat()}
 
     def save_manifest(self):
-        """Save the manifest file"""
-        try:
-            with open(self.manifest_file, 'w') as f:
-                json.dump(self.manifest, f, indent=2, default=str)
-        except Exception as e:
-            logger.error(f"Failed to save manifest: {e}")
+        """Save the manifest file (thread-safe)"""
+        with self.manifest_lock:
+            try:
+                with open(self.manifest_file, 'w') as f:
+                    json.dump(self.manifest, f, indent=2, default=str)
+            except Exception as e:
+                logger.error(f"Failed to save manifest: {e}")
 
     def compute_code_hash(self, content: str) -> str:
         """
@@ -160,37 +179,38 @@ class Lich5DocumentationGenerator:
         return False
 
     def mark_file_processed(self, file_path: Path, success: bool = True, content: str = None):
-        """Mark a file as processed in the manifest with content hash"""
-        relative_path = str(file_path)
-        if success:
-            if 'processed_files' not in self.manifest:
-                self.manifest['processed_files'] = {}
+        """Mark a file as processed in the manifest with content hash (thread-safe)"""
+        with self.manifest_lock:
+            relative_path = str(file_path)
+            if success:
+                if 'processed_files' not in self.manifest:
+                    self.manifest['processed_files'] = {}
 
-            # Compute hash of the source file (without comments)
-            content_hash = None
-            if content:
-                content_hash = self.compute_code_hash(content)
+                # Compute hash of the source file (without comments)
+                content_hash = None
+                if content:
+                    content_hash = self.compute_code_hash(content)
+                else:
+                    try:
+                        with open(file_path, 'r', encoding='utf-8') as f:
+                            content_hash = self.compute_code_hash(f.read())
+                    except Exception as e:
+                        logger.warning(f"Could not compute hash for {file_path}: {e}")
+
+                self.manifest['processed_files'][relative_path] = {
+                    'timestamp': datetime.now().isoformat(),
+                    'provider': self.provider_name,
+                    'content_hash': content_hash,
+                    'file_name': file_path.name
+                }
             else:
-                try:
-                    with open(file_path, 'r', encoding='utf-8') as f:
-                        content_hash = self.compute_code_hash(f.read())
-                except Exception as e:
-                    logger.warning(f"Could not compute hash for {file_path}: {e}")
+                if 'failed_files' not in self.manifest:
+                    self.manifest['failed_files'] = []
+                if relative_path not in self.manifest['failed_files']:
+                    self.manifest['failed_files'].append(relative_path)
 
-            self.manifest['processed_files'][relative_path] = {
-                'timestamp': datetime.now().isoformat(),
-                'provider': self.provider_name,
-                'content_hash': content_hash,
-                'file_name': file_path.name
-            }
-        else:
-            if 'failed_files' not in self.manifest:
-                self.manifest['failed_files'] = []
-            if relative_path not in self.manifest['failed_files']:
-                self.manifest['failed_files'].append(relative_path)
-
-        # Save manifest after each file (in case of interruption)
-        self.save_manifest()
+            # Save manifest after each file (in case of interruption)
+            self.save_manifest()
 
     def create_documentation_prompt(self, file_name: str, content: str) -> tuple[str, str]:
         """
@@ -392,6 +412,61 @@ Preserve ALL original code exactly as-is, only adding documentation comments."""
 
         return '\n'.join(clean_lines).strip()
 
+    def _process_single_file(self, file_path: Path, index: int, total: int) -> bool:
+        """Process a single file (used for parallel processing)"""
+        try:
+            logger.info(f"[{index}/{total}] Processing: {file_path.name}")
+
+            result = self.process_file(file_path)
+            if result:
+                # Save documented file
+                output_file = self.output_dir / 'documented' / file_path.name
+                output_file.parent.mkdir(exist_ok=True, parents=True)
+
+                with self.file_lock:
+                    with open(output_file, 'w', encoding='utf-8') as f:
+                        f.write(result)
+
+                # Mark file as successfully processed
+                self.mark_file_processed(file_path, success=True)
+                return True
+            else:
+                # Mark file as failed
+                self.mark_file_processed(file_path, success=False)
+                return False
+        except Exception as e:
+            logger.error(f"Error processing {file_path.name}: {e}")
+            self.mark_file_processed(file_path, success=False)
+            return False
+
+    def _process_files_parallel(self, files: List[Path]) -> int:
+        """Process multiple files in parallel"""
+        processed_count = 0
+        total_files = len(files)
+
+        logger.info(f"Starting parallel processing with {self.parallel_workers} workers...")
+
+        with ThreadPoolExecutor(max_workers=self.parallel_workers) as executor:
+            # Submit all tasks
+            future_to_file = {
+                executor.submit(self._process_single_file, file, i, total_files): file
+                for i, file in enumerate(files, 1)
+            }
+
+            # Process completed futures
+            for future in as_completed(future_to_file):
+                file_path = future_to_file[future]
+                try:
+                    if future.result():
+                        processed_count += 1
+                        logger.info(f"✓ Completed: {file_path.name}")
+                    else:
+                        logger.warning(f"✗ Failed: {file_path.name}")
+                except Exception as e:
+                    logger.error(f"Exception processing {file_path.name}: {e}")
+
+        return processed_count
+
     def process_directory(self, directory: Path, pattern: str = "*.rb") -> Dict[str, Any]:
         """
         Process all Ruby files in a directory
@@ -424,36 +499,48 @@ Preserve ALL original code exactly as-is, only adding documentation comments."""
                 if response.lower() != 'y':
                     return {'processed': 0, 'failed': 0}
 
-        # Process each file
+        # Process files (parallel or sequential based on settings)
         start_time = time.time()
         processed = 0
 
-        for i, file_path in enumerate(ruby_files, 1):
-            logger.info(f"\n[{i}/{len(ruby_files)}] {file_path.name}")
-
-            # Check if already processed (for incremental mode)
+        # Filter out already processed files
+        files_to_process = []
+        for file_path in ruby_files:
             if self.is_file_processed(file_path):
                 processed += 1  # Count as processed
-                continue
-
-            result = self.process_file(file_path)
-            if result:
-                processed += 1
-
-                # Save documented file
-                output_file = self.output_dir / 'documented' / file_path.name
-                output_file.parent.mkdir(exist_ok=True)
-
-                with open(output_file, 'w', encoding='utf-8') as f:
-                    f.write(result)
-
-                # Mark file as successfully processed
-                self.mark_file_processed(file_path, success=True)
+                logger.info(f"Skipping (already processed): {file_path.name}")
             else:
-                # Mark file as failed
-                self.mark_file_processed(file_path, success=False)
+                files_to_process.append(file_path)
 
-            # Rate limiting is handled automatically by the provider
+        logger.info(f"\nFiles to process: {len(files_to_process)}")
+        logger.info(f"Already processed: {processed}")
+        logger.info(f"Parallel workers: {self.parallel_workers}")
+
+        if files_to_process:
+            if self.parallel_workers > 1 and len(files_to_process) > 1:
+                # Parallel processing
+                processed += self._process_files_parallel(files_to_process)
+            else:
+                # Sequential processing
+                for i, file_path in enumerate(files_to_process, 1):
+                    logger.info(f"\n[{i}/{len(files_to_process)}] Processing: {file_path.name}")
+
+                    result = self.process_file(file_path)
+                    if result:
+                        processed += 1
+
+                        # Save documented file
+                        output_file = self.output_dir / 'documented' / file_path.name
+                        output_file.parent.mkdir(exist_ok=True)
+
+                        with open(output_file, 'w', encoding='utf-8') as f:
+                            f.write(result)
+
+                        # Mark file as successfully processed
+                        self.mark_file_processed(file_path, success=True)
+                    else:
+                        # Mark file as failed
+                        self.mark_file_processed(file_path, success=False)
 
         # Calculate statistics
         elapsed_time = time.time() - start_time
