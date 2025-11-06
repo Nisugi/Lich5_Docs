@@ -81,7 +81,7 @@ jobs:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       run: |
         echo "Generating documentation with ${{ inputs.provider }} provider"
-        python generate_docs.py lich-source/src/lib --provider ${{ inputs.provider }} --yard
+        python generate_docs.py lich-source/lib --provider ${{ inputs.provider }} --yard
 
     - name: Prepare documentation for GitHub Pages
       run: |
