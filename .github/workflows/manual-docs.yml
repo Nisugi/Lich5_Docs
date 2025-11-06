@@ -176,8 +176,8 @@ jobs:
           Please review the generated documentation before merging.
         labels: documentation, automated
         add-paths: |
-          docs/**
-          output/latest/**
+          docs/
+          output/
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4

@@ -393,20 +393,27 @@ Preserve ALL original code exactly as-is, only adding documentation comments."""
 
     def extract_ruby_code(self, response: str) -> str:
         """Extract Ruby code from LLM response"""
-        # Try to find code blocks
+        # Try to find code blocks with 'ruby' tag
         code_blocks = re.findall(r'```ruby\s*(.*?)```', response, re.DOTALL)
+
+        # Also try without language tag
+        if not code_blocks:
+            code_blocks = re.findall(r'```\s*(.*?)```', response, re.DOTALL)
 
         if code_blocks:
             # Return the largest code block (likely the complete file)
-            return max(code_blocks, key=len).strip()
+            code = max(code_blocks, key=len).strip()
+            # Remove any remaining backticks that might be at the start/end
+            code = code.strip('`').strip()
+            return code
 
         # If no code blocks, return cleaned response
         lines = response.split('\n')
         clean_lines = []
 
         for line in lines:
-            # Skip obvious non-code lines
-            if line.strip().startswith(('Here', 'This', 'I', 'The', '---', '###')):
+            # Skip obvious non-code lines and markdown artifacts
+            if line.strip().startswith(('Here', 'This', 'I', 'The', '---', '###', '```')):
                 continue
             clean_lines.append(line)
 
