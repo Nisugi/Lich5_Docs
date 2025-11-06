@@ -15,8 +15,8 @@ Automated YARD documentation generation for the Lich5 Ruby scripting framework u
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/yourusername/lich5-docs-auto.git
-cd lich5-docs-auto
+git clone https://github.com/Nisugi/lich-5-docs.git
+cd lich-5-docs
 pip install -r requirements.txt
 ```
 
