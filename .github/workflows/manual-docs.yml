@@ -153,6 +153,13 @@ jobs:
         rm -rf lich-source
         echo "Cleaned up lich-source directory"
 
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: documentation-${{ github.run_number }}
+        path: output/
+        retention-days: 30
+
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v5
       with:
@@ -178,10 +185,3 @@ jobs:
         add-paths: |
           docs/
           output/
-
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: documentation-${{ github.run_number }}
-        path: output/
-        retention-days: 30
