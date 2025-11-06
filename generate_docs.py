@@ -110,10 +110,10 @@ Preserve ALL original code exactly as-is, only adding documentation comments."""
     def should_chunk_file(self, content: str) -> bool:
         """Determine if a file should be chunked based on size"""
         lines = len(content.split('\n'))
-        # Chunk files larger than 300 lines
-        return lines > 300
+        # Chunk files larger than 500 lines (increased threshold)
+        return lines > 500
 
-    def chunk_ruby_file(self, content: str, chunk_size: int = 200) -> List[str]:
+    def chunk_ruby_file(self, content: str, chunk_size: int = 400) -> List[str]:
         """
         Split Ruby file into logical chunks at method boundaries
 
@@ -210,9 +210,7 @@ Preserve ALL original code exactly as-is, only adding documentation comments."""
                     result = self.provider.generate(user_prompt, system_prompt)
                     documented_chunks.append(self.extract_ruby_code(result))
 
-                    # Small delay between chunks to avoid rate limits
-                    if i < len(chunks):
-                        time.sleep(2)
+                    # Rate limiting is handled automatically by the provider
 
                 # Combine chunks
                 documented_code = '\n\n'.join(documented_chunks)
@@ -313,9 +311,7 @@ Preserve ALL original code exactly as-is, only adding documentation comments."""
                 with open(output_file, 'w', encoding='utf-8') as f:
                     f.write(result)
 
-            # Small delay between files to respect rate limits
-            if i < len(ruby_files):
-                time.sleep(1)
+            # Rate limiting is handled automatically by the provider
 
         # Calculate statistics
         elapsed_time = time.time() - start_time
