@@ -35,10 +35,10 @@ class Lich5DocumentationGenerator:
         Initialize the documentation generator
 
         Args:
-            provider_name: LLM provider to use (defaults to env var or 'gemini')
+            provider_name: LLM provider to use (defaults to env var or 'openai')
             output_dir: Output directory for documentation (defaults to 'output/{timestamp}')
         """
-        self.provider_name = provider_name or os.environ.get('LLM_PROVIDER', 'gemini')
+        self.provider_name = provider_name or os.environ.get('LLM_PROVIDER', 'openai')
 
         # Set up output directory
         if output_dir:
@@ -274,9 +274,9 @@ Preserve ALL original code exactly as-is, only adding documentation comments."""
         """
         logger.info(f"Processing directory: {directory}")
 
-        # Find all Ruby files
-        ruby_files = list(directory.glob(pattern))
-        logger.info(f"Found {len(ruby_files)} Ruby files")
+        # Find all Ruby files recursively
+        ruby_files = list(directory.rglob(pattern))
+        logger.info(f"Found {len(ruby_files)} Ruby files (including subdirectories)")
 
         if not ruby_files:
             logger.warning("No Ruby files found!")
@@ -396,8 +396,8 @@ def main():
     )
     parser.add_argument(
         '--provider',
-        choices=['gemini', 'openai', 'mock'],
-        help='LLM provider to use (defaults to env var or gemini)'
+        choices=['gemini', 'openai', 'mock', 'anthropic'],
+        help='LLM provider to use (defaults to env var or openai)'
     )
     parser.add_argument(
         '--output',
@@ -417,7 +417,7 @@ def main():
     args = parser.parse_args()
 
     # Validate environment
-    provider = args.provider or os.environ.get('LLM_PROVIDER', 'gemini')
+    provider = args.provider or os.environ.get('LLM_PROVIDER', 'openai')
     validation = ProviderFactory.validate_environment(provider)
 
     if not validation['valid']:

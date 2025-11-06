@@ -24,8 +24,8 @@ class ProviderFactory:
         Create an LLM provider instance
 
         Args:
-            provider_name: Name of provider ('gemini', 'openai', 'mock')
-                          If None, uses LLM_PROVIDER env var or defaults to 'gemini'
+            provider_name: Name of provider ('gemini', 'openai', 'mock', 'anthropic')
+                          If None, uses LLM_PROVIDER env var or defaults to 'openai'
             config: Optional configuration dict to override defaults
 
         Returns:
@@ -36,7 +36,7 @@ class ProviderFactory:
         """
         # Determine provider
         if provider_name is None:
-            provider_name = os.environ.get('LLM_PROVIDER', 'gemini').lower()
+            provider_name = os.environ.get('LLM_PROVIDER', 'openai').lower()
 
         logger.info(f"Initializing {provider_name} provider")
 
@@ -68,6 +68,17 @@ class ProviderFactory:
                     "Install with: pip install openai"
                 )
 
+        elif provider_name == 'anthropic':
+            try:
+                from .anthropic_provider import AnthropicProvider
+                provider = AnthropicProvider(provider_config)
+                logger.info("[PAID] Using Anthropic provider (Claude - high quality)")
+            except ImportError as e:
+                raise ImportError(
+                    "Cannot use Anthropic provider: anthropic not installed. "
+                    "Install with: pip install anthropic"
+                )
+
         elif provider_name == 'mock':
             provider = MockProvider(provider_config)
             logger.info("[MOCK] Using Mock provider (testing mode - no API calls)")
@@ -75,7 +86,7 @@ class ProviderFactory:
         else:
             raise ValueError(
                 f"Unknown provider: {provider_name}. "
-                f"Supported providers: gemini, openai, mock"
+                f"Supported providers: openai, anthropic, gemini, mock"
             )
 
         # Log provider stats
@@ -94,20 +105,29 @@ class ProviderFactory:
         """
         return {
             "available_providers": {
-                "gemini": {
-                    "description": "Google Gemini 2.0 Flash",
-                    "cost": "FREE",
-                    "limits": "15 requests/min, 1500 requests/day",
-                    "model": "gemini-2.0-flash-exp",
-                    "recommended": True
-                },
                 "openai": {
                     "description": "OpenAI GPT-4o-mini",
                     "cost": "~$0.50-2.00 per full documentation run",
-                    "limits": "No hard limits (pay per use)",
+                    "limits": "60 requests/min (pay per use)",
                     "model": "gpt-4o-mini",
+                    "recommended": True,
+                    "note": "Best balance of quality, speed, and cost"
+                },
+                "anthropic": {
+                    "description": "Anthropic Claude 3 Haiku",
+                    "cost": "~$0.25-1.00 per full documentation run",
+                    "limits": "50 requests/min (pay per use)",
+                    "model": "claude-3-haiku-20240307",
+                    "recommended": True,
+                    "note": "High quality documentation, good YARD compliance"
+                },
+                "gemini": {
+                    "description": "Google Gemini 2.0 Flash",
+                    "cost": "FREE (but extremely limited)",
+                    "limits": "~10 requests/min, ~200 requests/day",
+                    "model": "gemini-2.0-flash-exp",
                     "recommended": False,
-                    "note": "Use only if Gemini quality is insufficient"
+                    "note": "Only for small projects due to severe rate limits"
                 },
                 "mock": {
                     "description": "Mock provider for testing",
@@ -118,7 +138,7 @@ class ProviderFactory:
                     "note": "For testing pipeline without API calls"
                 }
             },
-            "current_provider": os.environ.get('LLM_PROVIDER', 'gemini'),
+            "current_provider": os.environ.get('LLM_PROVIDER', 'openai'),
             "env_var": "LLM_PROVIDER"
         }
 
@@ -134,7 +154,7 @@ class ProviderFactory:
             Validation results
         """
         if provider_name is None:
-            provider_name = os.environ.get('LLM_PROVIDER', 'gemini').lower()
+            provider_name = os.environ.get('LLM_PROVIDER', 'openai').lower()
 
         results = {
             "provider": provider_name,
@@ -155,6 +175,13 @@ class ProviderFactory:
             else:
                 results["valid"] = True
                 results["warnings"].append("OpenAI will incur costs (~$0.50-2.00 per run)")
+
+        elif provider_name == 'anthropic':
+            if not os.environ.get('ANTHROPIC_API_KEY'):
+                results["missing"].append("ANTHROPIC_API_KEY")
+            else:
+                results["valid"] = True
+                results["warnings"].append("Anthropic will incur costs (~$0.25-1.00 per run)")
 
         elif provider_name == 'mock':
             results["valid"] = True

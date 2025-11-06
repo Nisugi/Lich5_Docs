@@ -6,11 +6,12 @@ on:
       provider:
         description: 'LLM Provider to use'
         required: true
-        default: 'gemini'
+        default: 'openai'
         type: choice
         options:
-          - gemini
           - openai
+          - anthropic
+          - gemini
           - mock
       source_repo:
         description: 'Source repository (owner/repo)'

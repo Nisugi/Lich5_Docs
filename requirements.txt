@@ -6,6 +6,9 @@ google-generativeai>=0.3.0
 # OpenAI SDK (optional - only if using OpenAI)
 openai>=1.0.0
 
+# Anthropic SDK (optional - only if using Claude)
+anthropic>=0.18.0
+
 # Utilities
 python-dotenv>=1.0.0  # For loading .env files
 pyyaml>=6.0          # For YAML configuration
