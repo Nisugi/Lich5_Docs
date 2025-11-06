@@ -55,12 +55,8 @@ class Lich5DocumentationGenerator:
 
         # Auto-detect parallel workers based on provider rate limits
         if parallel_workers is None:
-            if self.provider_name == 'openai':
-                self.parallel_workers = 8  # With 400 RPM, we can handle 8 parallel workers easily
-            elif self.provider_name == 'anthropic':
-                self.parallel_workers = 4  # More conservative with 50 RPM
-            else:
-                self.parallel_workers = 1  # Sequential for other providers
+            # Sequential processing is more reliable - parallel was causing hangs
+            self.parallel_workers = 1
         else:
             self.parallel_workers = parallel_workers
 
