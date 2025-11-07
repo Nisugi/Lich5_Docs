@@ -14,12 +14,6 @@ on:
         type: boolean
         default: true
 
-  push:
-    paths:
-      - 'documented/**/*.rb'
-    branches:
-      - main
-
 jobs:
   build-html:
     runs-on: ubuntu-latest

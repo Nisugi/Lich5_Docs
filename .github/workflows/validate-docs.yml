@@ -13,18 +13,6 @@ on:
         type: boolean
         default: false
 
-  pull_request:
-    paths:
-      - 'documented/**/*.rb'
-      - 'validate_docs.py'
-
-  push:
-    paths:
-      - 'documented/**/*.rb'
-      - 'validate_docs.py'
-    branches:
-      - main
-
 jobs:
   validate:
     runs-on: ubuntu-latest
