@@ -276,6 +276,7 @@ IMPORTANT:
 - Return ONLY the JSON array, no other text
 - Line numbers should match the ORIGINAL file (1-indexed)
 - Anchors should be concise (just the key part like "def method_name" or "class ClassName")
+"""
 
         return system_prompt, user_prompt
 
