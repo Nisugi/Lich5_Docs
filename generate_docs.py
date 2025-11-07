@@ -784,7 +784,15 @@ IMPORTANT:
         logger.info(f"Processing directory: {directory}")
 
         # Find all Ruby files recursively
-        ruby_files = list(directory.rglob(pattern))
+        all_ruby_files = list(directory.rglob(pattern))
+
+        # Exclude critranks directory (large data tables that consume too many tokens)
+        # Use /critranks/ to only exclude the directory, not critranks.rb file
+        ruby_files = [f for f in all_ruby_files if '/critranks/' not in str(f).replace('\\', '/')]
+
+        excluded_count = len(all_ruby_files) - len(ruby_files)
+        if excluded_count > 0:
+            logger.info(f"Excluded {excluded_count} files from /critranks/ directory")
 
         logger.info(f"Found {len(ruby_files)} Ruby files to process")
 
