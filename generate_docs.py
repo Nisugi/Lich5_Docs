@@ -363,12 +363,23 @@ IMPORTANT:
         """
         # Fix invalid escape sequences by double-escaping them
         # This regex finds backslashes that aren't followed by valid JSON escape chars
-        # Valid: " \ / b f n r t u
+        # Valid: " \ / b f n r t
+        # Special case: \uXXXX (must be followed by exactly 4 hex digits)
+
+        # First, fix incomplete \u escapes (not followed by 4 hex digits)
+        sanitized = re.sub(
+            r'\\u(?![0-9A-Fa-f]{4})',  # \u NOT followed by 4 hex digits
+            r'\\\\u',                   # Escape the backslash
+            json_text
+        )
+
+        # Then fix all other invalid escapes
         sanitized = re.sub(
             r'\\(?!["\\/bfnrtu])',  # Backslash NOT followed by valid escape char
             r'\\\\',                 # Replace with double backslash
-            json_text
+            sanitized
         )
+
         return sanitized
 
     def extract_comments_json(self, response: str) -> List[Dict[str, Any]]:
@@ -433,19 +444,30 @@ IMPORTANT:
         # Anchor: "def method_name" or "def self.method" or "def ClassName.method"
         if anchor_stripped.startswith('def '):
             method_sig = anchor_stripped[4:].split('(')[0].strip()
-            # Check for exact match first
-            if f'def {method_sig}' in line:
-                return True
-            # Handle self. variations: "def self.method" might match "def method" in line
-            if 'self.' in method_sig:
-                method_name = method_sig.split('.')[-1]
-                return re.search(rf'\bdef\s+(self\.)?{re.escape(method_name)}\b', line)
-            # Handle ClassName.method variations
+
+            # Extract the base method name (last part after any dots)
             if '.' in method_sig:
                 method_name = method_sig.split('.')[-1]
-                return re.search(rf'\bdef\s+\w+\.{re.escape(method_name)}\b', line)
-            # Simple method name match
-            return re.search(rf'\bdef\s+{re.escape(method_sig)}\b', line)
+            else:
+                method_name = method_sig
+
+            # Flexible matching: anchor "def method" should match:
+            # - def method
+            # - def self.method
+            # - def ClassName.method
+            # And anchor "def self.method" should also match all of those
+
+            # Pattern matches: def <optional-qualifier>.<method_name>
+            # Where qualifier can be "self", a class name, or nothing
+            pattern = rf'\bdef\s+(?:(?:self|\w+)\.)?{re.escape(method_name)}\b'
+            if re.search(pattern, line):
+                return True
+
+            # Fallback: exact match of full signature
+            if f'def {method_sig}' in line:
+                return True
+
+            return False
 
         # Pattern 3: Attribute readers/writers/accessors
         # Anchor: "attr_reader :mana" or "attr_accessor"
