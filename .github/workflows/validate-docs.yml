@@ -40,18 +40,18 @@ jobs:
         if: inputs.file == ''
         run: |
           if [ "${{ inputs.strict }}" == "true" ]; then
-            python validate_docs.py --strict
+            python validate_docs.py --dir documented --strict
           else
-            python validate_docs.py
+            python validate_docs.py --dir documented
           fi
 
       - name: Validate specific file
         if: inputs.file != ''
         run: |
           if [ "${{ inputs.strict }}" == "true" ]; then
-            python validate_docs.py --file "${{ inputs.file }}" --strict
+            python validate_docs.py --dir documented --file "${{ inputs.file }}" --strict
           else
-            python validate_docs.py --file "${{ inputs.file }}"
+            python validate_docs.py --dir documented --file "${{ inputs.file }}"
           fi
 
       - name: Summary
