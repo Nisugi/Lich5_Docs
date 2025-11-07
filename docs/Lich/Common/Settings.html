@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/common/settings.rb</dd>
+    <dd>documented/common/settings.rb</dd>
   </dl>
   
 </div>
@@ -980,6 +980,15 @@
       <pre class="lines">
 
 
+522
+523
+524
+525
+526
+527
+528
+529
+530
 531
 532
 533
@@ -997,19 +1006,10 @@
 545
 546
 547
-548
-549
-550
-551
-552
-553
-554
-555
-556
-557</pre>
+548</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 531</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 522</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_scope_to_use'>scope_to_use</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DEFAULT_SCOPE-constant" title="Lich::Common::Settings::DEFAULT_SCOPE (constant)">DEFAULT_SCOPE</a></span></span>
@@ -1117,6 +1117,15 @@
       <pre class="lines">
 
 
+556
+557
+558
+559
+560
+561
+562
+563
+564
 565
 566
 567
@@ -1127,19 +1136,10 @@
 572
 573
 574
-575
-576
-577
-578
-579
-580
-581
-582
-583
-584</pre>
+575</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 565</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 556</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]=</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_scope_to_use'>scope_to_use</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DEFAULT_SCOPE-constant" title="Lich::Common::Settings::DEFAULT_SCOPE (constant)">DEFAULT_SCOPE</a></span></span>
@@ -1252,6 +1252,7 @@
       <pre class="lines">
 
 
+72
 73
 74
 75
@@ -1268,11 +1269,10 @@
 86
 87
 88
-89
-90</pre>
+89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='comma'>,</span> <span class='id identifier rubyid_prefix'>prefix</span><span class='comma'>,</span> <span class='id identifier rubyid_message_proc'>message_proc</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:log</span><span class='rparen'>)</span>
@@ -1373,6 +1373,7 @@
       <pre class="lines">
 
 
+98
 99
 100
 101
@@ -1392,11 +1393,10 @@
 115
 116
 117
-118
-119</pre>
+118</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 98</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid__reattach_live!'>_reattach_live!</span><span class='lparen'>(</span><span class='id identifier rubyid_proxy'>proxy</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_script_name'>script_name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Script.html" title="Lich::Common::Script (class)">Script</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'><span class='object_link'><a href="Script.html#current-class_method" title="Lich::Common::Script.current (method)">current</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'><span class='object_link'><a href="Script.html#name-instance_method" title="Lich::Common::Script#name (method)">name</a></span></span>
@@ -1475,14 +1475,14 @@
       <pre class="lines">
 
 
-705
-706
-707
-708
-709</pre>
+696
+697
+698
+699
+700</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 705</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 696</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_auto'>auto</span>
   <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deprecated'><span class='object_link'><a href="../../Lich.html#deprecated-class_method" title="Lich.deprecated (method)">deprecated</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Settings.auto</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>not using, not applicable,</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>fe_log:</span> <span class='kw'>true</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:deprecated</span><span class='rparen'>)</span>
@@ -1565,13 +1565,13 @@
       <pre class="lines">
 
 
-696
-697
-698
-699</pre>
+687
+688
+689
+690</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 696</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 687</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_auto='>auto=</span><span class='lparen'>(</span><span class='id identifier rubyid__val'>_val</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deprecated'><span class='object_link'><a href="../../Lich.html#deprecated-class_method" title="Lich.deprecated (method)">deprecated</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Settings.auto=(val)</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>not using, not applicable,</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>fe_log:</span> <span class='kw'>true</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:deprecated</span><span class='rparen'>)</span>
@@ -1633,14 +1633,14 @@
       <pre class="lines">
 
 
-715
-716
-717
-718
-719</pre>
+706
+707
+708
+709
+710</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 715</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 706</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_autoload'>autoload</span>
   <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deprecated'><span class='object_link'><a href="../../Lich.html#deprecated-class_method" title="Lich.deprecated (method)">deprecated</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Settings.autoload</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>not using, not applicable,</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>fe_log:</span> <span class='kw'>true</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:deprecated</span><span class='rparen'>)</span>
@@ -1703,14 +1703,14 @@
       <pre class="lines">
 
 
-685
-686
-687
-688
-689</pre>
+676
+677
+678
+679
+680</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 685</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 676</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_clear'><span class='object_link'><a href="../../top-level-namespace.html#clear-instance_method" title="#clear (method)">clear</a></span></span>
   <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deprecated'><span class='object_link'><a href="../../Lich.html#deprecated-class_method" title="Lich.deprecated (method)">deprecated</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Settings.clear</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>not using, not applicable,</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>fe_log:</span> <span class='kw'>true</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:deprecated</span><span class='rparen'>)</span>
@@ -1798,12 +1798,12 @@
       <pre class="lines">
 
 
+131
 132
-133
-134</pre>
+133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 132</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 131</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_container?'>container?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
@@ -1891,6 +1891,15 @@
       <pre class="lines">
 
 
+383
+384
+385
+386
+387
+388
+389
+390
+391
 392
 393
 394
@@ -1899,19 +1908,10 @@
 397
 398
 399
-400
-401
-402
-403
-404
-405
-406
-407
-408
-409</pre>
+400</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 392</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 383</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_current_script_settings'>current_script_settings</span><span class='lparen'>(</span><span class='id identifier rubyid_scope'>scope</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DEFAULT_SCOPE-constant" title="Lich::Common::Settings::DEFAULT_SCOPE (constant)">DEFAULT_SCOPE</a></span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_script_name'>script_name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Script.html" title="Lich::Common::Script (class)">Script</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'><span class='object_link'><a href="Script.html#current-class_method" title="Lich::Common::Script.current (method)">current</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'><span class='object_link'><a href="Script.html#name-instance_method" title="Lich::Common::Script#name (method)">name</a></span></span>
@@ -1992,12 +1992,12 @@
       <pre class="lines">
 
 
+60
 61
-62
-63</pre>
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_log_level'>get_log_level</span>
   <span class='cvar'>@@log_level</span>
@@ -2099,6 +2099,15 @@
       <pre class="lines">
 
 
+583
+584
+585
+586
+587
+588
+589
+590
+591
 592
 593
 594
@@ -2106,19 +2115,10 @@
 596
 597
 598
-599
-600
-601
-602
-603
-604
-605
-606
-607
-608</pre>
+599</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 592</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 583</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_scoped_setting'>get_scoped_setting</span><span class='lparen'>(</span><span class='id identifier rubyid_scope_string'>scope_string</span><span class='comma'>,</span> <span class='id identifier rubyid_key_name'>key_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='cvar'>@@log_prefix</span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>get_scoped_setting: scope: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_scope_string'>scope_string</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, key: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key_name'>key_name</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -2234,21 +2234,21 @@
       <pre class="lines">
 
 
+747
+748
+749
+750
+751
+752
+753
+754
+755
 756
 757
-758
-759
-760
-761
-762
-763
-764
-765
-766
-767</pre>
+758</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 756</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 747</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_value_from_container'>get_value_from_container</span><span class='lparen'>(</span><span class='id identifier rubyid_container'>container</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_container'>container</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></span><span class='rparen'>)</span>
@@ -2305,13 +2305,13 @@
       <pre class="lines">
 
 
-655
-656
-657
-658</pre>
+646
+647
+648
+649</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 655</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 646</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_load'>load</span>
   <span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LOG_LEVEL_INFO-constant" title="Lich::Common::Settings::LOG_LEVEL_INFO (constant)">LOG_LEVEL_INFO</a></span></span><span class='comma'>,</span> <span class='cvar'>@@log_prefix</span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Settings.load called (legacy, aliasing to refresh_data).</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -2414,22 +2414,22 @@
       <pre class="lines">
 
 
+719
+720
+721
+722
+723
+724
+725
+726
+727
 728
 729
 730
-731
-732
-733
-734
-735
-736
-737
-738
-739
-740</pre>
+731</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 728</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 719</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='cvar'>@@log_prefix</span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>method_missing: method: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method'>method</span><span class='embexpr_end'>}</span><span class='tstring_content'>, args: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, path: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@path_navigator</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -2545,6 +2545,15 @@
       <pre class="lines">
 
 
+458
+459
+460
+461
+462
+463
+464
+465
+466
 467
 468
 469
@@ -2560,19 +2569,10 @@
 479
 480
 481
-482
-483
-484
-485
-486
-487
-488
-489
-490
-491</pre>
+482</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 467</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 458</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_navigate_to_path'>navigate_to_path</span><span class='lparen'>(</span><span class='id identifier rubyid_create_missing'>create_missing</span> <span class='op'>=</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid_scope'>scope</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DEFAULT_SCOPE-constant" title="Lich::Common::Settings::DEFAULT_SCOPE (constant)">DEFAULT_SCOPE</a></span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_root_for_scope'>root_for_scope</span> <span class='op'>=</span> <span class='id identifier rubyid_current_script_settings'>current_script_settings</span><span class='lparen'>(</span><span class='id identifier rubyid_scope'>scope</span><span class='rparen'>)</span>
@@ -2682,16 +2682,16 @@
       <pre class="lines">
 
 
-444
-445
-446
-447
-448
-449
-450</pre>
+435
+436
+437
+438
+439
+440
+441</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 444</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 435</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_refresh_data'>refresh_data</span><span class='lparen'>(</span><span class='id identifier rubyid_scope'>scope</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DEFAULT_SCOPE-constant" title="Lich::Common::Settings::DEFAULT_SCOPE (constant)">DEFAULT_SCOPE</a></span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_script_name'>script_name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Script.html" title="Lich::Common::Script (class)">Script</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'><span class='object_link'><a href="Script.html#current-class_method" title="Lich::Common::Script.current (method)">current</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'><span class='object_link'><a href="Script.html#name-instance_method" title="Lich::Common::Script#name (method)">name</a></span></span>
@@ -2781,12 +2781,12 @@
       <pre class="lines">
 
 
-457
-458
-459</pre>
+448
+449
+450</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 457</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 448</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_reset_path_and_return'>reset_path_and_return</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@path_navigator</span><span class='period'>.</span><span class='id identifier rubyid_reset_path_and_return'>reset_path_and_return</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
@@ -2878,12 +2878,12 @@
       <pre class="lines">
 
 
-746
-747
-748</pre>
+737
+738
+739</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 746</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 737</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_respond_to_missing?'>respond_to_missing?</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='ivar'>@path_navigator</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_method_name'>method_name</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='kw'>super</span>
@@ -2909,8 +2909,6 @@
 
 <p>This factory ensures the proxy directly targets the cached root object for the (script_name, scope) pair. By using the cached root, it avoids “identity drift” bugs where the proxy’s @target differs from the object being persisted by save_proxy_changes.</p>
 
-<p>Creates a root-level SettingsProxy for the given scope.</p>
-
 
   </div>
 </div>
@@ -2925,13 +2923,6 @@
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_settings'>settings</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='period'>.</span><span class='id identifier rubyid_root_proxy_for'>root_proxy_for</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_game'>game</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Creating a root proxy</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_settings_proxy'>settings_proxy</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='period'>.</span><span class='id identifier rubyid_root_proxy_for'>root_proxy_for</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_game'>game</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -2971,40 +2962,6 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>scope</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A logical scope identifier (e.g., “#XMLData.game:#XMLData.name”).</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>script_name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>Script.current.name</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The script namespace; defaults to Script.current.name.</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -3024,37 +2981,9 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="SettingsProxy.html" title="Lich::Common::SettingsProxy (class)">SettingsProxy</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A proxy wrapping the cached root object.</p>
-</div>
-      
-    </li>
-  
 </ul>
 <p class="tag_title">Raises:</p>
 <ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>ArgumentError</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>if scope is nil or empty.</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -3078,18 +3007,18 @@
       <pre class="lines">
 
 
-200
-201
-202
-203
-204
-205
-206
-207
-208</pre>
+191
+192
+193
+194
+195
+196
+197
+198
+199</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 200</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 191</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_root_proxy_for'>root_proxy_for</span><span class='lparen'>(</span><span class='id identifier rubyid_scope'>scope</span><span class='comma'>,</span> <span class='label'>script_name:</span> <span class='const'><span class='object_link'><a href="Script.html" title="Lich::Common::Script (class)">Script</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'><span class='object_link'><a href="Script.html#current-class_method" title="Lich::Common::Script.current (method)">current</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'><span class='object_link'><a href="Script.html#name-instance_method" title="Lich::Common::Script#name (method)">name</a></span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>scope must be a non-empty String</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -3161,13 +3090,13 @@
       <pre class="lines">
 
 
-646
-647
-648
-649</pre>
+637
+638
+639
+640</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 646</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 637</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
   <span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LOG_LEVEL_INFO-constant" title="Lich::Common::Settings::LOG_LEVEL_INFO (constant)">LOG_LEVEL_INFO</a></span></span><span class='comma'>,</span> <span class='cvar'>@@log_prefix</span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Settings.save called (legacy no-op).</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -3229,14 +3158,14 @@
       <pre class="lines">
 
 
-675
-676
-677
-678
-679</pre>
+666
+667
+668
+669
+670</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 675</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 666</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_save_all'>save_all</span>
   <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deprecated'><span class='object_link'><a href="../../Lich.html#deprecated-class_method" title="Lich.deprecated (method)">deprecated</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Settings.save_all</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>not using, not applicable,</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>fe_log:</span> <span class='kw'>true</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:deprecated</span><span class='rparen'>)</span>
@@ -3306,6 +3235,15 @@
       <pre class="lines">
 
 
+206
+207
+208
+209
+210
+211
+212
+213
+214
 215
 216
 217
@@ -3467,19 +3405,10 @@
 373
 374
 375
-376
-377
-378
-379
-380
-381
-382
-383
-384
-385</pre>
+376</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 215</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 206</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_save_proxy_changes'>save_proxy_changes</span><span class='lparen'>(</span><span class='id identifier rubyid_proxy'>proxy</span><span class='rparen'>)</span>
   <span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='cvar'>@@log_prefix</span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>save_proxy_changes: Initiated for proxy.scope: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_proxy'>proxy</span><span class='period'>.</span><span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, proxy.path: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_proxy'>proxy</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, proxy.target_object_id: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_proxy'>proxy</span><span class='period'>.</span><span class='id identifier rubyid_target'>target</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -3733,6 +3662,15 @@
       <pre class="lines">
 
 
+408
+409
+410
+411
+412
+413
+414
+415
+416
 417
 418
 419
@@ -3744,19 +3682,10 @@
 425
 426
 427
-428
-429
-430
-431
-432
-433
-434
-435
-436
-437</pre>
+428</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 417</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 408</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_save_to_database'>save_to_database</span><span class='lparen'>(</span><span class='id identifier rubyid_data_to_save'>data_to_save</span><span class='comma'>,</span> <span class='id identifier rubyid_scope'>scope</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DEFAULT_SCOPE-constant" title="Lich::Common::Settings::DEFAULT_SCOPE (constant)">DEFAULT_SCOPE</a></span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_script_name'>script_name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Script.html" title="Lich::Common::Script (class)">Script</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'><span class='object_link'><a href="Script.html#current-class_method" title="Lich::Common::Script.current (method)">current</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'><span class='object_link'><a href="Script.html#name-instance_method" title="Lich::Common::Script#name (method)">name</a></span></span>
@@ -3878,6 +3807,7 @@
       <pre class="lines">
 
 
+43
 44
 45
 46
@@ -3888,11 +3818,10 @@
 51
 52
 53
-54
-55</pre>
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_set_log_level'>set_log_level</span><span class='lparen'>(</span><span class='id identifier rubyid_level'>level</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_numeric_level'>numeric_level</span> <span class='op'>=</span> <span class='kw'>case</span> <span class='id identifier rubyid_level'>level</span>
@@ -4003,6 +3932,15 @@
       <pre class="lines">
 
 
+491
+492
+493
+494
+495
+496
+497
+498
+499
 500
 501
 502
@@ -4018,19 +3956,10 @@
 512
 513
 514
-515
-516
-517
-518
-519
-520
-521
-522
-523
-524</pre>
+515</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 500</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 491</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_set_script_settings'>set_script_settings</span><span class='lparen'>(</span><span class='id identifier rubyid_scope'>scope</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DEFAULT_SCOPE-constant" title="Lich::Common::Settings::DEFAULT_SCOPE (constant)">DEFAULT_SCOPE</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='cvar'>@@log_prefix</span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>set_script_settings: scope: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, name: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, value: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, current_path: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@path_navigator</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -4140,13 +4069,13 @@
       <pre class="lines">
 
 
-665
-666
-667
-668</pre>
+656
+657
+658
+659</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 665</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 656</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span><span class='lparen'>(</span><span class='id identifier rubyid_scope'>scope</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DEFAULT_SCOPE-constant" title="Lich::Common::Settings::DEFAULT_SCOPE (constant)">DEFAULT_SCOPE</a></span></span><span class='rparen'>)</span> <span class='comment'># Added scope to match to_hash for consistency if used directly
 </span>  <span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LOG_LEVEL_INFO-constant" title="Lich::Common::Settings::LOG_LEVEL_INFO (constant)">LOG_LEVEL_INFO</a></span></span><span class='comma'>,</span> <span class='cvar'>@@log_prefix</span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Settings.to_h called (legacy, aliasing to to_hash).</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -4235,16 +4164,16 @@
       <pre class="lines">
 
 
-633
-634
-635
-636
-637
-638
-639</pre>
+624
+625
+626
+627
+628
+629
+630</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 633</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 624</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_scope'>scope</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#DEFAULT_SCOPE-constant" title="Lich::Common::Settings::DEFAULT_SCOPE (constant)">DEFAULT_SCOPE</a></span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='cvar'>@@log_prefix</span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_hash: scope: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -4366,19 +4295,19 @@
       <pre class="lines">
 
 
-617
-618
-619
-620
-621
-622
-623
-624
-625
-626</pre>
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings.rb', line 617</span>
+      <pre class="code"><span class="info file"># File 'documented/common/settings.rb', line 608</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_wrap_value_if_container'>wrap_value_if_container</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_scope'>scope</span><span class='comma'>,</span> <span class='id identifier rubyid_path_array'>path_array</span><span class='rparen'>)</span>
   <span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='cvar'>@@log_prefix</span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrap_value_if_container: value_class: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>, scope: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, path: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path_array'>path_array</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
@@ -4400,9 +4329,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:36 2025 by
+  Generated on Fri Nov  7 07:10:03 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

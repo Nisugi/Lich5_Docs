@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/gemstone/psms.rb</dd>
+    <dd>documented/gemstone/psms.rb</dd>
   </dl>
   
 </div>
@@ -140,12 +140,6 @@
 
 <p>Useful for interpreting command results and handling expected failure states in scripting logic.  Note that in most cases, the match on a failure message here is not considered an error, but rather that the command succeeded, but the action itself failed for some reason.</p>
 
-<p>A compiled regular expression used to match common failure messages across all PSM (Player System Manager) actions.</p>
-
-<p>This constant combines several game-generated failure messages into a single ‘Regexp` using `Regexp.union`, allowing centralized pattern matching for detecting failed actions.</p>
-
-<p>Useful for interpreting command results and handling expected failure states in scripting logic.  Note that in most cases, the match on a failure message here is not considered an error, but rather that the command succeeded, but the action itself failed for some reason.</p>
-
 
   </div>
 </div>
@@ -159,29 +153,10 @@
   <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Action failed: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_response'>response</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></code></pre>
     
-      
-      <pre class="example code"><code><span class='kw'>if</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='op'>::</span><span class='const'>FAILURES_REGEXES</span><span class='period'>.</span><span class='id identifier rubyid_match?'>match?</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Action failed: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_response'>response</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></code></pre>
-    
   </div>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Regexp</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A union of common failure message patterns.</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -407,18 +382,6 @@
 
 <p>or the Infomon rank of the skill otherwise.</p>
 
-<p>Assess the validity or cost of a given PSM (Player System Manager) skill.</p>
-
-<p>This method checks if a named PSM skill exists in a given category (‘type`), and either:</p>
-
-<pre class="code ruby"><code class="ruby">- Verifies if the character has enough stamina to use it (when `costcheck` is true),
-- Or retrieves the rank of the skill from Infomon (when `costcheck` is false).
-</code></pre>
-
-<p>If the skill cannot be found, it logs an error and raises an exception to halt execution.</p>
-
-<p>or the Infomon rank of the skill otherwise.</p>
-
 
   </div>
 </div>
@@ -426,27 +389,6 @@
   
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Check if a combat maneuver can be used with current stamina</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_assess'>assess</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>feint</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CMan</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span></code></pre>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Get the Infomon rank of a shield technique</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_assess'>assess</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bulwark</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shield</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Check if a feat can be used with current stamina, considering forced RT applications</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_assess'>assess</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield bash</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Feat</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>2</span><span class='rparen'>)</span></code></pre>
     
       
         <h5 class="example_title"><div class='inline'>
@@ -541,92 +483,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The name of the PSM skill to assess.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>type</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The category of the PSM skill (e.g., “Armor”, “CMan”, “Feat”, “Shield”, “Warcry”, “Weapon”).</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>costcheck</span>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>false</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>If true, check whether the character has enough stamina to use the skill.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>forcert_count</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>0</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Optional. Number of forced RT applications, affecting stamina cost calculation (default: 0).</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>, <tt>Object</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Returns a boolean if ‘costcheck` is true (indicating stamina sufficiency),</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -660,20 +520,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>StandardError</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>If the skill name is invalid or not found in the given category.</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -682,34 +528,34 @@
       <pre class="lines">
 
 
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185</pre>
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/psms.rb', line 112</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_assess'>assess</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_costcheck'>costcheck</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_forcert_count'>forcert_count</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_max_forcert_count'>max_forcert_count</span>
@@ -757,10 +603,6 @@
 
 <p>This method checks if the skill is not listed in the cooldowns or debuffs (specifically “Overexerted”). It uses the ‘Lich::Util.normalize_lookup` method to check for the skill’s presence in these lists.</p>
 
-<p>Determines if a given PSM skill is available for use (not in cooldown, and not overexerted).</p>
-
-<p>This method checks if the skill is not listed in the cooldowns or debuffs (specifically “Overexerted”). It uses the ‘Lich::Util.normalize_lookup` method to check for the skill’s presence in these lists.</p>
-
 
   </div>
 </div>
@@ -768,22 +610,6 @@
   
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Check if a combat maneuver is available</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bullrush</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='comment'># =&gt; true (if not in cooldown or overexerted)</span></code></pre>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Check if a shield technique is available</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bulwark</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='comment'># =&gt; false (if in cooldown or overexerted)</span></code></pre>
     
       
         <h5 class="example_title"><div class='inline'>
@@ -821,40 +647,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The name of the PSM skill to check.</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if the skill is available (not in cooldown or overexerted), false otherwise.</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -878,14 +674,14 @@
       <pre class="lines">
 
 
-217
-218
-219
-220
-221</pre>
+153
+154
+155
+156
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms.rb', line 217</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/psms.rb', line 153</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_ignore_cooldown'>ignore_cooldown</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_normalize_lookup'><span class='object_link'><a href="../Util.html#normalize_lookup-class_method" title="Lich::Util.normalize_lookup (method)">normalize_lookup</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Debuffs</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Overexerted</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -913,10 +709,6 @@
 
 <p>This method checks if the character’s Multi-Opponent Combat (MOC) training allows at least the specified number of forcert rounds, based on the result of <span class='object_link'><a href="#max_forcert_count-class_method" title="Lich::Gemstone::PSMS.max_forcert_count (method)">max_forcert_count</a></span>.</p>
 
-<p>Determines whether the character is eligible to perform the given number of forced roundtime (forcert) rounds.</p>
-
-<p>This method checks if the character’s Multi-Opponent Combat (MOC) training allows at least the specified number of forcert rounds, based on the result of <span class='object_link'><a href="#max_forcert_count-class_method" title="Lich::Gemstone::PSMS.max_forcert_count (method)">max_forcert_count</a></span>.</p>
-
 
   </div>
 </div>
@@ -933,33 +725,9 @@
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_can_forcert?'>can_forcert?</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
 <span class='comment'># =&gt; true  (if MOC ranks are 35 or higher)</span></code></pre>
     
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Check if the character can perform 2 forcert rounds</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_can_forcert?'>can_forcert?</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
-<span class='comment'># =&gt; true  (if MOC ranks are 35 or higher)</span></code></pre>
-    
   </div>
 <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
-    <li>
-      
-        <span class='name'>times</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The number of forcert rounds to check eligibility for.</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -996,20 +764,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if the character can perform at least the given number of forcert rounds, false otherwise.</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1018,12 +772,12 @@
       <pre class="lines">
 
 
-245
-246
-247</pre>
+170
+171
+172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms.rb', line 245</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/psms.rb', line 170</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_can_forcert?'>can_forcert?</span><span class='lparen'>(</span><span class='id identifier rubyid_times'>times</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_max_forcert_count'>max_forcert_count</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_times'>times</span>
@@ -1049,10 +803,6 @@
 
 <p>This method searches for a PSM skill (such as a combat maneuver, armor skill, feat, etc.) by matching the normalized ‘long_name` or `short_name` within the specified type’s lookup table.</p>
 
-<p>Finds a Player System Manager (PSM) skill by name within the specified category.</p>
-
-<p>This method searches for a PSM skill (such as a combat maneuver, armor skill, feat, etc.) by matching the normalized ‘long_name` or `short_name` within the specified type’s lookup table.</p>
-
 
   </div>
 </div>
@@ -1065,45 +815,9 @@
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'>find_name</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>feint</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CMan</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='comment'># =&gt; { long_name: &quot;combat_feint&quot;, short_name: &quot;feint&quot;, cost: 10 }</span></code></pre>
     
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'>find_name</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>feint</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CMan</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='comment'># =&gt; { long_name: &quot;combat_feint&quot;, short_name: &quot;feint&quot;, cost: 10 }</span></code></pre>
-    
   </div>
 <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
-    <li>
-      
-        <span class='name'>name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The name of the PSM to find (normalized beforehand).</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>type</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The category of the PSM (e.g., “Armor”, “CMan”, “Feat”, “Shield”, “Warcry”, “Weapon”).</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -1156,20 +870,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A hash representing the PSM’s attributes if found, or nil if not found.</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1178,14 +878,14 @@
       <pre class="lines">
 
 
-105
-106
-107
-108
-109</pre>
+82
+83
+84
+85
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms.rb', line 105</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/psms.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_find_name'>find_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name_normal'>name_normal</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
@@ -1220,17 +920,6 @@
 - 125+ ranks:    4 forcert rounds
 </code></pre>
 
-<p>Determines the maximum number of forced roundtime (forcert) activations allowed based on the character’s Multi-Opponent Combat (MOC) training.</p>
-
-<p>The number of forcert rounds scales with ranks in MOC as follows:</p>
-
-<pre class="code ruby"><code class="ruby">- 0–9 ranks:     0 forcert rounds
-- 10–34 ranks:   1 forcert round
-- 35–74 ranks:   2 forcert rounds
-- 75–124 ranks:  3 forcert rounds
-- 125+ ranks:    4 forcert rounds
-</code></pre>
-
 
   </div>
 </div>
@@ -1238,10 +927,6 @@
   
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
-    
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_max_forcert_count'>max_forcert_count</span>
-<span class='comment'># =&gt; 3  (for a character with 100 MOC ranks)</span></code></pre>
     
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_max_forcert_count'>max_forcert_count</span>
@@ -1266,20 +951,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The maximum number of forcert rounds the character can perform.</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1288,23 +959,23 @@
       <pre class="lines">
 
 
-279
-280
-281
-282
-283
-284
-285
-286
-287
-288
-289
-290
-291
-292</pre>
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms.rb', line 279</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/psms.rb', line 189</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_max_forcert_count'>max_forcert_count</span>
   <span class='kw'>case</span> <span class='const'><span class='object_link'><a href="Skills.html" title="Lich::Gemstone::Skills (module)">Skills</a></span></span><span class='period'>.</span><span class='id identifier rubyid_multi_opponent_combat'>multi_opponent_combat</span>
@@ -1341,10 +1012,6 @@
 
 <p>Converts the input string to a standardized format (e.g., downcased, underscored) using ‘Lich::Util.normalize_name`.</p>
 
-<p>Normalizes a name for internal lookup consistency.</p>
-
-<p>Converts the input string to a standardized format (e.g., downcased, underscored) using ‘Lich::Util.normalize_name`.</p>
-
 
   </div>
 </div>
@@ -1357,29 +1024,9 @@
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name_normal'>name_normal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Some Name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='comment'># =&gt; &quot;some_name&quot;</span></code></pre>
     
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name_normal'>name_normal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Some Name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='comment'># =&gt; &quot;some_name&quot;</span></code></pre>
-    
   </div>
 <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
-    <li>
-      
-        <span class='name'>name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The name to normalize.</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -1416,20 +1063,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The normalized name.</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1438,12 +1071,12 @@
       <pre class="lines">
 
 
-77
-78
-79</pre>
+66
+67
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/psms.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name_normal'>name_normal</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_normalize_name'><span class='object_link'><a href="../Util.html#normalize_name-class_method" title="Lich::Util.normalize_name (method)">normalize_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
@@ -1458,9 +1091,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:35 2025 by
+  Generated on Fri Nov  7 07:10:03 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

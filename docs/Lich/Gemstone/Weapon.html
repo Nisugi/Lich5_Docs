@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/gemstone/psms/weapon.rb</dd>
+    <dd>documented/gemstone/psms/weapon.rb</dd>
   </dl>
   
 </div>
@@ -87,17 +87,6 @@
   <div class="discussion">
     
 <p>Provides logic for using weapon-based PSM techniques.</p>
-
-<p>The Weapon module includes metadata about known weapon techniques (cost, result patterns, buff effect, etc.) and provides methods to:</p>
-<ul><li>
-<p>Check whether a technique is known, affordable, or available</p>
-</li><li>
-<p>Execute techniques with optional FORCERT or specific targets</p>
-</li><li>
-<p>Detect buff activation for some techniques</p>
-</li></ul>
-
-<p>Dynamic methods are generated for each weapon technique using its short and long name. Provides logic for using weapon-based PSM techniques.</p>
 
 <p>The Weapon module includes metadata about known weapon techniques (cost, result patterns, buff effect, etc.) and provides methods to:</p>
 <ul><li>
@@ -143,8 +132,6 @@
     
 <p>Internal registry of weapon techniques.</p>
 
-<p>Internal registry of weapon techniques.</p>
-
 
   </div>
 </div>
@@ -152,33 +139,6 @@
   
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="../../String.html" title="String (class)">String</a></span>, <span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Mapping of technique names to their metadata, including:</p>
-<ul><li>
-<p>‘:short_name` [String]</p>
-</li><li>
-<p>‘:cost` [Integer]</p>
-</li><li>
-<p>‘:regex` [Regexp] expected combat log output</p>
-</li><li>
-<p>‘:assault_rx` [Regexp, optional] alternate result pattern for assault-style moves</p>
-</li><li>
-<p>‘:buff` [String, optional] buff name to check via Effects::Buffs</p>
-</li><li>
-<p>‘:usage` [String, optional] override for default usage command</p>
-</li></ul>
-</div>
-      
-    </li>
   
     <li>
       
@@ -458,7 +418,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Determines if an Weapon technique is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
+<p>Determines if a weapon technique is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
 </div></span>
   
 </li>
@@ -482,7 +442,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Determines if an Weapon technique is available to use right now by testing: - if the technique is known - if the technique is affordable - if the technique is not on cooldown - if the character is not overexerted - if the character is capable of performing the number of FORCERTs specified.</p>
+<p>Determines if a weapon technique is available to use right now by testing: - if the technique is known - if the technique is affordable - if the technique is not on cooldown - if the character is not overexerted - if the character is capable of performing the number of FORCERTs specified.</p>
 </div></span>
   
 </li>
@@ -530,7 +490,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Determines if the character knows an weapon technique at all, and optionally if the character knows it at the specified rank.</p>
+<p>Determines if the character knows a weapon technique at all, and optionally if the character knows it at the specified rank.</p>
 </div></span>
   
 </li>
@@ -631,8 +591,6 @@
     
 <p>Looks up the rank known of a weapon technique.</p>
 
-<p>Looks up the rank known of a weapon technique.</p>
-
 
   </div>
 </div>
@@ -645,29 +603,9 @@
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>volley</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>2</span>
 <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>volley</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>0</span> <span class='comment'># if not known</span></code></pre>
     
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>volley</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>2</span>
-<span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>volley</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>0</span> <span class='comment'># if not known</span></code></pre>
-    
   </div>
 <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
-    <li>
-      
-        <span class='name'>name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The name of the weapon technique</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -704,20 +642,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The rank of the technique, or 0 if unknown</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -726,12 +650,12 @@
       <pre class="lines">
 
 
-242
-243
-244</pre>
+212
+213
+214</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/weapon.rb', line 242</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/psms/weapon.rb', line 212</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_assess'><span class='object_link'><a href="PSMS.html#assess-class_method" title="Lich::Gemstone::PSMS.assess (method)">assess</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Weapon</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -753,8 +677,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>DEPRECATED: Use #buff_active? instead. Checks whether a technique’s buff is currently active.</p>
-
 <p>DEPRECATED: Use #buff_active? instead. Checks whether a technique’s buff is currently active.</p>
 
 
@@ -780,40 +702,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Technique name</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if the buff is active</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -837,14 +729,14 @@
       <pre class="lines">
 
 
-343
-344
-345
-346
-347</pre>
+276
+277
+278
+279
+280</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/weapon.rb', line 343</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/psms/weapon.rb', line 276</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_active?'>active?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='comment'>## DEPRECATED ##
@@ -868,8 +760,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Determines if an Weapon technique is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
-
 <p>Determines if a weapon technique is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
 
 
@@ -879,10 +769,6 @@
   
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
-    
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weapon_blessing</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='comment'># if enough skill and stamina
-</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weapon_blessing</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>false</span>  <span class='comment'># if not enough skill or stamina</span></code></pre>
     
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weapon_blessing</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='comment'># if enough skill and stamina
@@ -926,58 +812,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The name of the Weapon technique</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>forcert_count</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>0</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Optionally, the count of FORCERTs being used, including for this execution (default: 0)</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if the technique can be used with available FORCERTs</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -1001,13 +839,13 @@
       <pre class="lines">
 
 
-287
-288
-289
-290</pre>
+239
+240
+241
+242</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/weapon.rb', line 287</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/psms/weapon.rb', line 239</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='cvar'>@@weapon_techniques</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'><span class='object_link'><a href="PSMS.html#find_name-class_method" title="Lich::Gemstone::PSMS.find_name (method)">find_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weapon</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:type</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='symbol'>:area_of_effect</span> <span class='op'>&amp;&amp;</span> <span class='const'><span class='object_link'><a href="Effects.html" title="Lich::Gemstone::Effects (module)">Effects</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Effects.html#Buffs-constant" title="Lich::Gemstone::Effects::Buffs (constant)">Buffs</a></span></span><span class='period'>.</span><span class='id identifier rubyid_active?'>active?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Glorious Momentum</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1030,20 +868,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Determines if an Weapon technique is available to use right now by testing:</p>
-<ul><li>
-<p>if the technique is known</p>
-</li><li>
-<p>if the technique is affordable</p>
-</li><li>
-<p>if the technique is not on cooldown</p>
-</li><li>
-<p>if the character is not overexerted</p>
-</li><li>
-<p>if the character is capable of performing the number of FORCERTs specified</p>
-</li></ul>
-
-<p>blocked by overexertion Determines if a weapon technique is available to use right now by testing:</p>
+<p>Determines if a weapon technique is available to use right now by testing:</p>
 <ul><li>
 <p>if the technique is known</p>
 </li><li>
@@ -1069,64 +894,9 @@
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weapon_blessing</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='comment'># if known, affordable, not on cooldown, and not overexerted</span></code></pre>
     
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weapon_blessing</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='comment'># if known, affordable, not on cooldown, and not overexerted</span></code></pre>
-    
   </div>
 <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
-    <li>
-      
-        <span class='name'>name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The name of the Weapon technique</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>min_rank</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>1</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Optionally, the minimum rank to check (default: 1)</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>forcert_count</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>0</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Optionally, the count of FORCERTs being used (default: 0)</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -1199,20 +969,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if the technique is known, affordable, and not on cooldown or</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1221,21 +977,21 @@
       <pre class="lines">
 
 
-320
-321
-322
-323
-324
-325
-326
-327
-328
-329
-330
-331</pre>
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/weapon.rb', line 320</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/psms/weapon.rb', line 258</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'><span class='object_link'><a href="#known%3F-class_method" title="Lich::Gemstone::Weapon.known? (method)">known?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='id identifier rubyid_min_rank'>min_rank</span><span class='rparen'>)</span>
@@ -1266,8 +1022,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Checks whether the technique’s buff is currently active.</p>
-
 <p>Checks whether the technique’s buff is currently active.</p>
 
 
@@ -1301,40 +1055,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The technique’s name</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if buff is already active</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -1358,14 +1082,14 @@
       <pre class="lines">
 
 
-359
-360
-361
-362
-363</pre>
+288
+289
+290
+291
+292</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/weapon.rb', line 359</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/psms/weapon.rb', line 288</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_buff_active?'>buff_active?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_buff'>buff</span> <span class='op'>=</span> <span class='cvar'>@@weapon_techniques</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'><span class='object_link'><a href="PSMS.html#find_name-class_method" title="Lich::Gemstone::PSMS.find_name (method)">find_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weapon</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:buff</span><span class='rbracket'>]</span>
@@ -1389,8 +1113,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Determines if the character knows an weapon technique at all, and optionally if the character knows it at the specified rank.</p>
-
 <p>Determines if the character knows a weapon technique at all, and optionally if the character knows it at the specified rank.</p>
 
 
@@ -1400,10 +1122,6 @@
   
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
-    
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>volley</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='comment'># if any number of ranks is known
-</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>volley</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='int'>2</span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>false</span> <span class='comment'># if only rank 1 is known</span></code></pre>
     
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>volley</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='comment'># if any number of ranks is known
@@ -1447,58 +1165,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The name of the weapon technique</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>min_rank</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>1</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Optionally, the minimum rank to test against (default: 1, so known)</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if the technique is known at or above the given rank</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -1522,13 +1192,13 @@
       <pre class="lines">
 
 
-264
-265
-266
-267</pre>
+225
+226
+227
+228</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/weapon.rb', line 264</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/psms/weapon.rb', line 225</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='int'>1</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_min_rank'>min_rank</span> <span class='op'>=</span> <span class='int'>1</span> <span class='kw'>unless</span> <span class='id identifier rubyid_min_rank'>min_rank</span> <span class='op'>&gt;=</span> <span class='int'>1</span> <span class='comment'># in case a 0 or below is passed
@@ -1553,8 +1223,6 @@
     
 <p>Returns the “success” regex associated with a given Weapon technique name. This regex is used to match the expected output when the technique is successfully <strong>attempted</strong>. It does not necessarily indicate that the technique was successful in its effect, or even that the technique was executed at all.</p>
 
-<p>Returns the “success” regex associated with a given Weapon technique name. This regex is used to match the expected output when the technique is successfully <strong>attempted</strong>. It does not necessarily indicate that the technique was successful in its effect, or even that the technique was executed at all.</p>
-
 
   </div>
 </div>
@@ -1566,28 +1234,9 @@
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_regexp'>regexp</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weapon_blessing</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>As \w+ prays? over \w+(?:&#39;s)? [\w\s]+, you sense that (?:the Arkati&#39;s|a) blessing will be granted against magical attacks\.</span><span class='regexp_end'>/i</span></span></code></pre>
     
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_regexp'>regexp</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weapon_blessing</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>As \w+ prays? over \w+(?:&#39;s)? [\w\s]+, you sense that (?:the Arkati&#39;s|a) blessing will be granted against magical attacks\.</span><span class='regexp_end'>/i</span></span></code></pre>
-    
   </div>
 <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
-    <li>
-      
-        <span class='name'>name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The technique name</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -1624,20 +1273,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Regexp</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The regex used to match technique success or effects</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1646,12 +1281,12 @@
       <pre class="lines">
 
 
-467
-468
-469</pre>
+377
+378
+379</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/weapon.rb', line 467</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/psms/weapon.rb', line 377</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_regexp'>regexp</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='cvar'>@@weapon_techniques</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'><span class='object_link'><a href="PSMS.html#find_name-class_method" title="Lich::Gemstone::PSMS.find_name (method)">find_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weapon</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:regex</span><span class='rbracket'>]</span>
@@ -1675,8 +1310,6 @@
     
 <p>Attempts to use a Weapon technique, optionally on a target.</p>
 
-<p>Attempts to use a Weapon technique, optionally on a target.</p>
-
 
   </div>
 </div>
@@ -1689,83 +1322,9 @@
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weapon_blessing</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># attempt to use Weapon blessing on self
 </span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weapon_blessing</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Dissonance</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># attempt to use Weapon blessing on Dissonance</span></code></pre>
     
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weapon_blessing</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># attempt to use Weapon blessing on self
-</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Weapon_blessing</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Dissonance</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># attempt to use Weapon blessing on Dissonance</span></code></pre>
-    
   </div>
 <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
-    <li>
-      
-        <span class='name'>name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The name of the Weapon technique</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>target</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>Integer</tt>, <tt>GameObj</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>&quot;&quot;</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The target of the technique (optional).  If unspecified, the technique will be used on the character.</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>results_of_interest</span>
-      
-      
-        <span class='type'>(<tt>Regexp</tt>, <tt>nil</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>nil</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Additional regex to capture from result (optional)</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>forcert_count</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>0</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Number of FORCERTs to use (default: 0)</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -1856,20 +1415,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The result of the regex match, or nil if unavailable</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1878,72 +1423,72 @@
       <pre class="lines">
 
 
-385
-386
-387
-388
-389
-390
-391
-392
-393
-394
-395
-396
-397
-398
-399
-400
-401
-402
-403
-404
-405
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415
-416
-417
-418
-419
-420
-421
-422
-423
-424
-425
-426
-427
-428
-429
-430
-431
-432
-433
-434
-435
-436
-437
-438
-439
-440
-441
-442
-443
-444
-445
-446
-447</pre>
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/weapon.rb', line 385</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/psms/weapon.rb', line 304</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>results_of_interest:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Weapon (module)">Weapon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'><span class='object_link'><a href="#available%3F-class_method" title="Lich::Gemstone::Weapon.available? (method)">available?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='id identifier rubyid_forcert_count'>forcert_count</span><span class='rparen'>)</span>
@@ -2027,8 +1572,6 @@
     
 <p>Returns a summary array of weapon techniques and metadata.</p>
 
-<p>Returns a summary array of weapon techniques and metadata.</p>
-
 
   </div>
 </div>
@@ -2059,20 +1602,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Each hash contains :long_name, :short_name, :cost</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -2081,18 +1610,18 @@
       <pre class="lines">
 
 
-218
-219
-220
-221
-222
-223
-224
-225
-226</pre>
+195
+196
+197
+198
+199
+200
+201
+202
+203</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/weapon.rb', line 218</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/psms/weapon.rb', line 195</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_weapon_lookups'>weapon_lookups</span>
   <span class='cvar'>@@weapon_techniques</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_long_name'>long_name</span><span class='comma'>,</span> <span class='id identifier rubyid_psm'>psm</span><span class='op'>|</span>
@@ -2113,9 +1642,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:36 2025 by
+  Generated on Fri Nov  7 07:10:04 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/init.rb</dd>
+    <dd>documented/init.rb</dd>
   </dl>
   
 </div>
@@ -166,7 +166,18 @@
         <dd><pre class="code"><span class='int'>0x00000020</span></pre></dd>
       
         <dt id="MB_ICONWARNING-constant" class="">MB_ICONWARNING =
-          
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Windows MessageBox icon constant for warning dialogs</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
         </dt>
         <dd><pre class="code"><span class='int'>0x00000030</span></pre></dd>
       
@@ -836,7 +847,6 @@ end
       <pre class="lines">
 
 
-467
 468
 469
 470
@@ -845,10 +855,11 @@ end
 473
 474
 475
-476</pre>
+476
+477</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 467</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 468</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='id identifier rubyid_admin?'>admin?</span>
   <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='id identifier rubyid_isXP?'><span class='object_link'><a href="#isXP%3F-class_method" title="Win32.isXP? (method)">isXP?</a></span></span>
@@ -880,7 +891,6 @@ end
       <pre class="lines">
 
 
-478
 479
 480
 481
@@ -890,10 +900,11 @@ end
 485
 486
 487
-488</pre>
+488
+489</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 478</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 479</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>AdminShellExecute</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='comment'># open ruby/lich as admin and tell it to open something else
@@ -1008,7 +1019,6 @@ end
       <pre class="lines">
 
 
-206
 207
 208
 209
@@ -1042,10 +1052,11 @@ end
 237
 238
 239
-240</pre>
+240
+241</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 206</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 207</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>CreateProcess</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpCommandLine</span><span class='rbracket'>]</span>
@@ -1118,12 +1129,12 @@ end
       <pre class="lines">
 
 
-246
 247
-248</pre>
+248
+249</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 246</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 247</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>GetCurrentProcess</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="Win32/Kernel32.html" title="Win32::Kernel32 (module)">Kernel32</a></span></span><span class='period'>.</span><span class='const'>GetCurrentProcess</span>
@@ -1148,14 +1159,14 @@ end
       <pre class="lines">
 
 
-250
 251
 252
 253
-254</pre>
+254
+255</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 250</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 251</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>GetExitCodeProcess</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_lpExitCode'>lpExitCode</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1182,12 +1193,12 @@ end
       <pre class="lines">
 
 
-193
 194
-195</pre>
+195
+196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 193</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 194</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>GetLastError</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="Win32/Kernel32.html" title="Win32::Kernel32 (module)">Kernel32</a></span></span><span class='period'>.</span><span class='const'>GetLastError</span><span class='lparen'>(</span><span class='rparen'>)</span>
@@ -1212,15 +1223,15 @@ end
       <pre class="lines">
 
 
-256
 257
 258
 259
 260
-261</pre>
+261
+262</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 256</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 257</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>GetModuleFileName</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:nSize</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>256</span>
@@ -1248,7 +1259,6 @@ end
       <pre class="lines">
 
 
-293
 294
 295
 296
@@ -1260,10 +1270,11 @@ end
 302
 303
 304
-305</pre>
+305
+306</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 293</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 294</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>GetTokenInformation</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:TokenInformationClass</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#TokenElevation-constant" title="Win32::TokenElevation (constant)">TokenElevation</a></span></span>
@@ -1298,15 +1309,15 @@ end
       <pre class="lines">
 
 
-263
 264
 265
 266
 267
-268</pre>
+268
+269</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 263</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 264</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>GetVersionEx</span>
   <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>156</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span> <span class='op'>*</span> <span class='int'>128</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LLLLLa128SSSCC</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1363,12 +1374,12 @@ end
       <pre class="lines">
 
 
-459
 460
-461</pre>
+461
+462</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 459</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 460</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='id identifier rubyid_isXP?'>isXP?</span>
   <span class='kw'>return</span> <span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'><span class='object_link'><a href="#GetVersionEx-class_method" title="Win32.GetVersionEx (method)">GetVersionEx</a></span></span><span class='lbracket'>[</span><span class='symbol'>:dwMajorVersion</span><span class='rbracket'>]</span> <span class='op'>&lt;</span> <span class='int'>6</span><span class='rparen'>)</span>
@@ -1393,13 +1404,13 @@ end
       <pre class="lines">
 
 
-276
 277
 278
-279</pre>
+279
+280</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 276</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 277</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>MessageBox</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpCaption</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Lich v</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="top-level-namespace.html#LICH_VERSION-constant" title="LICH_VERSION (constant)">LICH_VERSION</a></span></span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1425,14 +1436,14 @@ end
       <pre class="lines">
 
 
-307
 308
 309
 310
-311</pre>
+311
+312</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 307</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 308</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>OpenProcessToken</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_token_handle'>token_handle</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1459,12 +1470,12 @@ end
       <pre class="lines">
 
 
-385
 386
-387</pre>
+387
+388</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 385</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 386</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>RegCloseKey</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="Win32/Advapi32.html" title="Win32::Advapi32 (module)">Advapi32</a></span></span><span class='period'>.</span><span class='const'>RegCloseKey</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:hKey</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -1489,13 +1500,13 @@ end
       <pre class="lines">
 
 
-380
 381
 382
-383</pre>
+383
+384</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 380</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 381</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>RegDeleteValue</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpValueName</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>0</span>
@@ -1521,14 +1532,14 @@ end
       <pre class="lines">
 
 
-313
 314
 315
 316
-317</pre>
+317
+318</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 313</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 314</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>RegOpenKeyEx</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_phkResult'>phkResult</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1555,7 +1566,6 @@ end
       <pre class="lines">
 
 
-319
 320
 321
 322
@@ -1586,10 +1596,11 @@ end
 347
 348
 349
-350</pre>
+350
+351</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 319</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 320</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>RegQueryValueEx</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpValueName</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>0</span>
@@ -1643,7 +1654,6 @@ end
       <pre class="lines">
 
 
-352
 353
 354
 355
@@ -1669,10 +1679,11 @@ end
 375
 376
 377
-378</pre>
+378
+379</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 352</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 353</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>RegSetValueEx</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#REG_EXPAND_SZ-constant" title="Win32::REG_EXPAND_SZ (constant)">REG_EXPAND_SZ</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#REG_SZ-constant" title="Win32::REG_SZ (constant)">REG_SZ</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#REG_LINK-constant" title="Win32::REG_LINK (constant)">REG_LINK</a></span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:dwType</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpData</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="String.html" title="String (class)">String</a></span></span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -1721,16 +1732,16 @@ end
       <pre class="lines">
 
 
-417
 418
 419
 420
 421
 422
-423</pre>
+423
+424</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 417</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 418</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>ShellExecute</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpOperation</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>0</span>
@@ -1759,7 +1770,6 @@ end
       <pre class="lines">
 
 
-396
 397
 398
 399
@@ -1778,10 +1788,11 @@ end
 412
 413
 414
-415</pre>
+415
+416</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/init.rb', line 396</span>
+      <pre class="code"><span class="info file"># File 'documented/init.rb', line 397</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>ShellExecuteEx</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='comment'>#         struct = [ (SIZEOF_LONG * 15), 0, 0, 0, 0, 0, 0, SW_SHOWNORMAL, 0, 0, 0, 0, 0, 0, 0 ]
@@ -1813,9 +1824,9 @@ end
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:34 2025 by
+  Generated on Fri Nov  7 07:10:01 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

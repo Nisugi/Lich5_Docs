@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/gemstone/sk.rb</dd>
+    <dd>documented/gemstone/sk.rb</dd>
   </dl>
   
 </div>
@@ -383,7 +383,7 @@
 89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/sk.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/sk.rb', line 86</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_numbers'>numbers</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sk_known'>sk_known</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='ivar'>@sk_known</span> <span class='op'>+</span> <span class='id identifier rubyid_numbers'>numbers</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span>
@@ -439,7 +439,7 @@
 79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/sk.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/sk.rb', line 71</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_help'>help</span>
   <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>   Script to add SK spells to be known and used with Spell API calls.</span><span class='tstring_end'>&quot;</span></span>
@@ -533,7 +533,7 @@
 56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/sk.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/sk.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='id identifier rubyid_spell'>spell</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sk_known'>sk_known</span> <span class='kw'>if</span> <span class='ivar'>@sk_known</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -584,7 +584,7 @@
 65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/sk.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/sk.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span>
   <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Current SK Spells: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@sk_known</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -688,7 +688,7 @@
 123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/sk.rb', line 107</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/sk.rb', line 107</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_main'>main</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span> <span class='op'>=</span> <span class='id identifier rubyid_help'>help</span><span class='comma'>,</span> <span class='id identifier rubyid_spells'>spells</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sk_known'>sk_known</span> <span class='kw'>if</span> <span class='ivar'>@sk_known</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -772,7 +772,7 @@
 99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/sk.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/sk.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_remove'>remove</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_numbers'>numbers</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sk_known'>sk_known</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='ivar'>@sk_known</span> <span class='op'>-</span> <span class='id identifier rubyid_numbers'>numbers</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span>
@@ -861,7 +861,7 @@
 35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/sk.rb', line 20</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/sk.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sk_known'>sk_known</span>
   <span class='kw'>if</span> <span class='ivar'>@sk_known</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -963,7 +963,7 @@
 46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/sk.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/sk.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sk_known='>sk_known=</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='ivar'>@sk_known</span> <span class='kw'>if</span> <span class='ivar'>@sk_known</span> <span class='op'>==</span> <span class='id identifier rubyid_val'>val</span>
@@ -980,9 +980,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:35 2025 by
+  Generated on Fri Nov  7 07:10:03 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

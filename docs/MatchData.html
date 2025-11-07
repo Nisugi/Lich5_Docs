@@ -94,7 +94,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/common/class_exts/matchdata.rb</dd>
+    <dd>documented/common/class_exts/matchdata.rb</dd>
   </dl>
   
 </div>
@@ -259,7 +259,7 @@
 26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/matchdata.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'documented/common/class_exts/matchdata.rb', line 22</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
   <span class='const'><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span></span><span class='lbracket'>[</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_names'>names</span><span class='period'>.</span><span class='id identifier rubyid_zip'>zip</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_captures'>captures</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:strip</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_capture'>capture</span><span class='op'>|</span>
@@ -320,7 +320,7 @@
 14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/matchdata.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'documented/common/class_exts/matchdata.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_struct'>to_struct</span>
   <span class='const'>OpenStruct</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
@@ -335,9 +335,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:44 2025 by
+  Generated on Fri Nov  7 07:10:11 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/update.rb</dd>
+    <dd>documented/update.rb</dd>
   </dl>
   
 </div>
@@ -657,7 +657,7 @@
 89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_announce'>announce</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_prep_update'>prep_update</span>
@@ -778,7 +778,7 @@
 478</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 425</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 425</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_download_update'>download_update</span>
   <span class='comment'>## This is the workhorse routine that does the file moves from an update
@@ -951,7 +951,7 @@
 290</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 275</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 275</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_now'>now</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
@@ -1040,7 +1040,7 @@
 121</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_help'>help</span>
   <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>
@@ -1200,7 +1200,7 @@
 353</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 337</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 337</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_latest_prefixed_branch_greater_than'>latest_prefixed_branch_greater_than</span><span class='lparen'>(</span><span class='id identifier rubyid_prefix'>prefix</span><span class='comma'>,</span> <span class='id identifier rubyid_stable_major'>stable_major</span><span class='comma'>,</span> <span class='id identifier rubyid_stable_minor'>stable_minor</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_branches'>branches</span> <span class='op'>=</span> <span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://api.github.com/repos/elanthia-online/lich-5/branches?per_page=100</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1332,7 +1332,7 @@
 324</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 311</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 311</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_latest_prerelease_tag_greater_than'>latest_prerelease_tag_greater_than</span><span class='lparen'>(</span><span class='id identifier rubyid_stable_major'>stable_major</span><span class='comma'>,</span> <span class='id identifier rubyid_stable_minor'>stable_minor</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_releases'>releases</span> <span class='op'>=</span> <span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://api.github.com/repos/elanthia-online/lich-5/releases</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1417,7 +1417,7 @@
 302</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 297</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 297</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_latest_stable_tag'>latest_stable_tag</span>
   <span class='id identifier rubyid_releases'>releases</span> <span class='op'>=</span> <span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://api.github.com/repos/elanthia-online/lich-5/releases</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1520,7 +1520,7 @@
 392</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 381</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 381</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_major_minor_from'>major_minor_from</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='lbracket'>[</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -1688,7 +1688,7 @@
 238</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 170</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 170</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_prep_betatest'>prep_betatest</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_requested_file'>requested_file</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -1824,7 +1824,7 @@
 418</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 399</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 399</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_prep_update'>prep_update</span>
   <span class='id identifier rubyid_latest'>latest</span> <span class='op'>=</span> <span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://api.github.com/repos/elanthia-online/lich-5/releases/latest</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1953,7 +1953,7 @@
 63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--announce</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_type'>type</span>
@@ -2079,7 +2079,7 @@
 265</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 247</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 247</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_resolve_channel_ref'>resolve_channel_ref</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_channel'>channel</span>
@@ -2189,7 +2189,7 @@
 528</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 485</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 485</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_revert'>revert</span>
   <span class='comment'>## Since the request is to roll-back, we will do so destructively
@@ -2314,7 +2314,7 @@
 161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_snapshot'>snapshot</span>
   <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span>
@@ -2451,7 +2451,7 @@
 636</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 603</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 603</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update_core_data_and_scripts'>update_core_data_and_scripts</span><span class='lparen'>(</span><span class='id identifier rubyid_version'>version</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../top-level-namespace.html#LICH_VERSION-constant" title="LICH_VERSION (constant)">LICH_VERSION</a></span></span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_game'>game</span> <span class='op'>!~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^GS|^DR</span><span class='regexp_end'>/</span></span>
@@ -2661,7 +2661,7 @@
 595</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 539</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 539</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update_file'>update_file</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_rf'>rf</span><span class='comma'>,</span> <span class='id identifier rubyid_version'>version</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>production</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_version'>version</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(?:staging|master)$</span><span class='regexp_end'>/i</span></span>
@@ -2816,7 +2816,7 @@
 373</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 361</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 361</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_version_key'>version_key</span><span class='lparen'>(</span><span class='id identifier rubyid_tag_or_name'>tag_or_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span> <span class='op'>=</span> <span class='id identifier rubyid_tag_or_name'>tag_or_name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -2841,9 +2841,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:34 2025 by
+  Generated on Fri Nov  7 07:10:02 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

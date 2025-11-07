@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/gemstone/group.rb</dd>
+    <dd>documented/gemstone/group.rb</dd>
   </dl>
   
 </div>
@@ -86,7 +86,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>Observes game output and automatically updates Group state. Watches for group-related messages and updates membership, leadership, and status. Observes game output and automatically updates Group state. Watches for group-related messages and updates membership, leadership, and status.</p>
+<p>Observes game output and automatically updates Group state. Watches for group-related messages and updates membership, leadership, and status.</p>
 
 
   </div>
@@ -211,9 +211,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Processes a line of group-related game output and updates Group state. Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
-
+    <p class="note returns_void">This method returns an undefined value.</p>
 <p>Processes a line of group-related game output and updates Group state. Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
 
 
@@ -255,62 +253,8 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>line</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>line of game output</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>match_data</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../MatchData.html" title="MatchData (class)">MatchData</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>regex match data from the line</p>
-</div>
-      
-    </li>
-  
 </ul>
 
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>void</tt>)</span>
-      
-      
-      
-    </li>
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>void</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -318,72 +262,72 @@
       <pre class="lines">
 
 
-634
-635
-636
-637
-638
-639
-640
-641
-642
-643
-644
-645
-646
-647
-648
-649
-650
-651
-652
-653
-654
-655
-656
-657
-658
-659
-660
-661
-662
-663
-664
-665
-666
-667
-668
-669
-670
-671
-672
-673
-674
-675
-676
-677
-678
-679
-680
-681
-682
-683
-684
-685
-686
-687
-688
-689
-690
-691
-692
-693
-694
-695
-696</pre>
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/group.rb', line 634</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/group.rb', line 450</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_consume'>consume</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_match_data'>match_data</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Observer/Term.html" title="Lich::Gemstone::Group::Observer::Term (module)">Term</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Observer/Term.html#GIVEN_LEADERSHIP-constant" title="Lich::Gemstone::Group::Observer::Term::GIVEN_LEADERSHIP (constant)">GIVEN_LEADERSHIP</a></span></span><span class='rparen'>)</span>
@@ -467,30 +411,12 @@
     
 <p>Extracts GameObj instances from XML character links in game output.</p>
 
-<p>Extracts GameObj instances from XML character links in game output.</p>
-
 
   </div>
 </div>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
-    <li>
-      
-        <span class='name'>xml</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>game output containing character XML tags</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -527,20 +453,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Array&lt;GameObj&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>array of GameObj instances found in the XML</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -549,12 +461,12 @@
       <pre class="lines">
 
 
-607
-608
-609</pre>
+433
+434
+435</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/group.rb', line 607</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/group.rb', line 433</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_exist'>exist</span><span class='lparen'>(</span><span class='id identifier rubyid_xml'>xml</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_xml'>xml</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Group.html" title="Lich::Gemstone::Group (class)">Group</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Group::Observer (module)">Observer</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Observer/Term.html" title="Lich::Gemstone::Group::Observer::Term (module)">Term</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Observer/Term.html#EXIST-constant" title="Lich::Gemstone::Group::Observer::Term::EXIST (constant)">EXIST</a></span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid__noun'>_noun</span><span class='comma'>,</span> <span class='id identifier rubyid__name'>_name</span><span class='op'>|</span> <span class='const'>GameObj</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
@@ -578,30 +490,12 @@
     
 <p>Checks if a line of game output contains group-related information.</p>
 
-<p>Checks if a line of game output contains group-related information.</p>
-
 
   </div>
 </div>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
-    <li>
-      
-        <span class='name'>line</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>line of game output</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -638,20 +532,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>true if line contains group information</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -660,13 +540,13 @@
       <pre class="lines">
 
 
-618
-619
-620
-621</pre>
+440
+441
+442
+443</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/group.rb', line 618</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/group.rb', line 440</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_wants?'>wants?</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Observer/Term.html" title="Lich::Gemstone::Group::Observer::Term (module)">Term</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Observer/Term.html#ANY-constant" title="Lich::Gemstone::Group::Observer::Term::ANY (constant)">ANY</a></span></span><span class='rparen'>)</span> <span class='kw'>or</span>
@@ -682,9 +562,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:35 2025 by
+  Generated on Fri Nov  7 07:10:03 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

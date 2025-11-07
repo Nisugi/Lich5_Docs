@@ -94,7 +94,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/dragonrealms/commons/common-validation.rb</dd>
+    <dd>documented/dragonrealms/commons/common-validation.rb</dd>
   </dl>
   
 </div>
@@ -476,7 +476,7 @@
 26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-validation.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-validation.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_announce'>announce</span><span class='comma'>,</span> <span class='id identifier rubyid_sleep'>sleep</span><span class='comma'>,</span> <span class='id identifier rubyid_greet'>greet</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_waitrt?'><span class='object_link'><a href="../../top-level-namespace.html#waitrt%3F-instance_method" title="#waitrt? (method)">waitrt?</a></span></span>
@@ -567,7 +567,7 @@
 65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-validation.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-validation.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_confirm'>confirm</span><span class='lparen'>(</span><span class='id identifier rubyid_character'>character</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_valid?'>valid?</span><span class='lparen'>(</span><span class='id identifier rubyid_character'>character</span><span class='rparen'>)</span>
@@ -661,7 +661,7 @@
 119</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-validation.rb', line 117</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-validation.rb', line 117</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_in_game?'>in_game?</span><span class='lparen'>(</span><span class='id identifier rubyid_character'>character</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>find </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_character'>character</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>There are no adventurers in the realms that match the names specified</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>^  </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_character'>character</span><span class='embexpr_end'>}</span><span class='tstring_content'>.$</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_character'>character</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span>
@@ -748,7 +748,7 @@
 86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-validation.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-validation.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_send_bankbot_balance'>send_bankbot_balance</span><span class='lparen'>(</span><span class='id identifier rubyid_character'>character</span><span class='comma'>,</span> <span class='id identifier rubyid_balance'>balance</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Current Balance: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_balance'>balance</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -838,7 +838,7 @@
 110</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-validation.rb', line 105</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-validation.rb', line 105</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_send_bankbot_help'>send_bankbot_help</span><span class='lparen'>(</span><span class='id identifier rubyid_character'>character</span><span class='comma'>,</span> <span class='id identifier rubyid_messages'>messages</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_messages'>messages</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_message'>message</span><span class='op'>|</span>
@@ -912,7 +912,7 @@
 97</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-validation.rb', line 93</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-validation.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_send_bankbot_location'>send_bankbot_location</span><span class='lparen'>(</span><span class='id identifier rubyid_character'>character</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Current Location: </span><span class='embexpr_beg'>#{</span><span class='const'>Room</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -985,7 +985,7 @@
 37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-validation.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-validation.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_send_slack_token'>send_slack_token</span><span class='lparen'>(</span><span class='id identifier rubyid_character'>character</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>slack_token: </span><span class='embexpr_beg'>#{</span><span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_slack_token'>slack_token</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Not Found</span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -1074,7 +1074,7 @@
 74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-validation.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-validation.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_valid?'>valid?</span><span class='lparen'>(</span><span class='id identifier rubyid_character'>character</span><span class='rparen'>)</span>
   <span class='ivar'>@validated_characters</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_character'>character</span><span class='rparen'>)</span>
@@ -1146,7 +1146,7 @@
 49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-validation.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-validation.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='id identifier rubyid_character'>character</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_valid?'>valid?</span><span class='lparen'>(</span><span class='id identifier rubyid_character'>character</span><span class='rparen'>)</span>
@@ -1164,9 +1164,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:45 2025 by
+  Generated on Fri Nov  7 07:10:12 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/gemstone/critranks.rb</dd>
+    <dd>documented/gemstone/critranks.rb</dd>
   </dl>
   
 </div>
@@ -504,7 +504,7 @@
 102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/critranks.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/critranks.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_clean_key'>clean_key</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='kw'>if</span> <span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Integer</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_key'>key</span> <span class='op'>=~</span> <span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\d+$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -578,7 +578,7 @@
 135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/critranks.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/critranks.rb', line 123</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_create_indices'>create_indices</span>
   <span class='ivar'>@index_rx</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -735,7 +735,7 @@
 164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/critranks.rb', line 156</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/critranks.rb', line 156</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='comma'>,</span> <span class='id identifier rubyid_rank'>rank</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_dig'>dig</span><span class='lparen'>(</span>
@@ -806,7 +806,7 @@
 37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/critranks.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/critranks.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_init'>init</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='ivar'>@critical_table</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -881,7 +881,7 @@
 82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/critranks.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/critranks.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_locations'>locations</span>
   <span class='ivar'>@locations</span>
@@ -974,7 +974,7 @@
 146</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/critranks.rb', line 142</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/critranks.rb', line 142</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
   <span class='ivar'>@index_rx</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_rx'>rx</span><span class='comma'>,</span> <span class='id identifier rubyid__data'>_data</span><span class='op'>|</span>
@@ -1047,7 +1047,7 @@
 90</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/critranks.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/critranks.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ranks'>ranks</span>
   <span class='ivar'>@ranks</span>
@@ -1101,7 +1101,7 @@
 54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/critranks.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/critranks.rb', line 51</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_reload!'>reload!</span>
   <span class='ivar'>@critical_table</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -1173,7 +1173,7 @@
 45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/critranks.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/critranks.rb', line 43</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_table'>table</span>
   <span class='ivar'>@critical_table</span>
@@ -1248,7 +1248,7 @@
 66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/critranks.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/critranks.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_tables'>tables</span>
   <span class='ivar'>@tables</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -1323,7 +1323,7 @@
 74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/critranks.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/critranks.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_types'>types</span>
   <span class='ivar'>@types</span>
@@ -1451,7 +1451,7 @@
 116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/critranks.rb', line 111</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/critranks.rb', line 111</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_validate'>validate</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_valid'>valid</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_clean'>clean</span> <span class='op'>=</span> <span class='id identifier rubyid_clean_key'>clean_key</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
@@ -1469,9 +1469,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:36 2025 by
+  Generated on Fri Nov  7 07:10:04 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

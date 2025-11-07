@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/dragonrealms/commons/common-arcana.rb</dd>
+    <dd>documented/dragonrealms/commons/common-arcana.rb</dd>
   </dl>
   
 </div>
@@ -1554,7 +1554,7 @@
 232</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 192</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 192</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_activate_barb_buff?'>activate_barb_buff?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_meditation_pause_timer'>meditation_pause_timer</span> <span class='op'>=</span> <span class='int'>20</span><span class='comma'>,</span> <span class='id identifier rubyid_sit_to_meditate'>sit_to_meditate</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='comment'># Note, you must know Power meditation or Powermonger mastery
@@ -1737,7 +1737,7 @@
 162</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 139</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 139</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_activate_khri?'>activate_khri?</span><span class='lparen'>(</span><span class='id identifier rubyid_settings_kneel'>settings_kneel</span><span class='comma'>,</span> <span class='id identifier rubyid_ability'>ability</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_abilities'>abilities</span> <span class='op'>=</span> <span class='id identifier rubyid_ability'>ability</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:capitalize</span><span class='rparen'>)</span>
@@ -1829,7 +1829,7 @@
 370</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 368</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 368</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_backfired?'>backfired?</span>
   <span class='kw'>return</span> <span class='cvar'>@@backfired_status</span> <span class='op'>||</span> <span class='kw'>false</span>
@@ -2023,7 +2023,7 @@
 974</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 933</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 933</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_calculate_mana'>calculate_mana</span><span class='lparen'>(</span><span class='id identifier rubyid_min'>min</span><span class='comma'>,</span> <span class='id identifier rubyid_more'>more</span><span class='comma'>,</span> <span class='id identifier rubyid_discern_data'>discern_data</span><span class='comma'>,</span> <span class='id identifier rubyid_cyclic_or_ritual'>cyclic_or_ritual</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_total'>total</span> <span class='op'>=</span> <span class='id identifier rubyid_min'>min</span> <span class='op'>+</span> <span class='id identifier rubyid_more'>more</span>
@@ -2249,7 +2249,7 @@
 421</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 379</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 379</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cast?'>cast?</span><span class='lparen'>(</span><span class='id identifier rubyid_cast_command'>cast_command</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cast</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_symbiosis'>symbiosis</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_before'>before</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_after'>after</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_before'>before</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_action'>action</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>message</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_action'>action</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>matches</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
@@ -2506,7 +2506,7 @@
 871</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 795</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 795</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cast_spell'>cast_spell</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='comma'>,</span> <span class='id identifier rubyid_force_cambrinth'>force_cambrinth</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_cast_lifecycle_lambda'>cast_lifecycle_lambda</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_data'>data</span>
@@ -2724,7 +2724,7 @@
 786</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 783</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 783</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cast_spell?'>cast_spell?</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='comma'>,</span> <span class='id identifier rubyid_force_cambrinth'>force_cambrinth</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_cast_lifecycle_lambda'>cast_lifecycle_lambda</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_cast_spell'>cast_spell</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='comma'>,</span> <span class='id identifier rubyid_force_cambrinth'>force_cambrinth</span><span class='comma'>,</span> <span class='id identifier rubyid_cast_lifecycle_lambda'>cast_lifecycle_lambda</span><span class='rparen'>)</span>
@@ -2877,7 +2877,7 @@
 774</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 763</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 763</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cast_spells'>cast_spells</span><span class='lparen'>(</span><span class='id identifier rubyid_spells'>spells</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='comma'>,</span> <span class='id identifier rubyid_force_cambrinth'>force_cambrinth</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_cast_lifecycle_lambda'>cast_lifecycle_lambda</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_infuse_om'>infuse_om</span><span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_osrel_no_harness'>osrel_no_harness</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_osrel_amount'>osrel_amount</span><span class='rparen'>)</span>
@@ -3025,7 +3025,7 @@
 634</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 600</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 600</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_charge?'>charge?</span><span class='lparen'>(</span><span class='id identifier rubyid_cambrinth'>cambrinth</span><span class='comma'>,</span> <span class='id identifier rubyid_mana'>mana</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_charged'>charged</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -3205,7 +3205,7 @@
 564</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 555</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 555</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_charge_and_invoke'>charge_and_invoke</span><span class='lparen'>(</span><span class='id identifier rubyid_cambrinth'>cambrinth</span><span class='comma'>,</span> <span class='id identifier rubyid_dedicated_camb_use'>dedicated_camb_use</span><span class='comma'>,</span> <span class='id identifier rubyid_charges'>charges</span><span class='comma'>,</span> <span class='id identifier rubyid_invoke_exact_amount'>invoke_exact_amount</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='comment'># TODO: Remove default nil argument once all users are up to date with common-arcana
@@ -3333,7 +3333,7 @@
 1146</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 1130</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 1130</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_charge_avtalia'>charge_avtalia</span><span class='lparen'>(</span><span class='id identifier rubyid_cambrinth'>cambrinth</span><span class='comma'>,</span> <span class='id identifier rubyid_charge_amount'>charge_amount</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_cambrinth'>cambrinth</span>
@@ -3518,7 +3518,7 @@
 923</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 893</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 893</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check_discern'>check_discern</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='comma'>,</span> <span class='id identifier rubyid_spell_is_sorcery'>spell_is_sorcery</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_more_override'>more_override</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_discerns'>discerns</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='kw'>unless</span> <span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_discerns'>discerns</span>
@@ -3634,7 +3634,7 @@
 1189</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 1170</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 1170</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check_elemental_charge'>check_elemental_charge</span>
   <span class='kw'>return</span> <span class='int'>0</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="DRStats.html" title="Lich::DragonRealms::DRStats (module)">DRStats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_warrior_mage?'><span class='object_link'><a href="DRStats.html#warrior_mage%3F-class_method" title="Lich::DragonRealms::DRStats.warrior_mage? (method)">warrior_mage?</a></span></span>
@@ -3745,7 +3745,7 @@
 985</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 980</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 980</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check_to_harness'>check_to_harness</span><span class='lparen'>(</span><span class='id identifier rubyid_should_harness'>should_harness</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_should_harness'>should_harness</span>
@@ -3861,7 +3861,7 @@
 1161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 1153</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 1153</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_choose_avtalia'>choose_avtalia</span><span class='lparen'>(</span><span class='id identifier rubyid_charge_needed'>charge_needed</span><span class='comma'>,</span> <span class='id identifier rubyid_mana_percentage'>mana_percentage</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_camb_to_use'>camb_to_use</span> <span class='op'>=</span> <span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_avtalia'>avtalia</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid__camb'>_camb</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='op'>|</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>time_seen</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cap</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mana</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
@@ -3997,7 +3997,7 @@
 1017</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 992</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 992</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_crafting_cast_spell'>crafting_cast_spell</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_data'>data</span>
@@ -4136,7 +4136,7 @@
 1073</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 1046</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 1046</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_crafting_magic_routine'>crafting_magic_routine</span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_training_spells'>training_spells</span> <span class='op'>=</span> <span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_crafting_training_spells'>crafting_training_spells</span>
@@ -4282,7 +4282,7 @@
 1040</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 1024</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 1024</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_crafting_prepare_spell'>crafting_prepare_spell</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_data'>data</span>
@@ -4422,7 +4422,7 @@
 1101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 1080</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 1080</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_do_buffs'>do_buffs</span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='comma'>,</span> <span class='id identifier rubyid_set_name'>set_name</span><span class='rparen'>)</span>
   <span class='comment'># takes a waggle and sends it to the appropriate helper
@@ -4581,7 +4581,7 @@
 512</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 493</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 493</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_cambrinth'>find_cambrinth</span><span class='lparen'>(</span><span class='id identifier rubyid_cambrinth'>cambrinth</span><span class='comma'>,</span> <span class='id identifier rubyid_stored_cambrinth'>stored_cambrinth</span><span class='comma'>,</span> <span class='id identifier rubyid_cambrinth_cap'>cambrinth_cap</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_stored_cambrinth'>stored_cambrinth</span>
@@ -4776,7 +4776,7 @@
 439</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 432</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 432</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_charge_invoke_stow'>find_charge_invoke_stow</span><span class='lparen'>(</span><span class='id identifier rubyid_cambrinth'>cambrinth</span><span class='comma'>,</span> <span class='id identifier rubyid_stored_cambrinth'>stored_cambrinth</span><span class='comma'>,</span> <span class='id identifier rubyid_cambrinth_cap'>cambrinth_cap</span><span class='comma'>,</span> <span class='id identifier rubyid_dedicated_camb_use'>dedicated_camb_use</span><span class='comma'>,</span> <span class='id identifier rubyid_charges'>charges</span><span class='comma'>,</span> <span class='id identifier rubyid_invoke_exact_amount'>invoke_exact_amount</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='comment'># TODO: Remove default nil argument once all users are up to date with common-arcana
@@ -4930,7 +4930,7 @@
 460</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 448</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 448</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_focus'>find_focus</span><span class='lparen'>(</span><span class='id identifier rubyid_focus'>focus</span><span class='comma'>,</span> <span class='id identifier rubyid_worn'>worn</span><span class='comma'>,</span> <span class='id identifier rubyid_tied'>tied</span><span class='comma'>,</span> <span class='id identifier rubyid_sheathed'>sheathed</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_focus'>focus</span>
@@ -5054,7 +5054,7 @@
 363</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 354</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 354</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_runestone?'>get_runestone?</span><span class='lparen'>(</span><span class='id identifier rubyid_runestone'>runestone</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_in_hands?'><span class='object_link'><a href="DRCI.html#in_hands%3F-class_method" title="Lich::DragonRealms::DRCI.in_hands? (method)">in_hands?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_runestone'>runestone</span><span class='rparen'>)</span>
@@ -5155,7 +5155,7 @@
 102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_harness?'>harness?</span><span class='lparen'>(</span><span class='id identifier rubyid_mana'>mana</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>harness </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_mana'>mana</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You tap into</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Strain though you may</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -5251,7 +5251,7 @@
 112</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 108</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_harness_mana'>harness_mana</span><span class='lparen'>(</span><span class='id identifier rubyid_amounts'>amounts</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_amounts'>amounts</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_mana'>mana</span><span class='op'>|</span>
@@ -5381,7 +5381,7 @@
 91</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_infuse_om'>infuse_om</span><span class='lparen'>(</span><span class='id identifier rubyid_harness'>harness</span><span class='comma'>,</span> <span class='id identifier rubyid_amount'>amount</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="DRSpells.html" title="Lich::DragonRealms::DRSpells (module)">DRSpells</a></span></span><span class='period'>.</span><span class='id identifier rubyid_active_spells'><span class='object_link'><a href="DRSpells.html#active_spells-class_method" title="Lich::DragonRealms::DRSpells.active_spells (method)">active_spells</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Osrel Meraud</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='const'><span class='object_link'><a href="DRSpells.html" title="Lich::DragonRealms::DRSpells (module)">DRSpells</a></span></span><span class='period'>.</span><span class='id identifier rubyid_active_spells'><span class='object_link'><a href="DRSpells.html#active_spells-class_method" title="Lich::DragonRealms::DRSpells.active_spells (method)">active_spells</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Osrel Meraud</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>&lt;</span> <span class='int'>90</span>
@@ -5536,7 +5536,7 @@
 593</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 572</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 572</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_invoke'>invoke</span><span class='lparen'>(</span><span class='id identifier rubyid_cambrinth'>cambrinth</span><span class='comma'>,</span> <span class='id identifier rubyid_dedicated_camb_use'>dedicated_camb_use</span><span class='comma'>,</span> <span class='id identifier rubyid_invoke_amount'>invoke_amount</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_cambrinth'>cambrinth</span>
@@ -5682,7 +5682,7 @@
 1123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 1117</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 1117</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_invoke_avtalia'>invoke_avtalia</span><span class='lparen'>(</span><span class='id identifier rubyid_cambrinth'>cambrinth</span><span class='comma'>,</span> <span class='id identifier rubyid_dedicated_camb_use'>dedicated_camb_use</span><span class='comma'>,</span> <span class='id identifier rubyid_invoke_amount'>invoke_amount</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_cambrinth'>cambrinth</span>
@@ -5797,7 +5797,7 @@
 175</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 169</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 169</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_kneel_for_khri?'>kneel_for_khri?</span><span class='lparen'>(</span><span class='id identifier rubyid_kneel'>kneel</span><span class='comma'>,</span> <span class='id identifier rubyid_ability'>ability</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_kneel'>kneel</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Array</span>
@@ -5904,7 +5904,7 @@
 696</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 682</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 682</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_mana_message'>parse_mana_message</span><span class='lparen'>(</span><span class='id identifier rubyid_mana_msg'>mana_msg</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_manalevels'>manalevels</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_mana_msg'>mana_msg</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>weak</span><span class='tstring_end'>&#39;</span></span>
@@ -5992,7 +5992,7 @@
 660</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 653</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 653</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_regalia'>parse_regalia</span> <span class='comment'># generates an array of currently-worn regalia armor nouns
 </span>  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="DRStats.html" title="Lich::DragonRealms::DRStats (module)">DRStats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_trader?'><span class='object_link'><a href="DRStats.html#trader%3F-class_method" title="Lich::DragonRealms::DRStats.trader? (method)">trader?</a></span></span>
@@ -6093,7 +6093,7 @@
 754</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 727</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 727</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_perc_aura'>perc_aura</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="DRStats.html" title="Lich::DragonRealms::DRStats (module)">DRStats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_trader?'><span class='object_link'><a href="DRStats.html#trader%3F-class_method" title="Lich::DragonRealms::DRStats.trader? (method)">trader?</a></span></span>
@@ -6208,7 +6208,7 @@
 722</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 701</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 701</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_perc_mana'>perc_mana</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="DRStats.html" title="Lich::DragonRealms::DRStats (module)">DRStats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_barbarian?'><span class='object_link'><a href="DRStats.html#barbarian%3F-class_method" title="Lich::DragonRealms::DRStats.barbarian? (method)">barbarian?</a></span></span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="DRStats.html" title="Lich::DragonRealms::DRStats (module)">DRStats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_thief?'><span class='object_link'><a href="DRStats.html#thief%3F-class_method" title="Lich::DragonRealms::DRStats.thief? (method)">thief?</a></span></span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="DRStats.html" title="Lich::DragonRealms::DRStats (module)">DRStats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_trader?'><span class='object_link'><a href="DRStats.html#trader%3F-class_method" title="Lich::DragonRealms::DRStats.trader? (method)">trader?</a></span></span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="DRStats.html" title="Lich::DragonRealms::DRStats (module)">DRStats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_commoner?'><span class='object_link'><a href="DRStats.html#commoner%3F-class_method" title="Lich::DragonRealms::DRStats.commoner? (method)">commoner?</a></span></span>
@@ -6303,7 +6303,7 @@
 1202</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 1195</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 1195</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_perc_symbiotic_research'>perc_symbiotic_research</span>
   <span class='kw'>case</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>perceive</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>combine the weaves of the (\w+) symbiosis</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Roundtime</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -6530,7 +6530,7 @@
 271</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 244</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 244</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prepare?'>prepare?</span><span class='lparen'>(</span><span class='id identifier rubyid_abbrev'>abbrev</span><span class='comma'>,</span> <span class='id identifier rubyid_mana'>mana</span><span class='comma'>,</span> <span class='id identifier rubyid_symbiosis'>symbiosis</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>prepare</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tattoo_tm'>tattoo_tm</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_runestone_name'>runestone_name</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_runestone_tm'>runestone_tm</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_abbrev'>abbrev</span>
@@ -6668,7 +6668,7 @@
 347</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 339</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 339</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_prepare_to_cast_runestone?'>prepare_to_cast_runestone?</span><span class='lparen'>(</span><span class='id identifier rubyid_spell'>spell</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_inside?'><span class='object_link'><a href="DRCI.html#inside%3F-class_method" title="Lich::DragonRealms::DRCI.inside? (method)">inside?</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_spell'>spell</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>runestone_name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_runestone_storage'>runestone_storage</span><span class='rparen'>)</span>
@@ -6708,7 +6708,7 @@
     
       
         <h5 class="example_title"><div class='inline'>
-<p><a href="'SpellName'">release_cyclics(</a>)</p>
+<p><a href="&#39;SpellName&#39;">release_cyclics(</a>)</p>
 </div></h5>
       
       <pre class="example code"><code></code></pre>
@@ -6773,7 +6773,7 @@
 648</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 640</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 640</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_release_cyclics'>release_cyclics</span><span class='lparen'>(</span><span class='id identifier rubyid_cyclic_no_release'>cyclic_no_release</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get_data'>get_data</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>spells</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -6850,7 +6850,7 @@
 1210</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 1208</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 1208</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_release_magical_research'>release_magical_research</span>
   <span class='int'>2</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>release symbiosis</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Are you sure</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You intentionally wipe</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>But you haven&#39;t</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
@@ -6982,7 +6982,7 @@
 332</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 305</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 305</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ritual'>ritual</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_retreat'><span class='object_link'><a href="DRC.html#retreat-class_method" title="Lich::DragonRealms::DRC.retreat (method)">retreat</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_ignored_npcs'>ignored_npcs</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>skip_retreat</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
@@ -7118,7 +7118,7 @@
 884</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 878</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 878</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_segue?'>segue?</span><span class='lparen'>(</span><span class='id identifier rubyid_abbrev'>abbrev</span><span class='comma'>,</span> <span class='id identifier rubyid_mana'>mana</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>segue </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_abbrev'>abbrev</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_mana'>mana</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_get_data'>get_data</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>spells</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_segue_messages'>segue_messages</span><span class='rparen'>)</span>
@@ -7223,7 +7223,7 @@
 676</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 666</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 666</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_shatter_regalia?'>shatter_regalia?</span><span class='lparen'>(</span><span class='id identifier rubyid_worn_regalia'>worn_regalia</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span> <span class='comment'># takes an array of armor nouns to remove or gets its own from parse_regalia
 </span>  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="DRStats.html" title="Lich::DragonRealms::DRStats (module)">DRStats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_trader?'><span class='object_link'><a href="DRStats.html#trader%3F-class_method" title="Lich::DragonRealms::DRStats.trader? (method)">trader?</a></span></span>
@@ -7322,7 +7322,7 @@
 546</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 544</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 544</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_skilled_to_charge_while_worn?'>skilled_to_charge_while_worn?</span><span class='lparen'>(</span><span class='id identifier rubyid_cambrinth_cap'>cambrinth_cap</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="DRSkill.html" title="Lich::DragonRealms::DRSkill (class)">DRSkill</a></span></span><span class='period'>.</span><span class='id identifier rubyid_getrank'><span class='object_link'><a href="DRSkill.html#getrank-class_method" title="Lich::DragonRealms::DRSkill.getrank (method)">getrank</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Arcana</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>&gt;=</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_cambrinth_cap'>cambrinth_cap</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>*</span> <span class='int'>2</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='int'>100</span><span class='rparen'>)</span>
@@ -7393,7 +7393,7 @@
 288</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 286</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 286</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_spell_prepared?'>spell_prepared?</span>
   <span class='id identifier rubyid_spell_preparing?'>spell_preparing?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_checkcastrt'><span class='object_link'><a href="../../top-level-namespace.html#checkcastrt-instance_method" title="#checkcastrt (method)">checkcastrt</a></span></span> <span class='op'>&lt;=</span> <span class='int'>0</span>
@@ -7466,7 +7466,7 @@
 298</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 294</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 294</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_spell_preparing'>spell_preparing</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_prepared_spell'>prepared_spell</span>
@@ -7539,7 +7539,7 @@
 279</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 277</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 277</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_spell_preparing?'>spell_preparing?</span>
   <span class='op'>!</span><span class='id identifier rubyid_spell_preparing'>spell_preparing</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -7646,7 +7646,7 @@
 184</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 182</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 182</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start_barb_abilities'>start_barb_abilities</span><span class='lparen'>(</span><span class='id identifier rubyid_abilities'>abilities</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_abilities'>abilities</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='op'>|</span> <span class='id identifier rubyid_activate_barb_buff?'>activate_barb_buff?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_meditation_pause_timer'>meditation_pause_timer</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_sit_to_meditate'>sit_to_meditate</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
@@ -7756,7 +7756,7 @@
 124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 119</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 119</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start_khris'>start_khris</span><span class='lparen'>(</span><span class='id identifier rubyid_khris'>khris</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_khris'>khris</span>
@@ -7898,7 +7898,7 @@
 538</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 520</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 520</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stow_cambrinth'>stow_cambrinth</span><span class='lparen'>(</span><span class='id identifier rubyid_cambrinth'>cambrinth</span><span class='comma'>,</span> <span class='id identifier rubyid_stored_cambrinth'>stored_cambrinth</span><span class='comma'>,</span> <span class='id identifier rubyid__cambrinth_cap'>_cambrinth_cap</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_stored_cambrinth'>stored_cambrinth</span>
@@ -8067,7 +8067,7 @@
 485</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 469</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 469</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stow_focus'>stow_focus</span><span class='lparen'>(</span><span class='id identifier rubyid_focus'>focus</span><span class='comma'>,</span> <span class='id identifier rubyid_worn'>worn</span><span class='comma'>,</span> <span class='id identifier rubyid_tied'>tied</span><span class='comma'>,</span> <span class='id identifier rubyid_sheathed'>sheathed</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_focus'>focus</span>
@@ -8153,7 +8153,7 @@
 1109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-arcana.rb', line 1106</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-arcana.rb', line 1106</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update_avtalia'>update_avtalia</span>
   <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>focus cambrinth</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^The .+ pulses? .+ (\d+)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dim, almost magically null</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>^You let your magical senses wander</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -8169,9 +8169,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:39 2025 by
+  Generated on Fri Nov  7 07:10:06 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

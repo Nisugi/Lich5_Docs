@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/common/log.rb</dd>
+    <dd>documented/common/log.rb</dd>
   </dl>
   
 </div>
@@ -478,7 +478,7 @@
 138</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'documented/common/log.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid__view'>_view</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_label'>label</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="Script.html" title="Lich::Common::Script (class)">Script</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'><span class='object_link'><a href="Script.html#current-class_method" title="Lich::Common::Script.current (method)">current</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'><span class='object_link'><a href="Script.html#name-instance_method" title="Lich::Common::Script#name (method)">name</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -578,7 +578,7 @@
 125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 117</span>
+      <pre class="code"><span class="info file"># File 'documented/common/log.rb', line 117</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid__write'>_write</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="Script.html" title="Lich::Common::Script (class)">Script</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'><span class='object_link'><a href="Script.html#current-class_method" title="Lich::Common::Script.current (method)">current</a></span></span><span class='period'>.</span><span class='id identifier rubyid_vars'><span class='object_link'><a href="Script.html#vars-instance_method" title="Lich::Common::Script#vars (method)">vars</a></span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--headless</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='kw'>not</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='symbol'>:_respond</span><span class='rparen'>)</span>
@@ -675,7 +675,7 @@
 157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 155</span>
+      <pre class="code"><span class="info file"># File 'documented/common/log.rb', line 155</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_pp'>pp</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
@@ -774,7 +774,7 @@
 92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'documented/common/log.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span>
   <span class='kw'>if</span> <span class='cvar'>@@log_filter</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -882,7 +882,7 @@
 52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'documented/common/log.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_off'>off</span>
   <span class='cvar'>@@log_enabled</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -1011,7 +1011,7 @@
 34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'documented/common/log.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='id identifier rubyid_filter'>filter</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
   <span class='cvar'>@@log_enabled</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -1121,7 +1121,7 @@
 73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'documented/common/log.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_on?'>on?</span>
   <span class='kw'>if</span> <span class='cvar'>@@log_enabled</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -1248,7 +1248,7 @@
 110</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 100</span>
+      <pre class="code"><span class="info file"># File 'documented/common/log.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_out'><span class='object_link'><a href="../../top-level-namespace.html#out-instance_method" title="#out (method)">out</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='label'>label:</span> <span class='symbol'>:debug</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="Script.html" title="Lich::Common::Script (class)">Script</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'><span class='object_link'><a href="Script.html#current-class_method" title="Lich::Common::Script.current (method)">current</a></span></span><span class='period'>.</span><span class='id identifier rubyid_vars'><span class='object_link'><a href="Script.html#vars-instance_method" title="Lich::Common::Script#vars (method)">vars</a></span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--debug</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_on?'><span class='object_link'><a href="#on%3F-class_method" title="Lich::Common::Log.on? (method)">on?</a></span></span>
@@ -1365,7 +1365,7 @@
 148</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 146</span>
+      <pre class="code"><span class="info file"># File 'documented/common/log.rb', line 146</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_pp'>pp</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span> <span class='op'>=</span> <span class='symbol'>:debug</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='id identifier rubyid__view'>_view</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='rparen'>)</span>
@@ -1380,9 +1380,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:35 2025 by
+  Generated on Fri Nov  7 07:10:02 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

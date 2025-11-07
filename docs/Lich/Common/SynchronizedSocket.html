@@ -94,7 +94,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/common/class_exts/synchronizedsocket.rb</dd>
+    <dd>documented/common/class_exts/synchronizedsocket.rb</dd>
   </dl>
   
 </div>
@@ -318,7 +318,7 @@
 18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/synchronizedsocket.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'documented/common/class_exts/synchronizedsocket.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_o'><span class='object_link'><a href="../../top-level-namespace.html#o-instance_method" title="#o (method)">o</a></span></span><span class='rparen'>)</span>
   <span class='ivar'>@delegate</span> <span class='op'>=</span> <span class='id identifier rubyid_o'><span class='object_link'><a href="../../top-level-namespace.html#o-instance_method" title="#o (method)">o</a></span></span>
@@ -447,7 +447,7 @@
 68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/synchronizedsocket.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'documented/common/class_exts/synchronizedsocket.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='ivar'>@delegate</span><span class='period'>.</span><span class='id identifier rubyid___send__'>__send__</span> <span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
@@ -563,7 +563,7 @@
 30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/synchronizedsocket.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'documented/common/class_exts/synchronizedsocket.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='ivar'>@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
@@ -663,7 +663,7 @@
 46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/synchronizedsocket.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'documented/common/class_exts/synchronizedsocket.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_puts_if'>puts_if</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='ivar'>@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
@@ -779,7 +779,7 @@
 58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/synchronizedsocket.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'documented/common/class_exts/synchronizedsocket.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='ivar'>@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
@@ -796,9 +796,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:45 2025 by
+  Generated on Fri Nov  7 07:10:12 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

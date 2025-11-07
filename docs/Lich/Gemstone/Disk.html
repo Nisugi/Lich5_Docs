@@ -94,7 +94,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/gemstone/disk.rb</dd>
+    <dd>documented/gemstone/disk.rb</dd>
   </dl>
   
 </div>
@@ -523,7 +523,7 @@
 72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/disk.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/disk.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
   <span class='ivar'>@id</span>   <span class='op'>=</span> <span class='id identifier rubyid_obj'>obj</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
@@ -638,7 +638,7 @@
 100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/disk.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/disk.rb', line 98</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='const'>GameObj</span><span class='lbracket'>[</span><span class='ivar'>@id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
@@ -686,7 +686,7 @@
 61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/disk.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/disk.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_id'>id</span>
   <span class='ivar'>@id</span>
@@ -729,7 +729,7 @@
 61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/disk.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/disk.rb', line 59</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
   <span class='ivar'>@name</span>
@@ -808,7 +808,7 @@
 56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/disk.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/disk.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='lparen'>(</span><span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_loot'>loot</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span>
@@ -912,7 +912,7 @@
 34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/disk.rb', line 28</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/disk.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_find_by_name'>find_by_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_disk'>disk</span> <span class='op'>=</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_loot'>loot</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span>
@@ -1004,7 +1004,7 @@
 19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/disk.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/disk.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_is_disk?'>is_disk?</span><span class='lparen'>(</span><span class='id identifier rubyid_thing'>thing</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_thing'>thing</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\b([A-Z][a-z]+) </span><span class='embexpr_beg'>#{</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#NOUNS-constant" title="Lich::Gemstone::Disk::NOUNS (constant)">NOUNS</a></span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>\b</span><span class='regexp_end'>/</span></span>
@@ -1072,7 +1072,7 @@
 43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/disk.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/disk.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mine'>mine</span>
   <span class='id identifier rubyid_find_by_name'>find_by_name</span><span class='lparen'>(</span><span class='const'>Char</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
@@ -1166,7 +1166,7 @@
 82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/disk.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/disk.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='op'>==</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Disk (class)">Disk</a></span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
@@ -1245,7 +1245,7 @@
 89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/disk.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/disk.rb', line 87</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
   <span class='kw'>self</span> <span class='op'>==</span> <span class='id identifier rubyid_other'>other</span>
@@ -1317,7 +1317,7 @@
 113</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/disk.rb', line 107</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/disk.rb', line 107</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_container'>to_container</span>
   <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='const'>Container</span><span class='rparen'>)</span>
@@ -1336,9 +1336,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:41 2025 by
+  Generated on Fri Nov  7 07:10:08 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

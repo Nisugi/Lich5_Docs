@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/dragonrealms/commons/common-items.rb</dd>
+    <dd>documented/dragonrealms/commons/common-items.rb</dd>
   </dl>
   
 </div>
@@ -2455,7 +2455,7 @@
 1462</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1455</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1455</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_accept_item?'>accept_item?</span>
   <span class='kw'>case</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>accept</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You accept .* offer and are now holding</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You have no offers</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Both of your hands are full</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>would push you over your item limit</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -2551,7 +2551,7 @@
 1412</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1406</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1406</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_close_container?'>close_container?</span><span class='lparen'>(</span><span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>close </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_container'>container</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#CLOSE_CONTAINER_SUCCESS_PATTERNS-constant" title="Lich::DragonRealms::DRCI::CLOSE_CONTAINER_SUCCESS_PATTERNS (constant)">CLOSE_CONTAINER_SUCCESS_PATTERNS</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#CLOSE_CONTAINER_FAILURE_PATTERNS-constant" title="Lich::DragonRealms::DRCI::CLOSE_CONTAINER_FAILURE_PATTERNS (constant)">CLOSE_CONTAINER_FAILURE_PATTERNS</a></span></span><span class='rparen'>)</span>
@@ -2642,7 +2642,7 @@
 1207</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1205</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1205</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_container_is_empty?'>container_is_empty?</span><span class='lparen'>(</span><span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_look_in_container'>look_in_container</span><span class='lparen'>(</span><span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -2742,7 +2742,7 @@
 826</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 811</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 811</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_count_all_boxes'>count_all_boxes</span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_current_box_count'>current_box_count</span> <span class='op'>=</span> <span class='int'>0</span>
@@ -2873,7 +2873,7 @@
 732</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 699</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 699</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_count_item_parts'>count_item_parts</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_match_messages'>match_messages</span> <span class='op'>=</span> <span class='lbracket'>[</span>
@@ -2995,7 +2995,7 @@
 747</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 741</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 741</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_count_items'>count_items</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>inside your (.*)</span><span class='regexp_end'>/</span></span> <span class='op'>=~</span> <span class='id identifier rubyid_tap'>tap</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
@@ -3105,7 +3105,7 @@
 762</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 757</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 757</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_count_items_in_container'>count_items_in_container</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_contents'>contents</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rummage /C </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='embexpr_end'>}</span><span class='tstring_content'> in my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_container'>container</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^You rummage .*</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>That would accomplish nothing</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -3197,7 +3197,7 @@
 776</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 772</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 772</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_count_lockpick_container'>count_lockpick_container</span><span class='lparen'>(</span><span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_count'>count</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>appraise my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_container'>container</span><span class='embexpr_end'>}</span><span class='tstring_content'> quick</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>it appears to be full</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>it might hold an additional \d+</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\d+ lockpicks would probably fit</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\d+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
@@ -3286,7 +3286,7 @@
 804</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 802</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 802</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_count_necro_stacker'>count_necro_stacker</span><span class='lparen'>(</span><span class='id identifier rubyid_necro_stacker'>necro_stacker</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>study my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_necro_stacker'>necro_stacker</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>currently holds \d+ items</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\d+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
@@ -3493,7 +3493,7 @@
 548</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 470</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 470</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dispose_trash'>dispose_trash</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_worn_trashcan'>worn_trashcan</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_worn_trashcan_verb'>worn_trashcan_verb</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_item'>item</span>
@@ -3679,7 +3679,7 @@
 598</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 591</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 591</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_exists?'>exists?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_tap'>tap</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span>
@@ -3872,7 +3872,7 @@
 1578</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1543</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1543</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fill_gem_pouch_with_container'>fill_gem_pouch_with_container</span><span class='lparen'>(</span><span class='id identifier rubyid_gem_pouch_adjective'>gem_pouch_adjective</span><span class='comma'>,</span> <span class='id identifier rubyid_gem_pouch_noun'>gem_pouch_noun</span><span class='comma'>,</span> <span class='id identifier rubyid_source_container'>source_container</span><span class='comma'>,</span> <span class='id identifier rubyid_full_pouch_container'>full_pouch_container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_spare_gem_pouch_container'>spare_gem_pouch_container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_should_tie_gem_pouches'>should_tie_gem_pouches</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="Flags.html" title="Lich::DragonRealms::Flags (class)">Flags</a></span></span><span class='period'>.</span><span class='id identifier rubyid_add'><span class='object_link'><a href="Flags.html#add-class_method" title="Lich::DragonRealms::Flags.add (method)">add</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pouch-full</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>is too full to fit any more</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -3992,7 +3992,7 @@
 785</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 783</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 783</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_box_list_in_container'>get_box_list_in_container</span><span class='lparen'>(</span><span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rummage'><span class='object_link'><a href="DRC.html#rummage-class_method" title="Lich::DragonRealms::DRC.rummage (method)">rummage</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>B</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span>
@@ -4123,7 +4123,7 @@
 1244</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1218</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1218</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_inventory_by_type'>get_inventory_by_type</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>combat</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_line_count'>line_count</span> <span class='op'>=</span> <span class='int'>40</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>inventory </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Use INVENTORY HELP for more options</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>The INVENTORY command is the best way</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You can&#39;t do that</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -4258,7 +4258,7 @@
 911</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 903</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 903</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_item'>get_item</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_container'>container</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
@@ -4369,7 +4369,7 @@
 892</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 890</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 890</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_item?'>get_item?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get_item'>get_item</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span>
@@ -4482,7 +4482,7 @@
 975</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 963</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 963</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_item_from_eddy_portal?'>get_item_from_eddy_portal?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span>
   <span class='comment'># Ensure the eddy is open then look in it to force the contents to be loaded.
@@ -4602,7 +4602,7 @@
 881</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 876</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 876</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_item_if_not_held?'>get_item_if_not_held?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_item'>item</span>
@@ -4715,7 +4715,7 @@
 1262</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1255</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1255</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_item_list'>get_item_list</span><span class='lparen'>(</span><span class='id identifier rubyid_container'>container</span><span class='comma'>,</span> <span class='id identifier rubyid_verb'>verb</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rummage</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_verb'>verb</span>
@@ -4825,7 +4825,7 @@
 929</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 927</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 927</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_item_safe'>get_item_safe</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_get_item_safe?'>get_item_safe?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span>
@@ -4881,7 +4881,7 @@
 919</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 915</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 915</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_item_safe?'>get_item_safe?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_item'>item</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^my </span><span class='regexp_end'>/i</span></span><span class='rparen'>)</span>
@@ -4999,7 +4999,7 @@
 952</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 939</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 939</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_item_unsafe'>get_item_unsafe</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_from'>from</span> <span class='op'>=</span> <span class='id identifier rubyid_container'>container</span>
@@ -5097,7 +5097,7 @@
 794</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 792</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 792</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_scroll_list_in_container'>get_scroll_list_in_container</span><span class='lparen'>(</span><span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rummage'><span class='object_link'><a href="DRC.html#rummage-class_method" title="Lich::DragonRealms::DRC.rummage (method)">rummage</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SC</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span>
@@ -5223,7 +5223,7 @@
 1447</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1424</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1424</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_give_item?'>give_item?</span><span class='lparen'>(</span><span class='id identifier rubyid_target'>target</span><span class='comma'>,</span> <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='id identifier rubyid_item'>item</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>give my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='embexpr_end'>}</span><span class='tstring_content'> to </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target'>target</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>give </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target'>target</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -5357,7 +5357,7 @@
 688</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 676</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 676</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_have_item_by_look?'>have_item_by_look?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_item'>item</span>
@@ -5487,7 +5487,7 @@
 668</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 651</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 651</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_in_hand?'>in_hand?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_which_hand'>which_hand</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>either</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_item'>item</span>
@@ -5589,7 +5589,7 @@
 623</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 621</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 621</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_in_hands?'>in_hands?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_in_hand?'>in_hand?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>either</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -5676,7 +5676,7 @@
 632</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 630</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 630</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_in_left_hand?'>in_left_hand?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_in_hand?'>in_hand?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>left</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -5763,7 +5763,7 @@
 641</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 639</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 639</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_in_right_hand?'>in_right_hand?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_in_hand?'>in_hand?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>right</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -5868,7 +5868,7 @@
 582</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 580</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 580</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inside?'>inside?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tap'>tap</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>inside</span><span class='regexp_end'>/</span></span>
@@ -5987,7 +5987,7 @@
 1190</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1176</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1176</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lift?'>lift?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_stow'>stow</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span> <span class='comment'># Necessary until adjectives are implemented for lift
@@ -6100,7 +6100,7 @@
 1314</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1298</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1298</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_look_in_container'>look_in_container</span><span class='lparen'>(</span><span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_container'>container</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_container'>container</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^my </span><span class='regexp_end'>/i</span></span>
@@ -6210,7 +6210,7 @@
 1164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1153</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1153</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lower_item?'>lower_item?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_in_hands?'>in_hands?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
@@ -6310,7 +6310,7 @@
 1399</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1393</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1393</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_open_container?'>open_container?</span><span class='lparen'>(</span><span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>open </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_container'>container</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#OPEN_CONTAINER_SUCCESS_PATTERNS-constant" title="Lich::DragonRealms::DRCI::OPEN_CONTAINER_SUCCESS_PATTERNS (constant)">OPEN_CONTAINER_SUCCESS_PATTERNS</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#OPEN_CONTAINER_FAILURE_PATTERNS-constant" title="Lich::DragonRealms::DRCI::OPEN_CONTAINER_FAILURE_PATTERNS (constant)">OPEN_CONTAINER_FAILURE_PATTERNS</a></span></span><span class='rparen'>)</span>
@@ -6425,7 +6425,7 @@
 1337</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1329</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1329</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_put_away_item?'>put_away_item?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_container'>container</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
@@ -6538,7 +6538,7 @@
 1351</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1347</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1347</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_put_away_item_safe?'>put_away_item_safe?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_item'>item</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^my </span><span class='regexp_end'>/i</span></span><span class='rparen'>)</span>
@@ -6679,7 +6679,7 @@
 1382</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1364</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1364</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_put_away_item_unsafe?'>put_away_item_unsafe?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_preposition'>preposition</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>in</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>put </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_preposition'>preposition</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_container'>container</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_container'>container</span>
@@ -6826,7 +6826,7 @@
 1521</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1509</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1509</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_and_stow_pouch?'>remove_and_stow_pouch?</span><span class='lparen'>(</span><span class='id identifier rubyid_gem_pouch_adjective'>gem_pouch_adjective</span><span class='comma'>,</span> <span class='id identifier rubyid_gem_pouch_noun'>gem_pouch_noun</span><span class='comma'>,</span> <span class='id identifier rubyid_full_pouch_container'>full_pouch_container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='id identifier rubyid_remove_item?'>remove_item?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_gem_pouch_adjective'>gem_pouch_adjective</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_gem_pouch_noun'>gem_pouch_noun</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -6923,7 +6923,7 @@
 1066</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1064</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1064</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_item?'>remove_item?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_remove_item_safe?'>remove_item_safe?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
@@ -7011,7 +7011,7 @@
 1078</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1075</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1075</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_item_safe?'>remove_item_safe?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_item'>item</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^my </span><span class='regexp_end'>/i</span></span><span class='rparen'>)</span>
@@ -7104,7 +7104,7 @@
 1093</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1086</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1086</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_item_unsafe?'>remove_item_unsafe?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>remove </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#REMOVE_ITEM_SUCCESS_PATTERNS-constant" title="Lich::DragonRealms::DRCI::REMOVE_ITEM_SUCCESS_PATTERNS (constant)">REMOVE_ITEM_SUCCESS_PATTERNS</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#REMOVE_ITEM_FAILURE_PATTERNS-constant" title="Lich::DragonRealms::DRCI::REMOVE_ITEM_FAILURE_PATTERNS (constant)">REMOVE_ITEM_FAILURE_PATTERNS</a></span></span><span class='rparen'>)</span>
@@ -7210,7 +7210,7 @@
 1288</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1272</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1272</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_rummage_container'>rummage_container</span><span class='lparen'>(</span><span class='id identifier rubyid_container'>container</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_container'>container</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_container'>container</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^my </span><span class='regexp_end'>/i</span></span>
@@ -7311,7 +7311,7 @@
 561</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 559</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 559</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_search?'>search?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?:An?|Some) .+ is (?:in|being)</span><span class='regexp_end'>/</span></span> <span class='op'>=~</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>inv search </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^You can&#39;t seem to find anything</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?:An?|Some) .+ is (?:in|being)</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -7408,7 +7408,7 @@
 858</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 846</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 846</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stow_hand'>stow_hand</span><span class='lparen'>(</span><span class='id identifier rubyid_hand'>hand</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_braid_regex'>braid_regex</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>The braided (.+) is too long</span><span class='regexp_end'>/</span></span>
@@ -7486,7 +7486,7 @@
 839</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 836</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 836</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stow_hands'>stow_hands</span>
   <span class='lparen'>(</span><span class='op'>!</span><span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_left_hand'><span class='object_link'><a href="DRC.html#left_hand-class_method" title="Lich::DragonRealms::DRC.left_hand (method)">left_hand</a></span></span> <span class='op'>||</span> <span class='id identifier rubyid_stow_hand'>stow_hand</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>left</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
@@ -7574,7 +7574,7 @@
 1108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1106</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1106</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stow_item?'>stow_item?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_stow_item_safe?'>stow_item_safe?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
@@ -7662,7 +7662,7 @@
 1121</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1118</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1118</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stow_item_safe?'>stow_item_safe?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_item'>item</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^my </span><span class='regexp_end'>/i</span></span><span class='rparen'>)</span>
@@ -7757,7 +7757,7 @@
 1140</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1131</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1131</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stow_item_unsafe?'>stow_item_unsafe?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>stow </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#CONTAINER_IS_CLOSED_PATTERNS-constant" title="Lich::DragonRealms::DRCI::CONTAINER_IS_CLOSED_PATTERNS (constant)">CONTAINER_IS_CLOSED_PATTERNS</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#STOW_ITEM_SUCCESS_PATTERNS-constant" title="Lich::DragonRealms::DRCI::STOW_ITEM_SUCCESS_PATTERNS (constant)">STOW_ITEM_SUCCESS_PATTERNS</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#STOW_ITEM_FAILURE_PATTERNS-constant" title="Lich::DragonRealms::DRCI::STOW_ITEM_FAILURE_PATTERNS (constant)">STOW_ITEM_FAILURE_PATTERNS</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#STOW_ITEM_RETRY_PATTERNS-constant" title="Lich::DragonRealms::DRCI::STOW_ITEM_RETRY_PATTERNS (constant)">STOW_ITEM_RETRY_PATTERNS</a></span></span><span class='rparen'>)</span>
@@ -7945,7 +7945,7 @@
 1500</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1476</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1476</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_swap_out_full_gempouch?'>swap_out_full_gempouch?</span><span class='lparen'>(</span><span class='id identifier rubyid_gem_pouch_adjective'>gem_pouch_adjective</span><span class='comma'>,</span> <span class='id identifier rubyid_gem_pouch_noun'>gem_pouch_noun</span><span class='comma'>,</span> <span class='id identifier rubyid_full_pouch_container'>full_pouch_container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_spare_gem_pouch_container'>spare_gem_pouch_container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_should_tie_gem_pouches'>should_tie_gem_pouches</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_left_hand'><span class='object_link'><a href="DRC.html#left_hand-class_method" title="Lich::DragonRealms::DRC.left_hand (method)">left_hand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_right_hand'><span class='object_link'><a href="DRC.html#right_hand-class_method" title="Lich::DragonRealms::DRC.right_hand (method)">right_hand</a></span></span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -8076,7 +8076,7 @@
 614</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 608</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 608</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tap'>tap</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_item'>item</span>
@@ -8183,7 +8183,7 @@
 1531</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1529</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1529</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tie_gem_pouch'>tie_gem_pouch</span><span class='lparen'>(</span><span class='id identifier rubyid_gem_pouch_adjective'>gem_pouch_adjective</span><span class='comma'>,</span> <span class='id identifier rubyid_gem_pouch_noun'>gem_pouch_noun</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tie my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_gem_pouch_adjective'>gem_pouch_adjective</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_gem_pouch_noun'>gem_pouch_noun</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>you tie</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>it&#39;s empty?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>has already been tied off</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -8294,7 +8294,7 @@
 995</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 987</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 987</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tie_item?'>tie_item?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_place'>place</span> <span class='op'>=</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_container'>container</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='kw'>nil</span>
@@ -8411,7 +8411,7 @@
 1011</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1003</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1003</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_untie_item?'>untie_item?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_place'>place</span> <span class='op'>=</span> <span class='id identifier rubyid_container'>container</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>from my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_container'>container</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='kw'>nil</span>
@@ -8504,7 +8504,7 @@
 1025</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1023</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1023</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_wear_item?'>wear_item?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_wear_item_safe?'>wear_item_safe?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
@@ -8592,7 +8592,7 @@
 1037</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1034</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1034</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_wear_item_safe?'>wear_item_safe?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_item'>item</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_item'>item</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^my </span><span class='regexp_end'>/i</span></span><span class='rparen'>)</span>
@@ -8685,7 +8685,7 @@
 1052</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 1045</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 1045</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_wear_item_unsafe?'>wear_item_unsafe?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wear </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#WEAR_ITEM_SUCCESS_PATTERNS-constant" title="Lich::DragonRealms::DRCI::WEAR_ITEM_SUCCESS_PATTERNS (constant)">WEAR_ITEM_SUCCESS_PATTERNS</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#WEAR_ITEM_FAILURE_PATTERNS-constant" title="Lich::DragonRealms::DRCI::WEAR_ITEM_FAILURE_PATTERNS (constant)">WEAR_ITEM_FAILURE_PATTERNS</a></span></span><span class='rparen'>)</span>
@@ -8777,7 +8777,7 @@
 571</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-items.rb', line 569</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-items.rb', line 569</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_wearing?'>wearing?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_tap'>tap</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>wearing</span><span class='regexp_end'>/</span></span>
@@ -8792,9 +8792,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:38 2025 by
+  Generated on Fri Nov  7 07:10:06 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

@@ -94,7 +94,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/common/upstreamhook.rb</dd>
+    <dd>documented/common/upstreamhook.rb</dd>
   </dl>
   
 </div>
@@ -410,7 +410,7 @@
 30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/upstreamhook.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'documented/common/upstreamhook.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::UpstreamHook (class)">UpstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Proc</span><span class='rparen'>)</span>
@@ -486,7 +486,7 @@
 87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/upstreamhook.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'documented/common/upstreamhook.rb', line 85</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::UpstreamHook (class)">UpstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_hook_sources'>hook_sources</span>
   <span class='cvar'>@@upstream_hook_sources</span>
@@ -557,7 +557,7 @@
 68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/upstreamhook.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'documented/common/upstreamhook.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::UpstreamHook (class)">UpstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span>
   <span class='cvar'>@@upstream_hooks</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
@@ -631,7 +631,7 @@
 60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/upstreamhook.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'documented/common/upstreamhook.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::UpstreamHook (class)">UpstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_remove'>remove</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='cvar'>@@upstream_hook_sources</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
@@ -751,7 +751,7 @@
 50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/upstreamhook.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'documented/common/upstreamhook.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::UpstreamHook (class)">UpstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span><span class='lparen'>(</span><span class='id identifier rubyid_client_string'>client_string</span><span class='rparen'>)</span>
   <span class='kw'>for</span> <span class='id identifier rubyid_key'>key</span> <span class='kw'>in</span> <span class='cvar'>@@upstream_hooks</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
@@ -835,7 +835,7 @@
 79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/upstreamhook.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'documented/common/upstreamhook.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::UpstreamHook (class)">UpstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_sources'>sources</span>
   <span class='id identifier rubyid_info_table'>info_table</span> <span class='op'>=</span> <span class='const'>Terminal</span><span class='op'>::</span><span class='const'>Table</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='symbol'>:headings</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hook</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Source</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
@@ -853,9 +853,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:43 2025 by
+  Generated on Fri Nov  7 07:10:10 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

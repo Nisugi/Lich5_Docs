@@ -94,7 +94,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/gemstone/gift.rb</dd>
+    <dd>documented/gemstone/gift.rb</dd>
   </dl>
   
 </div>
@@ -458,7 +458,7 @@
 16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/gift.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/gift.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_gift_start'>gift_start</span>
   <span class='ivar'>@gift_start</span>
@@ -501,7 +501,7 @@
 16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/gift.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/gift.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pulse_count'>pulse_count</span>
   <span class='ivar'>@pulse_count</span>
@@ -561,7 +561,7 @@
 82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/gift.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/gift.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ended'>ended</span>
   <span class='ivar'>@pulse_count</span> <span class='op'>=</span> <span class='int'>360</span>
@@ -615,7 +615,7 @@
 23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/gift.rb', line 20</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/gift.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_init_gift'>init_gift</span>
   <span class='ivar'>@gift_start</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
@@ -690,7 +690,7 @@
 74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/gift.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/gift.rb', line 71</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_load_serialized='>load_serialized=</span><span class='lparen'>(</span><span class='id identifier rubyid_array'>array</span><span class='rparen'>)</span>
   <span class='ivar'>@gift_start</span> <span class='op'>=</span> <span class='id identifier rubyid_array'>array</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
@@ -744,7 +744,7 @@
 40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/gift.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/gift.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pulse'>pulse</span>
   <span class='ivar'>@pulse_count</span> <span class='op'>+=</span> <span class='int'>1</span>
@@ -815,7 +815,7 @@
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/gift.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/gift.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remaining'>remaining</span>
   <span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>360</span> <span class='op'>-</span> <span class='ivar'>@pulse_count</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span> <span class='op'>*</span> <span class='int'>60</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
@@ -886,7 +886,7 @@
 56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/gift.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/gift.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_restarts_on'>restarts_on</span>
   <span class='ivar'>@gift_start</span> <span class='op'>+</span> <span class='int'>594000</span>
@@ -957,7 +957,7 @@
 64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/gift.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/gift.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_serialize'>serialize</span>
   <span class='lbracket'>[</span><span class='ivar'>@gift_start</span><span class='comma'>,</span> <span class='ivar'>@pulse_count</span><span class='rbracket'>]</span>
@@ -1011,7 +1011,7 @@
 32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/gift.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/gift.rb', line 29</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_started'>started</span>
   <span class='ivar'>@gift_start</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
@@ -1083,7 +1083,7 @@
 90</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/gift.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/gift.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stopwatch'>stopwatch</span>
   <span class='kw'>nil</span>
@@ -1098,9 +1098,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:41 2025 by
+  Generated on Fri Nov  7 07:10:08 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/attributes/spells.rb</dd>
+    <dd>documented/attributes/spells.rb</dd>
   </dl>
   
 </div>
@@ -338,7 +338,7 @@
 57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/spells.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'documented/attributes/spells.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_active'>active</span>
   <span class='const'>Spell</span><span class='period'>.</span><span class='id identifier rubyid_active'>active</span>
@@ -457,7 +457,7 @@
 49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/spells.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'documented/attributes/spells.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_circle_name'>get_circle_name</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_num'>num</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -550,7 +550,7 @@
 67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/spells.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'documented/attributes/spells.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_known'>known</span>
   <span class='id identifier rubyid_known_spells'>known_spells</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -654,7 +654,7 @@
 84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/spells.rb', line 75</span>
+      <pre class="code"><span class="info file"># File 'documented/attributes/spells.rb', line 75</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_require_cooldown'>require_cooldown</span><span class='lparen'>(</span><span class='id identifier rubyid_spell'>spell</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_spell'>spell</span><span class='period'>.</span><span class='id identifier rubyid_num'>num</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>&gt;</span> <span class='int'>9013</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_spell'>spell</span><span class='period'>.</span><span class='id identifier rubyid_num'>num</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>&lt;</span> <span class='int'>9042</span><span class='rparen'>)</span> <span class='comment'># Assume Aspect: Ranger
@@ -728,7 +728,7 @@
 92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/spells.rb', line 90</span>
+      <pre class="code"><span class="info file"># File 'documented/attributes/spells.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_serialize'>serialize</span>
   <span class='lbracket'>[</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_minor_elemental'>minor_elemental</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_major_elemental'>major_elemental</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_minor_spiritual'>minor_spiritual</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_major_spiritual'>major_spiritual</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_wizard'>wizard</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sorcerer'>sorcerer</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ranger'>ranger</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_paladin'>paladin</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_empath'>empath</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_cleric'>cleric</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_bard'>bard</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_minormental'>minormental</span><span class='rbracket'>]</span>
@@ -743,9 +743,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:36 2025 by
+  Generated on Fri Nov  7 07:10:04 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

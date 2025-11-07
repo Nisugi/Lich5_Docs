@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/gemstone/societies/council_of_light.rb</dd>
+    <dd>documented/gemstone/societies/council_of_light.rb</dd>
   </dl>
   
 </div>
@@ -104,10 +104,6 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>Represents the Council of Light society.</p>
-
-<p>Provides access to CoL sign data, cost handling, usability checks, and sign commands.</p>
-
 <p>Represents the Council of Light society.</p>
 
 <p>Provides access to CoL sign data, cost handling, usability checks, and sign commands.</p>
@@ -145,8 +141,6 @@
     
 <p>Metadata for each Sign from the Council of Light, including rank, cost, duration, etc. Some fields (e.g., ‘:summary`, `:duration`) may be defined as lambdas for dynamic content. These are automatically resolved at access time via `Society.resolve`.</p>
 
-<p>Metadata for each Sign from the Council of Light, including rank, cost, duration, etc. Some fields (e.g., ‘:summary`, `:duration`) may be defined as lambdas for dynamic content. These are automatically resolved at access time via `Society.resolve`.</p>
-
 
   </div>
 </div>
@@ -154,20 +148,6 @@
   
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span>, <span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Sign long name mapped to metadata</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -694,39 +674,6 @@
       
     </ul>
   
-    <h2>
-      Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#self-instance_method" title="#self (instance method)">#<strong>self</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Dynamically defines singleton methods for each Council of Light sign.</p>
-</div></span>
-  
-</li>
-
-      
-    </ul>
-  
 
 
   
@@ -757,10 +704,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Retrieves a sign definition by short or long name.</p>
-
-<p>Normalizes the provided name and attempts to match against both short and long names of all Council of Light signs. Returns the corresponding sign metadata if found.</p>
-
 <p>Retrieves a sign definition by short or long name.</p>
 
 <p>Normalizes the provided name and attempts to match against both short and long names of all Council of Light signs. Returns the corresponding sign metadata if found.</p>
@@ -800,40 +743,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The short or long name of the sign</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The sign metadata, or nil if not found</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -857,25 +770,25 @@
       <pre class="lines">
 
 
-266
-267
-268
-269
-270
-271
-272
-273
-274
-275
-276
-277
-278
-279
-280
-281</pre>
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/council_of_light.rb', line 266</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/council_of_light.rb', line 246</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_lookup'>lookup</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_lookup'><span class='object_link'><a href="../Society.html#lookup-class_method" title="Lich::Gemstone::Society.lookup (method)">lookup</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_sign_lookups'>sign_lookups</span><span class='rparen'>)</span>
@@ -910,10 +823,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Checks if the character can currently afford to use a given Council of Light sign, based on available spirit and mana.</p>
-
-<p>For signs that use the ‘:dissipates` cost type, pending spirit loss is added to the cost to prevent overcommitment.</p>
-
 <p>Checks if the character can currently afford to use a given Council of Light sign, based on available spirit and mana.</p>
 
 <p>For signs that use the ‘:dissipates` cost type, pending spirit loss is added to the cost to prevent overcommitment.</p>
@@ -953,40 +862,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>sign_name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Long or short name of the sign</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if the sign can be afforded now</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -1010,31 +889,31 @@
       <pre class="lines">
 
 
-396
-397
-398
-399
-400
-401
-402
-403
-404
-405
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415
-416
-417</pre>
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/council_of_light.rb', line 396</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/council_of_light.rb', line 338</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
@@ -1107,12 +986,12 @@
       <pre class="lines">
 
 
-448
-449
-450</pre>
+378
+379
+380</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/council_of_light.rb', line 448</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/council_of_light.rb', line 378</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
   <span class='cvar'>@@col_signs</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_entry'>entry</span><span class='op'>|</span> <span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_transform_values'>transform_values</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_resolve'><span class='object_link'><a href="../Society.html#resolve-class_method" title="Lich::Gemstone::Society.resolve (method)">resolve</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='comma'>,</span> <span class='id identifier rubyid_entry'>entry</span><span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span>
@@ -1134,17 +1013,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Determines whether the specified Council of Light sign is currently available for use.</p>
-
-<p>A sign is considered available if:</p>
-<ul><li>
-<p>The character knows the sign (based on rank)</p>
-</li><li>
-<p>The character can afford the sign’s cost (spirit/mana)</p>
-</li><li>
-<p>If the sign’s ‘:cost_type` is `:dissipates`, it is not currently active (as that would delay the cost and prevent re-use until expiration)</p>
-</li></ul>
-
 <p>Determines whether the specified Council of Light sign is currently available for use.</p>
 
 <p>A sign is considered available if:</p>
@@ -1191,40 +1059,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>sign_name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Long or short name of the sign</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if the sign can be used right now</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -1248,21 +1086,21 @@
       <pre class="lines">
 
 
-519
-520
-521
-522
-523
-524
-525
-526
-527
-528
-529
-530</pre>
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/council_of_light.rb', line 519</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/council_of_light.rb', line 421</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
@@ -1293,8 +1131,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Determines if the character knows the given Council of Light sign, based on the society rank and the sign’s required rank.</p>
-
 <p>Determines if the character knows the given Council of Light sign, based on the society rank and the sign’s required rank.</p>
 
 
@@ -1332,40 +1168,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>sign_name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The short or long name of the sign</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if the character’s rank is sufficient to use the sign</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -1389,16 +1195,16 @@
       <pre class="lines">
 
 
-328
-329
-330
-331
-332
-333
-334</pre>
+290
+291
+292
+293
+294
+295
+296</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/council_of_light.rb', line 328</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/council_of_light.rb', line 290</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
@@ -1424,8 +1230,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Checks if the character is a COL master (rank 20).</p>
-
 <p>Checks if the character is a COL master (rank 20).</p>
 
 
@@ -1462,20 +1266,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if the character has achieved master rank</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1484,13 +1274,13 @@
       <pre class="lines">
 
 
-461
-462
-463
-464</pre>
+386
+387
+388
+389</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/council_of_light.rb', line 461</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/council_of_light.rb', line 386</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_master?'>master?</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
@@ -1513,8 +1303,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Checks if the character is a member of COL and optionally at a given rank.</p>
-
 <p>Checks if the character is a member of COL and optionally at a given rank.</p>
 
 
@@ -1554,42 +1342,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>rank</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>nil</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Optionally check if the character is at this rank</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if the character is a COL member (and at the specified rank, if given)</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -1613,13 +1369,13 @@
       <pre class="lines">
 
 
-477
-478
-479
-480</pre>
+396
+397
+398
+399</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/council_of_light.rb', line 477</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/council_of_light.rb', line 396</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_member?'>member?</span><span class='lparen'>(</span><span class='id identifier rubyid_rank'>rank</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_membership'><span class='object_link'><a href="../Society.html#membership-class_method" title="Lich::Gemstone::Society.membership (method)">membership</a></span></span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Council of Light</span><span class='tstring_end'>&quot;</span></span>
@@ -1642,10 +1398,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Calculates the total pending spirit loss from active Council of Light signs that consume spirit when their effects end (i.e., cost_type is :dissipates).</p>
-
-<p>Only signs with a non-zero :spirit cost and active buff status are considered. Mana costs are ignored.</p>
-
 <p>Calculates the total pending spirit loss from active Council of Light signs that consume spirit when their effects end (i.e., cost_type is :dissipates).</p>
 
 <p>Only signs with a non-zero :spirit cost and active buff status are considered. Mana costs are ignored.</p>
@@ -1684,20 +1436,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Total spirit points that will be lost when applicable signs expire.</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1706,15 +1444,15 @@
       <pre class="lines">
 
 
-436
-437
-438
-439
-440
-441</pre>
+369
+370
+371
+372
+373
+374</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/council_of_light.rb', line 436</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/council_of_light.rb', line 369</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_pending_spirit_loss'>pending_spirit_loss</span>
   <span class='cvar'>@@col_signs</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span>
@@ -1739,8 +1477,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Provides the current rank of the character within the Council of Light.</p>
-
 <p>Provides the current rank of the character within the Council of Light.</p>
 
 
@@ -1777,20 +1513,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The current rank of the character</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1799,13 +1521,13 @@
       <pre class="lines">
 
 
-491
-492
-493
-494</pre>
+405
+406
+407
+408</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/council_of_light.rb', line 491</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/council_of_light.rb', line 405</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rank'>rank</span>
   <span class='kw'>return</span> <span class='int'>0</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
@@ -1828,10 +1550,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns an array of sign metadata, including cost and rank.</p>
-
-<p>This is used for display, iteration, and generating dynamic method accessors.</p>
-
 <p>Returns an array of sign metadata, including cost and rank.</p>
 
 <p>This is used for display, iteration, and generating dynamic method accessors.</p>
@@ -1879,29 +1597,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Each hash contains keys:</p>
-<ul><li>
-<p>:long_name [String]</p>
-</li><li>
-<p>:short_name [String]</p>
-</li><li>
-<p>:rank [Integer]</p>
-</li><li>
-<p>:cost [Hash]</p>
-</li></ul>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1910,19 +1605,19 @@
       <pre class="lines">
 
 
-304
-305
-306
-307
-308
-309
-310
-311
-312
-313</pre>
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/council_of_light.rb', line 304</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/council_of_light.rb', line 273</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sign_lookups'>sign_lookups</span>
   <span class='cvar'>@@col_signs</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_sign'>sign</span><span class='op'>|</span>
@@ -1950,11 +1645,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Attempts to use a Council of Light sign by issuing the appropriate command.</p>
-
-<p>If the sign has a defined ‘:usage` string (e.g., “signal”), it is used directly. Otherwise, defaults to `sign of &lt;short_name&gt;`.</p>
-
+    <p class="note returns_void">This method returns an undefined value.</p>
 <p>Attempts to use a Council of Light sign by issuing the appropriate command.</p>
 
 <p>If the sign has a defined ‘:usage` string (e.g., “signal”), it is used directly. Otherwise, defaults to `sign of &lt;short_name&gt;`.</p>
@@ -2012,64 +1703,8 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>sign_name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The long or short name of the sign to invoke</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>target</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>nil</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Optional target for the sign (appended to command)</p>
-</div>
-      
-    </li>
-  
 </ul>
 
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>void</tt>)</span>
-      
-      
-      
-    </li>
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>void</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -2077,30 +1712,30 @@
       <pre class="lines">
 
 
-355
-356
-357
-358
-359
-360
-361
-362
-363
-364
-365
-366
-367
-368
-369
-370
-371
-372
-373
-374
-375</pre>
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/council_of_light.rb', line 355</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/council_of_light.rb', line 307</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
@@ -2130,73 +1765,12 @@
     
   </div>
 
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="self-instance_method">
-  
-    #<strong>self</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Dynamically defines singleton methods for each Council of Light sign.</p>
-
-<p>Each method allows accessing the sign’s metadata by calling either its short name or long name as a method. For example:</p>
-
-<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::CouncilOfLight (class)">CouncilOfLight</a></span></span><span class='period'>.</span><span class='id identifier rubyid_striking'>striking</span>  <span class='comment'>#=&gt; metadata hash for &quot;Sign of Striking&quot;
-</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::CouncilOfLight (class)">CouncilOfLight</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Striking</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='comment'>#=&gt; same result
-</span></code></pre>
-
-<p>This supports both ‘<a href=":short_name">sign</a>` and `<a href=":long_name">sign</a>`.</p>
-
-<p>Dynamically defines singleton methods for each Council of Light sign.</p>
-
-<p>Each method allows accessing the sign’s metadata by calling either its short name or long name as a method. For example:</p>
-
-<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::CouncilOfLight (class)">CouncilOfLight</a></span></span><span class='period'>.</span><span class='id identifier rubyid_striking'>striking</span>  <span class='comment'>#=&gt; metadata hash for &quot;Sign of Striking&quot;
-</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::CouncilOfLight (class)">CouncilOfLight</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Striking</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='comment'>#=&gt; same result
-</span></code></pre>
-
-<p>This supports both ‘<a href=":short_name">sign</a>` and `<a href=":long_name">sign</a>`.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-552</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/council_of_light.rb', line 552</span>
-
-<span class='id identifier rubyid_define_name_methods'>define_name_methods</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='cvar'>@@col_signs</span><span class='rparen'>)</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
-
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:45 2025 by
+  Generated on Fri Nov  7 07:10:12 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

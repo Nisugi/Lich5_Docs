@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/gemstone/societies/guardians_of_sunfist.rb</dd>
+    <dd>documented/gemstone/societies/guardians_of_sunfist.rb</dd>
   </dl>
   
 </div>
@@ -104,10 +104,6 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>Represents the Guardians of Sunfist society.</p>
-
-<p>Provides access to Guardians of Sunfist sigil data, cost calculation, usability checks, and dynamic method access for individual sigils.</p>
-
 <p>Represents the Guardians of Sunfist society.</p>
 
 <p>Provides access to Guardians of Sunfist sigil data, cost calculation, usability checks, and dynamic method access for individual sigils.</p>
@@ -145,8 +141,6 @@
     
 <p>Metadata for each Sigil from the Guardians of Sunfist, including rank, costs, duration, etc. Some fields (e.g., ‘:summary`, `:duration`) may be defined as lambdas for dynamic content. These are automatically resolved at access time via `Society.resolve`.</p>
 
-<p>Metadata for each Sigil from the Guardians of Sunfist, including rank, costs, duration, etc. Some fields (e.g., ‘:summary`, `:duration`) may be defined as lambdas for dynamic content. These are automatically resolved at access time via `Society.resolve`.</p>
-
 
   </div>
 </div>
@@ -154,20 +148,6 @@
   
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span>, <span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Sigil name mapped to metadata</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -630,39 +610,6 @@
       
     </ul>
   
-    <h2>
-      Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#self-instance_method" title="#self (instance method)">#<strong>self</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Dynamically defines singleton methods for each Guardians of Sunfist sigil.</p>
-</div></span>
-  
-</li>
-
-      
-    </ul>
-  
 
 
   
@@ -693,10 +640,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Retrieves a sigil definition by short or long name.</p>
-
-<p>Normalizes the provided name and attempts to match against both short and long names of all Guardians of Sunfist sigils. Returns the corresponding sigil metadata if found.</p>
-
 <p>Retrieves a sigil definition by short or long name.</p>
 
 <p>Normalizes the provided name and attempts to match against both short and long names of all Guardians of Sunfist sigils. Returns the corresponding sigil metadata if found.</p>
@@ -736,40 +679,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The short or long name of the sigil</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The sigil metadata, or nil if not found</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -793,25 +706,25 @@
       <pre class="lines">
 
 
-229
-230
-231
-232
-233
-234
-235
-236
-237
-238
-239
-240
-241
-242
-243
-244</pre>
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/guardians_of_sunfist.rb', line 229</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/guardians_of_sunfist.rb', line 207</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_lookup'>lookup</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_lookup'><span class='object_link'><a href="../Society.html#lookup-class_method" title="Lich::Gemstone::Society.lookup (method)">lookup</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_sigil_lookups'>sigil_lookups</span><span class='rparen'>)</span>
@@ -846,8 +759,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Checks if the character can currently afford to use a given Guardians of Sunfist sigil, based on available stamina and mana.</p>
-
 <p>Checks if the character can currently afford to use a given Guardians of Sunfist sigil, based on available stamina and mana.</p>
 
 
@@ -885,40 +796,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>sigil_name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Long or short name of the sigil</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if the sigil can be afforded now</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -942,28 +823,28 @@
       <pre class="lines">
 
 
-356
-357
-358
-359
-360
-361
-362
-363
-364
-365
-366
-367
-368
-369
-370
-371
-372
-373
-374</pre>
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/guardians_of_sunfist.rb', line 356</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/guardians_of_sunfist.rb', line 298</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
@@ -1003,8 +884,6 @@
     
 <p>Returns all Guardians of Sunfist sigil metadata entries with evaluated fields.</p>
 
-<p>Returns all Guardians of Sunfist sigil metadata entries with evaluated fields.</p>
-
 
   </div>
 </div>
@@ -1039,20 +918,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>An array of sigil metadata hashes with lambdas resolved</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1061,12 +926,12 @@
       <pre class="lines">
 
 
-410
-411
-412</pre>
+337
+338
+339</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/guardians_of_sunfist.rb', line 410</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/guardians_of_sunfist.rb', line 337</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
   <span class='cvar'>@@sunfist_sigils</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_entry'>entry</span><span class='op'>|</span> <span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_transform_values'>transform_values</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_resolve'><span class='object_link'><a href="../Society.html#resolve-class_method" title="Lich::Gemstone::Society.resolve (method)">resolve</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='comma'>,</span> <span class='id identifier rubyid_entry'>entry</span><span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span>
@@ -1088,15 +953,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Determines whether the specified Guardians of Sunfist sigil is currently available for use.</p>
-
-<p>A sigil is considered available if:</p>
-<ul><li>
-<p>The character knows the sigil (based on rank)</p>
-</li><li>
-<p>The character can afford the sigil (based on stamina and mana)</p>
-</li></ul>
-
 <p>Determines whether the specified Guardians of Sunfist sigil is currently available for use.</p>
 
 <p>A sigil is considered available if:</p>
@@ -1141,40 +997,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>sigil_name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Long or short name of the sigil</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if the sigil can be used right now</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -1198,13 +1024,13 @@
       <pre class="lines">
 
 
-395
-396
-397
-398</pre>
+327
+328
+329
+330</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/guardians_of_sunfist.rb', line 395</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/guardians_of_sunfist.rb', line 327</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
@@ -1227,10 +1053,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Determines if the character knows a given Sunfist sigil, based on society rank.</p>
-
-<p>Uses the unified ‘[]` method for normalized lookup by short or long name.</p>
-
 <p>Determines if the character knows a given Sunfist sigil, based on society rank.</p>
 
 <p>Uses the unified ‘[]` method for normalized lookup by short or long name.</p>
@@ -1270,40 +1092,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>sigil_name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The short or long name of the sigil</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if the character’s rank is sufficient to use the sigil</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -1327,16 +1119,16 @@
       <pre class="lines">
 
 
-293
-294
-295
-296
-297
-298
-299</pre>
+252
+253
+254
+255
+256
+257
+258</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/guardians_of_sunfist.rb', line 293</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/guardians_of_sunfist.rb', line 252</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
@@ -1362,8 +1154,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Checks if the character is a Sunfist master (rank 20).</p>
-
 <p>Checks if the character is a Sunfist master (rank 20).</p>
 
 
@@ -1400,20 +1190,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if the character has achieved master rank in the Guardians of Sunfist</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1422,13 +1198,13 @@
       <pre class="lines">
 
 
-443
-444
-445
-446</pre>
+358
+359
+360
+361</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/guardians_of_sunfist.rb', line 443</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/guardians_of_sunfist.rb', line 358</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_master?'>master?</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
@@ -1451,8 +1227,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Checks if the character is a member of the Guardians of Sunfist, and optionally at a specific rank.</p>
-
 <p>Checks if the character is a member of the Guardians of Sunfist, and optionally at a specific rank.</p>
 
 
@@ -1492,42 +1266,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>rank</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>nil</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Optional specific rank to check against</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>True if the character is a Sunfist member (and at the specified rank, if given)</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -1551,13 +1293,13 @@
       <pre class="lines">
 
 
-428
-429
-430
-431</pre>
+348
+349
+350
+351</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/guardians_of_sunfist.rb', line 428</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/guardians_of_sunfist.rb', line 348</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_member?'>member?</span><span class='lparen'>(</span><span class='id identifier rubyid_rank'>rank</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_membership'><span class='object_link'><a href="../Society.html#membership-class_method" title="Lich::Gemstone::Society.membership (method)">membership</a></span></span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Guardians of Sunfist</span><span class='tstring_end'>&quot;</span></span>
@@ -1580,8 +1322,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Provides the current rank of the character within the Guardians of Sunfist.</p>
-
 <p>Provides the current rank of the character within the Guardians of Sunfist.</p>
 
 
@@ -1618,20 +1358,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The current rank of the character</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1640,13 +1366,13 @@
       <pre class="lines">
 
 
-458
-459
-460
-461</pre>
+368
+369
+370
+371</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/guardians_of_sunfist.rb', line 458</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/guardians_of_sunfist.rb', line 368</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rank'>rank</span>
   <span class='kw'>return</span> <span class='int'>0</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
@@ -1669,10 +1395,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns a simplified list of all sigils with key attributes used for lookup and UI.</p>
-
-<p>Used internally to normalize and match against sigil names.</p>
-
 <p>Returns a simplified list of all sigils with key attributes used for lookup and UI.</p>
 
 <p>Used internally to normalize and match against sigil names.</p>
@@ -1720,29 +1442,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Each hash contains:</p>
-<ul><li>
-<p>:short_name [String]</p>
-</li><li>
-<p>:long_name [String]</p>
-</li><li>
-<p>:rank [Integer]</p>
-</li><li>
-<p>:cost [Hash]</p>
-</li></ul>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1751,19 +1450,19 @@
       <pre class="lines">
 
 
-267
-268
-269
-270
-271
-272
-273
-274
-275
-276</pre>
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/guardians_of_sunfist.rb', line 267</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/guardians_of_sunfist.rb', line 234</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sigil_lookups'>sigil_lookups</span>
   <span class='cvar'>@@sunfist_sigils</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_sigil'>sigil</span><span class='op'>|</span>
@@ -1791,11 +1490,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    
-<p>Attempts to use a Guardians of Sunfist sigil by issuing the appropriate command.</p>
-
-<p>If the sigil has a defined ‘:usage` string, it is used directly. Otherwise, defaults to `sigil of &lt;short_name&gt;`.</p>
-
+    <p class="note returns_void">This method returns an undefined value.</p>
 <p>Attempts to use a Guardians of Sunfist sigil by issuing the appropriate command.</p>
 
 <p>If the sigil has a defined ‘:usage` string, it is used directly. Otherwise, defaults to `sigil of &lt;short_name&gt;`.</p>
@@ -1853,64 +1548,8 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>sigil_name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The short or long name of the sigil to invoke</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>target</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>nil</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Optional target for the sigil (appended to command)</p>
-</div>
-      
-    </li>
-  
 </ul>
 
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>void</tt>)</span>
-      
-      
-      
-    </li>
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>void</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1918,30 +1557,30 @@
       <pre class="lines">
 
 
-320
-321
-322
-323
-324
-325
-326
-327
-328
-329
-330
-331
-332
-333
-334
-335
-336
-337
-338
-339
-340</pre>
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/guardians_of_sunfist.rb', line 320</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/societies/guardians_of_sunfist.rb', line 269</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
@@ -1971,69 +1610,12 @@
     
   </div>
 
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="self-instance_method">
-  
-    #<strong>self</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Dynamically defines singleton methods for each Guardians of Sunfist sigil.</p>
-
-<p>Each method allows accessing the sigil’s metadata by calling either its short name or long name as a method. For example:</p>
-
-<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::GuardiansOfSunfist (class)">GuardiansOfSunfist</a></span></span><span class='period'>.</span><span class='id identifier rubyid_resolve'><span class='object_link'><a href="../Society.html#resolve-class_method" title="Lich::Gemstone::Society.resolve (method)">resolve</a></span></span>        <span class='comment'>#=&gt; metadata for Sigil of Resolve
-</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::GuardiansOfSunfist (class)">GuardiansOfSunfist</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Resolve</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='comment'>#=&gt; same result
-</span></code></pre>
-
-<p>Dynamically defines singleton methods for each Guardians of Sunfist sigil.</p>
-
-<p>Each method allows accessing the sigil’s metadata by calling either its short name or long name as a method. For example:</p>
-
-<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::GuardiansOfSunfist (class)">GuardiansOfSunfist</a></span></span><span class='period'>.</span><span class='id identifier rubyid_resolve'><span class='object_link'><a href="../Society.html#resolve-class_method" title="Lich::Gemstone::Society.resolve (method)">resolve</a></span></span>        <span class='comment'>#=&gt; metadata for Sigil of Resolve
-</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::GuardiansOfSunfist (class)">GuardiansOfSunfist</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Resolve</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='comment'>#=&gt; same result
-</span></code></pre>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-479</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/societies/guardians_of_sunfist.rb', line 479</span>
-
-<span class='id identifier rubyid_define_name_methods'>define_name_methods</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='cvar'>@@sunfist_sigils</span><span class='rparen'>)</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
-
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:45 2025 by
+  Generated on Fri Nov  7 07:10:12 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

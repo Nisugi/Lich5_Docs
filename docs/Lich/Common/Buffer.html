@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/common/buffer.rb</dd>
+    <dd>documented/common/buffer.rb</dd>
   </dl>
   
 </div>
@@ -511,7 +511,7 @@
 172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/buffer.rb', line 168</span>
+      <pre class="code"><span class="info file"># File 'documented/common/buffer.rb', line 168</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Buffer (module)">Buffer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_cleanup'>cleanup</span>
   <span class='cvar'>@@index</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid__v'>_v</span><span class='op'>|</span> <span class='kw'>not</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span> <span class='op'>==</span> <span class='id identifier rubyid_k'>k</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span>
@@ -595,7 +595,7 @@
 125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/buffer.rb', line 100</span>
+      <pre class="code"><span class="info file"># File 'documented/common/buffer.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Buffer (module)">Buffer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
   <span class='id identifier rubyid_thread_id'>thread_id</span> <span class='op'>=</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span>
@@ -706,7 +706,7 @@
 59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/buffer.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'documented/common/buffer.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Buffer (module)">Buffer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_gets'>gets</span>
   <span class='id identifier rubyid_thread_id'>thread_id</span> <span class='op'>=</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span>
@@ -808,7 +808,7 @@
 87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/buffer.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'documented/common/buffer.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Buffer (module)">Buffer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_gets?'>gets?</span>
   <span class='id identifier rubyid_thread_id'>thread_id</span> <span class='op'>=</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span>
@@ -892,7 +892,7 @@
 96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/buffer.rb', line 91</span>
+      <pre class="code"><span class="info file"># File 'documented/common/buffer.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Buffer (module)">Buffer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rewind'>rewind</span>
   <span class='id identifier rubyid_thread_id'>thread_id</span> <span class='op'>=</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span>
@@ -954,7 +954,7 @@
 152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/buffer.rb', line 150</span>
+      <pre class="code"><span class="info file"># File 'documented/common/buffer.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Buffer (module)">Buffer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_streams'>streams</span>
   <span class='cvar'>@@streams</span><span class='lbracket'>[</span><span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='rbracket'>]</span>
@@ -1037,7 +1037,7 @@
 163</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/buffer.rb', line 157</span>
+      <pre class="code"><span class="info file"># File 'documented/common/buffer.rb', line 157</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Buffer (module)">Buffer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_streams='>streams=</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Integer</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span> <span class='op'>&amp;</span> <span class='int'>63</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span>
@@ -1150,7 +1150,7 @@
 145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/common/buffer.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'documented/common/buffer.rb', line 131</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Buffer (module)">Buffer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_stream'>stream</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='cvar'>@@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
@@ -1177,9 +1177,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:35 2025 by
+  Generated on Fri Nov  7 07:10:03 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

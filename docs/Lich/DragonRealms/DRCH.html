@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/dragonrealms/commons/common-healing.rb</dd>
+    <dd>documented/dragonrealms/commons/common-healing.rb</dd>
   </dl>
   
 </div>
@@ -566,7 +566,7 @@
 416</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 383</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-healing.rb', line 383</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bind_wound'>bind_wound</span><span class='lparen'>(</span><span class='id identifier rubyid_body_part'>body_part</span><span class='comma'>,</span> <span class='id identifier rubyid_person'>person</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>my</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='comment'># Either you tended it or it already has bandages on. Good job!
@@ -684,7 +684,7 @@
 456</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 454</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-healing.rb', line 454</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_calculate_score'>calculate_score</span><span class='lparen'>(</span><span class='id identifier rubyid_wounds_by_severity'>wounds_by_severity</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_wounds_by_severity'>wounds_by_severity</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_severity'>severity</span><span class='comma'>,</span> <span class='id identifier rubyid_wound_list'>wound_list</span><span class='op'>|</span> <span class='lparen'>(</span><span class='id identifier rubyid_severity'>severity</span><span class='op'>**</span><span class='int'>2</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='id identifier rubyid_wound_list'>wound_list</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_reduce'>reduce</span><span class='lparen'>(</span><span class='symbol'>:+</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='int'>0</span>
@@ -803,7 +803,7 @@
 86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-healing.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check_health'>check_health</span>
   <span class='id identifier rubyid_parasites_regex'>parasites_regex</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span><span class='gvar'>$DRCH_PARASITES_REGEX_LIST</span><span class='rparen'>)</span>
@@ -924,7 +924,7 @@
 21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-healing.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_has_tendable_bleeders?'>has_tendable_bleeders?</span>
   <span class='id identifier rubyid_health_data'>health_data</span> <span class='op'>=</span> <span class='id identifier rubyid_check_health'>check_health</span>
@@ -1041,7 +1041,7 @@
 274</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 245</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-healing.rb', line 245</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_bleeders'>parse_bleeders</span><span class='lparen'>(</span><span class='id identifier rubyid_health_lines'>health_lines</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_bleeders'>bleeders</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
@@ -1174,7 +1174,7 @@
 375</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 354</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-healing.rb', line 354</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_lodged_items'>parse_lodged_items</span><span class='lparen'>(</span><span class='id identifier rubyid_lodged_line'>lodged_line</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_lodged_items'>lodged_items</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
@@ -1296,7 +1296,7 @@
 340</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 322</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-healing.rb', line 322</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_parasites'>parse_parasites</span><span class='lparen'>(</span><span class='id identifier rubyid_parasites_line'>parasites_line</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_parasites'>parasites</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
@@ -1485,7 +1485,7 @@
 233</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 147</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-healing.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_perceived_health'>parse_perceived_health</span><span class='lparen'>(</span><span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_pause'><span class='object_link'><a href="../../top-level-namespace.html#pause-instance_method" title="#pause (method)">pause</a></span></span> <span class='float'>0.5</span> <span class='comment'># Pause to wait for the full response to come back from the server
@@ -1678,7 +1678,7 @@
 310</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 286</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-healing.rb', line 286</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_wounds'>parse_wounds</span><span class='lparen'>(</span><span class='id identifier rubyid_wounds_line'>wounds_line</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_wounds'>wounds</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
@@ -1785,7 +1785,7 @@
 117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-healing.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_perceive_health'>perceive_health</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="DRStats.html" title="Lich::DragonRealms::DRStats (module)">DRStats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_empath?'><span class='object_link'><a href="DRStats.html#empath%3F-class_method" title="Lich::DragonRealms::DRStats.empath? (method)">empath?</a></span></span>
@@ -1903,7 +1903,7 @@
 139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-healing.rb', line 124</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_perceive_health_other'>perceive_health_other</span><span class='lparen'>(</span><span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="DRStats.html" title="Lich::DragonRealms::DRStats (module)">DRStats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_empath?'><span class='object_link'><a href="DRStats.html#empath%3F-class_method" title="Lich::DragonRealms::DRStats.empath? (method)">empath?</a></span></span>
@@ -2025,7 +2025,7 @@
 444</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 438</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-healing.rb', line 438</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_skilled_to_tend_wound?'>skilled_to_tend_wound?</span><span class='lparen'>(</span><span class='id identifier rubyid_bleed_rate'>bleed_rate</span><span class='comma'>,</span> <span class='id identifier rubyid_internal'>internal</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_skill_target'>skill_target</span> <span class='op'>=</span> <span class='id identifier rubyid_internal'>internal</span> <span class='op'>?</span> <span class='symbol'>:skill_to_tend_internal</span> <span class='op'>:</span> <span class='symbol'>:skill_to_tend</span>
@@ -2117,7 +2117,7 @@
 427</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 424</span>
+      <pre class="code"><span class="info file"># File 'documented/dragonrealms/commons/common-healing.rb', line 424</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unwrap_wound'>unwrap_wound</span><span class='lparen'>(</span><span class='id identifier rubyid_body_part'>body_part</span><span class='comma'>,</span> <span class='id identifier rubyid_person'>person</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>my</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unwrap </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_person'>person</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_body_part'>body_part</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You unwrap .* bandages</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>That area is not tended</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You may undo the affects of TENDing</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -2133,9 +2133,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:39 2025 by
+  Generated on Fri Nov  7 07:10:06 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

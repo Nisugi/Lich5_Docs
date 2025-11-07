@@ -94,7 +94,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/gemstone/society.rb</dd>
+    <dd>documented/gemstone/society.rb</dd>
   </dl>
   
 </div>
@@ -103,8 +103,6 @@
   <div class="discussion">
     
 <p>The Society class provides accessors for a character’s society membership, rank, and task data.</p>
-
-<p>All methods rely on Infomon or XMLData, and a future rewrite might shift responsibility to character-specific data models or direct game scraping. The Society class provides accessors for a character’s society membership, rank, and task data.</p>
 
 <p>All methods rely on Infomon or XMLData, and a future rewrite might shift responsibility to character-specific data models or direct game scraping.</p>
 
@@ -235,7 +233,7 @@
 
   
     <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
-<p>Use #member_of instead.  Deprecated 6/2025</p>
+<p>Use #membership instead.  Deprecated 6/2025</p>
 </div></span>
   
 </li>
@@ -434,16 +432,6 @@
 
 <p>Method names are normalized using <span class='object_link'><a href="../Util.html#normalize_name-class_method" title="Lich::Util.normalize_name (method)">Util.normalize_name</a></span>, which ensures compatibility with Ruby method naming (e.g., downcased, underscores instead of spaces, etc.).</p>
 
-<p>Example:</p>
-
-<pre class="code ruby"><code class="ruby"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Symbol of Recognition</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='backtick'>`</span><span class='tstring_content'>symbol_of_recognition</span><span class='tstring_end'>`</span></span>
-<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Kai&#39;s Strike</span><span class='tstring_end'>&quot;</span></span>          <span class='op'>=&gt;</span> <span class='backtick'>`</span><span class='tstring_content'>kais_strike</span><span class='tstring_end'>`</span></span>
-</code></pre>
-
-<p>Defines singleton accessors for both short and long names on a given target class.</p>
-
-<p>Method names are normalized using <span class='object_link'><a href="../Util.html#normalize_name-class_method" title="Lich::Util.normalize_name (method)">Util.normalize_name</a></span>, which ensures compatibility with Ruby method naming (e.g., downcased, underscores instead of spaces, etc.).</p>
-
 
   </div>
 </div>
@@ -495,38 +483,6 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>target_class</span>
-      
-      
-        <span class='type'>(<tt>Class</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The class to define singleton methods on (typically ‘self`)</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>data</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="../../String.html" title="String (class)">String</a></span>, <span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The metadata hash (e.g., ‘@@voln_symbols`)</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 
@@ -536,18 +492,18 @@
       <pre class="lines">
 
 
-236
-237
-238
-239
-240
-241
-242
-243
-244</pre>
+152
+153
+154
+155
+156
+157
+158
+159
+160</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/society.rb', line 236</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/society.rb', line 152</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_define_name_methods'>define_name_methods</span><span class='lparen'>(</span><span class='id identifier rubyid_target_class'>target_class</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_entry'>entry</span><span class='op'>|</span>
@@ -577,6 +533,8 @@
     <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
 <p>Use OrderOfVoln.favor instead.  Deprecated 6/2025</p>
 </div></div>
+
+<p>Returns The amount of Voln favor.</p>
 
 
   </div>
@@ -612,20 +570,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The amount of Voln favor</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -634,14 +578,14 @@
       <pre class="lines">
 
 
-155
-156
-157
-158
-159</pre>
+104
+105
+106
+107
+108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/society.rb', line 155</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/society.rb', line 104</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_favor'>favor</span>
   <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deprecated'><span class='object_link'><a href="../../Lich.html#deprecated-class_method" title="Lich.deprecated (method)">deprecated</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Society.favor</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Society::OrderOfVoln.favor</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>fe_log:</span> <span class='kw'>false</span><span class='rparen'>)</span>
@@ -667,8 +611,6 @@
     
 <p>Looks up an ability definition from a society hash using a normalized short or long name.</p>
 
-<p>Looks up an ability definition from a society hash using a normalized short or long name.</p>
-
 
   </div>
 </div>
@@ -682,7 +624,7 @@
 <p>Looking up an ability</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_ability'>ability</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_lookup'>lookup</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Ability Name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_entries'>entries</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_ability'>ability</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_lookup'>lookup</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Ability Name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_lookups'>lookups</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -706,55 +648,7 @@
   
     <li>
       
-        <span class='name'>entries</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="../../String.html" title="String (class)">String</a></span>, <span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The base hash keyed by short_name</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
         <span class='name'>lookups</span>
-      
-      
-        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>An array of hashes containing at least ‘:short_name` and `:long_name`</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The user-facing name (short or long) of the ability</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>entries</span>
       
       
         <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="../../String.html" title="String (class)">String</a></span>, <span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
@@ -787,20 +681,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The matching entry from the base hash, or nil if not found</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -809,19 +689,19 @@
       <pre class="lines">
 
 
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185</pre>
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/society.rb', line 176</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/society.rb', line 117</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_lookup'>lookup</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_lookups'>lookups</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_normalized'>normalized</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_normalize_name'><span class='object_link'><a href="../Util.html#normalize_name-class_method" title="Lich::Util.normalize_name (method)">normalize_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
@@ -850,8 +730,10 @@
 </h3><div class="docstring">
   <div class="discussion">
     <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
-<p>Use #member_of instead.  Deprecated 6/2025</p>
+<p>Use #membership instead.  Deprecated 6/2025</p>
 </div></div>
+
+<p>Returns The current society membership.</p>
 
 
   </div>
@@ -887,20 +769,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The current society membership</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -909,13 +777,13 @@
       <pre class="lines">
 
 
-127
-128
-129
-130</pre>
+84
+85
+86
+87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/society.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/society.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_member'>member</span>
   <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deprecated'><span class='object_link'><a href="../../Lich.html#deprecated-class_method" title="Lich.deprecated (method)">deprecated</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Society.member</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Society.membership</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>fe_log:</span> <span class='kw'>false</span><span class='rparen'>)</span>
@@ -938,8 +806,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Retrieves the character’s society membership status.</p>
-
 <p>Retrieves the character’s society membership status.</p>
 
 
@@ -985,29 +851,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The name of the society:</p>
-<ul><li>
-<p>“Order of Voln”</p>
-</li><li>
-<p>“Council of Light”</p>
-</li><li>
-<p>“Guardians of Sunfist”</p>
-</li><li>
-<p>or ‘nil`/“None” if not a member</p>
-</li></ul>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1016,12 +859,12 @@
       <pre class="lines">
 
 
-34
-35
-36</pre>
+23
+24
+25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/society.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/society.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_membership'>membership</span>
   <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="Infomon.html#get-class_method" title="Lich::Gemstone::Infomon.get (method)">get</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>society.status</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1043,8 +886,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Retrieves the character’s current rank within their society.</p>
-
 <p>Retrieves the character’s current rank within their society.</p>
 
 
@@ -1081,20 +922,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The rank number, or 0 if not a member</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1103,12 +930,12 @@
       <pre class="lines">
 
 
-68
-69
-70</pre>
+45
+46
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/society.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/society.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rank'>rank</span>
   <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="Infomon.html#get-class_method" title="Lich::Gemstone::Infomon.get (method)">get</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>society.rank</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1130,12 +957,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Resolves a value that may be a static literal or a lambda/proc.</p>
-
-<p>If the value responds to ‘:call` (i.e., is a `Proc` or `lambda`), it is called and the result is returned. Otherwise, the value is returned as-is.</p>
-
-<p>This allows society metadata fields such as ‘:duration` or `:summary` to be defined as either static values or dynamically evaluated lambdas.</p>
-
 <p>Resolves a value that may be a static literal or a lambda/proc.</p>
 
 <p>If the value responds to ‘:call` (i.e., is a `Proc` or `lambda`), it is called and the result is returned. Otherwise, the value is returned as-is.</p>
@@ -1175,40 +996,10 @@
       
     </li>
   
-    <li>
-      
-        <span class='name'>value</span>
-      
-      
-        <span class='type'>(<tt>Object</tt>, <tt>Proc</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The value to resolve</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Object</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The resolved value, or the original value if not callable</p>
-</div>
-      
-    </li>
   
     <li>
       
@@ -1232,14 +1023,14 @@
       <pre class="lines">
 
 
-208
-209
-210
-211
-212</pre>
+137
+138
+139
+140
+141</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/society.rb', line 208</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/society.rb', line 137</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_resolve'>resolve</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_context'>context</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='kw'>if</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:call</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_arity'>arity</span> <span class='op'>==</span> <span class='int'>0</span>
@@ -1263,8 +1054,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Bundles the current society status and rank into a simple structure.</p>
-
 <p>Bundles the current society status and rank into a simple structure.</p>
 
 
@@ -1301,20 +1090,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Array&lt;(<span class='object_link'><a href="../../String.html" title="String (class)">String</a></span>, Integer)&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>An array in the format ‘[status, rank]`</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1323,12 +1098,12 @@
       <pre class="lines">
 
 
-110
-111
-112</pre>
+71
+72
+73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/society.rb', line 110</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/society.rb', line 71</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_serialize'>serialize</span>
   <span class='lbracket'>[</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_membership'>membership</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rank'>rank</span><span class='rbracket'>]</span>
@@ -1350,8 +1125,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Retrieves the character’s society membership status.</p>
-
 <p>Retrieves the character’s society membership status.</p>
 
 
@@ -1397,29 +1170,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The name of the society:</p>
-<ul><li>
-<p>“Order of Voln”</p>
-</li><li>
-<p>“Council of Light”</p>
-</li><li>
-<p>“Guardians of Sunfist”</p>
-</li><li>
-<p>or ‘nil`/“None” if not a member</p>
-</li></ul>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1428,12 +1178,12 @@
       <pre class="lines">
 
 
-55
-56
-57</pre>
+36
+37
+38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/society.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/society.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_membership'>membership</span>
@@ -1457,6 +1207,8 @@
     <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
 <p>Use #rank instead.  Deprecated 6/2025</p>
 </div></div>
+
+<p>Returns The current society rank.</p>
 
 
   </div>
@@ -1492,20 +1244,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The current society rank</p>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1514,13 +1252,13 @@
       <pre class="lines">
 
 
-141
-142
-143
-144</pre>
+94
+95
+96
+97</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/society.rb', line 141</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/society.rb', line 94</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_step'>step</span>
   <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deprecated'><span class='object_link'><a href="../../Lich.html#deprecated-class_method" title="Lich.deprecated (method)">deprecated</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Society.step</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Society.rank</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>fe_log:</span> <span class='kw'>false</span><span class='rparen'>)</span>
@@ -1543,10 +1281,6 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Retrieves the current task assigned by the society, if any.</p>
-
-<p>The current society task, or “You are not currently in a society.” if not a member, or “It is your eternal duty to release undead creatures from their suffering in the name of the Great Spirit Voln.” if a Voln Master.</p>
-
 <p>Retrieves the current task assigned by the society, if any.</p>
 
 <p>The current society task, or “You are not currently in a society.” if not a member, or “It is your eternal duty to release undead creatures from their suffering in the name of the Great Spirit Voln.” if a Voln Master.</p>
@@ -1592,27 +1326,6 @@
       
     </li>
   
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The current society task message. Examples:</p>
-<ul><li>
-<p>A task description</p>
-</li><li>
-<p>“You are not currently in a society.”</p>
-</li><li>
-<p>“It is your eternal duty to release undead creatures…” (Voln masters)</p>
-</li></ul>
-</div>
-      
-    </li>
-  
 </ul>
 
 </div><table class="source_code">
@@ -1621,12 +1334,12 @@
       <pre class="lines">
 
 
-97
-98
-99</pre>
+62
+63
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/society.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/society.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_task'>task</span>
   <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_society_task'>society_task</span>
@@ -1641,9 +1354,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:42 2025 by
+  Generated on Fri Nov  7 07:10:10 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>

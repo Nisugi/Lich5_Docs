@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>output/latest/documented/wine.rb</dd>
+    <dd>documented/wine.rb</dd>
   </dl>
   
 </div>
@@ -346,7 +346,7 @@
 70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/wine.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'documented/wine.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Wine (module)">Wine</a></span></span><span class='period'>.</span><span class='id identifier rubyid_registry_gets'>registry_gets</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_hkey'>hkey</span><span class='comma'>,</span> <span class='id identifier rubyid_subkey'>subkey</span><span class='comma'>,</span> <span class='id identifier rubyid_thingie'>thingie</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(HKEY_LOCAL_MACHINE|HKEY_CURRENT_USER)\\(.+)\\([^\\]*)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'><span class='object_link'><a href="top-level-namespace.html#match-instance_method" title="#match (method)">match</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_captures'>captures</span> <span class='comment'># fixme: stupid highlights ]/
@@ -518,7 +518,7 @@
 102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'output/latest/documented/wine.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'documented/wine.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Wine (module)">Wine</a></span></span><span class='period'>.</span><span class='id identifier rubyid_registry_puts'>registry_puts</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_hkey'>hkey</span><span class='comma'>,</span> <span class='id identifier rubyid_subkey'>subkey</span><span class='comma'>,</span> <span class='id identifier rubyid_thingie'>thingie</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(HKEY_LOCAL_MACHINE|HKEY_CURRENT_USER)\\(.+)\\([^\\]*)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'><span class='object_link'><a href="top-level-namespace.html#match-instance_method" title="#match (method)">match</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_captures'>captures</span> <span class='comment'># fixme ]/
@@ -554,9 +554,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 05:08:34 2025 by
+  Generated on Fri Nov  7 07:10:02 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.37 (ruby-3.1.7).
+  0.9.37 (ruby-3.2.9).
 </div>
 
     </div>
