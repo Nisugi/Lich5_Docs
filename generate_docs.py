@@ -322,7 +322,7 @@ IMPORTANT:
             comments = self.extract_comments_json(result)
 
             if comments is None:
-                # JSON parsing completely failed
+                # JSON parsing completely failed - save response for debugging
                 logger.error(f"  No comments extracted from response")
                 logger.error(f"  AI response length: {len(result)} characters")
                 if len(result) < 1000:
@@ -330,6 +330,16 @@ IMPORTANT:
                 else:
                     logger.error(f"  AI response (first 500): {result[:500]}")
                     logger.error(f"  AI response (last 500): {result[-500:]}")
+
+                # Save failed response for manual inspection
+                failed_response_file = self.output_dir / f"{file_path.stem}_failed_response.txt"
+                with open(failed_response_file, 'w', encoding='utf-8') as f:
+                    f.write(f"Failed to parse JSON for: {file_path.name}\n")
+                    f.write(f"AI Response Length: {len(result)} characters\n")
+                    f.write("="*80 + "\n")
+                    f.write(result)
+                logger.info(f"  Saved failed response to: {failed_response_file.name}")
+
                 self.failed_files.append(file_path.name)
                 return None
 
