@@ -221,7 +221,7 @@ class Lich5DocumentationGenerator:
         """
         system_prompt = """You are an expert Ruby documentation specialist.
 Your task is to generate YARD-compatible documentation for Ruby code.
-Focus on clarity, completeness, and following YARD conventions."""
+You will return JSON with documentation comments and their anchor points."""
 
         user_prompt = f"""Analyze this Ruby file from the Lich5 project: **{file_name}**
 
@@ -231,7 +231,7 @@ Focus on clarity, completeness, and following YARD conventions."""
 
 Generate **YARD-compatible** documentation for every public class, module, method, and constant.
 
-Rules for documentation:
+Documentation rules:
 1. For classes/modules:
    - Brief description on first line
    - Longer description if needed
@@ -248,84 +248,34 @@ Rules for documentation:
 3. For constants:
    - Brief description comment above
 
-Format:
-• Place comments immediately above what they document
-• Use same indentation as the code element
-• Be thorough but concise
+Return a JSON array where each entry contains:
+- "anchor": The exact line to insert before (e.g., "class Foo", "def bar(x, y)", "MODULE_NAME = ")
+- "indent": The indentation level (number of spaces before the anchor line)
+- "comment": The YARD comment block as a single string with \\n for newlines
 
-Return the FULL Ruby file with YARD documentation comments inserted at appropriate locations.
-Preserve ALL original code exactly as-is, only adding documentation comments."""
+Example output format:
+```json
+[
+  {{
+    "anchor": "class GameObj",
+    "indent": 0,
+    "comment": "# Represents a game object\\n# @example Creating a game object\\n#   obj = GameObj.new"
+  }},
+  {{
+    "anchor": "def initialize(id, noun)",
+    "indent": 2,
+    "comment": "# Initializes a new game object\\n# @param id [String] The object ID\\n# @param noun [String] The object noun\\n# @return [GameObj]"
+  }}
+]
+```
+
+IMPORTANT: Return ONLY the JSON array, no other text."""
 
         return system_prompt, user_prompt
 
-    def should_chunk_file(self, content: str) -> bool:
-        """Determine if a file should be chunked based on size"""
-        lines = len(content.split('\n'))
-        # Chunk files larger than 300 lines to prevent output truncation
-        return lines > 300
-
-    def chunk_ruby_file(self, content: str, chunk_size: int = 250) -> List[str]:
-        """
-        Split Ruby file into logical chunks at method boundaries
-
-        Args:
-            content: Ruby source code
-            chunk_size: Target lines per chunk
-
-        Returns:
-            List of code chunks
-        """
-        lines = content.splitlines()
-        chunks = []
-        current_chunk = []
-        current_length = 0
-
-        # Track nesting level to avoid breaking in the middle of methods
-        nesting_level = 0
-
-        # Track if we're at the start of the file (for preserving initial comments/requires)
-        at_start = True
-
-        for i, line in enumerate(lines):
-            # Track Ruby block structure
-            if re.match(r'^\s*(class|module|def)\b', line):
-                nesting_level += 1
-                at_start = False
-            elif re.match(r'^\s*end\b', line):
-                nesting_level -= 1
-
-            current_chunk.append(line)
-            current_length += 1
-
-            # Check if we should start a new chunk
-            # Conditions for splitting:
-            # 1. We've reached our target chunk size
-            # 2. We're at a good split point (between methods or at class/module level)
-            # 3. We just processed an 'end' statement (clean boundary)
-            # 4. We're not in the middle of a method (nesting_level <= 1)
-            should_split = (
-                current_length >= chunk_size and
-                nesting_level <= 1 and  # At most inside a class/module, not in a method
-                current_chunk and
-                not at_start and  # Don't split file headers/requires
-                (re.match(r'^\s*end\b', line) or  # After an 'end'
-                 (i + 1 < len(lines) and re.match(r'^\s*(def|class|module)\b', lines[i + 1])))  # Before a new definition
-            )
-
-            if should_split:
-                chunks.append('\n'.join(current_chunk))
-                current_chunk = []
-                current_length = 0
-
-        # Add remaining lines
-        if current_chunk:
-            chunks.append('\n'.join(current_chunk))
-
-        return chunks if chunks else [content]
-
     def process_file(self, file_path: Path) -> Optional[str]:
         """
-        Process a single Ruby file and generate documentation
+        Process a single Ruby file and generate documentation using JSON-based approach
 
         Args:
             file_path: Path to Ruby file
@@ -336,49 +286,40 @@ Preserve ALL original code exactly as-is, only adding documentation comments."""
         logger.info(f"Processing: {file_path.name}")
 
         try:
-            # Read file
+            # Read original file
             with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
+                original_content = f.read()
 
             # Get file stats
-            lines = len(content.split('\n'))
-            logger.info(f"  Lines: {lines}, Characters: {len(content)}")
+            lines = len(original_content.split('\n'))
+            logger.info(f"  Lines: {lines}, Characters: {len(original_content)}")
 
-            # Check if we need to chunk
-            if self.should_chunk_file(content):
-                logger.info(f"  File is large, processing in chunks")
-                chunks = self.chunk_ruby_file(content)
-                logger.info(f"  Split into {len(chunks)} chunks")
+            # Create prompts for JSON-based documentation
+            system_prompt, user_prompt = self.create_documentation_prompt(
+                file_path.name,
+                original_content
+            )
 
-                documented_chunks = []
-                for i, chunk in enumerate(chunks, 1):
-                    logger.info(f"  Processing chunk {i}/{len(chunks)}")
-                    system_prompt, user_prompt = self.create_documentation_prompt(
-                        f"{file_path.name} (chunk {i}/{len(chunks)})",
-                        chunk
-                    )
+            # Generate JSON with comments and anchors
+            logger.info(f"  Requesting documentation from {self.provider_name}...")
+            result = self.provider.generate(user_prompt, system_prompt)
 
-                    result = self.provider.generate(user_prompt, system_prompt)
-                    documented_chunks.append(self.extract_ruby_code(result))
+            # Parse JSON response
+            comments = self.extract_comments_json(result)
 
-                    # Rate limiting is handled automatically by the provider
+            if not comments:
+                logger.error(f"  No comments extracted from response")
+                self.failed_files.append(file_path.name)
+                return None
 
-                # Combine chunks
-                documented_code = '\n\n'.join(documented_chunks)
+            logger.info(f"  Extracted {len(comments)} documentation entries")
 
-            else:
-                # Process entire file at once
-                system_prompt, user_prompt = self.create_documentation_prompt(
-                    file_path.name,
-                    content
-                )
-
-                result = self.provider.generate(user_prompt, system_prompt)
-                documented_code = self.extract_ruby_code(result)
+            # Insert comments into original code
+            documented_code = self.insert_comments(original_content, comments)
 
             # Store documentation
             self.documentation[file_path.name] = {
-                'original': content,
+                'original': original_content,
                 'documented': documented_code,
                 'timestamp': datetime.now().isoformat()
             }
@@ -388,29 +329,114 @@ Preserve ALL original code exactly as-is, only adding documentation comments."""
 
         except Exception as e:
             logger.error(f"  ❌ Failed to process {file_path.name}: {e}")
+            import traceback
+            logger.debug(traceback.format_exc())
             self.failed_files.append(file_path.name)
             return None
 
-    def extract_ruby_code(self, response: str) -> str:
-        """Extract Ruby code from LLM response"""
-        # Try to find code blocks
-        code_blocks = re.findall(r'```ruby\s*(.*?)```', response, re.DOTALL)
+    def extract_comments_json(self, response: str) -> List[Dict[str, Any]]:
+        """
+        Extract JSON array of comments from LLM response
 
-        if code_blocks:
-            # Return the largest code block (likely the complete file)
-            return max(code_blocks, key=len).strip()
+        Returns:
+            List of comment entries with anchor, indent, and comment fields
+        """
+        # Try to find JSON code blocks first
+        json_blocks = re.findall(r'```json\s*(.*?)```', response, re.DOTALL)
 
-        # If no code blocks, return cleaned response
-        lines = response.split('\n')
-        clean_lines = []
+        if json_blocks:
+            json_text = json_blocks[0].strip()
+        else:
+            # Try to find JSON array directly
+            json_match = re.search(r'\[\s*\{.*?\}\s*\]', response, re.DOTALL)
+            if json_match:
+                json_text = json_match.group(0)
+            else:
+                # Last resort: assume entire response is JSON
+                json_text = response.strip()
 
-        for line in lines:
-            # Skip obvious non-code lines
-            if line.strip().startswith(('Here', 'This', 'I', 'The', '---', '###')):
+        try:
+            comments = json.loads(json_text)
+            if not isinstance(comments, list):
+                raise ValueError("Expected JSON array")
+
+            logger.debug(f"Extracted {len(comments)} comment entries from response")
+            return comments
+
+        except json.JSONDecodeError as e:
+            logger.error(f"Failed to parse JSON response: {e}")
+            logger.debug(f"Response text: {response[:500]}")
+            return []
+
+    def insert_comments(self, original_content: str, comments: List[Dict[str, Any]]) -> str:
+        """
+        Insert YARD comments into original Ruby code using anchors
+
+        Args:
+            original_content: Original Ruby source code
+            comments: List of comment entries with anchor, indent, and comment fields
+
+        Returns:
+            Ruby code with comments inserted
+        """
+        if not comments:
+            logger.warning("No comments to insert")
+            return original_content
+
+        lines = original_content.split('\n')
+
+        # Track which lines we've already added comments to
+        inserted_at_lines = set()
+
+        # Process each comment entry
+        for entry in comments:
+            try:
+                anchor = entry.get('anchor', '').strip()
+                indent = entry.get('indent', 0)
+                comment_text = entry.get('comment', '').strip()
+
+                if not anchor or not comment_text:
+                    logger.warning(f"Skipping invalid entry: missing anchor or comment")
+                    continue
+
+                # Find the anchor line
+                anchor_line_idx = None
+                for i, line in enumerate(lines):
+                    # Check if this line contains the anchor
+                    # Strip leading/trailing whitespace for comparison
+                    if anchor in line and i not in inserted_at_lines:
+                        anchor_line_idx = i
+                        break
+
+                if anchor_line_idx is None:
+                    logger.warning(f"Could not find anchor: {anchor[:50]}")
+                    continue
+
+                # Insert comment lines before the anchor
+                indent_str = ' ' * indent
+                comment_lines = []
+
+                for comment_line in comment_text.split('\n'):
+                    # Add proper indentation to each comment line
+                    if comment_line.strip():
+                        comment_lines.append(f"{indent_str}{comment_line}")
+                    else:
+                        comment_lines.append('')
+
+                # Insert the comment block before the anchor line
+                for offset, comment_line in enumerate(comment_lines):
+                    lines.insert(anchor_line_idx + offset, comment_line)
+
+                # Mark this line (and the new lines) as having comments
+                inserted_at_lines.add(anchor_line_idx)
+
+                logger.debug(f"Inserted comment at line {anchor_line_idx} for anchor: {anchor[:30]}")
+
+            except Exception as e:
+                logger.error(f"Error inserting comment: {e}")
                 continue
-            clean_lines.append(line)
 
-        return '\n'.join(clean_lines).strip()
+        return '\n'.join(lines)
 
     def _process_single_file(self, file_path: Path, index: int, total: int) -> bool:
         """Process a single file (used for parallel processing)"""
