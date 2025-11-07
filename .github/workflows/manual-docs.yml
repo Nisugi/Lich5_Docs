@@ -31,6 +31,9 @@ jobs:
   generate-docs:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write  # Required to commit to main branch
+
     steps:
     - name: Checkout documentation repo
       uses: actions/checkout@v4
@@ -88,14 +91,24 @@ jobs:
         LLM_PROVIDER: ${{ inputs.provider }}
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       run: |
         echo "Generating documentation with ${{ inputs.provider }} provider"
+        echo "Output structure: mirror (preserves source directory structure)"
+
         if [ "${{ inputs.full_rebuild }}" == "true" ]; then
           echo "Running FULL REBUILD (all files will be reprocessed)"
-          python generate_docs.py lich-source/lib --provider ${{ inputs.provider }} --yard --force-rebuild --output output/latest
+          python generate_docs.py lich-source/lib \
+            --provider ${{ inputs.provider }} \
+            --output-structure mirror \
+            --force-rebuild \
+            --output output/latest
         else
           echo "Running INCREMENTAL build (skipping already processed files)"
-          python generate_docs.py lich-source/lib --provider ${{ inputs.provider }} --yard --output output/latest
+          python generate_docs.py lich-source/lib \
+            --provider ${{ inputs.provider }} \
+            --output-structure mirror \
+            --output output/latest
         fi
 
     - name: Setup Ruby
@@ -110,56 +123,75 @@ jobs:
         gem install redcarpet  # For markdown support in YARD
         yard --version
 
+    - name: Copy documented files to repo root
+      run: |
+        # Copy mirrored documented files to repo root (for committing to main)
+        echo "Copying documented files from output/latest/documented/ to documented/"
+        mkdir -p documented
+        cp -r output/latest/documented/* documented/ 2>/dev/null || echo "No documented files found"
+
+        # Show structure
+        echo "Documented files structure:"
+        find documented/ -name "*.rb" | head -20 || true
+
     - name: Generate HTML Documentation with YARD
       run: |
-        # Use the consistent output directory
-        OUTPUT_DIR="output/latest"
-        echo "Using output directory: $OUTPUT_DIR"
-
-        # Create temporary directory for documented Ruby files
-        mkdir -p temp_yard_input
-        cp -r $OUTPUT_DIR/documented/* temp_yard_input/ 2>/dev/null || true
-
-        # Generate HTML documentation using YARD
         echo "Generating HTML documentation with YARD..."
-        cd temp_yard_input
-        yard doc --output-dir ../docs \
-                 --title "Lich-5 Documentation" \
-                 --readme ../README.md \
-                 --markup markdown \
-                 --markup-provider redcarpet \
-                 --charset utf-8 \
-                 --no-private \
-                 **/*.rb
+        python build_html.py \
+          --input output/latest/documented \
+          --output docs \
+          --title "Lich 5 Documentation" \
+          --clean \
+          --verify
 
-        cd ..
         echo "HTML documentation generated in docs/"
-
-        # Add a custom landing page if YARD didn't create one
-        if [ ! -f docs/index.html ]; then
-          echo "Creating custom index.html..."
-          cat > docs/index.html <<'EOF'
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <title>Lich-5 Documentation</title>
-          <meta http-equiv="refresh" content="0; url=frames.html">
-        </head>
-        <body>
-          <p>Redirecting to <a href="frames.html">documentation</a>...</p>
-        </body>
-        </html>
-        EOF
-        fi
-
-        # Clean up temporary directory
-        rm -rf temp_yard_input
 
     - name: Clean up cloned repository
       run: |
         # Remove the cloned Lich repository to avoid committing it
         rm -rf lich-source
         echo "Cleaned up lich-source directory"
+
+    - name: Commit documented files to main
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+        # Add documented files and HTML docs
+        git add documented/
+        git add docs/
+        git add output/latest/manifest.json || true
+
+        # Check if there are changes to commit
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          # Get statistics for commit message
+          DOCUMENTED_COUNT=$(find documented/ -name "*.rb" | wc -l)
+
+          git commit -m "$(cat <<'EOF'
+        Update documentation from ${{ inputs.source_repo }}
+
+        Generated YARD documentation for Lich 5 Ruby files.
+
+        - Provider: ${{ inputs.provider }}
+        - Source: ${{ inputs.source_repo }} @ ${{ inputs.source_branch }}
+        - Type: ${{ inputs.full_rebuild && 'Full rebuild' || 'Incremental' }}
+        - Files documented: ${DOCUMENTED_COUNT}
+        - Output structure: Mirror (preserves source directory hierarchy)
+
+        Documented files committed to documented/ directory.
+        HTML documentation generated in docs/ directory.
+
+        🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+        Co-Authored-By: Claude <noreply@anthropic.com>
+        EOF
+        )"
+
+          git push
+          echo "✅ Changes committed and pushed to main branch"
+        fi
 
     - name: Upload artifacts (for next incremental run)
       uses: actions/upload-artifact@v4
@@ -175,28 +207,23 @@ jobs:
         path: output/
         retention-days: 30
 
-    - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v5
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        commit-message: 'Update documentation [skip ci]'
-        branch: docs-update-${{ github.run_number }}
-        title: 'Documentation Update from ${{ inputs.source_repo }}'
-        body: |
-          ## Documentation Update
+    - name: Summary
+      if: always()
+      run: |
+        echo "### Documentation Generation Complete" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Provider:** ${{ inputs.provider }}" >> $GITHUB_STEP_SUMMARY
+        echo "**Source:** ${{ inputs.source_repo }} @ ${{ inputs.source_branch }}" >> $GITHUB_STEP_SUMMARY
+        echo "**Type:** ${{ inputs.full_rebuild && 'Full rebuild' || 'Incremental' }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
 
-          - **Provider:** ${{ inputs.provider }}
-          - **Source:** ${{ inputs.source_repo }} @ ${{ inputs.source_branch }}
-          - **Type:** ${{ inputs.full_rebuild && 'Full rebuild' || 'Incremental' }}
-          - **Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        if [ -d "documented" ]; then
+          DOCUMENTED_COUNT=$(find documented/ -name "*.rb" | wc -l)
+          echo "**Documented files:** $DOCUMENTED_COUNT" >> $GITHUB_STEP_SUMMARY
+        fi
 
-          ### Files Included:
-          - `docs/` - HTML documentation for GitHub Pages
-          - `output/latest/` - Generated YARD files and manifest for incremental builds
-          - `output/latest/manifest.json` - Tracks processed files for next run
-
-          Please review the generated documentation before merging.
-        labels: documentation, automated
-        add-paths: |
-          docs/
-          output/
+        if [ -f "docs/index.html" ]; then
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📖 **HTML Documentation:** Available in \`docs/\` directory" >> $GITHUB_STEP_SUMMARY
+          echo "Configure GitHub Pages to serve from \`docs/\` directory to publish." >> $GITHUB_STEP_SUMMARY
+        fi

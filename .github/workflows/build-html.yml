@@ -1,0 +1,136 @@
+name: Build HTML Documentation
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: 'Documentation title'
+        required: false
+        type: string
+        default: 'Lich 5 Documentation'
+      clean:
+        description: 'Clean output directory before building'
+        required: false
+        type: boolean
+        default: true
+
+  push:
+    paths:
+      - 'documented/**/*.rb'
+    branches:
+      - main
+
+jobs:
+  build-html:
+    runs-on: ubuntu-latest
+    name: Build HTML with YARD
+
+    permissions:
+      contents: write  # Required to commit HTML to repo
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for proper git operations
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: false
+
+      - name: Install YARD
+        run: gem install yard
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Check for documented files
+        id: check-files
+        run: |
+          if [ -d "documented" ]; then
+            file_count=$(find documented -name "*.rb" | wc -l)
+            echo "file_count=$file_count" >> $GITHUB_OUTPUT
+            echo "Found $file_count documented Ruby files"
+          else
+            echo "file_count=0" >> $GITHUB_OUTPUT
+            echo "documented/ directory not found"
+          fi
+
+      - name: Build HTML documentation
+        if: steps.check-files.outputs.file_count > 0
+        run: |
+          args=""
+          if [ "${{ inputs.clean }}" == "true" ]; then
+            args="$args --clean"
+          fi
+          if [ -n "${{ inputs.title }}" ]; then
+            args="$args --title '${{ inputs.title }}'"
+          fi
+
+          # Use the updated input path (documented/ at root now, not output/latest/documented)
+          python build_html.py --input ./documented --output ./docs --verify $args
+
+      - name: Check for changes
+        if: steps.check-files.outputs.file_count > 0
+        id: check-changes
+        run: |
+          git add docs/
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No changes to commit"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected in docs/"
+          fi
+
+      - name: Commit HTML documentation
+        if: steps.check-files.outputs.file_count > 0 && steps.check-changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add docs/
+          git commit -m "$(cat <<'EOF'
+          Build HTML documentation from documented Ruby files
+
+          Generated HTML documentation using YARD from documented/ directory.
+
+          🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+          Co-Authored-By: Claude <noreply@anthropic.com>
+          EOF
+          )"
+
+          git push
+
+      - name: Upload HTML artifacts
+        if: steps.check-files.outputs.file_count > 0
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-documentation
+          path: docs/
+          retention-days: 30
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### HTML Documentation Build" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Ruby files:** ${{ steps.check-files.outputs.file_count }}" >> $GITHUB_STEP_SUMMARY
+
+          if [ "${{ steps.check-changes.outputs.has_changes }}" == "true" ]; then
+            echo "**Status:** ✅ Built and committed" >> $GITHUB_STEP_SUMMARY
+          elif [ "${{ steps.check-files.outputs.file_count }}" == "0" ]; then
+            echo "**Status:** ⚠️ No documented files found" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "**Status:** ℹ️ No changes (HTML already up to date)" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ -f "docs/index.html" ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "📖 **View documentation:** Configure GitHub Pages to serve from \`docs/\` directory" >> $GITHUB_STEP_SUMMARY
+          fi

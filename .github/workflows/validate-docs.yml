@@ -1,0 +1,81 @@
+name: Validate Documentation
+
+on:
+  workflow_dispatch:
+    inputs:
+      file:
+        description: 'Validate specific file (leave empty for all files)'
+        required: false
+        type: string
+      strict:
+        description: 'Fail on YARD warnings'
+        required: false
+        type: boolean
+        default: false
+
+  pull_request:
+    paths:
+      - 'documented/**/*.rb'
+      - 'validate_docs.py'
+
+  push:
+    paths:
+      - 'documented/**/*.rb'
+      - 'validate_docs.py'
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: YARD Documentation Validation
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: false
+
+      - name: Install YARD
+        run: gem install yard
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate all documented files
+        if: inputs.file == ''
+        run: |
+          if [ "${{ inputs.strict }}" == "true" ]; then
+            python validate_docs.py --strict
+          else
+            python validate_docs.py
+          fi
+
+      - name: Validate specific file
+        if: inputs.file != ''
+        run: |
+          if [ "${{ inputs.strict }}" == "true" ]; then
+            python validate_docs.py --file "${{ inputs.file }}" --strict
+          else
+            python validate_docs.py --file "${{ inputs.file }}"
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### YARD Validation Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ inputs.file }}" != "" ]; then
+            echo "**File:** ${{ inputs.file }}" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "**Scope:** All documented files" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "**Strict mode:** ${{ inputs.strict }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Check the logs above for any YARD warnings or errors." >> $GITHUB_STEP_SUMMARY

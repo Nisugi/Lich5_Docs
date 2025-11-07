@@ -34,7 +34,8 @@ class Lich5DocumentationGenerator:
     """Main documentation generator for Lich5 Ruby code"""
 
     def __init__(self, provider_name: Optional[str] = None, output_dir: Optional[str] = None,
-                 incremental: bool = True, force_rebuild: bool = False, parallel_workers: int = None):
+                 incremental: bool = True, force_rebuild: bool = False, parallel_workers: int = None,
+                 output_structure: str = 'flat', source_root: Optional[Path] = None):
         """
         Initialize the documentation generator
 
@@ -44,10 +45,14 @@ class Lich5DocumentationGenerator:
             incremental: Enable incremental processing (skip already documented files)
             force_rebuild: Force reprocessing of all files even if already documented
             parallel_workers: Number of parallel workers (None = auto-detect based on provider)
+            output_structure: 'flat' (all files in one dir) or 'mirror' (preserve source structure)
+            source_root: Root directory of source files (required for mirror structure)
         """
         self.provider_name = provider_name or os.environ.get('LLM_PROVIDER', 'openai')
         self.incremental = incremental and not force_rebuild
         self.force_rebuild = force_rebuild
+        self.output_structure = output_structure
+        self.source_root = source_root
 
         # Thread safety - use RLock (reentrant) to allow nested acquisitions
         self.manifest_lock = threading.RLock()
@@ -91,6 +96,32 @@ class Lich5DocumentationGenerator:
         logger.info(f"Incremental mode: {self.incremental}")
         if self.incremental and self.manifest.get('processed_files'):
             logger.info(f"Found {len(self.manifest['processed_files'])} already processed files")
+
+    def get_output_file_path(self, file_path: Path) -> Path:
+        """
+        Get the output file path based on output structure setting
+
+        Args:
+            file_path: Source file path
+
+        Returns:
+            Path to output file (either flat or mirrored structure)
+        """
+        if self.output_structure == 'mirror' and self.source_root:
+            # Mirror directory structure
+            try:
+                # Get relative path from source root
+                relative_path = file_path.relative_to(self.source_root)
+                # Build mirrored path in documented directory
+                output_path = self.output_dir / 'documented' / relative_path
+                return output_path
+            except ValueError:
+                # File is not under source_root, fall back to flat
+                logger.warning(f"File {file_path} not under source root {self.source_root}, using flat structure")
+                return self.output_dir / 'documented' / file_path.name
+        else:
+            # Flat structure - all files in documented directory
+            return self.output_dir / 'documented' / file_path.name
 
     def load_manifest(self) -> dict:
         """Load the manifest file tracking processed files"""
@@ -150,7 +181,7 @@ class Lich5DocumentationGenerator:
         relative_path = str(file_path)
         if relative_path in self.manifest.get('processed_files', {}):
             # Check if output file actually exists
-            output_file = self.output_dir / 'documented' / file_path.name
+            output_file = self.get_output_file_path(file_path)
             if not output_file.exists():
                 logger.info(f"  Output file missing, reprocessing: {file_path.name}")
                 return False
@@ -741,7 +772,7 @@ IMPORTANT:
             result = self.process_file(file_path)
             if result:
                 # Save documented file
-                output_file = self.output_dir / 'documented' / file_path.name
+                output_file = self.get_output_file_path(file_path)
                 output_file.parent.mkdir(exist_ok=True, parents=True)
 
                 with self.file_lock:
@@ -860,8 +891,8 @@ IMPORTANT:
                         processed += 1
 
                         # Save documented file
-                        output_file = self.output_dir / 'documented' / file_path.name
-                        output_file.parent.mkdir(exist_ok=True)
+                        output_file = self.get_output_file_path(file_path)
+                        output_file.parent.mkdir(exist_ok=True, parents=True)
 
                         with open(output_file, 'w', encoding='utf-8') as f:
                             f.write(result)
@@ -951,7 +982,12 @@ def main():
     parser = argparse.ArgumentParser(description='Generate YARD documentation for Lich5')
     parser.add_argument(
         'input',
-        help='Input directory containing Ruby files or single Ruby file'
+        nargs='?',
+        help='Input directory containing Ruby files (not needed with --file)'
+    )
+    parser.add_argument(
+        '--file',
+        help='Process a single Ruby file (alternative to input directory)'
     )
     parser.add_argument(
         '--provider',
@@ -960,7 +996,13 @@ def main():
     )
     parser.add_argument(
         '--output',
-        help='Output directory (defaults to output/{timestamp})'
+        help='Output directory (defaults to output/latest)'
+    )
+    parser.add_argument(
+        '--output-structure',
+        choices=['flat', 'mirror'],
+        default='flat',
+        help='Output structure: flat (all files in one dir) or mirror (preserve source structure)'
     )
     parser.add_argument(
         '--pattern',
@@ -985,6 +1027,10 @@ def main():
 
     args = parser.parse_args()
 
+    # Validate that either input or --file is provided
+    if not args.input and not args.file:
+        parser.error("Either input directory or --file must be specified")
+
     # Validate environment
     provider = args.provider or os.environ.get('LLM_PROVIDER', 'openai')
     validation = ProviderFactory.validate_environment(provider)
@@ -1000,27 +1046,57 @@ def main():
     for warning in validation.get('warnings', []):
         logger.warning(warning)
 
+    # Determine input path and source root
+    if args.file:
+        # Single file mode
+        file_path = Path(args.file).resolve()
+        if not file_path.exists():
+            logger.error(f"File not found: {args.file}")
+            sys.exit(1)
+
+        # Source root is the parent directory for single file mode
+        source_root = file_path.parent
+        input_path = file_path
+    else:
+        # Directory mode
+        input_path = Path(args.input)
+        if not input_path.exists():
+            logger.error(f"Input path does not exist: {input_path}")
+            sys.exit(1)
+
+        # Source root is the input directory
+        source_root = input_path.resolve()
+
     # Create generator
     force_rebuild = args.force_rebuild or args.no_incremental
     generator = Lich5DocumentationGenerator(
         provider_name=args.provider,
         output_dir=args.output,
-        force_rebuild=force_rebuild
+        force_rebuild=force_rebuild,
+        output_structure=args.output_structure,
+        source_root=source_root
     )
 
     # Process input
-    input_path = Path(args.input)
-
-    if input_path.is_file():
+    if args.file:
         # Single file mode
         result = generator.process_file(input_path)
         if result:
-            output_file = generator.output_dir / input_path.name
-            with open(output_file, 'w') as f:
+            output_file = generator.get_output_file_path(input_path)
+            output_file.parent.mkdir(exist_ok=True, parents=True)
+
+            with open(output_file, 'w', encoding='utf-8') as f:
                 f.write(result)
-            print(f"Documentation saved to: {output_file}")
+
+            logger.info(f"Documentation saved to: {output_file}")
+
+            # Mark file as processed
+            generator.mark_file_processed(input_path, success=True)
+
+            print(f"✅ Successfully documented: {input_path.name}")
+            print(f"📄 Output: {output_file}")
         else:
-            print("Failed to generate documentation")
+            print(f"❌ Failed to generate documentation for {input_path.name}")
             sys.exit(1)
 
     elif input_path.is_dir():
@@ -1042,7 +1118,7 @@ def main():
             logger.info(f"{stats['processed']} file(s) successfully documented and saved")
 
     else:
-        logger.error(f"Input path does not exist: {input_path}")
+        logger.error(f"Input path is not a file or directory: {input_path}")
         sys.exit(1)
 
 

@@ -1,0 +1,155 @@
+name: Generate Single File Documentation
+
+on:
+  workflow_dispatch:
+    inputs:
+      file_path:
+        description: 'Path to Ruby file (e.g., lib/gemstone/psms/feat.rb)'
+        required: true
+        type: string
+      provider:
+        description: 'LLM Provider'
+        required: false
+        type: choice
+        options:
+          - openai
+          - anthropic
+        default: 'openai'
+
+jobs:
+  generate-single:
+    runs-on: ubuntu-latest
+    name: Generate Documentation for Single File
+
+    permissions:
+      contents: write  # Required to commit documented file
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Validate file exists
+        id: validate
+        run: |
+          if [ ! -f "${{ inputs.file_path }}" ]; then
+            echo "Error: File not found: ${{ inputs.file_path }}"
+            exit 1
+          fi
+          echo "file_name=$(basename ${{ inputs.file_path }})" >> $GITHUB_OUTPUT
+          echo "✅ File found: ${{ inputs.file_path }}"
+
+      - name: Generate documentation
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LLM_PROVIDER: ${{ inputs.provider }}
+        run: |
+          echo "Generating documentation for: ${{ inputs.file_path }}"
+          echo "Provider: ${{ inputs.provider }}"
+          echo "Output structure: mirror"
+
+          # Run generate_docs.py with --file parameter and mirror structure
+          python generate_docs.py \
+            --file "${{ inputs.file_path }}" \
+            --provider ${{ inputs.provider }} \
+            --output-structure mirror
+
+      - name: Verify output
+        id: verify
+        run: |
+          # Check if documented file was created
+          # The mirrored path will be: documented/<original_path>
+          expected_output="documented/${{ inputs.file_path }}"
+
+          if [ -f "$expected_output" ]; then
+            echo "has_output=true" >> $GITHUB_OUTPUT
+            echo "output_file=$expected_output" >> $GITHUB_OUTPUT
+            echo "✅ Generated: $expected_output"
+          else
+            echo "has_output=false" >> $GITHUB_OUTPUT
+            echo "❌ Output file not found at expected location: $expected_output"
+            echo "Contents of documented/ directory:"
+            find documented/ -type f -name "*.rb" | head -20
+            exit 1
+          fi
+
+      - name: Show diff
+        if: steps.verify.outputs.has_output == 'true'
+        run: |
+          echo "### Documentation Changes" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`diff" >> $GITHUB_STEP_SUMMARY
+
+          if [ -f "${{ steps.verify.outputs.output_file }}" ]; then
+            # Compare with original file to show what was added
+            git diff --no-index "${{ inputs.file_path }}" "${{ steps.verify.outputs.output_file }}" | head -100 >> $GITHUB_STEP_SUMMARY || true
+          fi
+
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+
+      - name: Commit documented file
+        if: steps.verify.outputs.has_output == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add documented/
+          git add output/latest/manifest.json || true  # Update manifest if exists
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit (file may already be documented)"
+          else
+            git commit -m "$(cat <<'EOF'
+          Generate documentation for ${{ steps.validate.outputs.file_name }}
+
+          Generated YARD documentation for ${{ inputs.file_path }}
+          Provider: ${{ inputs.provider }}
+
+          🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+          Co-Authored-By: Claude <noreply@anthropic.com>
+          EOF
+          )"
+
+            git push
+            echo "✅ Committed and pushed documented file"
+          fi
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: single-file-output
+          path: |
+            documented/${{ inputs.file_path }}
+            output/latest/manifest.json
+            output/latest/*_failed_response.txt
+          retention-days: 7
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### Single File Documentation Generation" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**File:** \`${{ inputs.file_path }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Provider:** ${{ inputs.provider }}" >> $GITHUB_STEP_SUMMARY
+
+          if [ "${{ steps.verify.outputs.has_output }}" == "true" ]; then
+            echo "**Status:** ✅ Success" >> $GITHUB_STEP_SUMMARY
+            echo "**Output:** \`${{ steps.verify.outputs.output_file }}\`" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "**Status:** ❌ Failed" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Check the logs for errors." >> $GITHUB_STEP_SUMMARY
+          fi
