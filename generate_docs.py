@@ -649,8 +649,11 @@ IMPORTANT:
 
         lines = original_content.split('\n')
 
-        # Track which lines we've already added comments to
+        # Track which lines we've already added comments to (by index)
         inserted_at_lines = set()
+
+        # Track which anchors we've already documented to prevent duplicates
+        documented_anchors = set()
 
         # Sort comments by line number (descending) to insert from bottom to top
         # This prevents line numbers from shifting as we insert
@@ -666,6 +669,13 @@ IMPORTANT:
 
                 if not line_number or not anchor or not comment_text:
                     logger.warning(f"Skipping invalid entry: missing required fields")
+                    continue
+
+                # Skip if we've already documented this exact anchor
+                # Normalize anchor for comparison (strip whitespace, case-insensitive)
+                anchor_normalized = anchor.lower().strip()
+                if anchor_normalized in documented_anchors:
+                    logger.debug(f"Skipping duplicate anchor: {anchor[:40]}")
                     continue
 
                 # Find the correct insertion line using progressive matching
@@ -693,6 +703,9 @@ IMPORTANT:
 
                 # Mark this line as having comments
                 inserted_at_lines.add(insert_idx)
+
+                # Mark this anchor as documented to prevent duplicates
+                documented_anchors.add(anchor_normalized)
 
                 logger.debug(f"Inserted comment at line {insert_idx + 1} for anchor: {anchor[:30]}")
 
