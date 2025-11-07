@@ -274,7 +274,30 @@ You will return JSON with documentation comments and their anchor points."""
 Generate **YARD-compatible** documentation for every public class, module, method, and constant.
 The line numbers are shown at the start of each line (e.g., "  15: def method_name").
 
-Documentation rules:
+**CRITICAL RULES - READ CAREFULLY:**
+
+1. **DO NOT DOCUMENT ALREADY-DOCUMENTED CODE**
+   - If a method/class ALREADY has YARD comments (lines starting with # @param, # @return, etc.),
+     DO NOT generate documentation for it
+   - SKIP any code that already has documentation comments
+   - Only document code WITHOUT existing YARD tags
+
+2. **PARAMETER NAME RULES**
+   - @param tags MUST exactly match the method's parameter names
+   - For block parameters: Use "block" NOT "&block" (no ampersand symbol!)
+     WRONG: @param &block [Proc]
+     RIGHT: @param block [Proc]
+   - For splat parameters (*args): Use "args" NOT "*args" (no asterisk!)
+     WRONG: @param *messages [Array]
+     RIGHT: @param messages [Array]
+   - Parameter names must match what's in the def statement exactly
+
+3. **VALIDATION BEFORE RETURNING**
+   - Double-check each @param name matches the actual method parameter
+   - Remove the & and * symbols from @param names
+   - Ensure you're not documenting already-documented code
+
+Documentation structure:
 1. For classes/modules:
    - Brief description on first line
    - Longer description if needed
@@ -319,6 +342,9 @@ IMPORTANT:
 - Return ONLY the JSON array, no other text
 - Line numbers should match the ORIGINAL file (1-indexed)
 - Anchors should be concise (just the key part like "def method_name" or "class ClassName")
+- SKIP any code that already has YARD documentation (# @param, # @return, etc.)
+- @param names MUST NOT include & or * symbols (use "block" not "&block", use "args" not "*args")
+- Verify @param names match the actual method parameters exactly
 - CRITICAL: In the "comment" field, you MUST escape all special characters:
   * Double quotes MUST be escaped: use \\" not "
   * Backslashes MUST be escaped: use \\\\ not \\
