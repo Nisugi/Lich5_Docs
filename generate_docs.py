@@ -405,7 +405,7 @@ IMPORTANT:
         Strategy:
         1. Try exact match at expected line number
         2. Try soft match at expected line number
-        3. Search nearby lines (±3) with soft match
+        3. Search nearby lines (within 3 lines) with soft match
 
         Args:
             lines: Source code lines
