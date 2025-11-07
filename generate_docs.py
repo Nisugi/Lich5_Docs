@@ -249,27 +249,33 @@ Documentation rules:
    - Brief description comment above
 
 Return a JSON array where each entry contains:
-- "anchor": The exact line to insert before (e.g., "class Foo", "def bar(x, y)", "MODULE_NAME = ")
-- "indent": The indentation level (number of spaces before the anchor line)
+- "line_number": The line number to insert before (1-indexed, counting from line 1)
+- "anchor": A snippet of the line for validation (e.g., "class GameObj", "def initialize")
+- "indent": The indentation level (number of spaces before the line)
 - "comment": The YARD comment block as a single string with \\n for newlines
 
 Example output format:
 ```json
 [
   {{
+    "line_number": 15,
     "anchor": "class GameObj",
     "indent": 0,
     "comment": "# Represents a game object\\n# @example Creating a game object\\n#   obj = GameObj.new"
   }},
   {{
-    "anchor": "def initialize(id, noun)",
+    "line_number": 23,
+    "anchor": "def initialize",
     "indent": 2,
     "comment": "# Initializes a new game object\\n# @param id [String] The object ID\\n# @param noun [String] The object noun\\n# @return [GameObj]"
   }}
 ]
 ```
 
-IMPORTANT: Return ONLY the JSON array, no other text."""
+IMPORTANT:
+- Return ONLY the JSON array, no other text
+- Line numbers should match the ORIGINAL file (1-indexed)
+- Anchors should be concise (just the key part like "def method_name" or "class ClassName")
 
         return system_prompt, user_prompt
 
@@ -368,13 +374,93 @@ IMPORTANT: Return ONLY the JSON array, no other text."""
             logger.debug(f"Response text: {response[:500]}")
             return []
 
+    def soft_match_anchor(self, anchor: str, line: str) -> bool:
+        """
+        Soft match anchor against line by comparing key tokens
+
+        Args:
+            anchor: The anchor string (e.g., "def initialize", "class GameObj")
+            line: The line of code to match against
+
+        Returns:
+            True if key tokens from anchor appear in line
+        """
+        # Remove common noise: params, 'self.', extra whitespace
+        anchor_clean = anchor.replace('self.', '').split('(')[0].strip()
+
+        # Extract tokens (words)
+        tokens = anchor_clean.split()
+
+        if not tokens:
+            return False
+
+        # Check if all tokens appear in the line
+        return all(token in line for token in tokens)
+
+    def find_insertion_line(self, lines: List[str], line_number: int, anchor: str,
+                           inserted_at_lines: set) -> Optional[int]:
+        """
+        Find the correct line to insert comment using progressive matching
+
+        Strategy:
+        1. Try exact match at expected line number
+        2. Try soft match at expected line number
+        3. Search nearby lines (±3) with soft match
+
+        Args:
+            lines: Source code lines
+            line_number: Expected line number (1-indexed from AI)
+            anchor: Anchor string for validation
+            inserted_at_lines: Set of already-used line indices
+
+        Returns:
+            0-indexed line number to insert before, or None if not found
+        """
+        # Convert to 0-indexed
+        expected_idx = line_number - 1
+
+        # Bounds check
+        if expected_idx < 0 or expected_idx >= len(lines):
+            logger.warning(f"Line number {line_number} out of bounds (file has {len(lines)} lines)")
+            return None
+
+        # Skip if already inserted at this line
+        if expected_idx in inserted_at_lines:
+            logger.debug(f"Line {line_number} already has a comment, skipping")
+            return None
+
+        # Strategy 1: Exact match at expected line
+        if anchor in lines[expected_idx]:
+            logger.debug(f"Exact match at line {line_number}")
+            return expected_idx
+
+        # Strategy 2: Soft match at expected line
+        if self.soft_match_anchor(anchor, lines[expected_idx]):
+            logger.debug(f"Soft match at line {line_number} for anchor: {anchor[:30]}")
+            return expected_idx
+
+        # Strategy 3: Search nearby lines (±3)
+        for offset in range(-3, 4):
+            if offset == 0:
+                continue  # Already checked
+
+            idx = expected_idx + offset
+            if 0 <= idx < len(lines) and idx not in inserted_at_lines:
+                if self.soft_match_anchor(anchor, lines[idx]):
+                    logger.warning(f"Found anchor at line {idx + 1} (expected {line_number}, offset {offset:+d})")
+                    return idx
+
+        # Not found
+        logger.warning(f"Could not find anchor: {anchor[:50]} (expected line {line_number})")
+        return None
+
     def insert_comments(self, original_content: str, comments: List[Dict[str, Any]]) -> str:
         """
-        Insert YARD comments into original Ruby code using anchors
+        Insert YARD comments into original Ruby code using line numbers + anchor validation
 
         Args:
             original_content: Original Ruby source code
-            comments: List of comment entries with anchor, indent, and comment fields
+            comments: List of comment entries with line_number, anchor, indent, and comment fields
 
         Returns:
             Ruby code with comments inserted
@@ -388,28 +474,26 @@ IMPORTANT: Return ONLY the JSON array, no other text."""
         # Track which lines we've already added comments to
         inserted_at_lines = set()
 
+        # Sort comments by line number (descending) to insert from bottom to top
+        # This prevents line numbers from shifting as we insert
+        sorted_comments = sorted(comments, key=lambda x: x.get('line_number', 0), reverse=True)
+
         # Process each comment entry
-        for entry in comments:
+        for entry in sorted_comments:
             try:
+                line_number = entry.get('line_number')
                 anchor = entry.get('anchor', '').strip()
                 indent = entry.get('indent', 0)
                 comment_text = entry.get('comment', '').strip()
 
-                if not anchor or not comment_text:
-                    logger.warning(f"Skipping invalid entry: missing anchor or comment")
+                if not line_number or not anchor or not comment_text:
+                    logger.warning(f"Skipping invalid entry: missing required fields")
                     continue
 
-                # Find the anchor line
-                anchor_line_idx = None
-                for i, line in enumerate(lines):
-                    # Check if this line contains the anchor
-                    # Strip leading/trailing whitespace for comparison
-                    if anchor in line and i not in inserted_at_lines:
-                        anchor_line_idx = i
-                        break
+                # Find the correct insertion line using progressive matching
+                insert_idx = self.find_insertion_line(lines, line_number, anchor, inserted_at_lines)
 
-                if anchor_line_idx is None:
-                    logger.warning(f"Could not find anchor: {anchor[:50]}")
+                if insert_idx is None:
                     continue
 
                 # Insert comment lines before the anchor
@@ -425,12 +509,12 @@ IMPORTANT: Return ONLY the JSON array, no other text."""
 
                 # Insert the comment block before the anchor line
                 for offset, comment_line in enumerate(comment_lines):
-                    lines.insert(anchor_line_idx + offset, comment_line)
+                    lines.insert(insert_idx + offset, comment_line)
 
-                # Mark this line (and the new lines) as having comments
-                inserted_at_lines.add(anchor_line_idx)
+                # Mark this line as having comments
+                inserted_at_lines.add(insert_idx)
 
-                logger.debug(f"Inserted comment at line {anchor_line_idx} for anchor: {anchor[:30]}")
+                logger.debug(f"Inserted comment at line {insert_idx + 1} for anchor: {anchor[:30]}")
 
             except Exception as e:
                 logger.error(f"Error inserting comment: {e}")
