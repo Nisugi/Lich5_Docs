@@ -185,6 +185,7 @@ class Lich5DocumentationGenerator:
 
         relative_path = str(file_path)
         if relative_path in self.manifest.get('processed_files', {}):
+            logger.info(f"  File found in manifest: {file_path.name} (key: {relative_path})")
             # Check if output file actually exists in committed documented/ directory
             # Use same logic as get_output_file_path but check repo root documented/
             if self.output_structure == 'mirror' and self.source_root:
@@ -233,6 +234,8 @@ class Lich5DocumentationGenerator:
             except Exception as e:
                 logger.warning(f"  Error checking file hash, reprocessing: {e}")
                 return False
+        else:
+            logger.info(f"  File NOT in manifest: {file_path.name} (key: {relative_path})")
 
         return False
 
