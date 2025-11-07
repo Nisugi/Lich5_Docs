@@ -129,7 +129,7 @@ module Lich
       # @param val [String, Regexp] The identifier to search for.
       # @return [GameObj, nil] The found game object or nil if not found.
       # @raise [ArgumentError] If val is not a String or Regexp.
-      def GameObj.[](val)
+      def self.[](val)
         unless val.is_a?(String) || val.is_a?(Regexp)
           respond "--- Lich: error: GameObj[] passed with #{val.class} #{val} via caller: #{caller[0]}"
           respond "--- Lich: error: GameObj[] supports String or Regexp only"
@@ -172,7 +172,7 @@ module Lich
       # @param name [String] The NPC name.
       # @param status [String, nil] Optional status for the NPC.
       # @return [GameObj] The newly created NPC object.
-      def GameObj.new_npc(id, noun, name, status = nil)
+      def self.new_npc(id, noun, name, status = nil)
         obj = GameObj.new(id, noun, name)
         @@npcs.push(obj)
         @@npc_status[id] = status
@@ -184,7 +184,7 @@ module Lich
       # @param noun [String] The loot noun.
       # @param name [String] The loot name.
       # @return [GameObj] The newly created loot object.
-      def GameObj.new_loot(id, noun, name)
+      def self.new_loot(id, noun, name)
         obj = GameObj.new(id, noun, name)
         @@loot.push(obj)
         obj
@@ -196,7 +196,7 @@ module Lich
       # @param name [String] The PC name.
       # @param status [String, nil] Optional status for the PC.
       # @return [GameObj] The newly created PC object.
-      def GameObj.new_pc(id, noun, name, status = nil)
+      def self.new_pc(id, noun, name, status = nil)
         obj = GameObj.new(id, noun, name)
         @@pcs.push(obj)
         @@pc_status[id] = status
@@ -211,7 +211,7 @@ module Lich
       # @param before [String, nil] Optional prefix for the name.
       # @param after [String, nil] Optional suffix for the name.
       # @return [GameObj] The newly created inventory object.
-      def GameObj.new_inv(id, noun, name, container = nil, before = nil, after = nil)
+      def self.new_inv(id, noun, name, container = nil, before = nil, after = nil)
         obj = GameObj.new(id, noun, name, before, after)
         if container
           @@contents[container].push(obj)
@@ -226,7 +226,7 @@ module Lich
       # @param noun [String] The room description noun.
       # @param name [String] The room description name.
       # @return [GameObj] The newly created room description object.
-      def GameObj.new_room_desc(id, noun, name)
+      def self.new_room_desc(id, noun, name)
         obj = GameObj.new(id, noun, name)
         @@room_desc.push(obj)
         obj
@@ -237,7 +237,7 @@ module Lich
       # @param noun [String] The family room description noun.
       # @param name [String] The family room description name.
       # @return [GameObj] The newly created family room description object.
-      def GameObj.new_fam_room_desc(id, noun, name)
+      def self.new_fam_room_desc(id, noun, name)
         obj = GameObj.new(id, noun, name)
         @@fam_room_desc.push(obj)
         obj
@@ -248,7 +248,7 @@ module Lich
       # @param noun [String] The family loot noun.
       # @param name [String] The family loot name.
       # @return [GameObj] The newly created family loot object.
-      def GameObj.new_fam_loot(id, noun, name)
+      def self.new_fam_loot(id, noun, name)
         obj = GameObj.new(id, noun, name)
         @@fam_loot.push(obj)
         obj
@@ -259,7 +259,7 @@ module Lich
       # @param noun [String] The family NPC noun.
       # @param name [String] The family NPC name.
       # @return [GameObj] The newly created family NPC object.
-      def GameObj.new_fam_npc(id, noun, name)
+      def self.new_fam_npc(id, noun, name)
         obj = GameObj.new(id, noun, name)
         @@fam_npcs.push(obj)
         obj
@@ -270,7 +270,7 @@ module Lich
       # @param noun [String] The family PC noun.
       # @param name [String] The family PC name.
       # @return [GameObj] The newly created family PC object.
-      def GameObj.new_fam_pc(id, noun, name)
+      def self.new_fam_pc(id, noun, name)
         obj = GameObj.new(id, noun, name)
         @@fam_pcs.push(obj)
         obj
@@ -281,13 +281,13 @@ module Lich
       # @param noun [String] The right-hand object noun.
       # @param name [String] The right-hand object name.
       # @return [GameObj] The newly created right-hand object.
-      def GameObj.new_right_hand(id, noun, name)
+      def self.new_right_hand(id, noun, name)
         @@right_hand = GameObj.new(id, noun, name)
       end
 
       # Retrieves the current right-hand game object.
       # @return [GameObj] A duplicate of the right-hand object.
-      def GameObj.right_hand
+      def self.right_hand
         @@right_hand.dup
       end
 
@@ -296,75 +296,75 @@ module Lich
       # @param noun [String] The left-hand object noun.
       # @param name [String] The left-hand object name.
       # @return [GameObj] The newly created left-hand object.
-      def GameObj.new_left_hand(id, noun, name)
+      def self.new_left_hand(id, noun, name)
         @@left_hand = GameObj.new(id, noun, name)
       end
 
       # Retrieves the current left-hand game object.
       # @return [GameObj] A duplicate of the left-hand object.
-      def GameObj.left_hand
+      def self.left_hand
         @@left_hand.dup
       end
 
       # Clears all loot game objects.
       # @return [nil] Always returns nil.
-      def GameObj.clear_loot
+      def self.clear_loot
         @@loot.clear
       end
 
       # Clears all NPC game objects and their statuses.
       # @return [nil] Always returns nil.
-      def GameObj.clear_npcs
+      def self.clear_npcs
         @@npcs.clear
         @@npc_status.clear
       end
 
       # Clears all player character game objects and their statuses.
       # @return [nil] Always returns nil.
-      def GameObj.clear_pcs
+      def self.clear_pcs
         @@pcs.clear
         @@pc_status.clear
       end
 
       # Clears all inventory game objects.
       # @return [nil] Always returns nil.
-      def GameObj.clear_inv
+      def self.clear_inv
         @@inv.clear
       end
 
       # Clears all room description game objects.
       # @return [nil] Always returns nil.
-      def GameObj.clear_room_desc
+      def self.clear_room_desc
         @@room_desc.clear
       end
 
       # Clears all family room description game objects.
       # @return [nil] Always returns nil.
-      def GameObj.clear_fam_room_desc
+      def self.clear_fam_room_desc
         @@fam_room_desc.clear
       end
 
       # Clears all family loot game objects.
       # @return [nil] Always returns nil.
-      def GameObj.clear_fam_loot
+      def self.clear_fam_loot
         @@fam_loot.clear
       end
 
       # Clears all family NPC game objects.
       # @return [nil] Always returns nil.
-      def GameObj.clear_fam_npcs
+      def self.clear_fam_npcs
         @@fam_npcs.clear
       end
 
       # Clears all family player character game objects.
       # @return [nil] Always returns nil.
-      def GameObj.clear_fam_pcs
+      def self.clear_fam_pcs
         @@fam_pcs.clear
       end
 
       # Retrieves all NPC game objects.
       # @return [Array, nil] A duplicate of the NPCs array or nil if empty.
-      def GameObj.npcs
+      def self.npcs
         if @@npcs.empty?
           nil
         else
@@ -374,7 +374,7 @@ module Lich
 
       # Retrieves all loot game objects.
       # @return [Array, nil] A duplicate of the loot array or nil if empty.
-      def GameObj.loot
+      def self.loot
         if @@loot.empty?
           nil
         else
@@ -384,7 +384,7 @@ module Lich
 
       # Retrieves all player character game objects.
       # @return [Array, nil] A duplicate of the PCs array or nil if empty.
-      def GameObj.pcs
+      def self.pcs
         if @@pcs.empty?
           nil
         else
@@ -394,7 +394,7 @@ module Lich
 
       # Retrieves all inventory game objects.
       # @return [Array, nil] A duplicate of the inventory array or nil if empty.
-      def GameObj.inv
+      def self.inv
         if @@inv.empty?
           nil
         else
@@ -404,7 +404,7 @@ module Lich
 
       # Retrieves all room description game objects.
       # @return [Array, nil] A duplicate of the room descriptions array or nil if empty.
-      def GameObj.room_desc
+      def self.room_desc
         if @@room_desc.empty?
           nil
         else
@@ -414,7 +414,7 @@ module Lich
 
       # Retrieves all family room description game objects.
       # @return [Array, nil] A duplicate of the family room descriptions array or nil if empty.
-      def GameObj.fam_room_desc
+      def self.fam_room_desc
         if @@fam_room_desc.empty?
           nil
         else
@@ -424,7 +424,7 @@ module Lich
 
       # Retrieves all family loot game objects.
       # @return [Array, nil] A duplicate of the family loot array or nil if empty.
-      def GameObj.fam_loot
+      def self.fam_loot
         if @@fam_loot.empty?
           nil
         else
@@ -434,7 +434,7 @@ module Lich
 
       # Retrieves all family NPC game objects.
       # @return [Array, nil] A duplicate of the family NPCs array or nil if empty.
-      def GameObj.fam_npcs
+      def self.fam_npcs
         if @@fam_npcs.empty?
           nil
         else
@@ -444,7 +444,7 @@ module Lich
 
       # Retrieves all family player character game objects.
       # @return [Array, nil] A duplicate of the family PCs array or nil if empty.
-      def GameObj.fam_pcs
+      def self.fam_pcs
         if @@fam_pcs.empty?
           nil
         else
@@ -455,20 +455,20 @@ module Lich
       # Clears the contents of a specified container.
       # @param container_id [String] The ID of the container to clear.
       # @return [nil] Always returns nil.
-      def GameObj.clear_container(container_id)
+      def self.clear_container(container_id)
         @@contents[container_id] = Array.new
       end
 
       # Deletes a specified container from the contents.
       # @param container_id [String] The ID of the container to delete.
       # @return [nil] Always returns nil.
-      def GameObj.delete_container(container_id)
+      def self.delete_container(container_id)
         @@contents.delete(container_id)
       end
 
       # Retrieves the current targets from the game.
       # @return [Array] An array of current target NPCs.
-      def GameObj.targets
+      def self.targets
         a = Array.new
         XMLData.current_target_ids.each { |id|
           if (npc = @@npcs.find { |n| n.id == id })
@@ -483,7 +483,7 @@ module Lich
 
       # Retrieves the IDs of hidden targets.
       # @return [Array] An array of hidden target IDs.
-      def GameObj.hidden_targets
+      def self.hidden_targets
         a = Array.new
         XMLData.current_target_ids.each { |id|
           unless @@npcs.find { |n| n.id == id }
@@ -495,13 +495,13 @@ module Lich
 
       # Retrieves the current target from the game.
       # @return [GameObj, nil] The current target object or nil if not found.
-      def GameObj.target
+      def self.target
         return (@@npcs + @@pcs).find { |n| n.id == XMLData.current_target_id }
       end
 
       # Retrieves all dead NPCs.
       # @return [Array, nil] An array of dead NPCs or nil if none found.
-      def GameObj.dead
+      def self.dead
         dead_list = Array.new
         for obj in @@npcs
           dead_list.push(obj) if obj.status == "dead"
@@ -513,14 +513,14 @@ module Lich
 
       # Retrieves all containers in the game.
       # @return [Hash] A duplicate of the contents hash.
-      def GameObj.containers
+      def self.containers
         @@contents.dup
       end
 
       # Reloads the game object data from a file.
       # @param filename [String, nil] The name of the file to load.
       # @return [Boolean] True if the data was successfully reloaded, false otherwise.
-      def GameObj.reload(filename = nil)
+      def self.reload(filename = nil)
         GameObj.load_data(filename)
       end
 
@@ -528,7 +528,7 @@ module Lich
       # @param data [Regexp, nil] The existing data.
       # @param newData [Regexp] The new data to merge.
       # @return [Regexp] The merged data.
-      def GameObj.merge_data(data, newData)
+      def self.merge_data(data, newData)
         return newData unless data.is_a?(Regexp)
         return Regexp.union(data, newData)
       end
@@ -536,7 +536,7 @@ module Lich
       # Loads game object data from an XML file.
       # @param filename [String, nil] The name of the file to load.
       # @return [Boolean] True if the data was successfully loaded, false otherwise.
-      def GameObj.load_data(filename = nil)
+      def self.load_data(filename = nil)
         filename = File.join(DATA_DIR, 'gameobj-data.xml') if filename.nil?
         if File.exist?(filename)
           begin
@@ -608,19 +608,19 @@ module Lich
 
       # Retrieves the type data for game objects.
       # @return [Hash] The type data hash.
-      def GameObj.type_data
+      def self.type_data
         @@type_data
       end
 
       # Retrieves the type cache for game objects.
       # @return [Hash] The type cache hash.
-      def GameObj.type_cache
+      def self.type_cache
         @@type_cache
       end
 
       # Retrieves the sellable data for game objects.
       # @return [Hash] The sellable data hash.
-      def GameObj.sellable_data
+      def self.sellable_data
         @@sellable_data
       end
     end
