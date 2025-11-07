@@ -78,13 +78,8 @@ jobs:
             print(f'Warning: {warning}')
         "
 
-    - name: Download previous manifest (for incremental builds)
-      if: inputs.full_rebuild == false
-      continue-on-error: true
-      uses: actions/download-artifact@v4
-      with:
-        name: documentation-output
-        path: output/
+    # Note: Manifest is now tracked in git at output/latest/manifest.json
+    # No need to download from artifacts - it's already in the repo after checkout
 
     - name: Generate documentation
       env:
