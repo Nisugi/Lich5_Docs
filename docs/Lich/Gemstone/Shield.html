@@ -1,0 +1,1917 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Lich::Gemstone::Shield
+  
+    &mdash; Lich-5 Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Lich::Gemstone::Shield";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span>
+     &raquo; 
+    <span class="title">Shield</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Lich::Gemstone::Shield
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>shield.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Provides logic for shield-based PSM techniques in GemStone IV.</p>
+
+<p>This module defines metadata for each known shield technique, including passive and active skills,
+usage commands, costs, and expected success message regexes. It offers methods for checking whether
+a technique is known, affordable, or currently available, and for attempting to use a technique.</p>
+
+<p>Dynamic shortcut methods are also defined for each shield technique using both long and short names.
+Provides logic for shield-based PSM techniques in GemStone IV.</p>
+
+<p>This module defines metadata for each known shield technique, including passive and active skills,
+usage commands, costs, and expected success message regexes. It offers methods for checking whether
+a technique is known, affordable, or currently available, and for attempting to use a technique.</p>
+
+<p>Dynamic shortcut methods are also defined for each shield technique using both long and short names.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Using a shield technique</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'>Shield</span><span class='period'>.</span><span class='id identifier rubyid_use'><span class='object_link'><a href="#use-class_method" title="Lich::Gemstone::Shield.use (method)">use</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="shield_techniques-classvariable" class="">@@shield_techniques =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Internal registry of all shield techniques and their metadata.</p>
+
+<p>Internal registry of all shield techniques and their metadata.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="../../String.html" title="String (class)">String</a></span>, <span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Each key is a long name and maps to:</p>
+
+<ul>
+<li><code>:short_name</code> [String] shorthand reference</li>
+<li><code>:type</code> [String, nil] type of skill (e.g., passive, stance)</li>
+<li><code>:cost</code> [Integer] stamina cost</li>
+<li><code>:regex</code> [Regexp] expected in-game output</li>
+<li><code>:usage</code> [String, nil] usage string if applicable</li>
+</ul>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="../../String.html" title="String (class)">String</a></span>, <span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Each key is a long name and maps to:</p>
+
+<ul>
+<li><code>:short_name</code> [String] shorthand reference</li>
+<li><code>:type</code> [String, nil] type of skill (e.g., passive, stance)</li>
+<li><code>:cost</code> [Integer] stamina cost</li>
+<li><code>:regex</code> [Regexp] expected in-game output</li>
+<li><code>:usage</code> [String, nil] usage string if applicable</li>
+</ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>adamantine_bulwark</span><span class='tstring_end'>&quot;</span></span>    <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bulwark</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Adamantine Bulwark does not need to be activated\.  If you are wielding the appropriate type of shield, it will always be active\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>block_specialization</span><span class='tstring_end'>&quot;</span></span>  <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>blockspec</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>The Block Specialization combat maneuver is always active once you have learned it\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>block_the_elements</span><span class='tstring_end'>&quot;</span></span>    <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>blockelements</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Block the Elements does not need to be activated\.  If you are wielding the appropriate type of shield, it will always be active\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>deflect_magic</span><span class='tstring_end'>&quot;</span></span>         <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>deflectmagic</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Deflect Magic does not need to be activated once you have learned it\.  It will automatically apply to all relevant attacks, provided that you are wielding a shield and possess 3 ranks of the relevant Shield Focus specialization\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>deflect_missiles</span><span class='tstring_end'>&quot;</span></span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>deflectmissiles</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Deflect Missiles does not need to be activated once you have learned it\.  It will automatically apply to all relevant attacks, provided that you are wielding a shield and possess 3 ranks of the relevant Shield Focus specialization\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>deflect_the_elements</span><span class='tstring_end'>&quot;</span></span>  <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>deflectelements</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Deflect the Elements does not need to be activated\.  If you are wielding the appropriate type of shield, it will always be active\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>disarming_presence</span><span class='tstring_end'>&quot;</span></span>    <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dpresence</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:martial_stance</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>20</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You assume the Disarming Presence Stance, adjusting your footing and grip to allow for the proper pivot and thrust technique to disarm attacking foes\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+                                <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You re\-settle into the Disarming Presence Stance, re-ensuring your footing and grip are properly positioned\.</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dpresence</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>guard_mastery</span><span class='tstring_end'>&quot;</span></span>         <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>gmastery</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Guard Mastery does not need to be activated\.  If you are wielding the appropriate type of shield, it will always be active\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>large_shield_focus</span><span class='tstring_end'>&quot;</span></span>    <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>lfocus</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Large Shield Focus does not need to be activated\.  If you are wielding the appropriate type of shield, it will always be active\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>medium_shield_focus</span><span class='tstring_end'>&quot;</span></span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mfocus</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Medium Shield Focus does not need to be activated\.  If you are wielding the appropriate type of shield, it will always be active\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>phalanx</span><span class='tstring_end'>&quot;</span></span>               <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>phalanx</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Phalanx does not need to be activated\.  If you are wielding the appropriate type of shield, it will always be active\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>prop_up</span><span class='tstring_end'>&quot;</span></span>               <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>prop</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Prop Up does not need to be activated once you have learned it\.  It will automatically apply to all relevant attacks, provided that you are wielding a shield and possess 3 ranks of the relevant Shield Focus specialization\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>protective_wall</span><span class='tstring_end'>&quot;</span></span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pwall</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Protective Wall does not need to be activated\.  If you are wielding the appropriate type of shield, it will always be active\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_bash</span><span class='tstring_end'>&quot;</span></span>           <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bash</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:setup</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>9</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You lunge forward at .+ with your .+ and attempt a shield bash\!</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bash</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_charge</span><span class='tstring_end'>&quot;</span></span>         <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>charge</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:setup</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>14</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You charge forward at .+ with your .+ and attempt a shield charge\!</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>charge</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_forward</span><span class='tstring_end'>&quot;</span></span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>forward</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Shield Forward does not need to be activated once you have learned it\.  It will automatically activate upon the use of a shield attack\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>forward</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_mind</span><span class='tstring_end'>&quot;</span></span>           <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mind</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:buff</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>10</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You must be wielding an ensorcelled or anti-magical shield to be able to properly shield your mind and soul\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mind</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_pin</span><span class='tstring_end'>&quot;</span></span>            <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pin</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:attack</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>15</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You attempt to expose a vulnerability with a diversionary shield bash on .+\!</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pin</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_push</span><span class='tstring_end'>&quot;</span></span>           <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>push</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:setup</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>7</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You raise your .+ before you and attempt to push .+ away\!</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>push</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_riposte</span><span class='tstring_end'>&quot;</span></span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>riposte</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:martial_stance</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>20</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You assume the Shield Riposte Stance, preparing yourself to lash out at a moment&#39;s notice\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+                                <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You re\-settle into the Shield Riposte Stance, preparing yourself to lash out at a moment&#39;s notice\.</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>riposte</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_spike_mastery</span><span class='tstring_end'>&quot;</span></span>  <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>spikemastery</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Shield Spike Mastery does not need to be activated\.  If you are wielding the appropriate type of shield, it will always be active\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_strike</span><span class='tstring_end'>&quot;</span></span>         <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>strike</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:attack</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>15</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You launch a quick bash with your .+ at .+\!</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>strike</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_strike_mastery</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>strikemastery</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Shield Strike Mastery does not need to be activated once you have learned it\.  It will automatically apply to all relevant focused multi\-attacks, provided that you maintain the prerequisite ranks of Shield Bash\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_swiftness</span><span class='tstring_end'>&quot;</span></span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>swiftness</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Shield Swiftness does not need to be activated once you have learned it\.  It will automatically apply to all relevant attacks, provided that you are wielding a small or medium shield and have at least 3 ranks of the relevant Shield Focus specialization\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_throw</span><span class='tstring_end'>&quot;</span></span>          <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>throw</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:area_of_effect</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>20</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You snap your arm forward, hurling your .+ at .+ with all your might\!</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>throw</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>trample</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:area_of_effect</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>14</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You raise your .+ before you and charge headlong towards .+\!</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>trample</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shielded_brawler</span><span class='tstring_end'>&quot;</span></span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>brawler</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Shielded Brawler does not need to be activated once you have learned it\.  It will automatically apply to all relevant attacks, provided that you are wielding a shield and possess 3 ranks of the relevant Shield Focus specialization\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>small_shield_focus</span><span class='tstring_end'>&quot;</span></span>    <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sfocus</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Small Shield Focus does not need to be activated\.  If you are wielding the appropriate type of shield, it will always be active\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>spell_block</span><span class='tstring_end'>&quot;</span></span>           <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>spellblock</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Spell Block does not need to be activated once you have learned it\.  It will automatically apply to all relevant attacks, provided that you are wielding a shield and possess 3 ranks of the relevant Shield Focus specialization\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>steady_shield</span><span class='tstring_end'>&quot;</span></span>         <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>steady</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Steady Shield does not need to be activated once you have learned it\.  It will automatically apply to all relevant attacks against you, provided that you maintain the prerequisite ranks of Stun Maneuvers\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>steely_resolve</span><span class='tstring_end'>&quot;</span></span>        <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>resolve</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:buff</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>30</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You focus your mind in a steely resolve to block all attacks against you\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+                                <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You are still mentally fatigued from your last invocation of your Steely Resolve\.</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>resolve</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tortoise_stance</span><span class='tstring_end'>&quot;</span></span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tortoise</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:martial_stance</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>20</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You assume the Stance of the Tortoise, holding back some of your offensive power in order to maximize your defense\.</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+                                <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You re\-settle into the Stance of the Tortoise, holding back your offensive power in order to maximize your defense\.</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tortoise</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tower_shield_focus</span><span class='tstring_end'>&quot;</span></span>    <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='symbol'>:short_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tfocus</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='symbol'>:type</span>       <span class='op'>=&gt;</span> <span class='symbol'>:passive</span><span class='comma'>,</span>
+    <span class='symbol'>:cost</span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='symbol'>:regex</span>      <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Tower Shield Focus does not need to be activated\.  If you are wielding the appropriate type of shield, it will always be active\.</span><span class='regexp_end'>/i</span></span><span class='comma'>,</span>
+    <span class='symbol'>:usage</span>      <span class='op'>=&gt;</span> <span class='kw'>nil</span>
+  <span class='rbrace'>}</span>
+<span class='rbrace'>}</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#[]-class_method" title="[] (class method)">.<strong>[]</strong>(name)  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Looks up the rank known of a shield technique.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#affordable%3F-class_method" title="affordable? (class method)">.<strong>affordable?</strong>(name, forcert_count: 0)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Determines if an Shield technique is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#available%3F-class_method" title="available? (class method)">.<strong>available?</strong>(name, min_rank: 1, forcert_count: 0)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Determines if a Shield technique is available to use right now by testing: - if the technique is known - if the technique is affordable - if the technique is not on cooldown - if the character is not overexerted - if the character is capable of performing the number of FORCERTs specified.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#buff_active%3F-class_method" title="buff_active? (class method)">.<strong>buff_active?</strong>(name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks whether the technique&#39;s buff is currently active.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#known%3F-class_method" title="known? (class method)">.<strong>known?</strong>(name, min_rank: 1)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Determines if the character knows a shield technique at all, and optionally if the character knows it at the specified rank.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#regexp-class_method" title="regexp (class method)">.<strong>regexp</strong>(name)  &#x21d2; Regexp </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the &quot;success&quot; regex associated with a given Shield technique name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shield_lookups-class_method" title="shield_lookups (class method)">.<strong>shield_lookups</strong>  &#x21d2; Array&lt;Hash&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns an array of simplified technique metadata.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use-class_method" title="use (class method)">.<strong>use</strong>(name, target = &quot;&quot;, results_of_interest: nil, forcert_count: 0)  &#x21d2; String<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Attempts to use an Shield technique, optionally on a target.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="[]-class_method">
+  
+    .<strong>[]</strong>(name)  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Looks up the rank known of a shield technique.</p>
+
+<p>Looks up the rank known of a shield technique.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'>Feat</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>2</span>
+<span class='const'>Feat</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>0</span> <span class='comment'># if not known</span></code></pre>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='comment'># =&gt; 2
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='comment'># =&gt; 0 # if not known</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the shield technique</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the shield technique</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The rank of the technique, or 0 if unknown</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The rank of the technique, or 0 if unknown</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+310
+311
+312</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'shield.rb', line 310</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_assess'><span class='object_link'><a href="PSMS.html#assess-class_method" title="Lich::Gemstone::PSMS.assess (method)">assess</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Shield</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="affordable?-class_method">
+  
+    .<strong>affordable?</strong>(name, forcert_count: 0)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Determines if an Shield technique is affordable, and optionally tests
+affordability with a given number of FORCERTs having been used (including the current one).</p>
+
+<p>Determines if an Shield technique is affordable, and optionally tests
+affordability with a given number of FORCERTs having been used (including the current one).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='comment'># if enough skill and stamina
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>false</span>  <span class='comment'># if not enough skill or stamina</span></code></pre>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='comment'># =&gt; false  # if not enough skill or stamina</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the Shield technique</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>forcert_count</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optionally, the count of FORCERTs being used, including for this execution (default: 0)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the Shield technique</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>forcert_count</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optionally, the count of FORCERTs being used, including for this execution (default: 0)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the technique can be used with available FORCERTs</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the technique can be used with available FORCERTs</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+355
+356
+357
+358</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'shield.rb', line 355</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='cvar'>@@shield_techniques</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'><span class='object_link'><a href="PSMS.html#find_name-class_method" title="Lich::Gemstone::PSMS.find_name (method)">find_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shield</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:type</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='symbol'>:area_of_effect</span> <span class='op'>&amp;&amp;</span> <span class='const'><span class='object_link'><a href="Effects.html" title="Lich::Gemstone::Effects (module)">Effects</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Effects.html#Buffs-constant" title="Lich::Gemstone::Effects::Buffs (constant)">Buffs</a></span></span><span class='period'>.</span><span class='id identifier rubyid_active?'>active?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Glorious Momentum</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_assess'><span class='object_link'><a href="PSMS.html#assess-class_method" title="Lich::Gemstone::PSMS.assess (method)">assess</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Shield</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='id identifier rubyid_forcert_count'>forcert_count</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="available?-class_method">
+  
+    .<strong>available?</strong>(name, min_rank: 1, forcert_count: 0)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Determines if a Shield technique is available to use right now by testing:</p>
+
+<ul>
+<li>if the technique is known</li>
+<li>if the technique is affordable</li>
+<li>if the technique is not on cooldown</li>
+<li>if the character is not overexerted</li>
+<li>if the character is capable of performing the number of FORCERTs specified</li>
+</ul>
+
+<p>blocked by overexertion
+Determines if a Shield technique is available to use right now by testing:</p>
+
+<ul>
+<li>if the technique is known</li>
+<li>if the technique is affordable</li>
+<li>if the technique is not on cooldown</li>
+<li>if the character is not overexerted</li>
+<li>if the character is capable of performing the number of FORCERTs specified</li>
+</ul>
+
+<p>blocked by overexertion</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='comment'># if known, affordable, not on cooldown, and not overexerted</span></code></pre>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true # if known, affordable, not on cooldown, and not overexerted</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the Shield technique</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>min_rank</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>1</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optionally, the minimum rank to check (default: 1)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>forcert_count</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optionally, the count of FORCERTs being used (default: 0)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the Shield technique</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>min_rank</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>1</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optionally, the minimum rank to check (default: 1)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>forcert_count</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optionally, the count of FORCERTs being used (default: 0)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the technique is known, affordable, and not on cooldown or</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the technique is known, affordable, and not on cooldown or</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+388
+389
+390
+391
+392</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'shield.rb', line 388</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'><span class='object_link'><a href="#known%3F-class_method" title="Lich::Gemstone::Shield.known? (method)">known?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='id identifier rubyid_min_rank'>min_rank</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+    <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'><span class='object_link'><a href="#affordable%3F-class_method" title="Lich::Gemstone::Shield.affordable? (method)">affordable?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='id identifier rubyid_forcert_count'>forcert_count</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+    <span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'><span class='object_link'><a href="PSMS.html#available%3F-class_method" title="Lich::Gemstone::PSMS.available? (method)">available?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="buff_active?-class_method">
+  
+    .<strong>buff_active?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks whether the technique&#39;s buff is currently active.</p>
+
+<p>Checks whether the technique&#39;s buff is currently active.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The technique&#39;s name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The technique&#39;s name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if buff is already active</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if buff is already active</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+402
+403
+404
+405</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'shield.rb', line 402</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_buff_active?'>buff_active?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='cvar'>@@shield_techniques</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'><span class='object_link'><a href="PSMS.html#find_name-class_method" title="Lich::Gemstone::PSMS.find_name (method)">find_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shield</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='symbol'>:buff</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="Effects.html" title="Lich::Gemstone::Effects (module)">Effects</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Effects.html#Buffs-constant" title="Lich::Gemstone::Effects::Buffs (constant)">Buffs</a></span></span><span class='period'>.</span><span class='id identifier rubyid_active?'>active?</span><span class='lparen'>(</span><span class='cvar'>@@shield_techniques</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'><span class='object_link'><a href="PSMS.html#find_name-class_method" title="Lich::Gemstone::PSMS.find_name (method)">find_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shield</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:buff</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="known?-class_method">
+  
+    .<strong>known?</strong>(name, min_rank: 1)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Determines if the character knows a shield technique at all, and
+optionally if the character knows it at the specified rank.</p>
+
+<p>Determines if the character knows a shield technique at all, and
+optionally if the character knows it at the specified rank.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='comment'># if any number of ranks is known
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='int'>2</span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>false</span> <span class='comment'># if only rank 1 is known</span></code></pre>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='int'>2</span><span class='rparen'>)</span> <span class='comment'># =&gt; false # if only rank 1 is known</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the shield technique</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>min_rank</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>1</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optionally, the minimum rank to test against (default: 1, so known)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the shield technique</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>min_rank</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>1</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optionally, the minimum rank to test against (default: 1, so known)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the technique is known at or above the given rank</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the technique is known at or above the given rank</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+332
+333
+334
+335</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'shield.rb', line 332</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='int'>1</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_min_rank'>min_rank</span> <span class='op'>=</span> <span class='int'>1</span> <span class='kw'>unless</span> <span class='id identifier rubyid_min_rank'>min_rank</span> <span class='op'>&gt;=</span> <span class='int'>1</span> <span class='comment'># in case a 0 or below is passed
+</span>  <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_min_rank'>min_rank</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="regexp-class_method">
+  
+    .<strong>regexp</strong>(name)  &#x21d2; <tt>Regexp</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the &quot;success&quot; regex associated with a given Shield technique name.
+This regex is used to match the expected output when the technique is successfully <em>attempted</em>.
+It does not necessarily indicate that the technique was successful in its effect, or even
+that the technique was executed at all.</p>
+
+<p>Returns the &quot;success&quot; regex associated with a given Shield technique name.
+This regex is used to match the expected output when the technique is successfully <em>attempted</em>.
+It does not necessarily indicate that the technique was successful in its effect, or even
+that the technique was executed at all.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_regexp'>regexp</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>As \w+ prays? over \w+(?:&#39;s)? [\w\s]+, you sense that (?:the Arkati&#39;s|a) blessing will be granted against magical attacks\.</span><span class='regexp_end'>/i</span></span></code></pre>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_regexp'>regexp</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; /As \w+ prays? over \w+(?:&#39;s)? [\w\s]+, you sense that (?:the Arkati&#39;s|a) blessing will be granted against magical attacks\./i</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The technique name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The technique name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Regexp</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The regex used to match technique success or effects</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Regexp</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The regex used to match technique success or effects</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+490
+491
+492</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'shield.rb', line 490</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_regexp'>regexp</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='cvar'>@@shield_techniques</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'><span class='object_link'><a href="PSMS.html#find_name-class_method" title="Lich::Gemstone::PSMS.find_name (method)">find_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shield</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:regex</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="shield_lookups-class_method">
+  
+    .<strong>shield_lookups</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns an array of simplified technique metadata.</p>
+
+<p>Returns an array of simplified technique metadata.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_shield_lookups'>shield_lookups</span> <span class='comment'># returns an array of shield technique metadata</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Each contains :long_name, :short_name, and :cost</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Each contains :long_name, :short_name, and :cost</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+286
+287
+288
+289
+290
+291
+292
+293
+294</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'shield.rb', line 286</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_shield_lookups'>shield_lookups</span>
+  <span class='cvar'>@@shield_techniques</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_long_name'>long_name</span><span class='comma'>,</span> <span class='id identifier rubyid_psm'>psm</span><span class='op'>|</span>
+    <span class='lbrace'>{</span>
+      <span class='label'>long_name:</span> <span class='id identifier rubyid_long_name'>long_name</span><span class='comma'>,</span>
+      <span class='label'>short_name:</span> <span class='id identifier rubyid_psm'>psm</span><span class='lbracket'>[</span><span class='symbol'>:short_name</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>cost:</span> <span class='id identifier rubyid_psm'>psm</span><span class='lbracket'>[</span><span class='symbol'>:cost</span><span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use-class_method">
+  
+    .<strong>use</strong>(name, target = &quot;&quot;, results_of_interest: nil, forcert_count: 0)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Attempts to use an Shield technique, optionally on a target.</p>
+
+<p>Attempts to use an Shield technique, optionally on a target.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># attempt to use Shield blessing on self
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Dissonance</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># attempt to use Shield blessing on Dissonance</span></code></pre>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># attempt to use Shield blessing on self
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Dissonance</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># attempt to use Shield blessing on Dissonance</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the Shield technique</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>target</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>Integer</tt>, <tt>GameObj</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&quot;&quot;</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The target of the technique (optional).  If unspecified, the technique will be used on the character.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>results_of_interest</span>
+      
+      
+        <span class='type'>(<tt>Regexp</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Additional regex to capture from result (optional)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>forcert_count</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Number of FORCERTs to use (default: 0)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the Shield technique</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>target</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>Integer</tt>, <tt>GameObj</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&quot;&quot;</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The target of the technique (optional).  If unspecified, the technique will be used on the character.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>results_of_interest</span>
+      
+      
+        <span class='type'>(<tt>Regexp</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Additional regex to capture from result (optional)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>forcert_count</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Number of FORCERTs to use (default: 0)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The result of the regex match, or nil if unavailable</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The result of the regex match, or nil if unavailable</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'shield.rb', line 427</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>results_of_interest:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'><span class='object_link'><a href="#available%3F-class_method" title="Lich::Gemstone::Shield.available? (method)">available?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='id identifier rubyid_forcert_count'>forcert_count</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_name_normalized'>name_normalized</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name_normal'><span class='object_link'><a href="PSMS.html#name_normal-class_method" title="Lich::Gemstone::PSMS.name_normal (method)">name_normal</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_technique'>technique</span> <span class='op'>=</span> <span class='cvar'>@@shield_techniques</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'><span class='object_link'><a href="PSMS.html#find_name-class_method" title="Lich::Gemstone::PSMS.find_name (method)">find_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name_normalized'>name_normalized</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shield</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_usage'>usage</span> <span class='op'>=</span> <span class='id identifier rubyid_technique'>technique</span><span class='lbracket'>[</span><span class='symbol'>:usage</span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_usage'>usage</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='id identifier rubyid_in_cooldown_regex'>in_cooldown_regex</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> is still in cooldown\.</span><span class='regexp_end'>/i</span></span>
+
+  <span class='id identifier rubyid_results_regex'>results_regex</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span>
+    <span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="PSMS.html#FAILURES_REGEXES-constant" title="Lich::Gemstone::PSMS::FAILURES_REGEXES (constant)">FAILURES_REGEXES</a></span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> what\?$</span><span class='regexp_end'>/i</span></span><span class='comma'>,</span>
+    <span class='id identifier rubyid_in_cooldown_regex'>in_cooldown_regex</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_technique'>technique</span><span class='lbracket'>[</span><span class='symbol'>:regex</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^Roundtime: [0-9]+ sec\.$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_results_regex'>results_regex</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span><span class='id identifier rubyid_results_regex'>results_regex</span><span class='comma'>,</span> <span class='id identifier rubyid_results_of_interest'>results_of_interest</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_results_of_interest'>results_of_interest</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Regexp</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_usage_cmd'>usage_cmd</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_usage'>usage</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_target'>target</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>GameObj</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_usage_cmd'>usage_cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> #</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target'>target</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_target'>target</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Integer</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_usage_cmd'>usage_cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> #</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target'>target</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_target'>target</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_usage_cmd'>usage_cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target'>target</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_forcert_count'>forcert_count</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_usage_cmd'>usage_cmd</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> forcert</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span> <span class='comment'># if we&#39;re using forcert, we don&#39;t want to wait for rt, but we need to otherwise
+</span>    <span class='id identifier rubyid_waitrt?'><span class='object_link'><a href="../../top-level-namespace.html#waitrt%3F-instance_method" title="#waitrt? (method)">waitrt?</a></span></span>
+    <span class='id identifier rubyid_waitcastrt?'><span class='object_link'><a href="../../top-level-namespace.html#waitcastrt%3F-instance_method" title="#waitcastrt? (method)">waitcastrt?</a></span></span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_usage_result'>usage_result</span> <span class='op'>=</span> <span class='id identifier rubyid_dothistimeout'><span class='object_link'><a href="../../top-level-namespace.html#dothistimeout-instance_method" title="#dothistimeout (method)">dothistimeout</a></span></span> <span class='id identifier rubyid_usage_cmd'>usage_cmd</span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='id identifier rubyid_results_regex'>results_regex</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_usage_result'>usage_result</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You don&#39;t seem to be able to move to do that.</span><span class='tstring_end'>&quot;</span></span>
+    <span class='int'>100</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span> <span class='kw'>break</span> <span class='kw'>if</span> <span class='id identifier rubyid_clear'><span class='object_link'><a href="../../top-level-namespace.html#clear-instance_method" title="#clear (method)">clear</a></span></span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_line'>line</span><span class='op'>|</span> <span class='id identifier rubyid_line'>line</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^You regain control of your senses!$</span><span class='regexp_end'>/</span></span> <span class='rbrace'>}</span><span class='semicolon'>;</span> <span class='id identifier rubyid_sleep'>sleep</span> <span class='float'>0.1</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_usage_result'>usage_result</span> <span class='op'>=</span> <span class='id identifier rubyid_dothistimeout'><span class='object_link'><a href="../../top-level-namespace.html#dothistimeout-instance_method" title="#dothistimeout (method)">dothistimeout</a></span></span> <span class='id identifier rubyid_usage_cmd'>usage_cmd</span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='id identifier rubyid_results_regex'>results_regex</span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_usage_result'>usage_result</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Nov  7 02:18:49 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.1.7).
+</div>
+
+    </div>
+  </body>
+</html>

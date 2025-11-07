@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Win32
+  
+    &mdash; Lich-5 Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Win32";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (W)</a> &raquo;
+    
+    
+    <span class="title">Win32</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Win32
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>init.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>This module provides methods to interact with Windows system calls.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Win32/Advapi32.html" title="Win32::Advapi32 (module)">Advapi32</a></span>, <span class='object_link'><a href="Win32/Kernel32.html" title="Win32::Kernel32 (module)">Kernel32</a></span>, <span class='object_link'><a href="Win32/Shell32.html" title="Win32::Shell32 (module)">Shell32</a></span>, <span class='object_link'><a href="Win32/User32.html" title="Win32::User32 (module)">User32</a></span>
+    
+  
+    
+  
+</p>
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="SIZEOF_CHAR-constant" class="">SIZEOF_CHAR =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'>Fiddle</span><span class='op'>::</span><span class='const'>SIZEOF_CHAR</span></pre></dd>
+      
+        <dt id="SIZEOF_LONG-constant" class="">SIZEOF_LONG =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'>Fiddle</span><span class='op'>::</span><span class='const'>SIZEOF_LONG</span></pre></dd>
+      
+        <dt id="SEE_MASK_NOCLOSEPROCESS-constant" class="">SEE_MASK_NOCLOSEPROCESS =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x00000040</span></pre></dd>
+      
+        <dt id="MB_OK-constant" class="">MB_OK =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x00000000</span></pre></dd>
+      
+        <dt id="MB_OKCANCEL-constant" class="">MB_OKCANCEL =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x00000001</span></pre></dd>
+      
+        <dt id="MB_YESNO-constant" class="">MB_YESNO =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x00000004</span></pre></dd>
+      
+        <dt id="MB_ICONERROR-constant" class="">MB_ICONERROR =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x00000010</span></pre></dd>
+      
+        <dt id="MB_ICONQUESTION-constant" class="">MB_ICONQUESTION =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x00000020</span></pre></dd>
+      
+        <dt id="MB_ICONWARNING-constant" class="">MB_ICONWARNING =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x00000030</span></pre></dd>
+      
+        <dt id="IDIOK-constant" class="">IDIOK =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>1</span></pre></dd>
+      
+        <dt id="IDICANCEL-constant" class="">IDICANCEL =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>2</span></pre></dd>
+      
+        <dt id="IDIYES-constant" class="">IDIYES =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>6</span></pre></dd>
+      
+        <dt id="IDINO-constant" class="">IDINO =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>7</span></pre></dd>
+      
+        <dt id="KEY_ALL_ACCESS-constant" class="">KEY_ALL_ACCESS =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0xF003F</span></pre></dd>
+      
+        <dt id="KEY_CREATE_SUB_KEY-constant" class="">KEY_CREATE_SUB_KEY =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x0004</span></pre></dd>
+      
+        <dt id="KEY_ENUMERATE_SUB_KEYS-constant" class="">KEY_ENUMERATE_SUB_KEYS =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x0008</span></pre></dd>
+      
+        <dt id="KEY_EXECUTE-constant" class="">KEY_EXECUTE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x20019</span></pre></dd>
+      
+        <dt id="KEY_NOTIFY-constant" class="">KEY_NOTIFY =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x0010</span></pre></dd>
+      
+        <dt id="KEY_QUERY_VALUE-constant" class="">KEY_QUERY_VALUE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x0001</span></pre></dd>
+      
+        <dt id="KEY_READ-constant" class="">KEY_READ =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x20019</span></pre></dd>
+      
+        <dt id="KEY_SET_VALUE-constant" class="">KEY_SET_VALUE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x0002</span></pre></dd>
+      
+        <dt id="KEY_WOW64_32KEY-constant" class="">KEY_WOW64_32KEY =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x0200</span></pre></dd>
+      
+        <dt id="KEY_WOW64_64KEY-constant" class="">KEY_WOW64_64KEY =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x0100</span></pre></dd>
+      
+        <dt id="KEY_WRITE-constant" class="">KEY_WRITE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0x20006</span></pre></dd>
+      
+        <dt id="TokenElevation-constant" class="">TokenElevation =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>20</span></pre></dd>
+      
+        <dt id="TOKEN_QUERY-constant" class="">TOKEN_QUERY =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>8</span></pre></dd>
+      
+        <dt id="STILL_ACTIVE-constant" class="">STILL_ACTIVE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>259</span></pre></dd>
+      
+        <dt id="SW_SHOWNORMAL-constant" class="">SW_SHOWNORMAL =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>1</span></pre></dd>
+      
+        <dt id="SW_SHOW-constant" class="">SW_SHOW =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>5</span></pre></dd>
+      
+        <dt id="PROCESS_QUERY_INFORMATION-constant" class="">PROCESS_QUERY_INFORMATION =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>1024</span></pre></dd>
+      
+        <dt id="PROCESS_VM_READ-constant" class="">PROCESS_VM_READ =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>16</span></pre></dd>
+      
+        <dt id="HKEY_LOCAL_MACHINE-constant" class="">HKEY_LOCAL_MACHINE =
+          
+        </dt>
+        <dd><pre class="code"><span class='op'>-</span><span class='int'>2147483646</span></pre></dd>
+      
+        <dt id="REG_NONE-constant" class="">REG_NONE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>0</span></pre></dd>
+      
+        <dt id="REG_SZ-constant" class="">REG_SZ =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>1</span></pre></dd>
+      
+        <dt id="REG_EXPAND_SZ-constant" class="">REG_EXPAND_SZ =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>2</span></pre></dd>
+      
+        <dt id="REG_BINARY-constant" class="">REG_BINARY =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>3</span></pre></dd>
+      
+        <dt id="REG_DWORD-constant" class="">REG_DWORD =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>4</span></pre></dd>
+      
+        <dt id="REG_DWORD_LITTLE_ENDIAN-constant" class="">REG_DWORD_LITTLE_ENDIAN =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>4</span></pre></dd>
+      
+        <dt id="REG_DWORD_BIG_ENDIAN-constant" class="">REG_DWORD_BIG_ENDIAN =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>5</span></pre></dd>
+      
+        <dt id="REG_LINK-constant" class="">REG_LINK =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>6</span></pre></dd>
+      
+        <dt id="REG_MULTI_SZ-constant" class="">REG_MULTI_SZ =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>7</span></pre></dd>
+      
+        <dt id="REG_QWORD-constant" class="">REG_QWORD =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>11</span></pre></dd>
+      
+        <dt id="REG_QWORD_LITTLE_ENDIAN-constant" class="">REG_QWORD_LITTLE_ENDIAN =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>11</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#admin%3F-class_method" title="admin? (class method)">.<strong>admin?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>def Win32.isWin8?         r = Win32.GetVersionEx         return ((r[:dwMajorVersion] == 6) and (r[:dwMinorVersion] &gt;= 2))      end.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#AdminShellExecute-class_method" title="AdminShellExecute (class method)">.<strong>AdminShellExecute</strong>(args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#CreateProcess-class_method" title="CreateProcess (class method)">.<strong>CreateProcess</strong>(args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#GetCurrentProcess-class_method" title="GetCurrentProcess (class method)">.<strong>GetCurrentProcess</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Retrieves the current process ID.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#GetExitCodeProcess-class_method" title="GetExitCodeProcess (class method)">.<strong>GetExitCodeProcess</strong>(args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#GetLastError-class_method" title="GetLastError (class method)">.<strong>GetLastError</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Retrieves the last error code from the Windows API.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#GetModuleFileName-class_method" title="GetModuleFileName (class method)">.<strong>GetModuleFileName</strong>(args = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#GetTokenInformation-class_method" title="GetTokenInformation (class method)">.<strong>GetTokenInformation</strong>(args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#GetVersionEx-class_method" title="GetVersionEx (class method)">.<strong>GetVersionEx</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#isXP%3F-class_method" title="isXP? (class method)">.<strong>isXP?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#MessageBox-class_method" title="MessageBox (class method)">.<strong>MessageBox</strong>(args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#OpenProcessToken-class_method" title="OpenProcessToken (class method)">.<strong>OpenProcessToken</strong>(args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#RegCloseKey-class_method" title="RegCloseKey (class method)">.<strong>RegCloseKey</strong>(args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#RegDeleteValue-class_method" title="RegDeleteValue (class method)">.<strong>RegDeleteValue</strong>(args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#RegOpenKeyEx-class_method" title="RegOpenKeyEx (class method)">.<strong>RegOpenKeyEx</strong>(args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#RegQueryValueEx-class_method" title="RegQueryValueEx (class method)">.<strong>RegQueryValueEx</strong>(args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#RegSetValueEx-class_method" title="RegSetValueEx (class method)">.<strong>RegSetValueEx</strong>(args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ShellExecute-class_method" title="ShellExecute (class method)">.<strong>ShellExecute</strong>(args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ShellExecuteEx-class_method" title="ShellExecuteEx (class method)">.<strong>ShellExecuteEx</strong>(args)  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Executes a shell command with extended options.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="admin?-class_method">
+  
+    .<strong>admin?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>def Win32.isWin8?
+        r = Win32.GetVersionEx
+        return ((r[:dwMajorVersion] == 6) and (r[:dwMinorVersion] &gt;= 2))
+     end</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 459</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='id identifier rubyid_admin?'>admin?</span>
+  <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='id identifier rubyid_isXP?'><span class='object_link'><a href="#isXP%3F-class_method" title="Win32.isXP? (method)">isXP?</a></span></span>
+    <span class='kw'>return</span> <span class='kw'>true</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'><span class='object_link'><a href="#OpenProcessToken-class_method" title="Win32.OpenProcessToken (method)">OpenProcessToken</a></span></span><span class='lparen'>(</span><span class='symbol'>:ProcessHandle</span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'><span class='object_link'><a href="#GetCurrentProcess-class_method" title="Win32.GetCurrentProcess (method)">GetCurrentProcess</a></span></span><span class='comma'>,</span> <span class='symbol'>:DesiredAccess</span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#TOKEN_QUERY-constant" title="Win32::TOKEN_QUERY (constant)">TOKEN_QUERY</a></span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_token_handle'>token_handle</span> <span class='op'>=</span> <span class='id identifier rubyid_r'>r</span><span class='lbracket'>[</span><span class='symbol'>:TokenHandle</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'><span class='object_link'><a href="#GetTokenInformation-class_method" title="Win32.GetTokenInformation (method)">GetTokenInformation</a></span></span><span class='lparen'>(</span><span class='symbol'>:TokenInformationClass</span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#TokenElevation-constant" title="Win32::TokenElevation (constant)">TokenElevation</a></span></span><span class='comma'>,</span> <span class='symbol'>:TokenHandle</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_token_handle'>token_handle</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='lparen'>(</span><span class='id identifier rubyid_r'>r</span><span class='lbracket'>[</span><span class='symbol'>:TokenIsElevated</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='int'>0</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="AdminShellExecute-class_method">
+  
+    .<strong>AdminShellExecute</strong>(args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 470</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>AdminShellExecute</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='comment'># open ruby/lich as admin and tell it to open something else
+</span>  <span class='kw'>if</span> <span class='kw'>not</span> <span class='id identifier rubyid_caller'>caller</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>eval|run</span><span class='regexp_end'>/</span></span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'><span class='object_link'><a href="#GetModuleFileName-class_method" title="Win32.GetModuleFileName (method)">GetModuleFileName</a></span></span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_r'>r</span><span class='lbracket'>[</span><span class='symbol'>:return</span><span class='rbracket'>]</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+      <span class='kw'>if</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span><span class='lparen'>(</span><span class='id identifier rubyid_r'>r</span><span class='lbracket'>[</span><span class='symbol'>:lpFilename</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+        <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'><span class='object_link'><a href="#ShellExecuteEx-class_method" title="Win32.ShellExecuteEx (method)">ShellExecuteEx</a></span></span><span class='lparen'>(</span><span class='symbol'>:lpVerb</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>runas</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:lpFile</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_r'>r</span><span class='lbracket'>[</span><span class='symbol'>:lpFilename</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:lpParameters</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='gvar'>$PROGRAM_NAME</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> shellexecute </span><span class='embexpr_beg'>#{</span><span class='lbracket'>[</span><span class='const'>Marshal</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>m</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="CreateProcess-class_method">
+  
+    .<strong>CreateProcess</strong>(args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 197</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>CreateProcess</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpCommandLine</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_lpCommandLine'>lpCommandLine</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpCommandLine</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_lpCommandLine'>lpCommandLine</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:bInheritHandles</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='kw'>false</span>
+    <span class='id identifier rubyid_bInheritHandles'>bInheritHandles</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:bInheritHandles</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_bInheritHandles'>bInheritHandles</span> <span class='op'>=</span> <span class='int'>1</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_bInheritHandles'>bInheritHandles</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:bInheritHandles</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpEnvironment</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span>
+    <span class='comment'># fixme
+</span>  <span class='kw'>end</span>
+  <span class='id identifier rubyid_lpStartupInfo'>lpStartupInfo</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>68</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_lpStartupInfo_index'>lpStartupInfo_index</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:lpDesktop</span> <span class='op'>=&gt;</span> <span class='int'>2</span><span class='comma'>,</span> <span class='symbol'>:lpTitle</span> <span class='op'>=&gt;</span> <span class='int'>3</span><span class='comma'>,</span> <span class='symbol'>:dwX</span> <span class='op'>=&gt;</span> <span class='int'>4</span><span class='comma'>,</span> <span class='symbol'>:dwY</span> <span class='op'>=&gt;</span> <span class='int'>5</span><span class='comma'>,</span> <span class='symbol'>:dwXSize</span> <span class='op'>=&gt;</span> <span class='int'>6</span><span class='comma'>,</span> <span class='symbol'>:dwYSize</span> <span class='op'>=&gt;</span> <span class='int'>7</span><span class='comma'>,</span> <span class='symbol'>:dwXCountChars</span> <span class='op'>=&gt;</span> <span class='int'>8</span><span class='comma'>,</span> <span class='symbol'>:dwYCountChars</span> <span class='op'>=&gt;</span> <span class='int'>9</span><span class='comma'>,</span> <span class='symbol'>:dwFillAttribute</span> <span class='op'>=&gt;</span> <span class='int'>10</span><span class='comma'>,</span> <span class='symbol'>:dwFlags</span> <span class='op'>=&gt;</span> <span class='int'>11</span><span class='comma'>,</span> <span class='symbol'>:wShowWindow</span> <span class='op'>=&gt;</span> <span class='int'>12</span><span class='comma'>,</span> <span class='symbol'>:hStdInput</span> <span class='op'>=&gt;</span> <span class='int'>15</span><span class='comma'>,</span> <span class='symbol'>:hStdOutput</span> <span class='op'>=&gt;</span> <span class='int'>16</span><span class='comma'>,</span> <span class='symbol'>:hStdError</span> <span class='op'>=&gt;</span> <span class='int'>17</span> <span class='rbrace'>}</span>
+  <span class='kw'>for</span> <span class='id identifier rubyid_sym'>sym</span> <span class='kw'>in</span> <span class='lbracket'>[</span><span class='symbol'>:lpDesktop</span><span class='comma'>,</span> <span class='symbol'>:lpTitle</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id identifier rubyid_lpStartupInfo'>lpStartupInfo</span><span class='lbracket'>[</span><span class='id identifier rubyid_lpStartupInfo_index'>lpStartupInfo_index</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Fiddle</span><span class='op'>::</span><span class='const'>Pointer</span><span class='period'>.</span><span class='id identifier rubyid_to_ptr'>to_ptr</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>for</span> <span class='id identifier rubyid_sym'>sym</span> <span class='kw'>in</span> <span class='lbracket'>[</span><span class='symbol'>:dwX</span><span class='comma'>,</span> <span class='symbol'>:dwY</span><span class='comma'>,</span> <span class='symbol'>:dwXSize</span><span class='comma'>,</span> <span class='symbol'>:dwYSize</span><span class='comma'>,</span> <span class='symbol'>:dwXCountChars</span><span class='comma'>,</span> <span class='symbol'>:dwYCountChars</span><span class='comma'>,</span> <span class='symbol'>:dwFillAttribute</span><span class='comma'>,</span> <span class='symbol'>:dwFlags</span><span class='comma'>,</span> <span class='symbol'>:wShowWindow</span><span class='comma'>,</span> <span class='symbol'>:hStdInput</span><span class='comma'>,</span> <span class='symbol'>:hStdOutput</span><span class='comma'>,</span> <span class='symbol'>:hStdError</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_lpStartupInfo'>lpStartupInfo</span><span class='lbracket'>[</span><span class='id identifier rubyid_lpStartupInfo_index'>lpStartupInfo_index</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_lpStartupInfo'>lpStartupInfo</span> <span class='op'>=</span> <span class='id identifier rubyid_lpStartupInfo'>lpStartupInfo</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LLLLLLLLLLLLSSLLLL</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_lpProcessInformation'>lpProcessInformation</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LLLL</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Win32/Kernel32.html" title="Win32::Kernel32 (module)">Kernel32</a></span></span><span class='period'>.</span><span class='const'>CreateProcess</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpApplicationName</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_lpCommandLine'>lpCommandLine</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpProcessAttributes</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpThreadAttributes</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_bInheritHandles'>bInheritHandles</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:dwCreationFlags</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpEnvironment</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpCurrentDirectory</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_lpStartupInfo'>lpStartupInfo</span><span class='comma'>,</span> <span class='id identifier rubyid_lpProcessInformation'>lpProcessInformation</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_lpProcessInformation'>lpProcessInformation</span> <span class='op'>=</span> <span class='id identifier rubyid_lpProcessInformation'>lpProcessInformation</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LLLL</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='symbol'>:return</span> <span class='op'>=&gt;</span> <span class='lparen'>(</span><span class='id identifier rubyid_r'>r</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>?</span> <span class='kw'>true</span> <span class='op'>:</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='symbol'>:hProcess</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_lpProcessInformation'>lpProcessInformation</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:hThread</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_lpProcessInformation'>lpProcessInformation</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:dwProcessId</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_lpProcessInformation'>lpProcessInformation</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:dwThreadId</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_lpProcessInformation'>lpProcessInformation</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="GetCurrentProcess-class_method">
+  
+    .<strong>GetCurrentProcess</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Retrieves the current process ID.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current process ID.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+239
+240
+241</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 239</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>GetCurrentProcess</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="Win32/Kernel32.html" title="Win32::Kernel32 (module)">Kernel32</a></span></span><span class='period'>.</span><span class='const'>GetCurrentProcess</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="GetExitCodeProcess-class_method">
+  
+    .<strong>GetExitCodeProcess</strong>(args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+243
+244
+245
+246
+247</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 243</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>GetExitCodeProcess</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_lpExitCode'>lpExitCode</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Win32/Kernel32.html" title="Win32::Kernel32 (module)">Kernel32</a></span></span><span class='period'>.</span><span class='const'>GetExitCodeProcess</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:hProcess</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_lpExitCode'>lpExitCode</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='symbol'>:return</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_r'>r</span><span class='comma'>,</span> <span class='symbol'>:lpExitCode</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_lpExitCode'>lpExitCode</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="GetLastError-class_method">
+  
+    .<strong>GetLastError</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Retrieves the last error code from the Windows API.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The last error code.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+193
+194
+195</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 193</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>GetLastError</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="Win32/Kernel32.html" title="Win32::Kernel32 (module)">Kernel32</a></span></span><span class='period'>.</span><span class='const'>GetLastError</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="GetModuleFileName-class_method">
+  
+    .<strong>GetModuleFileName</strong>(args = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+249
+250
+251
+252
+253
+254</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 249</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>GetModuleFileName</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:nSize</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>256</span>
+  <span class='id identifier rubyid_buffer'>buffer</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span> <span class='op'>*</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:nSize</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Win32/Kernel32.html" title="Win32::Kernel32 (module)">Kernel32</a></span></span><span class='period'>.</span><span class='const'>GetModuleFileName</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:hModule</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_buffer'>buffer</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:nSize</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='symbol'>:return</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_r'>r</span><span class='comma'>,</span> <span class='symbol'>:lpFilename</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_buffer'>buffer</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="GetTokenInformation-class_method">
+  
+    .<strong>GetTokenInformation</strong>(args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 286</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>GetTokenInformation</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:TokenInformationClass</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#TokenElevation-constant" title="Win32::TokenElevation (constant)">TokenElevation</a></span></span>
+    <span class='id identifier rubyid_token_information_length'>token_information_length</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#SIZEOF_LONG-constant" title="Win32::SIZEOF_LONG (constant)">SIZEOF_LONG</a></span></span>
+    <span class='id identifier rubyid_token_information'>token_information</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_return_length'>return_length</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Win32/Advapi32.html" title="Win32::Advapi32 (module)">Advapi32</a></span></span><span class='period'>.</span><span class='const'>GetTokenInformation</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:TokenHandle</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:TokenInformationClass</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_token_information'>token_information</span><span class='comma'>,</span> <span class='id identifier rubyid_token_information_length'>token_information_length</span><span class='comma'>,</span> <span class='id identifier rubyid_return_length'>return_length</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:TokenInformationClass</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#TokenElevation-constant" title="Win32::TokenElevation (constant)">TokenElevation</a></span></span>
+    <span class='kw'>return</span> <span class='symbol'>:return</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_r'>r</span><span class='comma'>,</span> <span class='symbol'>:TokenIsElevated</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_token_information'>token_information</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="GetVersionEx-class_method">
+  
+    .<strong>GetVersionEx</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+256
+257
+258
+259
+260
+261</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 256</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>GetVersionEx</span>
+  <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>156</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span> <span class='op'>*</span> <span class='int'>128</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LLLLLa128SSSCC</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Win32/Kernel32.html" title="Win32::Kernel32 (module)">Kernel32</a></span></span><span class='period'>.</span><span class='const'>GetVersionEx</span><span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LLLLLa128SSSCC</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='symbol'>:return</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_r'>r</span><span class='comma'>,</span> <span class='symbol'>:dwOSVersionInfoSize</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:dwMajorVersion</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:dwMinorVersion</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:dwBuildNumber</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:dwPlatformId</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='int'>4</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:szCSDVersion</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='int'>5</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='comma'>,</span> <span class='symbol'>:wServicePackMajor</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='int'>6</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:wServicePackMinor</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='int'>7</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:wSuiteMask</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='int'>8</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:wProductType</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='int'>9</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="isXP?-class_method">
+  
+    .<strong>isXP?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+451
+452
+453</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 451</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='id identifier rubyid_isXP?'>isXP?</span>
+  <span class='kw'>return</span> <span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'><span class='object_link'><a href="#GetVersionEx-class_method" title="Win32.GetVersionEx (method)">GetVersionEx</a></span></span><span class='lbracket'>[</span><span class='symbol'>:dwMajorVersion</span><span class='rbracket'>]</span> <span class='op'>&lt;</span> <span class='int'>6</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="MessageBox-class_method">
+  
+    .<strong>MessageBox</strong>(args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+269
+270
+271
+272</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 269</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>MessageBox</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpCaption</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Lich v</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="top-level-namespace.html#LICH_VERSION-constant" title="LICH_VERSION (constant)">LICH_VERSION</a></span></span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="Win32/User32.html" title="Win32::User32 (module)">User32</a></span></span><span class='period'>.</span><span class='const'>MessageBox</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:hWnd</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpText</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpCaption</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:uType</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="OpenProcessToken-class_method">
+  
+    .<strong>OpenProcessToken</strong>(args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+300
+301
+302
+303
+304</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 300</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>OpenProcessToken</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_token_handle'>token_handle</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Win32/Advapi32.html" title="Win32::Advapi32 (module)">Advapi32</a></span></span><span class='period'>.</span><span class='const'>OpenProcessToken</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:ProcessHandle</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:DesiredAccess</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_token_handle'>token_handle</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='symbol'>:return</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_r'>r</span><span class='comma'>,</span> <span class='symbol'>:TokenHandle</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_token_handle'>token_handle</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="RegCloseKey-class_method">
+  
+    .<strong>RegCloseKey</strong>(args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+378
+379
+380</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 378</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>RegCloseKey</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="Win32/Advapi32.html" title="Win32::Advapi32 (module)">Advapi32</a></span></span><span class='period'>.</span><span class='const'>RegCloseKey</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:hKey</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="RegDeleteValue-class_method">
+  
+    .<strong>RegDeleteValue</strong>(args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+373
+374
+375
+376</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 373</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>RegDeleteValue</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpValueName</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>0</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="Win32/Advapi32.html" title="Win32::Advapi32 (module)">Advapi32</a></span></span><span class='period'>.</span><span class='const'>RegDeleteValue</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:hKey</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpValueName</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="RegOpenKeyEx-class_method">
+  
+    .<strong>RegOpenKeyEx</strong>(args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+306
+307
+308
+309
+310</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 306</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>RegOpenKeyEx</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_phkResult'>phkResult</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Win32/Advapi32.html" title="Win32::Advapi32 (module)">Advapi32</a></span></span><span class='period'>.</span><span class='const'>RegOpenKeyEx</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:hKey</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpSubKey</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:samDesired</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_phkResult'>phkResult</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='symbol'>:return</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_r'>r</span><span class='comma'>,</span> <span class='symbol'>:phkResult</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_phkResult'>phkResult</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="RegQueryValueEx-class_method">
+  
+    .<strong>RegQueryValueEx</strong>(args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 312</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>RegQueryValueEx</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpValueName</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_lpcbData'>lpcbData</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Win32/Advapi32.html" title="Win32::Advapi32 (module)">Advapi32</a></span></span><span class='period'>.</span><span class='const'>RegQueryValueEx</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:hKey</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpValueName</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_lpcbData'>lpcbData</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_r'>r</span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_lpcbData'>lpcbData</span> <span class='op'>=</span> <span class='id identifier rubyid_lpcbData'>lpcbData</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_lpData'>lpData</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="String.html" title="String (class)">String</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_rjust'>rjust</span><span class='lparen'>(</span><span class='id identifier rubyid_lpcbData'>lpcbData</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\x00</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_lpcbData'>lpcbData</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_lpcbData'>lpcbData</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_lpType'>lpType</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Win32/Advapi32.html" title="Win32::Advapi32 (module)">Advapi32</a></span></span><span class='period'>.</span><span class='const'>RegQueryValueEx</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:hKey</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpValueName</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_lpType'>lpType</span><span class='comma'>,</span> <span class='id identifier rubyid_lpData'>lpData</span><span class='comma'>,</span> <span class='id identifier rubyid_lpcbData'>lpcbData</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_lpType'>lpType</span> <span class='op'>=</span> <span class='id identifier rubyid_lpType'>lpType</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_lpcbData'>lpcbData</span> <span class='op'>=</span> <span class='id identifier rubyid_lpcbData'>lpcbData</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#REG_EXPAND_SZ-constant" title="Win32::REG_EXPAND_SZ (constant)">REG_EXPAND_SZ</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#REG_SZ-constant" title="Win32::REG_SZ (constant)">REG_SZ</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#REG_LINK-constant" title="Win32::REG_LINK (constant)">REG_LINK</a></span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_lpType'>lpType</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_lpData'>lpData</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\x00</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_lpType'>lpType</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#REG_MULTI_SZ-constant" title="Win32::REG_MULTI_SZ (constant)">REG_MULTI_SZ</a></span></span>
+      <span class='id identifier rubyid_lpData'>lpData</span> <span class='op'>=</span> <span class='id identifier rubyid_lpData'>lpData</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\x00\x00</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\x00</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_lpType'>lpType</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#REG_DWORD-constant" title="Win32::REG_DWORD (constant)">REG_DWORD</a></span></span>
+      <span class='id identifier rubyid_lpData'>lpData</span> <span class='op'>=</span> <span class='id identifier rubyid_lpData'>lpData</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_lpType'>lpType</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#REG_QWORD-constant" title="Win32::REG_QWORD (constant)">REG_QWORD</a></span></span>
+      <span class='id identifier rubyid_lpData'>lpData</span> <span class='op'>=</span> <span class='id identifier rubyid_lpData'>lpData</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Q</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_lpType'>lpType</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#REG_BINARY-constant" title="Win32::REG_BINARY (constant)">REG_BINARY</a></span></span>
+      <span class='comment'># fixme
+</span>    <span class='kw'>elsif</span> <span class='id identifier rubyid_lpType'>lpType</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#REG_DWORD_BIG_ENDIAN-constant" title="Win32::REG_DWORD_BIG_ENDIAN (constant)">REG_DWORD_BIG_ENDIAN</a></span></span>
+      <span class='comment'># fixme
+</span>    <span class='kw'>else</span>
+      <span class='comment'># fixme
+</span>    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='symbol'>:return</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_r'>r</span><span class='comma'>,</span> <span class='symbol'>:lpType</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_lpType'>lpType</span><span class='comma'>,</span> <span class='symbol'>:lpcbData</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_lpcbData'>lpcbData</span><span class='comma'>,</span> <span class='symbol'>:lpData</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_lpData'>lpData</span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='symbol'>:return</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_r'>r</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="RegSetValueEx-class_method">
+  
+    .<strong>RegSetValueEx</strong>(args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 345</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>RegSetValueEx</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="#REG_EXPAND_SZ-constant" title="Win32::REG_EXPAND_SZ (constant)">REG_EXPAND_SZ</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#REG_SZ-constant" title="Win32::REG_SZ (constant)">REG_SZ</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#REG_LINK-constant" title="Win32::REG_LINK (constant)">REG_LINK</a></span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:dwType</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpData</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="String.html" title="String (class)">String</a></span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_lpData'>lpData</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpData</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+    <span class='id identifier rubyid_lpData'>lpData</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\x00</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_cbData'>cbData</span> <span class='op'>=</span> <span class='id identifier rubyid_lpData'>lpData</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+  <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:dwType</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#REG_MULTI_SZ-constant" title="Win32::REG_MULTI_SZ (constant)">REG_MULTI_SZ</a></span></span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpData</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_lpData'>lpData</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpData</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\x00</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_concat'>concat</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\x00\x00</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_cbData'>cbData</span> <span class='op'>=</span> <span class='id identifier rubyid_lpData'>lpData</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+  <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:dwType</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#REG_DWORD-constant" title="Win32::REG_DWORD (constant)">REG_DWORD</a></span></span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpData</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Integer</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_lpData'>lpData</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpData</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>L</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_cbData'>cbData</span> <span class='op'>=</span> <span class='int'>4</span>
+  <span class='kw'>elsif</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:dwType</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#REG_QWORD-constant" title="Win32::REG_QWORD (constant)">REG_QWORD</a></span></span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpData</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Integer</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_lpData'>lpData</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpData</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Q</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_cbData'>cbData</span> <span class='op'>=</span> <span class='int'>8</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:dwType</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#REG_BINARY-constant" title="Win32::REG_BINARY (constant)">REG_BINARY</a></span></span>
+    <span class='comment'># fixme
+</span>    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:dwType</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="#REG_DWORD_BIG_ENDIAN-constant" title="Win32::REG_DWORD_BIG_ENDIAN (constant)">REG_DWORD_BIG_ENDIAN</a></span></span>
+    <span class='comment'># fixme
+</span>    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>else</span>
+    <span class='comment'># fixme
+</span>    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpValueName</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>0</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="Win32/Advapi32.html" title="Win32::Advapi32 (module)">Advapi32</a></span></span><span class='period'>.</span><span class='const'>RegSetValueEx</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:hKey</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpValueName</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:dwType</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_lpData'>lpData</span><span class='comma'>,</span> <span class='id identifier rubyid_cbData'>cbData</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ShellExecute-class_method">
+  
+    .<strong>ShellExecute</strong>(args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+413
+414
+415
+416
+417
+418
+419</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 413</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>ShellExecute</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpOperation</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpParameters</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpDirectory</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>0</span>
+  <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:nShowCmd</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>1</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="Win32/Shell32.html" title="Win32::Shell32 (module)">Shell32</a></span></span><span class='period'>.</span><span class='const'>ShellExecute</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:hwnd</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpOperation</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpFile</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpParameters</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:lpDirectory</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='symbol'>:nShowCmd</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ShellExecuteEx-class_method">
+  
+    .<strong>ShellExecuteEx</strong>(args)  &#x21d2; <tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Executes a shell command with extended options.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>args</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Options for the shell execution.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Returns execution result and process information.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'init.rb', line 392</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Win32 (module)">Win32</a></span></span><span class='period'>.</span><span class='const'>ShellExecuteEx</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='comment'>#         struct = [ (SIZEOF_LONG * 15), 0, 0, 0, 0, 0, 0, SW_SHOWNORMAL, 0, 0, 0, 0, 0, 0, 0 ]
+</span>  <span class='id identifier rubyid_struct'>struct</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#SIZEOF_LONG-constant" title="Win32::SIZEOF_LONG (constant)">SIZEOF_LONG</a></span></span> <span class='op'>*</span> <span class='int'>15</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#SW_SHOW-constant" title="Win32::SW_SHOW (constant)">SW_SHOW</a></span></span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_struct_index'>struct_index</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:cbSize</span> <span class='op'>=&gt;</span> <span class='int'>0</span><span class='comma'>,</span> <span class='symbol'>:fMask</span> <span class='op'>=&gt;</span> <span class='int'>1</span><span class='comma'>,</span> <span class='symbol'>:hwnd</span> <span class='op'>=&gt;</span> <span class='int'>2</span><span class='comma'>,</span> <span class='symbol'>:lpVerb</span> <span class='op'>=&gt;</span> <span class='int'>3</span><span class='comma'>,</span> <span class='symbol'>:lpFile</span> <span class='op'>=&gt;</span> <span class='int'>4</span><span class='comma'>,</span> <span class='symbol'>:lpParameters</span> <span class='op'>=&gt;</span> <span class='int'>5</span><span class='comma'>,</span> <span class='symbol'>:lpDirectory</span> <span class='op'>=&gt;</span> <span class='int'>6</span><span class='comma'>,</span> <span class='symbol'>:nShow</span> <span class='op'>=&gt;</span> <span class='int'>7</span><span class='comma'>,</span> <span class='symbol'>:hInstApp</span> <span class='op'>=&gt;</span> <span class='int'>8</span><span class='comma'>,</span> <span class='symbol'>:lpIDList</span> <span class='op'>=&gt;</span> <span class='int'>9</span><span class='comma'>,</span> <span class='symbol'>:lpClass</span> <span class='op'>=&gt;</span> <span class='int'>10</span><span class='comma'>,</span> <span class='symbol'>:hkeyClass</span> <span class='op'>=&gt;</span> <span class='int'>11</span><span class='comma'>,</span> <span class='symbol'>:dwHotKey</span> <span class='op'>=&gt;</span> <span class='int'>12</span><span class='comma'>,</span> <span class='symbol'>:hIcon</span> <span class='op'>=&gt;</span> <span class='int'>13</span><span class='comma'>,</span> <span class='symbol'>:hMonitor</span> <span class='op'>=&gt;</span> <span class='int'>13</span><span class='comma'>,</span> <span class='symbol'>:hProcess</span> <span class='op'>=&gt;</span> <span class='int'>14</span> <span class='rbrace'>}</span>
+  <span class='kw'>for</span> <span class='id identifier rubyid_sym'>sym</span> <span class='kw'>in</span> <span class='lbracket'>[</span><span class='symbol'>:lpVerb</span><span class='comma'>,</span> <span class='symbol'>:lpFile</span><span class='comma'>,</span> <span class='symbol'>:lpParameters</span><span class='comma'>,</span> <span class='symbol'>:lpDirectory</span><span class='comma'>,</span> <span class='symbol'>:lpIDList</span><span class='comma'>,</span> <span class='symbol'>:lpClass</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\0</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id identifier rubyid_struct'>struct</span><span class='lbracket'>[</span><span class='id identifier rubyid_struct_index'>struct_index</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Fiddle</span><span class='op'>::</span><span class='const'>Pointer</span><span class='period'>.</span><span class='id identifier rubyid_to_ptr'>to_ptr</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>for</span> <span class='id identifier rubyid_sym'>sym</span> <span class='kw'>in</span> <span class='lbracket'>[</span><span class='symbol'>:fMask</span><span class='comma'>,</span> <span class='symbol'>:hwnd</span><span class='comma'>,</span> <span class='symbol'>:nShow</span><span class='comma'>,</span> <span class='symbol'>:hkeyClass</span><span class='comma'>,</span> <span class='symbol'>:dwHotKey</span><span class='comma'>,</span> <span class='symbol'>:hIcon</span><span class='comma'>,</span> <span class='symbol'>:hMonitor</span><span class='comma'>,</span> <span class='symbol'>:hProcess</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_struct'>struct</span><span class='lbracket'>[</span><span class='id identifier rubyid_struct_index'>struct_index</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='id identifier rubyid_sym'>sym</span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_struct'>struct</span> <span class='op'>=</span> <span class='id identifier rubyid_struct'>struct</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LLLLLLLLLLLLLLL</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Win32/Shell32.html" title="Win32::Shell32 (module)">Shell32</a></span></span><span class='period'>.</span><span class='const'>ShellExecuteEx</span><span class='lparen'>(</span><span class='id identifier rubyid_struct'>struct</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_struct'>struct</span> <span class='op'>=</span> <span class='id identifier rubyid_struct'>struct</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>LLLLLLLLLLLLLLL</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='symbol'>:return</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_r'>r</span><span class='comma'>,</span> <span class='symbol'>:hProcess</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_struct'>struct</span><span class='lbracket'>[</span><span class='id identifier rubyid_struct_index'>struct_index</span><span class='lbracket'>[</span><span class='symbol'>:hProcess</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:hInstApp</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_struct'>struct</span><span class='lbracket'>[</span><span class='id identifier rubyid_struct_index'>struct_index</span><span class='lbracket'>[</span><span class='symbol'>:hInstApp</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Nov  7 02:18:48 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.1.7).
+</div>
+
+    </div>
+  </body>
+</html>

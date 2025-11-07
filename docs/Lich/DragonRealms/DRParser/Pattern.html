@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Lich::DragonRealms::DRParser::Pattern
+  
+    &mdash; Lich-5 Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Lich::DragonRealms::DRParser::Pattern";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Lich.html" title="Lich (module)">Lich</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../DragonRealms.html" title="Lich::DragonRealms (module)">DragonRealms</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span>
+     &raquo; 
+    <span class="title">Pattern</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Lich::DragonRealms::DRParser::Pattern
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>drparser.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ExpColumns-constant" class="">ExpColumns =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for experience columns
+This pattern matches skill experience data in a specific format.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?:\s*(?&lt;skill&gt;[a-zA-Z\s]+)\b:\s*(?&lt;rank&gt;\d+)\s+(?&lt;percent&gt;\d+)%\s+(?&lt;rate&gt;[a-zA-Z\s]+)\b)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="BriefExpOn-constant" class="">BriefExpOn =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for brief experience on
+This pattern matches the output when experience is gained.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>&lt;component id=&#39;exp .*?&lt;d cmd=&#39;skill (?&lt;skill&gt;[a-zA-Z\s]+)&#39;.*:\s+(?&lt;rank&gt;\d+)\s+(?&lt;percent&gt;\d+)%\s*\[\s?(?&lt;rate&gt;\d+)\/34\].*?&lt;\/component&gt;</span><span class='regexp_end'>}</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="BriefExpOff-constant" class="">BriefExpOff =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for brief experience off
+This pattern matches the output when experience is not gained.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>&lt;component id=&#39;exp .*?\b(?&lt;skill&gt;[a-zA-Z\s]+)\b:\s+(?&lt;rank&gt;\d+)\s+(?&lt;percent&gt;\d+)%\s+\b(?&lt;rate&gt;[a-zA-Z\s]+)\b.*?&lt;\/component&gt;</span><span class='regexp_end'>}</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="NameRaceGuild-constant" class="">NameRaceGuild =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for name, race, and guild
+This pattern matches the player&#39;s name, race, and guild information.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^Name:\s+\b(?&lt;name&gt;.+)\b\s+Race:\s+\b(?&lt;race&gt;.+)\b\s+Guild:\s+\b(?&lt;guild&gt;.+)\b\s+</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="GenderAgeCircle-constant" class="">GenderAgeCircle =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for gender, age, and circle
+This pattern matches the player&#39;s gender, age, and circle information.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^Gender:\s+\b(?&lt;gender&gt;.+)\b\s+Age:\s+\b(?&lt;age&gt;.+)\b\s+Circle:\s+\b(?&lt;circle&gt;.+)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="StatValue-constant" class="">StatValue =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for stat values
+This pattern matches individual stat values and their corresponding numbers.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?&lt;stat&gt;Strength|Agility|Discipline|Intelligence|Reflex|Charisma|Wisdom|Stamina|Favors|TDPs)\s+:\s+(?&lt;value&gt;\d+)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="TDPValue-constant" class="">TDPValue =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for TDP values
+This pattern matches the total TDPs available to the player.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You have (\d+) TDPs\.</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="EncumbranceValue-constant" class="">EncumbranceValue =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for encumbrance values
+This pattern matches the player&#39;s current encumbrance status.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\s*Encumbrance\s+:\s+(?&lt;encumbrance&gt;[\w\s&#39;?!]+)$</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="LuckValue-constant" class="">LuckValue =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for luck values
+This pattern matches the player&#39;s luck status.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\s*Luck\s+:\s+.*\((?&lt;luck&gt;[-\d]+)\/3\)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="BalanceValue-constant" class="">BalanceValue =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for balance values
+This pattern matches the player&#39;s balance status.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(?:You are|\[You&#39;re) (?&lt;balance&gt;</span><span class='embexpr_beg'>#{</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../DragonRealms.html#DR_BALANCE_VALUES-constant" title="Lich::DragonRealms::DR_BALANCE_VALUES (constant)">DR_BALANCE_VALUES</a></span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>) balanced?</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="ExpClearMindstate-constant" class="">ExpClearMindstate =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for clearing mindstate experience
+This pattern matches the output when a skill&#39;s mindstate is cleared.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>&lt;component id=&#39;exp (?&lt;skill&gt;[a-zA-Z\s]+)&#39;&gt;&lt;\/component&gt;</span><span class='regexp_end'>}</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="RoomPlayers-constant" class="">RoomPlayers =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for room players
+This pattern matches the output listing players in the current room.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>\&#39;room players\&#39;&gt;Also here: (.*)\.&lt;/component&gt;</span><span class='regexp_end'>}</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="RoomPlayersEmpty-constant" class="">RoomPlayersEmpty =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for empty room players
+This pattern matches the output when no players are in the room.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>\&#39;room players\&#39;&gt;&lt;/component&gt;</span><span class='regexp_end'>}</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="RoomObjs-constant" class="">RoomObjs =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for room objects
+This pattern matches the output listing objects in the current room.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>\&#39;room objs\&#39;&gt;(.*)&lt;/component&gt;</span><span class='regexp_end'>}</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="RoomObjsEmpty-constant" class="">RoomObjsEmpty =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for empty room objects
+This pattern matches the output when no objects are in the room.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>\&#39;room objs\&#39;&gt;&lt;/component&gt;</span><span class='regexp_end'>}</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="GroupMembers-constant" class="">GroupMembers =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for group members
+This pattern matches the output listing members of the player&#39;s group.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>&lt;pushStream id=&quot;group&quot;/&gt;  (\w+):</span><span class='regexp_end'>}</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="GroupMembersEmpty-constant" class="">GroupMembersEmpty =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for empty group members
+This pattern matches the output when no group members are present.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>%r{</span><span class='tstring_content'>&lt;pushStream id=&quot;group&quot;/&gt;Members of your group:</span><span class='regexp_end'>}</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="ExpModsStart-constant" class="">ExpModsStart =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for the start of experience modifiers
+This pattern matches the output indicating the start of skill modifiers.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(&lt;.*?\/&gt;)?The following skills are currently under the influence of a modifier</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="KnownSpellsStart-constant" class="">KnownSpellsStart =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for known spells
+This pattern matches the output indicating the spells the player has learned.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^You recall the spells you have learned</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="BarbarianAbilitiesStart-constant" class="">BarbarianAbilitiesStart =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for barbarian abilities
+This pattern matches the output listing abilities known by barbarians.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^You know the (Berserks:)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="ThiefKhriStart-constant" class="">ThiefKhriStart =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for thief khri
+This pattern matches the output listing khri known by thieves.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^From the Subtlety tree, you know the following khri:</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="SpellBookFormat-constant" class="">SpellBookFormat =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for spellbook format
+This pattern matches the output indicating the format of the spellbook.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^You will .* (?&lt;format&gt;column-formatted|non-column) output for the SPELLS verb</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="PlayedAccount-constant" class="">PlayedAccount =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for played account
+This pattern matches the output showing account information.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(?:&lt;.*?\/&gt;)?Account Info for (?&lt;account&gt;.+):</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="PlayedSubscription-constant" class="">PlayedSubscription =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for played subscription
+This pattern matches the output showing the account subscription status.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Current Account Status: (?&lt;subscription&gt;F2P|Basic|Premium|Platinum)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="LastLogoff-constant" class="">LastLogoff =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for last logoff
+This pattern matches the output showing the last logoff time.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\s+Logoff :  (?&lt;weekday&gt;[A-Z][a-z]{2}) (?&lt;month&gt;[A-Z][a-z]{2}) (?&lt;day&gt;[\s\d]{2}) (?&lt;hour&gt;\d{2}):(?&lt;minute&gt;\d{2}):(?&lt;second&gt;\d{2}) ET (?&lt;year&gt;\d{4})</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="RoomIDOff-constant" class="">RoomIDOff =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Regular expression pattern for room ID off
+This pattern matches the output indicating room IDs are turned off.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^You will no longer see room IDs when LOOKing in the game and room windows\.</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Nov  7 02:18:50 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.1.7).
+</div>
+
+    </div>
+  </body>
+</html>
