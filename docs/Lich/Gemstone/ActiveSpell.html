@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Lich::Gemstone::ActiveSpell
+  
+    &mdash; Lich-5 Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Lich::Gemstone::ActiveSpell";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (A)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span>
+     &raquo; 
+    <span class="title">ActiveSpell</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Lich::Gemstone::ActiveSpell
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>activespell.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Provides functionality for managing active spells and their durations.
+This module addresses spell timing discrepancies and updates spell durations.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Using ActiveSpell</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'>ActiveSpell</span><span class='period'>.</span><span class='id identifier rubyid_update_spell_durations'><span class='object_link'><a href="#update_spell_durations-class_method" title="Lich::Gemstone::ActiveSpell.update_spell_durations (method)">update_spell_durations</a></span></span></code></pre>
+    
+  </div>
+
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#block_until_update_requested-class_method" title="block_until_update_requested (class method)">.<strong>block_until_update_requested</strong>  &#x21d2; Time </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Blocks execution until an update request is made.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_spell_info-class_method" title="get_spell_info (class method)">.<strong>get_spell_info</strong>(spell_check = XMLData.active_spells)  &#x21d2; Array </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Retrieves information about active spells and their durations.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#queue-class_method" title="queue (class method)">.<strong>queue</strong>  &#x21d2; Queue </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Provides a thread-safe queue for managing update requests.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#request_update-class_method" title="request_update (class method)">.<strong>request_update</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Requests an update for spell durations.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#show_duration_change-class_method" title="show_duration_change (class method)">.<strong>show_duration_change</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Displays changes in active spell durations.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#show_durations%3F-class_method" title="show_durations? (class method)">.<strong>show_durations?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if spell durations should be displayed.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_spell_durations-class_method" title="update_spell_durations (class method)">.<strong>update_spell_durations</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Updates the durations of active spells based on the latest information.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#watch!-class_method" title="watch! (class method)">.<strong>watch!</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Starts a thread that watches for update requests and processes them.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="block_until_update_requested-class_method">
+  
+    .<strong>block_until_update_requested</strong>  &#x21d2; <tt>Time</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Blocks execution until an update request is made.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Blocking until an update is requested</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::ActiveSpell (module)">ActiveSpell</a></span></span><span class='period'>.</span><span class='id identifier rubyid_block_until_update_requested'>block_until_update_requested</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Time</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The time when the update was requested</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+205
+206
+207
+208
+209</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'activespell.rb', line 205</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_block_until_update_requested'>block_until_update_requested</span>
+  <span class='id identifier rubyid_event'>event</span> <span class='op'>=</span> <span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+  <span class='id identifier rubyid_queue'>queue</span><span class='period'>.</span><span class='id identifier rubyid_clear'>clear</span>
+  <span class='id identifier rubyid_event'>event</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_spell_info-class_method">
+  
+    .<strong>get_spell_info</strong>(spell_check = XMLData.active_spells)  &#x21d2; <tt>Array</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Retrieves information about active spells and their durations.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Getting spell information</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_names'>names</span><span class='comma'>,</span> <span class='id identifier rubyid_durations'>durations</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::ActiveSpell (module)">ActiveSpell</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_spell_info'>get_spell_info</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>spell_check</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>XMLData.active_spells</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>A hash of active spells to check (default is XMLData.active_spells)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>An array containing spell names and their durations</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'activespell.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_spell_info'>get_spell_info</span><span class='lparen'>(</span><span class='id identifier rubyid_spell_check'>spell_check</span> <span class='op'>=</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_active_spells'>active_spells</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>spell update requested\r\n</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='gvar'>$infomon_debug</span>
+  <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span> <span class='op'>=</span> <span class='id identifier rubyid_spell_check'>spell_check</span>
+  <span class='id identifier rubyid_spell_update_names'>spell_update_names</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_makeychange'>makeychange</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid__v'>_v</span><span class='op'>|</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_k'>k</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?:Mage Armor|520) - </span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_makeychange'>makeychange</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_k'>k</span>
+      <span class='id identifier rubyid_spell_update_names'>spell_update_names</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Mage Armor</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+      <span class='kw'>next</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?:CoS|712) - </span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_makeychange'>makeychange</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_k'>k</span>
+      <span class='id identifier rubyid_spell_update_names'>spell_update_names</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Cloak of Shadows</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+      <span class='kw'>next</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Enh\.</span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_makeychange'>makeychange</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_k'>k</span>
+      <span class='kw'>case</span> <span class='id identifier rubyid_k'>k</span>
+      <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Enh\. Strength</span><span class='regexp_end'>/</span></span>
+        <span class='id identifier rubyid_spell_update_names'>spell_update_names</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Surge of Strength</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+      <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Enh\. (?:Dexterity|Agility)</span><span class='regexp_end'>/</span></span>
+        <span class='id identifier rubyid_spell_update_names'>spell_update_names</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Burst of Swiftness</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+      <span class='kw'>next</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Empowered</span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_makeychange'>makeychange</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_k'>k</span>
+      <span class='id identifier rubyid_spell_update_names'>spell_update_names</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Shout</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+      <span class='kw'>next</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Multi-Strike</span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_makeychange'>makeychange</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_k'>k</span>
+      <span class='id identifier rubyid_spell_update_names'>spell_update_names</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MStrike Cooldown</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+      <span class='kw'>next</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Next Bounty Cooldown</span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_makeychange'>makeychange</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_k'>k</span>
+      <span class='id identifier rubyid_spell_update_names'>spell_update_names</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Next Bounty</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+      <span class='kw'>next</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?:Resist Nature|620) (?:- (?:Heat|Cold) \(\d\d%|- Steam \(\d\d|- Lightning|\(\d\d%\))</span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_makeychange'>makeychange</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_k'>k</span>
+      <span class='id identifier rubyid_spell_update_names'>spell_update_names</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Resist Nature</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+      <span class='kw'>next</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_spell_update_names'>spell_update_names</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_k'>k</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_makeychange'>makeychange</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_changekey'>changekey</span><span class='op'>|</span>
+    <span class='kw'>next</span> <span class='kw'>unless</span> <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_changekey'>changekey</span><span class='rparen'>)</span>
+
+    <span class='kw'>case</span> <span class='id identifier rubyid_changekey'>changekey</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?:Mage Armor|520) - </span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Mage Armor</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='id identifier rubyid_changekey'>changekey</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?:CoS|712) - </span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Cloak of Shadows</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='id identifier rubyid_changekey'>changekey</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Enh\. Strength</span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Surge of Strength</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='id identifier rubyid_changekey'>changekey</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Enh\. (?:Dexterity|Agility)</span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Burst of Swiftness</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='id identifier rubyid_changekey'>changekey</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Empowered</span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Shout</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='id identifier rubyid_changekey'>changekey</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Multi-Strike</span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MStrike Cooldown</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='id identifier rubyid_changekey'>changekey</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Next Bounty Cooldown</span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Next Bounty</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='id identifier rubyid_changekey'>changekey</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Next Group Bounty Cooldown</span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Next Group Bounty</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='id identifier rubyid_changekey'>changekey</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?:Resist Nature|620) (?:- (?:Heat|Cold) \(\d\d%|- Steam \(\d\d|- Lightning|\(\d\d%\))</span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Resist Nature</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='id identifier rubyid_changekey'>changekey</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='lbracket'>[</span><span class='id identifier rubyid_spell_update_names'>spell_update_names</span><span class='comma'>,</span> <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="queue-class_method">
+  
+    .<strong>queue</strong>  &#x21d2; <tt>Queue</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Provides a thread-safe queue for managing update requests.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Accessing the update queue</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::ActiveSpell (module)">ActiveSpell</a></span></span><span class='period'>.</span><span class='id identifier rubyid_queue'>queue</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Queue</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The queue for update requests</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+197
+198
+199</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'activespell.rb', line 197</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_queue'>queue</span>
+  <span class='ivar'>@queue</span> <span class='op'>||=</span> <span class='const'>Queue</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="request_update-class_method">
+  
+    .<strong>request_update</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Requests an update for spell durations.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Requesting an update</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::ActiveSpell (module)">ActiveSpell</a></span></span><span class='period'>.</span><span class='id identifier rubyid_request_update'>request_update</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+189
+190
+191</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'activespell.rb', line 189</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_request_update'>request_update</span>
+  <span class='id identifier rubyid_queue'>queue</span> <span class='op'>&lt;&lt;</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="show_duration_change-class_method">
+  
+    .<strong>show_duration_change</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Displays changes in active spell durations.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Showing duration changes</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::ActiveSpell (module)">ActiveSpell</a></span></span><span class='period'>.</span><span class='id identifier rubyid_show_duration_change'>show_duration_change</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'activespell.rb', line 105</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_show_duration_change'>show_duration_change</span>
+  <span class='id identifier rubyid_active_durations'>active_durations</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_group_effects'>group_effects</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>307</span><span class='comma'>,</span> <span class='int'>310</span><span class='comma'>,</span> <span class='int'>1605</span><span class='comma'>,</span> <span class='int'>1609</span><span class='comma'>,</span> <span class='int'>1618</span><span class='comma'>,</span> <span class='int'>1608</span><span class='rbracket'>]</span>
+  <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="Effects.html" title="Lich::Gemstone::Effects (module)">Effects</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Effects.html#Spells-constant" title="Lich::Gemstone::Effects::Spells (constant)">Spells</a></span></span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Effects.html" title="Lich::Gemstone::Effects (module)">Effects</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Effects.html#Cooldowns-constant" title="Lich::Gemstone::Effects::Cooldowns (constant)">Cooldowns</a></span></span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Effects.html" title="Lich::Gemstone::Effects (module)">Effects</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Effects.html#Buffs-constant" title="Lich::Gemstone::Effects::Buffs (constant)">Buffs</a></span></span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Effects.html" title="Lich::Gemstone::Effects (module)">Effects</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Effects.html#Debuffs-constant" title="Lich::Gemstone::Effects::Debuffs (constant)">Debuffs</a></span></span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_effect_type'>effect_type</span><span class='op'>|</span>
+    <span class='id identifier rubyid_active_durations'>active_durations</span> <span class='op'>+=</span> <span class='id identifier rubyid_effect_type'>effect_type</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
+    <span class='id identifier rubyid_effect_type'>effect_type</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_effect'>effect</span><span class='comma'>,</span> <span class='id identifier rubyid_end_time'>end_time</span><span class='op'>|</span>
+      <span class='kw'>next</span> <span class='kw'>unless</span> <span class='id identifier rubyid_effect'>effect</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_effect'>effect</span><span class='comma'>,</span> <span class='id identifier rubyid_end_time'>end_time</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::ActiveSpell (module)">ActiveSpell</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_spell_info'><span class='object_link'><a href="#get_spell_info-class_method" title="Lich::Gemstone::ActiveSpell.get_spell_info (method)">get_spell_info</a></span></span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='id identifier rubyid_effect'>effect</span><span class='op'>=&gt;</span><span class='id identifier rubyid_end_time'>end_time</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_effect'>effect</span> <span class='op'>=</span> <span class='id identifier rubyid_effect'>effect</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span>
+      <span class='id identifier rubyid_end_time'>end_time</span> <span class='op'>=</span> <span class='id identifier rubyid_end_time'>end_time</span><span class='lbracket'>[</span><span class='id identifier rubyid_effect'>effect</span><span class='rbracket'>]</span>
+      <span class='kw'>next</span> <span class='kw'>unless</span> <span class='lparen'>(</span><span class='id identifier rubyid_spell'>spell</span> <span class='op'>=</span> <span class='const'>Spell</span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='op'>|</span> <span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='period'>.</span><span class='id identifier rubyid_num'>num</span> <span class='op'>==</span> <span class='id identifier rubyid_effect'>effect</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>||</span> <span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_effect'>effect</span><span class='embexpr_end'>}</span><span class='tstring_content'>$</span><span class='regexp_end'>/</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_effect_type'>effect_type</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid__v'>_v</span><span class='op'>|</span> <span class='id identifier rubyid_k'>k</span> <span class='op'>==</span> <span class='id identifier rubyid_spell'>spell</span><span class='period'>.</span><span class='id identifier rubyid_num'>num</span> <span class='rbrace'>}</span>
+        <span class='id identifier rubyid_effect_key'>effect_key</span> <span class='op'>=</span> <span class='id identifier rubyid_spell'>spell</span><span class='period'>.</span><span class='id identifier rubyid_num'>num</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_effect_key'>effect_key</span> <span class='op'>=</span> <span class='id identifier rubyid_spell'>spell</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+      <span class='kw'>end</span>
+      <span class='id identifier rubyid_time_left'>time_left</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_end_time'>end_time</span> <span class='op'>-</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='rparen'>)</span> <span class='op'>/</span> <span class='int'>60</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
+      <span class='id identifier rubyid_duration'>duration</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_end_time'>end_time</span> <span class='op'>-</span> <span class='lparen'>(</span><span class='ivar'>@current_durations</span><span class='lbracket'>[</span><span class='id identifier rubyid_effect_key'>effect_key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>?</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>:</span> <span class='ivar'>@current_durations</span><span class='lbracket'>[</span><span class='id identifier rubyid_effect_key'>effect_key</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>/</span> <span class='int'>60</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
+      <span class='kw'>if</span> <span class='ivar'>@durations_first_pass_complete</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='ivar'>@current_durations</span><span class='lbracket'>[</span><span class='id identifier rubyid_effect_key'>effect_key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='id identifier rubyid_end_time'>end_time</span> <span class='op'>&gt;</span> <span class='ivar'>@current_durations</span><span class='lbracket'>[</span><span class='id identifier rubyid_effect_key'>effect_key</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_duration'>duration</span> <span class='op'>&gt;</span> <span class='lparen'>(</span><span class='float'>0.1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_group_effects'>group_effects</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_spell'>spell</span><span class='period'>.</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_spell'>spell</span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[ </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_spell'>spell</span><span class='period'>.</span><span class='id identifier rubyid_num'>num</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_spell'>spell</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>: +</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_duration'>duration</span><span class='period'>.</span><span class='id identifier rubyid_as_time'>as_time</span><span class='embexpr_end'>}</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_time_left'>time_left</span><span class='period'>.</span><span class='id identifier rubyid_as_time'>as_time</span><span class='embexpr_end'>}</span><span class='tstring_content'> ]</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>end</span>
+      <span class='ivar'>@current_durations</span><span class='lbracket'>[</span><span class='id identifier rubyid_effect_key'>effect_key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_end_time'>end_time</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='lparen'>(</span><span class='ivar'>@current_durations</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span> <span class='op'>-</span> <span class='id identifier rubyid_active_durations'>active_durations</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_spell'>spell</span><span class='op'>|</span>
+    <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[ </span><span class='embexpr_beg'>#{</span><span class='const'>Spell</span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='op'>|</span> <span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='period'>.</span><span class='id identifier rubyid_num'>num</span> <span class='op'>==</span> <span class='id identifier rubyid_spell'>spell</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>||</span> <span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_spell'>spell</span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_num'>num</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='const'>Spell</span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='op'>|</span> <span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='period'>.</span><span class='id identifier rubyid_num'>num</span> <span class='op'>==</span> <span class='id identifier rubyid_spell'>spell</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>||</span> <span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_spell'>spell</span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>: Ended ]</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='ivar'>@durations_first_pass_complete</span>
+    <span class='ivar'>@current_durations</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_spell'>spell</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@durations_first_pass_complete</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="show_durations?-class_method">
+  
+    .<strong>show_durations?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if spell durations should be displayed.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Checking if durations should be shown</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::ActiveSpell (module)">ActiveSpell</a></span></span><span class='period'>.</span><span class='id identifier rubyid_show_durations?'>show_durations?</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>true if durations should be shown, false otherwise</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'activespell.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_show_durations?'>show_durations?</span>
+  <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_bool'><span class='object_link'><a href="Infomon.html#get_bool-class_method" title="Lich::Gemstone::Infomon.get_bool (method)">get_bool</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>infomon.show_durations</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_spell_durations-class_method">
+  
+    .<strong>update_spell_durations</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Updates the durations of active spells based on the latest information.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Updating spell durations</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::ActiveSpell (module)">ActiveSpell</a></span></span><span class='period'>.</span><span class='id identifier rubyid_update_spell_durations'>update_spell_durations</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>StandardError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if an error occurs during the update</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'activespell.rb', line 141</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update_spell_durations'>update_spell_durations</span>
+  <span class='kw'>begin</span>
+    <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[infomon] updating spell durations...</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='gvar'>$infomon_debug</span>
+    <span class='id identifier rubyid_spell_update_names'>spell_update_names</span><span class='comma'>,</span> <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::ActiveSpell (module)">ActiveSpell</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_spell_info'><span class='object_link'><a href="#get_spell_info-class_method" title="Lich::Gemstone::ActiveSpell.get_spell_info (method)">get_spell_info</a></span></span>
+    <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_spell_update_names'>spell_update_names</span><span class='embexpr_end'>}</span><span class='tstring_content'>\r\n</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='gvar'>$infomon_debug</span>
+    <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='embexpr_end'>}</span><span class='tstring_content'>\r\n</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='gvar'>$infomon_debug</span>
+
+    <span class='id identifier rubyid_existing_spell_names'>existing_spell_names</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_active_spells'>active_spells</span> <span class='op'>=</span> <span class='const'>Spell</span><span class='period'>.</span><span class='id identifier rubyid_active'>active</span>
+    <span class='id identifier rubyid_ignore_spells'>ignore_spells</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Berserk</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Council Task</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Council Punishment</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Briar Betrayer</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Rapid Fire Penalty</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_active_spells'>active_spells</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='op'>|</span> <span class='id identifier rubyid_existing_spell_names'>existing_spell_names</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_inactive_spells'>inactive_spells</span> <span class='op'>=</span> <span class='id identifier rubyid_existing_spell_names'>existing_spell_names</span> <span class='op'>-</span> <span class='id identifier rubyid_ignore_spells'>ignore_spells</span> <span class='op'>-</span> <span class='id identifier rubyid_spell_update_names'>spell_update_names</span>
+    <span class='id identifier rubyid_inactive_spells'>inactive_spells</span><span class='period'>.</span><span class='id identifier rubyid_reject!'>reject!</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='op'>|</span>
+      <span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^Aspect of the \w+ Cooldown|^[\w\s]+ Recovery</span><span class='regexp_end'>/</span></span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_inactive_spells'>inactive_spells</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='op'>|</span>
+      <span class='id identifier rubyid_badspell'>badspell</span> <span class='op'>=</span> <span class='const'>Spell</span><span class='lbracket'>[</span><span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_num'>num</span>
+      <span class='const'>Spell</span><span class='lbracket'>[</span><span class='id identifier rubyid_badspell'>badspell</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_putdown'>putdown</span> <span class='kw'>if</span> <span class='const'>Spell</span><span class='lbracket'>[</span><span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_active?'>active?</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_spell_update_durations'>spell_update_durations</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_spell'>spell</span> <span class='op'>=</span> <span class='const'>Spell</span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='op'>|</span> <span class='lparen'>(</span><span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>==</span> <span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='lparen'>(</span><span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='period'>.</span><span class='id identifier rubyid_num'>num</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_spell'>spell</span><span class='period'>.</span><span class='id identifier rubyid_circle'>circle</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>==</span> <span class='int'>10</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='kw'>not</span> <span class='id identifier rubyid_active_spells'>active_spells</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='op'>|</span> <span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span><span class='period'>.</span><span class='id identifier rubyid_circle'>circle</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>==</span> <span class='int'>10</span> <span class='rbrace'>}</span>
+          <span class='const'><span class='object_link'><a href="Spellsong.html" title="Lich::Gemstone::Spellsong (class)">Spellsong</a></span></span><span class='period'>.</span><span class='id identifier rubyid_renewed'><span class='object_link'><a href="Spellsong.html#renewed-class_method" title="Lich::Gemstone::Spellsong.renewed (method)">renewed</a></span></span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_spell'>spell</span><span class='period'>.</span><span class='id identifier rubyid_active'>active</span> <span class='op'>=</span> <span class='kw'>true</span>
+        <span class='id identifier rubyid_spell'>spell</span><span class='period'>.</span><span class='id identifier rubyid_timeleft'>timeleft</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_v'>v</span> <span class='op'>-</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>&gt;</span> <span class='int'>300</span> <span class='op'>*</span> <span class='int'>60</span>
+                           <span class='float'>600.01</span>
+                         <span class='kw'>else</span>
+                           <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span> <span class='op'>-</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='rparen'>)</span> <span class='op'>/</span> <span class='int'>60</span><span class='rparen'>)</span>
+                         <span class='kw'>end</span>
+      <span class='kw'>elsif</span> <span class='gvar'>$infomon_debug</span>
+        <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no spell matches </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_show_duration_change'>show_duration_change</span> <span class='kw'>if</span> <span class='id identifier rubyid_show_durations?'>show_durations?</span>
+  <span class='kw'>rescue</span> <span class='const'>StandardError</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'><span class='object_link'><a href="../../top-level-namespace.html#e-instance_method" title="#e (method)">e</a></span></span>
+    <span class='kw'>if</span> <span class='gvar'>$infomon_debug</span>
+      <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Error in spell durations thread</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='id identifier rubyid_e'><span class='object_link'><a href="../../top-level-namespace.html#e-instance_method" title="#e (method)">e</a></span></span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="watch!-class_method">
+  
+    .<strong>watch!</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Starts a thread that watches for update requests and processes them.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Starting the watch thread</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::ActiveSpell (module)">ActiveSpell</a></span></span><span class='period'>.</span><span class='id identifier rubyid_watch!'>watch!</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'activespell.rb', line 215</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_watch!'>watch!</span>
+  <span class='ivar'>@thread</span> <span class='op'>||=</span> <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_loop'>loop</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_block_until_update_requested'>block_until_update_requested</span>
+      <span class='id identifier rubyid_update_spell_durations'>update_spell_durations</span>
+    <span class='kw'>rescue</span> <span class='const'>StandardError</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'><span class='object_link'><a href="../../top-level-namespace.html#e-instance_method" title="#e (method)">e</a></span></span>
+      <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Error in spell durations thread</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='id identifier rubyid_e'><span class='object_link'><a href="../../top-level-namespace.html#e-instance_method" title="#e (method)">e</a></span></span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Nov  7 02:18:50 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.1.7).
+</div>
+
+    </div>
+  </body>
+</html>

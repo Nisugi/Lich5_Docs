@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Lich::Gemstone::Skills
+  
+    &mdash; Lich-5 Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Lich::Gemstone::Skills";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span>
+     &raquo; 
+    <span class="title">Skills</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Lich::Gemstone::Skills
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>skills.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>A module that handles skills in the Lich project
+This module provides methods to manage and calculate skill bonuses.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="skills-classvariable" class="">@@skills =
+          <div class="docstring">
+  <div class="discussion">
+    <p>A list of all skills available in the Lich project
+This constant holds the symbols representing various skills.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='qsymbols_beg'>%i(</span><span class='tstring_content'>two_weapon_combat</span><span class='words_sep'> </span><span class='tstring_content'>armor_use</span><span class='words_sep'> </span><span class='tstring_content'>shield_use</span><span class='words_sep'> </span><span class='tstring_content'>combat_maneuvers</span><span class='words_sep'> </span><span class='tstring_content'>edged_weapons</span><span class='words_sep'> </span><span class='tstring_content'>blunt_weapons</span><span class='words_sep'> </span><span class='tstring_content'>two_handed_weapons</span><span class='words_sep'> </span><span class='tstring_content'>ranged_weapons</span><span class='words_sep'> </span><span class='tstring_content'>thrown_weapons</span><span class='words_sep'> </span><span class='tstring_content'>polearm_weapons</span><span class='words_sep'> </span><span class='tstring_content'>brawling</span><span class='words_sep'> </span><span class='tstring_content'>ambush</span><span class='words_sep'> </span><span class='tstring_content'>multi_opponent_combat</span><span class='words_sep'> </span><span class='tstring_content'>physical_fitness</span><span class='words_sep'> </span><span class='tstring_content'>dodging</span><span class='words_sep'> </span><span class='tstring_content'>arcane_symbols</span><span class='words_sep'> </span><span class='tstring_content'>magic_item_use</span><span class='words_sep'> </span><span class='tstring_content'>spell_aiming</span><span class='words_sep'> </span><span class='tstring_content'>harness_power</span><span class='words_sep'> </span><span class='tstring_content'>elemental_mana_control</span><span class='words_sep'> </span><span class='tstring_content'>mental_mana_control</span><span class='words_sep'> </span><span class='tstring_content'>spirit_mana_control</span><span class='words_sep'> </span><span class='tstring_content'>elemental_lore_air</span><span class='words_sep'> </span><span class='tstring_content'>elemental_lore_earth</span><span class='words_sep'> </span><span class='tstring_content'>elemental_lore_fire</span><span class='words_sep'> </span><span class='tstring_content'>elemental_lore_water</span><span class='words_sep'> </span><span class='tstring_content'>spiritual_lore_blessings</span><span class='words_sep'> </span><span class='tstring_content'>spiritual_lore_religion</span><span class='words_sep'> </span><span class='tstring_content'>spiritual_lore_summoning</span><span class='words_sep'> </span><span class='tstring_content'>sorcerous_lore_demonology</span><span class='words_sep'> </span><span class='tstring_content'>sorcerous_lore_necromancy</span><span class='words_sep'> </span><span class='tstring_content'>mental_lore_divination</span><span class='words_sep'> </span><span class='tstring_content'>mental_lore_manipulation</span><span class='words_sep'> </span><span class='tstring_content'>mental_lore_telepathy</span><span class='words_sep'> </span><span class='tstring_content'>mental_lore_transference</span><span class='words_sep'> </span><span class='tstring_content'>mental_lore_transformation</span><span class='words_sep'> </span><span class='tstring_content'>survival</span><span class='words_sep'> </span><span class='tstring_content'>disarming_traps</span><span class='words_sep'> </span><span class='tstring_content'>picking_locks</span><span class='words_sep'> </span><span class='tstring_content'>stalking_and_hiding</span><span class='words_sep'> </span><span class='tstring_content'>perception</span><span class='words_sep'> </span><span class='tstring_content'>climbing</span><span class='words_sep'> </span><span class='tstring_content'>swimming</span><span class='words_sep'> </span><span class='tstring_content'>first_aid</span><span class='words_sep'> </span><span class='tstring_content'>trading</span><span class='words_sep'> </span><span class='tstring_content'>pickpocketing</span><span class='tstring_end'>)</span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#serialize-class_method" title="serialize (class method)">.<strong>serialize</strong>  &#x21d2; Array&lt;Integer&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Serializes the current skills into an array.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_bonus-class_method" title="to_bonus (class method)">.<strong>to_bonus</strong>(ranks)  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>extended function, now takes INT, Symbol, String but not shorthand Symbol, String Skills.to_bonus(Skills.combatmaneuvers), Skills.to_bonus(5), Skills.to_bonus(:combat_maneuvers), Skills.to_bonus(&#39;combat_maneuvers&#39;) as examples Calculates the bonus based on the given ranks.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="serialize-class_method">
+  
+    .<strong>serialize</strong>  &#x21d2; <tt>Array&lt;Integer&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>This method returns the ranks of all skills defined in the module.</p>
+</div>
+  </div>
+
+<p>Serializes the current skills into an array</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Skills (module)">Skills</a></span></span><span class='period'>.</span><span class='id identifier rubyid_serialize'>serialize</span> <span class='comment'># =&gt; [rank1, rank2, ...]</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Integer&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>An array of skill ranks</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'skills.rb', line 89</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_serialize'>serialize</span>
+  <span class='lbracket'>[</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_two_weapon_combat'>two_weapon_combat</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_armor_use'>armor_use</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_shield_use'>shield_use</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_combat_maneuvers'>combat_maneuvers</span><span class='comma'>,</span>
+   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_edged_weapons'>edged_weapons</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_blunt_weapons'>blunt_weapons</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_two_handed_weapons'>two_handed_weapons</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ranged_weapons'>ranged_weapons</span><span class='comma'>,</span>
+   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_thrown_weapons'>thrown_weapons</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_polearm_weapons'>polearm_weapons</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_brawling'>brawling</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ambush'>ambush</span><span class='comma'>,</span>
+   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_multi_opponent_combat'>multi_opponent_combat</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_physical_fitness'>physical_fitness</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dodging'>dodging</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_arcane_symbols'>arcane_symbols</span><span class='comma'>,</span>
+   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_magic_item_use'>magic_item_use</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_spell_aiming'>spell_aiming</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_harness_power'>harness_power</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_elemental_mana_control'>elemental_mana_control</span><span class='comma'>,</span>
+   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mental_mana_control'>mental_mana_control</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_spirit_mana_control'>spirit_mana_control</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_elemental_lore_air'>elemental_lore_air</span><span class='comma'>,</span>
+   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_elemental_lore_earth'>elemental_lore_earth</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_elemental_lore_fire'>elemental_lore_fire</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_elemental_lore_water'>elemental_lore_water</span><span class='comma'>,</span>
+   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_spiritual_lore_blessings'>spiritual_lore_blessings</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_spiritual_lore_religion'>spiritual_lore_religion</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_spiritual_lore_summoning'>spiritual_lore_summoning</span><span class='comma'>,</span>
+   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sorcerous_lore_demonology'>sorcerous_lore_demonology</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sorcerous_lore_necromancy'>sorcerous_lore_necromancy</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mental_lore_divination'>mental_lore_divination</span><span class='comma'>,</span>
+   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mental_lore_manipulation'>mental_lore_manipulation</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mental_lore_telepathy'>mental_lore_telepathy</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mental_lore_transference'>mental_lore_transference</span><span class='comma'>,</span>
+   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mental_lore_transformation'>mental_lore_transformation</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_survival'>survival</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_disarming_traps'>disarming_traps</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_picking_locks'>picking_locks</span><span class='comma'>,</span>
+   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_stalking_and_hiding'>stalking_and_hiding</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_perception'>perception</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_climbing'>climbing</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_swimming'>swimming</span><span class='comma'>,</span>
+   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_first_aid'>first_aid</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_trading'>trading</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_pickpocketing'>pickpocketing</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_bonus-class_method">
+  
+    .<strong>to_bonus</strong>(ranks)  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>This method does not accept shorthand symbols or strings.</p>
+</div>
+  </div>
+
+<p>extended function, now takes INT, Symbol, String but not shorthand Symbol, String
+Skills.to_bonus(Skills.combatmaneuvers), Skills.to_bonus(5),
+Skills.to_bonus(:combat_maneuvers), Skills.to_bonus(&#39;combat_maneuvers&#39;) as examples
+Calculates the bonus based on the given ranks</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Skills (module)">Skills</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_bonus'>to_bonus</span><span class='lparen'>(</span><span class='int'>5</span><span class='rparen'>)</span> <span class='comment'># =&gt; 25
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Skills (module)">Skills</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_bonus'>to_bonus</span><span class='lparen'>(</span><span class='symbol'>:combat_maneuvers</span><span class='rparen'>)</span> <span class='comment'># =&gt; bonus value</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>ranks</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The ranks to calculate bonus for</p>
+
+<ul>
+<li>Integer: The rank value</li>
+<li>String: The skill name as a string</li>
+<li>Symbol: The skill name as a symbol</li>
+</ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The calculated bonus</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>StandardError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>If the input is not valid</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'skills.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_bonus'>to_bonus</span><span class='lparen'>(</span><span class='id identifier rubyid_ranks'>ranks</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_ranks'>ranks</span>
+  <span class='kw'>when</span> <span class='const'>Integer</span>
+    <span class='id identifier rubyid_bonus'>bonus</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='kw'>while</span> <span class='id identifier rubyid_ranks'>ranks</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_ranks'>ranks</span> <span class='op'>&gt;</span> <span class='int'>40</span>
+        <span class='id identifier rubyid_bonus'>bonus</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='id identifier rubyid_ranks'>ranks</span> <span class='op'>-</span> <span class='int'>40</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_ranks'>ranks</span> <span class='op'>=</span> <span class='int'>40</span>
+      <span class='kw'>elsif</span> <span class='id identifier rubyid_ranks'>ranks</span> <span class='op'>&gt;</span> <span class='int'>30</span>
+        <span class='id identifier rubyid_bonus'>bonus</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='id identifier rubyid_ranks'>ranks</span> <span class='op'>-</span> <span class='int'>30</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>2</span>
+        <span class='id identifier rubyid_ranks'>ranks</span> <span class='op'>=</span> <span class='int'>30</span>
+      <span class='kw'>elsif</span> <span class='id identifier rubyid_ranks'>ranks</span> <span class='op'>&gt;</span> <span class='int'>20</span>
+        <span class='id identifier rubyid_bonus'>bonus</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='id identifier rubyid_ranks'>ranks</span> <span class='op'>-</span> <span class='int'>20</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>3</span>
+        <span class='id identifier rubyid_ranks'>ranks</span> <span class='op'>=</span> <span class='int'>20</span>
+      <span class='kw'>elsif</span> <span class='id identifier rubyid_ranks'>ranks</span> <span class='op'>&gt;</span> <span class='int'>10</span>
+        <span class='id identifier rubyid_bonus'>bonus</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='id identifier rubyid_ranks'>ranks</span> <span class='op'>-</span> <span class='int'>10</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>4</span>
+        <span class='id identifier rubyid_ranks'>ranks</span> <span class='op'>=</span> <span class='int'>10</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_bonus'>bonus</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='id identifier rubyid_ranks'>ranks</span> <span class='op'>*</span> <span class='int'>5</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_ranks'>ranks</span> <span class='op'>=</span> <span class='int'>0</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_bonus'>bonus</span>
+  <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></span><span class='comma'>,</span> <span class='const'>Symbol</span>
+    <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="Infomon.html#get-class_method" title="Lich::Gemstone::Infomon.get (method)">get</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>skill.%s_bonus</span><span class='tstring_end'>&quot;</span></span> <span class='op'>%</span> <span class='id identifier rubyid_ranks'>ranks</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_echo'><span class='object_link'><a href="../../top-level-namespace.html#echo-instance_method" title="#echo (method)">echo</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You&#39;re trying to move the cheese!</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Nov  7 02:18:49 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.1.7).
+</div>
+
+    </div>
+  </body>
+</html>

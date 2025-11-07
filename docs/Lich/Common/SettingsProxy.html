@@ -1,0 +1,3377 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Lich::Common::SettingsProxy
+  
+    &mdash; Lich-5 Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Lich::Common::SettingsProxy";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span>
+     &raquo; 
+    <span class="title">SettingsProxy</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Lich::Common::SettingsProxy
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Lich::Common::SettingsProxy</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>settings_proxy.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>A proxy class for managing settings with additional features.
+This class allows for the delegation of method calls to a target object while maintaining a reference to the settings module.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Creating a settings proxy</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_proxy'>proxy</span> <span class='op'>=</span> <span class='const'>SettingsProxy</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Lich::Common::SettingsProxy#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_scope'>scope</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="LOG_PREFIX-constant" class="">LOG_PREFIX =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[SettingsProxy]</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="NON_DESTRUCTIVE_METHODS-constant" class="">NON_DESTRUCTIVE_METHODS =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span>
+  <span class='symbol'>:+</span><span class='comma'>,</span> <span class='symbol'>:-</span><span class='comma'>,</span> <span class='symbol'>:&amp;</span><span class='comma'>,</span> <span class='symbol'>:|</span><span class='comma'>,</span> <span class='symbol'>:*</span><span class='comma'>,</span>
+  <span class='symbol'>:all?</span><span class='comma'>,</span> <span class='symbol'>:any?</span><span class='comma'>,</span> <span class='symbol'>:assoc</span><span class='comma'>,</span> <span class='symbol'>:at</span><span class='comma'>,</span> <span class='symbol'>:bsearch</span><span class='comma'>,</span> <span class='symbol'>:bsearch_index</span><span class='comma'>,</span> <span class='symbol'>:chunk</span><span class='comma'>,</span> <span class='symbol'>:chunk_while</span><span class='comma'>,</span>
+  <span class='symbol'>:collect</span><span class='comma'>,</span> <span class='symbol'>:collect_concat</span><span class='comma'>,</span> <span class='symbol'>:compact</span><span class='comma'>,</span> <span class='symbol'>:compare_by_identity?</span><span class='comma'>,</span> <span class='symbol'>:count</span><span class='comma'>,</span> <span class='symbol'>:cycle</span><span class='comma'>,</span>
+  <span class='symbol'>:default</span><span class='comma'>,</span> <span class='symbol'>:default_proc</span><span class='comma'>,</span> <span class='symbol'>:detect</span><span class='comma'>,</span> <span class='symbol'>:dig</span><span class='comma'>,</span> <span class='symbol'>:drop</span><span class='comma'>,</span> <span class='symbol'>:drop_while</span><span class='comma'>,</span>
+  <span class='symbol'>:each_cons</span><span class='comma'>,</span> <span class='symbol'>:each_entry</span><span class='comma'>,</span> <span class='symbol'>:each_slice</span><span class='comma'>,</span> <span class='symbol'>:each_with_index</span><span class='comma'>,</span> <span class='symbol'>:each_with_object</span><span class='comma'>,</span> <span class='symbol'>:empty?</span><span class='comma'>,</span>
+  <span class='symbol'>:entries</span><span class='comma'>,</span> <span class='symbol'>:except</span><span class='comma'>,</span> <span class='symbol'>:fetch</span><span class='comma'>,</span> <span class='symbol'>:fetch_values</span><span class='comma'>,</span> <span class='symbol'>:filter</span><span class='comma'>,</span> <span class='symbol'>:find</span><span class='comma'>,</span> <span class='symbol'>:find_all</span><span class='comma'>,</span> <span class='symbol'>:find_index</span><span class='comma'>,</span>
+  <span class='symbol'>:first</span><span class='comma'>,</span> <span class='symbol'>:flat_map</span><span class='comma'>,</span> <span class='symbol'>:flatten</span><span class='comma'>,</span> <span class='symbol'>:frozen?</span><span class='comma'>,</span> <span class='symbol'>:grep</span><span class='comma'>,</span> <span class='symbol'>:grep_v</span><span class='comma'>,</span> <span class='symbol'>:group_by</span><span class='comma'>,</span> <span class='symbol'>:has_value?</span><span class='comma'>,</span>
+  <span class='symbol'>:include?</span><span class='comma'>,</span> <span class='symbol'>:inject</span><span class='comma'>,</span> <span class='symbol'>:invert</span><span class='comma'>,</span> <span class='symbol'>:join</span><span class='comma'>,</span> <span class='symbol'>:key</span><span class='comma'>,</span> <span class='symbol'>:keys</span><span class='comma'>,</span> <span class='symbol'>:last</span><span class='comma'>,</span> <span class='symbol'>:lazy</span><span class='comma'>,</span> <span class='symbol'>:length</span><span class='comma'>,</span>
+  <span class='symbol'>:map</span><span class='comma'>,</span> <span class='symbol'>:max</span><span class='comma'>,</span> <span class='symbol'>:max_by</span><span class='comma'>,</span> <span class='symbol'>:member?</span><span class='comma'>,</span> <span class='symbol'>:merge</span><span class='comma'>,</span> <span class='symbol'>:min</span><span class='comma'>,</span> <span class='symbol'>:min_by</span><span class='comma'>,</span> <span class='symbol'>:minmax</span><span class='comma'>,</span> <span class='symbol'>:minmax_by</span><span class='comma'>,</span>
+  <span class='symbol'>:none?</span><span class='comma'>,</span> <span class='symbol'>:one?</span><span class='comma'>,</span> <span class='symbol'>:pack</span><span class='comma'>,</span> <span class='symbol'>:partition</span><span class='comma'>,</span> <span class='symbol'>:permutation</span><span class='comma'>,</span> <span class='symbol'>:product</span><span class='comma'>,</span> <span class='symbol'>:rassoc</span><span class='comma'>,</span> <span class='symbol'>:reduce</span><span class='comma'>,</span>
+  <span class='symbol'>:reject</span><span class='comma'>,</span> <span class='symbol'>:reverse</span><span class='comma'>,</span> <span class='symbol'>:rotate</span><span class='comma'>,</span> <span class='symbol'>:sample</span><span class='comma'>,</span> <span class='symbol'>:select</span><span class='comma'>,</span> <span class='symbol'>:shuffle</span><span class='comma'>,</span> <span class='symbol'>:size</span><span class='comma'>,</span> <span class='symbol'>:slice</span><span class='comma'>,</span>
+  <span class='symbol'>:slice_after</span><span class='comma'>,</span> <span class='symbol'>:slice_before</span><span class='comma'>,</span> <span class='symbol'>:slice_when</span><span class='comma'>,</span> <span class='symbol'>:sort</span><span class='comma'>,</span> <span class='symbol'>:sort_by</span><span class='comma'>,</span> <span class='symbol'>:sum</span><span class='comma'>,</span>
+  <span class='symbol'>:take</span><span class='comma'>,</span> <span class='symbol'>:take_while</span><span class='comma'>,</span> <span class='symbol'>:to_a</span><span class='comma'>,</span> <span class='symbol'>:to_h</span><span class='comma'>,</span> <span class='symbol'>:to_proc</span><span class='comma'>,</span> <span class='symbol'>:transform_keys</span><span class='comma'>,</span> <span class='symbol'>:transform_values</span><span class='comma'>,</span>
+  <span class='symbol'>:uniq</span><span class='comma'>,</span> <span class='symbol'>:values</span><span class='comma'>,</span> <span class='symbol'>:values_at</span><span class='comma'>,</span> <span class='symbol'>:zip</span>
+<span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+        <dt id="NON_DESTRUCTIVE_CONTAINER_VIEWS-constant" class="">NON_DESTRUCTIVE_CONTAINER_VIEWS =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Subset of non-destructive methods that return container &quot;views&quot;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span>
+  <span class='symbol'>:map</span><span class='comma'>,</span> <span class='symbol'>:collect</span><span class='comma'>,</span> <span class='symbol'>:select</span><span class='comma'>,</span> <span class='symbol'>:filter</span><span class='comma'>,</span> <span class='symbol'>:reject</span><span class='comma'>,</span> <span class='symbol'>:find_all</span><span class='comma'>,</span> <span class='symbol'>:grep</span><span class='comma'>,</span> <span class='symbol'>:grep_v</span><span class='comma'>,</span>
+  <span class='symbol'>:sort</span><span class='comma'>,</span> <span class='symbol'>:sort_by</span><span class='comma'>,</span> <span class='symbol'>:uniq</span><span class='comma'>,</span> <span class='symbol'>:compact</span><span class='comma'>,</span> <span class='symbol'>:flatten</span><span class='comma'>,</span> <span class='symbol'>:slice</span><span class='comma'>,</span> <span class='symbol'>:take</span><span class='comma'>,</span> <span class='symbol'>:drop</span><span class='comma'>,</span> <span class='symbol'>:values</span>
+<span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#path-instance_method" title="#path (instance method)">#<strong>path</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute path.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#scope-instance_method" title="#scope (instance method)">#<strong>scope</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute scope.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#target-instance_method" title="#target (instance method)">#<strong>target</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute target.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>(key)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Retrieves a value from the target using the specified key.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#[]=-instance_method" title="#[]= (instance method)">#<strong>[]=</strong>(key, value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sets a value in the target using the specified key.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#binary_op-instance_method" title="#binary_op (instance method)">#<strong>binary_op</strong>(operator, other)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Performs a binary operation with the target and another value.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#detached%3F-instance_method" title="#detached? (instance method)">#<strong>detached?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the proxy is in a detached state.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong> {|Object| ... } &#x21d2; SettingsProxy </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Iterates over the target, yielding each item.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#handle_method_result-instance_method" title="#handle_method_result (instance method)">#<strong>handle_method_result</strong>(result)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#handle_non_destructive_result-instance_method" title="#handle_non_destructive_result (instance method)">#<strong>handle_non_destructive_result</strong>(method, result)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Minimal change: keep path (not []), and tag view proxies as detached.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hash-instance_method" title="#hash (instance method)">#<strong>hash</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the hash value of the target.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(settings_module, scope, path, target, detached: false)  &#x21d2; SettingsProxy </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Initializes a new SettingsProxy instance.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inspect-instance_method" title="#inspect (instance method)">#<strong>inspect</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns a string representation of the proxy, showing the target&#39;s inspect string.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#instance_of%3F-instance_method" title="#instance_of? (instance method)">#<strong>instance_of?</strong>(klass)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#is_a%3F-instance_method" title="#is_a? (instance method)">#<strong>is_a?</strong>(klass)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#kind_of%3F-instance_method" title="#kind_of? (instance method)">#<strong>kind_of?</strong>(klass)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#method_missing-instance_method" title="#method_missing (instance method)">#<strong>method_missing</strong>(method, *args, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Handles calls to methods that are not explicitly defined in the proxy.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#nil%3F-instance_method" title="#nil? (instance method)">#<strong>nil?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the target is nil.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pretty_print-instance_method" title="#pretty_print (instance method)">#<strong>pretty_print</strong>(pp)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#proxy_details-instance_method" title="#proxy_details (instance method)">#<strong>proxy_details</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns a string with the internal details of the proxy.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#respond_to%3F-instance_method" title="#respond_to? (instance method)">#<strong>respond_to?</strong>(method, include_private = false)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#respond_to_missing%3F-instance_method" title="#respond_to_missing? (instance method)">#<strong>respond_to_missing?</strong>(method, include_private = false)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the target responds to a method that is not explicitly defined.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_a-instance_method" title="#to_a (instance method)">#<strong>to_a</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Collection conversions.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_ary-instance_method" title="#to_ary (instance method)">#<strong>to_ary</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_c-instance_method" title="#to_c (instance method)">#<strong>to_c</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_enum-instance_method" title="#to_enum (instance method)">#<strong>to_enum</strong>(*args, &amp;block)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Special case for to_enum.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_f-instance_method" title="#to_f (instance method)">#<strong>to_f</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_h-instance_method" title="#to_h (instance method)">#<strong>to_h</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_hash-instance_method" title="#to_hash (instance method)">#<strong>to_hash</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_i-instance_method" title="#to_i (instance method)">#<strong>to_i</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Numeric conversions.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_int-instance_method" title="#to_int (instance method)">#<strong>to_int</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_io-instance_method" title="#to_io (instance method)">#<strong>to_io</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_json-instance_method" title="#to_json (instance method)">#<strong>to_json</strong>(*args)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Converts the target to JSON format.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_path-instance_method" title="#to_path (instance method)">#<strong>to_path</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_proc-instance_method" title="#to_proc (instance method)">#<strong>to_proc</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Other common conversions.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_r-instance_method" title="#to_r (instance method)">#<strong>to_r</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s-instance_method" title="#to_s (instance method)">#<strong>to_s</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Converts the target to a string.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_str-instance_method" title="#to_str (instance method)">#<strong>to_str</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_sym-instance_method" title="#to_sym (instance method)">#<strong>to_sym</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(settings_module, scope, path, target, detached: false)  &#x21d2; <tt><span class='object_link'><a href="" title="Lich::Common::SettingsProxy (class)">SettingsProxy</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Initializes a new SettingsProxy instance.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_proxy'>proxy</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::SettingsProxy (class)">SettingsProxy</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_scope'>scope</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='comma'>,</span> <span class='label'>detached:</span> <span class='kw'>true</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>settings_module</span>
+      
+      
+        <span class='type'>(<tt>Module</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The settings module to be used.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>scope</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The scope in which the settings are defined.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>path</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The path to the settings.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>target</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The target object to delegate method calls to.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>detached</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether the proxy is detached from the target (default: false).</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25
+26
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_settings_module'>settings_module</span><span class='comma'>,</span> <span class='id identifier rubyid_scope'>scope</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='comma'>,</span> <span class='label'>detached:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='ivar'>@settings_module</span> <span class='op'>=</span> <span class='id identifier rubyid_settings_module'>settings_module</span> <span class='comment'># This should be the Settings module itself
+</span>  <span class='ivar'>@scope</span>  <span class='op'>=</span> <span class='id identifier rubyid_scope'>scope</span>
+  <span class='ivar'>@path</span>   <span class='op'>=</span> <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='ivar'>@target</span> <span class='op'>=</span> <span class='id identifier rubyid_target'>target</span>
+  <span class='ivar'>@detached</span> <span class='op'>=</span> <span class='id identifier rubyid_detached'>detached</span>
+  <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Settings.html#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#LOG_PREFIX-constant" title="Lich::Common::SettingsProxy::LOG_PREFIX (constant)">LOG_PREFIX</a></span></span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>INIT scope: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@scope</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, path: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@path</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, target_class: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>, target_object_id: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>, detached: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@detached</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+<div id="method_missing_details" class="method_details_list">
+  <h2>Dynamic Method Handling</h2>
+  <p class="notice this">
+    This class handles dynamic methods through the <tt>method_missing</tt> method
+    
+  </p>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="method_missing-instance_method">
+  
+    #<strong>method_missing</strong>(method, *args, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Handles calls to methods that are not explicitly defined in the proxy.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>method</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The method name being called.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>args</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The arguments for the method call.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>block</span>
+      
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>An optional block for the method call.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The result of the method call on the target.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NoMethodError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>If the target does not respond to the method.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 321</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Settings.html#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#LOG_PREFIX-constant" title="Lich::Common::SettingsProxy::LOG_PREFIX (constant)">LOG_PREFIX</a></span></span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CALL scope: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@scope</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, path: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@path</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, method: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method'>method</span><span class='embexpr_end'>}</span><span class='tstring_content'>, args: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, target_object_id: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="#NON_DESTRUCTIVE_METHODS-constant" title="Lich::Common::SettingsProxy::NON_DESTRUCTIVE_METHODS (constant)">NON_DESTRUCTIVE_METHODS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
+      <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Settings.html#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#LOG_PREFIX-constant" title="Lich::Common::SettingsProxy::LOG_PREFIX (constant)">LOG_PREFIX</a></span></span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CALL   non-destructive method: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method'>method</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_target_dup'>target_dup</span> <span class='op'>=</span> <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+      <span class='id identifier rubyid_unwrapped_args'>unwrapped_args</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_arg'>arg</span><span class='op'>|</span> <span class='id identifier rubyid_arg'>arg</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::SettingsProxy (class)">SettingsProxy</a></span></span><span class='rparen'>)</span> <span class='op'>?</span> <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid_unwrap_proxies'>unwrap_proxies</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_arg'>arg</span> <span class='rbrace'>}</span> <span class='comment'># Corrected
+</span>      <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_target_dup'>target_dup</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_unwrapped_args'>unwrapped_args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+      <span class='comment'># Minimal change: pass method name so we can tag views as detached and keep path
+</span>      <span class='kw'>return</span> <span class='id identifier rubyid_handle_non_destructive_result'>handle_non_destructive_result</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Settings.html#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#LOG_PREFIX-constant" title="Lich::Common::SettingsProxy::LOG_PREFIX (constant)">LOG_PREFIX</a></span></span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CALL   destructive method: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method'>method</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+
+      <span class='comment'># NEW (5.12.7+): auto-reattach derived views before mutating
+</span>      <span class='comment'># ensure destructive methods (.push) do not target a proxy non-destructive method (.sort)
+</span>      <span class='kw'>if</span> <span class='id identifier rubyid_detached?'>detached?</span>
+        <span class='kw'>unless</span> <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__reattach_live!'>_reattach_live!</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+          <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Settings.html#LOG_LEVEL_ERROR-constant" title="Lich::Common::Settings::LOG_LEVEL_ERROR (constant)">LOG_LEVEL_ERROR</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#LOG_PREFIX-constant" title="Lich::Common::SettingsProxy::LOG_PREFIX (constant)">LOG_PREFIX</a></span></span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CALL   reattach failed; aborting destructive op </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method'>method</span><span class='embexpr_end'>}</span><span class='tstring_content'> on detached view</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+          <span class='kw'>return</span> <span class='kw'>self</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+
+      <span class='id identifier rubyid_unwrapped_args'>unwrapped_args</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_arg'>arg</span><span class='op'>|</span> <span class='id identifier rubyid_arg'>arg</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::SettingsProxy (class)">SettingsProxy</a></span></span><span class='rparen'>)</span> <span class='op'>?</span> <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid_unwrap_proxies'>unwrap_proxies</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_arg'>arg</span> <span class='rbrace'>}</span> <span class='comment'># Corrected
+</span>      <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Settings.html#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#LOG_PREFIX-constant" title="Lich::Common::SettingsProxy::LOG_PREFIX (constant)">LOG_PREFIX</a></span></span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CALL   target_before_op: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_unwrapped_args'>unwrapped_args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+      <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Settings.html#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#LOG_PREFIX-constant" title="Lich::Common::SettingsProxy::LOG_PREFIX (constant)">LOG_PREFIX</a></span></span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CALL   target_after_op: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+      <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Settings.html#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#LOG_PREFIX-constant" title="Lich::Common::SettingsProxy::LOG_PREFIX (constant)">LOG_PREFIX</a></span></span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CALL   calling save_proxy_changes on settings module</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+      <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid_save_proxy_changes'>save_proxy_changes</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='id identifier rubyid_handle_method_result'>handle_method_result</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='kw'>super</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="path-instance_method">
+  
+    #<strong>path</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute path.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_path'>path</span>
+  <span class='ivar'>@path</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="scope-instance_method">
+  
+    #<strong>scope</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute scope.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_scope'>scope</span>
+  <span class='ivar'>@scope</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="target-instance_method">
+  
+    #<strong>target</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute target.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_target'>target</span>
+  <span class='ivar'>@target</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="[]-instance_method">
+  
+    #<strong>[]</strong>(key)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Retrieves a value from the target using the specified key.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>key</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The key to retrieve the value for.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The value associated with the key, or a new SettingsProxy if the value is a container.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 285</span>
+
+<span class='kw'>def</span> <span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
+  <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Settings.html#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#LOG_PREFIX-constant" title="Lich::Common::SettingsProxy::LOG_PREFIX (constant)">LOG_PREFIX</a></span></span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET scope: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@scope</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, path: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@path</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, key: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, target_object_id: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='ivar'>@target</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid_container?'>container?</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_new_path'>new_path</span> <span class='op'>=</span> <span class='ivar'>@path</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+    <span class='id identifier rubyid_new_path'>new_path</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_key'>key</span>
+    <span class='const'><span class='object_link'><a href="" title="Lich::Common::SettingsProxy (class)">SettingsProxy</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Lich::Common::SettingsProxy#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@settings_module</span><span class='comma'>,</span> <span class='ivar'>@scope</span><span class='comma'>,</span> <span class='id identifier rubyid_new_path'>new_path</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="[]=-instance_method">
+  
+    #<strong>[]=</strong>(key, value)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Sets a value in the target using the specified key.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>key</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The key to set the value for.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The value to set.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The value that was set.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 301</span>
+
+<span class='kw'>def</span> <span class='op'>[]=</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Settings.html#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#LOG_PREFIX-constant" title="Lich::Common::SettingsProxy::LOG_PREFIX (constant)">LOG_PREFIX</a></span></span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SET scope: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@scope</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, path: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@path</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, key: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, value: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>, target_object_id: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_actual_value'>actual_value</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::SettingsProxy (class)">SettingsProxy</a></span></span><span class='rparen'>)</span> <span class='op'>?</span> <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid_unwrap_proxies'>unwrap_proxies</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_value'>value</span> <span class='comment'># Corrected to use @settings_module
+</span>  <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Settings.html#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#LOG_PREFIX-constant" title="Lich::Common::SettingsProxy::LOG_PREFIX (constant)">LOG_PREFIX</a></span></span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SET   target_before_set: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='ivar'>@target</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_actual_value'>actual_value</span>
+  <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Settings.html#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#LOG_PREFIX-constant" title="Lich::Common::SettingsProxy::LOG_PREFIX (constant)">LOG_PREFIX</a></span></span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SET   target_after_set: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Settings.html#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#LOG_PREFIX-constant" title="Lich::Common::SettingsProxy::LOG_PREFIX (constant)">LOG_PREFIX</a></span></span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SET   calling save_proxy_changes on settings module</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid_save_proxy_changes'>save_proxy_changes</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='comment'># rubocop:disable Lint/Void
+</span>  <span class='comment'># This is Ruby expected behavior to return the value.
+</span>  <span class='id identifier rubyid_value'>value</span>
+  <span class='comment'># rubocop:enable Lint/Void
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="binary_op-instance_method">
+  
+    #<strong>binary_op</strong>(operator, other)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Performs a binary operation with the target and another value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>operator</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The operator to use for the operation.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>other</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The other operand for the operation.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The result of the binary operation.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_binary_op'>binary_op</span><span class='lparen'>(</span><span class='id identifier rubyid_operator'>operator</span><span class='comma'>,</span> <span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_other_value'>other_value</span> <span class='op'>=</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::SettingsProxy (class)">SettingsProxy</a></span></span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_target'>target</span> <span class='op'>:</span> <span class='id identifier rubyid_other'>other</span>
+  <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_operator'>operator</span><span class='comma'>,</span> <span class='id identifier rubyid_other_value'>other_value</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="detached?-instance_method">
+  
+    #<strong>detached?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the proxy is in a detached state.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='kw'>if</span> <span class='id identifier rubyid_proxy'>proxy</span><span class='period'>.</span><span class='id identifier rubyid_detached?'>detached?</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Proxy is detached</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Returns true if the proxy is detached, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_detached?'>detached?</span>
+  <span class='op'>!</span><span class='op'>!</span><span class='ivar'>@detached</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each-instance_method">
+  
+    #<strong>each</strong> {|Object| ... } &#x21d2; <tt><span class='object_link'><a href="" title="Lich::Common::SettingsProxy (class)">SettingsProxy</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Iterates over the target, yielding each item.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_proxy'>proxy</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_item'>item</span> <span class='rbrace'>}</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Each item in the target.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Lich::Common::SettingsProxy (class)">SettingsProxy</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Returns self for chaining.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 245</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid__block'>_block</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='symbol'>:each</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+  <span class='kw'>if</span> <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:each</span><span class='rparen'>)</span>
+    <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid_container?'>container?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
+        <span class='kw'>yield</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::SettingsProxy (class)">SettingsProxy</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Lich::Common::SettingsProxy#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@settings_module</span><span class='comma'>,</span> <span class='ivar'>@scope</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='label'>detached:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+      <span class='kw'>else</span>
+        <span class='kw'>yield</span> <span class='id identifier rubyid_item'>item</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="handle_method_result-instance_method">
+  
+    #<strong>handle_method_result</strong>(result)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 368</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_handle_method_result'>handle_method_result</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_equal?'>equal?</span><span class='lparen'>(</span><span class='ivar'>@target</span><span class='rparen'>)</span>
+    <span class='kw'>self</span> <span class='comment'># Return self if the method modified the target in-place and returned it
+</span>  <span class='kw'>elsif</span> <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid_container?'>container?</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+    <span class='comment'># If a new container is returned (e.g. some destructive methods might return a new object)
+</span>    <span class='comment'># Wrap it in a new proxy, maintaining the current path and scope.
+</span>    <span class='const'><span class='object_link'><a href="" title="Lich::Common::SettingsProxy (class)">SettingsProxy</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Lich::Common::SettingsProxy#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@settings_module</span><span class='comma'>,</span> <span class='ivar'>@scope</span><span class='comma'>,</span> <span class='ivar'>@path</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_result'>result</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="handle_non_destructive_result-instance_method">
+  
+    #<strong>handle_non_destructive_result</strong>(method, result)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Minimal change: keep path (not []), and tag view proxies as detached.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 357</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_handle_non_destructive_result'>handle_non_destructive_result</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+  <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid_reset_path_and_return'>reset_path_and_return</span><span class='lparen'>(</span>
+    <span class='kw'>if</span> <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid_container?'>container?</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_is_view'>is_view</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#NON_DESTRUCTIVE_CONTAINER_VIEWS-constant" title="Lich::Common::SettingsProxy::NON_DESTRUCTIVE_CONTAINER_VIEWS (constant)">NON_DESTRUCTIVE_CONTAINER_VIEWS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
+      <span class='const'><span class='object_link'><a href="" title="Lich::Common::SettingsProxy (class)">SettingsProxy</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Lich::Common::SettingsProxy#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@settings_module</span><span class='comma'>,</span> <span class='ivar'>@scope</span><span class='comma'>,</span> <span class='ivar'>@path</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='label'>detached:</span> <span class='id identifier rubyid_is_view'>is_view</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_result'>result</span>
+    <span class='kw'>end</span>
+  <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="hash-instance_method">
+  
+    #<strong>hash</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the hash value of the target.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The hash value of the target.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 68</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_hash'>hash</span>
+  <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_hash'>hash</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="inspect-instance_method">
+  
+    #<strong>inspect</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a string representation of the proxy, showing the target&#39;s inspect string.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The inspect string of the target.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+207
+208
+209</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 207</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
+  <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="instance_of?-instance_method">
+  
+    #<strong>instance_of?</strong>(klass)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+230
+231
+232</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 230</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_instance_of?'>instance_of?</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
+  <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="is_a?-instance_method">
+  
+    #<strong>is_a?</strong>(klass)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+222
+223
+224</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 222</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
+  <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="kind_of?-instance_method">
+  
+    #<strong>kind_of?</strong>(klass)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+226
+227
+228</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 226</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
+  <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='id identifier rubyid_klass'>klass</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="nil?-instance_method">
+  
+    #<strong>nil?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the target is nil.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Returns true if the target is nil, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pretty_print-instance_method">
+  
+    #<strong>pretty_print</strong>(pp)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+218
+219
+220</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 218</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pretty_print'>pretty_print</span><span class='lparen'>(</span><span class='id identifier rubyid_pp'>pp</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_pp'>pp</span><span class='period'>.</span><span class='id identifier rubyid_pp'>pp</span><span class='lparen'>(</span><span class='ivar'>@target</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="proxy_details-instance_method">
+  
+    #<strong>proxy_details</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a string with the internal details of the proxy.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A string representation of the proxy&#39;s internal state.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+214
+215
+216</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 214</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_proxy_details'>proxy_details</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;SettingsProxy scope=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@scope</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> path=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@path</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> target_class=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'> target_object_id=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='embexpr_end'>}</span><span class='tstring_content'> detached=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@detached</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="respond_to?-instance_method">
+  
+    #<strong>respond_to?</strong>(method, include_private = false)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+234
+235
+236</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 234</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='kw'>super</span> <span class='op'>||</span> <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="respond_to_missing?-instance_method">
+  
+    #<strong>respond_to_missing?</strong>(method, include_private = false)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the target responds to a method that is not explicitly defined.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>method</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The method name to check.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>include_private</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether to include private methods in the check.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Returns true if the target responds to the method, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+384
+385
+386</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 384</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_respond_to_missing?'>respond_to_missing?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_a-instance_method">
+  
+    #<strong>to_a</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Collection conversions</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+148
+149
+150</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 148</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_a'>to_a</span>
+  <span class='id identifier rubyid_delegate_conversion'>delegate_conversion</span><span class='lparen'>(</span><span class='symbol'>:to_a</span><span class='comma'>,</span> <span class='label'>default:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_ary-instance_method">
+  
+    #<strong>to_ary</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+152
+153
+154</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 152</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_ary'>to_ary</span>
+  <span class='id identifier rubyid_delegate_conversion'>delegate_conversion</span><span class='lparen'>(</span><span class='symbol'>:to_ary</span><span class='comma'>,</span> <span class='label'>strict:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_c-instance_method">
+  
+    #<strong>to_c</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 143</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_c'>to_c</span>
+  <span class='id identifier rubyid_delegate_conversion'>delegate_conversion</span><span class='lparen'>(</span><span class='symbol'>:to_c</span><span class='comma'>,</span> <span class='label'>default:</span> <span class='const'>Complex</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_enum-instance_method">
+  
+    #<strong>to_enum</strong>(*args, &amp;block)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Special case for to_enum</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+194
+195
+196
+197
+198
+199
+200
+201
+202</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 194</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_enum'>to_enum</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_enum</span><span class='rparen'>)</span>
+    <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Settings.html#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#LOG_PREFIX-constant" title="Lich::Common::SettingsProxy::LOG_PREFIX (constant)">LOG_PREFIX</a></span></span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_enum: delegating</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_to_enum'>to_enum</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Settings.html#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#LOG_PREFIX-constant" title="Lich::Common::SettingsProxy::LOG_PREFIX (constant)">LOG_PREFIX</a></span></span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_enum: using default enum_for</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_f-instance_method">
+  
+    #<strong>to_f</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+135
+136
+137</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 135</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_f'>to_f</span>
+  <span class='id identifier rubyid_delegate_conversion'>delegate_conversion</span><span class='lparen'>(</span><span class='symbol'>:to_f</span><span class='comma'>,</span> <span class='label'>default:</span> <span class='float'>0.0</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_h-instance_method">
+  
+    #<strong>to_h</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 156</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_h'>to_h</span>
+  <span class='id identifier rubyid_delegate_conversion'>delegate_conversion</span><span class='lparen'>(</span><span class='symbol'>:to_h</span><span class='comma'>,</span> <span class='label'>default:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_hash-instance_method">
+  
+    #<strong>to_hash</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+160
+161
+162</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 160</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
+  <span class='id identifier rubyid_delegate_conversion'>delegate_conversion</span><span class='lparen'>(</span><span class='symbol'>:to_hash</span><span class='comma'>,</span> <span class='label'>strict:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_i-instance_method">
+  
+    #<strong>to_i</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Numeric conversions</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+127
+128
+129</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 127</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_delegate_conversion'>delegate_conversion</span><span class='lparen'>(</span><span class='symbol'>:to_i</span><span class='comma'>,</span> <span class='label'>default:</span> <span class='int'>0</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_int-instance_method">
+  
+    #<strong>to_int</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+131
+132
+133</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 131</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_int'>to_int</span>
+  <span class='id identifier rubyid_delegate_conversion'>delegate_conversion</span><span class='lparen'>(</span><span class='symbol'>:to_int</span><span class='comma'>,</span> <span class='label'>strict:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_io-instance_method">
+  
+    #<strong>to_io</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+185
+186
+187</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 185</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_io'>to_io</span>
+  <span class='id identifier rubyid_delegate_conversion'>delegate_conversion</span><span class='lparen'>(</span><span class='symbol'>:to_io</span><span class='comma'>,</span> <span class='label'>strict:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_json-instance_method">
+  
+    #<strong>to_json</strong>(*args)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Converts the target to JSON format.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='id identifier rubyid_proxy'>proxy</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>args</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Additional arguments for JSON conversion.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The JSON representation of the target.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NoMethodError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>If the target does not respond to :to_json.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+171
+172
+173
+174
+175
+176
+177
+178</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 171</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_json'>to_json</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:to_json</span><span class='rparen'>)</span>
+    <span class='ivar'>@settings_module</span><span class='period'>.</span><span class='id identifier rubyid__log'>_log</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Settings.html" title="Lich::Common::Settings (module)">Settings</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Settings.html#LOG_LEVEL_DEBUG-constant" title="Lich::Common::Settings::LOG_LEVEL_DEBUG (constant)">LOG_LEVEL_DEBUG</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#LOG_PREFIX-constant" title="Lich::Common::SettingsProxy::LOG_PREFIX (constant)">LOG_PREFIX</a></span></span><span class='comma'>,</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>to_json: delegating with args</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NoMethodError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>undefined method :to_json for </span><span class='embexpr_beg'>#{</span><span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='ivar'>@target</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_path-instance_method">
+  
+    #<strong>to_path</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+189
+190
+191</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 189</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_path'>to_path</span>
+  <span class='id identifier rubyid_delegate_conversion'>delegate_conversion</span><span class='lparen'>(</span><span class='symbol'>:to_path</span><span class='comma'>,</span> <span class='label'>strict:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_proc-instance_method">
+  
+    #<strong>to_proc</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Other common conversions</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+181
+182
+183</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 181</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_proc'>to_proc</span>
+  <span class='id identifier rubyid_delegate_conversion'>delegate_conversion</span><span class='lparen'>(</span><span class='symbol'>:to_proc</span><span class='comma'>,</span> <span class='label'>strict:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_r-instance_method">
+  
+    #<strong>to_r</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 139</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_r'>to_r</span>
+  <span class='id identifier rubyid_delegate_conversion'>delegate_conversion</span><span class='lparen'>(</span><span class='symbol'>:to_r</span><span class='comma'>,</span> <span class='label'>strict:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_s-instance_method">
+  
+    #<strong>to_s</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Converts the target to a string.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The string representation of the target.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+114
+115
+116</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 114</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_delegate_conversion'>delegate_conversion</span><span class='lparen'>(</span><span class='symbol'>:to_s</span><span class='comma'>,</span> <span class='label'>default:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_str-instance_method">
+  
+    #<strong>to_str</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+118
+119
+120</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 118</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_str'>to_str</span>
+  <span class='id identifier rubyid_delegate_conversion'>delegate_conversion</span><span class='lparen'>(</span><span class='symbol'>:to_str</span><span class='comma'>,</span> <span class='label'>strict:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_sym-instance_method">
+  
+    #<strong>to_sym</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'settings_proxy.rb', line 122</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_sym'>to_sym</span>
+  <span class='id identifier rubyid_delegate_conversion'>delegate_conversion</span><span class='lparen'>(</span><span class='symbol'>:to_sym</span><span class='comma'>,</span> <span class='label'>strict:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Nov  7 02:18:57 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.1.7).
+</div>
+
+    </div>
+  </body>
+</html>

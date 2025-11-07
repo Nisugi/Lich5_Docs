@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Lich::Gemstone::PSMS
+  
+    &mdash; Lich-5 Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Lich::Gemstone::PSMS";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span>
+     &raquo; 
+    <span class="title">PSMS</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Lich::Gemstone::PSMS
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>psms.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>PSMS.assess(&quot;bullrush&quot;, &quot;CMan&quot;, true)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="FAILURES_REGEXES-constant" class="">FAILURES_REGEXES =
+          <div class="docstring">
+  <div class="discussion">
+    <p>A compiled regular expression used to match common failure messages across all PSM (Player System Manager) actions.</p>
+
+<p>This constant combines several game-generated failure messages into a single <code>Regexp</code> using <code>Regexp.union</code>,
+allowing centralized pattern matching for detecting failed actions.</p>
+
+<p>Useful for interpreting command results and handling expected failure states in scripting logic.  Note that
+in most cases, the match on a failure message here is not considered an error, but rather that the command
+succeeded, but the action itself failed for some reason.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='kw'>if</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='op'>::</span><span class='const'>FAILURES_REGEXES</span><span class='period'>.</span><span class='id identifier rubyid_match?'>match?</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Action failed: \#{response}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Regexp</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A union of common failure message patterns.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^And give yourself away!  Never!$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^You are unable to do that right now\.$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^You don&#39;t seem to be able to move to do that\.$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^Provoking a GameMaster is not such a good idea\.$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^You do not currently have a target\.$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^Your mind clouds with confusion and you glance around uncertainly\.$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^But your hands are full\!$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^You are still stunned\.$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^You lack the momentum to attempt another skill\.$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+<span class='rparen'>)</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#assess-class_method" title="assess (class method)">.<strong>assess</strong>(name, type, costcheck = false, forcert_count: 0)  &#x21d2; Boolean, Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Assess the validity or cost of a given PSM (Player System Manager) skill.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#available%3F-class_method" title="available? (class method)">.<strong>available?</strong>(name, ignore_cooldown = false)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Determines if a given PSM skill is available for use (not in cooldown, and not overexerted).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#can_forcert%3F-class_method" title="can_forcert? (class method)">.<strong>can_forcert?</strong>(times)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Determines whether the character is eligible to perform the given number of forced roundtime (forcert) rounds.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_name-class_method" title="find_name (class method)">.<strong>find_name</strong>(name, type)  &#x21d2; Hash<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Finds a Player System Manager (PSM) skill by name within the specified category.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#max_forcert_count-class_method" title="max_forcert_count (class method)">.<strong>max_forcert_count</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Determines the maximum number of forced roundtime (forcert) activations allowed based on the character&#39;s Multi-Opponent Combat (MOC) training.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name_normal-class_method" title="name_normal (class method)">.<strong>name_normal</strong>(name)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Normalizes a name for internal lookup consistency.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="assess-class_method">
+  
+    .<strong>assess</strong>(name, type, costcheck = false, forcert_count: 0)  &#x21d2; <tt>Boolean</tt>, <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Assess the validity or cost of a given PSM (Player System Manager) skill.</p>
+
+<p>This method checks if a named PSM skill exists in a given category (<code>type</code>), and either:</p>
+
+<ul>
+<li>Verifies if the character has enough stamina to use it (when <code>costcheck</code> is true),</li>
+<li>Or retrieves the rank of the skill from Infomon (when <code>costcheck</code> is false).</li>
+</ul>
+
+<p>If the skill cannot be found, it logs an error and raises an exception to halt execution.</p>
+
+<p>or the Infomon rank of the skill otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Check if a combat maneuver can be used with current stamina</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_assess'>assess</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>feint</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CMan</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span></code></pre>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Get the Infomon rank of a shield technique</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_assess'>assess</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bulwark</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shield</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Check if a feat can be used with current stamina, considering forced RT applications</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_assess'>assess</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield bash</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Feat</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>2</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the PSM skill to assess.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The category of the PSM skill (e.g., &quot;Armor&quot;, &quot;CMan&quot;, &quot;Feat&quot;, &quot;Shield&quot;, &quot;Warcry&quot;, &quot;Weapon&quot;).</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>costcheck</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>If true, check whether the character has enough stamina to use the skill.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>forcert_count</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optional. Number of forced RT applications, affecting stamina cost calculation (default: 0).</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>, <tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Returns a boolean if <code>costcheck</code> is true (indicating stamina sufficiency),</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>StandardError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>If the skill name is invalid or not found in the given category.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'psms.rb', line 156</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_assess'>assess</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_costcheck'>costcheck</span> <span class='op'>=</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_forcert_count'>forcert_count</span> <span class='op'>&lt;=</span> <span class='id identifier rubyid_max_forcert_count'>max_forcert_count</span>
+  <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name_normal'>name_normal</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_seek_psm'>seek_psm</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_find_name'>find_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+  <span class='comment'># this logs then raises an exception to stop (kill) the offending script
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_seek_psm'>seek_psm</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../../Lich.html#log-class_method" title="Lich.log (method)">log</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>error: PSMS request: </span><span class='embexpr_beg'>#{</span><span class='gvar'>$!</span><span class='embexpr_end'>}</span><span class='tstring_content'>\n\t</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Aborting script - The referenced </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'> skill </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> is invalid.\r\nCheck your PSM category (Armor, CMan, Feat, Shield, Warcry, Weapon) and your spelling of </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lparen'>(</span><span class='id identifier rubyid_caller'>caller</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_call'>call</span><span class='op'>|</span> <span class='id identifier rubyid_call'>call</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^</span><span class='embexpr_beg'>#{</span><span class='const'>Script</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='comment'># otherwise process request
+</span>  <span class='kw'>case</span> <span class='id identifier rubyid_costcheck'>costcheck</span>
+  <span class='kw'>when</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_base_cost'>base_cost</span> <span class='op'>=</span> <span class='id identifier rubyid_seek_psm'>seek_psm</span><span class='lbracket'>[</span><span class='symbol'>:cost</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_base_cost'>base_cost</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_cost_type'>cost_type</span><span class='comma'>,</span> <span class='id identifier rubyid_cost_amount'>cost_amount</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_forcert_count'>forcert_count</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+        <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='lparen'>(</span><span class='id identifier rubyid_cost_amount'>cost_amount</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_cost_amount'>cost_amount</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='int'>25</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='float'>10.0</span> <span class='op'>*</span> <span class='id identifier rubyid_forcert_count'>forcert_count</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>/</span> <span class='int'>100</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_truncate'>truncate</span> <span class='op'>&lt;</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_public_send'>public_send</span><span class='lparen'>(</span><span class='id identifier rubyid_cost_type'>cost_type</span><span class='rparen'>)</span>
+      <span class='kw'>else</span>
+        <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_cost_amount'>cost_amount</span> <span class='op'>&lt;</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_public_send'>public_send</span><span class='lparen'>(</span><span class='id identifier rubyid_cost_type'>cost_type</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='kw'>true</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="Infomon.html#get-class_method" title="Lich::Gemstone::Infomon.get (method)">get</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_seek_psm'>seek_psm</span><span class='lbracket'>[</span><span class='symbol'>:short_name</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="available?-class_method">
+  
+    .<strong>available?</strong>(name, ignore_cooldown = false)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Determines if a given PSM skill is available for use (not in cooldown, and not overexerted).</p>
+
+<p>This method checks if the skill is not listed in the cooldowns or debuffs (specifically &quot;Overexerted&quot;).
+It uses the <code>Lich::Util.normalize_lookup</code> method to check for the skill&#39;s presence in these lists.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Check if a combat maneuver is available</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bullrush</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='comment'># =&gt; true (if not in cooldown or overexerted)</span></code></pre>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Check if a shield technique is available</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bulwark</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='comment'># =&gt; false (if in cooldown or overexerted)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the PSM skill to check.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the skill is available (not in cooldown or overexerted), false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+210
+211
+212
+213
+214</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'psms.rb', line 210</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_ignore_cooldown'>ignore_cooldown</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_normalize_lookup'><span class='object_link'><a href="../Util.html#normalize_lookup-class_method" title="Lich::Util.normalize_lookup (method)">normalize_lookup</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Debuffs</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Overexerted</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_normalize_lookup'><span class='object_link'><a href="../Util.html#normalize_lookup-class_method" title="Lich::Util.normalize_lookup (method)">normalize_lookup</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Cooldowns</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_ignore_cooldown'>ignore_cooldown</span>
+  <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="can_forcert?-class_method">
+  
+    .<strong>can_forcert?</strong>(times)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Determines whether the character is eligible to perform the given number of forced roundtime (forcert) rounds.</p>
+
+<p>This method checks if the character&#39;s Multi-Opponent Combat (MOC) training allows at least
+the specified number of forcert rounds, based on the result of <span class='object_link'><a href="#max_forcert_count-class_method" title="Lich::Gemstone::PSMS.max_forcert_count (method)">max_forcert_count</a></span>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Check if the character can perform 2 forcert rounds</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_can_forcert?'>can_forcert?</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
+<span class='comment'># =&gt; true  (if MOC ranks are 35 or higher)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>times</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The number of forcert rounds to check eligibility for.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the character can perform at least the given number of forcert rounds, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+237
+238
+239</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'psms.rb', line 237</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_can_forcert?'>can_forcert?</span><span class='lparen'>(</span><span class='id identifier rubyid_times'>times</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_max_forcert_count'>max_forcert_count</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_times'>times</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_name-class_method">
+  
+    .<strong>find_name</strong>(name, type)  &#x21d2; <tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Finds a Player System Manager (PSM) skill by name within the specified category.</p>
+
+<p>This method searches for a PSM skill (such as a combat maneuver, armor skill, feat, etc.)
+by matching the normalized <code>long_name</code> or <code>short_name</code> within the specified type&#39;s lookup table.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'>find_name</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>feint</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CMan</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='comment'># =&gt; { long_name: &quot;combat_feint&quot;, short_name: &quot;feint&quot;, cost: 10 }</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the PSM to find (normalized beforehand).</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>type</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The category of the PSM (e.g., &quot;Armor&quot;, &quot;CMan&quot;, &quot;Feat&quot;, &quot;Shield&quot;, &quot;Warcry&quot;, &quot;Weapon&quot;).</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A hash representing the PSM&#39;s attributes if found, or nil if not found.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+103
+104
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'psms.rb', line 103</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_find_name'>find_name</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name_normal'>name_normal</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='const'>Object</span><span class='period'>.</span><span class='id identifier rubyid_const_get'>const_get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Lich::Gemstone::</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_method'>method</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='embexpr_end'>}</span><span class='tstring_content'>_lookups</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+        <span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='symbol'>:short_name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="max_forcert_count-class_method">
+  
+    .<strong>max_forcert_count</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Determines the maximum number of forced roundtime (forcert) activations
+allowed based on the character&#39;s Multi-Opponent Combat (MOC) training.</p>
+
+<p>The number of forcert rounds scales with ranks in MOC as follows:</p>
+
+<ul>
+<li>0–9 ranks:     0 forcert rounds</li>
+<li>10–34 ranks:   1 forcert round</li>
+<li>35–74 ranks:   2 forcert rounds</li>
+<li>75–124 ranks:  3 forcert rounds</li>
+<li>125+ ranks:    4 forcert rounds</li>
+</ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_max_forcert_count'>max_forcert_count</span>
+<span class='comment'># =&gt; 3  (for a character with 100 MOC ranks)</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The maximum number of forcert rounds the character can perform.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'psms.rb', line 269</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_max_forcert_count'>max_forcert_count</span>
+  <span class='kw'>case</span> <span class='const'><span class='object_link'><a href="Skills.html" title="Lich::Gemstone::Skills (module)">Skills</a></span></span><span class='period'>.</span><span class='id identifier rubyid_multi_opponent_combat'>multi_opponent_combat</span>
+  <span class='kw'>when</span> <span class='int'>0</span><span class='op'>..</span><span class='int'>9</span>
+    <span class='int'>0</span>
+  <span class='kw'>when</span> <span class='int'>10</span><span class='op'>..</span><span class='int'>34</span>
+    <span class='int'>1</span>
+  <span class='kw'>when</span> <span class='int'>35</span><span class='op'>..</span><span class='int'>74</span>
+    <span class='int'>2</span>
+  <span class='kw'>when</span> <span class='int'>75</span><span class='op'>..</span><span class='int'>124</span>
+    <span class='int'>3</span>
+  <span class='kw'>else</span> <span class='comment'># 125+
+</span>    <span class='int'>4</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="name_normal-class_method">
+  
+    .<strong>name_normal</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Normalizes a name for internal lookup consistency.</p>
+
+<p>Converts the input string to a standardized format (e.g., downcased, underscored)
+using <code>Lich::Util.normalize_name</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name_normal'>name_normal</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Some Name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='comment'># =&gt; &quot;some_name&quot;</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name to normalize.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The normalized name.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'psms.rb', line 76</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name_normal'>name_normal</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_normalize_name'><span class='object_link'><a href="../Util.html#normalize_name-class_method" title="Lich::Util.normalize_name (method)">normalize_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Nov  7 02:18:48 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.1.7).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Lich::Gemstone::Ascension
+  
+    &mdash; Lich-5 Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Lich::Gemstone::Ascension";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (A)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span>
+     &raquo; 
+    <span class="title">Ascension</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Lich::Gemstone::Ascension
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>ascension.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>The Ascension module manages character ascension skills.</p>
+
+<p>It provides lookup tables for ascension skill names, methods to query skill availability,
+affordability, and knowledge, and dynamically defines shortcut methods for all ascension skills.</p>
+
+<p>Each skill includes:</p>
+
+<ul>
+<li>a long name (as used in internal references)</li>
+<li>a short name (used as a shortcut method)</li>
+<li>a cost (currently hardcoded to 0)</li>
+</ul>
+
+<p>Example:
+  if Ascension.available?(&quot;discipline&quot;)
+    Ascension.use(&quot;discipline&quot;)
+  end
+The Ascension module manages character ascension skills.</p>
+
+<p>It provides lookup tables for ascension skill names, methods to query skill availability,
+affordability, and knowledge, and dynamically defines shortcut methods for all ascension skills.</p>
+
+<p>Each skill includes:</p>
+
+<ul>
+<li>a long name (as used in internal references)</li>
+<li>a short name (used as a shortcut method)</li>
+<li>a cost (currently hardcoded to 0)</li>
+</ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='kw'>if</span> <span class='const'>Ascension</span><span class='period'>.</span><span class='id identifier rubyid_available?'><span class='object_link'><a href="#available%3F-class_method" title="Lich::Gemstone::Ascension.available? (method)">available?</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='const'>Ascension</span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#[]-class_method" title="[] (class method)">.<strong>[]</strong>(name)  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Retrieves the character&#39;s rank in the specified ascension skill.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#affordable%3F-class_method" title="affordable? (class method)">.<strong>affordable?</strong>(name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the ascension skill can be afforded (based on FORCERT or other gating logic).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ascension_lookups-class_method" title="ascension_lookups (class method)">.<strong>ascension_lookups</strong>  &#x21d2; Array&lt;Hash&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns an array of all defined Ascension skill mappings.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#available%3F-class_method" title="available? (class method)">.<strong>available?</strong>(name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Determines if the ascension skill is available for use.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#known%3F-class_method" title="known? (class method)">.<strong>known?</strong>(name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the character has at least one rank in the specified ascension skill.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="[]-class_method">
+  
+    .<strong>[]</strong>(name)  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Retrieves the character&#39;s rank in the specified ascension skill.</p>
+
+<p>Retrieves the character&#39;s rank in the specified ascension skill.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='comment'># =&gt; 3  # knows 3 ranks of discipline
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='comment'># =&gt; 0  # does not have any ranks in influence</span></code></pre>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='comment'># =&gt; 3  # knows 3 ranks of discipline
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='comment'># =&gt; 0  # does not have any ranks in influence</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the ascension skill</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the ascension skill</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current rank (or 0 if unknown)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current rank (or 0 if unknown)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+135
+136
+137</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ascension.rb', line 135</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_assess'><span class='object_link'><a href="PSMS.html#assess-class_method" title="Lich::Gemstone::PSMS.assess (method)">assess</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Ascension</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="affordable?-class_method">
+  
+    .<strong>affordable?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the ascension skill can be afforded (based on FORCERT or other gating logic).</p>
+
+<p>Checks if the ascension skill can be afforded (based on FORCERT or other gating logic).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true  # no cost, so always affordable</span></code></pre>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true  # no cost, so always affordable</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The ascension skill name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The ascension skill name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if affordable</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if affordable</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+169
+170
+171</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ascension.rb', line 169</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_assess'><span class='object_link'><a href="PSMS.html#assess-class_method" title="Lich::Gemstone::PSMS.assess (method)">assess</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Ascension</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ascension_lookups-class_method">
+  
+    .<strong>ascension_lookups</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns an array of all defined Ascension skill mappings.</p>
+
+<p>Returns an array of all defined Ascension skill mappings.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Array of hashes, each containing :long_name, :short_name, and :cost</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Array of hashes, each containing :long_name, :short_name, and :cost</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ascension.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ascension_lookups'>ascension_lookups</span>
+  <span class='lbracket'>[</span><span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>acid_resistance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>           <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resistacid</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>      <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>agility</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                   <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>agility</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>         <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ambush</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ambush</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>          <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>arcane_symbols</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>            <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>arcanesymbols</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>   <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>armor_use</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                 <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>armoruse</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>        <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>aura</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                      <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>aura</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>            <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>blunt_weapons</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>             <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>bluntweapons</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>brawling</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                  <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>brawling</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>        <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>climbing</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                  <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>climbing</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>        <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cold_resistance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>           <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resistcold</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>      <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>combat_maneuvers</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>          <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>combatmaneuvers</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>constitution</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>              <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>constitution</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>crush_resistance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>          <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resistcrush</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>     <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dexterity</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                 <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dexterity</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>       <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>disarming_traps</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>           <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>disarmingtraps</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>  <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>      <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>disintegration_resistance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resistdisintegr</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>disruption_resistance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>     <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resistdisruptio</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dodging</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                   <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dodging</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>         <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>edged_weapons</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>             <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>edgedweapons</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>electric_resistance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>       <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resistelectric</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>  <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>elemental_lore_air</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>        <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>elair</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>           <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>elemental_lore_earth</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>      <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>elearth</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>         <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>elemental_lore_fire</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>       <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>elfire</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>          <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>elemental_lore_water</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>      <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>elwater</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>         <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>elemental_mana_control</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>elementalmc</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>     <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>first_aid</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                 <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>firstaid</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>        <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>grapple_resistance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>        <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resistgrapple</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>   <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>harness_power</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>             <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>harnesspower</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>health_regeneration</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>       <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>regenhealth</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>     <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>heat_resistance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>           <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resistheat</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>      <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>impact_resistance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>         <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resistimpact</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                 <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>       <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>intuition</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                 <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>intuition</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>       <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>logic</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                     <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>logic</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>           <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>magic_item_use</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>            <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>magicitemuse</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mana_regeneration</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>         <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>regenmana</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>       <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mental_lore_divination</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mldivination</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mental_lore_manipulation</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>  <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mlmanipulation</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>  <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mental_lore_telepathy</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>     <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mltelepathy</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>     <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mental_lore_transference</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>  <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mltransference</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>  <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mental_lore_transform</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>     <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mltransform</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>     <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mental_mana_control</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>       <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mentalmc</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>        <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>multi_opponent_combat</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>     <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>multiopponent</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>   <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>perception</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>perception</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>      <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>physical_fitness</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>          <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>physicalfitness</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>picking_locks</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>             <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pickinglocks</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>picking_pockets</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>           <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pickingpockets</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>  <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>plasma_resistance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>         <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resistplasma</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>polearm_weapons</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>           <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>polearmsweapons</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>porter</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>porter</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>          <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>puncture_resistance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>       <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resistpuncture</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>  <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ranged_weapons</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>            <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rangedweapons</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>   <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>shield_use</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>shielduse</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>       <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>slash_resistance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>          <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resistslash</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>     <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sorcerous_lore_demonology</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>soldemonology</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>   <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sorcerous_lore_necromancy</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>solnecromancy</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>   <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>spell_aiming</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>              <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>spellaiming</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>     <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>spirit_mana_control</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>       <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>spiritmc</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>        <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>spiritual_lore_blessings</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>  <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>slblessings</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>     <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>spiritual_lore_religion</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>   <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>slreligion</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>      <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>spiritual_lore_summoning</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>  <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>slsummoning</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>     <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>stalking_and_hiding</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>       <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>stalking</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>        <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>stamina_regeneration</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>      <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>regenstamina</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>steam_resistance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>          <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resiststeam</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>     <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>strength</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                  <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>strength</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>        <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>survival</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                  <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>survival</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>        <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>swimming</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                  <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>swimming</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>        <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>thrown_weapons</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>            <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>thrownweapons</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>   <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>trading</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                   <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>trading</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>         <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>two_weapon_combat</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>         <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>twoweaponcombat</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>two_handed_weapons</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>        <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>twohandedweapon</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>unbalance_resistance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>      <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resistunbalance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>vacuum_resistance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>         <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resistvacuum</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>wisdom</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>                    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>wisdom</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>          <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+   <span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>transcend_destiny</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>         <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>trandest</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>        <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="available?-class_method">
+  
+    .<strong>available?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Determines if the ascension skill is available for use.</p>
+
+<p>Determines if the ascension skill is available for use.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true  # known, affordable, not on cooldown, and not overexerted
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; false  # not known</span></code></pre>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true  # known, affordable, not on cooldown, and not overexerted
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; false  # not known</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The ascension skill name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The ascension skill name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if known, affordable, and not blocked by cooldowns or debuffs</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if known, affordable, and not blocked by cooldowns or debuffs</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+187
+188
+189
+190
+191</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ascension.rb', line 187</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'><span class='object_link'><a href="#known%3F-class_method" title="Lich::Gemstone::Ascension.known? (method)">known?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+    <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'><span class='object_link'><a href="#affordable%3F-class_method" title="Lich::Gemstone::Ascension.affordable? (method)">affordable?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
+    <span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'><span class='object_link'><a href="PSMS.html#available%3F-class_method" title="Lich::Gemstone::PSMS.available? (method)">available?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="known?-class_method">
+  
+    .<strong>known?</strong>(name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the character has at least one rank in the specified ascension skill.</p>
+
+<p>Checks if the character has at least one rank in the specified ascension skill.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true  # has at least one rank in discipline
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; false  # does not have any ranks in influence</span></code></pre>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true  # has at least one rank in discipline
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; false  # does not have any ranks in influence</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The ascension skill name</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The ascension skill name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if known</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if known</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+153
+154
+155</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ascension.rb', line 153</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Nov  7 02:18:50 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.1.7).
+</div>
+
+    </div>
+  </body>
+</html>

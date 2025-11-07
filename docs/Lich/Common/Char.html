@@ -1,0 +1,2903 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Lich::Common::Char
+  
+    &mdash; Lich-5 Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Lich::Common::Char";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span>
+     &raquo; 
+    <span class="title">Char</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Lich::Common::Char
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Lich::Common::Char</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>char.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>character_name = Char.name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#che-class_method" title="che (class method)">.<strong>che</strong>  &#x21d2; String<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the &#39;che&#39; attribute of the character if applicable.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#citizenship-class_method" title="citizenship (class method)">.<strong>citizenship</strong>  &#x21d2; String<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the citizenship of the character if applicable.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#citizenship=-class_method" title="citizenship= (class method)">.<strong>citizenship=</strong>(_val)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>Updating via Char.citizenship is no longer supported. Update or fix your script.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#dump_info-class_method" title="dump_info (class method)">.<strong>dump_info</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>Char.dump_info is no longer used. Update or fix your script.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encumbrance-class_method" title="encumbrance (class method)">.<strong>encumbrance</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the encumbrance text of the character.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#health-class_method" title="health (class method)">.<strong>health</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the current health of the character.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#info-class_method" title="info (class method)">.<strong>info</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>Char.info is no longer supported. Update or fix your script.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#init-class_method" title="init (class method)">.<strong>init</strong>(_blah)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>Char.init is no longer used. Update or fix your script.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#load_info-class_method" title="load_info (class method)">.<strong>load_info</strong>(_string)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>Char.load_info is no longer used. Update or fix your script.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#mana-class_method" title="mana (class method)">.<strong>mana</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the current mana of the character.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#max_health-class_method" title="max_health (class method)">.<strong>max_health</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the maximum health of the character.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#max_mana-class_method" title="max_mana (class method)">.<strong>max_mana</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the maximum mana of the character.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#max_spirit-class_method" title="max_spirit (class method)">.<strong>max_spirit</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the maximum spirit of the character.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#max_stamina-class_method" title="max_stamina (class method)">.<strong>max_stamina</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the maximum stamina of the character.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#maxhealth-class_method" title="maxhealth (class method)">.<strong>maxhealth</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>Use Char.max_health instead.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#maxmana-class_method" title="maxmana (class method)">.<strong>maxmana</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>Use Char.max_mana instead.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#maxspirit-class_method" title="maxspirit (class method)">.<strong>maxspirit</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>Use Char.max_spirit instead.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#maxstamina-class_method" title="maxstamina (class method)">.<strong>maxstamina</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>Use Char.max_stamina instead.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#method_missing-class_method" title="method_missing (class method)">.<strong>method_missing</strong>(meth, *args)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Handles missing methods for the character.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-class_method" title="name (class method)">.<strong>name</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the name of the character.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#percent_encumbrance-class_method" title="percent_encumbrance (class method)">.<strong>percent_encumbrance</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the percentage of the character&#39;s encumbrance.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#percent_health-class_method" title="percent_health (class method)">.<strong>percent_health</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the percentage of the character&#39;s health.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#percent_mana-class_method" title="percent_mana (class method)">.<strong>percent_mana</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the percentage of the character&#39;s mana.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#percent_spirit-class_method" title="percent_spirit (class method)">.<strong>percent_spirit</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the percentage of the character&#39;s spirit.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#percent_stamina-class_method" title="percent_stamina (class method)">.<strong>percent_stamina</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the percentage of the character&#39;s stamina.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#percent_stance-class_method" title="percent_stance (class method)">.<strong>percent_stance</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the percentage of the character&#39;s stance.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#respond_to%3F-class_method" title="respond_to? (class method)">.<strong>respond_to?</strong>(m, *args)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the character responds to a method.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#skills-class_method" title="skills (class method)">.<strong>skills</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>Char.skills is no longer supported. Update or fix your script.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#spirit-class_method" title="spirit (class method)">.<strong>spirit</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the current spirit of the character.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stamina-class_method" title="stamina (class method)">.<strong>stamina</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the current stamina of the character.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stance-class_method" title="stance (class method)">.<strong>stance</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the current stance of the character.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="che-class_method">
+  
+    .<strong>che</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the &#39;che&#39; attribute of the character if applicable.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_che_value'>che_value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_che'>che</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s &#39;che&#39; value or nil if not applicable.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+277
+278
+279</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 277</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_che'>che</span>
+  <span class='const'>Infomon</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>che</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_game'>game</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^GS</span><span class='regexp_end'>/</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="citizenship-class_method">
+  
+    .<strong>citizenship</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the citizenship of the character if applicable.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_citizenship'>citizenship</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_citizenship'>citizenship</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s citizenship or nil if not applicable.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+261
+262
+263</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 261</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_citizenship'>citizenship</span>
+  <span class='const'>Infomon</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>citizenship</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_game'>game</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^GS</span><span class='regexp_end'>/</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="citizenship=-class_method">
+  
+    .<strong>citizenship=</strong>(_val)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Updating via Char.citizenship is no longer supported. Update or fix your script.</p>
+</div></div>
+<p class="note returns_void">This method returns an undefined value.</p><p>Sets the citizenship of the character (deprecated).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>_val</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The value to set.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+269
+270
+271</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 269</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_citizenship='>citizenship=</span><span class='lparen'>(</span><span class='id identifier rubyid__val'>_val</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_echo'><span class='object_link'><a href="../../top-level-namespace.html#echo-instance_method" title="#echo (method)">echo</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Updating via Char.citizenship is no longer supported. Update or fix your script.</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="dump_info-class_method">
+  
+    .<strong>dump_info</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Char.dump_info is no longer used. Update or fix your script.</p>
+</div></div>
+<p class="note returns_void">This method returns an undefined value.</p><p>Dumps character information (deprecated).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+206
+207
+208</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 206</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_dump_info'>dump_info</span>
+  <span class='id identifier rubyid_echo'><span class='object_link'><a href="../../top-level-namespace.html#echo-instance_method" title="#echo (method)">echo</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Char.dump_info is no longer used. Update or fix your script.</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="encumbrance-class_method">
+  
+    .<strong>encumbrance</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the encumbrance text of the character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_encumbrance_text'>encumbrance_text</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_encumbrance'>encumbrance</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s encumbrance text.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_encumbrance'>encumbrance</span>
+  <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_encumbrance_text'>encumbrance_text</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="health-class_method">
+  
+    .<strong>health</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the current health of the character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_current_health'>current_health</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_health'>health</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s health value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 62</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_health'>health</span>
+  <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_health'>health</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="info-class_method">
+  
+    .<strong>info</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Char.info is no longer supported. Update or fix your script.</p>
+</div></div>
+<p class="note returns_void">This method returns an undefined value.</p><p>Provides character information (deprecated).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+246
+247
+248</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 246</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span>
+  <span class='id identifier rubyid_echo'><span class='object_link'><a href="../../top-level-namespace.html#echo-instance_method" title="#echo (method)">echo</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Char.info is no longer supported. Update or fix your script.</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="init-class_method">
+  
+    .<strong>init</strong>(_blah)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Char.init is no longer used. Update or fix your script.</p>
+</div></div>
+<p class="note returns_void">This method returns an undefined value.</p><p>Initializes the character (deprecated).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>_blah</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Unused parameter.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_init'>init</span><span class='lparen'>(</span><span class='id identifier rubyid__blah'>_blah</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_echo'><span class='object_link'><a href="../../top-level-namespace.html#echo-instance_method" title="#echo (method)">echo</a></span></span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Char.init is no longer used. Update or fix your script.</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_info-class_method">
+  
+    .<strong>load_info</strong>(_string)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Char.load_info is no longer used. Update or fix your script.</p>
+</div></div>
+<p class="note returns_void">This method returns an undefined value.</p><p>Loads character information (deprecated).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>_string</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Unused parameter.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+214
+215
+216</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 214</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_load_info'>load_info</span><span class='lparen'>(</span><span class='id identifier rubyid__string'>_string</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_echo'><span class='object_link'><a href="../../top-level-namespace.html#echo-instance_method" title="#echo (method)">echo</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Char.load_info is no longer used. Update or fix your script.</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="mana-class_method">
+  
+    .<strong>mana</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the current mana of the character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_current_mana'>current_mana</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_mana'>mana</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s mana value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+70
+71
+72</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 70</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_mana'>mana</span>
+  <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_mana'>mana</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="max_health-class_method">
+  
+    .<strong>max_health</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the maximum health of the character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_max_health_value'>max_health_value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_max_health'>max_health</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s maximum health value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96
+97</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_max_health'>max_health</span>
+  <span class='comment'># Object.module_eval { XMLData.max_health }
+</span>  <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_max_health'>max_health</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="max_mana-class_method">
+  
+    .<strong>max_mana</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the maximum mana of the character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_max_mana_value'>max_mana_value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_max_mana'>max_mana</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s maximum mana value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+113
+114
+115</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 113</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_max_mana'>max_mana</span>
+  <span class='const'>Object</span><span class='period'>.</span><span class='id identifier rubyid_module_eval'>module_eval</span> <span class='lbrace'>{</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_max_mana'>max_mana</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="max_spirit-class_method">
+  
+    .<strong>max_spirit</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the maximum spirit of the character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_max_spirit_value'>max_spirit_value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_max_spirit'>max_spirit</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s maximum spirit value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+131
+132
+133</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 131</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_max_spirit'>max_spirit</span>
+  <span class='const'>Object</span><span class='period'>.</span><span class='id identifier rubyid_module_eval'>module_eval</span> <span class='lbrace'>{</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_max_spirit'>max_spirit</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="max_stamina-class_method">
+  
+    .<strong>max_stamina</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the maximum stamina of the character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_max_stamina_value'>max_stamina_value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_max_stamina'>max_stamina</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s maximum stamina value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+149
+150
+151</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 149</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_max_stamina'>max_stamina</span>
+  <span class='const'>Object</span><span class='period'>.</span><span class='id identifier rubyid_module_eval'>module_eval</span> <span class='lbrace'>{</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_max_stamina'>max_stamina</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="maxhealth-class_method">
+  
+    .<strong>maxhealth</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Use Char.max_health instead.</p>
+</div></div>
+<p>Returns the maximum health of the character (deprecated).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_max_health_value'>max_health_value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_maxhealth'>maxhealth</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s maximum health value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+104
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 104</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_maxhealth'>maxhealth</span>
+  <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deprecated'><span class='object_link'><a href="../../Lich.html#deprecated-class_method" title="Lich.deprecated (method)">deprecated</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Char.maxhealth</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Char.max_health</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>fe_log:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_max_health'><span class='object_link'><a href="#max_health-class_method" title="Lich::Common::Char.max_health (method)">max_health</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="maxmana-class_method">
+  
+    .<strong>maxmana</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Use Char.max_mana instead.</p>
+</div></div>
+<p>Returns the maximum mana of the character (deprecated).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_max_mana_value'>max_mana_value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_maxmana'>maxmana</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s maximum mana value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+122
+123
+124
+125</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 122</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_maxmana'>maxmana</span>
+  <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deprecated'><span class='object_link'><a href="../../Lich.html#deprecated-class_method" title="Lich.deprecated (method)">deprecated</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Char.maxmana</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Char.max_mana</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>fe_log:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_max_mana'><span class='object_link'><a href="#max_mana-class_method" title="Lich::Common::Char.max_mana (method)">max_mana</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="maxspirit-class_method">
+  
+    .<strong>maxspirit</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Use Char.max_spirit instead.</p>
+</div></div>
+<p>Returns the maximum spirit of the character (deprecated).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_max_spirit_value'>max_spirit_value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_maxspirit'>maxspirit</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s maximum spirit value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+140
+141
+142
+143</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 140</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_maxspirit'>maxspirit</span>
+  <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deprecated'><span class='object_link'><a href="../../Lich.html#deprecated-class_method" title="Lich.deprecated (method)">deprecated</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Char.maxspirit</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Char.max_spirit</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>fe_log:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_max_spirit'><span class='object_link'><a href="#max_spirit-class_method" title="Lich::Common::Char.max_spirit (method)">max_spirit</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="maxstamina-class_method">
+  
+    .<strong>maxstamina</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Use Char.max_stamina instead.</p>
+</div></div>
+<p>Returns the maximum stamina of the character (deprecated).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_max_stamina_value'>max_stamina_value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_maxstamina'>maxstamina</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s maximum stamina value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+158
+159
+160
+161</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 158</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_maxstamina'>maxstamina</span>
+  <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deprecated'><span class='object_link'><a href="../../Lich.html#deprecated-class_method" title="Lich.deprecated (method)">deprecated</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Char.maxstamina</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Char.max_stamina</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>fe_log:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_max_stamina'><span class='object_link'><a href="#max_stamina-class_method" title="Lich::Common::Char.max_stamina (method)">max_stamina</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="method_missing-class_method">
+  
+    .<strong>method_missing</strong>(meth, *args)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Handles missing methods for the character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>meth</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The missing method name.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>args</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Arguments for the missing method.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The result of the method call if found, otherwise raises NoMethodError.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 232</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_meth'>meth</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_polyfill'>polyfill</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='const'>Stats</span><span class='comma'>,</span> <span class='const'>Skills</span><span class='comma'>,</span> <span class='const'>Spellsong</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_klass'>klass</span><span class='op'>|</span>
+    <span class='id identifier rubyid_klass'>klass</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_meth'>meth</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='rbrace'>}</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_polyfill'>polyfill</span>
+    <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deprecated'><span class='object_link'><a href="../../Lich.html#deprecated-class_method" title="Lich.deprecated (method)">deprecated</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Char.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_meth'>meth</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_polyfill'>polyfill</span><span class='embexpr_end'>}</span><span class='tstring_content'>.</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_meth'>meth</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_polyfill'>polyfill</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_meth'>meth</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_meth'>meth</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="name-class_method">
+  
+    .<strong>name</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the name of the character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_character_name'>character_name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s name.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+  <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="percent_encumbrance-class_method">
+  
+    .<strong>percent_encumbrance</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the percentage of the character&#39;s encumbrance.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_encumbrance_percentage'>encumbrance_percentage</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_percent_encumbrance'>percent_encumbrance</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The percentage value of the character&#39;s encumbrance.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_percent_encumbrance'>percent_encumbrance</span>
+  <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_encumbrance_value'>encumbrance_value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="percent_health-class_method">
+  
+    .<strong>percent_health</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the percentage of the character&#39;s health.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_health_percentage'>health_percentage</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_percent_health'>percent_health</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The percentage value of the character&#39;s health.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+167
+168
+169</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 167</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_percent_health'>percent_health</span>
+  <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_health'>health</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span> <span class='op'>/</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_max_health'>max_health</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>100</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="percent_mana-class_method">
+  
+    .<strong>percent_mana</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the percentage of the character&#39;s mana.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_mana_percentage'>mana_percentage</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_percent_mana'>percent_mana</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The percentage value of the character&#39;s mana.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+175
+176
+177
+178
+179
+180
+181</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 175</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_percent_mana'>percent_mana</span>
+  <span class='kw'>if</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_max_mana'>max_mana</span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='int'>100</span>
+  <span class='kw'>else</span>
+    <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_mana'>mana</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span> <span class='op'>/</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_max_mana'>max_mana</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>100</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="percent_spirit-class_method">
+  
+    .<strong>percent_spirit</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the percentage of the character&#39;s spirit.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_spirit_percentage'>spirit_percentage</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_percent_spirit'>percent_spirit</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The percentage value of the character&#39;s spirit.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+187
+188
+189</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 187</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_percent_spirit'>percent_spirit</span>
+  <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_spirit'>spirit</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span> <span class='op'>/</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_max_spirit'>max_spirit</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>100</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="percent_stamina-class_method">
+  
+    .<strong>percent_stamina</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the percentage of the character&#39;s stamina.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_stamina_percentage'>stamina_percentage</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_percent_stamina'>percent_stamina</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The percentage value of the character&#39;s stamina.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+195
+196
+197
+198
+199
+200
+201</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 195</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_percent_stamina'>percent_stamina</span>
+  <span class='kw'>if</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_max_stamina'>max_stamina</span> <span class='op'>==</span> <span class='int'>0</span>
+    <span class='int'>100</span>
+  <span class='kw'>else</span>
+    <span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_stamina'>stamina</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span> <span class='op'>/</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_max_stamina'>max_stamina</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>100</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="percent_stance-class_method">
+  
+    .<strong>percent_stance</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the percentage of the character&#39;s stance.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_stance_percentage'>stance_percentage</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_percent_stance'>percent_stance</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The percentage value of the character&#39;s stance.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 38</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_percent_stance'>percent_stance</span>
+  <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_stance_value'>stance_value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="respond_to?-class_method">
+  
+    .<strong>respond_to?</strong>(m, *args)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the character responds to a method.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_supports_method'>supports_method</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:some_method</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>m</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The method name to check.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>args</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Additional arguments for the method.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the method is supported, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+224
+225
+226</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 224</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='lbracket'>[</span><span class='const'>Stats</span><span class='comma'>,</span> <span class='const'>Skills</span><span class='comma'>,</span> <span class='const'>Spellsong</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_k'>k</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='kw'>or</span> <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="skills-class_method">
+  
+    .<strong>skills</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'><p>Char.skills is no longer supported. Update or fix your script.</p>
+</div></div>
+<p class="note returns_void">This method returns an undefined value.</p><p>Provides character skills information (deprecated).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+253
+254
+255</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 253</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_skills'>skills</span>
+  <span class='id identifier rubyid_echo'><span class='object_link'><a href="../../top-level-namespace.html#echo-instance_method" title="#echo (method)">echo</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Char.skills is no longer supported. Update or fix your script.</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="spirit-class_method">
+  
+    .<strong>spirit</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the current spirit of the character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_current_spirit'>current_spirit</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_spirit'>spirit</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s spirit value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_spirit'>spirit</span>
+  <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_spirit'>spirit</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="stamina-class_method">
+  
+    .<strong>stamina</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the current stamina of the character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_current_stamina'>current_stamina</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_stamina'>stamina</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s stamina value.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 86</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_stamina'>stamina</span>
+  <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_stamina'>stamina</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="stance-class_method">
+  
+    .<strong>stance</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the current stance of the character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_current_stance'>current_stance</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_stance'>stance</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The character&#39;s stance text.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'char.rb', line 30</span>
+
+<span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Char (class)">Char</a></span></span><span class='period'>.</span><span class='id identifier rubyid_stance'>stance</span>
+  <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_stance_text'>stance_text</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Nov  7 02:18:52 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.1.7).
+</div>
+
+    </div>
+  </body>
+</html>

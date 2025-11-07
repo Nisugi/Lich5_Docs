@@ -1,0 +1,4267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Lich::DragonRealms::DRCMM
+  
+    &mdash; Lich-5 Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Lich::DragonRealms::DRCMM";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (D)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../DragonRealms.html" title="Lich::DragonRealms (module)">DragonRealms</a></span></span>
+     &raquo; 
+    <span class="title">DRCMM</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Lich::DragonRealms::DRCMM
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>common-moonmage.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>DRCMM module providing methods for celestial observations and interactions.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Using the DRCMM module</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'>DRCMM</span><span class='period'>.</span><span class='id identifier rubyid_observe'><span class='object_link'><a href="#observe-class_method" title="Lich::DragonRealms::DRCMM.observe (method)">observe</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>heavens</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#align-class_method" title="align (class method)">.<strong>align</strong>(skill)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Aligns the telescope based on the specified skill.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#any_celestial_object%3F-class_method" title="any_celestial_object? (class method)">.<strong>any_celestial_object?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if any celestial object is visible.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bright_celestial_object%3F-class_method" title="bright_celestial_object? (class method)">.<strong>bright_celestial_object?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if at least one bright celestial object is visible.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#center_telescope-class_method" title="center_telescope (class method)">.<strong>center_telescope</strong>(target)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Centers the telescope on a specified target.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_moonwatch-class_method" title="check_moonwatch (class method)">.<strong>check_moonwatch</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the moonwatch script is running and starts it if not.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#drop_moon_weapon%3F-class_method" title="drop_moon_weapon? (class method)">.<strong>drop_moon_weapon?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Drops the moon weapon if held.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_visible_planets-class_method" title="find_visible_planets (class method)">.<strong>find_visible_planets</strong>(planets, settings = nil)  &#x21d2; Array </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Finds visible planets based on the provided settings.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_bones-class_method" title="get_bones (class method)">.<strong>get_bones</strong>(storage)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Retrieves bones from storage.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_bones%3F-class_method" title="get_bones? (class method)">.<strong>get_bones?</strong>(storage)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if bones can be obtained from storage.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_div_tool-class_method" title="get_div_tool (class method)">.<strong>get_div_tool</strong>(tool)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Retrieves the divination tool from storage.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_div_tool%3F-class_method" title="get_div_tool? (class method)">.<strong>get_div_tool?</strong>(tool)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if a divination tool can be obtained from storage.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_telescope-class_method" title="get_telescope (class method)">.<strong>get_telescope</strong>(storage)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Retrieves the telescope from storage.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_telescope%3F-class_method" title="get_telescope? (class method)">.<strong>get_telescope?</strong>(telescope_name = &#39;telescope&#39;, storage)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the telescope can be obtained from storage.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hold_moon_weapon%3F-class_method" title="hold_moon_weapon? (class method)">.<strong>hold_moon_weapon?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Attempts to hold a moon weapon if not already holding one.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#holding_moon_weapon%3F-class_method" title="holding_moon_weapon? (class method)">.<strong>holding_moon_weapon?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if a moon weapon is currently held.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#is_moon_weapon%3F-class_method" title="is_moon_weapon? (class method)">.<strong>is_moon_weapon?</strong>(item)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the specified item is a moon weapon.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#moon_used_to_summon_weapon-class_method" title="moon_used_to_summon_weapon (class method)">.<strong>moon_used_to_summon_weapon</strong>  &#x21d2; String<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Determines which moon was used to summon a weapon.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#moon_visible%3F-class_method" title="moon_visible? (class method)">.<strong>moon_visible?</strong>(moon_name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if a specific moon is visible.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#moons_visible%3F-class_method" title="moons_visible? (class method)">.<strong>moons_visible?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if at least one moon is visible.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#observe-class_method" title="observe (class method)">.<strong>observe</strong>(thing)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Observes a celestial body or the heavens.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#peer_telescope-class_method" title="peer_telescope (class method)">.<strong>peer_telescope</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Peers through the telescope to observe celestial bodies.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#predict-class_method" title="predict (class method)">.<strong>predict</strong>(thing)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Predicts the state of a celestial body.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#roll_bones-class_method" title="roll_bones (class method)">.<strong>roll_bones</strong>(storage)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Rolls the bones for divination.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_moon_data-class_method" title="set_moon_data (class method)">.<strong>set_moon_data</strong>(data)  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sets the moon data based on the provided information.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#set_planet_data-class_method" title="set_planet_data (class method)">.<strong>set_planet_data</strong>(data, settings = nil)  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sets the planet data based on the provided information.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#store_bones-class_method" title="store_bones (class method)">.<strong>store_bones</strong>(storage)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Stores the bones in the specified storage.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#store_bones%3F-class_method" title="store_bones? (class method)">.<strong>store_bones?</strong>(storage)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Stores the bones back into storage.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#store_div_tool-class_method" title="store_div_tool (class method)">.<strong>store_div_tool</strong>(tool)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Stores the divination tool in the specified storage.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#store_div_tool%3F-class_method" title="store_div_tool? (class method)">.<strong>store_div_tool?</strong>(tool)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Stores the divination tool back into storage.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#store_telescope-class_method" title="store_telescope (class method)">.<strong>store_telescope</strong>(storage)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Stores the telescope in the specified storage.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#store_telescope%3F-class_method" title="store_telescope? (class method)">.<strong>store_telescope?</strong>(telescope_name = &quot;telescope&quot;, storage)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Stores the telescope back into storage.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#study_sky-class_method" title="study_sky (class method)">.<strong>study_sky</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Studies the sky for celestial information.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_astral_data-class_method" title="update_astral_data (class method)">.<strong>update_astral_data</strong>(data, settings = nil)  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Updates the astral data based on the provided information.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use_div_tool-class_method" title="use_div_tool (class method)">.<strong>use_div_tool</strong>(tool_storage)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Uses the specified divination tool.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#visible_moons-class_method" title="visible_moons (class method)">.<strong>visible_moons</strong>  &#x21d2; Array </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns a list of visible moons.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#wear_moon_weapon%3F-class_method" title="wear_moon_weapon? (class method)">.<strong>wear_moon_weapon?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Attempts to wear a moon weapon if held.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="align-class_method">
+  
+    .<strong>align</strong>(skill)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Aligns the telescope based on the specified skill.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_align'>align</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>astronomy</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>skill</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The skill to align with.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The output message regarding the alignment.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 156</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_align'>align</span><span class='lparen'>(</span><span class='id identifier rubyid_skill'>skill</span><span class='rparen'>)</span>
+  <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>align </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_skill'>skill</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You focus internally</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="any_celestial_object?-class_method">
+  
+    .<strong>any_celestial_object?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if any celestial object is visible.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_any_celestial_object?'>any_celestial_object?</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if any celestial object is visible, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+516
+517
+518
+519</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 516</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_any_celestial_object?'>any_celestial_object?</span>
+  <span class='id identifier rubyid_check_moonwatch'>check_moonwatch</span>
+  <span class='lparen'>(</span><span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_sun'>sun</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>day</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_sun'>sun</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>timer</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>&gt;=</span> <span class='int'>4</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_moons_visible?'>moons_visible?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bright_celestial_object?-class_method">
+  
+    .<strong>bright_celestial_object?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if at least one bright celestial object is visible.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bright_celestial_object?'>bright_celestial_object?</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if a bright celestial object is visible, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+505
+506
+507
+508</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 505</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bright_celestial_object?'>bright_celestial_object?</span>
+  <span class='id identifier rubyid_check_moonwatch'>check_moonwatch</span>
+  <span class='lparen'>(</span><span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_sun'>sun</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>day</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_sun'>sun</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>timer</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>&gt;=</span> <span class='int'>4</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_moon_visible?'>moon_visible?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>xibar</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_moon_visible?'>moon_visible?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>yavash</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="center_telescope-class_method">
+  
+    .<strong>center_telescope</strong>(target)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Centers the telescope on a specified target.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_center_telescope'>center_telescope</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>planet</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>target</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The celestial body to center the telescope on.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The output message regarding the centering.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 131</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_center_telescope'>center_telescope</span><span class='lparen'>(</span><span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>center telescope on </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target'>target</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Center what</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You put your eye</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>open it to make any use of it</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The pain is too much</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>That&#39;s a bit tough to do when you can&#39;t see the sky</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You would probably need a periscope to do that</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Your search for</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Your vision is too fuzzy</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You&#39;ll need to open it to make any use of it</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+                <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You must have both hands free</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The pain is too much</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>That&#39;s a bit tough to do when you can&#39;t see the sky</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_echo'><span class='object_link'><a href="../../top-level-namespace.html#echo-instance_method" title="#echo (method)">echo</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Planet </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target'>target</span><span class='embexpr_end'>}</span><span class='tstring_content'> not visible. Are you indoors perhaps?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You&#39;ll need to open it to make any use of it</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_fput'><span class='object_link'><a href="../../top-level-namespace.html#fput-instance_method" title="#fput (method)">fput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>open my telescope</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_fput'><span class='object_link'><a href="../../top-level-namespace.html#fput-instance_method" title="#fput (method)">fput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>center telescope on </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target'>target</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_moonwatch-class_method">
+  
+    .<strong>check_moonwatch</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Checks if the moonwatch script is running and starts it if not.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_check_moonwatch'>check_moonwatch</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+557
+558
+559
+560
+561
+562
+563
+564
+565</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 557</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_moonwatch'>check_moonwatch</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='const'>Script</span><span class='period'>.</span><span class='id identifier rubyid_running?'>running?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>moonwatch</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_echo'><span class='object_link'><a href="../../top-level-namespace.html#echo-instance_method" title="#echo (method)">echo</a></span></span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>moonwatch is not running. Starting it now</span><span class='tstring_end'>&#39;</span></span>
+  <span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_moons'>moons</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_custom_require'>custom_require</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>moonwatch</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_echo'><span class='object_link'><a href="../../top-level-namespace.html#echo-instance_method" title="#echo (method)">echo</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Run `</span><span class='embexpr_beg'>#{</span><span class='gvar'>$clean_lich_char</span><span class='embexpr_end'>}</span><span class='tstring_content'>e autostart(&#39;moonwatch&#39;)` to avoid this in the future</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_pause'><span class='object_link'><a href="../../top-level-namespace.html#pause-instance_method" title="#pause (method)">pause</a></span></span> <span class='float'>0.5</span> <span class='kw'>while</span> <span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_moons'>moons</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="drop_moon_weapon?-class_method">
+  
+    .<strong>drop_moon_weapon?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Drops the moon weapon if held.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_drop_moon_weapon?'>drop_moon_weapon?</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if a moon weapon was dropped, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 337</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_drop_moon_weapon?'>drop_moon_weapon?</span>
+  <span class='id identifier rubyid_moon_drop_messages'>moon_drop_messages</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>As you open your hand</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>What were you referring to</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_dropped_it'>dropped_it</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_is_moon_weapon?'>is_moon_weapon?</span><span class='lparen'>(</span><span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_dropped_it'>dropped_it</span> <span class='op'>=</span> <span class='id identifier rubyid_dropped_it'>dropped_it</span> <span class='op'>||</span> <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>drop </span><span class='embexpr_beg'>#{</span><span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_moon_drop_messages'>moon_drop_messages</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>As you open your hand</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_is_moon_weapon?'>is_moon_weapon?</span><span class='lparen'>(</span><span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_dropped_it'>dropped_it</span> <span class='op'>=</span> <span class='id identifier rubyid_dropped_it'>dropped_it</span> <span class='op'>||</span> <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>drop </span><span class='embexpr_beg'>#{</span><span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_moon_drop_messages'>moon_drop_messages</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>As you open your hand</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_dropped_it'>dropped_it</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_visible_planets-class_method">
+  
+    .<strong>find_visible_planets</strong>(planets, settings = nil)  &#x21d2; <tt>Array</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Finds visible planets based on the provided settings.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_visible_planets'>find_visible_planets</span><span class='lparen'>(</span><span class='id identifier rubyid_planets'>planets</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>planets</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The list of planets to check.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>settings</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optional settings for the search.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The list of visible planets.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 437</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_visible_planets'>find_visible_planets</span><span class='lparen'>(</span><span class='id identifier rubyid_planets'>planets</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_get_telescope?'>get_telescope?</span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_telescope_name'>telescope_name</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_telescope_storage'>telescope_storage</span><span class='rparen'>)</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Coult not get telescope to find visible planets</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>return</span>
+  <span class='kw'>end</span>
+
+  <span class='const'><span class='object_link'><a href="Flags.html" title="Lich::DragonRealms::Flags (class)">Flags</a></span></span><span class='period'>.</span><span class='id identifier rubyid_add'><span class='object_link'><a href="Flags.html#add-class_method" title="Lich::DragonRealms::Flags.add (method)">add</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>planet-not-visible</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>turns up fruitless</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_observed_planets'>observed_planets</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_planets'>planets</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_planet'>planet</span><span class='op'>|</span>
+    <span class='id identifier rubyid_center_telescope'>center_telescope</span><span class='lparen'>(</span><span class='id identifier rubyid_planet'>planet</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_observed_planets'>observed_planets</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_planet'>planet</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="Flags.html" title="Lich::DragonRealms::Flags (class)">Flags</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>planet-not-visible</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'><span class='object_link'><a href="Flags.html" title="Lich::DragonRealms::Flags (class)">Flags</a></span></span><span class='period'>.</span><span class='id identifier rubyid_reset'><span class='object_link'><a href="Flags.html#reset-class_method" title="Lich::DragonRealms::Flags.reset (method)">reset</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>planet-not-visible</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='const'><span class='object_link'><a href="Flags.html" title="Lich::DragonRealms::Flags (class)">Flags</a></span></span><span class='period'>.</span><span class='id identifier rubyid_delete'><span class='object_link'><a href="Flags.html#delete-class_method" title="Lich::DragonRealms::Flags.delete (method)">delete</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>planet-not-visible</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Could not store telescope after finding visible planets</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_store_telescope?'>store_telescope?</span><span class='lparen'>(</span><span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_telescope_name'>telescope_name</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='period'>.</span><span class='id identifier rubyid_telescope_storage'>telescope_storage</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_observed_planets'>observed_planets</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_bones-class_method">
+  
+    .<strong>get_bones</strong>(storage)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Retrieves bones from storage.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_bones'>get_bones</span><span class='lparen'>(</span><span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>storage</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The storage information for the bones.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The output message regarding the retrieval.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+195
+196
+197
+198
+199
+200
+201</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 195</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_bones'>get_bones</span><span class='lparen'>(</span><span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>untie bones from my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You untie</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You remove</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>get bones from my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You get</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_bones?-class_method">
+  
+    .<strong>get_bones?</strong>(storage)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if bones can be obtained from storage.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_bones?'>get_bones?</span><span class='lparen'>(</span><span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>storage</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The storage information for the bones.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the bones can be obtained, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+165
+166
+167
+168
+169
+170
+171
+172
+173</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 165</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_bones?'>get_bones?</span><span class='lparen'>(</span><span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_untie_item?'><span class='object_link'><a href="DRCI.html#untie_item%3F-class_method" title="Lich::DragonRealms::DRCI.untie_item? (method)">untie_item?</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bones</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_item?'><span class='object_link'><a href="DRCI.html#get_item%3F-class_method" title="Lich::DragonRealms::DRCI.get_item? (method)">get_item?</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bones</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_item?'><span class='object_link'><a href="DRCI.html#get_item%3F-class_method" title="Lich::DragonRealms::DRCI.get_item? (method)">get_item?</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bones</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_div_tool-class_method">
+  
+    .<strong>get_div_tool</strong>(tool)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Retrieves the divination tool from storage.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_div_tool'>get_div_tool</span><span class='lparen'>(</span><span class='id identifier rubyid_tool'>tool</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>tool</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The tool information for the divination tool.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The output message regarding the retrieval.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+265
+266
+267
+268
+269
+270
+271
+272
+273</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 265</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_div_tool'>get_div_tool</span><span class='lparen'>(</span><span class='id identifier rubyid_tool'>tool</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>untie </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> from my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>worn</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>remove my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>get my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> from my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>you get</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_div_tool?-class_method">
+  
+    .<strong>get_div_tool?</strong>(tool)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if a divination tool can be obtained from storage.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_div_tool?'>get_div_tool?</span><span class='lparen'>(</span><span class='id identifier rubyid_tool'>tool</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>tool</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The tool information for the divination tool.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the tool can be obtained, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+235
+236
+237
+238
+239
+240
+241
+242
+243</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 235</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_div_tool?'>get_div_tool?</span><span class='lparen'>(</span><span class='id identifier rubyid_tool'>tool</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_untie_item?'><span class='object_link'><a href="DRCI.html#untie_item%3F-class_method" title="Lich::DragonRealms::DRCI.untie_item? (method)">untie_item?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>worn</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_remove_item?'><span class='object_link'><a href="DRCI.html#remove_item%3F-class_method" title="Lich::DragonRealms::DRCI.remove_item? (method)">remove_item?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_item?'><span class='object_link'><a href="DRCI.html#get_item%3F-class_method" title="Lich::DragonRealms::DRCI.get_item? (method)">get_item?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_telescope-class_method">
+  
+    .<strong>get_telescope</strong>(storage)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Retrieves the telescope from storage.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_telescope'>get_telescope</span><span class='lparen'>(</span><span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>storage</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The storage information for the telescope.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The output message regarding the retrieval.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+85
+86
+87
+88
+89
+90
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 85</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_telescope'>get_telescope</span><span class='lparen'>(</span><span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>untie telescope from my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You remove</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You untie</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>^What were you referring</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Untie what</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>^You are a little too busy</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>get telescope in my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You get a</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You are already</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>That can&#39;t be picked up</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You need a free hand to pick that up.</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>What were you referring to</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>stop practicing your Athletics</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>get my telescope</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You get a</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>What were you referring to</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You are already holding that.</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>That can&#39;t be picked up</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You need a free hand to pick that up.</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>stop practicing your Athletics</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_telescope?-class_method">
+  
+    .<strong>get_telescope?</strong>(telescope_name = &#39;telescope&#39;, storage)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the telescope can be obtained from storage.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_telescope?'>get_telescope?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>telescope</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>telescope_name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;telescope&#39;</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the telescope.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>storage</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The storage information for the telescope.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the telescope can be obtained, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get_telescope?'>get_telescope?</span><span class='lparen'>(</span><span class='id identifier rubyid_telescope_name'>telescope_name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>telescope</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_in_hands?'><span class='object_link'><a href="DRCI.html#in_hands%3F-class_method" title="Lich::DragonRealms::DRCI.in_hands? (method)">in_hands?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_telescope_name'>telescope_name</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_untie_item?'><span class='object_link'><a href="DRCI.html#untie_item%3F-class_method" title="Lich::DragonRealms::DRCI.untie_item? (method)">untie_item?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_telescope_name'>telescope_name</span><span class='comma'>,</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_item?'><span class='object_link'><a href="DRCI.html#get_item%3F-class_method" title="Lich::DragonRealms::DRCI.get_item? (method)">get_item?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_telescope_name'>telescope_name</span><span class='comma'>,</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_echo'><span class='object_link'><a href="../../top-level-namespace.html#echo-instance_method" title="#echo (method)">echo</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Telescope not found in container. Trying to get it from anywhere we can.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_item?'><span class='object_link'><a href="DRCI.html#get_item%3F-class_method" title="Lich::DragonRealms::DRCI.get_item? (method)">get_item?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_telescope_name'>telescope_name</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='kw'>true</span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_item?'><span class='object_link'><a href="DRCI.html#get_item%3F-class_method" title="Lich::DragonRealms::DRCI.get_item? (method)">get_item?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_telescope_name'>telescope_name</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="hold_moon_weapon?-class_method">
+  
+    .<strong>hold_moon_weapon?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Attempts to hold a moon weapon if not already holding one.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_hold_moon_weapon?'>hold_moon_weapon?</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if a moon weapon was successfully held, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 364</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_hold_moon_weapon?'>hold_moon_weapon?</span>
+  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_holding_moon_weapon?'>holding_moon_weapon?</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='lbracket'>[</span><span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='comma'>,</span> <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;=</span> <span class='int'>2</span>
+
+  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>moonblade</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>moonstaff</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_weapon'>weapon</span><span class='op'>|</span>
+    <span class='id identifier rubyid_glance'>glance</span> <span class='op'>=</span> <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>glance my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_weapon'>weapon</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You glance at a .* </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_weapon'>weapon</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>I could not find</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_glance'>glance</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You glance</span><span class='regexp_end'>/</span></span>
+      <span class='kw'>return</span> <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hold my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_weapon'>weapon</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You grab</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You aren&#39;t wearing</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hold hands with whom?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You need a free hand</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You grab</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="holding_moon_weapon?-class_method">
+  
+    .<strong>holding_moon_weapon?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if a moon weapon is currently held.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_holding_moon_weapon?'>holding_moon_weapon?</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if a moon weapon is held, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+354
+355
+356</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 354</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_holding_moon_weapon?'>holding_moon_weapon?</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_is_moon_weapon?'>is_moon_weapon?</span><span class='lparen'>(</span><span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_is_moon_weapon?'>is_moon_weapon?</span><span class='lparen'>(</span><span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="is_moon_weapon?-class_method">
+  
+    .<strong>is_moon_weapon?</strong>(item)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the specified item is a moon weapon.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_is_moon_weapon?'>is_moon_weapon?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>item</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The item to check.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the item is a moon weapon, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+384
+385
+386
+387
+388</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 384</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_is_moon_weapon?'>is_moon_weapon?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_item'>item</span>
+
+  <span class='op'>!</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^((black|red-hot|blue-white) moon(blade|staff))$</span><span class='regexp_end'>/i</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="moon_used_to_summon_weapon-class_method">
+  
+    .<strong>moon_used_to_summon_weapon</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Determines which moon was used to summon a weapon.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_moon_used_to_summon_weapon'>moon_used_to_summon_weapon</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the moon used, or nil if none.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 394</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_moon_used_to_summon_weapon'>moon_used_to_summon_weapon</span>
+  <span class='comment'># Note, if you have more than one weapon summoned at a time
+</span>  <span class='comment'># then the results of this method are non-deterministic.
+</span>  <span class='comment'># For example, if you have 2+ moonblades/staffs cast on different moons.
+</span>  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>moonblade</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>moonstaff</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_weapon'>weapon</span><span class='op'>|</span>
+    <span class='id identifier rubyid_glance'>glance</span> <span class='op'>=</span> <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>glance my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_weapon'>weapon</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You glance at a .* (black|red-hot|blue-white) moon(blade|staff)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>I could not find</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_glance'>glance</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>black moon</span><span class='regexp_end'>/</span></span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>katamba</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>red-hot moon</span><span class='regexp_end'>/</span></span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>yavash</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>when</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>blue-white moon</span><span class='regexp_end'>/</span></span>
+      <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>xibar</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="moon_visible?-class_method">
+  
+    .<strong>moon_visible?</strong>(moon_name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if a specific moon is visible.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_moon_visible?'>moon_visible?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>yavash</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>moon_name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the moon to check.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the moon is visible, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+537
+538
+539</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 537</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_moon_visible?'>moon_visible?</span><span class='lparen'>(</span><span class='id identifier rubyid_moon_name'>moon_name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_visible_moons'>visible_moons</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_moon_name'>moon_name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="moons_visible?-class_method">
+  
+    .<strong>moons_visible?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if at least one moon is visible.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_moons_visible?'>moons_visible?</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if at least one moon is visible, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+527
+528
+529</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 527</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_moons_visible?'>moons_visible?</span>
+  <span class='op'>!</span><span class='id identifier rubyid_visible_moons'>visible_moons</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="observe-class_method">
+  
+    .<strong>observe</strong>(thing)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Observes a celestial body or the heavens.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_observe'>observe</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>moon</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>thing</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The celestial body to observe.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The output message regarding the observation.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_observe'>observe</span><span class='lparen'>(</span><span class='id identifier rubyid_thing'>thing</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>observe </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_thing'>thing</span><span class='embexpr_end'>}</span><span class='tstring_content'> in heavens</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>observe heavens</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_thing'>thing</span><span class='period'>.</span><span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>heavens</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='id identifier rubyid_output'>output</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Your search for</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You see nothing regarding the future</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Clouds obscure</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Roundtime</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>The following heavenly bodies are visible:</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>That&#39;s a bit hard to do while inside</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="peer_telescope-class_method">
+  
+    .<strong>peer_telescope</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Peers through the telescope to observe celestial bodies.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_peer_telescope'>peer_telescope</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The output message regarding the peering.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 114</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_peer_telescope'>peer_telescope</span>
+  <span class='id identifier rubyid_telescope_regex_patterns'>telescope_regex_patterns</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span>
+    <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>The pain is too much</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You see nothing regarding the future</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You believe you&#39;ve learned all that you can about</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span><span class='id identifier rubyid_get_data'>get_data</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>constellations</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_observe_finished_messages'>observe_finished_messages</span><span class='rparen'>)</span><span class='comma'>,</span>
+    <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>open it</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Your vision is too fuzzy</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_issue_command'><span class='object_link'><a href="../Util.html#issue_command-class_method" title="Lich::Util.issue_command (method)">issue_command</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>peer my telescope</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_telescope_regex_patterns'>telescope_regex_patterns</span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Roundtime: </span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='label'>usexml:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="predict-class_method">
+  
+    .<strong>predict</strong>(thing)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Predicts the state of a celestial body.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_predict'>predict</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>all</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>thing</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The celestial body to predict.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The output message regarding the prediction.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_predict'>predict</span><span class='lparen'>(</span><span class='id identifier rubyid_thing'>thing</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>predict </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_thing'>thing</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>predict state all</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_thing'>thing</span><span class='period'>.</span><span class='id identifier rubyid_eql?'>eql?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>all</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='id identifier rubyid_output'>output</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You predict that</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You are far too</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>you lack the skill to grasp them fully</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(R|r)oundtime</span><span class='regexp_end'>/i</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You focus inwardly</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="roll_bones-class_method">
+  
+    .<strong>roll_bones</strong>(storage)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Rolls the bones for divination.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_roll_bones'>roll_bones</span><span class='lparen'>(</span><span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>storage</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The storage information for the bones.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The output message regarding the rolling.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+221
+222
+223
+224
+225
+226
+227
+228</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 221</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_roll_bones'>roll_bones</span><span class='lparen'>(</span><span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get_bones'>get_bones</span><span class='lparen'>(</span><span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span>
+
+  <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>roll my bones</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>roundtime</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_waitrt?'><span class='object_link'><a href="../../top-level-namespace.html#waitrt%3F-instance_method" title="#waitrt? (method)">waitrt?</a></span></span>
+
+  <span class='id identifier rubyid_store_bones'>store_bones</span><span class='lparen'>(</span><span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_moon_data-class_method">
+  
+    .<strong>set_moon_data</strong>(data)  &#x21d2; <tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Sets the moon data based on the provided information.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_set_moon_data'>set_moon_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The data to set.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The updated data.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 484</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_set_moon_data'>set_moon_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_data'>data</span> <span class='kw'>unless</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>moon</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_moon'>moon</span> <span class='op'>=</span> <span class='id identifier rubyid_visible_moons'>visible_moons</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_moon'>moon</span>
+    <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cast</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cast </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_moon'>moon</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>elsif</span> <span class='op'>!</span><span class='id identifier rubyid_moon'>moon</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cage of light</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cast</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cast ambient</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_echo'><span class='object_link'><a href="../../top-level-namespace.html#echo-instance_method" title="#echo (method)">echo</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>No moon available to cast </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_data'>data</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="set_planet_data-class_method">
+  
+    .<strong>set_planet_data</strong>(data, settings = nil)  &#x21d2; <tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Sets the planet data based on the provided information.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_set_planet_data'>set_planet_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The data to set.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>settings</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optional settings for the update.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The updated data.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 463</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_set_planet_data'>set_planet_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_data'>data</span> <span class='kw'>unless</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>stats</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_planets'>planets</span> <span class='op'>=</span> <span class='id identifier rubyid_get_data'>get_data</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>constellations</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:constellations</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_planet'>planet</span><span class='op'>|</span> <span class='id identifier rubyid_planet'>planet</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>stats</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_planet_names'>planet_names</span> <span class='op'>=</span> <span class='id identifier rubyid_planets'>planets</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_planet'>planet</span><span class='op'>|</span> <span class='id identifier rubyid_planet'>planet</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_visible_planets'>visible_planets</span> <span class='op'>=</span> <span class='id identifier rubyid_find_visible_planets'>find_visible_planets</span><span class='lparen'>(</span><span class='id identifier rubyid_planet_names'>planet_names</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>stats</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_stat'>stat</span><span class='op'>|</span>
+    <span class='id identifier rubyid_cast_on'>cast_on</span> <span class='op'>=</span> <span class='id identifier rubyid_planets'>planets</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_planet'>planet</span><span class='op'>|</span> <span class='id identifier rubyid_planet'>planet</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_planet'>planet</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>stats</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_stat'>stat</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_visible_planets'>visible_planets</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_planet'>planet</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span>
+    <span class='kw'>next</span> <span class='kw'>unless</span> <span class='id identifier rubyid_cast_on'>cast_on</span>
+
+    <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cast</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cast </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_cast_on'>cast_on</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_data'>data</span>
+  <span class='kw'>end</span>
+  <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Could not set planet data. Cannot cast </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>abbrev</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="store_bones-class_method">
+  
+    .<strong>store_bones</strong>(storage)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Stores the bones in the specified storage.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_store_bones'>store_bones</span><span class='lparen'>(</span><span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>storage</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The storage information for the bones.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The output message regarding the storage.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+208
+209
+210
+211
+212
+213
+214</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 208</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_store_bones'>store_bones</span><span class='lparen'>(</span><span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tie bones to my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You attach</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You tie</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>put bones in my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You put</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="store_bones?-class_method">
+  
+    .<strong>store_bones?</strong>(storage)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Stores the bones back into storage.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_store_bones?'>store_bones?</span><span class='lparen'>(</span><span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>storage</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The storage information for the bones.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the bones were successfully stored, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+180
+181
+182
+183
+184
+185
+186
+187
+188</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 180</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_store_bones?'>store_bones?</span><span class='lparen'>(</span><span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_tie_item?'><span class='object_link'><a href="DRCI.html#tie_item%3F-class_method" title="Lich::DragonRealms::DRCI.tie_item? (method)">tie_item?</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bones</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_put_away_item?'><span class='object_link'><a href="DRCI.html#put_away_item%3F-class_method" title="Lich::DragonRealms::DRCI.put_away_item? (method)">put_away_item?</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bones</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_put_away_item?'><span class='object_link'><a href="DRCI.html#put_away_item%3F-class_method" title="Lich::DragonRealms::DRCI.put_away_item? (method)">put_away_item?</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bones</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="store_div_tool-class_method">
+  
+    .<strong>store_div_tool</strong>(tool)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Stores the divination tool in the specified storage.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_store_div_tool'>store_div_tool</span><span class='lparen'>(</span><span class='id identifier rubyid_tool'>tool</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>tool</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The tool information for the divination tool.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The output message regarding the storage.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+280
+281
+282
+283
+284
+285
+286
+287
+288</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 280</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_store_div_tool'>store_div_tool</span><span class='lparen'>(</span><span class='id identifier rubyid_tool'>tool</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tie </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> to my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>worn</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wear my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>put </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> in my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You put</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="store_div_tool?-class_method">
+  
+    .<strong>store_div_tool?</strong>(tool)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Stores the divination tool back into storage.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_store_div_tool?'>store_div_tool?</span><span class='lparen'>(</span><span class='id identifier rubyid_tool'>tool</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>tool</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The tool information for the divination tool.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the tool was successfully stored, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+250
+251
+252
+253
+254
+255
+256
+257
+258</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 250</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_store_div_tool?'>store_div_tool?</span><span class='lparen'>(</span><span class='id identifier rubyid_tool'>tool</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_tie_item?'><span class='object_link'><a href="DRCI.html#tie_item%3F-class_method" title="Lich::DragonRealms::DRCI.tie_item? (method)">tie_item?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>worn</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_wear_item?'><span class='object_link'><a href="DRCI.html#wear_item%3F-class_method" title="Lich::DragonRealms::DRCI.wear_item? (method)">wear_item?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_put_away_item?'><span class='object_link'><a href="DRCI.html#put_away_item%3F-class_method" title="Lich::DragonRealms::DRCI.put_away_item? (method)">put_away_item?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_tool'>tool</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="store_telescope-class_method">
+  
+    .<strong>store_telescope</strong>(storage)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Stores the telescope in the specified storage.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_store_telescope'>store_telescope</span><span class='lparen'>(</span><span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>storage</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The storage information for the telescope.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The output message regarding the storage.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+100
+101
+102
+103
+104
+105
+106
+107
+108</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 100</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_store_telescope'>store_telescope</span><span class='lparen'>(</span><span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tie telescope to my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You attach</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>you tie</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You are a little too busy</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>put telescope in my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You put</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>stow my telescope</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Stow what</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You put your telescope</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="store_telescope?-class_method">
+  
+    .<strong>store_telescope?</strong>(telescope_name = &quot;telescope&quot;, storage)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Stores the telescope back into storage.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_store_telescope?'>store_telescope?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>telescope</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>telescope_name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&quot;telescope&quot;</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the telescope.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>storage</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The storage information for the telescope.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the telescope was successfully stored, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 68</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_store_telescope?'>store_telescope?</span><span class='lparen'>(</span><span class='id identifier rubyid_telescope_name'>telescope_name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>telescope</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_storage'>storage</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_in_hands?'><span class='object_link'><a href="DRCI.html#in_hands%3F-class_method" title="Lich::DragonRealms::DRCI.in_hands? (method)">in_hands?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_telescope_name'>telescope_name</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_tie_item?'><span class='object_link'><a href="DRCI.html#tie_item%3F-class_method" title="Lich::DragonRealms::DRCI.tie_item? (method)">tie_item?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_telescope_name'>telescope_name</span><span class='comma'>,</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tied</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_put_away_item?'><span class='object_link'><a href="DRCI.html#put_away_item%3F-class_method" title="Lich::DragonRealms::DRCI.put_away_item? (method)">put_away_item?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_telescope_name'>telescope_name</span><span class='comma'>,</span> <span class='id identifier rubyid_storage'>storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>container</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="DRCI.html" title="Lich::DragonRealms::DRCI (module)">DRCI</a></span></span><span class='period'>.</span><span class='id identifier rubyid_put_away_item?'><span class='object_link'><a href="DRCI.html#put_away_item%3F-class_method" title="Lich::DragonRealms::DRCI.put_away_item? (method)">put_away_item?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_telescope_name'>telescope_name</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="study_sky-class_method">
+  
+    .<strong>study_sky</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Studies the sky for celestial information.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_study_sky'>study_sky</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The output message regarding the study.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_study_sky'>study_sky</span>
+  <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>study sky</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You feel a lingering sense</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You feel it is too soon</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Roundtime</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You are unable to sense additional information</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>detect any portents</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_astral_data-class_method">
+  
+    .<strong>update_astral_data</strong>(data, settings = nil)  &#x21d2; <tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Updates the astral data based on the provided information.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_update_astral_data'>update_astral_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The data to update.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>settings</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optional settings for the update.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The updated data.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+422
+423
+424
+425
+426
+427
+428
+429</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 422</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_astral_data'>update_astral_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>moon</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_set_moon_data'>set_moon_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>stats</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_set_planet_data'>set_planet_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_data'>data</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use_div_tool-class_method">
+  
+    .<strong>use_div_tool</strong>(tool_storage)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Uses the specified divination tool.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use_div_tool'>use_div_tool</span><span class='lparen'>(</span><span class='id identifier rubyid_tool_storage'>tool_storage</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>tool_storage</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The storage information for the divination tool.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The output message regarding the usage.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 295</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_use_div_tool'>use_div_tool</span><span class='lparen'>(</span><span class='id identifier rubyid_tool_storage'>tool_storage</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_get_div_tool'>get_div_tool</span><span class='lparen'>(</span><span class='id identifier rubyid_tool_storage'>tool_storage</span><span class='rparen'>)</span>
+
+  <span class='lbrace'>{</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>charts</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>review</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>bones</span><span class='tstring_end'>&#39;</span></span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>roll</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mirror</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>gaze</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>bowl</span><span class='tstring_end'>&#39;</span></span>   <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>gaze</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>prism</span><span class='tstring_end'>&#39;</span></span>  <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>raise</span><span class='tstring_end'>&#39;</span></span>
+  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_tool'>tool</span><span class='comma'>,</span> <span class='id identifier rubyid__'>_</span><span class='op'>|</span> <span class='id identifier rubyid_tool_storage'>tool_storage</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_tool'>tool</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='period'>.</span><span class='id identifier rubyid_each'>each</span>   <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_tool'>tool</span><span class='comma'>,</span> <span class='id identifier rubyid_verb'>verb</span><span class='op'>|</span> <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_verb'>verb</span><span class='embexpr_end'>}</span><span class='tstring_content'> my </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tool'>tool</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>roundtime</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='id identifier rubyid_waitrt?'><span class='object_link'><a href="../../top-level-namespace.html#waitrt%3F-instance_method" title="#waitrt? (method)">waitrt?</a></span></span> <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_store_div_tool'>store_div_tool</span><span class='lparen'>(</span><span class='id identifier rubyid_tool_storage'>tool_storage</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="visible_moons-class_method">
+  
+    .<strong>visible_moons</strong>  &#x21d2; <tt>Array</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a list of visible moons.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_visible_moons'>visible_moons</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The list of visible moon names.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+547
+548
+549
+550
+551</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 547</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_visible_moons'>visible_moons</span>
+  <span class='id identifier rubyid_check_moonwatch'>check_moonwatch</span>
+  <span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_moons'>moons</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_moon_name'>moon_name</span><span class='comma'>,</span> <span class='id identifier rubyid_moon_data'>moon_data</span><span class='op'>|</span> <span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_moons'>moons</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>visible</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_moon_name'>moon_name</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_moon_data'>moon_data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>timer</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>&gt;=</span> <span class='int'>4</span> <span class='rbrace'>}</span>
+          <span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_moon_name'>moon_name</span><span class='comma'>,</span> <span class='id identifier rubyid__moon_data'>_moon_data</span><span class='op'>|</span> <span class='id identifier rubyid_moon_name'>moon_name</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="wear_moon_weapon?-class_method">
+  
+    .<strong>wear_moon_weapon?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Attempts to wear a moon weapon if held.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRCMM (module)">DRCMM</a></span></span><span class='period'>.</span><span class='id identifier rubyid_wear_moon_weapon?'>wear_moon_weapon?</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if a moon weapon was worn, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'common-moonmage.rb', line 319</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_wear_moon_weapon?'>wear_moon_weapon?</span>
+  <span class='id identifier rubyid_moon_wear_messages'>moon_wear_messages</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You&#39;re already</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You can&#39;t wear</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Wear what</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>telekinetic</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_wore_it'>wore_it</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_is_moon_weapon?'>is_moon_weapon?</span><span class='lparen'>(</span><span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_wore_it'>wore_it</span> <span class='op'>=</span> <span class='id identifier rubyid_wore_it'>wore_it</span> <span class='op'>||</span> <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wear </span><span class='embexpr_beg'>#{</span><span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_moon_wear_messages'>moon_wear_messages</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>telekinetic</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_is_moon_weapon?'>is_moon_weapon?</span><span class='lparen'>(</span><span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_wore_it'>wore_it</span> <span class='op'>=</span> <span class='id identifier rubyid_wore_it'>wore_it</span> <span class='op'>||</span> <span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_bput'>bput</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wear </span><span class='embexpr_beg'>#{</span><span class='const'>DRC</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_moon_wear_messages'>moon_wear_messages</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>telekinetic</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_wore_it'>wore_it</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Nov  7 02:18:52 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.1.7).
+</div>
+
+    </div>
+  </body>
+</html>

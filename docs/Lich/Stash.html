@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Lich::Stash
+  
+    &mdash; Lich-5 Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Lich::Stash";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span>
+     &raquo; 
+    <span class="title">Stash</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Lich::Stash
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>stash.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Lich::Stash.find_container(&#39;backpack&#39;)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_to_bag-class_method" title="add_to_bag (class method)">.<strong>add_to_bag</strong>(bag, item)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Adds an item to a specified bag.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#container-class_method" title="container (class method)">.<strong>container</strong>(param)  &#x21d2; GameObj </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Retrieves a container and ensures it is open.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#equip_hands-class_method" title="equip_hands (class method)">.<strong>equip_hands</strong>(left: false, right: false, both: false)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Equips items from the stash back into the hands.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_container-class_method" title="find_container (class method)">.<strong>find_container</strong>(param, loud_fail: true)  &#x21d2; GameObj </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Finds a container by name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#missing_primary_sheath%3F-class_method" title="missing_primary_sheath? (class method)">.<strong>missing_primary_sheath?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the primary sheath is missing from the inventory.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#missing_secondary_sheath%3F-class_method" title="missing_secondary_sheath? (class method)">.<strong>missing_secondary_sheath?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the secondary sheath is missing from the inventory.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sheath_bags-class_method" title="sheath_bags (class method)">.<strong>sheath_bags</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Finds and stores sheath settings from the ready list.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stash_hands-class_method" title="stash_hands (class method)">.<strong>stash_hands</strong>(right: false, left: false, both: false)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Stashes items from the hands into specified containers.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#try_or_fail-class_method" title="try_or_fail (class method)">.<strong>try_or_fail</strong>(seconds: 2, command: nil)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Attempts to execute a command and waits for a condition.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#wear_to_inv-class_method" title="wear_to_inv (class method)">.<strong>wear_to_inv</strong>(item)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Wears an item and attempts to add it to the inventory.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_to_bag-class_method">
+  
+    .<strong>add_to_bag</strong>(bag, item)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Adds an item to a specified bag.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Adding an item to a bag</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_add_to_bag'>add_to_bag</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>backpack</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>bag</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt>GameObj</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the bag or a GameObj instance.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>item</span>
+      
+      
+        <span class='type'>(<tt>GameObj</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The item to add to the bag.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the item was successfully added, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'stash.rb', line 67</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_add_to_bag'>add_to_bag</span><span class='lparen'>(</span><span class='id identifier rubyid_bag'>bag</span><span class='comma'>,</span> <span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_bag'>bag</span> <span class='op'>=</span> <span class='id identifier rubyid_container'>container</span><span class='lparen'>(</span><span class='id identifier rubyid_bag'>bag</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_try_or_fail'>try_or_fail</span><span class='lparen'>(</span><span class='label'>command:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_drag #</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'> #</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_bag'>bag</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='int'>20</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span>
+      <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='op'>!</span><span class='lbracket'>[</span><span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='comma'>,</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@weapon_displayer</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_bag'>bag</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='lbracket'>[</span><span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='comma'>,</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id identifier rubyid_bag'>bag</span><span class='period'>.</span><span class='id identifier rubyid_contents'>contents</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^ethereal \w+$</span><span class='regexp_end'>/</span></span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='lbracket'>[</span><span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='comma'>,</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_sleep'>sleep</span> <span class='float'>0.1</span>
+    <span class='rbrace'>}</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="container-class_method">
+  
+    .<strong>container</strong>(param)  &#x21d2; <tt>GameObj</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Retrieves a container and ensures it is open.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Checking a container</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_container'>container</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>backpack</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>param</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt>GameObj</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the container or a GameObj instance.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>GameObj</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The checked container.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'stash.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_container'>container</span><span class='lparen'>(</span><span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='ivar'>@weapon_displayer</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_container_to_check'>container_to_check</span> <span class='op'>=</span> <span class='id identifier rubyid_find_container'>find_container</span><span class='lparen'>(</span><span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='ivar'>@weapon_displayer</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_container_to_check'>container_to_check</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Util.html" title="Lich::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_issue_command'><span class='object_link'><a href="Util.html#issue_command-class_method" title="Lich::Util.issue_command (method)">issue_command</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>look in #</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_container_to_check'>container_to_check</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>In the .*$|That is closed\.|^You glance at</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='label'>silent:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>quiet:</span> <span class='kw'>true</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_container_to_check'>container_to_check</span><span class='period'>.</span><span class='id identifier rubyid_contents'>contents</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_fput'><span class='object_link'><a href="../top-level-namespace.html#fput-instance_method" title="#fput (method)">fput</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>open #</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_container_to_check'>container_to_check</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>That is closed.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@weapon_displayer</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_container_to_check'>container_to_check</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_containers'>containers</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='id identifier rubyid_item'>item</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id identifier rubyid_container_to_check'>container_to_check</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_container_to_check'>container_to_check</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="equip_hands-class_method">
+  
+    .<strong>equip_hands</strong>(left: false, right: false, both: false)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Equips items from the stash back into the hands.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Equipping hands</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_equip_hands'>equip_hands</span><span class='lparen'>(</span><span class='label'>both:</span> <span class='kw'>true</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>left</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether to equip the left hand (default: false).</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>right</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether to equip the right hand (default: false).</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>both</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether to equip both hands (default: false).</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'stash.rb', line 278</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_equip_hands'>equip_hands</span><span class='lparen'>(</span><span class='label'>left:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>right:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>both:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_both'>both</span>
+    <span class='kw'>for</span> <span class='id identifier rubyid_action'>action</span> <span class='kw'>in</span> <span class='gvar'>$fill_hands_actions</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+      <span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+    <span class='kw'>end</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_left'>left</span>
+    <span class='kw'>for</span> <span class='id identifier rubyid_action'>action</span> <span class='kw'>in</span> <span class='gvar'>$fill_left_hand_actions</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+      <span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+    <span class='kw'>end</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_right'>right</span>
+    <span class='kw'>for</span> <span class='id identifier rubyid_action'>action</span> <span class='kw'>in</span> <span class='gvar'>$fill_right_hand_actions</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+      <span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='kw'>if</span> <span class='gvar'>$fill_right_hand_actions</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+      <span class='kw'>for</span> <span class='id identifier rubyid_action'>action</span> <span class='kw'>in</span> <span class='gvar'>$fill_right_hand_actions</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+        <span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+      <span class='kw'>end</span>
+    <span class='kw'>elsif</span> <span class='gvar'>$fill_left_hand_actions</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+      <span class='kw'>for</span> <span class='id identifier rubyid_action'>action</span> <span class='kw'>in</span> <span class='gvar'>$fill_left_hand_actions</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+        <span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_container-class_method">
+  
+    .<strong>find_container</strong>(param, loud_fail: true)  &#x21d2; <tt>GameObj</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Finds a container by name.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Finding a container</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_container'>container</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_container'>find_container</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>backpack</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>param</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>, <tt>GameObj</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The name of the container or a GameObj instance.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>loud_fail</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether to raise an error if the container is not found (default: true).</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>GameObj</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The found container.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>RuntimeError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>If the container is not found and loud_fail is true.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'stash.rb', line 19</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_find_container'>find_container</span><span class='lparen'>(</span><span class='id identifier rubyid_param'>param</span><span class='comma'>,</span> <span class='label'>loud_fail:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_param'>param</span> <span class='op'>=</span> <span class='id identifier rubyid_param'>param</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='kw'>if</span> <span class='id identifier rubyid_param'>param</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>GameObj</span><span class='rparen'>)</span> <span class='comment'># (Lich::Gemstone::GameObj)
+</span>  <span class='id identifier rubyid_found_container'>found_container</span> <span class='op'>=</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_inv'>inv</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_container'>container</span><span class='op'>|</span>
+    <span class='id identifier rubyid_container'>container</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>%r[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_param'>param</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='embexpr_end'>}</span><span class='regexp_end'>]i</span></span> <span class='op'>||</span> <span class='id identifier rubyid_container'>container</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>%r[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_param'>param</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> .*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='regexp_end'>]i</span></span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_found_container'>found_container</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_loud_fail'>loud_fail</span>
+    <span class='id identifier rubyid_fail'>fail</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>could not find Container[name: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_param'>param</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_found_container'>found_container</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="missing_primary_sheath?-class_method">
+  
+    .<strong>missing_primary_sheath?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the primary sheath is missing from the inventory.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Checking for missing primary sheath</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_missing_primary_sheath?'>missing_primary_sheath?</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the primary sheath is missing, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+127
+128
+129</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'stash.rb', line 127</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_missing_primary_sheath?'>missing_primary_sheath?</span> <span class='comment'># check entry against actual inventory to catch inventory updatees
+</span>  <span class='ivar'>@sheath</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='symbol'>:sheath</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_inv'>inv</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='ivar'>@sheath</span><span class='lbracket'>[</span><span class='symbol'>:sheath</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="missing_secondary_sheath?-class_method">
+  
+    .<strong>missing_secondary_sheath?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the secondary sheath is missing from the inventory.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Checking for missing secondary sheath</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_missing_secondary_sheath?'>missing_secondary_sheath?</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the secondary sheath is missing, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+135
+136
+137</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'stash.rb', line 135</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_missing_secondary_sheath?'>missing_secondary_sheath?</span> <span class='comment'># check entry against actual inventory to catch inventory updates
+</span>  <span class='ivar'>@sheath</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='symbol'>:secondary_sheath</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_inv'>inv</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span> <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='ivar'>@sheath</span><span class='lbracket'>[</span><span class='symbol'>:secondary_sheath</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sheath_bags-class_method">
+  
+    .<strong>sheath_bags</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Finds and stores sheath settings from the ready list.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Finding sheath bags</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_sheath_bags'>sheath_bags</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'stash.rb', line 100</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sheath_bags'>sheath_bags</span>
+  <span class='comment'># find ready list settings for sheaths only; regex courtesy Eloot
+</span>  <span class='ivar'>@sheath</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='ivar'>@checked_sheaths</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='id identifier rubyid_sheath_list_match'>sheath_list_match</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?:sheath|secondary sheath):\s+&lt;d\scmd=&quot;store\s(\w+)\sclear&quot;&gt;[^&lt;]+&lt;a\sexist=&quot;(\d+)&quot;\snoun=&quot;[^&quot;]+&quot;&gt;([^&lt;]+)&lt;\/a&gt;(?:\s[^&lt;]+)?&lt;\/d&gt;</span><span class='regexp_end'>/</span></span>
+
+  <span class='id identifier rubyid_ready_lines'>ready_lines</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Util.html" title="Lich::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_issue_command'><span class='object_link'><a href="Util.html#issue_command-class_method" title="Lich::Util.issue_command (method)">issue_command</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ready list</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Your current settings are</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>To change your default item for a category that is already set</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='label'>silent:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>quiet:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ready_lines'>ready_lines</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_line'>line</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_line'>line</span> <span class='op'>=~</span> <span class='id identifier rubyid_sheath_list_match'>sheath_list_match</span>
+      <span class='id identifier rubyid_sheath_obj'>sheath_obj</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>3</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+      <span class='id identifier rubyid_sheath_type'>sheath_type</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>secondary_</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_found_container'>found_container</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_container'><span class='object_link'><a href="#find_container-class_method" title="Lich::Stash.find_container (method)">find_container</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_sheath_obj'>sheath_obj</span><span class='comma'>,</span> <span class='label'>loud_fail:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+      <span class='kw'>unless</span> <span class='id identifier rubyid_found_container'>found_container</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+        <span class='ivar'>@sheath</span><span class='period'>.</span><span class='id identifier rubyid_store'>store</span><span class='lparen'>(</span><span class='id identifier rubyid_sheath_type'>sheath_type</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='comma'>,</span> <span class='id identifier rubyid_found_container'>found_container</span><span class='rparen'>)</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_respond'><span class='object_link'><a href="../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Lich::Stash.sheath_bags Error: Could not find sheath(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sheath_obj'>sheath_obj</span><span class='embexpr_end'>}</span><span class='tstring_content'>) in inventory. Not using, possibly hidden, tucked, or missing.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+        <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_log'><span class='object_link'><a href="../Lich.html#log-class_method" title="Lich.log (method)">log</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Lich::Stash.sheath_bags Error: Could not find sheath(</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sheath_obj'>sheath_obj</span><span class='embexpr_end'>}</span><span class='tstring_content'>) in inventory. Not using, possibly hidden, tucked, or missing.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+  <span class='ivar'>@checked_sheaths</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="stash_hands-class_method">
+  
+    .<strong>stash_hands</strong>(right: false, left: false, both: false)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Stashes items from the hands into specified containers.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Stashing hands</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_stash_hands'>stash_hands</span><span class='lparen'>(</span><span class='label'>left:</span> <span class='kw'>true</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>right</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether to stash the right hand (default: false).</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>left</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether to stash the left hand (default: false).</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>both</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Whether to stash both hands (default: false).</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'stash.rb', line 146</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_stash_hands'>stash_hands</span><span class='lparen'>(</span><span class='label'>right:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>left:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>both:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='gvar'>$fill_hands_actions</span> <span class='op'>||=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='gvar'>$fill_left_hand_actions</span> <span class='op'>||=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='gvar'>$fill_right_hand_actions</span> <span class='op'>||=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+
+  <span class='id identifier rubyid_actions'>actions</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_right_hand'>right_hand</span> <span class='op'>=</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span>
+  <span class='id identifier rubyid_left_hand'>left_hand</span> <span class='op'>=</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span>
+
+  <span class='comment'># extending to use sheath / 2sheath wherever possible
+</span>  <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@checked_sheaths</span> <span class='op'>||</span> <span class='id identifier rubyid_missing_primary_sheath?'>missing_primary_sheath?</span> <span class='op'>||</span> <span class='id identifier rubyid_missing_secondary_sheath?'>missing_secondary_sheath?</span>
+    <span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_sheath_bags'><span class='object_link'><a href="#sheath_bags-class_method" title="Lich::Stash.sheath_bags (method)">sheath_bags</a></span></span> <span class='comment'># @checked_sheaths is set true when this method executes
+</span>  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='ivar'>@sheath</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='symbol'>:sheath</span><span class='rparen'>)</span>
+    <span class='kw'>unless</span> <span class='ivar'>@sheath</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='symbol'>:secondary_sheath</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_sheath'>sheath</span> <span class='op'>=</span> <span class='id identifier rubyid_second_sheath'>second_sheath</span> <span class='op'>=</span> <span class='ivar'>@sheath</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:sheath</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_sheath'>sheath</span> <span class='op'>=</span> <span class='ivar'>@sheath</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:sheath</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@sheath</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='symbol'>:sheath</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_second_sheath'>second_sheath</span> <span class='op'>=</span> <span class='ivar'>@sheath</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:secondary_sheath</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@sheath</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='symbol'>:secondary_sheath</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>elsif</span> <span class='ivar'>@sheath</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='symbol'>:secondary_sheath</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_sheath'>sheath</span> <span class='op'>=</span> <span class='id identifier rubyid_second_sheath'>second_sheath</span> <span class='op'>=</span> <span class='ivar'>@sheath</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:secondary_sheath</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_sheath'>sheath</span> <span class='op'>=</span> <span class='id identifier rubyid_second_sheath'>second_sheath</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+  <span class='comment'># weaponsack for both hands
+</span>  <span class='kw'>if</span> <span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_weapon'>weapon</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_weaponsack'>weaponsack</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='kw'>not</span> <span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_weapon'>weapon</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='kw'>and</span> <span class='kw'>not</span> <span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_weaponsack'>weaponsack</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_weapon'>weapon</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='regexp_end'>/i</span></span> <span class='kw'>or</span> <span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_escape'>escape</span><span class='lparen'>(</span><span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_weapon'>weapon</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> .*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='regexp_end'>/i</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_weaponsack'>weaponsack</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='lparen'>(</span><span class='id identifier rubyid_weaponsack'>weaponsack</span> <span class='op'>=</span> <span class='id identifier rubyid_find_container'>find_container</span><span class='lparen'>(</span><span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_weaponsack'>weaponsack</span><span class='comma'>,</span> <span class='label'>loud_fail:</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>GameObj</span><span class='rparen'>)</span> <span class='comment'># (Lich::Gemstone::GameObj)
+</span>  <span class='kw'>end</span>
+  <span class='comment'># lootsack for both hands
+</span>  <span class='kw'>if</span> <span class='op'>!</span><span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_lootsack'>lootsack</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_lootsack'>lootsack</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='id identifier rubyid_lootsack'>lootsack</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_lootsack'>lootsack</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='lparen'>(</span><span class='id identifier rubyid_lootsack'>lootsack</span> <span class='op'>=</span> <span class='id identifier rubyid_find_container'>find_container</span><span class='lparen'>(</span><span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_lootsack'>lootsack</span><span class='comma'>,</span> <span class='label'>loud_fail:</span> <span class='kw'>false</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>GameObj</span><span class='rparen'>)</span> <span class='comment'># (Lich::Gemstone::GameObj)
+</span>  <span class='kw'>end</span>
+  <span class='comment'># finding another container if needed
+</span>  <span class='id identifier rubyid_other_containers_var'>other_containers_var</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='id identifier rubyid_other_containers'>other_containers</span> <span class='op'>=</span> <span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span>
+    <span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Util.html" title="Lich::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_issue_command'><span class='object_link'><a href="Util.html#issue_command-class_method" title="Lich::Util.issue_command (method)">issue_command</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>inventory containers</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(?:You are carrying nothing at this time|You are wearing)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='label'>silent:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>quiet:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_other_containers_ids'>other_containers_ids</span> <span class='op'>=</span> <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>exist=\\&quot;(.*?)\\&quot;</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span> <span class='op'>-</span> <span class='lbracket'>[</span><span class='id identifier rubyid_lootsack'>lootsack</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_other_containers_var'>other_containers_var</span> <span class='op'>=</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_inv'>inv</span><span class='period'>.</span><span class='id identifier rubyid_find_all'>find_all</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_obj'>obj</span><span class='op'>|</span> <span class='id identifier rubyid_other_containers_ids'>other_containers_ids</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_obj'>obj</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_other_containers_var'>other_containers_var</span>
+  <span class='rbrace'>}</span>
+
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_left'>left</span> <span class='op'>||</span> <span class='id identifier rubyid_both'>both</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+    <span class='id identifier rubyid_waitrt?'><span class='object_link'><a href="../top-level-namespace.html#waitrt%3F-instance_method" title="#waitrt? (method)">waitrt?</a></span></span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_noun'>noun</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>shield|buckler|targe|heater|parma|aegis|scutum|greatshield|mantlet|pavis|arbalest|bow|crossbow|yumi|arbalest</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>\
+      <span class='kw'>and</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='op'>::</span><span class='id identifier rubyid_wear_to_inv'><span class='object_link'><a href="#wear_to_inv-class_method" title="Lich::Stash.wear_to_inv (method)">wear_to_inv</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_actions'>actions</span><span class='period'>.</span><span class='id identifier rubyid_unshift'>unshift</span> <span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='id identifier rubyid_fput'><span class='object_link'><a href="../top-level-namespace.html#fput-instance_method" title="#fput (method)">fput</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>remove #</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='int'>20</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span> <span class='kw'>break</span> <span class='kw'>if</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='kw'>or</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='semicolon'>;</span> <span class='id identifier rubyid_sleep'>sleep</span> <span class='float'>0.1</span> <span class='rbrace'>}</span>
+
+        <span class='kw'>if</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+          <span class='id identifier rubyid_dothistimeout'><span class='object_link'><a href="../top-level-namespace.html#dothistimeout-instance_method" title="#dothistimeout (method)">dothistimeout</a></span></span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>swap</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>3</span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^You don&#39;t have anything to swap!|^You swap</span><span class='regexp_end'>/</span></span>
+        <span class='kw'>end</span>
+      <span class='rbrace'>}</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_actions'>actions</span><span class='period'>.</span><span class='id identifier rubyid_unshift'>unshift</span> <span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^ethereal \w+$</span><span class='regexp_end'>/</span></span>
+          <span class='id identifier rubyid_fput'><span class='object_link'><a href="../top-level-namespace.html#fput-instance_method" title="#fput (method)">fput</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rub </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_noun'>noun</span><span class='embexpr_end'>}</span><span class='tstring_content'> tattoo</span><span class='tstring_end'>&quot;</span></span>
+          <span class='int'>20</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span> <span class='kw'>break</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>==</span> <span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='lparen'>(</span><span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>==</span> <span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='id identifier rubyid_sleep'>sleep</span> <span class='float'>0.1</span> <span class='rbrace'>}</span>
+        <span class='kw'>else</span>
+          <span class='id identifier rubyid_fput'><span class='object_link'><a href="../top-level-namespace.html#fput-instance_method" title="#fput (method)">fput</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>get #</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+          <span class='int'>20</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span> <span class='kw'>break</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='lparen'>(</span><span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span><span class='semicolon'>;</span> <span class='id identifier rubyid_sleep'>sleep</span> <span class='float'>0.1</span> <span class='rbrace'>}</span>
+        <span class='kw'>end</span>
+
+        <span class='kw'>if</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='kw'>or</span> <span class='lparen'>(</span><span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>==</span> <span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^ethereal \w+$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
+          <span class='id identifier rubyid_dothistimeout'><span class='object_link'><a href="../top-level-namespace.html#dothistimeout-instance_method" title="#dothistimeout (method)">dothistimeout</a></span></span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>swap</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>3</span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^You don&#39;t have anything to swap!|^You swap</span><span class='regexp_end'>/</span></span>
+        <span class='kw'>end</span>
+      <span class='rbrace'>}</span>
+      <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_second_sheath'>second_sheath</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>weapon</span><span class='regexp_end'>/</span></span>
+        <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_add_to_bag'><span class='object_link'><a href="#add_to_bag-class_method" title="Lich::Stash.add_to_bag (method)">add_to_bag</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_second_sheath'>second_sheath</span><span class='comma'>,</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='rparen'>)</span>
+      <span class='kw'>elsif</span> <span class='id identifier rubyid_weaponsack'>weaponsack</span> <span class='op'>&amp;&amp;</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>weapon</span><span class='regexp_end'>/</span></span>
+        <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='op'>::</span><span class='id identifier rubyid_add_to_bag'><span class='object_link'><a href="#add_to_bag-class_method" title="Lich::Stash.add_to_bag (method)">add_to_bag</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_weaponsack'>weaponsack</span><span class='comma'>,</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='rparen'>)</span>
+      <span class='kw'>elsif</span> <span class='id identifier rubyid_lootsack'>lootsack</span>
+        <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='op'>::</span><span class='id identifier rubyid_add_to_bag'><span class='object_link'><a href="#add_to_bag-class_method" title="Lich::Stash.add_to_bag (method)">add_to_bag</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_lootsack'>lootsack</span><span class='comma'>,</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='rparen'>)</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='kw'>nil</span>
+      <span class='kw'>end</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='op'>!</span><span class='id identifier rubyid_result'>result</span>
+        <span class='kw'>for</span> <span class='id identifier rubyid_container'>container</span> <span class='kw'>in</span> <span class='id identifier rubyid_other_containers'>other_containers</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+          <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='op'>::</span><span class='id identifier rubyid_add_to_bag'><span class='object_link'><a href="#add_to_bag-class_method" title="Lich::Stash.add_to_bag (method)">add_to_bag</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_container'>container</span><span class='comma'>,</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='rparen'>)</span>
+          <span class='kw'>break</span> <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_right'>right</span> <span class='op'>||</span> <span class='id identifier rubyid_both'>both</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+    <span class='id identifier rubyid_waitrt?'><span class='object_link'><a href="../top-level-namespace.html#waitrt%3F-instance_method" title="#waitrt? (method)">waitrt?</a></span></span>
+    <span class='id identifier rubyid_actions'>actions</span><span class='period'>.</span><span class='id identifier rubyid_unshift'>unshift</span> <span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^ethereal \w+$</span><span class='regexp_end'>/</span></span>
+        <span class='id identifier rubyid_fput'><span class='object_link'><a href="../top-level-namespace.html#fput-instance_method" title="#fput (method)">fput</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rub </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_noun'>noun</span><span class='embexpr_end'>}</span><span class='tstring_content'> tattoo</span><span class='tstring_end'>&quot;</span></span>
+        <span class='int'>20</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span> <span class='kw'>break</span> <span class='kw'>if</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>==</span> <span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='kw'>or</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>==</span> <span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='semicolon'>;</span> <span class='id identifier rubyid_sleep'>sleep</span> <span class='float'>0.1</span> <span class='rbrace'>}</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_fput'><span class='object_link'><a href="../top-level-namespace.html#fput-instance_method" title="#fput (method)">fput</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>get #</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='int'>20</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span> <span class='kw'>break</span> <span class='kw'>if</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='kw'>or</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='semicolon'>;</span> <span class='id identifier rubyid_sleep'>sleep</span> <span class='float'>0.1</span> <span class='rbrace'>}</span>
+      <span class='kw'>end</span>
+
+      <span class='kw'>if</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='op'>==</span> <span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span> <span class='kw'>or</span> <span class='lparen'>(</span><span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>==</span> <span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^ethereal \w+$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_dothistimeout'><span class='object_link'><a href="../top-level-namespace.html#dothistimeout-instance_method" title="#dothistimeout (method)">dothistimeout</a></span></span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>swap</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>3</span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^You don&#39;t have anything to swap!|^You swap</span><span class='regexp_end'>/</span></span>
+      <span class='kw'>end</span>
+    <span class='rbrace'>}</span>
+
+    <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_sheath'>sheath</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>&amp;&amp;</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>weapon</span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_add_to_bag'><span class='object_link'><a href="#add_to_bag-class_method" title="Lich::Stash.add_to_bag (method)">add_to_bag</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_sheath'>sheath</span><span class='comma'>,</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='rparen'>)</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_weaponsack'>weaponsack</span> <span class='op'>&amp;&amp;</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>weapon</span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='op'>::</span><span class='id identifier rubyid_add_to_bag'><span class='object_link'><a href="#add_to_bag-class_method" title="Lich::Stash.add_to_bag (method)">add_to_bag</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_weaponsack'>weaponsack</span><span class='comma'>,</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='rparen'>)</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_lootsack'>lootsack</span>
+      <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='op'>::</span><span class='id identifier rubyid_add_to_bag'><span class='object_link'><a href="#add_to_bag-class_method" title="Lich::Stash.add_to_bag (method)">add_to_bag</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_lootsack'>lootsack</span><span class='comma'>,</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_sleep'>sleep</span> <span class='float'>0.1</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='op'>!</span><span class='id identifier rubyid_result'>result</span>
+      <span class='kw'>for</span> <span class='id identifier rubyid_container'>container</span> <span class='kw'>in</span> <span class='id identifier rubyid_other_containers'>other_containers</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+        <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='op'>::</span><span class='id identifier rubyid_add_to_bag'><span class='object_link'><a href="#add_to_bag-class_method" title="Lich::Stash.add_to_bag (method)">add_to_bag</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_container'>container</span><span class='comma'>,</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='rparen'>)</span>
+        <span class='kw'>break</span> <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='gvar'>$fill_hands_actions</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_both'>both</span>
+  <span class='gvar'>$fill_left_hand_actions</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_left'>left</span>
+  <span class='gvar'>$fill_right_hand_actions</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_actions'>actions</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_right'>right</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="try_or_fail-class_method">
+  
+    .<strong>try_or_fail</strong>(seconds: 2, command: nil)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Attempts to execute a command and waits for a condition.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Trying a command</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_try_or_fail'>try_or_fail</span><span class='lparen'>(</span><span class='label'>command:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>look</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_inv'>inv</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='rbrace'>}</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>seconds</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>2</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The time to wait before failing (default: 2).</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>command</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>The command to execute.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>RuntimeError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>If the command does not succeed within the time limit.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'stash.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_try_or_fail'>try_or_fail</span><span class='lparen'>(</span><span class='label'>seconds:</span> <span class='int'>2</span><span class='comma'>,</span> <span class='label'>command:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_fput'><span class='object_link'><a href="../top-level-namespace.html#fput-instance_method" title="#fput (method)">fput</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_command'>command</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_expiry'>expiry</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>+</span> <span class='id identifier rubyid_seconds'>seconds</span>
+  <span class='id identifier rubyid_wait_until'><span class='object_link'><a href="../top-level-namespace.html#wait_until-instance_method" title="#wait_until (method)">wait_until</a></span></span> <span class='kw'>do</span> <span class='kw'>yield</span> <span class='kw'>or</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_expiry'>expiry</span> <span class='kw'>end</span>
+  <span class='id identifier rubyid_fail'>fail</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Error[command: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_command'>command</span><span class='embexpr_end'>}</span><span class='tstring_content'>, seconds: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_seconds'>seconds</span><span class='embexpr_end'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_expiry'>expiry</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="wear_to_inv-class_method">
+  
+    .<strong>wear_to_inv</strong>(item)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Wears an item and attempts to add it to the inventory.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Wearing an item</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Stash (module)">Stash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_wear_to_inv'>wear_to_inv</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>item</span>
+      
+      
+        <span class='type'>(<tt>GameObj</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The item to wear.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the item was successfully worn, false otherwise.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'stash.rb', line 85</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_wear_to_inv'>wear_to_inv</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_try_or_fail'>try_or_fail</span><span class='lparen'>(</span><span class='label'>command:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wear #</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='int'>20</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='lbrace'>{</span>
+      <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='op'>!</span><span class='lbracket'>[</span><span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='comma'>,</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_inv'>inv</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^ethereal \w+$</span><span class='regexp_end'>/</span></span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='lbracket'>[</span><span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_right_hand'>right_hand</span><span class='comma'>,</span> <span class='const'>GameObj</span><span class='period'>.</span><span class='id identifier rubyid_left_hand'>left_hand</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_sleep'>sleep</span> <span class='float'>0.1</span>
+    <span class='rbrace'>}</span>
+    <span class='kw'>return</span> <span class='kw'>false</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Nov  7 02:18:49 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.1.7).
+</div>
+
+    </div>
+  </body>
+</html>

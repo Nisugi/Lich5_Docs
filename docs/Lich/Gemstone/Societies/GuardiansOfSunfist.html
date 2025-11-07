@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Lich::Gemstone::Societies::GuardiansOfSunfist
+  
+    &mdash; Lich-5 Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Lich::Gemstone::Societies::GuardiansOfSunfist";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (G)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Lich.html" title="Lich (module)">Lich</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Societies.html" title="Lich::Gemstone::Societies (module)">Societies</a></span></span>
+     &raquo; 
+    <span class="title">GuardiansOfSunfist</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Lich::Gemstone::Societies::GuardiansOfSunfist
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Lich::Gemstone::Society</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Lich::Gemstone::Society</a></span></li>
+          
+            <li class="next">Lich::Gemstone::Societies::GuardiansOfSunfist</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>guardians_of_sunfist.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Represents the Guardians of Sunfist society.</p>
+
+<p>Provides access to Guardians of Sunfist sigil data, cost calculation, usability checks,
+and dynamic method access for individual sigils.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Accessing a sigil&#39;s metadata</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_sigil'>sigil</span> <span class='op'>=</span> <span class='const'>GuardiansOfSunfist</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sigil_of_recognition</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span></code></pre>
+    
+  </div>
+
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="sunfist_sigils-classvariable" class="">@@sunfist_sigils =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Metadata for each Sigil from the Guardians of Sunfist, including rank, costs, duration, etc.
+Some fields (e.g., <code>:summary</code>, <code>:duration</code>) may be defined as lambdas for dynamic content.
+These are automatically resolved at access time via <code>Society.resolve</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span>, <span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Sigil name mapped to metadata</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_recognition</span><span class='tstring_end'>&quot;</span></span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>1</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>recognition</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Recognition</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:utility</span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9701</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Detects members and/or foes of the Guardians of Sunfist in the same room.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_location</span><span class='tstring_end'>&quot;</span></span>         <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>2</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>location</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Location</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9702</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Detects nearby foes and warcamps; reveals paths to them.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_contact</span><span class='tstring_end'>&quot;</span></span>          <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>3</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>contact</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Contact</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9703</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>1</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='int'>1140</span><span class='comma'>,</span> <span class='comment'># 19 minutes
+</span>    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Activates the ESP (amunet) network.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_resolve</span><span class='tstring_end'>&quot;</span></span>          <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>4</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>resolve</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Resolve</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9704</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>5</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='int'>90</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Increases Climbing, Swimming, and Survival skills equal to half current rank (</span><span class='embexpr_beg'>#{</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rank'><span class='object_link'><a href="../Society.html#rank-class_method" title="Lich::Gemstone::Society.rank (method)">rank</a></span></span> <span class='op'>/</span> <span class='int'>2</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_floor'>floor</span><span class='embexpr_end'>}</span><span class='tstring_content'>) for 90 seconds.</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_minor_bane</span><span class='tstring_end'>&quot;</span></span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>5</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>minor bane</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Minor Bane</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9705</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>3</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>3</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='int'>60</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Adds +5 AS (for any target) and grants heavy damage weighting (against foes) to melee, ranged and bolt attacks for 60 seconds.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_bandages</span><span class='tstring_end'>&quot;</span></span>         <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>6</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bandages</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Bandages</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9706</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>10</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='int'>300</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Allows you to perform actions with bandaged wounds that would normally break them for 5 minutes.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_defense</span><span class='tstring_end'>&quot;</span></span>          <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>7</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>defense</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Defense</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9707</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>5</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>5</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='int'>300</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Increases +1 DS per rank (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rank'><span class='object_link'><a href="../Society.html#rank-class_method" title="Lich::Gemstone::Society.rank (method)">rank</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>) for 5 minutes.</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_offense</span><span class='tstring_end'>&quot;</span></span>          <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>8</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>offense</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Offense</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9708</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>5</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>5</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='int'>300</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Increases +1 AS per rank (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rank'><span class='object_link'><a href="../Society.html#rank-class_method" title="Lich::Gemstone::Society.rank (method)">rank</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>) for 5 minutes.</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_distraction</span><span class='tstring_end'>&quot;</span></span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>9</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>distraction</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Distraction</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9709</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>10</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>5</span> <span class='rbrace'>}</span><span class='comma'>,</span>  <span class='comment'>## TODO: Figure out how to calc room version cost instead
+</span>    <span class='label'>duration:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Decreases enemies&#39; chances to evade, parry, and block.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_minor_protection</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>10</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>minor protection</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Minor Protection</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9710</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>10</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>5</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='int'>60</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Adds +5 DS and grants heavy damage padding for 1 minute. Can be stacked up to 3 minutes.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_focus</span><span class='tstring_end'>&quot;</span></span>            <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>11</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>focus</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Focus</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9711</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>5</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>5</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='int'>60</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Increases +1 TD per rank (</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rank'><span class='object_link'><a href="../Society.html#rank-class_method" title="Lich::Gemstone::Society.rank (method)">rank</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>) for 1 minute. Can be stacked up to 3 minutes.</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_intimidation</span><span class='tstring_end'>&quot;</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>12</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>intimidation</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Intimidation</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9712</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>10</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>5</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Decreases enemies&#39; AS/DS by 20.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_mending</span><span class='tstring_end'>&quot;</span></span>          <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>13</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mending</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Mending</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9713</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>15</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>10</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='int'>600</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Increases HP recovery by 15 and allows all healing herbs to be eaten in 3 seconds for 10 minutes.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_concentration</span><span class='tstring_end'>&quot;</span></span>    <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>14</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>concentration</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Concentration</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9714</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>30</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='int'>600</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Increases mana recovery by +5 mana per pulse for 10 minutes.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_major_bane</span><span class='tstring_end'>&quot;</span></span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>15</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>major bane</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Major Bane</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9715</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>10</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>10</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='int'>60</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Adds +10 AS (all attacks) and grants heavy crit weighting to attacks (against foes) for 1 minute.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_determination</span><span class='tstring_end'>&quot;</span></span>    <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>16</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>determination</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Determination</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9716</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>30</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='int'>300</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Ignores penalties while performing tasks when a character has injuries for 5 minutes.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_health</span><span class='tstring_end'>&quot;</span></span>           <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>17</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>health</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Health</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9717</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>20</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>10</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Instantly recover 15 HP or half of your lost HP, whichever is greater (right now: </span><span class='embexpr_beg'>#{</span><span class='lbracket'>[</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='const'>Char</span><span class='period'>.</span><span class='id identifier rubyid_max_health'>max_health</span> <span class='op'>-</span> <span class='const'>Char</span><span class='period'>.</span><span class='id identifier rubyid_health'>health</span><span class='rparen'>)</span> <span class='op'>/</span> <span class='int'>2</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>15</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span><span class='embexpr_end'>}</span><span class='tstring_content'>).</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_power</span><span class='tstring_end'>&quot;</span></span>            <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>18</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>power</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Power</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9718</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>50</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Convert 50 stamina to 25 mana.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_major_protection</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>19</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>major protection</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Major Protection</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9719</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>15</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>10</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='int'>60</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Adds +10 DS and grants heavy crit padding for 1 minute. Can be stacked up to 3 minutes.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil_of_escape</span><span class='tstring_end'>&quot;</span></span>           <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>20</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>escape</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sigil of Escape</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9720</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>75</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>15</span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='comment'>## TODO: figure out higher cost?
+</span>    <span class='label'>duration:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Teleports you to a safe location. The emergency version can be used while stunned, bound, in RT, etc., at higher cost.</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#[]-class_method" title="[] (class method)">.<strong>[]</strong>(name)  &#x21d2; Hash<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Retrieves a sigil definition by short or long name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#affordable%3F-class_method" title="affordable? (class method)">.<strong>affordable?</strong>(sigil_name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the character can currently afford to use a given Guardians of Sunfist sigil, based on available stamina and mana.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#all-class_method" title="all (class method)">.<strong>all</strong>  &#x21d2; Array&lt;Hash&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns all Guardians of Sunfist sigil metadata entries with evaluated fields.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#available%3F-class_method" title="available? (class method)">.<strong>available?</strong>(sigil_name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Determines whether the specified Guardians of Sunfist sigil is currently available for use.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#known%3F-class_method" title="known? (class method)">.<strong>known?</strong>(sigil_name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Determines if the character knows a given Sunfist sigil, based on society rank.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#master%3F-class_method" title="master? (class method)">.<strong>master?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the character is a Sunfist master (rank 20).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#member%3F-class_method" title="member? (class method)">.<strong>member?</strong>(rank = nil)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the character is a member of the Guardians of Sunfist, and optionally at a specific rank.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rank-class_method" title="rank (class method)">.<strong>rank</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Provides the current rank of the character within the Guardians of Sunfist.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sigil_lookups-class_method" title="sigil_lookups (class method)">.<strong>sigil_lookups</strong>  &#x21d2; Array&lt;Hash&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns a simplified list of all sigils with key attributes used for lookup and UI.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use-class_method" title="use (class method)">.<strong>use</strong>(sigil_name, target = nil)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Attempts to use a Guardians of Sunfist sigil by issuing the appropriate command.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Lich::Gemstone::Society</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Society.html#define_name_methods-class_method" title="Lich::Gemstone::Society.define_name_methods (method)">define_name_methods</a></span>, <span class='object_link'><a href="../Society.html#favor-class_method" title="Lich::Gemstone::Society.favor (method)">favor</a></span>, <span class='object_link'><a href="../Society.html#lookup-class_method" title="Lich::Gemstone::Society.lookup (method)">lookup</a></span>, <span class='object_link'><a href="../Society.html#member-class_method" title="Lich::Gemstone::Society.member (method)">member</a></span>, <span class='object_link'><a href="../Society.html#membership-class_method" title="Lich::Gemstone::Society.membership (method)">membership</a></span>, <span class='object_link'><a href="../Society.html#resolve-class_method" title="Lich::Gemstone::Society.resolve (method)">resolve</a></span>, <span class='object_link'><a href="../Society.html#serialize-class_method" title="Lich::Gemstone::Society.serialize (method)">serialize</a></span>, <span class='object_link'><a href="../Society.html#status-class_method" title="Lich::Gemstone::Society.status (method)">status</a></span>, <span class='object_link'><a href="../Society.html#step-class_method" title="Lich::Gemstone::Society.step (method)">step</a></span>, <span class='object_link'><a href="../Society.html#task-class_method" title="Lich::Gemstone::Society.task (method)">task</a></span></p>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="[]-class_method">
+  
+    .<strong>[]</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Retrieves a sigil definition by short or long name.</p>
+
+<p>Normalizes the provided name and attempts to match against both short and long names
+of all Guardians of Sunfist sigils. Returns the corresponding sigil metadata if found.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Retrieving a sigil</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_sigil'>sigil</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::GuardiansOfSunfist (class)">GuardiansOfSunfist</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sigil_of_location</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The short or long name of the sigil</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The sigil metadata, or nil if not found</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'guardians_of_sunfist.rb', line 225</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_lookup'>lookup</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_lookup'><span class='object_link'><a href="../Society.html#lookup-class_method" title="Lich::Gemstone::Society.lookup (method)">lookup</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_sigil_lookups'>sigil_lookups</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_lookup'>lookup</span>
+
+  <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='id identifier rubyid_lookup'>lookup</span><span class='lbracket'>[</span><span class='symbol'>:short_name</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_sigil'>sigil</span> <span class='op'>=</span> <span class='cvar'>@@sunfist_sigils</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_entry'>entry</span><span class='op'>|</span> <span class='id identifier rubyid_entry'>entry</span><span class='lbracket'>[</span><span class='symbol'>:short_name</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id identifier rubyid_key'>key</span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_sigil'>sigil</span>
+
+  <span class='id identifier rubyid_sigil'>sigil</span><span class='period'>.</span><span class='id identifier rubyid_transform_values'>transform_values</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:call</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_arity'>arity</span> <span class='op'>==</span> <span class='int'>1</span> <span class='op'>?</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_sigil'>sigil</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_v'>v</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="affordable?-class_method">
+  
+    .<strong>affordable?</strong>(sigil_name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the character can currently afford to use a given Guardians of Sunfist sigil,
+based on available stamina and mana.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Checking if a sigil is affordable</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_affordable'>affordable</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::GuardiansOfSunfist (class)">GuardiansOfSunfist</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sigil_of_minor_bane</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>sigil_name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Long or short name of the sigil</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the sigil can be afforded now</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'guardians_of_sunfist.rb', line 352</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
+  <span class='id identifier rubyid_sigil'>sigil</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_sigil'>sigil</span>
+
+  <span class='id identifier rubyid_cost'>cost</span> <span class='op'>=</span> <span class='id identifier rubyid_sigil'>sigil</span><span class='lbracket'>[</span><span class='symbol'>:cost</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_stamina_cost'>stamina_cost</span> <span class='op'>=</span> <span class='id identifier rubyid_cost'>cost</span><span class='lbracket'>[</span><span class='symbol'>:stamina</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_mana_cost'>mana_cost</span> <span class='op'>=</span> <span class='id identifier rubyid_cost'>cost</span><span class='lbracket'>[</span><span class='symbol'>:mana</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+
+  <span class='kw'>unless</span> <span class='id identifier rubyid_stamina_cost'>stamina_cost</span><span class='period'>.</span><span class='id identifier rubyid_zero?'>zero?</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='const'>Char</span><span class='period'>.</span><span class='id identifier rubyid_stamina'>stamina</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_stamina_cost'>stamina_cost</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>unless</span> <span class='id identifier rubyid_mana_cost'>mana_cost</span><span class='period'>.</span><span class='id identifier rubyid_zero?'>zero?</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='const'>Char</span><span class='period'>.</span><span class='id identifier rubyid_mana'>mana</span> <span class='op'>&gt;=</span> <span class='id identifier rubyid_mana_cost'>mana_cost</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="all-class_method">
+  
+    .<strong>all</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns all Guardians of Sunfist sigil metadata entries with evaluated fields.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Getting all sigils</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_all_sigils'>all_sigils</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::GuardiansOfSunfist (class)">GuardiansOfSunfist</a></span></span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>An array of sigil metadata hashes with lambdas resolved</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+406
+407
+408</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'guardians_of_sunfist.rb', line 406</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
+  <span class='cvar'>@@sunfist_sigils</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_entry'>entry</span><span class='op'>|</span> <span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_transform_values'>transform_values</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_resolve'><span class='object_link'><a href="../Society.html#resolve-class_method" title="Lich::Gemstone::Society.resolve (method)">resolve</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='comma'>,</span> <span class='id identifier rubyid_entry'>entry</span><span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="available?-class_method">
+  
+    .<strong>available?</strong>(sigil_name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Determines whether the specified Guardians of Sunfist sigil is currently available for use.</p>
+
+<p>A sigil is considered available if:</p>
+
+<ul>
+<li>The character knows the sigil (based on rank)</li>
+<li>The character can afford the sigil (based on stamina and mana)</li>
+</ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Checking if a sigil is available</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_available'>available</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::GuardiansOfSunfist (class)">GuardiansOfSunfist</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sigil_of_defense</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>sigil_name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Long or short name of the sigil</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the sigil can be used right now</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+391
+392
+393
+394</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'guardians_of_sunfist.rb', line 391</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
+  <span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="known?-class_method">
+  
+    .<strong>known?</strong>(sigil_name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Determines if the character knows a given Sunfist sigil, based on society rank.</p>
+
+<p>Uses the unified <code>[]</code> method for normalized lookup by short or long name.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Checking if a sigil is known</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_known'>known</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::GuardiansOfSunfist (class)">GuardiansOfSunfist</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sigil_of_contact</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>sigil_name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The short or long name of the sigil</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the character&#39;s rank is sufficient to use the sigil</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+289
+290
+291
+292
+293
+294
+295</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'guardians_of_sunfist.rb', line 289</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
+  <span class='id identifier rubyid_sigil'>sigil</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_sigil'>sigil</span>
+
+  <span class='id identifier rubyid_sigil'>sigil</span><span class='lbracket'>[</span><span class='symbol'>:rank</span><span class='rbracket'>]</span> <span class='op'>&lt;=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rank'>rank</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="master?-class_method">
+  
+    .<strong>master?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the character is a Sunfist master (rank 20).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Checking if a character is a master</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_is_master'>is_master</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::GuardiansOfSunfist (class)">GuardiansOfSunfist</a></span></span><span class='period'>.</span><span class='id identifier rubyid_master?'>master?</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the character has achieved master rank in the Guardians of Sunfist</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+439
+440
+441
+442</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'guardians_of_sunfist.rb', line 439</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_master?'>master?</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
+  <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rank'><span class='object_link'><a href="../Society.html#rank-class_method" title="Lich::Gemstone::Society.rank (method)">rank</a></span></span> <span class='op'>==</span> <span class='int'>20</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="member?-class_method">
+  
+    .<strong>member?</strong>(rank = nil)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the character is a member of the Guardians of Sunfist,
+and optionally at a specific rank.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Checking membership</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_is_member'>is_member</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::GuardiansOfSunfist (class)">GuardiansOfSunfist</a></span></span><span class='period'>.</span><span class='id identifier rubyid_member?'>member?</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>rank</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optional specific rank to check against</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the character is a Sunfist member (and at the specified rank, if given)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+424
+425
+426
+427</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'guardians_of_sunfist.rb', line 424</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_member?'>member?</span><span class='lparen'>(</span><span class='id identifier rubyid_rank'>rank</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_membership'><span class='object_link'><a href="../Society.html#membership-class_method" title="Lich::Gemstone::Society.membership (method)">membership</a></span></span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Guardians of Sunfist</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_rank'>rank</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rank'><span class='object_link'><a href="../Society.html#rank-class_method" title="Lich::Gemstone::Society.rank (method)">rank</a></span></span> <span class='op'>==</span> <span class='id identifier rubyid_rank'>rank</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rank-class_method">
+  
+    .<strong>rank</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Provides the current rank of the character within the Guardians of Sunfist.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Getting the current rank</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_current_rank'>current_rank</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::GuardiansOfSunfist (class)">GuardiansOfSunfist</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rank'>rank</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current rank of the character</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+454
+455
+456
+457</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'guardians_of_sunfist.rb', line 454</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rank'>rank</span>
+  <span class='kw'>return</span> <span class='int'>0</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
+  <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rank'><span class='object_link'><a href="../Society.html#rank-class_method" title="Lich::Gemstone::Society.rank (method)">rank</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sigil_lookups-class_method">
+  
+    .<strong>sigil_lookups</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a simplified list of all sigils with key attributes used for lookup and UI.</p>
+
+<p>Used internally to normalize and match against sigil names.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Getting sigil lookups</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_lookups'>lookups</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::GuardiansOfSunfist (class)">GuardiansOfSunfist</a></span></span><span class='period'>.</span><span class='id identifier rubyid_sigil_lookups'>sigil_lookups</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Each hash contains:</p>
+
+<ul>
+<li>:short_name [String]</li>
+<li>:long_name [String]</li>
+<li>:rank [Integer]</li>
+<li>:cost [Hash]</li>
+</ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'guardians_of_sunfist.rb', line 263</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sigil_lookups'>sigil_lookups</span>
+  <span class='cvar'>@@sunfist_sigils</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_sigil'>sigil</span><span class='op'>|</span>
+    <span class='lbrace'>{</span>
+      <span class='label'>long_name:</span> <span class='id identifier rubyid_sigil'>sigil</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>short_name:</span> <span class='id identifier rubyid_sigil'>sigil</span><span class='lbracket'>[</span><span class='symbol'>:short_name</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>rank:</span> <span class='id identifier rubyid_sigil'>sigil</span><span class='lbracket'>[</span><span class='symbol'>:rank</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>cost:</span> <span class='id identifier rubyid_sigil'>sigil</span><span class='lbracket'>[</span><span class='symbol'>:cost</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use-class_method">
+  
+    .<strong>use</strong>(sigil_name, target = nil)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Attempts to use a Guardians of Sunfist sigil by issuing the appropriate command.</p>
+
+<p>If the sigil has a defined <code>:usage</code> string, it is used directly.
+Otherwise, defaults to <code>sigil of &lt;short_name&gt;</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Using a sigil</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::GuardiansOfSunfist (class)">GuardiansOfSunfist</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sigil_of_recognition</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>sigil_name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The short or long name of the sigil to invoke</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>target</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optional target for the sigil (appended to command)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'guardians_of_sunfist.rb', line 316</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
+    <span class='const'><span class='object_link'><a href="../../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Messaging.html" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_msg'><span class='object_link'><a href="../../Messaging.html#msg-class_method" title="Lich::Messaging.msg (method)">msg</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>error</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Not a member of Guardians of Sunfist, can&#39;t use: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>return</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_sigil'>sigil</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='rbracket'>]</span>
+
+  <span class='kw'>unless</span> <span class='id identifier rubyid_sigil'>sigil</span>
+    <span class='const'><span class='object_link'><a href="../../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Messaging.html" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_msg'><span class='object_link'><a href="../../Messaging.html#msg-class_method" title="Lich::Messaging.msg (method)">msg</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>error</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unknown sigil: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>return</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='id identifier rubyid_sigil'>sigil</span><span class='lbracket'>[</span><span class='symbol'>:usage</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sigil of </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sigil'>sigil</span><span class='lbracket'>[</span><span class='symbol'>:short_name</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_waitrt?'><span class='object_link'><a href="../../../top-level-namespace.html#waitrt%3F-instance_method" title="#waitrt? (method)">waitrt?</a></span></span>
+    <span class='id identifier rubyid_waitcastrt?'><span class='object_link'><a href="../../../top-level-namespace.html#waitcastrt%3F-instance_method" title="#waitcastrt? (method)">waitcastrt?</a></span></span>
+    <span class='id identifier rubyid_fput'><span class='object_link'><a href="../../../top-level-namespace.html#fput-instance_method" title="#fput (method)">fput</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_command'>command</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target'>target</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="../../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Messaging.html" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_msg'><span class='object_link'><a href="../../Messaging.html#msg-class_method" title="Lich::Messaging.msg (method)">msg</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>warn</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You cannot use the </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sigil_name'>sigil_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> sigil right now.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Nov  7 02:18:57 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.1.7).
+</div>
+
+    </div>
+  </body>
+</html>

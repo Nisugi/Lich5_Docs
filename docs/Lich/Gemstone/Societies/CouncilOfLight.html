@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Lich::Gemstone::Societies::CouncilOfLight
+  
+    &mdash; Lich-5 Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Lich::Gemstone::Societies::CouncilOfLight";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Lich.html" title="Lich (module)">Lich</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Societies.html" title="Lich::Gemstone::Societies (module)">Societies</a></span></span>
+     &raquo; 
+    <span class="title">CouncilOfLight</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Lich::Gemstone::Societies::CouncilOfLight
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Lich::Gemstone::Society</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Lich::Gemstone::Society</a></span></li>
+          
+            <li class="next">Lich::Gemstone::Societies::CouncilOfLight</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>council_of_light.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>col = Lich::Gemstone::Societies::CouncilOfLight</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="col_signs-classvariable" class="">@@col_signs =
+          <div class="docstring">
+  <div class="discussion">
+    <p>Metadata for each Sign from the Council of Light, including rank, cost, duration, etc.
+Some fields (e.g., <code>:summary</code>, <code>:duration</code>) may be defined as lambdas for dynamic content.
+These are automatically resolved at access time via <code>Society.resolve</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&lt;<span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span>, <span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Sign long name mapped to metadata</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_recognition</span><span class='tstring_end'>&quot;</span></span>  <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>1</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>recognition</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Recognition</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:utility</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Allows the character to identify other members and their relative ranks.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9901</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_signal</span><span class='tstring_end'>&quot;</span></span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>2</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>signal</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Signal</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:utility</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Use sign language to communicate with other society members in the room.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9902</span><span class='comma'>,</span>
+    <span class='label'>usage:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>signal</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_warding</span><span class='tstring_end'>&quot;</span></span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>3</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>warding</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Warding</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:defense</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>1</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:invoked</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Increases Defensive Strength by +5 for 10 seconds/level (</span><span class='embexpr_beg'>#{</span><span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>).</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9903</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_striking</span><span class='tstring_end'>&quot;</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>4</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>striking</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Striking</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:offense</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>1</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:invoked</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Increases Attack Strength by +5 for 10 seconds/level (</span><span class='embexpr_beg'>#{</span><span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>).</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9904</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_clotting</span><span class='tstring_end'>&quot;</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>5</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>clotting</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Clotting</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:utility</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>1</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:invoked</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Stops bleeding immediately for 10 seconds/level (</span><span class='embexpr_beg'>#{</span><span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>).</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9905</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_thought</span><span class='tstring_end'>&quot;</span></span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>6</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>thought</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Thought</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:utility</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>1</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:invoked</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='int'>600</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='int'>6</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Gives the same effect as rubbing a crystal amulet for 10 minutes + 6 seconds/level (</span><span class='embexpr_beg'>#{</span><span class='int'>600</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='int'>6</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>).</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9906</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_defending</span><span class='tstring_end'>&quot;</span></span>    <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>7</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>defending</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Defending</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:defense</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>2</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:invoked</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Increases Defensive Strength by +10 for 10 seconds/level (</span><span class='embexpr_beg'>#{</span><span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>).</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9907</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_smiting</span><span class='tstring_end'>&quot;</span></span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>8</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>smiting</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Smiting</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:offense</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>2</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:invoked</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Increases Attack Strength by +10 for 10 seconds/level (</span><span class='embexpr_beg'>#{</span><span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>).</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9908</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_staunching</span><span class='tstring_end'>&quot;</span></span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>9</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>staunching</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Staunching</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:utility</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>1</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:invoked</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='int'>20</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Stops all bleeding for 20 seconds/level (</span><span class='embexpr_beg'>#{</span><span class='int'>20</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>).</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9909</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_deflection</span><span class='tstring_end'>&quot;</span></span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>10</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>deflection</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Deflection</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:defense</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>3</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:invoked</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Increases Bolt DS by +20 for 10 seconds/level (</span><span class='embexpr_beg'>#{</span><span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>).</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9910</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_hypnosis</span><span class='tstring_end'>&quot;</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>11</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hypnosis</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Hypnosis</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:utility</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:invoked</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Calms a random target with a hidden warding check for a variable duration.</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9911</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_swords</span><span class='tstring_end'>&quot;</span></span>       <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>12</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>swords</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Swords</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:offense</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:dissipates</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Increases Attack Strength by +20 for 10 seconds/level (</span><span class='embexpr_beg'>#{</span><span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>).</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9912</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_shields</span><span class='tstring_end'>&quot;</span></span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>13</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shields</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Shields</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:defense</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:dissipates</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Increases Defensive Strength by +20 for 10 seconds/level (</span><span class='embexpr_beg'>#{</span><span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>).</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9913</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_dissipation</span><span class='tstring_end'>&quot;</span></span>  <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>14</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>dissipation</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Dissipation</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:defense</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:dissipates</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tlambda'>-&gt;</span> <span class='tlambeg'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Increases Target Defense by +15 for 10 seconds/level (</span><span class='embexpr_beg'>#{</span><span class='int'>10</span> <span class='op'>*</span> <span class='const'><span class='object_link'><a href="../Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="../Stats.html#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>).</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9914</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_healing</span><span class='tstring_end'>&quot;</span></span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>15</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>healing</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Healing</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:utility</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>2</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:invoked</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Fully regenerates all hit points.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9915</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_madness</span><span class='tstring_end'>&quot;</span></span>      <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>16</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>madness</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Madness</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:utility</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>3</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:dissipates</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='int'>15</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>+50 to AS, -50 to DS for 15 seconds.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9916</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_possession</span><span class='tstring_end'>&quot;</span></span>   <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>17</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>possession</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Possession</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:utility</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>4</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:invoked</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Mass Calm the room with a hidden warding roll.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9917</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_wracking</span><span class='tstring_end'>&quot;</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>18</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wracking</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Wracking</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:utility</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>5</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:invoked</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Instantly replenishes all mana.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9918</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_darkness</span><span class='tstring_end'>&quot;</span></span>     <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>19</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>darkness</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Darkness</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:utility</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>6</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='symbol'>:invoked</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Teleports the user to a \&quot;safe point\&quot; or to the nearest Council chapter (whichever is closer).</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9919</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_hopelessness</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+    <span class='label'>rank:</span> <span class='int'>20</span><span class='comma'>,</span>
+    <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hopelessness</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sign of Hopelessness</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='symbol'>:utility</span><span class='comma'>,</span>
+    <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>spirit:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>mana:</span> <span class='int'>0</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='label'>cost_type:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>duration:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='label'>summary:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Causes you to decay while dead.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='label'>spell_number:</span> <span class='int'>9920</span><span class='comma'>,</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#[]-class_method" title="[] (class method)">.<strong>[]</strong>(name)  &#x21d2; Hash<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Retrieves a sign definition by short or long name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#affordable%3F-class_method" title="affordable? (class method)">.<strong>affordable?</strong>(sign_name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the character can currently afford to use a given Council of Light sign, based on available spirit and mana.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#all-class_method" title="all (class method)">.<strong>all</strong>  &#x21d2; Array&lt;Hash&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns all known sign metadata, resolving any dynamic (lambda) fields.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#available%3F-class_method" title="available? (class method)">.<strong>available?</strong>(sign_name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Determines whether the specified Council of Light sign is currently available for use.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#known%3F-class_method" title="known? (class method)">.<strong>known?</strong>(sign_name)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Determines if the character knows the given Council of Light sign, based on the society rank and the sign&#39;s required rank.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#master%3F-class_method" title="master? (class method)">.<strong>master?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the character is a COL master (rank 20).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#member%3F-class_method" title="member? (class method)">.<strong>member?</strong>(rank = nil)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Checks if the character is a member of COL and optionally at a given rank.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pending_spirit_loss-class_method" title="pending_spirit_loss (class method)">.<strong>pending_spirit_loss</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Calculates the total pending spirit loss from active Council of Light signs that consume spirit when their effects end (i.e., cost_type is :dissipates).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rank-class_method" title="rank (class method)">.<strong>rank</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Provides the current rank of the character within the Council of Light.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sign_lookups-class_method" title="sign_lookups (class method)">.<strong>sign_lookups</strong>  &#x21d2; Array&lt;Hash&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns an array of sign metadata, including cost and rank.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#use-class_method" title="use (class method)">.<strong>use</strong>(sign_name, target = nil)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Attempts to use a Council of Light sign by issuing the appropriate command.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Lich::Gemstone::Society</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Society.html#define_name_methods-class_method" title="Lich::Gemstone::Society.define_name_methods (method)">define_name_methods</a></span>, <span class='object_link'><a href="../Society.html#favor-class_method" title="Lich::Gemstone::Society.favor (method)">favor</a></span>, <span class='object_link'><a href="../Society.html#lookup-class_method" title="Lich::Gemstone::Society.lookup (method)">lookup</a></span>, <span class='object_link'><a href="../Society.html#member-class_method" title="Lich::Gemstone::Society.member (method)">member</a></span>, <span class='object_link'><a href="../Society.html#membership-class_method" title="Lich::Gemstone::Society.membership (method)">membership</a></span>, <span class='object_link'><a href="../Society.html#resolve-class_method" title="Lich::Gemstone::Society.resolve (method)">resolve</a></span>, <span class='object_link'><a href="../Society.html#serialize-class_method" title="Lich::Gemstone::Society.serialize (method)">serialize</a></span>, <span class='object_link'><a href="../Society.html#status-class_method" title="Lich::Gemstone::Society.status (method)">status</a></span>, <span class='object_link'><a href="../Society.html#step-class_method" title="Lich::Gemstone::Society.step (method)">step</a></span>, <span class='object_link'><a href="../Society.html#task-class_method" title="Lich::Gemstone::Society.task (method)">task</a></span></p>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="[]-class_method">
+  
+    .<strong>[]</strong>(name)  &#x21d2; <tt><span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Retrieves a sign definition by short or long name.</p>
+
+<p>Normalizes the provided name and attempts to match against both short and long names
+of all Council of Light signs. Returns the corresponding sign metadata if found.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Retrieving a sign by name</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_sign'>sign</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::CouncilOfLight (class)">CouncilOfLight</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_recognition</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The short or long name of the sign</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The sign metadata, or nil if not found</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'council_of_light.rb', line 266</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_lookup'>lookup</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_lookup'><span class='object_link'><a href="../Society.html#lookup-class_method" title="Lich::Gemstone::Society.lookup (method)">lookup</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_sign_lookups'>sign_lookups</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_lookup'>lookup</span>
+
+  <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='id identifier rubyid_lookup'>lookup</span><span class='lbracket'>[</span><span class='symbol'>:short_name</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_sign'>sign</span> <span class='op'>=</span> <span class='cvar'>@@col_signs</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_entry'>entry</span><span class='op'>|</span> <span class='id identifier rubyid_entry'>entry</span><span class='lbracket'>[</span><span class='symbol'>:short_name</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id identifier rubyid_key'>key</span> <span class='rbrace'>}</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_sign'>sign</span>
+
+  <span class='id identifier rubyid_sign'>sign</span><span class='period'>.</span><span class='id identifier rubyid_transform_values'>transform_values</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:call</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_arity'>arity</span> <span class='op'>==</span> <span class='int'>1</span> <span class='op'>?</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_sign'>sign</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_v'>v</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="affordable?-class_method">
+  
+    .<strong>affordable?</strong>(sign_name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the character can currently afford to use a given Council of Light sign,
+based on available spirit and mana.</p>
+
+<p>For signs that use the <code>:dissipates</code> cost type, pending spirit loss is added to the cost
+to prevent overcommitment.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Checking if a sign is affordable</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_affordable'>affordable</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::CouncilOfLight (class)">CouncilOfLight</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_signal</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>sign_name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Long or short name of the sign</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the sign can be afforded now</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'council_of_light.rb', line 396</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
+  <span class='id identifier rubyid_sign'>sign</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_sign'>sign</span>
+
+  <span class='id identifier rubyid_cost'>cost</span> <span class='op'>=</span> <span class='id identifier rubyid_sign'>sign</span><span class='lbracket'>[</span><span class='symbol'>:cost</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_spirit_cost'>spirit_cost</span> <span class='op'>=</span> <span class='id identifier rubyid_cost'>cost</span><span class='lbracket'>[</span><span class='symbol'>:spirit</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+  <span class='id identifier rubyid_mana_cost'>mana_cost</span> <span class='op'>=</span> <span class='id identifier rubyid_cost'>cost</span><span class='lbracket'>[</span><span class='symbol'>:mana</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+
+  <span class='kw'>unless</span> <span class='id identifier rubyid_spirit_cost'>spirit_cost</span><span class='period'>.</span><span class='id identifier rubyid_zero?'>zero?</span>
+    <span class='id identifier rubyid_total_spirit'>total_spirit</span> <span class='op'>=</span> <span class='id identifier rubyid_spirit_cost'>spirit_cost</span>
+    <span class='id identifier rubyid_total_spirit'>total_spirit</span> <span class='op'>+=</span> <span class='id identifier rubyid_pending_spirit_loss'>pending_spirit_loss</span> <span class='kw'>if</span> <span class='id identifier rubyid_sign'>sign</span><span class='lbracket'>[</span><span class='symbol'>:cost_type</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='symbol'>:dissipates</span>
+
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_total_spirit'>total_spirit</span> <span class='op'>&lt;</span> <span class='const'>Char</span><span class='period'>.</span><span class='id identifier rubyid_spirit'>spirit</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>unless</span> <span class='id identifier rubyid_mana_cost'>mana_cost</span><span class='period'>.</span><span class='id identifier rubyid_zero?'>zero?</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_mana_cost'>mana_cost</span> <span class='op'>&lt;=</span> <span class='const'>Char</span><span class='period'>.</span><span class='id identifier rubyid_mana'>mana</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>return</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="all-class_method">
+  
+    .<strong>all</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns all known sign metadata, resolving any dynamic (lambda) fields.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Getting all sign metadata</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_all_signs'>all_signs</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::CouncilOfLight (class)">CouncilOfLight</a></span></span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Array of sign metadata hashes with evaluated fields</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+452
+453
+454</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'council_of_light.rb', line 452</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
+  <span class='cvar'>@@col_signs</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_entry'>entry</span><span class='op'>|</span> <span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_transform_values'>transform_values</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_resolve'><span class='object_link'><a href="../Society.html#resolve-class_method" title="Lich::Gemstone::Society.resolve (method)">resolve</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_v'>v</span><span class='comma'>,</span> <span class='id identifier rubyid_entry'>entry</span><span class='rparen'>)</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="available?-class_method">
+  
+    .<strong>available?</strong>(sign_name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Determines whether the specified Council of Light sign is currently available for use.</p>
+
+<p>A sign is considered available if:</p>
+
+<ul>
+<li>The character knows the sign (based on rank)</li>
+<li>The character can afford the sign&#39;s cost (spirit/mana)</li>
+<li>If the sign&#39;s <code>:cost_type</code> is <code>:dissipates</code>, it is not currently active (as that would
+delay the cost and prevent re-use until expiration)</li>
+</ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Checking if a sign is available</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_is_available'>is_available</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::CouncilOfLight (class)">CouncilOfLight</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_signal</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>sign_name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Long or short name of the sign</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the sign can be used right now</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'council_of_light.rb', line 523</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
+  <span class='id identifier rubyid_sign'>sign</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_sign'>sign</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_sign'>sign</span><span class='lbracket'>[</span><span class='symbol'>:cost_type</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='symbol'>:dissipates</span>
+    <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="../Effects.html" title="Lich::Gemstone::Effects (module)">Effects</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Effects.html#Buffs-constant" title="Lich::Gemstone::Effects::Buffs (constant)">Buffs</a></span></span><span class='period'>.</span><span class='id identifier rubyid_active?'>active?</span><span class='lparen'>(</span><span class='id identifier rubyid_sign'>sign</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="known?-class_method">
+  
+    .<strong>known?</strong>(sign_name)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Determines if the character knows the given Council of Light sign,
+based on the society rank and the sign&#39;s required rank.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Checking if a sign is known</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_known'>known</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::CouncilOfLight (class)">CouncilOfLight</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_signal</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>sign_name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The short or long name of the sign</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the character&#39;s rank is sufficient to use the sign</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+328
+329
+330
+331
+332
+333
+334</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'council_of_light.rb', line 328</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
+  <span class='id identifier rubyid_sign'>sign</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_sign'>sign</span>
+
+  <span class='id identifier rubyid_sign'>sign</span><span class='lbracket'>[</span><span class='symbol'>:rank</span><span class='rbracket'>]</span> <span class='op'>&lt;=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rank'>rank</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="master?-class_method">
+  
+    .<strong>master?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the character is a COL master (rank 20).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Checking if a character is a master</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_is_master'>is_master</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::CouncilOfLight (class)">CouncilOfLight</a></span></span><span class='period'>.</span><span class='id identifier rubyid_master?'>master?</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the character has achieved master rank</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+465
+466
+467
+468</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'council_of_light.rb', line 465</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_master?'>master?</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
+  <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rank'><span class='object_link'><a href="../Society.html#rank-class_method" title="Lich::Gemstone::Society.rank (method)">rank</a></span></span> <span class='op'>==</span> <span class='int'>20</span> <span class='comment'># is the rank of a COL Master
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="member?-class_method">
+  
+    .<strong>member?</strong>(rank = nil)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Checks if the character is a member of COL and optionally at a given rank.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Checking membership</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_is_member'>is_member</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::CouncilOfLight (class)">CouncilOfLight</a></span></span><span class='period'>.</span><span class='id identifier rubyid_member?'>member?</span><span class='lparen'>(</span><span class='int'>20</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>rank</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optionally check if the character is at this rank</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>True if the character is a COL member (and at the specified rank, if given)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+481
+482
+483
+484</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'council_of_light.rb', line 481</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_member?'>member?</span><span class='lparen'>(</span><span class='id identifier rubyid_rank'>rank</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_membership'><span class='object_link'><a href="../Society.html#membership-class_method" title="Lich::Gemstone::Society.membership (method)">membership</a></span></span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Council of Light</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_rank'>rank</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rank'><span class='object_link'><a href="../Society.html#rank-class_method" title="Lich::Gemstone::Society.rank (method)">rank</a></span></span> <span class='op'>==</span> <span class='id identifier rubyid_rank'>rank</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pending_spirit_loss-class_method">
+  
+    .<strong>pending_spirit_loss</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Calculates the total pending spirit loss from active Council of Light signs
+that consume spirit when their effects end (i.e., cost_type is :dissipates).</p>
+
+<p>Only signs with a non-zero :spirit cost and active buff status are considered.
+Mana costs are ignored.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Getting pending spirit loss</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_loss'>loss</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::CouncilOfLight (class)">CouncilOfLight</a></span></span><span class='period'>.</span><span class='id identifier rubyid_pending_spirit_loss'>pending_spirit_loss</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Total spirit points that will be lost when applicable signs expire.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+436
+437
+438
+439
+440
+441</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'council_of_light.rb', line 436</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_pending_spirit_loss'>pending_spirit_loss</span>
+  <span class='cvar'>@@col_signs</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span>
+             <span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_sign'>sign</span><span class='op'>|</span> <span class='id identifier rubyid_sign'>sign</span><span class='lbracket'>[</span><span class='symbol'>:cost_type</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='symbol'>:dissipates</span> <span class='rbrace'>}</span>
+             <span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_sign'>sign</span><span class='op'>|</span> <span class='const'><span class='object_link'><a href="../Effects.html" title="Lich::Gemstone::Effects (module)">Effects</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Effects.html#Buffs-constant" title="Lich::Gemstone::Effects::Buffs (constant)">Buffs</a></span></span><span class='period'>.</span><span class='id identifier rubyid_active?'>active?</span><span class='lparen'>(</span><span class='id identifier rubyid_sign'>sign</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+             <span class='period'>.</span><span class='id identifier rubyid_sum'>sum</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_sign'>sign</span><span class='op'>|</span> <span class='id identifier rubyid_sign'>sign</span><span class='period'>.</span><span class='id identifier rubyid_dig'>dig</span><span class='lparen'>(</span><span class='symbol'>:cost</span><span class='comma'>,</span> <span class='symbol'>:spirit</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rank-class_method">
+  
+    .<strong>rank</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Provides the current rank of the character within the Council of Light.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Getting the current rank</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_current_rank'>current_rank</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::CouncilOfLight (class)">CouncilOfLight</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rank'>rank</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The current rank of the character</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+495
+496
+497
+498</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'council_of_light.rb', line 495</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rank'>rank</span>
+  <span class='kw'>return</span> <span class='int'>0</span> <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
+  <span class='const'><span class='object_link'><a href="../Society.html" title="Lich::Gemstone::Society (class)">Society</a></span></span><span class='period'>.</span><span class='id identifier rubyid_rank'><span class='object_link'><a href="../Society.html#rank-class_method" title="Lich::Gemstone::Society.rank (method)">rank</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sign_lookups-class_method">
+  
+    .<strong>sign_lookups</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns an array of sign metadata, including cost and rank.</p>
+
+<p>This is used for display, iteration, and generating dynamic method accessors.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Getting all sign lookups</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_lookups'>lookups</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::CouncilOfLight (class)">CouncilOfLight</a></span></span><span class='period'>.</span><span class='id identifier rubyid_sign_lookups'>sign_lookups</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../../Hash.html" title="Hash (class)">Hash</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Each hash contains keys:</p>
+
+<ul>
+<li>:long_name [String]</li>
+<li>:short_name [String]</li>
+<li>:rank [Integer]</li>
+<li>:cost [Hash]</li>
+</ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'council_of_light.rb', line 304</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sign_lookups'>sign_lookups</span>
+  <span class='cvar'>@@col_signs</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__'>_</span><span class='comma'>,</span> <span class='id identifier rubyid_sign'>sign</span><span class='op'>|</span>
+    <span class='lbrace'>{</span>
+      <span class='label'>long_name:</span> <span class='id identifier rubyid_sign'>sign</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>short_name:</span> <span class='id identifier rubyid_sign'>sign</span><span class='lbracket'>[</span><span class='symbol'>:short_name</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>rank:</span> <span class='id identifier rubyid_sign'>sign</span><span class='lbracket'>[</span><span class='symbol'>:rank</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>cost:</span> <span class='id identifier rubyid_sign'>sign</span><span class='lbracket'>[</span><span class='symbol'>:cost</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="use-class_method">
+  
+    .<strong>use</strong>(sign_name, target = nil)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Attempts to use a Council of Light sign by issuing the appropriate command.</p>
+
+<p>If the sign has a defined <code>:usage</code> string (e.g., &quot;signal&quot;), it is used directly.
+Otherwise, defaults to <code>sign of &lt;short_name&gt;</code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'><p>Using a sign</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Societies::CouncilOfLight (class)">CouncilOfLight</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign_of_recognition</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>target</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>sign_name</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The long or short name of the sign to invoke</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>target</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Optional target for the sign (appended to command)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'council_of_light.rb', line 355</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='id identifier rubyid_member?'>member?</span>
+    <span class='const'><span class='object_link'><a href="../../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Messaging.html" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_msg'><span class='object_link'><a href="../../Messaging.html#msg-class_method" title="Lich::Messaging.msg (method)">msg</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>error</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Not a member of Council of Light, can&#39;t use: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>return</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_sign'>sign</span> <span class='op'>=</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='rbracket'>]</span>
+
+  <span class='kw'>unless</span> <span class='id identifier rubyid_sign'>sign</span>
+    <span class='const'><span class='object_link'><a href="../../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Messaging.html" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_msg'><span class='object_link'><a href="../../Messaging.html#msg-class_method" title="Lich::Messaging.msg (method)">msg</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>error</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unknown sign: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>return</span>
+  <span class='kw'>end</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_command'>command</span> <span class='op'>=</span> <span class='id identifier rubyid_sign'>sign</span><span class='lbracket'>[</span><span class='symbol'>:usage</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sign of </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sign'>sign</span><span class='lbracket'>[</span><span class='symbol'>:short_name</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_waitrt?'><span class='object_link'><a href="../../../top-level-namespace.html#waitrt%3F-instance_method" title="#waitrt? (method)">waitrt?</a></span></span>
+    <span class='id identifier rubyid_waitcastrt?'><span class='object_link'><a href="../../../top-level-namespace.html#waitcastrt%3F-instance_method" title="#waitcastrt? (method)">waitcastrt?</a></span></span>
+    <span class='id identifier rubyid_fput'><span class='object_link'><a href="../../../top-level-namespace.html#fput-instance_method" title="#fput (method)">fput</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_command'>command</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_target'>target</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="../../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Messaging.html" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_msg'><span class='object_link'><a href="../../Messaging.html#msg-class_method" title="Lich::Messaging.msg (method)">msg</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>warn</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You cannot use the </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_sign_name'>sign_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> sign right now.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Nov  7 02:18:57 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.1.7).
+</div>
+
+    </div>
+  </body>
+</html>
