@@ -261,10 +261,10 @@ Preserve ALL original code exactly as-is, only adding documentation comments."""
     def should_chunk_file(self, content: str) -> bool:
         """Determine if a file should be chunked based on size"""
         lines = len(content.split('\n'))
-        # Chunk files larger than 500 lines (increased threshold)
-        return lines > 500
+        # Chunk files larger than 300 lines to prevent output truncation
+        return lines > 300
 
-    def chunk_ruby_file(self, content: str, chunk_size: int = 400) -> List[str]:
+    def chunk_ruby_file(self, content: str, chunk_size: int = 250) -> List[str]:
         """
         Split Ruby file into logical chunks at method boundaries
 
