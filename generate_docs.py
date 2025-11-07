@@ -674,8 +674,10 @@ IMPORTANT:
                 if insert_idx is None:
                     continue
 
-                # Insert comment lines before the anchor
-                indent_str = ' ' * indent
+                # Calculate indent from the actual anchor line (more reliable than AI's indent value)
+                anchor_line = lines[insert_idx]
+                actual_indent = len(anchor_line) - len(anchor_line.lstrip())
+                indent_str = ' ' * actual_indent
                 comment_lines = []
 
                 for comment_line in comment_text.split('\n'):
