@@ -206,11 +206,13 @@ GEMINI_API_KEY=...
 
 ### Provider Options
 
-| Provider | Model | Cost (per 1M tokens) | Rate Limit |
-|----------|-------|----------------------|------------|
-| OpenAI | gpt-4o-mini | $0.15 input / $0.60 output | 400 RPM |
-| Anthropic | claude-3-haiku | $0.25 input / $1.25 output | 50 RPM |
-| Gemini | gemini-1.5-flash | $0.075 input / $0.30 output | 1500 RPM |
+The system supports three LLM providers:
+
+- **OpenAI**: Uses `gpt-4o-mini` model (paid, see [OpenAI pricing](https://openai.com/api/pricing/))
+- **Anthropic**: Uses `claude-3-haiku-20240307` model (paid, see [Anthropic pricing](https://www.anthropic.com/pricing))
+- **Gemini**: Uses `gemini-2.0-flash-exp` model (free tier available, see [Google AI pricing](https://ai.google.dev/pricing))
+
+For current pricing and rate limits, consult the provider's official documentation.
 
 ## Development
 
