@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Gemstone::Spells
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,15 +78,17 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>spells.rb</dd>
+    <dd>output/latest/documented/attributes/spells.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Module for managing spells in the Gemstone game
-Provides methods to retrieve spell circles and manage spell states.</p>
+    
+<p>Provides methods to handle spells in the Gemstone game</p>
+
+<p>This module includes methods for retrieving spell circles, active spells, and known spells.</p>
 
 
   </div>
@@ -97,7 +99,8 @@ Provides methods to retrieve spell circles and manage spell states.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Retrieving a spell circle name</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Retrieving a spell circle name</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_circle_name'>circle_name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'>Spells</span><span class='period'>.</span><span class='id identifier rubyid_get_circle_name'><span class='object_link'><a href="#get_circle_name-class_method" title="Lich::Gemstone::Spells.get_circle_name (method)">get_circle_name</a></span></span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span></code></pre>
@@ -117,7 +120,10 @@ Provides methods to retrieve spell circles and manage spell states.</p>
         <dt id="spell_lists-classvariable" class="">@@spell_lists =
           <div class="docstring">
   <div class="discussion">
-    <p>List of spell types available in the game.</p>
+    
+<p>List of spell types for the Gemstone game</p>
+
+<p>This constant holds the symbols representing different spell lists.</p>
 
 
   </div>
@@ -163,7 +169,8 @@ Provides methods to retrieve spell circles and manage spell states.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the currently active spells.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the currently active spells.</p>
 </div></span>
   
 </li>
@@ -186,7 +193,8 @@ Provides methods to retrieve spell circles and manage spell states.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the name of the spell circle based on its number.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the name of the spell circle based on the given number.</p>
 </div></span>
   
 </li>
@@ -209,7 +217,8 @@ Provides methods to retrieve spell circles and manage spell states.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves a list of known spells.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves a list of known spells.</p>
 </div></span>
   
 </li>
@@ -232,7 +241,8 @@ Provides methods to retrieve spell circles and manage spell states.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks if a cooldown is required for a given spell and applies it if necessary.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if a cooldown is required for the given spell.</p>
 </div></span>
   
 </li>
@@ -255,7 +265,8 @@ Provides methods to retrieve spell circles and manage spell states.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Serializes the spell lists into an array.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Serializes the spell lists into an array.</p>
 </div></span>
   
 </li>
@@ -281,7 +292,8 @@ Provides methods to retrieve spell circles and manage spell states.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the currently active spells.</p>
+    
+<p>Retrieves the currently active spells</p>
 
 
   </div>
@@ -291,9 +303,6 @@ Provides methods to retrieve spell circles and manage spell states.</p>
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
-      
-        <h5 class="example_title"><div class='inline'><p>Getting active spells</p>
-</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_active_spells'>active_spells</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Spells (module)">Spells</a></span></span><span class='period'>.</span><span class='id identifier rubyid_active'>active</span></code></pre>
     
@@ -310,7 +319,8 @@ Provides methods to retrieve spell circles and manage spell states.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of active spells.</p>
+        <div class='inline'>
+<p>An array of active spells</p>
 </div>
       
     </li>
@@ -323,12 +333,12 @@ Provides methods to retrieve spell circles and manage spell states.</p>
       <pre class="lines">
 
 
-51
-52
-53</pre>
+55
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'spells.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/spells.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_active'>active</span>
   <span class='const'>Spell</span><span class='period'>.</span><span class='id identifier rubyid_active'>active</span>
@@ -349,7 +359,16 @@ Provides methods to retrieve spell circles and manage spell states.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the name of the spell circle based on its number.</p>
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>Circle numbers are predefined and should be within the valid range.</p>
+</div>
+  </div>
+
+
+<p>Retrieves the name of the spell circle based on the given number</p>
 
 
   </div>
@@ -360,10 +379,7 @@ Provides methods to retrieve spell circles and manage spell states.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Getting the name of circle 1</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Spells (module)">Spells</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_circle_name'>get_circle_name</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span> <span class='comment'># =&gt; &#39;Minor Spirit&#39;</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Spells (module)">Spells</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_circle_name'>get_circle_name</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span> <span class='comment'># =&gt; &quot;Minor Spirit&quot;</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -379,7 +395,8 @@ Provides methods to retrieve spell circles and manage spell states.</p>
       
       
         &mdash;
-        <div class='inline'><p>The circle number to retrieve the name for.</p>
+        <div class='inline'>
+<p>The circle number</p>
 </div>
       
     </li>
@@ -397,7 +414,8 @@ Provides methods to retrieve spell circles and manage spell states.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the spell circle.</p>
+        <div class='inline'>
+<p>The name of the spell circle</p>
 </div>
       
     </li>
@@ -410,10 +428,6 @@ Provides methods to retrieve spell circles and manage spell states.</p>
       <pre class="lines">
 
 
-19
-20
-21
-22
 23
 24
 25
@@ -436,10 +450,14 @@ Provides methods to retrieve spell circles and manage spell states.</p>
 42
 43
 44
-45</pre>
+45
+46
+47
+48
+49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'spells.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/spells.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_circle_name'>get_circle_name</span><span class='lparen'>(</span><span class='id identifier rubyid_num'>num</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_num'>num</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -484,7 +502,8 @@ Provides methods to retrieve spell circles and manage spell states.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves a list of known spells.</p>
+    
+<p>Retrieves a list of known spells</p>
 
 
   </div>
@@ -494,9 +513,6 @@ Provides methods to retrieve spell circles and manage spell states.</p>
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
-      
-        <h5 class="example_title"><div class='inline'><p>Getting known spells</p>
-</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_known_spells'>known_spells</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Spells (module)">Spells</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known'>known</span></code></pre>
     
@@ -513,7 +529,8 @@ Provides methods to retrieve spell circles and manage spell states.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of known spells.</p>
+        <div class='inline'>
+<p>An array of known spells</p>
 </div>
       
     </li>
@@ -526,14 +543,14 @@ Provides methods to retrieve spell circles and manage spell states.</p>
       <pre class="lines">
 
 
-59
-60
-61
-62
-63</pre>
+63
+64
+65
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'spells.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/spells.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_known'>known</span>
   <span class='id identifier rubyid_known_spells'>known_spells</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -556,7 +573,16 @@ Provides methods to retrieve spell circles and manage spell states.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks if a cooldown is required for a given spell and applies it if necessary.</p>
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>This method assumes specific spell number ranges for cooldown logic.</p>
+</div>
+  </div>
+
+
+<p>Checks if a cooldown is required for the given spell</p>
 
 
   </div>
@@ -566,9 +592,6 @@ Provides methods to retrieve spell circles and manage spell states.</p>
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
-      
-        <h5 class="example_title"><div class='inline'><p>Checking cooldown for a spell</p>
-</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Spells (module)">Spells</a></span></span><span class='period'>.</span><span class='id identifier rubyid_require_cooldown'>require_cooldown</span><span class='lparen'>(</span><span class='id identifier rubyid_spell'>spell</span><span class='rparen'>)</span></code></pre>
     
@@ -586,7 +609,8 @@ Provides methods to retrieve spell circles and manage spell states.</p>
       
       
         &mdash;
-        <div class='inline'><p>The spell to check for cooldown requirements.</p>
+        <div class='inline'>
+<p>The spell to check for cooldown</p>
 </div>
       
     </li>
@@ -604,7 +628,8 @@ Provides methods to retrieve spell circles and manage spell states.</p>
       
       
         &mdash;
-        <div class='inline'><p>:ok if no cooldown is required.</p>
+        <div class='inline'>
+<p>:ok if no cooldown is required</p>
 </div>
       
     </li>
@@ -617,19 +642,19 @@ Provides methods to retrieve spell circles and manage spell states.</p>
       <pre class="lines">
 
 
-70
-71
-72
-73
-74
 75
 76
 77
 78
-79</pre>
+79
+80
+81
+82
+83
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'spells.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/spells.rb', line 75</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_require_cooldown'>require_cooldown</span><span class='lparen'>(</span><span class='id identifier rubyid_spell'>spell</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_spell'>spell</span><span class='period'>.</span><span class='id identifier rubyid_num'>num</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>&gt;</span> <span class='int'>9013</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_spell'>spell</span><span class='period'>.</span><span class='id identifier rubyid_num'>num</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>&lt;</span> <span class='int'>9042</span><span class='rparen'>)</span> <span class='comment'># Assume Aspect: Ranger
@@ -657,7 +682,8 @@ Provides methods to retrieve spell circles and manage spell states.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Serializes the spell lists into an array.</p>
+    
+<p>Serializes the spell lists into an array</p>
 
 
   </div>
@@ -667,9 +693,6 @@ Provides methods to retrieve spell circles and manage spell states.</p>
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
-      
-        <h5 class="example_title"><div class='inline'><p>Serializing spell lists</p>
-</div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_serialized_spells'>serialized_spells</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Spells (module)">Spells</a></span></span><span class='period'>.</span><span class='id identifier rubyid_serialize'>serialize</span></code></pre>
     
@@ -686,7 +709,8 @@ Provides methods to retrieve spell circles and manage spell states.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of spell ranks.</p>
+        <div class='inline'>
+<p>An array of spell ranks</p>
 </div>
       
     </li>
@@ -699,12 +723,12 @@ Provides methods to retrieve spell circles and manage spell states.</p>
       <pre class="lines">
 
 
-85
-86
-87</pre>
+90
+91
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'spells.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/spells.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_serialize'>serialize</span>
   <span class='lbracket'>[</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_minor_elemental'>minor_elemental</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_major_elemental'>major_elemental</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_minor_spiritual'>minor_spiritual</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_major_spiritual'>major_spiritual</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_wizard'>wizard</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sorcerer'>sorcerer</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ranger'>ranger</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_paladin'>paladin</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_empath'>empath</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_cleric'>cleric</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_bard'>bard</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_minormental'>minormental</span><span class='rbracket'>]</span>
@@ -719,7 +743,7 @@ Provides methods to retrieve spell circles and manage spell states.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:50 2025 by
+  Generated on Fri Nov  7 05:08:36 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

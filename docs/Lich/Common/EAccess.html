@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Common::EAccess
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,14 +78,17 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>eaccess.rb</dd>
+    <dd>output/latest/documented/common/eaccess.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Handles the EAccess functionality for the Lich project</p>
+    
+<p>Handles EAccess related operations</p>
+
+<p>This module provides methods for downloading and verifying PEM files, as well as authenticating users.</p>
 
 
   </div>
@@ -96,10 +99,11 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Using EAccess</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Authenticating a user</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'>EAccess</span><span class='period'>.</span><span class='id identifier rubyid_download_pem'><span class='object_link'><a href="#download_pem-class_method" title="Lich::Common::EAccess.download_pem (method)">download_pem</a></span></span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'>EAccess</span><span class='period'>.</span><span class='id identifier rubyid_auth'><span class='object_link'><a href="#auth-class_method" title="Lich::Common::EAccess.auth (method)">auth</a></span></span><span class='lparen'>(</span><span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>password</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>account:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>account_name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -116,7 +120,8 @@
         <dt id="PEM-constant" class="">PEM =
           <div class="docstring">
   <div class="discussion">
-    <p>The path to the PEM file used for SSL connections</p>
+    
+<p>The path to the PEM file used for SSL connections.</p>
 
 
   </div>
@@ -131,8 +136,8 @@
         <dt id="PACKET_SIZE-constant" class="">PACKET_SIZE =
           <div class="docstring">
   <div class="discussion">
-    <p>pp PEM
-The size of packets to read from the connection</p>
+    
+<p>pp PEM The size of packets to read from the connection.</p>
 
 
   </div>
@@ -178,7 +183,8 @@ The size of packets to read from the connection</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Authenticates a user with the given credentials.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Authenticates a user with the given credentials.</p>
 </div></span>
   
 </li>
@@ -201,7 +207,8 @@ The size of packets to read from the connection</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Downloads the PEM file from the specified hostname and port.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Downloads the PEM file from the specified hostname and port.</p>
 </div></span>
   
 </li>
@@ -224,7 +231,8 @@ The size of packets to read from the connection</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks if the PEM file exists.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if the PEM file exists.</p>
 </div></span>
   
 </li>
@@ -247,7 +255,8 @@ The size of packets to read from the connection</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Reads data from the connection.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Reads data from the connection.</p>
 </div></span>
   
 </li>
@@ -270,7 +279,8 @@ The size of packets to read from the connection</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Establishes a secure socket connection to the specified hostname and port.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Establishes a secure socket connection to the specified hostname and port.</p>
 </div></span>
   
 </li>
@@ -293,7 +303,8 @@ The size of packets to read from the connection</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Verifies the PEM certificate against the connection&#39;s peer certificate.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Verifies the PEM certificate against the stored PEM file.</p>
 </div></span>
   
 </li>
@@ -319,7 +330,8 @@ The size of packets to read from the connection</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Authenticates a user with the given credentials</p>
+    
+<p>Authenticates a user with the given credentials</p>
 
 
   </div>
@@ -330,10 +342,11 @@ The size of packets to read from the connection</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Authenticating a user</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Authenticating a user</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_login_info'>login_info</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::EAccess (module)">EAccess</a></span></span><span class='period'>.</span><span class='id identifier rubyid_auth'>auth</span><span class='lparen'>(</span><span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>secret</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>account:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>user123</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_login_info'>login_info</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::EAccess (module)">EAccess</a></span></span><span class='period'>.</span><span class='id identifier rubyid_auth'>auth</span><span class='lparen'>(</span><span class='label'>password:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>password</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>account:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>account_name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -349,7 +362,8 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>The user&#39;s password</p>
+        <div class='inline'>
+<p>The user’s password</p>
 </div>
       
     </li>
@@ -364,7 +378,8 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>The user&#39;s account name</p>
+        <div class='inline'>
+<p>The user’s account name</p>
 </div>
       
     </li>
@@ -381,7 +396,8 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>The character name (optional)</p>
+        <div class='inline'>
+<p>The character name (optional)</p>
 </div>
       
     </li>
@@ -398,7 +414,8 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>The game code (optional)</p>
+        <div class='inline'>
+<p>The game code (optional)</p>
 </div>
       
     </li>
@@ -415,7 +432,8 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>Whether to use legacy authentication (default: false)</p>
+        <div class='inline'>
+<p>Whether to use legacy authentication (default: false)</p>
 </div>
       
     </li>
@@ -433,7 +451,8 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>An error message or login information</p>
+        <div class='inline'>
+<p>An error message or an array of login information</p>
 </div>
       
     </li>
@@ -450,7 +469,8 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>if authentication fails</p>
+        <div class='inline'>
+<p>if authentication fails</p>
 </div>
       
     </li>
@@ -463,12 +483,6 @@ The size of packets to read from the connection</p>
       <pre class="lines">
 
 
-94
-95
-96
-97
-98
-99
 100
 101
 102
@@ -552,10 +566,16 @@ The size of packets to read from the connection</p>
 180
 181
 182
-183</pre>
+183
+184
+185
+186
+187
+188
+189</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'eaccess.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/eaccess.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_auth'>auth</span><span class='lparen'>(</span><span class='label'>password:</span><span class='comma'>,</span> <span class='label'>account:</span><span class='comma'>,</span> <span class='label'>character:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>game_code:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>legacy:</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="Account.html" title="Lich::Common::Account (module)">Account</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'><span class='object_link'><a href="Account.html#name-class_method" title="Lich::Common::Account.name (method)">name</a></span></span> <span class='op'>=</span> <span class='id identifier rubyid_account'>account</span>
@@ -663,7 +683,8 @@ The size of packets to read from the connection</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Downloads the PEM file from the specified hostname and port</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Downloads the PEM file from the specified hostname and port</p>
 
 
   </div>
@@ -674,7 +695,8 @@ The size of packets to read from the connection</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Downloading the PEM file</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Downloading the PEM file</p>
 </div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::EAccess (module)">EAccess</a></span></span><span class='period'>.</span><span class='id identifier rubyid_download_pem'>download_pem</span></code></pre>
@@ -695,7 +717,8 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>The hostname to connect to (default: &#39;eaccess.play.net&#39;)</p>
+        <div class='inline'>
+<p>The hostname to connect to (default: “eaccess.play.net”)</p>
 </div>
       
     </li>
@@ -712,13 +735,32 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>The port to connect to (default: 7910)</p>
+        <div class='inline'>
+<p>The port to connect to (default: 7910)</p>
 </div>
       
     </li>
   
 </ul>
 
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>StandardError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if the connection fails</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -726,21 +768,21 @@ The size of packets to read from the connection</p>
       <pre class="lines">
 
 
-34
-35
-36
-37
-38
 39
 40
 41
 42
 43
 44
-45</pre>
+45
+46
+47
+48
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'eaccess.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/eaccess.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_download_pem'>download_pem</span><span class='lparen'>(</span><span class='id identifier rubyid_hostname'>hostname</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>eaccess.play.net</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span> <span class='op'>=</span> <span class='int'>7910</span><span class='rparen'>)</span>
   <span class='comment'># Create an OpenSSL context
@@ -770,7 +812,8 @@ The size of packets to read from the connection</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks if the PEM file exists</p>
+    
+<p>Checks if the PEM file exists</p>
 
 
   </div>
@@ -781,10 +824,11 @@ The size of packets to read from the connection</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Checking for PEM existence</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Checking for PEM existence</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::EAccess (module)">EAccess</a></span></span><span class='period'>.</span><span class='id identifier rubyid_pem_exist?'>pem_exist?</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_exists'>exists</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::EAccess (module)">EAccess</a></span></span><span class='period'>.</span><span class='id identifier rubyid_pem_exist?'>pem_exist?</span></code></pre>
     
   </div>
 
@@ -799,7 +843,8 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>true if the PEM file exists, false otherwise</p>
+        <div class='inline'>
+<p>true if the PEM file exists, false otherwise</p>
 </div>
       
     </li>
@@ -812,12 +857,12 @@ The size of packets to read from the connection</p>
       <pre class="lines">
 
 
-24
-25
-26</pre>
+28
+29
+30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'eaccess.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/eaccess.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_pem_exist?'>pem_exist?</span>
   <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span> <span class='const'><span class='object_link'><a href="#PEM-constant" title="Lich::Common::EAccess::PEM (constant)">PEM</a></span></span>
@@ -838,7 +883,8 @@ The size of packets to read from the connection</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Reads data from the connection</p>
+    
+<p>Reads data from the connection</p>
 
 
   </div>
@@ -849,7 +895,8 @@ The size of packets to read from the connection</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Reading data from a connection</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Reading data from a connection</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::EAccess (module)">EAccess</a></span></span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_conn'>conn</span><span class='rparen'>)</span></code></pre>
@@ -868,7 +915,8 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>The connection to read from</p>
+        <div class='inline'>
+<p>The connection to read from</p>
 </div>
       
     </li>
@@ -886,7 +934,8 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>The data read from the connection</p>
+        <div class='inline'>
+<p>The data read from the connection</p>
 </div>
       
     </li>
@@ -899,12 +948,12 @@ The size of packets to read from the connection</p>
       <pre class="lines">
 
 
-190
-191
-192</pre>
+196
+197
+198</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'eaccess.rb', line 190</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/eaccess.rb', line 196</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_conn'>conn</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_conn'>conn</span><span class='period'>.</span><span class='id identifier rubyid_sysread'>sysread</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#PACKET_SIZE-constant" title="Lich::Common::EAccess::PACKET_SIZE (constant)">PACKET_SIZE</a></span></span><span class='rparen'>)</span>
@@ -925,7 +974,8 @@ The size of packets to read from the connection</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Establishes a secure socket connection to the specified hostname and port</p>
+    
+<p>Establishes a secure socket connection to the specified hostname and port</p>
 
 
   </div>
@@ -936,7 +986,8 @@ The size of packets to read from the connection</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Creating a socket connection</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Creating a secure socket</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_ssl_socket'>ssl_socket</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::EAccess (module)">EAccess</a></span></span><span class='period'>.</span><span class='id identifier rubyid_socket'>socket</span></code></pre>
@@ -957,7 +1008,8 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>The hostname to connect to (default: &#39;eaccess.play.net&#39;)</p>
+        <div class='inline'>
+<p>The hostname to connect to (default: “eaccess.play.net”)</p>
 </div>
       
     </li>
@@ -974,7 +1026,8 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>The port to connect to (default: 7910)</p>
+        <div class='inline'>
+<p>The port to connect to (default: 7910)</p>
 </div>
       
     </li>
@@ -992,7 +1045,26 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>The established SSL socket</p>
+        <div class='inline'>
+<p>The established SSL socket</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>StandardError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>if the PEM verification fails</p>
 </div>
       
     </li>
@@ -1005,22 +1077,22 @@ The size of packets to read from the connection</p>
       <pre class="lines">
 
 
-70
-71
-72
-73
-74
-75
 76
 77
 78
 79
 80
 81
-82</pre>
+82
+83
+84
+85
+86
+87
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'eaccess.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/eaccess.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_socket'>socket</span><span class='lparen'>(</span><span class='id identifier rubyid_hostname'>hostname</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>eaccess.play.net</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_port'>port</span> <span class='op'>=</span> <span class='int'>7910</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_download_pem'>download_pem</span> <span class='kw'>unless</span> <span class='id identifier rubyid_pem_exist?'>pem_exist?</span>
@@ -1051,7 +1123,8 @@ The size of packets to read from the connection</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Verifies the PEM certificate against the connection&#39;s peer certificate</p>
+    
+<p>Verifies the PEM certificate against the stored PEM file</p>
 
 
   </div>
@@ -1062,7 +1135,8 @@ The size of packets to read from the connection</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Verifying the PEM certificate</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Verifying a PEM certificate</p>
 </div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::EAccess (module)">EAccess</a></span></span><span class='period'>.</span><span class='id identifier rubyid_verify_pem'>verify_pem</span><span class='lparen'>(</span><span class='id identifier rubyid_conn'>conn</span><span class='rparen'>)</span></code></pre>
@@ -1081,7 +1155,8 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>The SSL connection to verify</p>
+        <div class='inline'>
+<p>The SSL connection to verify</p>
 </div>
       
     </li>
@@ -1099,7 +1174,8 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>true if the certificates match</p>
+        <div class='inline'>
+<p>true if the certificate matches, false otherwise</p>
 </div>
       
     </li>
@@ -1116,7 +1192,8 @@ The size of packets to read from the connection</p>
       
       
         &mdash;
-        <div class='inline'><p>if the certificates do not match</p>
+        <div class='inline'>
+<p>if the certificate does not match and download fails</p>
 </div>
       
     </li>
@@ -1129,19 +1206,19 @@ The size of packets to read from the connection</p>
       <pre class="lines">
 
 
-53
-54
-55
-56
-57
 58
 59
 60
 61
-62</pre>
+62
+63
+64
+65
+66
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'eaccess.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/eaccess.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_verify_pem'>verify_pem</span><span class='lparen'>(</span><span class='id identifier rubyid_conn'>conn</span><span class='rparen'>)</span>
   <span class='comment'># return if conn.peer_cert.to_s = File.read(EAccess::PEM)
@@ -1163,7 +1240,7 @@ The size of packets to read from the connection</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:50 2025 by
+  Generated on Fri Nov  7 05:08:35 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

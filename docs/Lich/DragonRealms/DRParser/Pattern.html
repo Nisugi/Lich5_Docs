@@ -6,7 +6,7 @@
 <title>
   Module: Lich::DragonRealms::DRParser::Pattern
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>drparser.rb</dd>
+    <dd>output/latest/documented/dragonrealms/drinfomon/drparser.rb</dd>
   </dl>
   
 </div>
@@ -95,14 +95,25 @@
         <dt id="ExpColumns-constant" class="">ExpColumns =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for experience columns
-Matches skill, rank, percent, and rate.</p>
+    
+<p>Regular expression pattern for experience columns This pattern matches skill experience data in the format:</p>
+
+<pre class="code ruby"><code class="ruby">Skill: Rank Percent Rate
+</code></pre>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>ExpColumns</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -111,14 +122,22 @@ Matches skill, rank, percent, and rate.</p>
         <dt id="BriefExpOn-constant" class="">BriefExpOn =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for brief experience on
-Matches skill, rank, percent, and rate in brief experience output.</p>
+    
+<p>Regular expression pattern for brief experience on This pattern matches the XML component for skills with experience on.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>BriefExpOn</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -127,14 +146,22 @@ Matches skill, rank, percent, and rate in brief experience output.</p>
         <dt id="BriefExpOff-constant" class="">BriefExpOff =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for brief experience off
-Matches skill, rank, percent, and rate in brief experience output.</p>
+    
+<p>Regular expression pattern for brief experience off This pattern matches the XML component for skills with experience off.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>BriefExpOff</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -143,14 +170,22 @@ Matches skill, rank, percent, and rate in brief experience output.</p>
         <dt id="NameRaceGuild-constant" class="">NameRaceGuild =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for name, race, and guild
-Matches name, race, and guild information.</p>
+    
+<p>Regular expression pattern for name, race, and guild This pattern captures the player’s name, race, and guild from the output.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>NameRaceGuild</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -159,14 +194,22 @@ Matches name, race, and guild information.</p>
         <dt id="GenderAgeCircle-constant" class="">GenderAgeCircle =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for gender, age, and circle
-Matches gender, age, and circle information.</p>
+    
+<p>Regular expression pattern for gender, age, and circle This pattern captures the player’s gender, age, and circle from the output.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>GenderAgeCircle</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -175,14 +218,22 @@ Matches gender, age, and circle information.</p>
         <dt id="StatValue-constant" class="">StatValue =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for stat values
-Matches various stats and their corresponding values.</p>
+    
+<p>Regular expression pattern for stat values This pattern captures individual stat values and their corresponding numbers.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>StatValue</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -191,14 +242,22 @@ Matches various stats and their corresponding values.</p>
         <dt id="TDPValue-constant" class="">TDPValue =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for TDP values
-Matches the number of TDPs available.</p>
+    
+<p>Regular expression pattern for TDP values This pattern captures the total number of TDPs available.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>TDPValue</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -207,14 +266,22 @@ Matches the number of TDPs available.</p>
         <dt id="EncumbranceValue-constant" class="">EncumbranceValue =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for encumbrance values
-Matches the encumbrance status.</p>
+    
+<p>Regular expression pattern for encumbrance values This pattern captures the player’s current encumbrance status.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>EncumbranceValue</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -223,14 +290,22 @@ Matches the encumbrance status.</p>
         <dt id="LuckValue-constant" class="">LuckValue =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for luck values
-Matches the luck status.</p>
+    
+<p>Regular expression pattern for luck values This pattern captures the player’s luck status.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>LuckValue</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -239,14 +314,22 @@ Matches the luck status.</p>
         <dt id="BalanceValue-constant" class="">BalanceValue =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for balance values
-Matches the balance status.</p>
+    
+<p>Regular expression pattern for balance values This pattern captures the player’s balance status.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>BalanceValue</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -255,14 +338,22 @@ Matches the balance status.</p>
         <dt id="ExpClearMindstate-constant" class="">ExpClearMindstate =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for clearing mindstate experience
-Matches skill information for clearing mindstate.</p>
+    
+<p>Regular expression pattern for clearing mindstate This pattern matches the XML component indicating a skill has no experience.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>ExpClearMindstate</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -271,14 +362,22 @@ Matches skill information for clearing mindstate.</p>
         <dt id="RoomPlayers-constant" class="">RoomPlayers =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for room players
-Matches players present in the room.</p>
+    
+<p>Regular expression pattern for room players This pattern captures the list of players present in the room.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>RoomPlayers</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -287,14 +386,22 @@ Matches players present in the room.</p>
         <dt id="RoomPlayersEmpty-constant" class="">RoomPlayersEmpty =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for empty room players
-Matches when no players are present in the room.</p>
+    
+<p>Regular expression pattern for empty room players This pattern matches the case where no players are present in the room.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>RoomPlayersEmpty</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -303,14 +410,22 @@ Matches when no players are present in the room.</p>
         <dt id="RoomObjs-constant" class="">RoomObjs =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for room objects
-Matches objects present in the room.</p>
+    
+<p>Regular expression pattern for room objects This pattern captures the list of objects present in the room.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>RoomObjs</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -319,14 +434,22 @@ Matches objects present in the room.</p>
         <dt id="RoomObjsEmpty-constant" class="">RoomObjsEmpty =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for empty room objects
-Matches when no objects are present in the room.</p>
+    
+<p>Regular expression pattern for empty room objects This pattern matches the case where no objects are present in the room.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>RoomObjsEmpty</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -335,14 +458,22 @@ Matches when no objects are present in the room.</p>
         <dt id="GroupMembers-constant" class="">GroupMembers =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for group members
-Matches members of the player&#39;s group.</p>
+    
+<p>Regular expression pattern for group members This pattern captures the list of members in the player’s group.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>GroupMembers</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -351,14 +482,22 @@ Matches members of the player&#39;s group.</p>
         <dt id="GroupMembersEmpty-constant" class="">GroupMembersEmpty =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for empty group members
-Matches when no group members are present.</p>
+    
+<p>Regular expression pattern for empty group members This pattern matches the case where no group members are present.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>GroupMembersEmpty</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -367,14 +506,22 @@ Matches when no group members are present.</p>
         <dt id="ExpModsStart-constant" class="">ExpModsStart =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for the start of experience modifiers
-Matches the beginning of experience modifiers output.</p>
+    
+<p>Regular expression pattern for the start of experience modifiers This pattern indicates the beginning of a list of skills under modifiers.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>ExpModsStart</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -383,14 +530,22 @@ Matches the beginning of experience modifiers output.</p>
         <dt id="KnownSpellsStart-constant" class="">KnownSpellsStart =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for known spells start
-Matches the beginning of known spells output.</p>
+    
+<p>Regular expression pattern for known spells This pattern indicates the start of the known spells list for magic users.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>KnownSpellsStart</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -399,14 +554,22 @@ Matches the beginning of known spells output.</p>
         <dt id="BarbarianAbilitiesStart-constant" class="">BarbarianAbilitiesStart =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for barbarian abilities start
-Matches the beginning of known barbarian abilities output.</p>
+    
+<p>Regular expression pattern for barbarian abilities This pattern indicates the start of the list of known barbarian abilities.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>BarbarianAbilitiesStart</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -415,14 +578,22 @@ Matches the beginning of known barbarian abilities output.</p>
         <dt id="ThiefKhriStart-constant" class="">ThiefKhriStart =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for thief khri start
-Matches the beginning of known thief khri output.</p>
+    
+<p>Regular expression pattern for thief khri This pattern indicates the start of the list of known khri for thieves.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>ThiefKhriStart</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -431,14 +602,22 @@ Matches the beginning of known thief khri output.</p>
         <dt id="SpellBookFormat-constant" class="">SpellBookFormat =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for spell book format
-Matches the format of the spell book output.</p>
+    
+<p>Regular expression pattern for spellbook format This pattern captures the format type of the spellbook output.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>SpellBookFormat</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -447,14 +626,22 @@ Matches the format of the spell book output.</p>
         <dt id="PlayedAccount-constant" class="">PlayedAccount =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for played account
-Matches account information.</p>
+    
+<p>Regular expression pattern for played account This pattern captures the account information of the player.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>PlayedAccount</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -463,14 +650,22 @@ Matches account information.</p>
         <dt id="PlayedSubscription-constant" class="">PlayedSubscription =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for played subscription
-Matches the subscription status.</p>
+    
+<p>Regular expression pattern for played subscription This pattern captures the subscription status of the player’s account.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>PlayedSubscription</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -479,14 +674,22 @@ Matches the subscription status.</p>
         <dt id="LastLogoff-constant" class="">LastLogoff =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for last logoff
-Matches the last logoff time and date.</p>
+    
+<p>Regular expression pattern for last logoff This pattern captures the last logoff time of the player.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>LastLogoff</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -495,14 +698,22 @@ Matches the last logoff time and date.</p>
         <dt id="RoomIDOff-constant" class="">RoomIDOff =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression for room ID off
-Matches when room IDs are turned off.</p>
+    
+<p>Regular expression pattern for room ID off This pattern indicates that room IDs are no longer visible.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DRParser.html" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'>RoomIDOff</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
         </dt>
@@ -522,7 +733,7 @@ Matches when room IDs are turned off.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:51 2025 by
+  Generated on Fri Nov  7 05:08:38 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

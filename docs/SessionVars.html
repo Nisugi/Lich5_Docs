@@ -6,7 +6,7 @@
 <title>
   Module: SessionVars
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,15 +78,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>sessionvars.rb</dd>
+    <dd>output/latest/documented/sessionvars.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>New module for managing session variables
-This module provides a way to store variables needed by multiple scripts without saving them to the database.</p>
+    
+<p>New module for managing session variables This module provides a way to store variables needed by more than one script without saving them to the sqlite database.</p>
 
 
   </div>
@@ -97,16 +97,18 @@ This module provides a way to store variables needed by multiple scripts without
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Setting a session variable</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Setting a session variable</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'>SessionVars</span><span class='lbracket'>[</span><span class='symbol'>:user_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='int'>123</span></code></pre>
+      <pre class="example code"><code><span class='const'>SessionVars</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='int'>42</span></code></pre>
     
       
-        <h5 class="example_title"><div class='inline'><p>Retrieving a session variable</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Retrieving a session variable</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_user_id'>user_id</span> <span class='op'>=</span> <span class='const'>SessionVars</span><span class='lbracket'>[</span><span class='symbol'>:user_id</span><span class='rbracket'>]</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_user_id'>user_id</span> <span class='op'>=</span> <span class='const'>SessionVars</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span></code></pre>
     
   </div>
 
@@ -159,7 +161,8 @@ This module provides a way to store variables needed by multiple scripts without
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the value of a session variable by name.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the value of a session variable by name.</p>
 </div></span>
   
 </li>
@@ -182,7 +185,8 @@ This module provides a way to store variables needed by multiple scripts without
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Sets the value of a session variable by name.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Sets the value of a session variable by name.</p>
 </div></span>
   
 </li>
@@ -205,7 +209,8 @@ This module provides a way to store variables needed by multiple scripts without
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a duplicate of the current session variables.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a duplicate of the current session variables.</p>
 </div></span>
   
 </li>
@@ -228,7 +233,8 @@ This module provides a way to store variables needed by multiple scripts without
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Handles dynamic method calls for setting and getting session variables.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Handles dynamic method calls for setting and getting session variables.</p>
 </div></span>
   
 </li>
@@ -254,7 +260,8 @@ This module provides a way to store variables needed by multiple scripts without
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the value of a session variable by name.</p>
+    
+<p>Retrieves the value of a session variable by name.</p>
 
 
   </div>
@@ -265,10 +272,11 @@ This module provides a way to store variables needed by multiple scripts without
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Getting a session variable</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Retrieving a session variable</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="SessionVars (module)">SessionVars</a></span></span><span class='lbracket'>[</span><span class='symbol'>:user_id</span><span class='rbracket'>]</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="SessionVars (module)">SessionVars</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>key</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -279,12 +287,13 @@ This module provides a way to store variables needed by multiple scripts without
         <span class='name'>name</span>
       
       
-        <span class='type'>(<tt>Symbol</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>The name of the session variable to retrieve.</p>
+        <div class='inline'>
+<p>The name of the session variable to retrieve.</p>
 </div>
       
     </li>
@@ -302,7 +311,8 @@ This module provides a way to store variables needed by multiple scripts without
       
       
         &mdash;
-        <div class='inline'><p>The value of the session variable, or nil if it does not exist.</p>
+        <div class='inline'>
+<p>The value of the session variable, or nil if it does not exist.</p>
 </div>
       
     </li>
@@ -320,7 +330,7 @@ This module provides a way to store variables needed by multiple scripts without
 21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'sessionvars.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/sessionvars.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="SessionVars (module)">SessionVars</a></span></span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='cvar'>@@svars</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
@@ -341,7 +351,8 @@ This module provides a way to store variables needed by multiple scripts without
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Sets the value of a session variable by name.</p>
+    
+<p>Sets the value of a session variable by name.</p>
 
 
   </div>
@@ -352,16 +363,11 @@ This module provides a way to store variables needed by multiple scripts without
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Setting a session variable</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Setting a session variable</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="SessionVars (module)">SessionVars</a></span></span><span class='lbracket'>[</span><span class='symbol'>:user_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='int'>123</span></code></pre>
-    
-      
-        <h5 class="example_title"><div class='inline'><p>Deleting a session variable</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="SessionVars (module)">SessionVars</a></span></span><span class='lbracket'>[</span><span class='symbol'>:user_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>nil</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="SessionVars (module)">SessionVars</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>key</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>value</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -372,12 +378,13 @@ This module provides a way to store variables needed by multiple scripts without
         <span class='name'>name</span>
       
       
-        <span class='type'>(<tt>Symbol</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>The name of the session variable to set.</p>
+        <div class='inline'>
+<p>The name of the session variable to set.</p>
 </div>
       
     </li>
@@ -392,7 +399,8 @@ This module provides a way to store variables needed by multiple scripts without
       
       
         &mdash;
-        <div class='inline'><p>The value to set, or nil to delete the variable.</p>
+        <div class='inline'>
+<p>The value to set for the session variable. If nil, the variable will be deleted.</p>
 </div>
       
     </li>
@@ -410,7 +418,8 @@ This module provides a way to store variables needed by multiple scripts without
       
       
         &mdash;
-        <div class='inline'><p>The value that was set.</p>
+        <div class='inline'>
+<p>The value that was set.</p>
 </div>
       
     </li>
@@ -423,16 +432,16 @@ This module provides a way to store variables needed by multiple scripts without
       <pre class="lines">
 
 
+29
+30
 31
 32
 33
 34
-35
-36
-37</pre>
+35</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'sessionvars.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/sessionvars.rb', line 29</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="SessionVars (module)">SessionVars</a></span></span><span class='period'>.</span><span class='op'>[]=</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -457,7 +466,8 @@ This module provides a way to store variables needed by multiple scripts without
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a duplicate of the current session variables.</p>
+    
+<p>Returns a duplicate of the current session variables.</p>
 
 
   </div>
@@ -468,7 +478,8 @@ This module provides a way to store variables needed by multiple scripts without
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Listing all session variables</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Listing all session variables</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_all_vars'>all_vars</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="SessionVars (module)">SessionVars</a></span></span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span></code></pre>
@@ -486,7 +497,8 @@ This module provides a way to store variables needed by multiple scripts without
       
       
         &mdash;
-        <div class='inline'><p>A hash containing all session variables.</p>
+        <div class='inline'>
+<p>A hash containing all session variables.</p>
 </div>
       
     </li>
@@ -499,12 +511,12 @@ This module provides a way to store variables needed by multiple scripts without
       <pre class="lines">
 
 
-43
-44
-45</pre>
+41
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'sessionvars.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/sessionvars.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="SessionVars (module)">SessionVars</a></span></span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span>
   <span class='cvar'>@@svars</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
@@ -525,7 +537,8 @@ This module provides a way to store variables needed by multiple scripts without
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Handles dynamic method calls for setting and getting session variables.</p>
+    
+<p>Handles dynamic method calls for setting and getting session variables.</p>
 
 
   </div>
@@ -536,16 +549,12 @@ This module provides a way to store variables needed by multiple scripts without
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Dynamic setting of a session variable</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Using dynamic methods</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="SessionVars (module)">SessionVars</a></span></span><span class='period'>.</span><span class='id identifier rubyid_user_id'>user_id</span> <span class='op'>=</span> <span class='int'>123</span></code></pre>
-    
-      
-        <h5 class="example_title"><div class='inline'><p>Dynamic getting of a session variable</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_user_id'>user_id</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="SessionVars (module)">SessionVars</a></span></span><span class='period'>.</span><span class='id identifier rubyid_user_id'>user_id</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="SessionVars (module)">SessionVars</a></span></span><span class='period'>.</span><span class='id identifier rubyid_some_var'>some_var</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>value</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="SessionVars (module)">SessionVars</a></span></span><span class='period'>.</span><span class='id identifier rubyid_some_var'>some_var</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -556,12 +565,13 @@ This module provides a way to store variables needed by multiple scripts without
         <span class='name'>arg1</span>
       
       
-        <span class='type'>(<tt>Symbol</tt>)</span>
+        <span class='type'>(<tt>Symbol</tt>, <tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>The name of the session variable.</p>
+        <div class='inline'>
+<p>The name of the session variable or the method being called.</p>
 </div>
       
     </li>
@@ -571,14 +581,15 @@ This module provides a way to store variables needed by multiple scripts without
         <span class='name'>arg2</span>
       
       
-        <span class='type'>(<tt>Object</tt>, <tt>nil</tt>)</span>
+        <span class='type'>(<tt>Object</tt>, <tt><span class='object_link'><a href="String.html" title="String (class)">String</a></span></tt>)</span>
       
       
         <em class="default">(defaults to: <tt>&#39;&#39;</tt>)</em>
       
       
         &mdash;
-        <div class='inline'><p>The value to set, or nil to delete the variable.</p>
+        <div class='inline'>
+<p>The value to set if the method is a setter (ends with ‘=’), otherwise ignored.</p>
 </div>
       
     </li>
@@ -596,7 +607,8 @@ This module provides a way to store variables needed by multiple scripts without
       
       
         &mdash;
-        <div class='inline'><p>The value of the session variable, or nil if it does not exist.</p>
+        <div class='inline'>
+<p>The value of the session variable, or nil if it does not exist.</p>
 </div>
       
     </li>
@@ -609,6 +621,9 @@ This module provides a way to store variables needed by multiple scripts without
       <pre class="lines">
 
 
+52
+53
+54
 55
 56
 57
@@ -616,13 +631,10 @@ This module provides a way to store variables needed by multiple scripts without
 59
 60
 61
-62
-63
-64
-65</pre>
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'sessionvars.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/sessionvars.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="SessionVars (module)">SessionVars</a></span></span><span class='period'>.</span><span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_arg1'>arg1</span><span class='comma'>,</span> <span class='id identifier rubyid_arg2'>arg2</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_arg1'>arg1</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>1</span><span class='comma'>,</span> <span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>=</span><span class='tstring_end'>&#39;</span></span>
@@ -645,7 +657,7 @@ This module provides a way to store variables needed by multiple scripts without
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:51 2025 by
+  Generated on Fri Nov  7 05:08:35 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

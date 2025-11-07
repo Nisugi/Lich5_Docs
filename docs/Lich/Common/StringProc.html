@@ -6,7 +6,7 @@
 <title>
   Class: Lich::Common::StringProc
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -94,15 +94,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>stringproc.rb</dd>
+    <dd>output/latest/documented/common/class_exts/stringproc.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Represents a String processing object that can evaluate a string as a Ruby expression.
-This class allows for the creation of callable objects that encapsulate a string and can execute it.</p>
+    
+<p>Represents a String processing utility that evaluates a string as Ruby code. This class allows for the creation of callable objects that can execute Ruby code contained in a string.</p>
 
 
   </div>
@@ -113,11 +113,12 @@ This class allows for the creation of callable objects that encapsulate a string
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Creating a StringProc and calling it</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Creating a StringProc and calling it</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_sp'>sp</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'>StringProc</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Lich::Common::StringProc#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1 + 1</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_sp'>sp</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='comment'># =&gt; 2</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_proc'>proc</span> <span class='op'>=</span> <span class='const'>StringProc</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Lich::Common::StringProc#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1 + 1</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_proc'>proc</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='comment'># =&gt; 2</span></code></pre>
     
   </div>
 
@@ -154,7 +155,8 @@ This class allows for the creation of callable objects that encapsulate a string
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Loads a StringProc from a string representation.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Loads a StringProc object from a string representation.</p>
 </div></span>
   
 </li>
@@ -186,7 +188,8 @@ This class allows for the creation of callable objects that encapsulate a string
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Dumps the string representation of the StringProc.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Dumps the string representation of the object.</p>
 </div></span>
   
 </li>
@@ -209,7 +212,8 @@ This class allows for the creation of callable objects that encapsulate a string
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Evaluates the stored string as Ruby code and returns the result.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Executes the Ruby code contained in the string.</p>
 </div></span>
   
 </li>
@@ -232,7 +236,8 @@ This class allows for the creation of callable objects that encapsulate a string
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the class of the StringProc.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the class of the object.</p>
 </div></span>
   
 </li>
@@ -257,7 +262,8 @@ This class allows for the creation of callable objects that encapsulate a string
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Initializes a new StringProc object.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initializes a new StringProc instance.</p>
 </div></span>
   
 </li>
@@ -280,7 +286,8 @@ This class allows for the creation of callable objects that encapsulate a string
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a string representation of the StringProc object.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a string representation of the StringProc object.</p>
 </div></span>
   
 </li>
@@ -303,7 +310,8 @@ This class allows for the creation of callable objects that encapsulate a string
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks if the StringProc is of a certain type.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if the object is of a certain type.</p>
 </div></span>
   
 </li>
@@ -326,7 +334,8 @@ This class allows for the creation of callable objects that encapsulate a string
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Converts the StringProc to a JSON representation.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Converts the StringProc object to JSON format.</p>
 </div></span>
   
 </li>
@@ -349,7 +358,8 @@ This class allows for the creation of callable objects that encapsulate a string
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Initializes a new StringProc object.</p>
+    
+<p>Initializes a new StringProc instance.</p>
 
 
   </div>
@@ -368,7 +378,8 @@ This class allows for the creation of callable objects that encapsulate a string
       
       
         &mdash;
-        <div class='inline'><p>The string to be processed and evaluated.</p>
+        <div class='inline'>
+<p>The string to be processed and evaluated.</p>
 </div>
       
     </li>
@@ -387,7 +398,7 @@ This class allows for the creation of callable objects that encapsulate a string
 17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stringproc.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/stringproc.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='ivar'>@string</span> <span class='op'>=</span> <span class='id identifier rubyid_string'>string</span>
@@ -415,7 +426,8 @@ This class allows for the creation of callable objects that encapsulate a string
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Loads a StringProc from a string representation.</p>
+    
+<p>Loads a StringProc object from a string representation.</p>
 
 
   </div>
@@ -434,7 +446,8 @@ This class allows for the creation of callable objects that encapsulate a string
       
       
         &mdash;
-        <div class='inline'><p>The string to load into a StringProc.</p>
+        <div class='inline'>
+<p>The string to load into a StringProc.</p>
 </div>
       
     </li>
@@ -452,7 +465,8 @@ This class allows for the creation of callable objects that encapsulate a string
       
       
         &mdash;
-        <div class='inline'><p>A new StringProc object initialized with the given string.</p>
+        <div class='inline'>
+<p>The newly created StringProc instance from the string.</p>
 </div>
       
     </li>
@@ -465,12 +479,12 @@ This class allows for the creation of callable objects that encapsulate a string
       <pre class="lines">
 
 
-68
 69
-70</pre>
+70
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stringproc.rb', line 68</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/stringproc.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::StringProc (class)">StringProc</a></span></span><span class='period'>.</span><span class='id identifier rubyid__load'>_load</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="" title="Lich::Common::StringProc (class)">StringProc</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Lich::Common::StringProc#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
@@ -497,7 +511,8 @@ This class allows for the creation of callable objects that encapsulate a string
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Dumps the string representation of the StringProc.</p>
+    
+<p>Dumps the string representation of the object.</p>
 
 
   </div>
@@ -518,7 +533,8 @@ This class allows for the creation of callable objects that encapsulate a string
       
       
         &mdash;
-        <div class='inline'><p>Optional parameter (not used).</p>
+        <div class='inline'>
+<p>Optional parameter, not used.</p>
 </div>
       
     </li>
@@ -536,7 +552,8 @@ This class allows for the creation of callable objects that encapsulate a string
       
       
         &mdash;
-        <div class='inline'><p>The string stored in the StringProc.</p>
+        <div class='inline'>
+<p>The string representation of the StringProc.</p>
 </div>
       
     </li>
@@ -549,12 +566,12 @@ This class allows for the creation of callable objects that encapsulate a string
       <pre class="lines">
 
 
+45
 46
-47
-48</pre>
+47</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stringproc.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/stringproc.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid__dump'>_dump</span><span class='lparen'>(</span><span class='id identifier rubyid__d'>_d</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@string</span>
@@ -575,7 +592,8 @@ This class allows for the creation of callable objects that encapsulate a string
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Evaluates the stored string as Ruby code and returns the result.</p>
+    
+<p>Executes the Ruby code contained in the string.</p>
 
 
   </div>
@@ -586,11 +604,11 @@ This class allows for the creation of callable objects that encapsulate a string
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Calling the StringProc</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Calling the StringProc</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_sp'>sp</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::StringProc (class)">StringProc</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Lich::Common::StringProc#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2 + 2</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_sp'>sp</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='comment'># =&gt; 4</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_proc'>proc</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='comment'># =&gt; evaluates the string and returns the result</span></code></pre>
     
   </div>
 
@@ -605,7 +623,8 @@ This class allows for the creation of callable objects that encapsulate a string
       
       
         &mdash;
-        <div class='inline'><p>The result of the evaluated string.</p>
+        <div class='inline'>
+<p>The result of the evaluated string.</p>
 </div>
       
     </li>
@@ -618,12 +637,12 @@ This class allows for the creation of callable objects that encapsulate a string
       <pre class="lines">
 
 
+38
 39
-40
-41</pre>
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stringproc.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/stringproc.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid__a'>_a</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_proc'>proc</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='ivar'>@string</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
@@ -644,7 +663,8 @@ This class allows for the creation of callable objects that encapsulate a string
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the class of the StringProc.</p>
+    
+<p>Returns the class of the object.</p>
 
 
   </div>
@@ -662,7 +682,8 @@ This class allows for the creation of callable objects that encapsulate a string
       
       
         &mdash;
-        <div class='inline'><p>The Proc class.</p>
+        <div class='inline'>
+<p>The class of the object, which is Proc.</p>
 </div>
       
     </li>
@@ -680,7 +701,7 @@ This class allows for the creation of callable objects that encapsulate a string
 32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stringproc.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/stringproc.rb', line 30</span>
 
 <span class='kw'>def</span> <span class='kw'>class</span>
   <span class='const'>Proc</span>
@@ -701,13 +722,26 @@ This class allows for the creation of callable objects that encapsulate a string
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a string representation of the StringProc object.</p>
+    
+<p>Returns a string representation of the StringProc object.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Inspecting the StringProc</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_proc'>proc</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span> <span class='comment'># =&gt; &quot;StringProc.new(\&quot;1 + 1\&quot;)&quot;</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -719,7 +753,8 @@ This class allows for the creation of callable objects that encapsulate a string
       
       
         &mdash;
-        <div class='inline'><p>A string that describes the StringProc.</p>
+        <div class='inline'>
+<p>A string that describes the StringProc instance.</p>
 </div>
       
     </li>
@@ -732,12 +767,12 @@ This class allows for the creation of callable objects that encapsulate a string
       <pre class="lines">
 
 
-52
 53
-54</pre>
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stringproc.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/stringproc.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>StringProc.new(</span><span class='embexpr_beg'>#{</span><span class='ivar'>@string</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
@@ -758,7 +793,8 @@ This class allows for the creation of callable objects that encapsulate a string
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks if the StringProc is of a certain type.</p>
+    
+<p>Checks if the object is of a certain type.</p>
 
 
   </div>
@@ -769,10 +805,11 @@ This class allows for the creation of callable objects that encapsulate a string
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Checking the type</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Checking the type</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_sp'>sp</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Proc</span><span class='rparen'>)</span> <span class='comment'># =&gt; true</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_proc'>proc</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='const'>Proc</span><span class='rparen'>)</span> <span class='comment'># =&gt; true</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -788,7 +825,8 @@ This class allows for the creation of callable objects that encapsulate a string
       
       
         &mdash;
-        <div class='inline'><p>The class to check against.</p>
+        <div class='inline'>
+<p>The class to check against.</p>
 </div>
       
     </li>
@@ -806,7 +844,8 @@ This class allows for the creation of callable objects that encapsulate a string
       
       
         &mdash;
-        <div class='inline'><p>Returns true if the StringProc is of the specified type.</p>
+        <div class='inline'>
+<p>Returns true if the object is of the specified type.</p>
 </div>
       
     </li>
@@ -824,7 +863,7 @@ This class allows for the creation of callable objects that encapsulate a string
 26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stringproc.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/stringproc.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_kind_of?'>kind_of?</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='rparen'>)</span>
   <span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span> <span class='id identifier rubyid_type'>type</span>
@@ -845,7 +884,8 @@ This class allows for the creation of callable objects that encapsulate a string
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Converts the StringProc to a JSON representation.</p>
+    
+<p>Converts the StringProc object to JSON format.</p>
 
 
   </div>
@@ -856,10 +896,11 @@ This class allows for the creation of callable objects that encapsulate a string
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Converting to JSON</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Converting to JSON</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_sp'>sp</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span> <span class='comment'># =&gt; &#39;;e &quot;your_string&quot;&#39;</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='id identifier rubyid_proc'>proc</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='lparen'>(</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -875,7 +916,8 @@ This class allows for the creation of callable objects that encapsulate a string
       
       
         &mdash;
-        <div class='inline'><p>Optional arguments for JSON conversion.</p>
+        <div class='inline'>
+<p>Additional arguments for JSON conversion.</p>
 </div>
       
     </li>
@@ -893,7 +935,8 @@ This class allows for the creation of callable objects that encapsulate a string
       
       
         &mdash;
-        <div class='inline'><p>The JSON representation of the StringProc.</p>
+        <div class='inline'>
+<p>The JSON representation of the StringProc.</p>
 </div>
       
     </li>
@@ -906,12 +949,12 @@ This class allows for the creation of callable objects that encapsulate a string
       <pre class="lines">
 
 
-61
 62
-63</pre>
+63
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stringproc.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/stringproc.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_json'>to_json</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>;e </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid__dump'>_dump</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
@@ -926,7 +969,7 @@ This class allows for the creation of callable objects that encapsulate a string
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:57 2025 by
+  Generated on Fri Nov  7 05:08:44 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

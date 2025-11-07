@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Gemstone::Ascension
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,42 +78,46 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>ascension.rb</dd>
+    <dd>output/latest/documented/gemstone/psms/ascension.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>The Ascension module manages character ascension skills.</p>
+    
+<p>The Ascension module manages character ascension skills.</p>
 
-<p>It provides lookup tables for ascension skill names, methods to query skill availability,
-affordability, and knowledge, and dynamically defines shortcut methods for all ascension skills.</p>
-
-<p>Each skill includes:</p>
-
-<ul>
-<li>a long name (as used in internal references)</li>
-<li>a short name (used as a shortcut method)</li>
-<li>a cost (currently hardcoded to 0)</li>
-</ul>
-
-<p>Example:
-  if Ascension.available?(&quot;discipline&quot;)
-    Ascension.use(&quot;discipline&quot;)
-  end
-The Ascension module manages character ascension skills.</p>
-
-<p>It provides lookup tables for ascension skill names, methods to query skill availability,
-affordability, and knowledge, and dynamically defines shortcut methods for all ascension skills.</p>
+<p>It provides lookup tables for ascension skill names, methods to query skill availability, affordability, and knowledge, and dynamically defines shortcut methods for all ascension skills.</p>
 
 <p>Each skill includes:</p>
+<ul><li>
+<p>a long name (as used in internal references)</p>
+</li><li>
+<p>a short name (used as a shortcut method)</p>
+</li><li>
+<p>a cost (currently hardcoded to 0)</p>
+</li></ul>
 
-<ul>
-<li>a long name (as used in internal references)</li>
-<li>a short name (used as a shortcut method)</li>
-<li>a cost (currently hardcoded to 0)</li>
-</ul>
+<p>Example:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='kw'>if</span> <span class='const'>Ascension</span><span class='period'>.</span><span class='id identifier rubyid_available?'><span class='object_link'><a href="#available%3F-class_method" title="Lich::Gemstone::Ascension.available? (method)">available?</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='const'>Ascension</span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<p>The Ascension module manages character ascension skills.</p>
+
+<p>It provides lookup tables for ascension skill names, methods to query skill availability, affordability, and knowledge, and dynamically defines shortcut methods for all ascension skills.</p>
+
+<p>Each skill includes:</p>
+<ul><li>
+<p>a long name (as used in internal references)</p>
+</li><li>
+<p>a short name (used as a shortcut method)</p>
+</li><li>
+<p>a cost (currently hardcoded to 0)</p>
+</li></ul>
 
 
   </div>
@@ -163,7 +167,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the character&#39;s rank in the specified ascension skill.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the character’s rank in the specified ascension skill.</p>
 </div></span>
   
 </li>
@@ -186,7 +191,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks if the ascension skill can be afforded (based on FORCERT or other gating logic).</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if the ascension skill can be afforded (based on FORCERT or other gating logic).</p>
 </div></span>
   
 </li>
@@ -209,7 +215,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns an array of all defined Ascension skill mappings.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns an array of all defined Ascension skill mappings.</p>
 </div></span>
   
 </li>
@@ -232,7 +239,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Determines if the ascension skill is available for use.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Determines if the ascension skill is available for use.</p>
 </div></span>
   
 </li>
@@ -255,7 +263,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks if the character has at least one rank in the specified ascension skill.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if the character has at least one rank in the specified ascension skill.</p>
 </div></span>
   
 </li>
@@ -281,9 +290,10 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the character&#39;s rank in the specified ascension skill.</p>
+    
+<p>Retrieves the character’s rank in the specified ascension skill.</p>
 
-<p>Retrieves the character&#39;s rank in the specified ascension skill.</p>
+<p>Retrieves the character’s rank in the specified ascension skill.</p>
 
 
   </div>
@@ -298,8 +308,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
 </span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='comment'># =&gt; 0  # does not have any ranks in influence</span></code></pre>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='comment'># =&gt; 3  # knows 3 ranks of discipline
-</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='comment'># =&gt; 0  # does not have any ranks in influence</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='comment'># =&gt; 3  # knows 3 ranks of discipline
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='comment'># =&gt; 0  # does not have any ranks in influence</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -315,7 +325,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>The name of the ascension skill</p>
+        <div class='inline'>
+<p>The name of the ascension skill</p>
 </div>
       
     </li>
@@ -330,7 +341,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>The name of the ascension skill</p>
+        <div class='inline'>
+<p>The name of the ascension skill</p>
 </div>
       
     </li>
@@ -348,7 +360,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>The current rank (or 0 if unknown)</p>
+        <div class='inline'>
+<p>The current rank (or 0 if unknown)</p>
 </div>
       
     </li>
@@ -361,7 +374,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>The current rank (or 0 if unknown)</p>
+        <div class='inline'>
+<p>The current rank (or 0 if unknown)</p>
 </div>
       
     </li>
@@ -379,7 +393,7 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
 137</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ascension.rb', line 135</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/ascension.rb', line 135</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_assess'><span class='object_link'><a href="PSMS.html#assess-class_method" title="Lich::Gemstone::PSMS.assess (method)">assess</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Ascension</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -400,7 +414,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks if the ascension skill can be afforded (based on FORCERT or other gating logic).</p>
+    
+<p>Checks if the ascension skill can be afforded (based on FORCERT or other gating logic).</p>
 
 <p>Checks if the ascension skill can be afforded (based on FORCERT or other gating logic).</p>
 
@@ -416,7 +431,7 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true  # no cost, so always affordable</span></code></pre>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true  # no cost, so always affordable</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true  # no cost, so always affordable</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -432,7 +447,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>The ascension skill name</p>
+        <div class='inline'>
+<p>The ascension skill name</p>
 </div>
       
     </li>
@@ -447,7 +463,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>The ascension skill name</p>
+        <div class='inline'>
+<p>The ascension skill name</p>
 </div>
       
     </li>
@@ -465,7 +482,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>True if affordable</p>
+        <div class='inline'>
+<p>True if affordable</p>
 </div>
       
     </li>
@@ -478,7 +496,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>True if affordable</p>
+        <div class='inline'>
+<p>True if affordable</p>
 </div>
       
     </li>
@@ -496,7 +515,7 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
 171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ascension.rb', line 169</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/ascension.rb', line 169</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_assess'><span class='object_link'><a href="PSMS.html#assess-class_method" title="Lich::Gemstone::PSMS.assess (method)">assess</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Ascension</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
@@ -517,7 +536,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns an array of all defined Ascension skill mappings.</p>
+    
+<p>Returns an array of all defined Ascension skill mappings.</p>
 
 <p>Returns an array of all defined Ascension skill mappings.</p>
 
@@ -537,7 +557,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>Array of hashes, each containing :long_name, :short_name, and :cost</p>
+        <div class='inline'>
+<p>Array of hashes, each containing :long_name, :short_name, and :cost</p>
 </div>
       
     </li>
@@ -550,7 +571,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>Array of hashes, each containing :long_name, :short_name, and :cost</p>
+        <div class='inline'>
+<p>Array of hashes, each containing :long_name, :short_name, and :cost</p>
 </div>
       
     </li>
@@ -643,7 +665,7 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
 119</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ascension.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/ascension.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ascension_lookups'>ascension_lookups</span>
   <span class='lbracket'>[</span><span class='lbrace'>{</span> <span class='label'>long_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>acid_resistance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>           <span class='label'>short_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>resistacid</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>      <span class='label'>cost:</span> <span class='lbrace'>{</span> <span class='label'>stamina:</span> <span class='int'>0</span> <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='comma'>,</span>
@@ -739,7 +761,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Determines if the ascension skill is available for use.</p>
+    
+<p>Determines if the ascension skill is available for use.</p>
 
 <p>Determines if the ascension skill is available for use.</p>
 
@@ -756,8 +779,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
 </span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; false  # not known</span></code></pre>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true  # known, affordable, not on cooldown, and not overexerted
-</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; false  # not known</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true  # known, affordable, not on cooldown, and not overexerted
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; false  # not known</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -773,7 +796,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>The ascension skill name</p>
+        <div class='inline'>
+<p>The ascension skill name</p>
 </div>
       
     </li>
@@ -788,7 +812,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>The ascension skill name</p>
+        <div class='inline'>
+<p>The ascension skill name</p>
 </div>
       
     </li>
@@ -806,7 +831,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>True if known, affordable, and not blocked by cooldowns or debuffs</p>
+        <div class='inline'>
+<p>True if known, affordable, and not blocked by cooldowns or debuffs</p>
 </div>
       
     </li>
@@ -819,7 +845,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>True if known, affordable, and not blocked by cooldowns or debuffs</p>
+        <div class='inline'>
+<p>True if known, affordable, and not blocked by cooldowns or debuffs</p>
 </div>
       
     </li>
@@ -839,7 +866,7 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
 191</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ascension.rb', line 187</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/ascension.rb', line 187</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'><span class='object_link'><a href="#known%3F-class_method" title="Lich::Gemstone::Ascension.known? (method)">known?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
@@ -862,7 +889,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks if the character has at least one rank in the specified ascension skill.</p>
+    
+<p>Checks if the character has at least one rank in the specified ascension skill.</p>
 
 <p>Checks if the character has at least one rank in the specified ascension skill.</p>
 
@@ -879,8 +907,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
 </span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; false  # does not have any ranks in influence</span></code></pre>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true  # has at least one rank in discipline
-</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; false  # does not have any ranks in influence</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>discipline</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; true  # has at least one rank in discipline
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>influence</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; false  # does not have any ranks in influence</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -896,7 +924,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>The ascension skill name</p>
+        <div class='inline'>
+<p>The ascension skill name</p>
 </div>
       
     </li>
@@ -911,7 +940,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>The ascension skill name</p>
+        <div class='inline'>
+<p>The ascension skill name</p>
 </div>
       
     </li>
@@ -929,7 +959,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>True if known</p>
+        <div class='inline'>
+<p>True if known</p>
 </div>
       
     </li>
@@ -942,7 +973,8 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
       
       
         &mdash;
-        <div class='inline'><p>True if known</p>
+        <div class='inline'>
+<p>True if known</p>
 </div>
       
     </li>
@@ -960,7 +992,7 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
 155</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'ascension.rb', line 153</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/ascension.rb', line 153</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Ascension (module)">Ascension</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>&gt;</span> <span class='int'>0</span>
@@ -975,7 +1007,7 @@ affordability, and knowledge, and dynamically defines shortcut methods for all a
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:51 2025 by
+  Generated on Fri Nov  7 05:08:37 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

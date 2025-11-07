@@ -6,7 +6,7 @@
 <title>
   Class: Lich::Common::SynchronizedSocket
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -94,15 +94,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>synchronizedsocket.rb</dd>
+    <dd>output/latest/documented/common/class_exts/synchronizedsocket.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>A class that provides synchronized access to a delegate socket.
-This class wraps a socket object and ensures that all operations on it are thread-safe.</p>
+    
+<p>Represents a thread-safe wrapper around a socket. This class ensures that socket operations are synchronized using a mutex.</p>
 
 
   </div>
@@ -113,10 +113,11 @@ This class wraps a socket object and ensures that all operations on it are threa
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Creating a synchronized socket</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Creating a synchronized socket</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_socket'>socket</span> <span class='op'>=</span> <span class='const'>SynchronizedSocket</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Lich::Common::SynchronizedSocket#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_delegate_socket'>delegate_socket</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_socket'>socket</span> <span class='op'>=</span> <span class='const'>SynchronizedSocket</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Lich::Common::SynchronizedSocket#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_original_socket'>original_socket</span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -155,7 +156,8 @@ This class wraps a socket object and ensures that all operations on it are threa
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Initializes a new SynchronizedSocket instance.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initializes a new SynchronizedSocket instance.</p>
 </div></span>
   
 </li>
@@ -178,7 +180,8 @@ This class wraps a socket object and ensures that all operations on it are threa
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Handles calls to methods that are not defined in this class.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Handles calls to methods that are not defined in this class.</p>
 </div></span>
   
 </li>
@@ -201,7 +204,8 @@ This class wraps a socket object and ensures that all operations on it are threa
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Outputs a string to the delegate socket.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Outputs a string to the socket.</p>
 </div></span>
   
 </li>
@@ -224,7 +228,8 @@ This class wraps a socket object and ensures that all operations on it are threa
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Conditionally outputs a string to the delegate socket based on a block&#39;s return value.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Conditionally outputs a string to the socket based on a block’s return value.</p>
 </div></span>
   
 </li>
@@ -247,7 +252,8 @@ This class wraps a socket object and ensures that all operations on it are threa
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Writes data to the delegate socket.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Writes data to the socket.</p>
 </div></span>
   
 </li>
@@ -270,7 +276,8 @@ This class wraps a socket object and ensures that all operations on it are threa
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Initializes a new SynchronizedSocket instance.</p>
+    
+<p>Initializes a new SynchronizedSocket instance.</p>
 
 
   </div>
@@ -289,7 +296,8 @@ This class wraps a socket object and ensures that all operations on it are threa
       
       
         &mdash;
-        <div class='inline'><p>The delegate socket object to synchronize.</p>
+        <div class='inline'>
+<p>The socket object to be synchronized.</p>
 </div>
       
     </li>
@@ -310,7 +318,7 @@ This class wraps a socket object and ensures that all operations on it are threa
 18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'synchronizedsocket.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/synchronizedsocket.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_o'><span class='object_link'><a href="../../top-level-namespace.html#o-instance_method" title="#o (method)">o</a></span></span><span class='rparen'>)</span>
   <span class='ivar'>@delegate</span> <span class='op'>=</span> <span class='id identifier rubyid_o'><span class='object_link'><a href="../../top-level-namespace.html#o-instance_method" title="#o (method)">o</a></span></span>
@@ -341,24 +349,22 @@ This class wraps a socket object and ensures that all operations on it are threa
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Handles calls to methods that are not defined in this class.</p>
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>This method delegates calls to the underlying socket object.</p>
+</div>
+  </div>
+
+
+<p>Handles calls to methods that are not defined in this class.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'><p>Calling an undefined method</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_some_undefined_method'>some_undefined_method</span><span class='lparen'>(</span><span class='id identifier rubyid_arg1'>arg1</span><span class='comma'>,</span> <span class='id identifier rubyid_arg2'>arg2</span><span class='rparen'>)</span></code></pre>
-    
-  </div>
-<p class="tag_title">Parameters:</p>
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -371,7 +377,8 @@ This class wraps a socket object and ensures that all operations on it are threa
       
       
         &mdash;
-        <div class='inline'><p>The name of the method being called.</p>
+        <div class='inline'>
+<p>The name of the method being called.</p>
 </div>
       
     </li>
@@ -386,7 +393,8 @@ This class wraps a socket object and ensures that all operations on it are threa
       
       
         &mdash;
-        <div class='inline'><p>The arguments passed to the method.</p>
+        <div class='inline'>
+<p>The arguments passed to the method.</p>
 </div>
       
     </li>
@@ -401,7 +409,8 @@ This class wraps a socket object and ensures that all operations on it are threa
       
       
         &mdash;
-        <div class='inline'><p>An optional block to be executed.</p>
+        <div class='inline'>
+<p>An optional block to be executed.</p>
 </div>
       
     </li>
@@ -419,7 +428,8 @@ This class wraps a socket object and ensures that all operations on it are threa
       
       
         &mdash;
-        <div class='inline'><p>The result of the method call on the delegate.</p>
+        <div class='inline'>
+<p>Returns the result of the method call on the delegate.</p>
 </div>
       
     </li>
@@ -432,12 +442,12 @@ This class wraps a socket object and ensures that all operations on it are threa
       <pre class="lines">
 
 
+66
 67
-68
-69</pre>
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'synchronizedsocket.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/synchronizedsocket.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='ivar'>@delegate</span><span class='period'>.</span><span class='id identifier rubyid___send__'>__send__</span> <span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
@@ -465,7 +475,8 @@ This class wraps a socket object and ensures that all operations on it are threa
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Outputs a string to the delegate socket.</p>
+    
+<p>Outputs a string to the socket.</p>
 
 
   </div>
@@ -476,10 +487,11 @@ This class wraps a socket object and ensures that all operations on it are threa
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Sending a message to the socket</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Sending a message to the socket</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hello, World!</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello, World!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -495,7 +507,8 @@ This class wraps a socket object and ensures that all operations on it are threa
       
       
         &mdash;
-        <div class='inline'><p>The arguments to be output.</p>
+        <div class='inline'>
+<p>The arguments to be sent to the socket.</p>
 </div>
       
     </li>
@@ -510,7 +523,8 @@ This class wraps a socket object and ensures that all operations on it are threa
       
       
         &mdash;
-        <div class='inline'><p>An optional block to be executed.</p>
+        <div class='inline'>
+<p>An optional block to be executed.</p>
 </div>
       
     </li>
@@ -528,7 +542,8 @@ This class wraps a socket object and ensures that all operations on it are threa
       
       
         &mdash;
-        <div class='inline'><p>Returns nil after outputting.</p>
+        <div class='inline'>
+<p>Returns nil after outputting.</p>
 </div>
       
     </li>
@@ -548,7 +563,7 @@ This class wraps a socket object and ensures that all operations on it are threa
 30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'synchronizedsocket.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/synchronizedsocket.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='ivar'>@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
@@ -571,7 +586,8 @@ This class wraps a socket object and ensures that all operations on it are threa
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Conditionally outputs a string to the delegate socket based on a block&#39;s return value.</p>
+    
+<p>Conditionally outputs a string to the socket based on a block’s return value.</p>
 
 
   </div>
@@ -582,10 +598,11 @@ This class wraps a socket object and ensures that all operations on it are threa
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Sending a message conditionally</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Conditionally sending a message</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_puts_if'>puts_if</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hello, World!</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='kw'>true</span> <span class='rbrace'>}</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_puts_if'>puts_if</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello, World!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='kw'>true</span> <span class='rbrace'>}</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -601,7 +618,8 @@ This class wraps a socket object and ensures that all operations on it are threa
       
       
         &mdash;
-        <div class='inline'><p>The arguments to be output if the condition is true.</p>
+        <div class='inline'>
+<p>The arguments to be sent to the socket if the condition is true.</p>
 </div>
       
     </li>
@@ -619,7 +637,8 @@ This class wraps a socket object and ensures that all operations on it are threa
       
       
         &mdash;
-        <div class='inline'><p>Returns true if the message was sent, false otherwise.</p>
+        <div class='inline'>
+<p>Returns true if the message was sent, false otherwise.</p>
 </div>
       
     </li>
@@ -644,7 +663,7 @@ This class wraps a socket object and ensures that all operations on it are threa
 46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'synchronizedsocket.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/synchronizedsocket.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_puts_if'>puts_if</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='ivar'>@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
@@ -672,7 +691,8 @@ This class wraps a socket object and ensures that all operations on it are threa
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Writes data to the delegate socket.</p>
+    
+<p>Writes data to the socket.</p>
 
 
   </div>
@@ -683,10 +703,11 @@ This class wraps a socket object and ensures that all operations on it are threa
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Writing data to the socket</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Writing data to the socket</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Data to send</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_socket'>socket</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Data to send</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -702,7 +723,8 @@ This class wraps a socket object and ensures that all operations on it are threa
       
       
         &mdash;
-        <div class='inline'><p>The data to be written.</p>
+        <div class='inline'>
+<p>The arguments to be sent to the socket.</p>
 </div>
       
     </li>
@@ -717,7 +739,8 @@ This class wraps a socket object and ensures that all operations on it are threa
       
       
         &mdash;
-        <div class='inline'><p>An optional block to be executed.</p>
+        <div class='inline'>
+<p>An optional block to be executed.</p>
 </div>
       
     </li>
@@ -735,7 +758,8 @@ This class wraps a socket object and ensures that all operations on it are threa
       
       
         &mdash;
-        <div class='inline'><p>Returns nil after writing.</p>
+        <div class='inline'>
+<p>Returns nil after writing.</p>
 </div>
       
     </li>
@@ -755,7 +779,7 @@ This class wraps a socket object and ensures that all operations on it are threa
 58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'synchronizedsocket.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/synchronizedsocket.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='ivar'>@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span>
@@ -772,7 +796,7 @@ This class wraps a socket object and ensures that all operations on it are threa
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:57 2025 by
+  Generated on Fri Nov  7 05:08:45 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Gemstone::Skills
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,15 +78,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>skills.rb</dd>
+    <dd>output/latest/documented/attributes/skills.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Module for handling skills in the Gemstone system
-This module provides methods to calculate bonuses and manage skills.</p>
+    
+<p>Module for handling skills in the Lich project. Provides methods to calculate bonuses and manage skills.</p>
 
 
   </div>
@@ -97,10 +97,11 @@ This module provides methods to calculate bonuses and manage skills.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Accessing a skill bonus</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Accessing skills</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_bonus'>bonus</span> <span class='op'>=</span> <span class='const'>Skills</span><span class='period'>.</span><span class='id identifier rubyid_to_bonus'><span class='object_link'><a href="#to_bonus-class_method" title="Lich::Gemstone::Skills.to_bonus (method)">to_bonus</a></span></span><span class='lparen'>(</span><span class='int'>5</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'>Skills</span><span class='period'>.</span><span class='id identifier rubyid_to_bonus'><span class='object_link'><a href="#to_bonus-class_method" title="Lich::Gemstone::Skills.to_bonus (method)">to_bonus</a></span></span><span class='lparen'>(</span><span class='int'>5</span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -117,8 +118,8 @@ This module provides methods to calculate bonuses and manage skills.</p>
         <dt id="skills-classvariable" class="">@@skills =
           <div class="docstring">
   <div class="discussion">
-    <p>List of all skills available in the Gemstone system
-This constant holds the symbols representing various skills.</p>
+    
+<p>List of skills available in the Lich project.</p>
 
 
   </div>
@@ -164,7 +165,8 @@ This constant holds the symbols representing various skills.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Serializes the current skills into an array.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Serializes the current skills into an array.</p>
 </div></span>
   
 </li>
@@ -187,7 +189,8 @@ This constant holds the symbols representing various skills.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>extended function, now takes INT, Symbol, String but not shorthand Symbol, String Skills.to_bonus(Skills.combatmaneuvers), Skills.to_bonus(5), Skills.to_bonus(:combat_maneuvers), Skills.to_bonus(&#39;combat_maneuvers&#39;) as examples Calculates the bonus based on the number of ranks.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>extended function, now takes INT, Symbol, String but not shorthand Symbol, String Skills.to_bonus(Skills.combatmaneuvers), Skills.to_bonus(5), Skills.to_bonus(:combat_maneuvers), Skills.to_bonus(‘combat_maneuvers’) as examples Calculates the bonus based on the number of ranks.</p>
 </div></span>
   
 </li>
@@ -213,7 +216,8 @@ This constant holds the symbols representing various skills.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Serializes the current skills into an array</p>
+    
+<p>Serializes the current skills into an array.</p>
 
 
   </div>
@@ -224,10 +228,11 @@ This constant holds the symbols representing various skills.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Serializing skills</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Serializing skills</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_skills_array'>skills_array</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Skills (module)">Skills</a></span></span><span class='period'>.</span><span class='id identifier rubyid_serialize'>serialize</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_skills_array'>skills_array</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Skills (module)">Skills</a></span></span><span class='period'>.</span><span class='id identifier rubyid_serialize'>serialize</span></code></pre>
     
   </div>
 
@@ -242,7 +247,8 @@ This constant holds the symbols representing various skills.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of skill ranks</p>
+        <div class='inline'>
+<p>An array of skill ranks.</p>
 </div>
       
     </li>
@@ -255,6 +261,8 @@ This constant holds the symbols representing various skills.</p>
       <pre class="lines">
 
 
+85
+86
 87
 88
 89
@@ -267,12 +275,10 @@ This constant holds the symbols representing various skills.</p>
 96
 97
 98
-99
-100
-101</pre>
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'skills.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/skills.rb', line 85</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_serialize'>serialize</span>
   <span class='lbracket'>[</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_two_weapon_combat'>two_weapon_combat</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_armor_use'>armor_use</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_shield_use'>shield_use</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_combat_maneuvers'>combat_maneuvers</span><span class='comma'>,</span>
@@ -305,10 +311,8 @@ This constant holds the symbols representing various skills.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>extended function, now takes INT, Symbol, String but not shorthand Symbol, String
-Skills.to_bonus(Skills.combatmaneuvers), Skills.to_bonus(5),
-Skills.to_bonus(:combat_maneuvers), Skills.to_bonus(&#39;combat_maneuvers&#39;) as examples
-Calculates the bonus based on the number of ranks</p>
+    
+<p>extended function, now takes INT, Symbol, String but not shorthand Symbol, String Skills.to_bonus(Skills.combatmaneuvers), Skills.to_bonus(5), Skills.to_bonus(:combat_maneuvers), Skills.to_bonus(‘combat_maneuvers’) as examples Calculates the bonus based on the number of ranks.</p>
 
 
   </div>
@@ -319,12 +323,12 @@ Calculates the bonus based on the number of ranks</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Calculating bonus from ranks</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Calculating bonus</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_bonus'>bonus</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Skills (module)">Skills</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_bonus'>to_bonus</span><span class='lparen'>(</span><span class='int'>10</span><span class='rparen'>)</span>
-<span class='id identifier rubyid_bonus'>bonus</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Skills (module)">Skills</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_bonus'>to_bonus</span><span class='lparen'>(</span><span class='symbol'>:combat_maneuvers</span><span class='rparen'>)</span>
-<span class='id identifier rubyid_bonus'>bonus</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Skills (module)">Skills</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_bonus'>to_bonus</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>combat_maneuvers</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_bonus'>bonus</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Skills (module)">Skills</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_bonus'>to_bonus</span><span class='lparen'>(</span><span class='int'>30</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_bonus'>bonus</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Skills (module)">Skills</a></span></span><span class='period'>.</span><span class='id identifier rubyid_to_bonus'>to_bonus</span><span class='lparen'>(</span><span class='symbol'>:combat_maneuvers</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -340,7 +344,8 @@ Calculates the bonus based on the number of ranks</p>
       
       
         &mdash;
-        <div class='inline'><p>The ranks to calculate bonus for</p>
+        <div class='inline'>
+<p>The ranks to calculate bonus for.</p>
 </div>
       
     </li>
@@ -358,7 +363,8 @@ Calculates the bonus based on the number of ranks</p>
       
       
         &mdash;
-        <div class='inline'><p>The calculated bonus</p>
+        <div class='inline'>
+<p>The calculated bonus.</p>
 </div>
       
     </li>
@@ -375,7 +381,8 @@ Calculates the bonus based on the number of ranks</p>
       
       
         &mdash;
-        <div class='inline'><p>If the input is not valid</p>
+        <div class='inline'>
+<p>If the input is not valid.</p>
 </div>
       
     </li>
@@ -388,6 +395,7 @@ Calculates the bonus based on the number of ranks</p>
       <pre class="lines">
 
 
+24
 25
 26
 27
@@ -415,11 +423,10 @@ Calculates the bonus based on the number of ranks</p>
 49
 50
 51
-52
-53</pre>
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'skills.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/skills.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_bonus'>to_bonus</span><span class='lparen'>(</span><span class='id identifier rubyid_ranks'>ranks</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_ranks'>ranks</span>
@@ -460,7 +467,7 @@ Calculates the bonus based on the number of ranks</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:50 2025 by
+  Generated on Fri Nov  7 05:08:36 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

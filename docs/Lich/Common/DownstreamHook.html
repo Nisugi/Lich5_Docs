@@ -6,7 +6,7 @@
 <title>
   Class: Lich::Common::DownstreamHook
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -94,15 +94,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>downstreamhook.rb</dd>
+    <dd>output/latest/documented/common/downstreamhook.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Handles downstream hooks for processing server strings.
-This class allows adding, running, removing, and listing hooks that can modify server strings.</p>
+    
+<p>Handles downstream hooks for processing strings. This class allows you to add, run, remove, and list hooks that can modify a server string.</p>
 
 
   </div>
@@ -113,10 +113,11 @@ This class allows adding, running, removing, and listing hooks that can modify s
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Adding a hook</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Adding a hook</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'>DownstreamHook</span><span class='period'>.</span><span class='id identifier rubyid_add'><span class='object_link'><a href="#add-class_method" title="Lich::Common::DownstreamHook.add (method)">add</a></span></span><span class='lparen'>(</span><span class='symbol'>:my_hook</span><span class='comma'>,</span> <span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_str'>str</span><span class='op'>|</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span> <span class='rbrace'>}</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'>DownstreamHook</span><span class='period'>.</span><span class='id identifier rubyid_add'><span class='object_link'><a href="#add-class_method" title="Lich::Common::DownstreamHook.add (method)">add</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>example_hook</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_str'>str</span><span class='op'>|</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span> <span class='rbrace'>}</span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -153,7 +154,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Adds a new downstream hook.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Adds a new downstream hook.</p>
 </div></span>
   
 </li>
@@ -162,7 +164,7 @@ This class allows adding, running, removing, and listing hooks that can modify s
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#hook_sources-class_method" title="hook_sources (class method)">.<strong>hook_sources</strong>  &#x21d2; Hash&lt;Symbol, String&gt; </a>
+      <a href="#hook_sources-class_method" title="hook_sources (class method)">.<strong>hook_sources</strong>  &#x21d2; Hash </a>
     
 
     
@@ -176,7 +178,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the hash of hook sources.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the hash of hook sources.</p>
 </div></span>
   
 </li>
@@ -185,7 +188,7 @@ This class allows adding, running, removing, and listing hooks that can modify s
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#list-class_method" title="list (class method)">.<strong>list</strong>  &#x21d2; Array&lt;Symbol&gt; </a>
+      <a href="#list-class_method" title="list (class method)">.<strong>list</strong>  &#x21d2; Array&lt;String&gt; </a>
     
 
     
@@ -199,7 +202,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Lists all registered downstream hooks.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Lists all registered downstream hooks.</p>
 </div></span>
   
 </li>
@@ -222,7 +226,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Removes a downstream hook by name.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Removes a downstream hook by name.</p>
 </div></span>
   
 </li>
@@ -245,7 +250,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Runs all registered downstream hooks on the given server string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Executes all registered downstream hooks on the given server string.</p>
 </div></span>
   
 </li>
@@ -268,7 +274,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Displays a table of hook names and their sources.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Displays a table of hook names and their sources.</p>
 </div></span>
   
 </li>
@@ -294,7 +301,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Adds a new downstream hook.</p>
+    
+<p>Adds a new downstream hook.</p>
 
 
   </div>
@@ -305,10 +313,11 @@ This class allows adding, running, removing, and listing hooks that can modify s
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Adding a hook</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Adding a hook</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Common::DownstreamHook (class)">DownstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='symbol'>:my_hook</span><span class='comma'>,</span> <span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_str'>str</span><span class='op'>|</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span> <span class='rbrace'>}</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Common::DownstreamHook (class)">DownstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>example_hook</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_str'>str</span><span class='op'>|</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span> <span class='rbrace'>}</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -319,12 +328,13 @@ This class allows adding, running, removing, and listing hooks that can modify s
         <span class='name'>name</span>
       
       
-        <span class='type'>(<tt>Symbol</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>The name of the hook.</p>
+        <div class='inline'>
+<p>The name of the hook.</p>
 </div>
       
     </li>
@@ -339,7 +349,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
       
       
         &mdash;
-        <div class='inline'><p>The action to be executed as a hook.</p>
+        <div class='inline'>
+<p>The action to be executed as a hook.</p>
 </div>
       
     </li>
@@ -357,7 +368,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
       
       
         &mdash;
-        <div class='inline'><p>Returns true if the hook was added successfully, false otherwise.</p>
+        <div class='inline'>
+<p>Returns true if the hook was added successfully, false otherwise.</p>
 </div>
       
     </li>
@@ -374,7 +386,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
       
       
         &mdash;
-        <div class='inline'><p>Raises an error if action is not a Proc.</p>
+        <div class='inline'>
+<p>Raises an error if action is not a Proc.</p>
 </div>
       
     </li>
@@ -397,14 +410,14 @@ This class allows adding, running, removing, and listing hooks that can modify s
 30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'downstreamhook.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/downstreamhook.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::DownstreamHook (class)">DownstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Proc</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_echo'><span class='object_link'><a href="../../top-level-namespace.html#echo-instance_method" title="#echo (method)">echo</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>DownstreamHook: not a Proc (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_action'>action</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>return</span> <span class='kw'>false</span>
   <span class='kw'>end</span>
-  <span class='cvar'>@@downstream_hook_sources</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Script.html" title="Lich::Common::Script (class)">Script</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'><span class='object_link'><a href="Script.html#current-class_method" title="Lich::Common::Script.current (method)">current</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unknown</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='cvar'>@@downstream_hook_sources</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Script.html" title="Lich::Common::Script (class)">Script</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'><span class='object_link'><a href="Script.html#current-class_method" title="Lich::Common::Script.current (method)">current</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'><span class='object_link'><a href="Script.html#name-instance_method" title="Lich::Common::Script#name (method)">name</a></span></span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unknown</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='cvar'>@@downstream_hooks</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_action'>action</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -415,7 +428,7 @@ This class allows adding, running, removing, and listing hooks that can modify s
       <div class="method_details ">
   <h3 class="signature " id="hook_sources-class_method">
   
-    .<strong>hook_sources</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&lt;Symbol, <span class='object_link'><a href="../../String.html" title="String (class)">String</a></span>&gt;</tt> 
+    .<strong>hook_sources</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt> 
   
 
   
@@ -423,7 +436,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the hash of hook sources.</p>
+    
+<p>Retrieves the hash of hook sources.</p>
 
 
   </div>
@@ -434,7 +448,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Getting hook sources</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Getting hook sources</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_sources'>sources</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::DownstreamHook (class)">DownstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_hook_sources'>hook_sources</span></code></pre>
@@ -447,12 +462,13 @@ This class allows adding, running, removing, and listing hooks that can modify s
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&lt;Symbol, <span class='object_link'><a href="../../String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>A hash mapping hook names to their sources.</p>
+        <div class='inline'>
+<p>A hash mapping hook names to their sources.</p>
 </div>
       
     </li>
@@ -470,7 +486,7 @@ This class allows adding, running, removing, and listing hooks that can modify s
 87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'downstreamhook.rb', line 85</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/downstreamhook.rb', line 85</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::DownstreamHook (class)">DownstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_hook_sources'>hook_sources</span>
   <span class='cvar'>@@downstream_hook_sources</span>
@@ -483,7 +499,7 @@ This class allows adding, running, removing, and listing hooks that can modify s
       <div class="method_details ">
   <h3 class="signature " id="list-class_method">
   
-    .<strong>list</strong>  &#x21d2; <tt>Array&lt;Symbol&gt;</tt> 
+    .<strong>list</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="../../String.html" title="String (class)">String</a></span>&gt;</tt> 
   
 
   
@@ -491,7 +507,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Lists all registered downstream hooks.</p>
+    
+<p>Lists all registered downstream hooks.</p>
 
 
   </div>
@@ -502,7 +519,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Listing hooks</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Listing hooks</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_hooks'>hooks</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::DownstreamHook (class)">DownstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span></code></pre>
@@ -515,12 +533,13 @@ This class allows adding, running, removing, and listing hooks that can modify s
     <li>
       
       
-        <span class='type'>(<tt>Array&lt;Symbol&gt;</tt>)</span>
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../../String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>An array of names of all registered hooks.</p>
+        <div class='inline'>
+<p>An array of hook names.</p>
 </div>
       
     </li>
@@ -538,7 +557,7 @@ This class allows adding, running, removing, and listing hooks that can modify s
 68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'downstreamhook.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/downstreamhook.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::DownstreamHook (class)">DownstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span>
   <span class='cvar'>@@downstream_hooks</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
@@ -559,7 +578,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Removes a downstream hook by name.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Removes a downstream hook by name.</p>
 
 
   </div>
@@ -570,10 +590,11 @@ This class allows adding, running, removing, and listing hooks that can modify s
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Removing a hook</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Removing a hook</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Common::DownstreamHook (class)">DownstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_remove'>remove</span><span class='lparen'>(</span><span class='symbol'>:my_hook</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Common::DownstreamHook (class)">DownstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_remove'>remove</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>example_hook</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -584,12 +605,13 @@ This class allows adding, running, removing, and listing hooks that can modify s
         <span class='name'>name</span>
       
       
-        <span class='type'>(<tt>Symbol</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>The name of the hook to remove.</p>
+        <div class='inline'>
+<p>The name of the hook to remove.</p>
 </div>
       
     </li>
@@ -609,7 +631,7 @@ This class allows adding, running, removing, and listing hooks that can modify s
 60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'downstreamhook.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/downstreamhook.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::DownstreamHook (class)">DownstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_remove'>remove</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='cvar'>@@downstream_hook_sources</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
@@ -631,7 +653,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Runs all registered downstream hooks on the given server string.</p>
+    
+<p>Executes all registered downstream hooks on the given server string.</p>
 
 
   </div>
@@ -642,10 +665,11 @@ This class allows adding, running, removing, and listing hooks that can modify s
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Running hooks</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Running hooks</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_modified_string'>modified_string</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::DownstreamHook (class)">DownstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span><span class='lparen'>(</span><span class='id identifier rubyid_server_string'>server_string</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_modified_string'>modified_string</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::DownstreamHook (class)">DownstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>input string</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -661,7 +685,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
       
       
         &mdash;
-        <div class='inline'><p>The server string to process.</p>
+        <div class='inline'>
+<p>The string to be processed by the hooks.</p>
 </div>
       
     </li>
@@ -679,7 +704,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
       
       
         &mdash;
-        <div class='inline'><p>Returns the modified server string or nil if the input is nil.</p>
+        <div class='inline'>
+<p>Returns the modified string or nil if the input is nil.</p>
 </div>
       
     </li>
@@ -696,7 +722,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
       
       
         &mdash;
-        <div class='inline'><p>Catches exceptions raised during hook execution and removes the faulty hook.</p>
+        <div class='inline'>
+<p>Catches exceptions raised by hooks and removes the faulty hook.</p>
 </div>
       
     </li>
@@ -724,7 +751,7 @@ This class allows adding, running, removing, and listing hooks that can modify s
 50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'downstreamhook.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/downstreamhook.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::DownstreamHook (class)">DownstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span><span class='lparen'>(</span><span class='id identifier rubyid_server_string'>server_string</span><span class='rparen'>)</span>
   <span class='kw'>for</span> <span class='id identifier rubyid_key'>key</span> <span class='kw'>in</span> <span class='cvar'>@@downstream_hooks</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
@@ -755,7 +782,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Displays a table of hook names and their sources.</p>
+    
+<p>Displays a table of hook names and their sources.</p>
 
 
   </div>
@@ -766,7 +794,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Displaying hook sources</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Displaying hook sources</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_puts'>puts</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::DownstreamHook (class)">DownstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_sources'>sources</span></code></pre>
@@ -784,7 +813,8 @@ This class allows adding, running, removing, and listing hooks that can modify s
       
       
         &mdash;
-        <div class='inline'><p>A formatted string representation of the hook sources.</p>
+        <div class='inline'>
+<p>A formatted string representation of the hook sources.</p>
 </div>
       
     </li>
@@ -805,7 +835,7 @@ This class allows adding, running, removing, and listing hooks that can modify s
 79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'downstreamhook.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/downstreamhook.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::DownstreamHook (class)">DownstreamHook</a></span></span><span class='period'>.</span><span class='id identifier rubyid_sources'>sources</span>
   <span class='id identifier rubyid_info_table'>info_table</span> <span class='op'>=</span> <span class='const'>Terminal</span><span class='op'>::</span><span class='const'>Table</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='symbol'>:headings</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hook</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Source</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
@@ -823,7 +853,7 @@ This class allows adding, running, removing, and listing hooks that can modify s
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:57 2025 by
+  Generated on Fri Nov  7 05:08:44 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

@@ -6,7 +6,7 @@
 <title>
   Module: Wine
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,14 +78,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>wine.rb</dd>
+    <dd>output/latest/documented/wine.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Provides methods to interact with the Wine registry.</p>
+    
+<p>Module for interacting with WINE registry This module provides methods to get and set values in the WINE registry.</p>
 
 
   </div>
@@ -96,10 +97,11 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Using the Wine module</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Using the Wine module</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='const'>Wine</span><span class='period'>.</span><span class='id identifier rubyid_registry_gets'><span class='object_link'><a href="#registry_gets-class_method" title="Wine.registry_gets (method)">registry_gets</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>HKEY_CURRENT_USER\Software\MyApp\Setting</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code>value = Wine.registry_gets(&quot;HKEY_CURRENT_USER\Software\MyApp\Setting&quot;)</code></pre>
     
   </div>
 
@@ -116,7 +118,8 @@
         <dt id="BIN-constant" class="">BIN =
           <div class="docstring">
   <div class="discussion">
-    <p>The path to the Wine binary.</p>
+    
+<p>The path to the WINE binary</p>
 
 
   </div>
@@ -131,7 +134,8 @@
         <dt id="PREFIX-constant" class="">PREFIX =
           <div class="docstring">
   <div class="discussion">
-    <p>The path to the Wine prefix.</p>
+    
+<p>The path to the WINE prefix</p>
 
 
   </div>
@@ -177,7 +181,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves a value from the Wine registry.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves a value from the WINE registry.</p>
 </div></span>
   
 </li>
@@ -200,7 +205,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Writes a value to the Wine registry.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Sets a value in the WINE registry.</p>
 </div></span>
   
 </li>
@@ -226,7 +232,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves a value from the Wine registry.</p>
+    
+<p>Retrieves a value from the WINE registry</p>
 
 
   </div>
@@ -237,7 +244,11 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Wine (module)">Wine</a></span></span><span class='period'>.</span><span class='id identifier rubyid_registry_gets'>registry_gets</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>HKEY_CURRENT_USER\Software\MyApp\Setting</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+        <h5 class="example_title"><div class='inline'>
+<p>Getting a registry value</p>
+</div></h5>
+      
+      <pre class="example code"><code>value = Wine.registry_gets(&quot;HKEY_CURRENT_USER\Software\MyApp\Setting&quot;)</code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -253,7 +264,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The registry key to retrieve the value from.</p>
+        <div class='inline'>
+<p>The registry key to retrieve the value from</p>
 </div>
       
     </li>
@@ -271,7 +283,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The value associated with the key, or false if not found.</p>
+        <div class='inline'>
+<p>The value associated with the key, or false if not found</p>
 </div>
       
     </li>
@@ -288,7 +301,8 @@
       
       
         &mdash;
-        <div class='inline'><p>If there is an issue reading the registry file.</p>
+        <div class='inline'>
+<p>If there is an error reading the registry</p>
 </div>
       
     </li>
@@ -301,7 +315,6 @@
       <pre class="lines">
 
 
-41
 42
 43
 44
@@ -329,10 +342,11 @@
 66
 67
 68
-69</pre>
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'wine.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/wine.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Wine (module)">Wine</a></span></span><span class='period'>.</span><span class='id identifier rubyid_registry_gets'>registry_gets</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_hkey'>hkey</span><span class='comma'>,</span> <span class='id identifier rubyid_subkey'>subkey</span><span class='comma'>,</span> <span class='id identifier rubyid_thingie'>thingie</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(HKEY_LOCAL_MACHINE|HKEY_CURRENT_USER)\\(.+)\\([^\\]*)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'><span class='object_link'><a href="top-level-namespace.html#match-instance_method" title="#match (method)">match</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_captures'>captures</span> <span class='comment'># fixme: stupid highlights ]/
@@ -379,7 +393,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Writes a value to the Wine registry.</p>
+    
+<p>Sets a value in the WINE registry</p>
 
 
   </div>
@@ -390,7 +405,11 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_success'>success</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Wine (module)">Wine</a></span></span><span class='period'>.</span><span class='id identifier rubyid_registry_puts'>registry_puts</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>HKEY_CURRENT_USER\Software\MyApp\Setting</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>new_value</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+        <h5 class="example_title"><div class='inline'>
+<p>Setting a registry value</p>
+</div></h5>
+      
+      <pre class="example code"><code>success = Wine.registry_puts(&quot;HKEY_CURRENT_USER\Software\MyApp\Setting&quot;, &quot;NewValue&quot;)</code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -406,7 +425,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The registry key to write the value to.</p>
+        <div class='inline'>
+<p>The registry key to set the value for</p>
 </div>
       
     </li>
@@ -421,7 +441,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The value to be written to the registry.</p>
+        <div class='inline'>
+<p>The value to set</p>
 </div>
       
     </li>
@@ -439,7 +460,8 @@
       
       
         &mdash;
-        <div class='inline'><p>true if the operation was successful, false otherwise.</p>
+        <div class='inline'>
+<p>true if the operation was successful, false otherwise</p>
 </div>
       
     </li>
@@ -456,7 +478,8 @@
       
       
         &mdash;
-        <div class='inline'><p>If there is an issue writing to the registry.</p>
+        <div class='inline'>
+<p>If there is an error writing to the registry</p>
 </div>
       
     </li>
@@ -469,7 +492,6 @@
       <pre class="lines">
 
 
-78
 79
 80
 81
@@ -492,10 +514,11 @@
 98
 99
 100
-101</pre>
+101
+102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'wine.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/wine.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Wine (module)">Wine</a></span></span><span class='period'>.</span><span class='id identifier rubyid_registry_puts'>registry_puts</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_hkey'>hkey</span><span class='comma'>,</span> <span class='id identifier rubyid_subkey'>subkey</span><span class='comma'>,</span> <span class='id identifier rubyid_thingie'>thingie</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(HKEY_LOCAL_MACHINE|HKEY_CURRENT_USER)\\(.+)\\([^\\]*)</span><span class='regexp_end'>/</span></span><span class='period'>.</span><span class='id identifier rubyid_match'><span class='object_link'><a href="top-level-namespace.html#match-instance_method" title="#match (method)">match</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_captures'>captures</span> <span class='comment'># fixme ]/
@@ -531,7 +554,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:49 2025 by
+  Generated on Fri Nov  7 05:08:34 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

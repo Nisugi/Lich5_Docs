@@ -6,7 +6,7 @@
 <title>
   Class: Lich::Gemstone::Bounty::Parser
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -94,15 +94,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>parser.rb</dd>
+    <dd>output/latest/documented/gemstone/bounty/parser.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Parses bounty descriptions to extract task information.
-This class uses regular expressions to match various task types.</p>
+    
+<p>Parses bounty descriptions to extract task information. This class uses regular expressions to match various task types.</p>
 
 
   </div>
@@ -113,7 +113,8 @@ This class uses regular expressions to match various task types.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Parsing a bounty description</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Parsing a bounty description</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Bounty.html" title="Lich::Gemstone::Bounty (class)">Bounty</a></span></span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'><span class='object_link'><a href="#parse-class_method" title="Lich::Gemstone::Bounty::Parser.parse (method)">parse</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span></code></pre>
@@ -133,7 +134,8 @@ This class uses regular expressions to match various task types.</p>
         <dt id="HMM_REGEX-constant" class="">HMM_REGEX =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression to match the &#39;Hmm&#39; phrase in task descriptions.</p>
+    
+<p>Regular expression to match the ‘Hmm’ phrase in task descriptions.</p>
 
 
   </div>
@@ -148,7 +150,8 @@ This class uses regular expressions to match various task types.</p>
         <dt id="LOCATION_REGEX-constant" class="">LOCATION_REGEX =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression to match location descriptions in tasks.</p>
+    
+<p>Regular expression to match location descriptions in tasks.</p>
 
 
   </div>
@@ -163,7 +166,8 @@ This class uses regular expressions to match various task types.</p>
         <dt id="GUARD_REGEX-constant" class="">GUARD_REGEX =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression to match various guard descriptions.</p>
+    
+<p>Regular expression to match various guard descriptions.</p>
 
 
   </div>
@@ -191,7 +195,8 @@ This class uses regular expressions to match various task types.</p>
         <dt id="CONCOCTION_REGEX-constant" class="">CONCOCTION_REGEX =
           <div class="docstring">
   <div class="discussion">
-    <p>Regular expression to match descriptions of concoctions required for tasks.</p>
+    
+<p>Regular expression to match descriptions of concoctions required for tasks.</p>
 
 
   </div>
@@ -211,7 +216,8 @@ This class uses regular expressions to match various task types.</p>
         <dt id="TASK_MATCHERS-constant" class="">TASK_MATCHERS =
           <div class="docstring">
   <div class="discussion">
-    <p>A hash mapping task types to their corresponding regular expressions.</p>
+    
+<p>A hash mapping task types to their corresponding regular expressions.</p>
 
 
   </div>
@@ -308,7 +314,8 @@ This class uses regular expressions to match various task types.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute description.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute description.</p>
 </div></span>
   
 </li>
@@ -344,7 +351,8 @@ This class uses regular expressions to match various task types.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Parses a bounty description from a string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Parses a bounty description from a string.</p>
 </div></span>
   
 </li>
@@ -376,7 +384,8 @@ This class uses regular expressions to match various task types.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Determines the town based on the captured town name and description context.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Determines the town based on captured town name and description context.</p>
 </div></span>
   
 </li>
@@ -401,7 +410,8 @@ This class uses regular expressions to match various task types.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Initializes a new Parser instance with a description.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initializes a new Parser instance with a description.</p>
 </div></span>
   
 </li>
@@ -424,7 +434,8 @@ This class uses regular expressions to match various task types.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Normalizes the creature name based on specific patterns.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Normalizes the creature name based on specific patterns.</p>
 </div></span>
   
 </li>
@@ -447,7 +458,8 @@ This class uses regular expressions to match various task types.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Parses the bounty description to identify the task type and details.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Parses the description to identify the task type and details.</p>
 </div></span>
   
 </li>
@@ -470,7 +482,8 @@ This class uses regular expressions to match various task types.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Extracts task details from named captures.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Extracts task details from named captures.</p>
 </div></span>
   
 </li>
@@ -493,7 +506,8 @@ This class uses regular expressions to match various task types.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Initializes a new Parser instance with a description.</p>
+    
+<p>Initializes a new Parser instance with a description.</p>
 
 
   </div>
@@ -512,7 +526,8 @@ This class uses regular expressions to match various task types.</p>
       
       
         &mdash;
-        <div class='inline'><p>The description of the bounty task.</p>
+        <div class='inline'>
+<p>The description of the bounty task.</p>
 </div>
       
     </li>
@@ -531,7 +546,7 @@ This class uses regular expressions to match various task types.</p>
 98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'parser.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/bounty/parser.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span>
   <span class='ivar'>@description</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span>
@@ -559,7 +574,8 @@ This class uses regular expressions to match various task types.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the value of attribute description.</p>
+    
+<p>Returns the value of attribute description.</p>
 
 
   </div>
@@ -578,7 +594,7 @@ This class uses regular expressions to match various task types.</p>
 102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'parser.rb', line 100</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/bounty/parser.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_description'>description</span>
   <span class='ivar'>@description</span>
@@ -606,7 +622,8 @@ This class uses regular expressions to match various task types.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Parses a bounty description from a string.</p>
+    
+<p>Parses a bounty description from a string.</p>
 
 
   </div>
@@ -617,7 +634,8 @@ This class uses regular expressions to match various task types.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Parsing a bounty description</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Parsing a bounty description</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Bounty.html" title="Lich::Gemstone::Bounty (class)">Bounty</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Bounty::Parser (class)">Parser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_description'>description</span><span class='rparen'>)</span></code></pre>
@@ -638,7 +656,8 @@ This class uses regular expressions to match various task types.</p>
       
       
         &mdash;
-        <div class='inline'><p>The description of the bounty task.</p>
+        <div class='inline'>
+<p>The description of the bounty task. Defaults to checkbounty.</p>
 </div>
       
     </li>
@@ -656,7 +675,8 @@ This class uses regular expressions to match various task types.</p>
       
       
         &mdash;
-        <div class='inline'><p>A hash containing task type and details, or nil if no match is found.</p>
+        <div class='inline'>
+<p>A hash containing task type and details or nil if no match is found.</p>
 </div>
       
     </li>
@@ -669,16 +689,16 @@ This class uses regular expressions to match various task types.</p>
       <pre class="lines">
 
 
-186
-187
-188
-189
-190
-191
-192</pre>
+192
+193
+194
+195
+196
+197
+198</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'parser.rb', line 186</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/bounty/parser.rb', line 192</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_desc'>desc</span> <span class='op'>=</span> <span class='id identifier rubyid_checkbounty'><span class='object_link'><a href="../../../top-level-namespace.html#checkbounty-instance_method" title="#checkbounty (method)">checkbounty</a></span></span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_desc'>desc</span><span class='op'>&amp;.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -709,13 +729,26 @@ This class uses regular expressions to match various task types.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Determines the town based on the captured town name and description context.</p>
+    
+<p>Determines the town based on captured town name and description context.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Determining a town</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_town'>town</span> <span class='op'>=</span> <span class='id identifier rubyid_determine_town'>determine_town</span><span class='lparen'>(</span><span class='id identifier rubyid_captured_town'>captured_town</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -728,7 +761,8 @@ This class uses regular expressions to match various task types.</p>
       
       
         &mdash;
-        <div class='inline'><p>The town name captured from the regex.</p>
+        <div class='inline'>
+<p>The town name captured from the regex.</p>
 </div>
       
     </li>
@@ -746,7 +780,8 @@ This class uses regular expressions to match various task types.</p>
       
       
         &mdash;
-        <div class='inline'><p>The determined town name.</p>
+        <div class='inline'>
+<p>The determined town name.</p>
 </div>
       
     </li>
@@ -759,22 +794,22 @@ This class uses regular expressions to match various task types.</p>
       <pre class="lines">
 
 
-167
-168
-169
-170
-171
-172
 173
 174
 175
 176
 177
 178
-179</pre>
+179
+180
+181
+182
+183
+184
+185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'parser.rb', line 167</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/bounty/parser.rb', line 173</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_determine_town'>determine_town</span><span class='lparen'>(</span><span class='id identifier rubyid_captured_town'>captured_town</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>the sentry just outside town\.$</span><span class='regexp_end'>/</span></span>
@@ -805,13 +840,26 @@ This class uses regular expressions to match various task types.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Normalizes the creature name based on specific patterns.</p>
+    
+<p>Normalizes the creature name based on specific patterns.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Normalizing a creature name</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_normalized_name'>normalized_name</span> <span class='op'>=</span> <span class='id identifier rubyid_normalized_creature_name'>normalized_creature_name</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>some creature</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -824,7 +872,8 @@ This class uses regular expressions to match various task types.</p>
       
       
         &mdash;
-        <div class='inline'><p>The raw creature name to normalize.</p>
+        <div class='inline'>
+<p>The raw creature name to normalize.</p>
 </div>
       
     </li>
@@ -842,7 +891,8 @@ This class uses regular expressions to match various task types.</p>
       
       
         &mdash;
-        <div class='inline'><p>The normalized creature name.</p>
+        <div class='inline'>
+<p>The normalized creature name.</p>
 </div>
       
     </li>
@@ -855,19 +905,19 @@ This class uses regular expressions to match various task types.</p>
       <pre class="lines">
 
 
-153
-154
-155
-156
 157
 158
 159
 160
 161
-162</pre>
+162
+163
+164
+165
+166</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'parser.rb', line 153</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/bounty/parser.rb', line 157</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_normalized_creature_name'>normalized_creature_name</span><span class='lparen'>(</span><span class='id identifier rubyid_raw_creature_name'>raw_creature_name</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_raw_creature_name'>raw_creature_name</span>
@@ -895,7 +945,8 @@ This class uses regular expressions to match various task types.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Parses the bounty description to identify the task type and details.</p>
+    
+<p>Parses the description to identify the task type and details.</p>
 
 
   </div>
@@ -906,10 +957,11 @@ This class uses regular expressions to match various task types.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Parsing a description</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Parsing a description</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_task_details'>task_details</span> <span class='op'>=</span> <span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span></code></pre>
     
   </div>
 
@@ -924,7 +976,8 @@ This class uses regular expressions to match various task types.</p>
       
       
         &mdash;
-        <div class='inline'><p>A hash containing task type and details, or nil if no match is found.</p>
+        <div class='inline'>
+<p>A hash containing task type and details or nil if no match is found.</p>
 </div>
       
     </li>
@@ -952,7 +1005,7 @@ This class uses regular expressions to match various task types.</p>
 118</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'parser.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/bounty/parser.rb', line 106</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse'>parse</span>
   <span class='const'><span class='object_link'><a href="#TASK_MATCHERS-constant" title="Lich::Gemstone::Bounty::Parser::TASK_MATCHERS (constant)">TASK_MATCHERS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid_task_type'>task_type</span><span class='comma'>,</span> <span class='id identifier rubyid_regex'>regex</span><span class='rparen'>)</span><span class='op'>|</span>
@@ -983,13 +1036,26 @@ This class uses regular expressions to match various task types.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Extracts task details from named captures.</p>
+    
+<p>Extracts task details from named captures.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Extracting task details</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_details'>details</span> <span class='op'>=</span> <span class='id identifier rubyid_task_details_from'>task_details_from</span><span class='lparen'>(</span><span class='id identifier rubyid_captures'>captures</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1002,7 +1068,8 @@ This class uses regular expressions to match various task types.</p>
       
       
         &mdash;
-        <div class='inline'><p>The named captures from the regex match.</p>
+        <div class='inline'>
+<p>The named captures from the regex match.</p>
 </div>
       
     </li>
@@ -1020,7 +1087,8 @@ This class uses regular expressions to match various task types.</p>
       
       
         &mdash;
-        <div class='inline'><p>A hash containing task requirements and details.</p>
+        <div class='inline'>
+<p>A hash containing task requirements and details.</p>
 </div>
       
     </li>
@@ -1033,8 +1101,6 @@ This class uses regular expressions to match various task types.</p>
       <pre class="lines">
 
 
-123
-124
 125
 126
 127
@@ -1058,10 +1124,12 @@ This class uses regular expressions to match various task types.</p>
 145
 146
 147
-148</pre>
+148
+149
+150</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'parser.rb', line 123</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/bounty/parser.rb', line 125</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_task_details_from'>task_details_from</span><span class='lparen'>(</span><span class='id identifier rubyid_captures'>captures</span><span class='rparen'>)</span>
   <span class='lbrace'>{</span>
@@ -1099,7 +1167,7 @@ This class uses regular expressions to match various task types.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:18:54 2025 by
+  Generated on Fri Nov  7 05:08:44 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

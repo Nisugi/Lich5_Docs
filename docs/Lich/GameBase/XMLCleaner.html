@@ -6,7 +6,7 @@
 <title>
   Module: Lich::GameBase::XMLCleaner
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,21 +78,33 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>games.rb</dd>
+    <dd>output/latest/documented/games.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>XML string cleaner module
-XML string cleaner module</p>
+    
+<p>XML string cleaner module XML string cleaner module Provides methods to clean and fix XML strings</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Using XMLCleaner</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_cleaned_string'>cleaned_string</span> <span class='op'>=</span> <span class='const'>XMLCleaner</span><span class='period'>.</span><span class='id identifier rubyid_clean_nested_quotes'><span class='object_link'><a href="#clean_nested_quotes-class_method" title="Lich::GameBase::XMLCleaner.clean_nested_quotes (method)">clean_nested_quotes</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_raw_string'>raw_string</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div>
 
@@ -126,7 +138,8 @@ XML string cleaner module</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Cleans nested quotes in the server string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Cleans nested quotes in the server string.</p>
 </div></span>
   
 </li>
@@ -149,7 +162,8 @@ XML string cleaner module</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Fixes invalid characters in the server string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Fixes invalid characters in the server string.</p>
 </div></span>
   
 </li>
@@ -172,7 +186,8 @@ XML string cleaner module</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Fixes open-ended XML tags in the server string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Fixes open-ended XML tags in the server string.</p>
 </div></span>
   
 </li>
@@ -198,7 +213,8 @@ XML string cleaner module</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Cleans nested quotes in the server string</p>
+    
+<p>Cleans nested quotes in the server string</p>
 
 
   </div>
@@ -225,7 +241,8 @@ XML string cleaner module</p>
       
       
         &mdash;
-        <div class='inline'><p>The raw server string</p>
+        <div class='inline'>
+<p>The server string to clean</p>
 </div>
       
     </li>
@@ -243,7 +260,8 @@ XML string cleaner module</p>
       
       
         &mdash;
-        <div class='inline'><p>The cleaned server string</p>
+        <div class='inline'>
+<p>The cleaned server string</p>
 </div>
       
     </li>
@@ -256,30 +274,30 @@ XML string cleaner module</p>
       <pre class="lines">
 
 
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
 146
 147
 148
 149
-150</pre>
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'games.rb', line 130</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/games.rb', line 146</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clean_nested_quotes'>clean_nested_quotes</span><span class='lparen'>(</span><span class='id identifier rubyid_server_string'>server_string</span><span class='rparen'>)</span>
   <span class='comment'># Fix nested single quotes
@@ -318,7 +336,8 @@ XML string cleaner module</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Fixes invalid characters in the server string</p>
+    
+<p>Fixes invalid characters in the server string</p>
 
 
   </div>
@@ -329,7 +348,7 @@ XML string cleaner module</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_cleaned_string'>cleaned_string</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::GameBase::XMLCleaner (module)">XMLCleaner</a></span></span><span class='period'>.</span><span class='id identifier rubyid_fix_invalid_characters'>fix_invalid_characters</span><span class='lparen'>(</span><span class='id identifier rubyid_raw_string'>raw_string</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_fixed_string'>fixed_string</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::GameBase::XMLCleaner (module)">XMLCleaner</a></span></span><span class='period'>.</span><span class='id identifier rubyid_fix_invalid_characters'>fix_invalid_characters</span><span class='lparen'>(</span><span class='id identifier rubyid_raw_string'>raw_string</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -345,7 +364,8 @@ XML string cleaner module</p>
       
       
         &mdash;
-        <div class='inline'><p>The raw server string</p>
+        <div class='inline'>
+<p>The server string to fix</p>
 </div>
       
     </li>
@@ -363,7 +383,8 @@ XML string cleaner module</p>
       
       
         &mdash;
-        <div class='inline'><p>The cleaned server string</p>
+        <div class='inline'>
+<p>The fixed server string</p>
 </div>
       
     </li>
@@ -376,22 +397,6 @@ XML string cleaner module</p>
       <pre class="lines">
 
 
-157
-158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
 173
 174
 175
@@ -399,10 +404,26 @@ XML string cleaner module</p>
 177
 178
 179
-180</pre>
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'games.rb', line 157</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/games.rb', line 173</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fix_invalid_characters'>fix_invalid_characters</span><span class='lparen'>(</span><span class='id identifier rubyid_server_string'>server_string</span><span class='rparen'>)</span>
   <span class='comment'># Fix ampersands
@@ -444,7 +465,8 @@ XML string cleaner module</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Fixes open-ended XML tags in the server string</p>
+    
+<p>Fixes open-ended XML tags in the server string</p>
 
 
   </div>
@@ -455,7 +477,7 @@ XML string cleaner module</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_cleaned_string'>cleaned_string</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::GameBase::XMLCleaner (module)">XMLCleaner</a></span></span><span class='period'>.</span><span class='id identifier rubyid_fix_xml_tags'>fix_xml_tags</span><span class='lparen'>(</span><span class='id identifier rubyid_raw_string'>raw_string</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_fixed_string'>fixed_string</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::GameBase::XMLCleaner (module)">XMLCleaner</a></span></span><span class='period'>.</span><span class='id identifier rubyid_fix_xml_tags'>fix_xml_tags</span><span class='lparen'>(</span><span class='id identifier rubyid_raw_string'>raw_string</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -471,7 +493,8 @@ XML string cleaner module</p>
       
       
         &mdash;
-        <div class='inline'><p>The raw server string</p>
+        <div class='inline'>
+<p>The server string to fix</p>
 </div>
       
     </li>
@@ -489,7 +512,8 @@ XML string cleaner module</p>
       
       
         &mdash;
-        <div class='inline'><p>The cleaned server string</p>
+        <div class='inline'>
+<p>The fixed server string</p>
 </div>
       
     </li>
@@ -502,31 +526,31 @@ XML string cleaner module</p>
       <pre class="lines">
 
 
-187
-188
-189
-190
-191
-192
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202
 203
 204
 205
 206
 207
-208</pre>
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'games.rb', line 187</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/games.rb', line 203</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fix_xml_tags'>fix_xml_tags</span><span class='lparen'>(</span><span class='id identifier rubyid_server_string'>server_string</span><span class='rparen'>)</span>
   <span class='comment'># Fix open-ended XML tags
@@ -560,7 +584,7 @@ XML string cleaner module</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:49 2025 by
+  Generated on Fri Nov  7 05:08:34 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

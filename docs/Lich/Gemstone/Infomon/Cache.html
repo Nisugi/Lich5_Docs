@@ -6,7 +6,7 @@
 <title>
   Class: Lich::Gemstone::Infomon::Cache
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -94,16 +94,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>cache.rb</dd>
+    <dd>output/latest/documented/gemstone/infomon/cache.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>in-memory cache with db read fallbacks
-In-memory cache with database read fallbacks
-This class provides a simple caching mechanism that stores records in memory.</p>
+    
+<p>in-memory cache with db read fallbacks In-memory cache with database read fallbacks This class provides a simple in-memory cache that can store key-value pairs. If a key is not found in the cache, a block can be provided to fetch the value from a database or other source.</p>
 
 
   </div>
@@ -114,10 +113,12 @@ This class provides a simple caching mechanism that stores records in memory.</p
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Creating a cache and using it</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Creating a cache and using it</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_cache'>cache</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='op'>::</span><span class='const'>Cache</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Lich::Gemstone::Infomon::Cache#initialize (method)">new</a></span></span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_cache'>cache</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='op'>::</span><span class='const'>Cache</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Lich::Gemstone::Infomon::Cache#initialize (method)">new</a></span></span>
+<span class='id identifier rubyid_cache'>cache</span><span class='period'>.</span><span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='symbol'>:key</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>value</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -151,7 +152,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute records.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute records.</p>
 </div></span>
   
 </li>
@@ -187,7 +189,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Deletes a value from the cache by its key.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Deletes a value from the cache by its key.</p>
 </div></span>
   
 </li>
@@ -212,7 +215,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Clears all records from the cache.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Clears all records from the cache.</p>
 </div></span>
   
 </li>
@@ -235,7 +239,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves a value from the cache by its key, or fetches it using a block if not found.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves a value from the cache by its key If the key is not found, it can yield to a block to fetch the value.</p>
 </div></span>
   
 </li>
@@ -260,7 +265,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks if the cache includes a given key.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if the cache includes the given key.</p>
 </div></span>
   
 </li>
@@ -285,7 +291,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Initializes a new Cache instance.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initializes a new Cache instance.</p>
 </div></span>
   
 </li>
@@ -308,7 +315,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Merges another hash into the cache.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Merges another hash into the cache.</p>
 </div></span>
   
 </li>
@@ -331,7 +339,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Stores a value in the cache with the given key.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Stores a value in the cache with the given key.</p>
 </div></span>
   
 </li>
@@ -354,7 +363,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Converts the cache records to an array of key-value pairs.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Converts the cache records to an array of key-value pairs.</p>
 </div></span>
   
 </li>
@@ -377,7 +387,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the cache records as a hash.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the cache records as a hash.</p>
 </div></span>
   
 </li>
@@ -400,7 +411,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Initializes a new Cache instance.</p>
+    
+<p>Initializes a new Cache instance</p>
 
 
   </div>
@@ -414,12 +426,12 @@ This class provides a simple caching mechanism that stores records in memory.</p
       <pre class="lines">
 
 
-14
-15
-16</pre>
+16
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cache.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/infomon/cache.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='ivar'>@records</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -447,7 +459,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the value of attribute records.</p>
+    
+<p>Returns the value of attribute records.</p>
 
 
   </div>
@@ -461,12 +474,12 @@ This class provides a simple caching mechanism that stores records in memory.</p
       <pre class="lines">
 
 
-10
-11
-12</pre>
+12
+13
+14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cache.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/infomon/cache.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_records'>records</span>
   <span class='ivar'>@records</span>
@@ -494,7 +507,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Deletes a value from the cache by its key.</p>
+    
+<p>Deletes a value from the cache by its key</p>
 
 
   </div>
@@ -505,10 +519,11 @@ This class provides a simple caching mechanism that stores records in memory.</p
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Deleting a value from the cache</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Deleting a key from the cache</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_cache'>cache</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:my_key</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_cache'>cache</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:key</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -524,7 +539,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
       
       
         &mdash;
-        <div class='inline'><p>The key of the value to delete.</p>
+        <div class='inline'>
+<p>The key of the value to delete</p>
 </div>
       
     </li>
@@ -542,7 +558,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
       
       
         &mdash;
-        <div class='inline'><p>The deleted value, or nil if the key was not found.</p>
+        <div class='inline'>
+<p>The deleted value, or nil if the key was not found</p>
 </div>
       
     </li>
@@ -555,12 +572,12 @@ This class provides a simple caching mechanism that stores records in memory.</p
       <pre class="lines">
 
 
-51
-52
-53</pre>
+53
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cache.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/infomon/cache.rb', line 53</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='ivar'>@records</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
@@ -585,7 +602,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Clears all records from the cache.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Clears all records from the cache</p>
 
 
   </div>
@@ -596,7 +614,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Flushing the cache</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Flushing the cache</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_cache'>cache</span><span class='period'>.</span><span class='id identifier rubyid_flush!'>flush!</span></code></pre>
@@ -610,12 +629,12 @@ This class provides a simple caching mechanism that stores records in memory.</p
       <pre class="lines">
 
 
-42
-43
-44</pre>
+44
+45
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cache.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/infomon/cache.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_flush!'>flush!</span>
   <span class='ivar'>@records</span><span class='period'>.</span><span class='id identifier rubyid_clear'><span class='object_link'><a href="../../../top-level-namespace.html#clear-instance_method" title="#clear (method)">clear</a></span></span>
@@ -636,7 +655,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves a value from the cache by its key, or fetches it using a block if not found.</p>
+    
+<p>Retrieves a value from the cache by its key If the key is not found, it can yield to a block to fetch the value.</p>
 
 
   </div>
@@ -647,10 +667,11 @@ This class provides a simple caching mechanism that stores records in memory.</p
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Getting a value from the cache</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Getting a value from the cache</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_cache'>cache</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='symbol'>:my_key</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>default_value</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_cache'>cache</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='symbol'>:key</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_fetch_from_db'>fetch_from_db</span><span class='lparen'>(</span><span class='symbol'>:key</span><span class='rparen'>)</span> <span class='rbrace'>}</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -666,7 +687,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
       
       
         &mdash;
-        <div class='inline'><p>The key of the value to retrieve.</p>
+        <div class='inline'>
+<p>The key of the value to retrieve</p>
 </div>
       
     </li>
@@ -684,7 +706,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
       
       
         &mdash;
-        <div class='inline'><p>The cached value, or the result of the block if the key was not found.</p>
+        <div class='inline'>
+<p>The value associated with the key, or nil if not found</p>
 </div>
       
     </li>
@@ -697,17 +720,17 @@ This class provides a simple caching mechanism that stores records in memory.</p
       <pre class="lines">
 
 
-60
-61
-62
 63
 64
 65
 66
-67</pre>
+67
+68
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cache.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/infomon/cache.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get'><span class='object_link'><a href="../../../top-level-namespace.html#get-instance_method" title="#get (method)">get</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='ivar'>@records</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
@@ -737,7 +760,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks if the cache includes a given key.</p>
+    
+<p>Checks if the cache includes the given key</p>
 
 
   </div>
@@ -748,10 +772,11 @@ This class provides a simple caching mechanism that stores records in memory.</p
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Checking for a key in the cache</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Checking for a key in the cache</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_cache'>cache</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='symbol'>:my_key</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_cache'>cache</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='symbol'>:key</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -767,7 +792,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
       
       
         &mdash;
-        <div class='inline'><p>The key to check for existence.</p>
+        <div class='inline'>
+<p>The key to check for</p>
 </div>
       
     </li>
@@ -785,7 +811,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
       
       
         &mdash;
-        <div class='inline'><p>True if the key exists in the cache, false otherwise.</p>
+        <div class='inline'>
+<p>True if the key exists in the cache, false otherwise</p>
 </div>
       
     </li>
@@ -798,12 +825,12 @@ This class provides a simple caching mechanism that stores records in memory.</p
       <pre class="lines">
 
 
-34
-35
-36</pre>
+36
+37
+38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cache.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/infomon/cache.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='ivar'>@records</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
@@ -824,7 +851,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Merges another hash into the cache.</p>
+    
+<p>Merges another hash into the cache</p>
 
 
   </div>
@@ -835,10 +863,11 @@ This class provides a simple caching mechanism that stores records in memory.</p
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Merging a hash into the cache</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Merging a hash into the cache</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_cache'>cache</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='label'>new_key:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>new_value</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_cache'>cache</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='symbol'>:key1</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>value1</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:key2</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>value2</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -854,7 +883,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
       
       
         &mdash;
-        <div class='inline'><p>The hash to merge into the cache.</p>
+        <div class='inline'>
+<p>The hash to merge into the cache</p>
 </div>
       
     </li>
@@ -872,7 +902,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
       
       
         &mdash;
-        <div class='inline'><p>The updated records hash.</p>
+        <div class='inline'>
+<p>The updated records in the cache</p>
 </div>
       
     </li>
@@ -885,12 +916,12 @@ This class provides a simple caching mechanism that stores records in memory.</p
       <pre class="lines">
 
 
-74
-75
-76</pre>
+77
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cache.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/infomon/cache.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_h'>h</span><span class='rparen'>)</span>
   <span class='ivar'>@records</span><span class='period'>.</span><span class='id identifier rubyid_merge!'>merge!</span><span class='lparen'>(</span><span class='id identifier rubyid_h'>h</span><span class='rparen'>)</span>
@@ -911,7 +942,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Stores a value in the cache with the given key.</p>
+    
+<p>Stores a value in the cache with the given key</p>
 
 
   </div>
@@ -922,10 +954,11 @@ This class provides a simple caching mechanism that stores records in memory.</p
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Adding a value to the cache</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Putting a value in the cache</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_cache'>cache</span><span class='period'>.</span><span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='symbol'>:my_key</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>my_value</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_cache'>cache</span><span class='period'>.</span><span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='symbol'>:key</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>value</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -941,7 +974,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
       
       
         &mdash;
-        <div class='inline'><p>The key to store the value under.</p>
+        <div class='inline'>
+<p>The key to store the value under</p>
 </div>
       
     </li>
@@ -956,7 +990,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
       
       
         &mdash;
-        <div class='inline'><p>The value to be cached.</p>
+        <div class='inline'>
+<p>The value to store</p>
 </div>
       
     </li>
@@ -974,7 +1009,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
       
       
         &mdash;
-        <div class='inline'><p>The Cache instance for method chaining.</p>
+        <div class='inline'>
+<p>The current instance of Cache</p>
 </div>
       
     </li>
@@ -987,13 +1023,13 @@ This class provides a simple caching mechanism that stores records in memory.</p
       <pre class="lines">
 
 
-24
-25
 26
-27</pre>
+27
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cache.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/infomon/cache.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_put'><span class='object_link'><a href="../../../top-level-namespace.html#put-instance_method" title="#put (method)">put</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@records</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
@@ -1015,7 +1051,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Converts the cache records to an array of key-value pairs.</p>
+    
+<p>Converts the cache records to an array of key-value pairs</p>
 
 
   </div>
@@ -1026,7 +1063,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Converting cache records to an array</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Converting cache records to an array</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_array'>array</span> <span class='op'>=</span> <span class='id identifier rubyid_cache'>cache</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span></code></pre>
@@ -1044,7 +1082,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
       
       
         &mdash;
-        <div class='inline'><p>An array representation of the cache records.</p>
+        <div class='inline'>
+<p>An array representation of the cache records</p>
 </div>
       
     </li>
@@ -1057,12 +1096,12 @@ This class provides a simple caching mechanism that stores records in memory.</p
       <pre class="lines">
 
 
-82
-83
-84</pre>
+85
+86
+87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cache.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/infomon/cache.rb', line 85</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_a'>to_a</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='ivar'>@records</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
@@ -1083,7 +1122,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the cache records as a hash.</p>
+    
+<p>Returns the cache records as a hash</p>
 
 
   </div>
@@ -1094,7 +1134,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Getting the cache records as a hash</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Getting the cache records as a hash</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='id identifier rubyid_cache'>cache</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span></code></pre>
@@ -1112,7 +1153,8 @@ This class provides a simple caching mechanism that stores records in memory.</p
       
       
         &mdash;
-        <div class='inline'><p>The hash representation of the cache records.</p>
+        <div class='inline'>
+<p>The hash representation of the cache records</p>
 </div>
       
     </li>
@@ -1125,12 +1167,12 @@ This class provides a simple caching mechanism that stores records in memory.</p
       <pre class="lines">
 
 
-90
-91
-92</pre>
+93
+94
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cache.rb', line 90</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/infomon/cache.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_h'>to_h</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='ivar'>@records</span>
@@ -1145,7 +1187,7 @@ This class provides a simple caching mechanism that stores records in memory.</p
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:53 2025 by
+  Generated on Fri Nov  7 05:08:44 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

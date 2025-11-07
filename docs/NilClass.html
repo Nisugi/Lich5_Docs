@@ -6,7 +6,7 @@
 <title>
   Class: NilClass
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -94,15 +94,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>nilclass.rb</dd>
+    <dd>output/latest/documented/common/class_exts/nilclass.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Extends the NilClass to provide additional methods.
-This class overrides several methods to return nil or empty values.</p>
+    
+<p>Extends the NilClass to provide additional methods. This class overrides several methods to return nil or empty values.</p>
 
 
   </div>
@@ -113,7 +113,8 @@ This class overrides several methods to return nil or empty values.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Using NilClass methods</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Using NilClass methods</p>
 </div></h5>
       
       <pre class="example code"><code><span class='kw'>nil</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span> <span class='comment'># =&gt; nil
@@ -154,7 +155,8 @@ This class overrides several methods to return nil or empty values.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Adds nil to another value.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Adds a value to nil.</p>
 </div></span>
   
 </li>
@@ -177,7 +179,8 @@ This class overrides several methods to return nil or empty values.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks if nil is considered closed.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if nil is closed.</p>
 </div></span>
   
 </li>
@@ -200,7 +203,8 @@ This class overrides several methods to return nil or empty values.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a duplicate of nil.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a duplicate of nil.</p>
 </div></span>
   
 </li>
@@ -223,7 +227,8 @@ This class overrides several methods to return nil or empty values.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Handles calls to methods that do not exist on nil.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Handles calls to methods that do not exist on nil.</p>
 </div></span>
   
 </li>
@@ -246,7 +251,8 @@ This class overrides several methods to return nil or empty values.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Splits nil into an array.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Splits nil into an array.</p>
 </div></span>
   
 </li>
@@ -269,7 +275,8 @@ This class overrides several methods to return nil or empty values.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Strips whitespace from nil.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Strips whitespace from nil.</p>
 </div></span>
   
 </li>
@@ -292,7 +299,8 @@ This class overrides several methods to return nil or empty values.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Converts nil to a string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Converts nil to a string.</p>
 </div></span>
   
 </li>
@@ -319,7 +327,8 @@ This class overrides several methods to return nil or empty values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Handles calls to methods that do not exist on nil.</p>
+    
+<p>Handles calls to methods that do not exist on nil.</p>
 
 
   </div>
@@ -330,7 +339,7 @@ This class overrides several methods to return nil or empty values.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='kw'>nil</span><span class='period'>.</span><span class='id identifier rubyid_some_non_existent_method'>some_non_existent_method</span> <span class='comment'># =&gt; nil</span></code></pre>
+      <pre class="example code"><code><span class='kw'>nil</span><span class='period'>.</span><span class='id identifier rubyid_some_method'>some_method</span> <span class='comment'># =&gt; nil</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -346,7 +355,8 @@ This class overrides several methods to return nil or empty values.</p>
       
       
         &mdash;
-        <div class='inline'><p>The arguments passed to the missing method.</p>
+        <div class='inline'>
+<p>The arguments passed to the missing method.</p>
 </div>
       
     </li>
@@ -364,7 +374,8 @@ This class overrides several methods to return nil or empty values.</p>
       
       
         &mdash;
-        <div class='inline'><p>Always returns nil.</p>
+        <div class='inline'>
+<p>Always returns nil.</p>
 </div>
       
     </li>
@@ -382,7 +393,7 @@ This class overrides several methods to return nil or empty values.</p>
 25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nilclass.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/nilclass.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid__args'>_args</span><span class='rparen'>)</span>
   <span class='kw'>nil</span>
@@ -410,7 +421,8 @@ This class overrides several methods to return nil or empty values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Adds nil to another value.</p>
+    
+<p>Adds a value to nil.</p>
 
 
   </div>
@@ -437,7 +449,8 @@ This class overrides several methods to return nil or empty values.</p>
       
       
         &mdash;
-        <div class='inline'><p>The value to add to nil.</p>
+        <div class='inline'>
+<p>The value to add to nil.</p>
 </div>
       
     </li>
@@ -455,7 +468,8 @@ This class overrides several methods to return nil or empty values.</p>
       
       
         &mdash;
-        <div class='inline'><p>Returns the other value.</p>
+        <div class='inline'>
+<p>Returns the value passed in.</p>
 </div>
       
     </li>
@@ -473,7 +487,7 @@ This class overrides several methods to return nil or empty values.</p>
 59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nilclass.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/nilclass.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='op'>+</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_val'>val</span>
@@ -494,7 +508,8 @@ This class overrides several methods to return nil or empty values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks if nil is considered closed.</p>
+    
+<p>Checks if nil is closed.</p>
 
 
   </div>
@@ -520,7 +535,8 @@ This class overrides several methods to return nil or empty values.</p>
       
       
         &mdash;
-        <div class='inline'><p>Always returns true.</p>
+        <div class='inline'>
+<p>Always returns true.</p>
 </div>
       
     </li>
@@ -538,7 +554,7 @@ This class overrides several methods to return nil or empty values.</p>
 67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nilclass.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/nilclass.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_closed?'>closed?</span>
   <span class='kw'>true</span>
@@ -559,7 +575,8 @@ This class overrides several methods to return nil or empty values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a duplicate of nil.</p>
+    
+<p>Returns a duplicate of nil.</p>
 
 
   </div>
@@ -585,7 +602,8 @@ This class overrides several methods to return nil or empty values.</p>
       
       
         &mdash;
-        <div class='inline'><p>Always returns nil.</p>
+        <div class='inline'>
+<p>Always returns nil.</p>
 </div>
       
     </li>
@@ -603,7 +621,7 @@ This class overrides several methods to return nil or empty values.</p>
 16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nilclass.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/nilclass.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dup'>dup</span>
   <span class='kw'>nil</span>
@@ -624,7 +642,8 @@ This class overrides several methods to return nil or empty values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Splits nil into an array.</p>
+    
+<p>Splits nil into an array.</p>
 
 
   </div>
@@ -651,7 +670,8 @@ This class overrides several methods to return nil or empty values.</p>
       
       
         &mdash;
-        <div class='inline'><p>The delimiter(s) to split by (ignored).</p>
+        <div class='inline'>
+<p>The delimiter(s) to split by (ignored).</p>
 </div>
       
     </li>
@@ -669,7 +689,8 @@ This class overrides several methods to return nil or empty values.</p>
       
       
         &mdash;
-        <div class='inline'><p>Returns an empty array.</p>
+        <div class='inline'>
+<p>Returns an empty array.</p>
 </div>
       
     </li>
@@ -687,7 +708,7 @@ This class overrides several methods to return nil or empty values.</p>
 34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nilclass.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/nilclass.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid__val'>_val</span><span class='rparen'>)</span>
   <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -708,7 +729,8 @@ This class overrides several methods to return nil or empty values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Strips whitespace from nil.</p>
+    
+<p>Strips whitespace from nil.</p>
 
 
   </div>
@@ -734,7 +756,8 @@ This class overrides several methods to return nil or empty values.</p>
       
       
         &mdash;
-        <div class='inline'><p>Returns an empty string.</p>
+        <div class='inline'>
+<p>Returns an empty string.</p>
 </div>
       
     </li>
@@ -752,7 +775,7 @@ This class overrides several methods to return nil or empty values.</p>
 50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nilclass.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/nilclass.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_strip'>strip</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -773,7 +796,8 @@ This class overrides several methods to return nil or empty values.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Converts nil to a string.</p>
+    
+<p>Converts nil to a string.</p>
 
 
   </div>
@@ -799,7 +823,8 @@ This class overrides several methods to return nil or empty values.</p>
       
       
         &mdash;
-        <div class='inline'><p>Returns an empty string.</p>
+        <div class='inline'>
+<p>Returns an empty string.</p>
 </div>
       
     </li>
@@ -817,7 +842,7 @@ This class overrides several methods to return nil or empty values.</p>
 42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'nilclass.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/class_exts/nilclass.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
@@ -832,7 +857,7 @@ This class overrides several methods to return nil or empty values.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:56 2025 by
+  Generated on Fri Nov  7 05:08:44 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

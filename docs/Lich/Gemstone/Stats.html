@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Gemstone::Stats
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,12 +78,35 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>stats.rb</dd>
+    <dd>output/latest/documented/attributes/stats.rb</dd>
   </dl>
   
 </div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Provides methods to retrieve various character statistics</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Accessing character stats</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'>Stats</span><span class='period'>.</span><span class='id identifier rubyid_level'><span class='object_link'><a href="#level-class_method" title="Lich::Gemstone::Stats.level (method)">level</a></span></span></code></pre>
+    
+  </div>
+
+
+</div>
   
     <h2>
       Constant Summary
@@ -98,9 +121,11 @@
     
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p>This constant is used to define methods for each stat dynamically.</p>
+    <div class='inline'>
+<p>This constant is used to define methods for each stat dynamically.</p>
 </div>
   </div>
+
 
 <p>List of character stats</p>
 
@@ -148,7 +173,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the age stat.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the character’s age.</p>
 </div></span>
   
 </li>
@@ -171,7 +197,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Calculates the experience points needed for the next level.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Calculates the experience points needed for the next level.</p>
 </div></span>
   
 </li>
@@ -194,7 +221,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the gender stat.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the character’s gender.</p>
 </div></span>
   
 </li>
@@ -217,7 +245,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the level of the character.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the character’s level.</p>
 </div></span>
   
 </li>
@@ -240,7 +269,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the profession stat (alias for profession).</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the character’s profession (alias for profession).</p>
 </div></span>
   
 </li>
@@ -263,7 +293,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the profession stat.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the character’s profession.</p>
 </div></span>
   
 </li>
@@ -286,7 +317,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the race stat.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the character’s race.</p>
 </div></span>
   
 </li>
@@ -309,7 +341,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Serializes the character stats into an array.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Serializes the character’s stats into an array.</p>
 </div></span>
   
 </li>
@@ -335,7 +368,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the age stat</p>
+    
+<p>Retrieves the character’s age</p>
 
 
   </div>
@@ -345,9 +379,6 @@
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
-      
-        <h5 class="example_title"><div class='inline'><p>Getting the age</p>
-</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_age'>age</span></code></pre>
     
@@ -364,7 +395,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The age of the character</p>
+        <div class='inline'>
+<p>The character’s age</p>
 </div>
       
     </li>
@@ -382,7 +414,7 @@
 50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stats.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/stats.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_age'>age</span>
   <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="Infomon.html#get-class_method" title="Lich::Gemstone::Infomon.get (method)">get</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>stat.age</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -403,7 +435,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Calculates the experience points needed for the next level</p>
+    
+<p>Calculates the experience points needed for the next level</p>
 
 
   </div>
@@ -413,9 +446,6 @@
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
-      
-        <h5 class="example_title"><div class='inline'><p>Getting experience points</p>
-</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_exp'>exp</span></code></pre>
     
@@ -432,7 +462,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The experience points needed</p>
+        <div class='inline'>
+<p>The experience points needed</p>
 </div>
       
     </li>
@@ -445,17 +476,17 @@
       <pre class="lines">
 
 
+96
+97
+98
+99
+100
 101
 102
-103
-104
-105
-106
-107
-108</pre>
+103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stats.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/stats.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_exp'>exp</span>
   <span class='kw'>if</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_next_level_text'>next_level_text</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>until next level</span><span class='regexp_end'>/</span></span>
@@ -481,7 +512,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the gender stat</p>
+    
+<p>Retrieves the character’s gender</p>
 
 
   </div>
@@ -491,9 +523,6 @@
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
-      
-        <h5 class="example_title"><div class='inline'><p>Getting the gender</p>
-</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_gender'>gender</span></code></pre>
     
@@ -510,7 +539,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The gender of the character</p>
+        <div class='inline'>
+<p>The character’s gender</p>
 </div>
       
     </li>
@@ -528,7 +558,7 @@
 42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stats.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/stats.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_gender'>gender</span>
   <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="Infomon.html#get-class_method" title="Lich::Gemstone::Infomon.get (method)">get</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>stat.gender</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -549,7 +579,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the level of the character</p>
+    
+<p>Retrieves the character’s level</p>
 
 
   </div>
@@ -559,9 +590,6 @@
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
-      
-        <h5 class="example_title"><div class='inline'><p>Getting the level</p>
-</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_level'>level</span></code></pre>
     
@@ -578,7 +606,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The level of the character</p>
+        <div class='inline'>
+<p>The character’s level</p>
 </div>
       
     </li>
@@ -596,7 +625,7 @@
 58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stats.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/stats.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_level'>level</span>
   <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_level'>level</span>
@@ -617,7 +646,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the profession stat (alias for profession)</p>
+    
+<p>Retrieves the character’s profession (alias for profession)</p>
 
 
   </div>
@@ -627,9 +657,6 @@
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
-      
-        <h5 class="example_title"><div class='inline'><p>Getting the profession using alias</p>
-</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_prof'>prof</span></code></pre>
     
@@ -646,7 +673,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The profession of the character</p>
+        <div class='inline'>
+<p>The character’s profession</p>
 </div>
       
     </li>
@@ -664,7 +692,7 @@
 34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stats.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/stats.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_prof'>prof</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_profession'>profession</span>
@@ -685,7 +713,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the profession stat</p>
+    
+<p>Retrieves the character’s profession</p>
 
 
   </div>
@@ -695,9 +724,6 @@
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
-      
-        <h5 class="example_title"><div class='inline'><p>Getting the profession</p>
-</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_profession'>profession</span></code></pre>
     
@@ -714,7 +740,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The profession of the character</p>
+        <div class='inline'>
+<p>The character’s profession</p>
 </div>
       
     </li>
@@ -732,7 +759,7 @@
 26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stats.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/stats.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_profession'>profession</span>
   <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="Infomon.html#get-class_method" title="Lich::Gemstone::Infomon.get (method)">get</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>stat.profession</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -753,7 +780,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the race stat</p>
+    
+<p>Retrieves the character’s race</p>
 
 
   </div>
@@ -763,9 +791,6 @@
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
-      
-        <h5 class="example_title"><div class='inline'><p>Getting the race</p>
-</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_race'>race</span></code></pre>
     
@@ -782,7 +807,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The race of the character</p>
+        <div class='inline'>
+<p>The character’s race</p>
 </div>
       
     </li>
@@ -800,7 +826,7 @@
 18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stats.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/stats.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_race'>race</span>
   <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="Infomon.html#get-class_method" title="Lich::Gemstone::Infomon.get (method)">get</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>stat.race</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -821,7 +847,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Serializes the character stats into an array</p>
+    
+<p>Serializes the character’s stats into an array</p>
 
 
   </div>
@@ -831,9 +858,6 @@
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
-      
-        <h5 class="example_title"><div class='inline'><p>Serializing stats</p>
-</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_serialize'>serialize</span></code></pre>
     
@@ -850,7 +874,8 @@
       
       
         &mdash;
-        <div class='inline'><p>An array of serialized stats</p>
+        <div class='inline'>
+<p>An array of character stats</p>
 </div>
       
     </li>
@@ -863,20 +888,20 @@
       <pre class="lines">
 
 
+109
+110
+111
+112
+113
 114
 115
 116
 117
 118
-119
-120
-121
-122
-123
-124</pre>
+119</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stats.rb', line 114</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/attributes/stats.rb', line 109</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_serialize'>serialize</span>
   <span class='lbracket'>[</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_race'>race</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_prof'>prof</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_gender'>gender</span><span class='comma'>,</span>
@@ -899,7 +924,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:49 2025 by
+  Generated on Fri Nov  7 05:08:36 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

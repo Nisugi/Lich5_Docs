@@ -6,7 +6,7 @@
 <title>
   Module: Lich::DragonRealms::DRSpells
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,15 +78,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>drspells.rb</dd>
+    <dd>output/latest/documented/dragonrealms/drinfomon/drspells.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Provides functionality related to spells in the DragonRealms game.
-This module manages known spells, feats, and spellbook formats.</p>
+    
+<p>Provides functionality related to spells in the DragonRealms game. This module manages known spells, feats, and spellbook formats.</p>
 
 
   </div>
@@ -97,10 +97,11 @@ This module manages known spells, feats, and spellbook formats.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Accessing known spells</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Accessing known spells</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_spells'>spells</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DragonRealms.html" title="Lich::DragonRealms (module)">DragonRealms</a></span></span><span class='op'>::</span><span class='const'>DRSpells</span><span class='period'>.</span><span class='id identifier rubyid_known_spells'><span class='object_link'><a href="#known_spells-class_method" title="Lich::DragonRealms::DRSpells.known_spells (method)">known_spells</a></span></span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_known_spells'>known_spells</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DragonRealms.html" title="Lich::DragonRealms (module)">DragonRealms</a></span></span><span class='op'>::</span><span class='const'>DRSpells</span><span class='period'>.</span><span class='id identifier rubyid_known_spells'><span class='object_link'><a href="#known_spells-class_method" title="Lich::DragonRealms::DRSpells.known_spells (method)">known_spells</a></span></span></code></pre>
     
   </div>
 
@@ -115,19 +116,42 @@ This module manages known spells, feats, and spellbook formats.</p>
     <dl class="constants">
       
         <dt id="known_spells-classvariable" class="">@@known_spells =
-          
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>A hash storing known spells.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
         </dt>
         <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
       
         <dt id="known_feats-classvariable" class="">@@known_feats =
-          
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>A hash storing known feats.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
         </dt>
         <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
       
         <dt id="spellbook_format-classvariable" class="">@@spellbook_format =
           <div class="docstring">
   <div class="discussion">
-    <p>&#39;column-formatted&#39; or &#39;non-column&#39;</p>
+    
+<p>The format of the spellbook, can be ‘column-formatted’ or ‘non-column’.</p>
 
 
   </div>
@@ -140,17 +164,50 @@ This module manages known spells, feats, and spellbook formats.</p>
         <dd><pre class="code"><span class='kw'>nil</span></pre></dd>
       
         <dt id="grabbing_known_spells-classvariable" class="">@@grabbing_known_spells =
-          
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Indicates if the module is currently grabbing known spells.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
         </dt>
         <dd><pre class="code"><span class='kw'>false</span></pre></dd>
       
         <dt id="grabbing_known_barbarian_abilities-classvariable" class="">@@grabbing_known_barbarian_abilities =
-          
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Indicates if the module is currently grabbing known barbarian abilities.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
         </dt>
         <dd><pre class="code"><span class='kw'>false</span></pre></dd>
       
         <dt id="grabbing_known_khri-classvariable" class="">@@grabbing_known_khri =
-          
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Indicates if the module is currently grabbing known khri.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
         </dt>
         <dd><pre class="code"><span class='kw'>false</span></pre></dd>
       
@@ -188,7 +245,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the currently active spells.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the currently active spells.</p>
 </div></span>
   
 </li>
@@ -211,7 +269,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks if the module is currently grabbing known barbarian abilities.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if the module is currently grabbing known barbarian abilities.</p>
 </div></span>
   
 </li>
@@ -220,7 +279,7 @@ This module manages known spells, feats, and spellbook formats.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#check_known_barbarian_abilities=-class_method" title="check_known_barbarian_abilities= (class method)">.<strong>check_known_barbarian_abilities=</strong>(val)  &#x21d2; Object </a>
+      <a href="#check_known_barbarian_abilities=-class_method" title="check_known_barbarian_abilities= (class method)">.<strong>check_known_barbarian_abilities=</strong>(val)  &#x21d2; Boolean </a>
     
 
     
@@ -234,7 +293,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Sets the flag for grabbing known barbarian abilities.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Sets the state of grabbing known barbarian abilities.</p>
 </div></span>
   
 </li>
@@ -257,7 +317,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks if the module is currently grabbing known khri.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if the module is currently grabbing known khri.</p>
 </div></span>
   
 </li>
@@ -266,7 +327,7 @@ This module manages known spells, feats, and spellbook formats.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#grabbing_known_khri=-class_method" title="grabbing_known_khri= (class method)">.<strong>grabbing_known_khri=</strong>(val)  &#x21d2; Object </a>
+      <a href="#grabbing_known_khri=-class_method" title="grabbing_known_khri= (class method)">.<strong>grabbing_known_khri=</strong>(val)  &#x21d2; Boolean </a>
     
 
     
@@ -280,7 +341,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Sets the flag for grabbing known khri.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Sets the state of grabbing known khri.</p>
 </div></span>
   
 </li>
@@ -303,7 +365,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks if the module is currently grabbing known spells.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if the module is currently grabbing known spells.</p>
 </div></span>
   
 </li>
@@ -312,7 +375,7 @@ This module manages known spells, feats, and spellbook formats.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#grabbing_known_spells=-class_method" title="grabbing_known_spells= (class method)">.<strong>grabbing_known_spells=</strong>(val)  &#x21d2; Object </a>
+      <a href="#grabbing_known_spells=-class_method" title="grabbing_known_spells= (class method)">.<strong>grabbing_known_spells=</strong>(val)  &#x21d2; Boolean </a>
     
 
     
@@ -326,7 +389,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Sets the flag for grabbing known spells.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Sets the state of grabbing known spells.</p>
 </div></span>
   
 </li>
@@ -349,7 +413,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the known feats.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the known feats.</p>
 </div></span>
   
 </li>
@@ -372,7 +437,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the known spells.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the known spells.</p>
 </div></span>
   
 </li>
@@ -395,7 +461,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the slivers of currently active spells.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the slivers of currently active spells.</p>
 </div></span>
   
 </li>
@@ -418,7 +485,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the current spellbook format.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the current spellbook format.</p>
 </div></span>
   
 </li>
@@ -427,7 +495,7 @@ This module manages known spells, feats, and spellbook formats.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#spellbook_format=-class_method" title="spellbook_format= (class method)">.<strong>spellbook_format=</strong>(val)  &#x21d2; Object </a>
+      <a href="#spellbook_format=-class_method" title="spellbook_format= (class method)">.<strong>spellbook_format=</strong>(val)  &#x21d2; String </a>
     
 
     
@@ -441,7 +509,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Sets the spellbook format.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Sets the spellbook format.</p>
 </div></span>
   
 </li>
@@ -464,7 +533,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the stellar percentage of active spells.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the stellar percentage of active spells.</p>
 </div></span>
   
 </li>
@@ -490,7 +560,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the currently active spells.</p>
+    
+<p>Retrieves the currently active spells.</p>
 
 
   </div>
@@ -508,7 +579,8 @@ This module manages known spells, feats, and spellbook formats.</p>
       
       
         &mdash;
-        <div class='inline'><p>A hash of active spells.</p>
+        <div class='inline'>
+<p>A hash of active spells.</p>
 </div>
       
     </li>
@@ -521,12 +593,12 @@ This module manages known spells, feats, and spellbook formats.</p>
       <pre class="lines">
 
 
-18
-19
-20</pre>
+24
+25
+26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drspells.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drspells.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_active_spells'>active_spells</span>
   <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_dr_active_spells'>dr_active_spells</span>
@@ -547,7 +619,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks if the module is currently grabbing known barbarian abilities.</p>
+    
+<p>Checks if the module is currently grabbing known barbarian abilities.</p>
 
 
   </div>
@@ -565,7 +638,8 @@ This module manages known spells, feats, and spellbook formats.</p>
       
       
         &mdash;
-        <div class='inline'><p>True if grabbing known barbarian abilities, false otherwise.</p>
+        <div class='inline'>
+<p>True if grabbing known barbarian abilities, false otherwise.</p>
 </div>
       
     </li>
@@ -578,12 +652,12 @@ This module manages known spells, feats, and spellbook formats.</p>
       <pre class="lines">
 
 
-60
-61
-62</pre>
+67
+68
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drspells.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drspells.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_known_barbarian_abilities'>check_known_barbarian_abilities</span>
   <span class='cvar'>@@grabbing_known_barbarian_abilities</span>
@@ -596,7 +670,7 @@ This module manages known spells, feats, and spellbook formats.</p>
       <div class="method_details ">
   <h3 class="signature " id="check_known_barbarian_abilities=-class_method">
   
-    .<strong>check_known_barbarian_abilities=</strong>(val)  &#x21d2; <tt>Object</tt> 
+    .<strong>check_known_barbarian_abilities=</strong>(val)  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -604,7 +678,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Sets the flag for grabbing known barbarian abilities.</p>
+    
+<p>Sets the state of grabbing known barbarian abilities.</p>
 
 
   </div>
@@ -623,13 +698,32 @@ This module manages known spells, feats, and spellbook formats.</p>
       
       
         &mdash;
-        <div class='inline'><p>The value to set for grabbing known barbarian abilities.</p>
+        <div class='inline'>
+<p>The state to set for grabbing known barbarian abilities.</p>
 </div>
       
     </li>
   
 </ul>
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The value that was set.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -637,12 +731,12 @@ This module manages known spells, feats, and spellbook formats.</p>
       <pre class="lines">
 
 
-66
-67
-68</pre>
+74
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drspells.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drspells.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_known_barbarian_abilities='>check_known_barbarian_abilities=</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='cvar'>@@grabbing_known_barbarian_abilities</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span>
@@ -663,7 +757,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks if the module is currently grabbing known khri.</p>
+    
+<p>Checks if the module is currently grabbing known khri.</p>
 
 
   </div>
@@ -681,7 +776,8 @@ This module manages known spells, feats, and spellbook formats.</p>
       
       
         &mdash;
-        <div class='inline'><p>True if grabbing known khri, false otherwise.</p>
+        <div class='inline'>
+<p>True if grabbing known khri, false otherwise.</p>
 </div>
       
     </li>
@@ -694,12 +790,12 @@ This module manages known spells, feats, and spellbook formats.</p>
       <pre class="lines">
 
 
-72
-73
-74</pre>
+80
+81
+82</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drspells.rb', line 72</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drspells.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_grabbing_known_khri'>grabbing_known_khri</span>
   <span class='cvar'>@@grabbing_known_khri</span>
@@ -712,7 +808,7 @@ This module manages known spells, feats, and spellbook formats.</p>
       <div class="method_details ">
   <h3 class="signature " id="grabbing_known_khri=-class_method">
   
-    .<strong>grabbing_known_khri=</strong>(val)  &#x21d2; <tt>Object</tt> 
+    .<strong>grabbing_known_khri=</strong>(val)  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -720,7 +816,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Sets the flag for grabbing known khri.</p>
+    
+<p>Sets the state of grabbing known khri.</p>
 
 
   </div>
@@ -739,13 +836,32 @@ This module manages known spells, feats, and spellbook formats.</p>
       
       
         &mdash;
-        <div class='inline'><p>The value to set for grabbing known khri.</p>
+        <div class='inline'>
+<p>The state to set for grabbing known khri.</p>
 </div>
       
     </li>
   
 </ul>
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The value that was set.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -753,12 +869,12 @@ This module manages known spells, feats, and spellbook formats.</p>
       <pre class="lines">
 
 
-78
-79
-80</pre>
+87
+88
+89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drspells.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drspells.rb', line 87</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_grabbing_known_khri='>grabbing_known_khri=</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='cvar'>@@grabbing_known_khri</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span>
@@ -779,7 +895,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks if the module is currently grabbing known spells.</p>
+    
+<p>Checks if the module is currently grabbing known spells.</p>
 
 
   </div>
@@ -797,7 +914,8 @@ This module manages known spells, feats, and spellbook formats.</p>
       
       
         &mdash;
-        <div class='inline'><p>True if grabbing known spells, false otherwise.</p>
+        <div class='inline'>
+<p>True if grabbing known spells, false otherwise.</p>
 </div>
       
     </li>
@@ -810,12 +928,12 @@ This module manages known spells, feats, and spellbook formats.</p>
       <pre class="lines">
 
 
-48
-49
-50</pre>
+54
+55
+56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drspells.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drspells.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_grabbing_known_spells'>grabbing_known_spells</span>
   <span class='cvar'>@@grabbing_known_spells</span>
@@ -828,7 +946,7 @@ This module manages known spells, feats, and spellbook formats.</p>
       <div class="method_details ">
   <h3 class="signature " id="grabbing_known_spells=-class_method">
   
-    .<strong>grabbing_known_spells=</strong>(val)  &#x21d2; <tt>Object</tt> 
+    .<strong>grabbing_known_spells=</strong>(val)  &#x21d2; <tt>Boolean</tt> 
   
 
   
@@ -836,7 +954,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Sets the flag for grabbing known spells.</p>
+    
+<p>Sets the state of grabbing known spells.</p>
 
 
   </div>
@@ -855,13 +974,32 @@ This module manages known spells, feats, and spellbook formats.</p>
       
       
         &mdash;
-        <div class='inline'><p>The value to set for grabbing known spells.</p>
+        <div class='inline'>
+<p>The state to set for grabbing known spells.</p>
 </div>
       
     </li>
   
 </ul>
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The value that was set.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -869,12 +1007,12 @@ This module manages known spells, feats, and spellbook formats.</p>
       <pre class="lines">
 
 
-54
-55
-56</pre>
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drspells.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drspells.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_grabbing_known_spells='>grabbing_known_spells=</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='cvar'>@@grabbing_known_spells</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span>
@@ -895,7 +1033,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the known feats.</p>
+    
+<p>Returns the known feats.</p>
 
 
   </div>
@@ -913,7 +1052,8 @@ This module manages known spells, feats, and spellbook formats.</p>
       
       
         &mdash;
-        <div class='inline'><p>A hash containing known feats.</p>
+        <div class='inline'>
+<p>A hash of known feats.</p>
 </div>
       
     </li>
@@ -926,12 +1066,12 @@ This module manages known spells, feats, and spellbook formats.</p>
       <pre class="lines">
 
 
-30
-31
-32</pre>
+36
+37
+38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drspells.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drspells.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_known_feats'>known_feats</span>
   <span class='cvar'>@@known_feats</span>
@@ -952,7 +1092,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the known spells.</p>
+    
+<p>Returns the known spells.</p>
 
 
   </div>
@@ -970,7 +1111,8 @@ This module manages known spells, feats, and spellbook formats.</p>
       
       
         &mdash;
-        <div class='inline'><p>A hash containing known spells.</p>
+        <div class='inline'>
+<p>A hash of known spells.</p>
 </div>
       
     </li>
@@ -983,12 +1125,12 @@ This module manages known spells, feats, and spellbook formats.</p>
       <pre class="lines">
 
 
-24
-25
-26</pre>
+30
+31
+32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drspells.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drspells.rb', line 30</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_known_spells'>known_spells</span>
   <span class='cvar'>@@known_spells</span>
@@ -1009,7 +1151,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the slivers of currently active spells.</p>
+    
+<p>Retrieves the slivers of currently active spells.</p>
 
 
   </div>
@@ -1027,7 +1170,8 @@ This module manages known spells, feats, and spellbook formats.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of spell slivers.</p>
+        <div class='inline'>
+<p>An array of spell slivers.</p>
 </div>
       
     </li>
@@ -1040,12 +1184,12 @@ This module manages known spells, feats, and spellbook formats.</p>
       <pre class="lines">
 
 
-36
-37
-38</pre>
+42
+43
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drspells.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drspells.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_slivers'>slivers</span>
   <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_dr_active_spells_slivers'>dr_active_spells_slivers</span>
@@ -1066,7 +1210,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the current spellbook format.</p>
+    
+<p>Retrieves the current spellbook format.</p>
 
 
   </div>
@@ -1084,7 +1229,8 @@ This module manages known spells, feats, and spellbook formats.</p>
       
       
         &mdash;
-        <div class='inline'><p>The spellbook format, or nil if not set.</p>
+        <div class='inline'>
+<p>The spellbook format, or nil if not set.</p>
 </div>
       
     </li>
@@ -1097,12 +1243,12 @@ This module manages known spells, feats, and spellbook formats.</p>
       <pre class="lines">
 
 
-84
-85
-86</pre>
+93
+94
+95</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drspells.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drspells.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_spellbook_format'>spellbook_format</span>
   <span class='cvar'>@@spellbook_format</span>
@@ -1115,7 +1261,7 @@ This module manages known spells, feats, and spellbook formats.</p>
       <div class="method_details ">
   <h3 class="signature " id="spellbook_format=-class_method">
   
-    .<strong>spellbook_format=</strong>(val)  &#x21d2; <tt>Object</tt> 
+    .<strong>spellbook_format=</strong>(val)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
   
 
   
@@ -1123,7 +1269,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Sets the spellbook format.</p>
+    
+<p>Sets the spellbook format.</p>
 
 
   </div>
@@ -1142,13 +1289,32 @@ This module manages known spells, feats, and spellbook formats.</p>
       
       
         &mdash;
-        <div class='inline'><p>The format to set for the spellbook.</p>
+        <div class='inline'>
+<p>The format to set for the spellbook.</p>
 </div>
       
     </li>
   
 </ul>
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The value that was set.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1156,12 +1322,12 @@ This module manages known spells, feats, and spellbook formats.</p>
       <pre class="lines">
 
 
-90
-91
-92</pre>
+100
+101
+102</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drspells.rb', line 90</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drspells.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_spellbook_format='>spellbook_format=</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='cvar'>@@spellbook_format</span> <span class='op'>=</span> <span class='id identifier rubyid_val'>val</span>
@@ -1182,7 +1348,8 @@ This module manages known spells, feats, and spellbook formats.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the stellar percentage of active spells.</p>
+    
+<p>Retrieves the stellar percentage of active spells.</p>
 
 
   </div>
@@ -1200,7 +1367,8 @@ This module manages known spells, feats, and spellbook formats.</p>
       
       
         &mdash;
-        <div class='inline'><p>The stellar percentage value.</p>
+        <div class='inline'>
+<p>The stellar percentage.</p>
 </div>
       
     </li>
@@ -1213,12 +1381,12 @@ This module manages known spells, feats, and spellbook formats.</p>
       <pre class="lines">
 
 
-42
-43
-44</pre>
+48
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drspells.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drspells.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_stellar_percentage'>stellar_percentage</span>
   <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_dr_active_spells_stellar_percentage'>dr_active_spells_stellar_percentage</span>
@@ -1233,7 +1401,7 @@ This module manages known spells, feats, and spellbook formats.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:51 2025 by
+  Generated on Fri Nov  7 05:08:38 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

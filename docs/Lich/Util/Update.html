@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Util::Update
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,12 +78,35 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>update.rb</dd>
+    <dd>output/latest/documented/update.rb</dd>
   </dl>
   
 </div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Module for updating Lich5 This module handles the update process for Lich5, including downloading and applying updates.</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Updating Lich5</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'>Update</span><span class='period'>.</span><span class='id identifier rubyid_download_update'><span class='object_link'><a href="#download_update-class_method" title="Lich::Util::Update.download_update (method)">download_update</a></span></span></code></pre>
+    
+  </div>
+
+
+</div>
   
     <h2>
       Constant Summary
@@ -95,9 +118,8 @@
         <dt id="STABLE_REF-constant" class="">STABLE_REF =
           <div class="docstring">
   <div class="discussion">
-    <p>Update channel constants
-Update channel constants
-The stable reference branch for updates.</p>
+    
+<p>Update channel constants Update channel constant for stable releases The main branch reference for stable updates.</p>
 
 
   </div>
@@ -112,7 +134,8 @@ The stable reference branch for updates.</p>
         <dt id="BETA_BRANCH_PREFIX-constant" class="">BETA_BRANCH_PREFIX =
           <div class="docstring">
   <div class="discussion">
-    <p>Fallback branch prefix for beta updates.</p>
+    
+<p>Fallback branch prefix for beta updates This prefix is used to identify beta branches.</p>
 
 
   </div>
@@ -127,7 +150,8 @@ The stable reference branch for updates.</p>
         <dt id="ASSET_TARBALL_NAME-constant" class="">ASSET_TARBALL_NAME =
           <div class="docstring">
   <div class="discussion">
-    <p>The name of the asset tarball for updates.</p>
+    
+<p>Name of the asset tarball for updates The expected name of the tarball containing the update files.</p>
 
 
   </div>
@@ -173,7 +197,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Announces the availability of a new version if applicable.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Announces the availability of a new version This method checks for updates and notifies the user if a new version is available.</p>
 </div></span>
   
 </li>
@@ -196,7 +221,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Downloads and applies the update to the Lich5 ecosystem.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Downloads and applies the update to Lich5 This method handles the entire process of downloading and applying an update.</p>
 </div></span>
   
 </li>
@@ -219,7 +245,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Minimal GitHub JSON fetch with tiny cache and friendly errors Fetches JSON data from GitHub with caching.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Minimal GitHub JSON fetch with tiny cache and friendly errors Fetches JSON data from GitHub with caching This method retrieves JSON data from a specified URL, caching the result for a short time.</p>
 </div></span>
   
 </li>
@@ -242,7 +269,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Displays help information for update commands.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Displays help information for update commands This method provides a summary of available commands and their usage.</p>
 </div></span>
   
 </li>
@@ -265,7 +293,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Optional fallback: newest branch whose name starts with prefix and encodes a version Only branches with (major,minor) &gt; stable&#39;s (major,minor) are considered.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Optional fallback: newest branch whose name starts with prefix and encodes a version Only branches with (major,minor) &gt; stable’s (major,minor) are considered.</p>
 </div></span>
   
 </li>
@@ -288,7 +317,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Finds the latest prerelease tag greater than the specified stable version.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Finds the latest prerelease tag greater than the specified version This method checks for prerelease tags that are newer than the given stable version.</p>
 </div></span>
   
 </li>
@@ -311,7 +341,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the latest stable tag from GitHub releases.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the latest stable tag from GitHub This method fetches the latest stable release tag from the Lich5 repository.</p>
 </div></span>
   
 </li>
@@ -334,7 +365,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Extracts the major and minor version numbers from a version string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Extracts major and minor version numbers from a version string This method parses a version string and returns its major and minor components.</p>
 </div></span>
   
 </li>
@@ -357,7 +389,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Prepares for beta testing by confirming user participation.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Prepares for beta testing of the next Lich release This method handles user confirmation and sets up the beta test environment.</p>
 </div></span>
   
 </li>
@@ -380,7 +413,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Prepares for an update by fetching the latest release information.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Prepares for an update by fetching the latest release information This method retrieves the latest release data from GitHub.</p>
 </div></span>
   
 </li>
@@ -403,7 +437,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Handles various update commands based on the provided type.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Handles update requests based on command line arguments.</p>
 </div></span>
   
 </li>
@@ -426,7 +461,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Resolve a Git ref for stable/beta everywhere it&#39;s needed Resolves a Git reference for stable or beta channels.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Resolve a Git ref for stable/beta everywhere it’s needed Resolves a Git reference for stable or beta channels This method determines the appropriate reference for the specified channel.</p>
 </div></span>
   
 </li>
@@ -449,7 +485,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Reverts the Lich5 ecosystem to the most recent snapshot.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Reverts Lich5 to the previously installed version This method restores the last snapshot of Lich5 files.</p>
 </div></span>
   
 </li>
@@ -472,7 +509,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Creates a snapshot of the current Lich core files.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Creates a snapshot of the current Lich5 ecosystem This method backs up the current state of Lich5 files.</p>
 </div></span>
   
 </li>
@@ -495,7 +533,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Updates core data and scripts based on the current game type.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Updates core data and scripts for the Lich5 ecosystem This method updates essential scripts and data files based on the game type.</p>
 </div></span>
   
 </li>
@@ -518,7 +557,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Updates a specific file (script, library, or data) from the remote repository.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Updates a specific file in the Lich5 ecosystem This method downloads and replaces a specified file based on its type.</p>
 </div></span>
   
 </li>
@@ -541,7 +581,8 @@ The stable reference branch for updates.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Generates a version key from a tag or branch name.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Generates a version key from a tag or branch name This method normalizes version strings for comparison.</p>
 </div></span>
   
 </li>
@@ -567,7 +608,8 @@ The stable reference branch for updates.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Announces the availability of a new version if applicable.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Announces the availability of a new version This method checks for updates and notifies the user if a new version is available.</p>
 
 
   </div>
@@ -577,6 +619,10 @@ The stable reference branch for updates.</p>
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Announcing a new version</p>
+</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_announce'>announce</span></code></pre>
     
@@ -589,14 +635,6 @@ The stable reference branch for updates.</p>
       <pre class="lines">
 
 
-62
-63
-64
-65
-66
-67
-68
-69
 70
 71
 72
@@ -608,10 +646,18 @@ The stable reference branch for updates.</p>
 78
 79
 80
-81</pre>
+81
+82
+83
+84
+85
+86
+87
+88
+89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_announce'>announce</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_prep_update'>prep_update</span>
@@ -649,7 +695,8 @@ The stable reference branch for updates.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Downloads and applies the update to the Lich5 ecosystem.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Downloads and applies the update to Lich5 This method handles the entire process of downloading and applying an update.</p>
 
 
   </div>
@@ -659,6 +706,10 @@ The stable reference branch for updates.</p>
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Downloading an update</p>
+</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_download_update'>download_update</span></code></pre>
     
@@ -671,26 +722,6 @@ The stable reference branch for updates.</p>
       <pre class="lines">
 
 
-405
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415
-416
-417
-418
-419
-420
-421
-422
-423
-424
 425
 426
 427
@@ -724,10 +755,30 @@ The stable reference branch for updates.</p>
 455
 456
 457
-458</pre>
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 405</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 425</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_download_update'>download_update</span>
   <span class='comment'>## This is the workhorse routine that does the file moves from an update
@@ -799,8 +850,8 @@ The stable reference branch for updates.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Minimal GitHub JSON fetch with tiny cache and friendly errors
-Fetches JSON data from GitHub with caching.</p>
+    
+<p>Minimal GitHub JSON fetch with tiny cache and friendly errors Fetches JSON data from GitHub with caching This method retrieves JSON data from a specified URL, caching the result for a short time.</p>
 
 
   </div>
@@ -811,7 +862,11 @@ Fetches JSON data from GitHub with caching.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://api.github.com/repos/elanthia-online/lich-5/releases</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+        <h5 class="example_title"><div class='inline'>
+<p>Fetching GitHub JSON</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://api.github.com/repos/elanthia-online/lich-5/releases</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -827,7 +882,8 @@ Fetches JSON data from GitHub with caching.</p>
       
       
         &mdash;
-        <div class='inline'><p>The URL to fetch JSON data from.</p>
+        <div class='inline'>
+<p>The URL to fetch JSON data from</p>
 </div>
       
     </li>
@@ -845,7 +901,8 @@ Fetches JSON data from GitHub with caching.</p>
       
       
         &mdash;
-        <div class='inline'><p>The parsed JSON data or nil on error.</p>
+        <div class='inline'>
+<p>The parsed JSON data or nil on error</p>
 </div>
       
     </li>
@@ -862,7 +919,8 @@ Fetches JSON data from GitHub with caching.</p>
       
       
         &mdash;
-        <div class='inline'><p>If there is a network error.</p>
+        <div class='inline'>
+<p>If there is a network error</p>
 </div>
       
     </li>
@@ -875,25 +933,25 @@ Fetches JSON data from GitHub with caching.</p>
       <pre class="lines">
 
 
-262
-263
-264
-265
-266
-267
-268
-269
-270
-271
-272
-273
-274
 275
 276
-277</pre>
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 262</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 275</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_now'>now</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
@@ -927,7 +985,8 @@ Fetches JSON data from GitHub with caching.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Displays help information for update commands.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Displays help information for update commands This method provides a summary of available commands and their usage.</p>
 
 
   </div>
@@ -937,6 +996,10 @@ Fetches JSON data from GitHub with caching.</p>
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Displaying help</p>
+</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_help'>help</span></code></pre>
     
@@ -949,15 +1012,6 @@ Fetches JSON data from GitHub with caching.</p>
       <pre class="lines">
 
 
-87
-88
-89
-90
-91
-92
-93
-94
-95
 96
 97
 98
@@ -974,10 +1028,19 @@ Fetches JSON data from GitHub with caching.</p>
 109
 110
 111
-112</pre>
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 96</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_help'>help</span>
   <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>
@@ -1021,10 +1084,8 @@ Fetches JSON data from GitHub with caching.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Optional fallback: newest branch whose name starts with prefix and encodes a version
-Only branches with (major,minor) &gt; stable&#39;s (major,minor) are considered.
-Accepts names like &quot;pre/beta/5.15&quot; or &quot;pre/beta-5.15.0&quot;.
-Finds the latest branch with a name starting with the specified prefix and greater than the stable version.</p>
+    
+<p>Optional fallback: newest branch whose name starts with prefix and encodes a version Only branches with (major,minor) &gt; stable’s (major,minor) are considered. Accepts names like “pre/beta/5.15” or “pre/beta-5.15.0”. Finds the latest branch with a specified prefix that is greater than the stable version This method checks for branches that match the prefix and are newer than the stable version.</p>
 
 
   </div>
@@ -1035,7 +1096,11 @@ Finds the latest branch with a name starting with the specified prefix and great
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_latest_prefixed_branch_greater_than'>latest_prefixed_branch_greater_than</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pre/beta</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>14</span><span class='rparen'>)</span></code></pre>
+        <h5 class="example_title"><div class='inline'>
+<p>Finding the latest prefixed branch</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_branch'>branch</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_latest_prefixed_branch_greater_than'>latest_prefixed_branch_greater_than</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pre/beta</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1051,7 +1116,8 @@ Finds the latest branch with a name starting with the specified prefix and great
       
       
         &mdash;
-        <div class='inline'><p>The prefix to filter branches.</p>
+        <div class='inline'>
+<p>The prefix to match against branch names</p>
 </div>
       
     </li>
@@ -1066,7 +1132,8 @@ Finds the latest branch with a name starting with the specified prefix and great
       
       
         &mdash;
-        <div class='inline'><p>The major version of the stable release.</p>
+        <div class='inline'>
+<p>The major version of the stable release</p>
 </div>
       
     </li>
@@ -1081,7 +1148,8 @@ Finds the latest branch with a name starting with the specified prefix and great
       
       
         &mdash;
-        <div class='inline'><p>The minor version of the stable release.</p>
+        <div class='inline'>
+<p>The minor version of the stable release</p>
 </div>
       
     </li>
@@ -1099,7 +1167,8 @@ Finds the latest branch with a name starting with the specified prefix and great
       
       
         &mdash;
-        <div class='inline'><p>The latest branch name or nil if not found.</p>
+        <div class='inline'>
+<p>The latest matching branch or nil if not found</p>
 </div>
       
     </li>
@@ -1112,26 +1181,26 @@ Finds the latest branch with a name starting with the specified prefix and great
       <pre class="lines">
 
 
-321
-322
-323
-324
-325
-326
-327
-328
-329
-330
-331
-332
-333
-334
-335
-336
-337</pre>
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 321</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 337</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_latest_prefixed_branch_greater_than'>latest_prefixed_branch_greater_than</span><span class='lparen'>(</span><span class='id identifier rubyid_prefix'>prefix</span><span class='comma'>,</span> <span class='id identifier rubyid_stable_major'>stable_major</span><span class='comma'>,</span> <span class='id identifier rubyid_stable_minor'>stable_minor</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_branches'>branches</span> <span class='op'>=</span> <span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://api.github.com/repos/elanthia-online/lich-5/branches?per_page=100</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1166,7 +1235,8 @@ Finds the latest branch with a name starting with the specified prefix and great
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Finds the latest prerelease tag greater than the specified stable version.</p>
+    
+<p>Finds the latest prerelease tag greater than the specified version This method checks for prerelease tags that are newer than the given stable version.</p>
 
 
   </div>
@@ -1177,7 +1247,11 @@ Finds the latest branch with a name starting with the specified prefix and great
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_latest_prerelease_tag_greater_than'>latest_prerelease_tag_greater_than</span><span class='lparen'>(</span><span class='int'>5</span><span class='comma'>,</span> <span class='int'>14</span><span class='rparen'>)</span></code></pre>
+        <h5 class="example_title"><div class='inline'>
+<p>Finding the latest prerelease tag</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_tag'>tag</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_latest_prerelease_tag_greater_than'>latest_prerelease_tag_greater_than</span><span class='lparen'>(</span><span class='int'>5</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1193,7 +1267,8 @@ Finds the latest branch with a name starting with the specified prefix and great
       
       
         &mdash;
-        <div class='inline'><p>The major version of the stable release.</p>
+        <div class='inline'>
+<p>The major version of the stable release</p>
 </div>
       
     </li>
@@ -1208,7 +1283,8 @@ Finds the latest branch with a name starting with the specified prefix and great
       
       
         &mdash;
-        <div class='inline'><p>The minor version of the stable release.</p>
+        <div class='inline'>
+<p>The minor version of the stable release</p>
 </div>
       
     </li>
@@ -1226,7 +1302,8 @@ Finds the latest branch with a name starting with the specified prefix and great
       
       
         &mdash;
-        <div class='inline'><p>The latest prerelease tag or nil if not found.</p>
+        <div class='inline'>
+<p>The latest prerelease tag or nil if not found</p>
 </div>
       
     </li>
@@ -1239,23 +1316,23 @@ Finds the latest branch with a name starting with the specified prefix and great
       <pre class="lines">
 
 
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309</pre>
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 296</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 311</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_latest_prerelease_tag_greater_than'>latest_prerelease_tag_greater_than</span><span class='lparen'>(</span><span class='id identifier rubyid_stable_major'>stable_major</span><span class='comma'>,</span> <span class='id identifier rubyid_stable_minor'>stable_minor</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_releases'>releases</span> <span class='op'>=</span> <span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://api.github.com/repos/elanthia-online/lich-5/releases</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1287,7 +1364,8 @@ Finds the latest branch with a name starting with the specified prefix and great
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the latest stable tag from GitHub releases.</p>
+    
+<p>Retrieves the latest stable tag from GitHub This method fetches the latest stable release tag from the Lich5 repository.</p>
 
 
   </div>
@@ -1298,7 +1376,11 @@ Finds the latest branch with a name starting with the specified prefix and great
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_latest_stable_tag'>latest_stable_tag</span></code></pre>
+        <h5 class="example_title"><div class='inline'>
+<p>Getting the latest stable tag</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_tag'>tag</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_latest_stable_tag'>latest_stable_tag</span></code></pre>
     
   </div>
 
@@ -1313,7 +1395,8 @@ Finds the latest branch with a name starting with the specified prefix and great
       
       
         &mdash;
-        <div class='inline'><p>The latest stable tag or nil if not found.</p>
+        <div class='inline'>
+<p>The latest stable tag or nil if not found</p>
 </div>
       
     </li>
@@ -1326,15 +1409,15 @@ Finds the latest branch with a name starting with the specified prefix and great
       <pre class="lines">
 
 
-283
-284
-285
-286
-287
-288</pre>
+297
+298
+299
+300
+301
+302</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 283</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 297</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_latest_stable_tag'>latest_stable_tag</span>
   <span class='id identifier rubyid_releases'>releases</span> <span class='op'>=</span> <span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://api.github.com/repos/elanthia-online/lich-5/releases</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1358,7 +1441,8 @@ Finds the latest branch with a name starting with the specified prefix and great
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Extracts the major and minor version numbers from a version string.</p>
+    
+<p>Extracts major and minor version numbers from a version string This method parses a version string and returns its major and minor components.</p>
 
 
   </div>
@@ -1369,7 +1453,11 @@ Finds the latest branch with a name starting with the specified prefix and great
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_major_minor_from'>major_minor_from</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>v5.14.3</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+        <h5 class="example_title"><div class='inline'>
+<p>Extracting major and minor version</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_major'>major</span><span class='comma'>,</span> <span class='id identifier rubyid_minor'>minor</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_major_minor_from'>major_minor_from</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>v5.0.1</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1385,7 +1473,8 @@ Finds the latest branch with a name starting with the specified prefix and great
       
       
         &mdash;
-        <div class='inline'><p>The version string to parse.</p>
+        <div class='inline'>
+<p>The version string to parse</p>
 </div>
       
     </li>
@@ -1403,7 +1492,8 @@ Finds the latest branch with a name starting with the specified prefix and great
       
       
         &mdash;
-        <div class='inline'><p>An array containing the major and minor version numbers.</p>
+        <div class='inline'>
+<p>An array containing the major and minor version numbers</p>
 </div>
       
     </li>
@@ -1416,21 +1506,21 @@ Finds the latest branch with a name starting with the specified prefix and great
       <pre class="lines">
 
 
-363
-364
-365
-366
-367
-368
-369
-370
-371
-372
-373
-374</pre>
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 363</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 381</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_major_minor_from'>major_minor_from</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='lbracket'>[</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -1460,7 +1550,8 @@ Finds the latest branch with a name starting with the specified prefix and great
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Prepares for beta testing by confirming user participation.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Prepares for beta testing of the next Lich release This method handles user confirmation and sets up the beta test environment.</p>
 
 
   </div>
@@ -1470,6 +1561,10 @@ Finds the latest branch with a name starting with the specified prefix and great
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Preparing for beta test</p>
+</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_prep_betatest'>prep_betatest</span></code></pre>
     
@@ -1489,7 +1584,8 @@ Finds the latest branch with a name starting with the specified prefix and great
       
       
         &mdash;
-        <div class='inline'><p>The type of beta test (optional).</p>
+        <div class='inline'>
+<p>The type of beta test (optional)</p>
 </div>
       
     </li>
@@ -1506,7 +1602,8 @@ Finds the latest branch with a name starting with the specified prefix and great
       
       
         &mdash;
-        <div class='inline'><p>The requested file for the beta test (optional).</p>
+        <div class='inline'>
+<p>The file to be tested (optional)</p>
 </div>
       
     </li>
@@ -1520,17 +1617,6 @@ Finds the latest branch with a name starting with the specified prefix and great
       <pre class="lines">
 
 
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
 170
 171
 172
@@ -1588,10 +1674,21 @@ Finds the latest branch with a name starting with the specified prefix and great
 224
 225
 226
-227</pre>
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 159</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 170</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_prep_betatest'>prep_betatest</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_requested_file'>requested_file</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -1678,7 +1775,8 @@ Finds the latest branch with a name starting with the specified prefix and great
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Prepares for an update by fetching the latest release information.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Prepares for an update by fetching the latest release information This method retrieves the latest release data from GitHub.</p>
 
 
   </div>
@@ -1688,6 +1786,10 @@ Finds the latest branch with a name starting with the specified prefix and great
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Preparing for an update</p>
+</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_prep_update'>prep_update</span></code></pre>
     
@@ -1700,29 +1802,29 @@ Finds the latest branch with a name starting with the specified prefix and great
       <pre class="lines">
 
 
-380
-381
-382
-383
-384
-385
-386
-387
-388
-389
-390
-391
-392
-393
-394
-395
-396
-397
-398
-399</pre>
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 380</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 399</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_prep_update'>prep_update</span>
   <span class='id identifier rubyid_latest'>latest</span> <span class='op'>=</span> <span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://api.github.com/repos/elanthia-online/lich-5/releases/latest</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1760,7 +1862,8 @@ Finds the latest branch with a name starting with the specified prefix and great
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Handles various update commands based on the provided type.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Handles update requests based on command line arguments</p>
 
 
   </div>
@@ -1770,6 +1873,10 @@ Finds the latest branch with a name starting with the specified prefix and great
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Requesting an update</p>
+</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--update</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
     
@@ -1789,7 +1896,8 @@ Finds the latest branch with a name starting with the specified prefix and great
       
       
         &mdash;
-        <div class='inline'><p>The command type to process.</p>
+        <div class='inline'>
+<p>The type of request (e.g., ‘–announce’, ‘–update’)</p>
 </div>
       
     </li>
@@ -1807,7 +1915,8 @@ Finds the latest branch with a name starting with the specified prefix and great
       
       
         &mdash;
-        <div class='inline'><p>If the command is unknown.</p>
+        <div class='inline'>
+<p>If the command is unknown</p>
 </div>
       
     </li>
@@ -1820,13 +1929,6 @@ Finds the latest branch with a name starting with the specified prefix and great
       <pre class="lines">
 
 
-35
-36
-37
-38
-39
-40
-41
 42
 43
 44
@@ -1841,10 +1943,17 @@ Finds the latest branch with a name starting with the specified prefix and great
 53
 54
 55
-56</pre>
+56
+57
+58
+59
+60
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--announce</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_type'>type</span>
@@ -1884,8 +1993,8 @@ Finds the latest branch with a name starting with the specified prefix and great
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Resolve a Git ref for stable/beta everywhere it&#39;s needed
-Resolves a Git reference for stable or beta channels.</p>
+    
+<p>Resolve a Git ref for stable/beta everywhere it’s needed Resolves a Git reference for stable or beta channels This method determines the appropriate reference for the specified channel.</p>
 
 
   </div>
@@ -1895,6 +2004,10 @@ Resolves a Git reference for stable or beta channels.</p>
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Resolving a channel reference</p>
+</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_resolve_channel_ref'>resolve_channel_ref</span><span class='lparen'>(</span><span class='symbol'>:beta</span><span class='rparen'>)</span></code></pre>
     
@@ -1912,7 +2025,8 @@ Resolves a Git reference for stable or beta channels.</p>
       
       
         &mdash;
-        <div class='inline'><p>The channel to resolve (&#39;stable&#39; or &#39;beta&#39;).</p>
+        <div class='inline'>
+<p>The channel to resolve (e.g., :stable, :beta)</p>
 </div>
       
     </li>
@@ -1930,7 +2044,8 @@ Resolves a Git reference for stable or beta channels.</p>
       
       
         &mdash;
-        <div class='inline'><p>The resolved reference or nil if not found.</p>
+        <div class='inline'>
+<p>The resolved reference or nil if not found</p>
 </div>
       
     </li>
@@ -1943,28 +2058,28 @@ Resolves a Git reference for stable or beta channels.</p>
       <pre class="lines">
 
 
-235
-236
-237
-238
-239
-240
-241
-242
-243
-244
-245
-246
 247
 248
 249
 250
 251
 252
-253</pre>
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 235</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 247</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_resolve_channel_ref'>resolve_channel_ref</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_channel'>channel</span>
@@ -2001,7 +2116,8 @@ Resolves a Git reference for stable or beta channels.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Reverts the Lich5 ecosystem to the most recent snapshot.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Reverts Lich5 to the previously installed version This method restores the last snapshot of Lich5 files.</p>
 
 
   </div>
@@ -2011,6 +2127,10 @@ Resolves a Git reference for stable or beta channels.</p>
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Reverting to a previous version</p>
+</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_revert'>revert</span></code></pre>
     
@@ -2023,27 +2143,6 @@ Resolves a Git reference for stable or beta channels.</p>
       <pre class="lines">
 
 
-464
-465
-466
-467
-468
-469
-470
-471
-472
-473
-474
-475
-476
-477
-478
-479
-480
-481
-482
-483
-484
 485
 486
 487
@@ -2066,10 +2165,31 @@ Resolves a Git reference for stable or beta channels.</p>
 504
 505
 506
-507</pre>
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 464</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 485</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_revert'>revert</span>
   <span class='comment'>## Since the request is to roll-back, we will do so destructively
@@ -2131,7 +2251,8 @@ Resolves a Git reference for stable or beta channels.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Creates a snapshot of the current Lich core files.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Creates a snapshot of the current Lich5 ecosystem This method backs up the current state of Lich5 files.</p>
 
 
   </div>
@@ -2141,6 +2262,10 @@ Resolves a Git reference for stable or beta channels.</p>
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Creating a snapshot</p>
+</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_snapshot'>snapshot</span></code></pre>
     
@@ -2153,16 +2278,6 @@ Resolves a Git reference for stable or beta channels.</p>
       <pre class="lines">
 
 
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
 128
 129
 130
@@ -2186,10 +2301,20 @@ Resolves a Git reference for stable or beta channels.</p>
 148
 149
 150
-151</pre>
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 118</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_snapshot'>snapshot</span>
   <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span>
@@ -2241,7 +2366,8 @@ Resolves a Git reference for stable or beta channels.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Updates core data and scripts based on the current game type.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Updates core data and scripts for the Lich5 ecosystem This method updates essential scripts and data files based on the game type.</p>
 
 
   </div>
@@ -2251,6 +2377,10 @@ Resolves a Git reference for stable or beta channels.</p>
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Updating core data and scripts</p>
+</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_update_core_data_and_scripts'>update_core_data_and_scripts</span></code></pre>
     
@@ -2270,7 +2400,8 @@ Resolves a Git reference for stable or beta channels.</p>
       
       
         &mdash;
-        <div class='inline'><p>The version to update to (default is LICH_VERSION).</p>
+        <div class='inline'>
+<p>The version to update to (default: LICH_VERSION)</p>
 </div>
       
     </li>
@@ -2284,30 +2415,6 @@ Resolves a Git reference for stable or beta channels.</p>
       <pre class="lines">
 
 
-579
-580
-581
-582
-583
-584
-585
-586
-587
-588
-589
-590
-591
-592
-593
-594
-595
-596
-597
-598
-599
-600
-601
-602
 603
 604
 605
@@ -2317,10 +2424,34 @@ Resolves a Git reference for stable or beta channels.</p>
 609
 610
 611
-612</pre>
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 579</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 603</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update_core_data_and_scripts'>update_core_data_and_scripts</span><span class='lparen'>(</span><span class='id identifier rubyid_version'>version</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../top-level-namespace.html#LICH_VERSION-constant" title="LICH_VERSION (constant)">LICH_VERSION</a></span></span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_game'>game</span> <span class='op'>!~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^GS|^DR</span><span class='regexp_end'>/</span></span>
@@ -2372,7 +2503,8 @@ Resolves a Git reference for stable or beta channels.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Updates a specific file (script, library, or data) from the remote repository.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Updates a specific file in the Lich5 ecosystem This method downloads and replaces a specified file based on its type.</p>
 
 
   </div>
@@ -2382,6 +2514,10 @@ Resolves a Git reference for stable or beta channels.</p>
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Updating a script file</p>
+</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_update_file'>update_file</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>script</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>alias.lic</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
     
@@ -2399,7 +2535,8 @@ Resolves a Git reference for stable or beta channels.</p>
       
       
         &mdash;
-        <div class='inline'><p>The type of file to update (&#39;script&#39;, &#39;library&#39;, or &#39;data&#39;).</p>
+        <div class='inline'>
+<p>The type of file to update (e.g., ‘script’, ‘library’, ‘data’)</p>
 </div>
       
     </li>
@@ -2414,7 +2551,8 @@ Resolves a Git reference for stable or beta channels.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the file to update.</p>
+        <div class='inline'>
+<p>The name of the file to update</p>
 </div>
       
     </li>
@@ -2431,13 +2569,32 @@ Resolves a Git reference for stable or beta channels.</p>
       
       
         &mdash;
-        <div class='inline'><p>The version channel to use (&#39;production&#39; or &#39;beta&#39;).</p>
+        <div class='inline'>
+<p>The version channel (default: ‘production’)</p>
 </div>
       
     </li>
   
 </ul>
 
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>StandardError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If the file cannot be updated</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -2445,29 +2602,6 @@ Resolves a Git reference for stable or beta channels.</p>
       <pre class="lines">
 
 
-516
-517
-518
-519
-520
-521
-522
-523
-524
-525
-526
-527
-528
-529
-530
-531
-532
-533
-534
-535
-536
-537
-538
 539
 540
 541
@@ -2501,10 +2635,33 @@ Resolves a Git reference for stable or beta channels.</p>
 569
 570
 571
-572</pre>
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 516</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 539</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update_file'>update_file</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_rf'>rf</span><span class='comma'>,</span> <span class='id identifier rubyid_version'>version</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>production</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_version'>version</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(?:staging|master)$</span><span class='regexp_end'>/i</span></span>
@@ -2579,7 +2736,8 @@ Resolves a Git reference for stable or beta channels.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Generates a version key from a tag or branch name.</p>
+    
+<p>Generates a version key from a tag or branch name This method normalizes version strings for comparison.</p>
 
 
   </div>
@@ -2590,7 +2748,11 @@ Resolves a Git reference for stable or beta channels.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_version_key'>version_key</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>v5.14.3</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+        <h5 class="example_title"><div class='inline'>
+<p>Generating a version key</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_version_key'>version_key</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>v5.0.1</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -2606,7 +2768,8 @@ Resolves a Git reference for stable or beta channels.</p>
       
       
         &mdash;
-        <div class='inline'><p>The tag or branch name to generate a key from.</p>
+        <div class='inline'>
+<p>The tag or branch name to process</p>
 </div>
       
     </li>
@@ -2624,7 +2787,8 @@ Resolves a Git reference for stable or beta channels.</p>
       
       
         &mdash;
-        <div class='inline'><p>The generated version key.</p>
+        <div class='inline'>
+<p>The normalized version object</p>
 </div>
       
     </li>
@@ -2637,22 +2801,22 @@ Resolves a Git reference for stable or beta channels.</p>
       <pre class="lines">
 
 
-344
-345
-346
-347
-348
-349
-350
-351
-352
-353
-354
-355
-356</pre>
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'update.rb', line 344</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/update.rb', line 361</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_version_key'>version_key</span><span class='lparen'>(</span><span class='id identifier rubyid_tag_or_name'>tag_or_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span> <span class='op'>=</span> <span class='id identifier rubyid_tag_or_name'>tag_or_name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -2677,7 +2841,7 @@ Resolves a Git reference for stable or beta channels.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:50 2025 by
+  Generated on Fri Nov  7 05:08:34 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

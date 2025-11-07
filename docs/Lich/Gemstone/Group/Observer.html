@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Gemstone::Group::Observer
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,17 +78,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>group.rb</dd>
+    <dd>output/latest/documented/gemstone/group.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Observes game output and automatically updates Group state.
-Watches for group-related messages and updates membership, leadership, and status.
-Observes game output and automatically updates Group state.
-Watches for group-related messages and updates membership, leadership, and status.</p>
+    
+<p>Observes game output and automatically updates Group state. Watches for group-related messages and updates membership, leadership, and status. Observes game output and automatically updates Group state. Watches for group-related messages and updates membership, leadership, and status.</p>
 
 
   </div>
@@ -138,7 +136,8 @@ Watches for group-related messages and updates membership, leadership, and statu
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Processes a line of group-related game output and updates Group state.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Processes a line of group-related game output and updates Group state.</p>
 </div></span>
   
 </li>
@@ -161,7 +160,8 @@ Watches for group-related messages and updates membership, leadership, and statu
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Extracts GameObj instances from XML character links in game output.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Extracts GameObj instances from XML character links in game output.</p>
 </div></span>
   
 </li>
@@ -184,7 +184,8 @@ Watches for group-related messages and updates membership, leadership, and statu
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks if a line of game output contains group-related information.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if a line of game output contains group-related information.</p>
 </div></span>
   
 </li>
@@ -210,11 +211,10 @@ Watches for group-related messages and updates membership, leadership, and statu
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Processes a line of group-related game output and updates Group state.
-Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
+    
+<p>Processes a line of group-related game output and updates Group state. Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
 
-<p>Processes a line of group-related game output and updates Group state.
-Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
+<p>Processes a line of group-related game output and updates Group state. Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
 
 
   </div>
@@ -233,7 +233,8 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
       
       
         &mdash;
-        <div class='inline'><p>line of game output</p>
+        <div class='inline'>
+<p>line of game output</p>
 </div>
       
     </li>
@@ -248,7 +249,8 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
       
       
         &mdash;
-        <div class='inline'><p>regex match data from the line</p>
+        <div class='inline'>
+<p>regex match data from the line</p>
 </div>
       
     </li>
@@ -263,7 +265,8 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
       
       
         &mdash;
-        <div class='inline'><p>line of game output</p>
+        <div class='inline'>
+<p>line of game output</p>
 </div>
       
     </li>
@@ -278,7 +281,8 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
       
       
         &mdash;
-        <div class='inline'><p>regex match data from the line</p>
+        <div class='inline'>
+<p>regex match data from the line</p>
 </div>
       
     </li>
@@ -314,8 +318,6 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
       <pre class="lines">
 
 
-632
-633
 634
 635
 636
@@ -376,10 +378,12 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
 691
 692
 693
-694</pre>
+694
+695
+696</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'group.rb', line 632</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/group.rb', line 634</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_consume'>consume</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_match_data'>match_data</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Observer/Term.html" title="Lich::Gemstone::Group::Observer::Term (module)">Term</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Observer/Term.html#GIVEN_LEADERSHIP-constant" title="Lich::Gemstone::Group::Observer::Term::GIVEN_LEADERSHIP (constant)">GIVEN_LEADERSHIP</a></span></span><span class='rparen'>)</span>
@@ -460,7 +464,8 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Extracts GameObj instances from XML character links in game output.</p>
+    
+<p>Extracts GameObj instances from XML character links in game output.</p>
 
 <p>Extracts GameObj instances from XML character links in game output.</p>
 
@@ -481,7 +486,8 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
       
       
         &mdash;
-        <div class='inline'><p>game output containing character XML tags</p>
+        <div class='inline'>
+<p>game output containing character XML tags</p>
 </div>
       
     </li>
@@ -496,7 +502,8 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
       
       
         &mdash;
-        <div class='inline'><p>game output containing character XML tags</p>
+        <div class='inline'>
+<p>game output containing character XML tags</p>
 </div>
       
     </li>
@@ -514,7 +521,8 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
       
       
         &mdash;
-        <div class='inline'><p>array of GameObj instances found in the XML</p>
+        <div class='inline'>
+<p>array of GameObj instances found in the XML</p>
 </div>
       
     </li>
@@ -527,7 +535,8 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
       
       
         &mdash;
-        <div class='inline'><p>array of GameObj instances found in the XML</p>
+        <div class='inline'>
+<p>array of GameObj instances found in the XML</p>
 </div>
       
     </li>
@@ -540,12 +549,12 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
       <pre class="lines">
 
 
-605
-606
-607</pre>
+607
+608
+609</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'group.rb', line 605</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/group.rb', line 607</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_exist'>exist</span><span class='lparen'>(</span><span class='id identifier rubyid_xml'>xml</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_xml'>xml</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Group.html" title="Lich::Gemstone::Group (class)">Group</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Group::Observer (module)">Observer</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Observer/Term.html" title="Lich::Gemstone::Group::Observer::Term (module)">Term</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Observer/Term.html#EXIST-constant" title="Lich::Gemstone::Group::Observer::Term::EXIST (constant)">EXIST</a></span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid__noun'>_noun</span><span class='comma'>,</span> <span class='id identifier rubyid__name'>_name</span><span class='op'>|</span> <span class='const'>GameObj</span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
@@ -566,7 +575,8 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks if a line of game output contains group-related information.</p>
+    
+<p>Checks if a line of game output contains group-related information.</p>
 
 <p>Checks if a line of game output contains group-related information.</p>
 
@@ -587,7 +597,8 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
       
       
         &mdash;
-        <div class='inline'><p>line of game output</p>
+        <div class='inline'>
+<p>line of game output</p>
 </div>
       
     </li>
@@ -602,7 +613,8 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
       
       
         &mdash;
-        <div class='inline'><p>line of game output</p>
+        <div class='inline'>
+<p>line of game output</p>
 </div>
       
     </li>
@@ -620,7 +632,8 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
       
       
         &mdash;
-        <div class='inline'><p>true if line contains group information</p>
+        <div class='inline'>
+<p>true if line contains group information</p>
 </div>
       
     </li>
@@ -633,7 +646,8 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
       
       
         &mdash;
-        <div class='inline'><p>true if line contains group information</p>
+        <div class='inline'>
+<p>true if line contains group information</p>
 </div>
       
     </li>
@@ -646,13 +660,13 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
       <pre class="lines">
 
 
-616
-617
 618
-619</pre>
+619
+620
+621</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'group.rb', line 616</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/group.rb', line 618</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_wants?'>wants?</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Observer/Term.html" title="Lich::Gemstone::Group::Observer::Term (module)">Term</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Observer/Term.html#ANY-constant" title="Lich::Gemstone::Group::Observer::Term::ANY (constant)">ANY</a></span></span><span class='rparen'>)</span> <span class='kw'>or</span>
@@ -668,7 +682,7 @@ Handles all types of group changes: joins, leaves, leadership changes, etc.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:49 2025 by
+  Generated on Fri Nov  7 05:08:35 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

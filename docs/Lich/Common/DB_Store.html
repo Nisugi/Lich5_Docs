@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Common::DB_Store
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,7 +78,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>db_store.rb</dd>
+    <dd>output/latest/documented/common/db_store.rb</dd>
   </dl>
   
 </div>
@@ -115,7 +115,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves data from the database for a specific script and scope.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves data from the database for a specific script and scope.</p>
 </div></span>
   
 </li>
@@ -138,7 +139,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves user variables from the database for a specific scope.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves user variables from the database for a specific scope.</p>
 </div></span>
   
 </li>
@@ -161,7 +163,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Reads data from the database based on the provided scope and script.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Reads data from the database based on the provided scope and script name.</p>
 </div></span>
   
 </li>
@@ -184,7 +187,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Saves data to the database based on the provided scope and script.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Saves data to the database based on the provided scope, script name, and value.</p>
 </div></span>
   
 </li>
@@ -207,7 +211,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Stores data in the database for a specific script and scope.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Stores data in the database for a specific script and scope.</p>
 </div></span>
   
 </li>
@@ -230,7 +235,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Stores user variables in the database for a specific scope.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Stores user variables in the database for a specific scope.</p>
 </div></span>
   
 </li>
@@ -256,7 +262,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves data from the database for a specific script and scope.</p>
+    
+<p>Retrieves data from the database for a specific script and scope.</p>
 
 
   </div>
@@ -267,7 +274,7 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::DB_Store (module)">DB_Store</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_data'>get_data</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>vars</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>some_script</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::DB_Store (module)">DB_Store</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_data'>get_data</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>game:name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>script_name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -285,7 +292,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The scope for the data, defaults to &quot;#XMLData.game:#XMLData.name&quot;</p>
+        <div class='inline'>
+<p>The scope for the data, defaults to “#XMLData.game:#XMLData.name”</p>
 </div>
       
     </li>
@@ -300,7 +308,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The script name to retrieve data for</p>
+        <div class='inline'>
+<p>The name of the script to retrieve data for</p>
 </div>
       
     </li>
@@ -318,7 +327,26 @@
       
       
         &mdash;
-        <div class='inline'><p>The data retrieved from the database, or an empty hash if not found</p>
+        <div class='inline'>
+<p>The data retrieved from the database, or an empty hash if not found</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>StandardError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If there is an error during the database operation</p>
 </div>
       
     </li>
@@ -331,14 +359,14 @@
       <pre class="lines">
 
 
-54
-55
-56
 57
-58</pre>
+58
+59
+60
+61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'db_store.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/db_store.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_data'>get_data</span><span class='lparen'>(</span><span class='id identifier rubyid_scope'>scope</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_game'>game</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_script'>script</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_db'><span class='object_link'><a href="../../Lich.html#db-class_method" title="Lich.db (method)">db</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_first_value'>get_first_value</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SELECT hash FROM script_auto_settings WHERE script=? AND scope=?;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='id identifier rubyid_script'>script</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -361,7 +389,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves user variables from the database for a specific scope.</p>
+    
+<p>Retrieves user variables from the database for a specific scope.</p>
 
 
   </div>
@@ -372,7 +401,7 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_user_vars'>user_vars</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::DB_Store (module)">DB_Store</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_vars'>get_vars</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>some_scope</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_user_vars'>user_vars</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::DB_Store (module)">DB_Store</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_vars'>get_vars</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>game:name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -390,7 +419,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The scope for the user variables, defaults to &quot;#XMLData.game:#XMLData.name&quot;</p>
+        <div class='inline'>
+<p>The scope for the user variables, defaults to “#XMLData.game:#XMLData.name”</p>
 </div>
       
     </li>
@@ -408,7 +438,26 @@
       
       
         &mdash;
-        <div class='inline'><p>The user variables retrieved from the database, or an empty hash if not found</p>
+        <div class='inline'>
+<p>The user variables retrieved from the database, or an empty hash if not found</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>StandardError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If there is an error during the database operation</p>
 </div>
       
     </li>
@@ -421,14 +470,14 @@
       <pre class="lines">
 
 
-65
-66
-67
-68
-69</pre>
+69
+70
+71
+72
+73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'db_store.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/db_store.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_vars'>get_vars</span><span class='lparen'>(</span><span class='id identifier rubyid_scope'>scope</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_game'>game</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_db'><span class='object_link'><a href="../../Lich.html#db-class_method" title="Lich.db (method)">db</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get_first_value'>get_first_value</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>SELECT hash FROM uservars WHERE scope=?;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_scope'>scope</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -451,7 +500,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Reads data from the database based on the provided scope and script.</p>
+    
+<p>Reads data from the database based on the provided scope and script name.</p>
 
 
   </div>
@@ -462,7 +512,7 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::DB_Store (module)">DB_Store</a></span></span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>vars</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>some_script</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::DB_Store (module)">DB_Store</a></span></span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>game:name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>vars</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -480,7 +530,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The scope for the data, defaults to &quot;#XMLData.game:#XMLData.name&quot;</p>
+        <div class='inline'>
+<p>The scope for the data, defaults to “#XMLData.game:#XMLData.name”</p>
 </div>
       
     </li>
@@ -495,7 +546,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The script name to read data for</p>
+        <div class='inline'>
+<p>The name of the script to read data for</p>
 </div>
       
     </li>
@@ -513,7 +565,26 @@
       
       
         &mdash;
-        <div class='inline'><p>The data retrieved from the database</p>
+        <div class='inline'>
+<p>The data retrieved from the database</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>StandardError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If there is an error during the database operation</p>
 </div>
       
     </li>
@@ -526,17 +597,17 @@
       <pre class="lines">
 
 
-23
 24
 25
 26
 27
 28
 29
-30</pre>
+30
+31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'db_store.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/db_store.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='id identifier rubyid_scope'>scope</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_game'>game</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_script'>script</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_script'>script</span>
@@ -562,7 +633,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Saves data to the database based on the provided scope and script.</p>
+    
+<p>Saves data to the database based on the provided scope, script name, and value.</p>
 
 
   </div>
@@ -573,7 +645,7 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::DB_Store (module)">DB_Store</a></span></span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>vars</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>some_script</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>key:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>value</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::DB_Store (module)">DB_Store</a></span></span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>game:name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>vars</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>key:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>value</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -591,7 +663,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The scope for the data, defaults to &quot;#XMLData.game:#XMLData.name&quot;</p>
+        <div class='inline'>
+<p>The scope for the data, defaults to “#XMLData.game:#XMLData.name”</p>
 </div>
       
     </li>
@@ -606,7 +679,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The script name to save data for</p>
+        <div class='inline'>
+<p>The name of the script to save data for</p>
 </div>
       
     </li>
@@ -621,7 +695,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The value to be stored in the database</p>
+        <div class='inline'>
+<p>The value to be saved in the database</p>
 </div>
       
     </li>
@@ -639,7 +714,26 @@
       
       
         &mdash;
-        <div class='inline'><p>A message indicating success or error</p>
+        <div class='inline'>
+<p>A message indicating success or error</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>StandardError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If there is an error during the database operation</p>
 </div>
       
     </li>
@@ -652,17 +746,17 @@
       <pre class="lines">
 
 
-39
-40
 41
 42
 43
 44
 45
-46</pre>
+46
+47
+48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'db_store.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/db_store.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span><span class='lparen'>(</span><span class='id identifier rubyid_scope'>scope</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_game'>game</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_script'>script</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_script'>script</span>
@@ -688,7 +782,16 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Stores data in the database for a specific script and scope.</p>
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>This method is synchronized to prevent concurrent access issues.</p>
+</div>
+  </div>
+
+
+<p>Stores data in the database for a specific script and scope.</p>
 
 
   </div>
@@ -699,7 +802,7 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::DB_Store (module)">DB_Store</a></span></span><span class='period'>.</span><span class='id identifier rubyid_store_data'>store_data</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>vars</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>some_script</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>key:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>value</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::DB_Store (module)">DB_Store</a></span></span><span class='period'>.</span><span class='id identifier rubyid_store_data'>store_data</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>game:name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>script_name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>key:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>value</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -717,7 +820,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The scope for the data, defaults to &quot;#XMLData.game:#XMLData.name&quot;</p>
+        <div class='inline'>
+<p>The scope for the data, defaults to “#XMLData.game:#XMLData.name”</p>
 </div>
       
     </li>
@@ -732,7 +836,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The script name to save data for</p>
+        <div class='inline'>
+<p>The name of the script to save data for</p>
 </div>
       
     </li>
@@ -747,7 +852,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The value to be stored in the database</p>
+        <div class='inline'>
+<p>The value to be stored in the database</p>
 </div>
       
     </li>
@@ -765,7 +871,8 @@
       
       
         &mdash;
-        <div class='inline'><p>A message indicating success or error</p>
+        <div class='inline'>
+<p>A message indicating success or error</p>
 </div>
       
     </li>
@@ -777,12 +884,13 @@
     <li>
       
       
-        <span class='type'>(<tt>SQLite3::BusyException</tt>)</span>
+        <span class='type'>(<tt>StandardError</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>If the database is busy</p>
+        <div class='inline'>
+<p>If there is an error during the database operation</p>
 </div>
       
     </li>
@@ -795,11 +903,6 @@
       <pre class="lines">
 
 
-79
-80
-81
-82
-83
 84
 85
 86
@@ -810,10 +913,15 @@
 91
 92
 93
-94</pre>
+94
+95
+96
+97
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'db_store.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/db_store.rb', line 84</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_store_data'>store_data</span><span class='lparen'>(</span><span class='id identifier rubyid_scope'>scope</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_game'>game</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_script'>script</span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_blob'>blob</span> <span class='op'>=</span> <span class='const'>SQLite3</span><span class='op'>::</span><span class='const'>Blob</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>Marshal</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -847,7 +955,16 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Stores user variables in the database for a specific scope.</p>
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>This method is synchronized to prevent concurrent access issues.</p>
+</div>
+  </div>
+
+
+<p>Stores user variables in the database for a specific scope.</p>
 
 
   </div>
@@ -858,7 +975,7 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::DB_Store (module)">DB_Store</a></span></span><span class='period'>.</span><span class='id identifier rubyid_store_vars'>store_vars</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>some_scope</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>key:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>value</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::DB_Store (module)">DB_Store</a></span></span><span class='period'>.</span><span class='id identifier rubyid_store_vars'>store_vars</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>game:name</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>user_key:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_value</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -876,7 +993,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The scope for the user variables, defaults to &quot;#XMLData.game:#XMLData.name&quot;</p>
+        <div class='inline'>
+<p>The scope for the user variables, defaults to “#XMLData.game:#XMLData.name”</p>
 </div>
       
     </li>
@@ -891,7 +1009,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The user variables to be stored in the database</p>
+        <div class='inline'>
+<p>The user variables to be stored in the database</p>
 </div>
       
     </li>
@@ -909,7 +1028,8 @@
       
       
         &mdash;
-        <div class='inline'><p>A message indicating success or error</p>
+        <div class='inline'>
+<p>A message indicating success or error</p>
 </div>
       
     </li>
@@ -921,12 +1041,13 @@
     <li>
       
       
-        <span class='type'>(<tt>SQLite3::BusyException</tt>)</span>
+        <span class='type'>(<tt>StandardError</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>If the database is busy</p>
+        <div class='inline'>
+<p>If there is an error during the database operation</p>
 </div>
       
     </li>
@@ -939,12 +1060,6 @@
       <pre class="lines">
 
 
-103
-104
-105
-106
-107
-108
 109
 110
 111
@@ -954,10 +1069,16 @@
 115
 116
 117
-118</pre>
+118
+119
+120
+121
+122
+123
+124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'db_store.rb', line 103</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/db_store.rb', line 109</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_store_vars'>store_vars</span><span class='lparen'>(</span><span class='id identifier rubyid_scope'>scope</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_game'>game</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_blob'>blob</span> <span class='op'>=</span> <span class='const'>SQLite3</span><span class='op'>::</span><span class='const'>Blob</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>Marshal</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -985,7 +1106,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:51 2025 by
+  Generated on Fri Nov  7 05:08:35 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

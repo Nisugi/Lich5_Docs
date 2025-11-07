@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Gemstone::Experience
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,14 +78,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>experience.rb</dd>
+    <dd>output/latest/documented/gemstone/experience.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Provides methods to retrieve and calculate experience-related data.</p>
+    
+<p>Provides methods to access experience-related data This module includes methods to retrieve various experience metrics.</p>
 
 
   </div>
@@ -96,7 +97,11 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'>Experience</span><span class='period'>.</span><span class='id identifier rubyid_fame'><span class='object_link'><a href="#fame-class_method" title="Lich::Gemstone::Experience.fame (method)">fame</a></span></span></code></pre>
+        <h5 class="example_title"><div class='inline'>
+<p>Accessing current field experience</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_current_fxp'>current_fxp</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'>Experience</span><span class='period'>.</span><span class='id identifier rubyid_fxp_current'><span class='object_link'><a href="#fxp_current-class_method" title="Lich::Gemstone::Experience.fxp_current (method)">fxp_current</a></span></span></code></pre>
     
   </div>
 
@@ -133,7 +138,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the ascension experience.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the ascension experience.</p>
 </div></span>
   
 </li>
@@ -156,7 +162,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the deaths sting value.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the deaths sting value.</p>
 </div></span>
   
 </li>
@@ -179,7 +186,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the number of deeds.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the deeds value.</p>
 </div></span>
   
 </li>
@@ -202,7 +210,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the player&#39;s experience.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the current experience.</p>
 </div></span>
   
 </li>
@@ -225,7 +234,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the player&#39;s fame.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the fame value.</p>
 </div></span>
   
 </li>
@@ -248,7 +258,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the current field experience.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the current field experience.</p>
 </div></span>
   
 </li>
@@ -271,7 +282,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the maximum field experience.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the maximum field experience.</p>
 </div></span>
   
 </li>
@@ -294,7 +306,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the long-term experience.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the long-term experience.</p>
 </div></span>
   
 </li>
@@ -317,7 +330,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Calculates the percentage of ascension experience to total experience.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Calculates the percentage of ascension experience.</p>
 </div></span>
   
 </li>
@@ -340,7 +354,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Calculates the percentage of player&#39;s experience to total experience.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Calculates the percentage of current experience.</p>
 </div></span>
   
 </li>
@@ -363,7 +378,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Calculates the percentage of current field experience to maximum field experience.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Calculates the percentage of current field experience.</p>
 </div></span>
   
 </li>
@@ -386,7 +402,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the total experience.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the total experience.</p>
 </div></span>
   
 </li>
@@ -412,7 +429,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the ascension experience.</p>
+    
+<p>Retrieves the ascension experience</p>
 
 
   </div>
@@ -423,7 +441,7 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_ascension_exp'>ascension_exp</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Experience (module)">Experience</a></span></span><span class='period'>.</span><span class='id identifier rubyid_axp'>axp</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_current_axp'>current_axp</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Experience (module)">Experience</a></span></span><span class='period'>.</span><span class='id identifier rubyid_axp'>axp</span></code></pre>
     
   </div>
 
@@ -438,7 +456,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The ascension experience value.</p>
+        <div class='inline'>
+<p>the current ascension experience</p>
 </div>
       
     </li>
@@ -451,12 +470,12 @@
       <pre class="lines">
 
 
-55
-56
-57</pre>
+50
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'experience.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/experience.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_axp'>axp</span>
   <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="Infomon.html#get-class_method" title="Lich::Gemstone::Infomon.get (method)">get</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>experience.ascension_experience</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -477,7 +496,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the deaths sting value.</p>
+    
+<p>Retrieves the deaths sting value</p>
 
 
   </div>
@@ -488,7 +508,7 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_deaths_value'>deaths_value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Experience (module)">Experience</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deaths_sting'>deaths_sting</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_deaths_sting_value'>deaths_sting_value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Experience (module)">Experience</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deaths_sting'>deaths_sting</span></code></pre>
     
   </div>
 
@@ -503,7 +523,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The deaths sting value.</p>
+        <div class='inline'>
+<p>the current deaths sting value</p>
 </div>
       
     </li>
@@ -516,12 +537,12 @@
       <pre class="lines">
 
 
-111
-112
-113</pre>
+106
+107
+108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'experience.rb', line 111</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/experience.rb', line 106</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_deaths_sting'>deaths_sting</span>
   <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="Infomon.html#get-class_method" title="Lich::Gemstone::Infomon.get (method)">get</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>experience.deaths_sting</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -542,7 +563,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the number of deeds.</p>
+    
+<p>Retrieves the deeds value</p>
 
 
   </div>
@@ -553,7 +575,7 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_deeds_count'>deeds_count</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Experience (module)">Experience</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deeds'>deeds</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_deeds_value'>deeds_value</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Experience (module)">Experience</a></span></span><span class='period'>.</span><span class='id identifier rubyid_deeds'>deeds</span></code></pre>
     
   </div>
 
@@ -568,7 +590,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The number of deeds.</p>
+        <div class='inline'>
+<p>the current deeds value</p>
 </div>
       
     </li>
@@ -581,12 +604,12 @@
       <pre class="lines">
 
 
-103
-104
-105</pre>
+98
+99
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'experience.rb', line 103</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/experience.rb', line 98</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_deeds'>deeds</span>
   <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="Infomon.html#get-class_method" title="Lich::Gemstone::Infomon.get (method)">get</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>experience.deeds</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -607,7 +630,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the player&#39;s experience.</p>
+    
+<p>Retrieves the current experience</p>
 
 
   </div>
@@ -618,7 +642,7 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_player_exp'>player_exp</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Experience (module)">Experience</a></span></span><span class='period'>.</span><span class='id identifier rubyid_exp'>exp</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_current_exp'>current_exp</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Experience (module)">Experience</a></span></span><span class='period'>.</span><span class='id identifier rubyid_exp'>exp</span></code></pre>
     
   </div>
 
@@ -633,7 +657,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The player&#39;s experience value.</p>
+        <div class='inline'>
+<p>the current experience</p>
 </div>
       
     </li>
@@ -646,12 +671,12 @@
       <pre class="lines">
 
 
-47
-48
-49</pre>
+42
+43
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'experience.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/experience.rb', line 42</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_exp'>exp</span>
   <span class='const'><span class='object_link'><a href="Stats.html" title="Lich::Gemstone::Stats (module)">Stats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_exp'><span class='object_link'><a href="Stats.html#exp-class_method" title="Lich::Gemstone::Stats.exp (method)">exp</a></span></span>
@@ -672,7 +697,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the player&#39;s fame.</p>
+    
+<p>Retrieves the fame value</p>
 
 
   </div>
@@ -698,7 +724,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The player&#39;s fame value.</p>
+        <div class='inline'>
+<p>the current fame value</p>
 </div>
       
     </li>
@@ -711,12 +738,12 @@
       <pre class="lines">
 
 
-23
-24
-25</pre>
+18
+19
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'experience.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/experience.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_fame'>fame</span>
   <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="Infomon.html#get-class_method" title="Lich::Gemstone::Infomon.get (method)">get</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>experience.fame</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -737,7 +764,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the current field experience.</p>
+    
+<p>Retrieves the current field experience</p>
 
 
   </div>
@@ -763,7 +791,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The current field experience value.</p>
+        <div class='inline'>
+<p>the current field experience</p>
 </div>
       
     </li>
@@ -776,12 +805,12 @@
       <pre class="lines">
 
 
-31
-32
-33</pre>
+26
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'experience.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/experience.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_fxp_current'>fxp_current</span>
   <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="Infomon.html#get-class_method" title="Lich::Gemstone::Infomon.get (method)">get</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>experience.field_experience_current</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -802,7 +831,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the maximum field experience.</p>
+    
+<p>Retrieves the maximum field experience</p>
 
 
   </div>
@@ -828,7 +858,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The maximum field experience value.</p>
+        <div class='inline'>
+<p>the maximum field experience</p>
 </div>
       
     </li>
@@ -841,12 +872,12 @@
       <pre class="lines">
 
 
-39
-40
-41</pre>
+34
+35
+36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'experience.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/experience.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_fxp_max'>fxp_max</span>
   <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="Infomon.html#get-class_method" title="Lich::Gemstone::Infomon.get (method)">get</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>experience.field_experience_max</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -867,7 +898,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the long-term experience.</p>
+    
+<p>Retrieves the long-term experience</p>
 
 
   </div>
@@ -893,7 +925,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The long-term experience value.</p>
+        <div class='inline'>
+<p>the long-term experience</p>
 </div>
       
     </li>
@@ -906,12 +939,12 @@
       <pre class="lines">
 
 
-95
-96
-97</pre>
+90
+91
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'experience.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/experience.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_lte'>lte</span>
   <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="Infomon.html#get-class_method" title="Lich::Gemstone::Infomon.get (method)">get</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>experience.long_term_experience</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -932,7 +965,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Calculates the percentage of ascension experience to total experience.</p>
+    
+<p>Calculates the percentage of ascension experience</p>
 
 
   </div>
@@ -958,7 +992,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The percentage of ascension experience.</p>
+        <div class='inline'>
+<p>the percentage of ascension experience</p>
 </div>
       
     </li>
@@ -971,12 +1006,12 @@
       <pre class="lines">
 
 
-79
-80
-81</pre>
+74
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'experience.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/experience.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_percent_axp'>percent_axp</span>
   <span class='lparen'>(</span><span class='id identifier rubyid_axp'>axp</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span> <span class='op'>/</span> <span class='id identifier rubyid_txp'>txp</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>100</span>
@@ -997,7 +1032,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Calculates the percentage of player&#39;s experience to total experience.</p>
+    
+<p>Calculates the percentage of current experience</p>
 
 
   </div>
@@ -1023,7 +1059,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The percentage of player&#39;s experience.</p>
+        <div class='inline'>
+<p>the percentage of current experience</p>
 </div>
       
     </li>
@@ -1036,12 +1073,12 @@
       <pre class="lines">
 
 
-87
-88
-89</pre>
+82
+83
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'experience.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/experience.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_percent_exp'>percent_exp</span>
   <span class='lparen'>(</span><span class='id identifier rubyid_exp'>exp</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span> <span class='op'>/</span> <span class='id identifier rubyid_txp'>txp</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>100</span>
@@ -1062,7 +1099,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Calculates the percentage of current field experience to maximum field experience.</p>
+    
+<p>Calculates the percentage of current field experience</p>
 
 
   </div>
@@ -1088,7 +1126,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The percentage of current field experience.</p>
+        <div class='inline'>
+<p>the percentage of current field experience</p>
 </div>
       
     </li>
@@ -1101,12 +1140,12 @@
       <pre class="lines">
 
 
-71
-72
-73</pre>
+66
+67
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'experience.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/experience.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_percent_fxp'>percent_fxp</span>
   <span class='lparen'>(</span><span class='id identifier rubyid_fxp_current'>fxp_current</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span> <span class='op'>/</span> <span class='id identifier rubyid_fxp_max'>fxp_max</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>100</span>
@@ -1127,7 +1166,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the total experience.</p>
+    
+<p>Retrieves the total experience</p>
 
 
   </div>
@@ -1138,7 +1178,7 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_total_exp'>total_exp</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Experience (module)">Experience</a></span></span><span class='period'>.</span><span class='id identifier rubyid_txp'>txp</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_total_xp'>total_xp</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Experience (module)">Experience</a></span></span><span class='period'>.</span><span class='id identifier rubyid_txp'>txp</span></code></pre>
     
   </div>
 
@@ -1153,7 +1193,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The total experience value.</p>
+        <div class='inline'>
+<p>the total experience</p>
 </div>
       
     </li>
@@ -1166,12 +1207,12 @@
       <pre class="lines">
 
 
-63
-64
-65</pre>
+58
+59
+60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'experience.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/experience.rb', line 58</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_txp'>txp</span>
   <span class='const'><span class='object_link'><a href="Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="Infomon.html#get-class_method" title="Lich::Gemstone::Infomon.get (method)">get</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>experience.total_experience</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1186,7 +1227,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:51 2025 by
+  Generated on Fri Nov  7 05:08:36 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

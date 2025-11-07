@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Common::Log
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,15 +78,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>log.rb</dd>
+    <dd>output/latest/documented/common/log.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Provides contextual logging functionality.
-This module allows enabling/disabling logging and filtering log messages.</p>
+    
+<p>Provides contextual logging functionality This module allows enabling and disabling logging, setting filters, and outputting log messages.</p>
 
 
   </div>
@@ -97,10 +97,12 @@ This module allows enabling/disabling logging and filtering log messages.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Enabling logging with a filter</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Enabling logging with a filter</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'>Log</span><span class='period'>.</span><span class='id identifier rubyid_on'><span class='object_link'><a href="#on-class_method" title="Lich::Common::Log.on (method)">on</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>error</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='comment'># Enables logging for messages matching &#39;error&#39;</span></code></pre>
+      <pre class="example code"><code><span class='const'>Log</span><span class='period'>.</span><span class='id identifier rubyid_on'><span class='object_link'><a href="#on-class_method" title="Lich::Common::Log.on (method)">on</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>error</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> 
+<span class='const'>Log</span><span class='period'>.</span><span class='id identifier rubyid_out'><span class='object_link'><a href="#out-class_method" title="Lich::Common::Log.out (method)">out</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This is an error message</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>label:</span> <span class='symbol'>:error</span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -168,7 +170,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Formats a message with a label for logging.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Formats a message for logging with a label.</p>
 </div></span>
   
 </li>
@@ -191,7 +194,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Writes a line to the output based on the current environment.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Writes a line to the appropriate output based on the current context.</p>
 </div></span>
   
 </li>
@@ -214,7 +218,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Dumps a message to the output, alias for pp.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Dumps a log message, alias for pp.</p>
 </div></span>
   
 </li>
@@ -237,7 +242,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the current log filter.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the current log filter.</p>
 </div></span>
   
 </li>
@@ -260,7 +266,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Disables logging.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Disables logging.</p>
 </div></span>
   
 </li>
@@ -283,7 +290,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Enables logging with an optional filter.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Enables logging with an optional filter.</p>
 </div></span>
   
 </li>
@@ -306,7 +314,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks if logging is enabled.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if logging is currently enabled.</p>
 </div></span>
   
 </li>
@@ -329,7 +338,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Outputs a log message if logging is enabled and the message matches the filter.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Outputs a log message if logging is enabled and the message matches the filter.</p>
 </div></span>
   
 </li>
@@ -352,7 +362,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Pretty prints a message to the output.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Outputs a pretty-printed log message.</p>
 </div></span>
   
 </li>
@@ -378,7 +389,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Formats a message with a label for logging.</p>
+    
+<p>Formats a message for logging with a label.</p>
 
 
   </div>
@@ -389,10 +401,11 @@ This module allows enabling/disabling logging and filtering log messages.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Viewing a formatted message</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Formatting a log message</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_formatted'>formatted</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid__view'>_view</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Test message</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:info</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_formatted_message'>formatted_message</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid__view'>_view</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>An error occurred</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:error</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -408,7 +421,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
         &mdash;
-        <div class='inline'><p>The message to format.</p>
+        <div class='inline'>
+<p>The message to format.</p>
 </div>
       
     </li>
@@ -423,7 +437,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
         &mdash;
-        <div class='inline'><p>The label to prepend to the message.</p>
+        <div class='inline'>
+<p>The label to prepend to the message.</p>
 </div>
       
     </li>
@@ -441,7 +456,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
         &mdash;
-        <div class='inline'><p>The formatted message.</p>
+        <div class='inline'>
+<p>The formatted log message.</p>
 </div>
       
     </li>
@@ -454,18 +470,18 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       <pre class="lines">
 
 
-131
-132
 133
 134
 135
-136</pre>
+136
+137
+138</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'log.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid__view'>_view</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_label'>label</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="Script.html" title="Lich::Common::Script (class)">Script</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'><span class='object_link'><a href="Script.html#current-class_method" title="Lich::Common::Script.current (method)">current</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_label'>label</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="Script.html" title="Lich::Common::Script (class)">Script</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'><span class='object_link'><a href="Script.html#current-class_method" title="Lich::Common::Script.current (method)">current</a></span></span><span class='period'>.</span><span class='id identifier rubyid_name'><span class='object_link'><a href="Script.html#name-instance_method" title="Lich::Common::Script#name (method)">name</a></span></span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_safe'>safe</span> <span class='op'>=</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span>
   <span class='comment'># safe = safe.gsub(&quot;&lt;&quot;, &quot;&amp;lt;&quot;).gsub(&quot;&gt;&quot;, &quot;&amp;gt;&quot;) if safe.include?(&quot;&lt;&quot;) and safe.include?(&quot;&gt;&quot;)
 </span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_label'>label</span><span class='embexpr_end'>}</span><span class='tstring_content'>] </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_safe'>safe</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -486,7 +502,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Writes a line to the output based on the current environment.</p>
+    
+<p>Writes a line to the appropriate output based on the current context.</p>
 
 
   </div>
@@ -497,10 +514,11 @@ This module allows enabling/disabling logging and filtering log messages.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Writing a line to output</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Writing a line to output</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid__write'>_write</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Log message</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid__write'>_write</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This is a log line</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -516,7 +534,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
         &mdash;
-        <div class='inline'><p>The line to write to the output.</p>
+        <div class='inline'>
+<p>The line to write to output.</p>
 </div>
       
     </li>
@@ -533,6 +552,11 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
       
+        &mdash;
+        <div class='inline'>
+<p>Returns nil after writing the line.</p>
+</div>
+      
     </li>
   
 </ul>
@@ -543,21 +567,21 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       <pre class="lines">
 
 
-115
-116
 117
 118
 119
 120
 121
 122
-123</pre>
+123
+124
+125</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'log.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 117</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid__write'>_write</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="Script.html" title="Lich::Common::Script (class)">Script</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'><span class='object_link'><a href="Script.html#current-class_method" title="Lich::Common::Script.current (method)">current</a></span></span><span class='period'>.</span><span class='id identifier rubyid_vars'>vars</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--headless</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='kw'>not</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='symbol'>:_respond</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="Script.html" title="Lich::Common::Script (class)">Script</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'><span class='object_link'><a href="Script.html#current-class_method" title="Lich::Common::Script.current (method)">current</a></span></span><span class='period'>.</span><span class='id identifier rubyid_vars'><span class='object_link'><a href="Script.html#vars-instance_method" title="Lich::Common::Script#vars (method)">vars</a></span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--headless</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='kw'>not</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='symbol'>:_respond</span><span class='rparen'>)</span>
     <span class='gvar'>$stdout</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='kw'>elsif</span> <span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
     <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
@@ -581,7 +605,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Dumps a message to the output, alias for pp.</p>
+    
+<p>Dumps a log message, alias for pp.</p>
 
 
   </div>
@@ -592,10 +617,11 @@ This module allows enabling/disabling logging and filtering log messages.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Dumping a message</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Dumping a log message</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Dump this message</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This is a dump message</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -611,7 +637,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
         &mdash;
-        <div class='inline'><p>The arguments to dump.</p>
+        <div class='inline'>
+<p>The arguments to log.</p>
 </div>
       
     </li>
@@ -628,6 +655,11 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
       
+        &mdash;
+        <div class='inline'>
+<p>Returns nil after logging the message.</p>
+</div>
+      
     </li>
   
 </ul>
@@ -638,12 +670,12 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       <pre class="lines">
 
 
-153
-154
-155</pre>
+155
+156
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'log.rb', line 153</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 155</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_pp'>pp</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
@@ -664,7 +696,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the current log filter.</p>
+    
+<p>Retrieves the current log filter.</p>
 
 
   </div>
@@ -675,7 +708,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Getting the current log filter</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Getting the current log filter</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_current_filter'>current_filter</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span></code></pre>
@@ -693,7 +727,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
         &mdash;
-        <div class='inline'><p>The current log filter.</p>
+        <div class='inline'>
+<p>The current log filter as a Regexp.</p>
 </div>
       
     </li>
@@ -710,7 +745,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
         
-        <div class='inline'><p>SQLite3::BusyException if the database is busy.</p>
+        <div class='inline'>
+<p>SQLite3::BusyException if the database is busy.</p>
 </div>
       
     </li>
@@ -723,8 +759,6 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       <pre class="lines">
 
 
-78
-79
 80
 81
 82
@@ -735,10 +769,12 @@ This module allows enabling/disabling logging and filtering log messages.</p>
 87
 88
 89
-90</pre>
+90
+91
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'log.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 80</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span>
   <span class='kw'>if</span> <span class='cvar'>@@log_filter</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -769,7 +805,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Disables logging.</p>
+    
+<p>Disables logging.</p>
 
 
   </div>
@@ -780,10 +817,11 @@ This module allows enabling/disabling logging and filtering log messages.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Disabling logging</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Disabling logging</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_off'>off</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='comment'># Disables all logging</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_off'>off</span></code></pre>
     
   </div>
 
@@ -796,6 +834,11 @@ This module allows enabling/disabling logging and filtering log messages.</p>
         <span class='type'>(<tt>nil</tt>)</span>
       
       
+      
+        &mdash;
+        <div class='inline'>
+<p>Returns nil after disabling logging.</p>
+</div>
       
     </li>
   
@@ -811,7 +854,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
         
-        <div class='inline'><p>SQLite3::BusyException if the database is busy.</p>
+        <div class='inline'>
+<p>SQLite3::BusyException if the database is busy.</p>
 </div>
       
     </li>
@@ -824,8 +868,6 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       <pre class="lines">
 
 
-39
-40
 41
 42
 43
@@ -835,10 +877,12 @@ This module allows enabling/disabling logging and filtering log messages.</p>
 47
 48
 49
-50</pre>
+50
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'log.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_off'>off</span>
   <span class='cvar'>@@log_enabled</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -868,7 +912,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Enables logging with an optional filter.</p>
+    
+<p>Enables logging with an optional filter.</p>
 
 
   </div>
@@ -879,10 +924,11 @@ This module allows enabling/disabling logging and filtering log messages.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Enabling logging with a specific filter</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Enabling logging with a specific filter</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>info</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='comment'># Enables logging for messages matching &#39;info&#39;</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>warning</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -900,7 +946,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
         &mdash;
-        <div class='inline'><p>The filter to apply to log messages (default is //).</p>
+        <div class='inline'>
+<p>The filter to apply to log messages.</p>
 </div>
       
     </li>
@@ -917,6 +964,11 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
       
+        &mdash;
+        <div class='inline'>
+<p>Returns nil after enabling logging.</p>
+</div>
+      
     </li>
   
 </ul>
@@ -931,7 +983,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
         
-        <div class='inline'><p>SQLite3::BusyException if the database is busy.</p>
+        <div class='inline'>
+<p>SQLite3::BusyException if the database is busy.</p>
 </div>
       
     </li>
@@ -944,8 +997,6 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       <pre class="lines">
 
 
-21
-22
 23
 24
 25
@@ -955,10 +1006,12 @@ This module allows enabling/disabling logging and filtering log messages.</p>
 29
 30
 31
-32</pre>
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'log.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='id identifier rubyid_filter'>filter</span> <span class='op'>=</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
   <span class='cvar'>@@log_enabled</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -988,7 +1041,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks if logging is enabled.</p>
+    
+<p>Checks if logging is currently enabled.</p>
 
 
   </div>
@@ -999,11 +1053,12 @@ This module allows enabling/disabling logging and filtering log messages.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Checking if logging is enabled</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Checking if logging is enabled</p>
 </div></h5>
       
       <pre class="example code"><code><span class='kw'>if</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_on?'>on?</span>
-  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Logging is enabled</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Logging is enabled</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></code></pre>
     
   </div>
@@ -1019,7 +1074,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
         &mdash;
-        <div class='inline'><p>true if logging is enabled, false otherwise.</p>
+        <div class='inline'>
+<p>Returns true if logging is enabled, false otherwise.</p>
 </div>
       
     </li>
@@ -1036,7 +1092,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
         
-        <div class='inline'><p>SQLite3::BusyException if the database is busy.</p>
+        <div class='inline'>
+<p>SQLite3::BusyException if the database is busy.</p>
 </div>
       
     </li>
@@ -1049,8 +1106,6 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       <pre class="lines">
 
 
-59
-60
 61
 62
 63
@@ -1061,10 +1116,12 @@ This module allows enabling/disabling logging and filtering log messages.</p>
 68
 69
 70
-71</pre>
+71
+72
+73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'log.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_on?'>on?</span>
   <span class='kw'>if</span> <span class='cvar'>@@log_enabled</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -1095,7 +1152,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Outputs a log message if logging is enabled and the message matches the filter.</p>
+    
+<p>Outputs a log message if logging is enabled and the message matches the filter.</p>
 
 
   </div>
@@ -1106,10 +1164,11 @@ This module allows enabling/disabling logging and filtering log messages.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Logging a message</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Logging a message</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_out'>out</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>This is a log message</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_out'>out</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This is a debug message</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1125,7 +1184,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
         &mdash;
-        <div class='inline'><p>The message to log.</p>
+        <div class='inline'>
+<p>The message or exception to log.</p>
 </div>
       
     </li>
@@ -1142,7 +1202,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
         &mdash;
-        <div class='inline'><p>The label for the log message (default is :debug).</p>
+        <div class='inline'>
+<p>The label for the log message (default: :debug).</p>
 </div>
       
     </li>
@@ -1159,6 +1220,11 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
       
+        &mdash;
+        <div class='inline'>
+<p>Returns nil after attempting to log the message.</p>
+</div>
+      
     </li>
   
 </ul>
@@ -1169,8 +1235,6 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       <pre class="lines">
 
 
-98
-99
 100
 101
 102
@@ -1179,13 +1243,15 @@ This module allows enabling/disabling logging and filtering log messages.</p>
 105
 106
 107
-108</pre>
+108
+109
+110</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'log.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 100</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_out'><span class='object_link'><a href="../../top-level-namespace.html#out-instance_method" title="#out (method)">out</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='label'>label:</span> <span class='symbol'>:debug</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="Script.html" title="Lich::Common::Script (class)">Script</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'><span class='object_link'><a href="Script.html#current-class_method" title="Lich::Common::Script.current (method)">current</a></span></span><span class='period'>.</span><span class='id identifier rubyid_vars'>vars</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--debug</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_on?'><span class='object_link'><a href="#on%3F-class_method" title="Lich::Common::Log.on? (method)">on?</a></span></span>
+  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="Script.html" title="Lich::Common::Script (class)">Script</a></span></span><span class='period'>.</span><span class='id identifier rubyid_current'><span class='object_link'><a href="Script.html#current-class_method" title="Lich::Common::Script.current (method)">current</a></span></span><span class='period'>.</span><span class='id identifier rubyid_vars'><span class='object_link'><a href="Script.html#vars-instance_method" title="Lich::Common::Script#vars (method)">vars</a></span></span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--debug</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_on?'><span class='object_link'><a href="#on%3F-class_method" title="Lich::Common::Log.on? (method)">on?</a></span></span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>!~</span> <span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_filter'><span class='object_link'><a href="#filter-class_method" title="Lich::Common::Log.filter (method)">filter</a></span></span>
   <span class='kw'>if</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Exception</span><span class='rparen'>)</span>
     <span class='comment'>## pretty-print exception
@@ -1211,7 +1277,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Pretty prints a message to the output.</p>
+    
+<p>Outputs a pretty-printed log message.</p>
 
 
   </div>
@@ -1222,10 +1289,11 @@ This module allows enabling/disabling logging and filtering log messages.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Pretty printing a message</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Pretty-printing a log message</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_pp'>pp</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Pretty print this message</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Common::Log (module)">Log</a></span></span><span class='period'>.</span><span class='id identifier rubyid_pp'>pp</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This is a pretty-printed message</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1241,7 +1309,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
         &mdash;
-        <div class='inline'><p>The message to pretty print.</p>
+        <div class='inline'>
+<p>The message to log.</p>
 </div>
       
     </li>
@@ -1258,7 +1327,8 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
         &mdash;
-        <div class='inline'><p>The label for the message (default is :debug).</p>
+        <div class='inline'>
+<p>The label for the log message (default: :debug).</p>
 </div>
       
     </li>
@@ -1275,6 +1345,11 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       
       
       
+        &mdash;
+        <div class='inline'>
+<p>Returns nil after logging the message.</p>
+</div>
+      
     </li>
   
 </ul>
@@ -1285,12 +1360,12 @@ This module allows enabling/disabling logging and filtering log messages.</p>
       <pre class="lines">
 
 
-144
-145
-146</pre>
+146
+147
+148</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'log.rb', line 144</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/log.rb', line 146</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_pp'>pp</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span> <span class='op'>=</span> <span class='symbol'>:debug</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='id identifier rubyid__view'>_view</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='rparen'>)</span>
@@ -1305,7 +1380,7 @@ This module allows enabling/disabling logging and filtering log messages.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:48 2025 by
+  Generated on Fri Nov  7 05:08:35 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

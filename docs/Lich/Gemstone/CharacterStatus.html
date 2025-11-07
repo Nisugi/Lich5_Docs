@@ -6,7 +6,7 @@
 <title>
   Class: Lich::Gemstone::CharacterStatus
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -94,21 +94,33 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>games.rb</dd>
+    <dd>output/latest/documented/games.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Base class for character status tracking
-Base class for character status tracking</p>
+    
+<p>Base class for character status tracking Base class for character status tracking Provides methods to manage character injuries and statuses</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Using CharacterStatus</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'>CharacterStatus</span><span class='period'>.</span><span class='id identifier rubyid_fix_injury_mode'><span class='object_link'><a href="#fix_injury_mode-class_method" title="Lich::Gemstone::CharacterStatus.fix_injury_mode (method)">fix_injury_mode</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>scar</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
 
 </div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
@@ -146,7 +158,8 @@ Base class for character status tracking</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Fixes the injury mode for the character.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Fixes the injury mode for the character.</p>
 </div></span>
   
 </li>
@@ -169,7 +182,8 @@ Base class for character status tracking</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Handles missing methods for character status.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Handles missing methods for character status.</p>
 </div></span>
   
 </li>
@@ -195,7 +209,8 @@ Base class for character status tracking</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Fixes the injury mode for the character</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Fixes the injury mode for the character</p>
 
 
   </div>
@@ -206,7 +221,7 @@ Base class for character status tracking</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CharacterStatus (class)">CharacterStatus</a></span></span><span class='period'>.</span><span class='id identifier rubyid_fix_injury_mode'>fix_injury_mode</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>scar</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CharacterStatus (class)">CharacterStatus</a></span></span><span class='period'>.</span><span class='id identifier rubyid_fix_injury_mode'>fix_injury_mode</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>scar</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -224,7 +239,8 @@ Base class for character status tracking</p>
       
       
         &mdash;
-        <div class='inline'><p>The mode to set (&#39;scar&#39;, &#39;wound&#39;, or &#39;both&#39;)</p>
+        <div class='inline'>
+<p>The mode to set (‘scar’, ‘wound’, or ‘both’)</p>
 </div>
       
     </li>
@@ -242,7 +258,8 @@ Base class for character status tracking</p>
       
       
         &mdash;
-        <div class='inline'><p>If an invalid mode is provided</p>
+        <div class='inline'>
+<p>If an invalid mode is provided</p>
 </div>
       
     </li>
@@ -255,30 +272,30 @@ Base class for character status tracking</p>
       <pre class="lines">
 
 
-631
-632
-633
-634
-635
-636
-637
-638
-639
-640
-641
-642
-643
-644
-645
-646
-647
-648
-649
-650
-651</pre>
+697
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709
+710
+711
+712
+713
+714
+715
+716
+717</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'games.rb', line 631</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/games.rb', line 697</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fix_injury_mode'><span class='object_link'><a href="../../top-level-namespace.html#fix_injury_mode-instance_method" title="#fix_injury_mode (method)">fix_injury_mode</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_mode'>mode</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>both</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># Default mode &#39;both&#39; handles wounds (precedence) then scars
 </span>  <span class='kw'>case</span> <span class='id identifier rubyid_mode'>mode</span>
@@ -317,13 +334,22 @@ Base class for character status tracking</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Handles missing methods for character status</p>
+    
+<p>Handles missing methods for character status</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CharacterStatus (class)">CharacterStatus</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_some_invalid_method'>some_invalid_method</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -338,7 +364,8 @@ Base class for character status tracking</p>
       
       
         &mdash;
-        <div class='inline'><p>The missing method name</p>
+        <div class='inline'>
+<p>The name of the missing method</p>
 </div>
       
     </li>
@@ -356,7 +383,8 @@ Base class for character status tracking</p>
       
       
         &mdash;
-        <div class='inline'><p>The error message</p>
+        <div class='inline'>
+<p>A message indicating the invalid area</p>
 </div>
       
     </li>
@@ -369,14 +397,14 @@ Base class for character status tracking</p>
       <pre class="lines">
 
 
-656
-657
-658
-659
-660</pre>
+724
+725
+726
+727
+728</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'games.rb', line 656</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/games.rb', line 724</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid__method_name'>_method_name</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Messaging.html" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_mono'><span class='object_link'><a href="../Messaging.html#mono-class_method" title="Lich::Messaging.mono (method)">mono</a></span></span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Messaging.html" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_msg_format'><span class='object_link'><a href="../Messaging.html#msg_format-class_method" title="Lich::Messaging.msg_format (method)">msg_format</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bold</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>::</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='embexpr_end'>}</span><span class='tstring_content'>: Invalid area, try one of these: arms, limbs, torso, </span><span class='embexpr_beg'>#{</span><span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_injuries'>injuries</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>, </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -393,7 +421,7 @@ Base class for character status tracking</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:53 2025 by
+  Generated on Fri Nov  7 05:08:40 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

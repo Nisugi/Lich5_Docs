@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Common::HMR
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,15 +78,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>hmr.rb</dd>
+    <dd>output/latest/documented/common/hmr.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Hot Module Reloading (HMR) functionality
-This module provides methods to clear cache, reload modules, and send messages.</p>
+    
+<p>Hot Module Reloading functionality This module provides methods to clear cache, reload files, and send messages.</p>
 
 
   </div>
@@ -97,7 +97,8 @@ This module provides methods to clear cache, reload modules, and send messages.<
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Reloading a module</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Reloading a module</p>
 </div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'>HMR</span><span class='period'>.</span><span class='id identifier rubyid_reload'><span class='object_link'><a href="#reload-class_method" title="Lich::Common::HMR.reload (method)">reload</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>my_module</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span></code></pre>
@@ -137,7 +138,8 @@ This module provides methods to clear cache, reload modules, and send messages.<
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Clears the gem load paths cache.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Clears the gem load paths cache.</p>
 </div></span>
   
 </li>
@@ -160,7 +162,8 @@ This module provides methods to clear cache, reload modules, and send messages.<
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves a list of loaded Ruby files.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a list of loaded Ruby files.</p>
 </div></span>
   
 </li>
@@ -183,7 +186,8 @@ This module provides methods to clear cache, reload modules, and send messages.<
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Sends a message to the appropriate output.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Sends a message to the appropriate output.</p>
 </div></span>
   
 </li>
@@ -206,7 +210,8 @@ This module provides methods to clear cache, reload modules, and send messages.<
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Reloads modules matching the given pattern.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Reloads files matching the given pattern.</p>
 </div></span>
   
 </li>
@@ -232,13 +237,26 @@ This module provides methods to clear cache, reload modules, and send messages.<
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Clears the gem load paths cache</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Clears the gem load paths cache</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Clearing the cache</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::HMR (module)">HMR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_clear_cache'>clear_cache</span></code></pre>
+    
+  </div>
+
 
 </div><table class="source_code">
   <tr>
@@ -246,12 +264,12 @@ This module provides methods to clear cache, reload modules, and send messages.<
       <pre class="lines">
 
 
-13
-14
-15</pre>
+17
+18
+19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'hmr.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/hmr.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_clear_cache'>clear_cache</span>
   <span class='const'>Gem</span><span class='period'>.</span><span class='id identifier rubyid_clear_paths'>clear_paths</span>
@@ -272,13 +290,26 @@ This module provides methods to clear cache, reload modules, and send messages.<
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves a list of loaded Ruby files</p>
+    
+<p>Returns a list of loaded Ruby files</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Getting loaded files</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_loaded_files'>loaded_files</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::HMR (module)">HMR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_loaded'>loaded</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -290,7 +321,8 @@ This module provides methods to clear cache, reload modules, and send messages.<
       
       
         &mdash;
-        <div class='inline'><p>An array of paths to loaded Ruby files.</p>
+        <div class='inline'>
+<p>An array of loaded Ruby file paths.</p>
 </div>
       
     </li>
@@ -303,12 +335,12 @@ This module provides methods to clear cache, reload modules, and send messages.<
       <pre class="lines">
 
 
-31
-32
-33</pre>
+37
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'hmr.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/hmr.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_loaded'>loaded</span>
   <span class='gvar'>$LOADED_FEATURES</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_path'>path</span><span class='op'>|</span> <span class='id identifier rubyid_path'>path</span><span class='period'>.</span><span class='id identifier rubyid_end_with?'>end_with?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.rb</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
@@ -332,11 +364,13 @@ This module provides methods to clear cache, reload modules, and send messages.<
     
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p>If the message contains HTML tags, it will use the _respond method if defined.</p>
+    <div class='inline'>
+<p>If the message contains HTML tags, it will be handled differently.</p>
 </div>
   </div>
 
-<p class="note returns_void">This method returns an undefined value.</p><p>Sends a message to the appropriate output</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+<p>Sends a message to the appropriate output</p>
 
 
   </div>
@@ -347,10 +381,11 @@ This module provides methods to clear cache, reload modules, and send messages.<
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Sending a message</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Sending a message</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::HMR (module)">HMR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_msg'>msg</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hello, World!</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::HMR (module)">HMR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_msg'>msg</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello, World!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -366,7 +401,8 @@ This module provides methods to clear cache, reload modules, and send messages.<
       
       
         &mdash;
-        <div class='inline'><p>The message to be sent</p>
+        <div class='inline'>
+<p>The message to be sent</p>
 </div>
       
     </li>
@@ -380,14 +416,14 @@ This module provides methods to clear cache, reload modules, and send messages.<
       <pre class="lines">
 
 
-23
-24
-25
-26
-27</pre>
+27
+28
+29
+30
+31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'hmr.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/hmr.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_msg'>msg</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid__respond'><span class='object_link'><a href="../../top-level-namespace.html#_respond-instance_method" title="#_respond (method)">_respond</a></span></span> <span class='id identifier rubyid_message'>message</span> <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='symbol'>:_respond</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;b&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -410,7 +446,16 @@ This module provides methods to clear cache, reload modules, and send messages.<
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Reloads modules matching the given pattern</p>
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>This method clears the cache before reloading.</p>
+</div>
+  </div>
+
+<p class="note returns_void">This method returns an undefined value.</p>
+<p>Reloads files matching the given pattern</p>
 
 
   </div>
@@ -421,10 +466,11 @@ This module provides methods to clear cache, reload modules, and send messages.<
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Reloading files matching a pattern</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Reloading files</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::HMR (module)">HMR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_reload'>reload</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>my_module</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Common::HMR (module)">HMR</a></span></span><span class='period'>.</span><span class='id identifier rubyid_reload'>reload</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>my_pattern</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -440,7 +486,8 @@ This module provides methods to clear cache, reload modules, and send messages.<
       
       
         &mdash;
-        <div class='inline'><p>The regex pattern to match loaded files</p>
+        <div class='inline'>
+<p>The regex pattern to match file paths</p>
 </div>
       
     </li>
@@ -458,7 +505,8 @@ This module provides methods to clear cache, reload modules, and send messages.<
       
       
         &mdash;
-        <div class='inline'><p>If a file fails to load during the reload process.</p>
+        <div class='inline'>
+<p>If a file cannot be loaded</p>
 </div>
       
     </li>
@@ -471,13 +519,6 @@ This module provides methods to clear cache, reload modules, and send messages.<
       <pre class="lines">
 
 
-41
-42
-43
-44
-45
-46
-47
 48
 49
 50
@@ -487,10 +528,17 @@ This module provides methods to clear cache, reload modules, and send messages.<
 54
 55
 56
-57</pre>
+57
+58
+59
+60
+61
+62
+63
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'hmr.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/hmr.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_reload'>reload</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_clear_cache'>clear_cache</span>
@@ -519,7 +567,7 @@ This module provides methods to clear cache, reload modules, and send messages.<
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:48 2025 by
+  Generated on Fri Nov  7 05:08:35 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

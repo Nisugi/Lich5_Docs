@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Gemstone::CMan
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,29 +78,23 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>cman.rb</dd>
+    <dd>output/latest/documented/gemstone/psms/cman.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Handles combat maneuver logic (CMAN) for player characters in GemStone IV.</p>
+    
+<p>Handles combat maneuver logic (CMAN) for player characters in GemStone IV.</p>
 
-<p>This module provides access to all known combat maneuvers (CMANs), including their
-usage types, costs, regex patterns for result matching, and runtime availability.</p>
+<p>This module provides access to all known combat maneuvers (CMANs), including their usage types, costs, regex patterns for result matching, and runtime availability.</p>
 
-<p>It allows querying known maneuvers, whether they are affordable and usable, and provides
-execution methods with built-in cooldown and FORCERT logic. Dynamic shortcut methods for
-each maneuver are created for both long and short names.
-Handles combat maneuver logic (CMAN) for player characters in GemStone IV.</p>
+<p>It allows querying known maneuvers, whether they are affordable and usable, and provides execution methods with built-in cooldown and FORCERT logic. Dynamic shortcut methods for each maneuver are created for both long and short names. Handles combat maneuver logic (CMAN) for player characters in GemStone IV.</p>
 
-<p>This module provides access to all known combat maneuvers (CMANs), including their
-usage types, costs, regex patterns for result matching, and runtime availability.</p>
+<p>This module provides access to all known combat maneuvers (CMANs), including their usage types, costs, regex patterns for result matching, and runtime availability.</p>
 
-<p>It allows querying known maneuvers, whether they are affordable and usable, and provides
-execution methods with built-in cooldown and FORCERT logic. Dynamic shortcut methods for
-each maneuver are created for both long and short names.</p>
+<p>It allows querying known maneuvers, whether they are affordable and usable, and provides execution methods with built-in cooldown and FORCERT logic. Dynamic shortcut methods for each maneuver are created for both long and short names.</p>
 
 
   </div>
@@ -111,10 +105,11 @@ each maneuver are created for both long and short names.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Using a combat maneuver</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Using a combat maneuver</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'>CMan</span><span class='period'>.</span><span class='id identifier rubyid_use'><span class='object_link'><a href="#use-class_method" title="Lich::Gemstone::CMan.use (method)">use</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'>CMan</span><span class='period'>.</span><span class='id identifier rubyid_use'><span class='object_link'><a href="#use-class_method" title="Lich::Gemstone::CMan.use (method)">use</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -131,25 +126,32 @@ each maneuver are created for both long and short names.</p>
         <dt id="combat_mans-classvariable" class="">@@combat_mans =
           <div class="docstring">
   <div class="discussion">
-    <p>Internal mapping of CMAN maneuvers with metadata:</p>
-
-<ul>
-<li>short name</li>
-<li>type (passive, attack, setup, etc.)</li>
-<li>cost</li>
-<li>regex for expected output</li>
-<li>usage name</li>
-</ul>
+    
+<p>Internal mapping of CMAN maneuvers with metadata:</p>
+<ul><li>
+<p>short name</p>
+</li><li>
+<p>type (passive, attack, setup, etc.)</p>
+</li><li>
+<p>cost</p>
+</li><li>
+<p>regex for expected output</p>
+</li><li>
+<p>usage name</p>
+</li></ul>
 
 <p>Internal mapping of CMAN maneuvers with metadata:</p>
-
-<ul>
-<li>short name</li>
-<li>type (passive, attack, setup, etc.)</li>
-<li>cost</li>
-<li>regex for expected output</li>
-<li>usage name</li>
-</ul>
+<ul><li>
+<p>short name</p>
+</li><li>
+<p>type (passive, attack, setup, etc.)</p>
+</li><li>
+<p>cost</p>
+</li><li>
+<p>regex for expected output</p>
+</li><li>
+<p>usage name</p>
+</li></ul>
 
 
   </div>
@@ -167,7 +169,8 @@ each maneuver are created for both long and short names.</p>
       
       
         &mdash;
-        <div class='inline'><p>The full maneuver definition table</p>
+        <div class='inline'>
+<p>The full maneuver definition table</p>
 </div>
       
     </li>
@@ -180,7 +183,8 @@ each maneuver are created for both long and short names.</p>
       
       
         &mdash;
-        <div class='inline'><p>The full maneuver definition table</p>
+        <div class='inline'>
+<p>The full maneuver definition table</p>
 </div>
       
     </li>
@@ -876,7 +880,8 @@ each maneuver are created for both long and short names.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Looks up the rank known of a combat maneuver.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Looks up the rank known of a combat maneuver.</p>
 </div></span>
   
 </li>
@@ -899,7 +904,8 @@ each maneuver are created for both long and short names.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Determines if an combat maneuver is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Determines if an combat maneuver is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
 </div></span>
   
 </li>
@@ -922,7 +928,8 @@ each maneuver are created for both long and short names.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Determines if an combat maneuver is available to use right now by testing: - if the maneuver is known - if the maneuver is affordable - if the maneuver is not on cooldown - if the character is not overexerted - if the character is capable of performing the number of FORCERTs specified.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Determines if an combat maneuver is available to use right now by testing: - if the maneuver is known - if the maneuver is affordable - if the maneuver is not on cooldown - if the character is not overexerted - if the character is capable of performing the number of FORCERTs specified.</p>
 </div></span>
   
 </li>
@@ -945,7 +952,8 @@ each maneuver are created for both long and short names.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks whether the maneuver&#39;s buff is currently active.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks whether the maneuver’s buff is currently active.</p>
 </div></span>
   
 </li>
@@ -968,7 +976,8 @@ each maneuver are created for both long and short names.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a simplified lookup of all CMANs with their long name, short name, and cost.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a simplified lookup of all CMANs with their long name, short name, and cost.</p>
 </div></span>
   
 </li>
@@ -991,7 +1000,8 @@ each maneuver are created for both long and short names.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Determines if the character knows a combat maneuver at all, and optionally if the character knows it at the specified rank.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Determines if the character knows a combat maneuver at all, and optionally if the character knows it at the specified rank.</p>
 </div></span>
   
 </li>
@@ -1014,7 +1024,8 @@ each maneuver are created for both long and short names.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the &quot;success&quot; regex associated with a given combat maneuver name.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the “success” regex associated with a given combat maneuver name.</p>
 </div></span>
   
 </li>
@@ -1037,7 +1048,8 @@ each maneuver are created for both long and short names.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Attempts to use a combat maneuver, optionally on a target.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Attempts to use a combat maneuver, optionally on a target.</p>
 </div></span>
   
 </li>
@@ -1063,7 +1075,8 @@ each maneuver are created for both long and short names.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Looks up the rank known of a combat maneuver.</p>
+    
+<p>Looks up the rank known of a combat maneuver.</p>
 
 <p>Looks up the rank known of a combat maneuver.</p>
 
@@ -1080,8 +1093,8 @@ each maneuver are created for both long and short names.</p>
 <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>0</span> <span class='comment'># if not known</span></code></pre>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>2</span>
-<span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>0</span> <span class='comment'># if not known</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>2</span>
+<span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>0</span> <span class='comment'># if not known</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1097,7 +1110,8 @@ each maneuver are created for both long and short names.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the combat maneuver</p>
+        <div class='inline'>
+<p>The name of the combat maneuver</p>
 </div>
       
     </li>
@@ -1112,7 +1126,8 @@ each maneuver are created for both long and short names.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the combat maneuver</p>
+        <div class='inline'>
+<p>The name of the combat maneuver</p>
 </div>
       
     </li>
@@ -1130,7 +1145,8 @@ each maneuver are created for both long and short names.</p>
       
       
         &mdash;
-        <div class='inline'><p>The rank of the maneuver, or 0 if unknown</p>
+        <div class='inline'>
+<p>The rank of the maneuver, or 0 if unknown</p>
 </div>
       
     </li>
@@ -1143,7 +1159,8 @@ each maneuver are created for both long and short names.</p>
       
       
         &mdash;
-        <div class='inline'><p>The rank of the maneuver, or 0 if unknown</p>
+        <div class='inline'>
+<p>The rank of the maneuver, or 0 if unknown</p>
 </div>
       
     </li>
@@ -1156,12 +1173,12 @@ each maneuver are created for both long and short names.</p>
       <pre class="lines">
 
 
-725
-726
-727</pre>
+727
+728
+729</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cman.rb', line 725</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/cman.rb', line 727</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_assess'><span class='object_link'><a href="PSMS.html#assess-class_method" title="Lich::Gemstone::PSMS.assess (method)">assess</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CMan</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1182,11 +1199,10 @@ each maneuver are created for both long and short names.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Determines if an combat maneuver is affordable, and optionally tests
-affordability with a given number of FORCERTs having been used (including the current one).</p>
+    
+<p>Determines if an combat maneuver is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
 
-<p>Determines if an combat maneuver is affordable, and optionally tests
-affordability with a given number of FORCERTs having been used (including the current one).</p>
+<p>Determines if an combat maneuver is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
 
 
   </div>
@@ -1201,8 +1217,8 @@ affordability with a given number of FORCERTs having been used (including the cu
 </span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>false</span>  <span class='comment'># if not enough skill or stamina</span></code></pre>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='comment'># if enough skill and stamina
-</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>false</span>  <span class='comment'># if not enough skill or stamina</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='comment'># if enough skill and stamina
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>false</span>  <span class='comment'># if not enough skill or stamina</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1218,7 +1234,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>The name of the combat maneuver</p>
+        <div class='inline'>
+<p>The name of the combat maneuver</p>
 </div>
       
     </li>
@@ -1235,7 +1252,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the count of FORCERTs being used, including for this execution (default: 0)</p>
+        <div class='inline'>
+<p>Optionally, the count of FORCERTs being used, including for this execution (default: 0)</p>
 </div>
       
     </li>
@@ -1250,7 +1268,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>The name of the combat maneuver</p>
+        <div class='inline'>
+<p>The name of the combat maneuver</p>
 </div>
       
     </li>
@@ -1267,7 +1286,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the count of FORCERTs being used, including for this execution (default: 0)</p>
+        <div class='inline'>
+<p>Optionally, the count of FORCERTs being used, including for this execution (default: 0)</p>
 </div>
       
     </li>
@@ -1285,7 +1305,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>True if the maneuver can be used with available FORCERTs</p>
+        <div class='inline'>
+<p>True if the maneuver can be used with available FORCERTs</p>
 </div>
       
     </li>
@@ -1298,7 +1319,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>True if the maneuver can be used with available FORCERTs</p>
+        <div class='inline'>
+<p>True if the maneuver can be used with available FORCERTs</p>
 </div>
       
     </li>
@@ -1311,12 +1333,12 @@ affordability with a given number of FORCERTs having been used (including the cu
       <pre class="lines">
 
 
-770
-771
-772</pre>
+772
+773
+774</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cman.rb', line 770</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/cman.rb', line 772</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_assess'><span class='object_link'><a href="PSMS.html#assess-class_method" title="Lich::Gemstone::PSMS.assess (method)">assess</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CMan</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='id identifier rubyid_forcert_count'>forcert_count</span><span class='rparen'>)</span>
@@ -1337,26 +1359,32 @@ affordability with a given number of FORCERTs having been used (including the cu
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Determines if an combat maneuver is available to use right now by testing:</p>
+    
+<p>Determines if an combat maneuver is available to use right now by testing:</p>
+<ul><li>
+<p>if the maneuver is known</p>
+</li><li>
+<p>if the maneuver is affordable</p>
+</li><li>
+<p>if the maneuver is not on cooldown</p>
+</li><li>
+<p>if the character is not overexerted</p>
+</li><li>
+<p>if the character is capable of performing the number of FORCERTs specified</p>
+</li></ul>
 
-<ul>
-<li>if the maneuver is known</li>
-<li>if the maneuver is affordable</li>
-<li>if the maneuver is not on cooldown</li>
-<li>if the character is not overexerted</li>
-<li>if the character is capable of performing the number of FORCERTs specified</li>
-</ul>
-
-<p>blocked by overexertion
-Determines if an combat maneuver is available to use right now by testing:</p>
-
-<ul>
-<li>if the maneuver is known</li>
-<li>if the maneuver is affordable</li>
-<li>if the maneuver is not on cooldown</li>
-<li>if the character is not overexerted</li>
-<li>if the character is capable of performing the number of FORCERTs specified</li>
-</ul>
+<p>blocked by overexertion Determines if an combat maneuver is available to use right now by testing:</p>
+<ul><li>
+<p>if the maneuver is known</p>
+</li><li>
+<p>if the maneuver is affordable</p>
+</li><li>
+<p>if the maneuver is not on cooldown</p>
+</li><li>
+<p>if the character is not overexerted</p>
+</li><li>
+<p>if the character is capable of performing the number of FORCERTs specified</p>
+</li></ul>
 
 <p>blocked by overexertion</p>
 
@@ -1372,7 +1400,7 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='comment'># if known, affordable, not on cooldown, and not overexerted</span></code></pre>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='comment'># if known, affordable, not on cooldown, and not overexerted</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='comment'># if known, affordable, not on cooldown, and not overexerted</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1388,7 +1416,8 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the combat maneuver</p>
+        <div class='inline'>
+<p>The name of the combat maneuver</p>
 </div>
       
     </li>
@@ -1405,7 +1434,8 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the minimum rank to check (default: 1)</p>
+        <div class='inline'>
+<p>Optionally, the minimum rank to check (default: 1)</p>
 </div>
       
     </li>
@@ -1422,7 +1452,8 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the count of FORCERTs being used (default: 0)</p>
+        <div class='inline'>
+<p>Optionally, the count of FORCERTs being used (default: 0)</p>
 </div>
       
     </li>
@@ -1437,24 +1468,8 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the combat maneuver</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>ignore_cooldown</span>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>false</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'><p>Optionally, whether to ignore cooldown (default: false)</p>
+        <div class='inline'>
+<p>The name of the combat maneuver</p>
 </div>
       
     </li>
@@ -1471,7 +1486,8 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the minimum rank to check (default: 1)</p>
+        <div class='inline'>
+<p>Optionally, the minimum rank to check (default: 1)</p>
 </div>
       
     </li>
@@ -1488,7 +1504,8 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the count of FORCERTs being used (default: 0)</p>
+        <div class='inline'>
+<p>Optionally, the count of FORCERTs being used (default: 0)</p>
 </div>
       
     </li>
@@ -1506,7 +1523,8 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>True if the maneuver is known, affordable, and not on cooldown or</p>
+        <div class='inline'>
+<p>True if the maneuver is known, affordable, and not on cooldown or</p>
 </div>
       
     </li>
@@ -1519,7 +1537,8 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>True if the maneuver is known, affordable, and not on cooldown or</p>
+        <div class='inline'>
+<p>True if the maneuver is known, affordable, and not on cooldown or</p>
 </div>
       
     </li>
@@ -1532,7 +1551,6 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       <pre class="lines">
 
 
-816
 817
 818
 819
@@ -1540,10 +1558,11 @@ Determines if an combat maneuver is available to use right now by testing:</p>
 821
 822
 823
-824</pre>
+824
+825</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cman.rb', line 816</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/cman.rb', line 817</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>ignore_cooldown:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'><span class='object_link'><a href="#known%3F-class_method" title="Lich::Gemstone::CMan.known? (method)">known?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='id identifier rubyid_min_rank'>min_rank</span><span class='rparen'>)</span>
@@ -1570,9 +1589,10 @@ Determines if an combat maneuver is available to use right now by testing:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks whether the maneuver&#39;s buff is currently active.</p>
+    
+<p>Checks whether the maneuver’s buff is currently active.</p>
 
-<p>Checks whether the maneuver&#39;s buff is currently active.</p>
+<p>Checks whether the maneuver’s buff is currently active.</p>
 
 
   </div>
@@ -1591,7 +1611,8 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>The maneuver&#39;s name</p>
+        <div class='inline'>
+<p>The maneuver’s name</p>
 </div>
       
     </li>
@@ -1606,7 +1627,8 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>The maneuver&#39;s name</p>
+        <div class='inline'>
+<p>The maneuver’s name</p>
 </div>
       
     </li>
@@ -1624,7 +1646,8 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>True if buff is already active</p>
+        <div class='inline'>
+<p>True if buff is already active</p>
 </div>
       
     </li>
@@ -1637,7 +1660,8 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>True if buff is already active</p>
+        <div class='inline'>
+<p>True if buff is already active</p>
 </div>
       
     </li>
@@ -1650,13 +1674,13 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       <pre class="lines">
 
 
-782
-783
 784
-785</pre>
+785
+786
+787</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cman.rb', line 782</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/cman.rb', line 784</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_buff_active?'>buff_active?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='cvar'>@@combat_mans</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'><span class='object_link'><a href="PSMS.html#find_name-class_method" title="Lich::Gemstone::PSMS.find_name (method)">find_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CMan</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='symbol'>:buff</span><span class='rparen'>)</span>
@@ -1678,7 +1702,8 @@ Determines if an combat maneuver is available to use right now by testing:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a simplified lookup of all CMANs with their long name, short name, and cost.</p>
+    
+<p>Returns a simplified lookup of all CMANs with their long name, short name, and cost.</p>
 
 <p>Returns a simplified lookup of all CMANs with their long name, short name, and cost.</p>
 
@@ -1687,6 +1712,14 @@ Determines if an combat maneuver is available to use right now by testing:</p>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_cman_lookups'>cman_lookups</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1698,7 +1731,8 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of CMAN metadata hashes</p>
+        <div class='inline'>
+<p>An array of CMAN metadata hashes</p>
 </div>
       
     </li>
@@ -1711,7 +1745,8 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of CMAN metadata hashes</p>
+        <div class='inline'>
+<p>An array of CMAN metadata hashes</p>
 </div>
       
     </li>
@@ -1724,18 +1759,18 @@ Determines if an combat maneuver is available to use right now by testing:</p>
       <pre class="lines">
 
 
-701
-702
 703
 704
 705
 706
 707
 708
-709</pre>
+709
+710
+711</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cman.rb', line 701</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/cman.rb', line 703</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_cman_lookups'>cman_lookups</span>
   <span class='cvar'>@@combat_mans</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_long_name'>long_name</span><span class='comma'>,</span> <span class='id identifier rubyid_psm'>psm</span><span class='op'>|</span>
@@ -1762,11 +1797,10 @@ Determines if an combat maneuver is available to use right now by testing:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Determines if the character knows a combat maneuver at all, and
-optionally if the character knows it at the specified rank.</p>
+    
+<p>Determines if the character knows a combat maneuver at all, and optionally if the character knows it at the specified rank.</p>
 
-<p>Determines if the character knows a combat maneuver at all, and
-optionally if the character knows it at the specified rank.</p>
+<p>Determines if the character knows a combat maneuver at all, and optionally if the character knows it at the specified rank.</p>
 
 
   </div>
@@ -1781,8 +1815,8 @@ optionally if the character knows it at the specified rank.</p>
 </span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='int'>2</span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>false</span> <span class='comment'># if only rank 1 is known</span></code></pre>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='comment'># if any number of ranks is known
-</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='int'>2</span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>false</span> <span class='comment'># if only rank 1 is known</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>true</span> <span class='comment'># if any number of ranks is known
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='int'>2</span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='kw'>false</span> <span class='comment'># if only rank 1 is known</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1798,7 +1832,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the combat maneuver</p>
+        <div class='inline'>
+<p>The name of the combat maneuver</p>
 </div>
       
     </li>
@@ -1815,7 +1850,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the minimum rank to test against (default: 1, so known)</p>
+        <div class='inline'>
+<p>Optionally, the minimum rank to test against (default: 1, so known)</p>
 </div>
       
     </li>
@@ -1830,7 +1866,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the combat maneuver</p>
+        <div class='inline'>
+<p>The name of the combat maneuver</p>
 </div>
       
     </li>
@@ -1847,7 +1884,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the minimum rank to test against (default: 1, so known)</p>
+        <div class='inline'>
+<p>Optionally, the minimum rank to test against (default: 1, so known)</p>
 </div>
       
     </li>
@@ -1865,7 +1903,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>True if the maneuver is known at or above the given rank</p>
+        <div class='inline'>
+<p>True if the maneuver is known at or above the given rank</p>
 </div>
       
     </li>
@@ -1878,7 +1917,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>True if the maneuver is known at or above the given rank</p>
+        <div class='inline'>
+<p>True if the maneuver is known at or above the given rank</p>
 </div>
       
     </li>
@@ -1891,13 +1931,13 @@ optionally if the character knows it at the specified rank.</p>
       <pre class="lines">
 
 
-747
-748
 749
-750</pre>
+750
+751
+752</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cman.rb', line 747</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/cman.rb', line 749</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='int'>1</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_min_rank'>min_rank</span> <span class='op'>=</span> <span class='int'>1</span> <span class='kw'>unless</span> <span class='id identifier rubyid_min_rank'>min_rank</span> <span class='op'>&gt;=</span> <span class='int'>1</span> <span class='comment'># in case a 0 or below is passed
@@ -1919,15 +1959,10 @@ optionally if the character knows it at the specified rank.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the &quot;success&quot; regex associated with a given combat maneuver name.
-This regex is used to match the expected output when the maneuver is successfully <em>attempted</em>.
-It does not necessarily indicate that the maneuver was successful in its effect, or even
-that the maneuver was executed at all.</p>
+    
+<p>Returns the “success” regex associated with a given combat maneuver name. This regex is used to match the expected output when the maneuver is successfully <strong>attempted</strong>. It does not necessarily indicate that the maneuver was successful in its effect, or even that the maneuver was executed at all.</p>
 
-<p>Returns the &#39;success&#39; regex associated with a given combat maneuver name.
-This regex is used to match the expected output when the maneuver is successfully <em>attempted</em>.
-It does not necessarily indicate that the maneuver was successful in its effect, or even
-that the maneuver was executed at all.</p>
+<p>Returns the “success” regex associated with a given combat maneuver name. This regex is used to match the expected output when the maneuver is successfully <strong>attempted</strong>. It does not necessarily indicate that the maneuver was successful in its effect, or even that the maneuver was executed at all.</p>
 
 
   </div>
@@ -1941,7 +1976,7 @@ that the maneuver was executed at all.</p>
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_regexp'>regexp</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You hurl yourself at .+!</span><span class='regexp_end'>/</span></span></code></pre>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_regexp'>regexp</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You hurl yourself at .+!</span><span class='regexp_end'>/</span></span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_regexp'>regexp</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You hurl yourself at .+!</span><span class='regexp_end'>/</span></span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1957,7 +1992,8 @@ that the maneuver was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The maneuver name</p>
+        <div class='inline'>
+<p>The maneuver name</p>
 </div>
       
     </li>
@@ -1972,7 +2008,8 @@ that the maneuver was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The maneuver name</p>
+        <div class='inline'>
+<p>The maneuver name</p>
 </div>
       
     </li>
@@ -1990,7 +2027,8 @@ that the maneuver was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The regex used to match maneuver success or effects</p>
+        <div class='inline'>
+<p>The regex used to match maneuver success or effects</p>
 </div>
       
     </li>
@@ -2003,7 +2041,8 @@ that the maneuver was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The regex used to match maneuver success or effects</p>
+        <div class='inline'>
+<p>The regex used to match maneuver success or effects</p>
 </div>
       
     </li>
@@ -2016,12 +2055,12 @@ that the maneuver was executed at all.</p>
       <pre class="lines">
 
 
-909
 910
-911</pre>
+911
+912</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cman.rb', line 909</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/cman.rb', line 910</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_regexp'>regexp</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='cvar'>@@combat_mans</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'><span class='object_link'><a href="PSMS.html#find_name-class_method" title="Lich::Gemstone::PSMS.find_name (method)">find_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CMan</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:regex</span><span class='rbracket'>]</span>
@@ -2042,7 +2081,8 @@ that the maneuver was executed at all.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Attempts to use a combat maneuver, optionally on a target.</p>
+    
+<p>Attempts to use a combat maneuver, optionally on a target.</p>
 
 <p>Attempts to use a combat maneuver, optionally on a target.</p>
 
@@ -2059,8 +2099,8 @@ that the maneuver was executed at all.</p>
 </span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Dissonance</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># attempt to use armor blessing on Dissonance</span></code></pre>
     
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># attempt to use armor blessing on self
-</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Dissonance</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># attempt to use armor blessing on Dissonance</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># attempt to use armor blessing on self
+</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>tackle</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Dissonance</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'># attempt to use armor blessing on Dissonance</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -2076,7 +2116,8 @@ that the maneuver was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the combat maneuver</p>
+        <div class='inline'>
+<p>The name of the combat maneuver</p>
 </div>
       
     </li>
@@ -2093,7 +2134,8 @@ that the maneuver was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target of the maneuver (optional).  If unspecified, the technique will be used on the character.</p>
+        <div class='inline'>
+<p>The target of the maneuver (optional).  If unspecified, the technique will be used on the character.</p>
 </div>
       
     </li>
@@ -2110,7 +2152,8 @@ that the maneuver was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>Additional regex to capture from result (optional)</p>
+        <div class='inline'>
+<p>Additional regex to capture from result (optional)</p>
 </div>
       
     </li>
@@ -2127,7 +2170,8 @@ that the maneuver was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>Number of FORCERTs to use (default: 0)</p>
+        <div class='inline'>
+<p>Number of FORCERTs to use (default: 0)</p>
 </div>
       
     </li>
@@ -2142,7 +2186,8 @@ that the maneuver was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the combat maneuver</p>
+        <div class='inline'>
+<p>The name of the combat maneuver</p>
 </div>
       
     </li>
@@ -2159,7 +2204,8 @@ that the maneuver was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target of the maneuver (optional).  If unspecified, the technique will be used on the character.</p>
+        <div class='inline'>
+<p>The target of the maneuver (optional).  If unspecified, the technique will be used on the character.</p>
 </div>
       
     </li>
@@ -2176,7 +2222,8 @@ that the maneuver was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>Additional regex to capture from result (optional)</p>
+        <div class='inline'>
+<p>Additional regex to capture from result (optional)</p>
 </div>
       
     </li>
@@ -2193,7 +2240,8 @@ that the maneuver was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>Number of FORCERTs to use (default: 0)</p>
+        <div class='inline'>
+<p>Number of FORCERTs to use (default: 0)</p>
 </div>
       
     </li>
@@ -2211,7 +2259,8 @@ that the maneuver was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The result of the regex match, or nil if unavailable</p>
+        <div class='inline'>
+<p>The result of the regex match, or nil if unavailable</p>
 </div>
       
     </li>
@@ -2224,7 +2273,8 @@ that the maneuver was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The result of the regex match, or nil if unavailable</p>
+        <div class='inline'>
+<p>The result of the regex match, or nil if unavailable</p>
 </div>
       
     </li>
@@ -2237,7 +2287,6 @@ that the maneuver was executed at all.</p>
       <pre class="lines">
 
 
-846
 847
 848
 849
@@ -2280,10 +2329,11 @@ that the maneuver was executed at all.</p>
 886
 887
 888
-889</pre>
+889
+890</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'cman.rb', line 846</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/cman.rb', line 847</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>ignore_cooldown:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>results_of_interest:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::CMan (module)">CMan</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'><span class='object_link'><a href="#available%3F-class_method" title="Lich::Gemstone::CMan.available? (method)">available?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>ignore_cooldown:</span> <span class='id identifier rubyid_ignore_cooldown'>ignore_cooldown</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='id identifier rubyid_forcert_count'>forcert_count</span><span class='rparen'>)</span>
@@ -2339,7 +2389,7 @@ that the maneuver was executed at all.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:49 2025 by
+  Generated on Fri Nov  7 05:08:36 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

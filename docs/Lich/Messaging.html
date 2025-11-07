@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Messaging
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,15 +78,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>messaging.rb</dd>
+    <dd>output/latest/documented/messaging.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Provides various messaging capabilities for Lich.
-Entries added here should always be accessible from Lich::Messaging.feature namespace.</p>
+    
+<p>The Messaging module contains methods for handling messaging capabilities in Lich.</p>
 
 
   </div>
@@ -97,10 +97,11 @@ Entries added here should always be accessible from Lich::Messaging.feature name
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Accessing messaging features</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Using the Messaging module</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'>Messaging</span><span class='period'>.</span><span class='id identifier rubyid_xml_encode'><span class='object_link'><a href="#xml_encode-class_method" title="Lich::Messaging.xml_encode (method)">xml_encode</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>message</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'>Messaging</span><span class='period'>.</span><span class='id identifier rubyid_msg'><span class='object_link'><a href="#msg-class_method" title="Lich::Messaging.msg (method)">msg</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>info</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This is a message</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -137,7 +138,8 @@ Entries added here should always be accessible from Lich::Messaging.feature name
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Creates a command link message.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Creates a command link message.</p>
 </div></span>
   
 </li>
@@ -160,7 +162,8 @@ Entries added here should always be accessible from Lich::Messaging.feature name
   
 
   
-    <span class="summary_desc"><div class='inline'><p>defaulting encoding here to false instead of true like other methods due to backwards compatibility that it never encoded before whereas all the other methods were already encoding and therefor should default to allow for them.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>defaulting encoding here to false instead of true like other methods due to backwards compatibility that it never encoded before whereas all the other methods were already encoding and therefor should default to allow for them.</p>
 </div></span>
   
 </li>
@@ -183,7 +186,8 @@ Entries added here should always be accessible from Lich::Messaging.feature name
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Formats a message to be displayed in monster bold style.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Formats a message to be displayed in monster bold style.</p>
 </div></span>
   
 </li>
@@ -206,7 +210,8 @@ Entries added here should always be accessible from Lich::Messaging.feature name
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Sends a formatted message to the user.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Sends a formatted message to the user.</p>
 </div></span>
   
 </li>
@@ -229,7 +234,8 @@ Entries added here should always be accessible from Lich::Messaging.feature name
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Formats a message with specific type and color coding.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Formats a message with specific styling based on type.</p>
 </div></span>
   
 </li>
@@ -252,7 +258,8 @@ Entries added here should always be accessible from Lich::Messaging.feature name
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Wraps a message in a stream window format.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Prepares a message for display in a specific stream window.</p>
 </div></span>
   
 </li>
@@ -275,7 +282,8 @@ Entries added here should always be accessible from Lich::Messaging.feature name
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Encodes a message to XML format.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Encodes a message into XML format.</p>
 </div></span>
   
 </li>
@@ -301,7 +309,8 @@ Entries added here should always be accessible from Lich::Messaging.feature name
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Creates a command link message.</p>
+    
+<p>Creates a command link message.</p>
 
 
   </div>
@@ -312,10 +321,11 @@ Entries added here should always be accessible from Lich::Messaging.feature name
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Creating a command link</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Creating a command link</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_link'>link</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_make_cmd_link'>make_cmd_link</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Click here</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>do_something</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_link'>link</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_make_cmd_link'>make_cmd_link</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Click here</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>do_something</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -331,7 +341,8 @@ Entries added here should always be accessible from Lich::Messaging.feature name
       
       
         &mdash;
-        <div class='inline'><p>The text to display for the link.</p>
+        <div class='inline'>
+<p>The text to display for the link.</p>
 </div>
       
     </li>
@@ -346,7 +357,8 @@ Entries added here should always be accessible from Lich::Messaging.feature name
       
       
         &mdash;
-        <div class='inline'><p>The action to perform when the link is clicked.</p>
+        <div class='inline'>
+<p>The action to perform when the link is clicked.</p>
 </div>
       
     </li>
@@ -363,7 +375,8 @@ Entries added here should always be accessible from Lich::Messaging.feature name
       
       
         &mdash;
-        <div class='inline'><p>Whether to encode the message (default: true).</p>
+        <div class='inline'>
+<p>Whether to encode the message (default: true).</p>
 </div>
       
     </li>
@@ -381,7 +394,8 @@ Entries added here should always be accessible from Lich::Messaging.feature name
       
       
         &mdash;
-        <div class='inline'><p>The formatted command link message.</p>
+        <div class='inline'>
+<p>The formatted command link message.</p>
 </div>
       
     </li>
@@ -394,12 +408,12 @@ Entries added here should always be accessible from Lich::Messaging.feature name
       <pre class="lines">
 
 
-176
-177
-178</pre>
+178
+179
+180</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'messaging.rb', line 176</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/messaging.rb', line 178</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_make_cmd_link'>make_cmd_link</span><span class='lparen'>(</span><span class='id identifier rubyid_link_text'>link_text</span><span class='comma'>,</span> <span class='id identifier rubyid_link_action'>link_action</span><span class='comma'>,</span> <span class='label'>encode:</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_msg_format'>msg_format</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cmd</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_link_text'>link_text</span><span class='comma'>,</span> <span class='label'>cmd_link:</span> <span class='id identifier rubyid_link_action'>link_action</span><span class='comma'>,</span> <span class='label'>encode:</span> <span class='id identifier rubyid_encode'>encode</span><span class='rparen'>)</span>
@@ -420,9 +434,8 @@ Entries added here should always be accessible from Lich::Messaging.feature name
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>defaulting encoding here to false instead of true like other methods due to backwards compatibility that it never encoded before
-whereas all the other methods were already encoding and therefor should default to allow for them.
-Sends a message in mono format.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>defaulting encoding here to false instead of true like other methods due to backwards compatibility that it never encoded before whereas all the other methods were already encoding and therefor should default to allow for them. Sends a message in mono format.</p>
 
 
   </div>
@@ -433,10 +446,11 @@ Sends a message in mono format.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Sending a mono message</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Sending a mono message</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_mono'>mono</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>This is a mono message.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_mono'>mono</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This is a mono message.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -452,7 +466,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>The message to send.</p>
+        <div class='inline'>
+<p>The message to send.</p>
 </div>
       
     </li>
@@ -469,7 +484,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>Whether to encode the message (default: false).</p>
+        <div class='inline'>
+<p>Whether to encode the message (default: false).</p>
 </div>
       
     </li>
@@ -487,7 +503,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>If msg is not a String.</p>
+        <div class='inline'>
+<p>If msg is not a String.</p>
 </div>
       
     </li>
@@ -500,18 +517,18 @@ Sends a message in mono format.</p>
       <pre class="lines">
 
 
-189
-190
 191
 192
 193
 194
 195
 196
-197</pre>
+197
+198
+199</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'messaging.rb', line 189</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/messaging.rb', line 191</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_mono'>mono</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='label'>encode:</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_raise'>raise</span> <span class='const'>StandardError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Lich::Messaging.mono only works with String parameters!</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></span><span class='rparen'>)</span>
@@ -538,7 +555,8 @@ Sends a message in mono format.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Formats a message to be displayed in monster bold style.</p>
+    
+<p>Formats a message to be displayed in monster bold style.</p>
 
 
   </div>
@@ -549,10 +567,11 @@ Sends a message in mono format.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Formatting a monster bold message</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Formatting a monster bold message</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_bold_msg'>bold_msg</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_monsterbold'>monsterbold</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>A fierce monster appears!</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_bold_msg'>bold_msg</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_monsterbold'>monsterbold</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>A fierce dragon appears!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -568,7 +587,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>The message to format.</p>
+        <div class='inline'>
+<p>The message to format.</p>
 </div>
       
     </li>
@@ -585,7 +605,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>Whether to encode the message (default: true).</p>
+        <div class='inline'>
+<p>Whether to encode the message (default: true).</p>
 </div>
       
     </li>
@@ -603,7 +624,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>The formatted message.</p>
+        <div class='inline'>
+<p>The formatted message.</p>
 </div>
       
     </li>
@@ -616,13 +638,13 @@ Sends a message in mono format.</p>
       <pre class="lines">
 
 
-31
-32
 33
-34</pre>
+34
+35
+36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'messaging.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/messaging.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_monsterbold'>monsterbold</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='label'>encode:</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='comment'># return monsterbold_start + self.xml_encode(msg) + monsterbold_end
@@ -644,7 +666,8 @@ Sends a message in mono format.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Sends a formatted message to the user.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Sends a formatted message to the user.</p>
 
 
   </div>
@@ -655,10 +678,11 @@ Sends a message in mono format.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Sending a message</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Sending a message</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_msg'>msg</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>info</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>This is a test message.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_msg'>msg</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>info</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This is a test message.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -676,7 +700,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>The type of message (default: &#39;info&#39;).</p>
+        <div class='inline'>
+<p>The type of message (default: “info”).</p>
 </div>
       
     </li>
@@ -693,7 +718,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>The message to send.</p>
+        <div class='inline'>
+<p>The message to send.</p>
 </div>
       
     </li>
@@ -710,7 +736,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>Whether to encode the message (default: true).</p>
+        <div class='inline'>
+<p>Whether to encode the message (default: true).</p>
 </div>
       
     </li>
@@ -724,13 +751,13 @@ Sends a message in mono format.</p>
       <pre class="lines">
 
 
-164
-165
 166
-167</pre>
+167
+168
+169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'messaging.rb', line 164</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/messaging.rb', line 166</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_msg'>msg</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>info</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>encode:</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>debug</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug_messaging'><span class='object_link'><a href="../Lich.html#debug_messaging-class_method" title="Lich.debug_messaging (method)">debug_messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug_messaging'><span class='object_link'><a href="../Lich.html#debug_messaging-class_method" title="Lich.debug_messaging (method)">debug_messaging</a></span></span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>false</span><span class='tstring_end'>&quot;</span></span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug_messaging'><span class='object_link'><a href="../Lich.html#debug_messaging-class_method" title="Lich.debug_messaging (method)">debug_messaging</a></span></span> <span class='op'>==</span> <span class='kw'>false</span><span class='rparen'>)</span>
@@ -752,7 +779,8 @@ Sends a message in mono format.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Formats a message with specific type and color coding.</p>
+    
+<p>Formats a message with specific styling based on type.</p>
 
 
   </div>
@@ -763,10 +791,11 @@ Sends a message in mono format.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Formatting an info message</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Formatting an info message</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_formatted_msg'>formatted_msg</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_msg_format'>msg_format</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>info</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>This is an info message.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_formatted_msg'>formatted_msg</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_msg_format'>msg_format</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>info</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>This is an info message.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -784,7 +813,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>The type of message (default: &#39;info&#39;).</p>
+        <div class='inline'>
+<p>The type of message (default: “info”).</p>
 </div>
       
     </li>
@@ -801,7 +831,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>The message to format.</p>
+        <div class='inline'>
+<p>The message to format.</p>
 </div>
       
     </li>
@@ -818,7 +849,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>Optional command link.</p>
+        <div class='inline'>
+<p>Optional command link for formatting.</p>
 </div>
       
     </li>
@@ -835,7 +867,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>Whether to encode the message (default: true).</p>
+        <div class='inline'>
+<p>Whether to encode the message (default: true).</p>
 </div>
       
     </li>
@@ -853,7 +886,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>The formatted message.</p>
+        <div class='inline'>
+<p>The formatted message.</p>
 </div>
       
     </li>
@@ -866,8 +900,6 @@ Sends a message in mono format.</p>
       <pre class="lines">
 
 
-80
-81
 82
 83
 84
@@ -941,10 +973,12 @@ Sends a message in mono format.</p>
 152
 153
 154
-155</pre>
+155
+156
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'messaging.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/messaging.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_msg_format'>msg_format</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>info</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>cmd_link:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>encode:</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='id identifier rubyid_xml_encode'>xml_encode</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_encode'>encode</span>
@@ -1038,7 +1072,8 @@ Sends a message in mono format.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Wraps a message in a stream window format.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Prepares a message for display in a specific stream window.</p>
 
 
   </div>
@@ -1049,10 +1084,11 @@ Sends a message in mono format.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Wrapping a message in a stream window</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Displaying a message in the familiar stream</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_stream_window'>stream_window</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hello!</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>speech</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_stream_window'>stream_window</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello, familiar!</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>familiar</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1068,7 +1104,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>The message to wrap.</p>
+        <div class='inline'>
+<p>The message to display.</p>
 </div>
       
     </li>
@@ -1085,7 +1122,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>The type of window (default: &#39;familiar&#39;).</p>
+        <div class='inline'>
+<p>The name of the stream window (default: “familiar”).</p>
 </div>
       
     </li>
@@ -1102,7 +1140,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>Whether to encode the message (default: true).</p>
+        <div class='inline'>
+<p>Whether to encode the message (default: true).</p>
 </div>
       
     </li>
@@ -1116,8 +1155,6 @@ Sends a message in mono format.</p>
       <pre class="lines">
 
 
-43
-44
 45
 46
 47
@@ -1143,10 +1180,12 @@ Sends a message in mono format.</p>
 67
 68
 69
-70</pre>
+70
+71
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'messaging.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/messaging.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_stream_window'>stream_window</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='id identifier rubyid_window'>window</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>familiar</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>encode:</span> <span class='kw'>true</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='id identifier rubyid_xml_encode'>xml_encode</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_encode'>encode</span>
@@ -1192,7 +1231,8 @@ Sends a message in mono format.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Encodes a message to XML format.</p>
+    
+<p>Encodes a message into XML format.</p>
 
 
   </div>
@@ -1203,10 +1243,11 @@ Sends a message in mono format.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Encoding a message</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Encoding a message</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_encoded_msg'>encoded_msg</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_xml_encode'>xml_encode</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hello World</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_encoded_msg'>encoded_msg</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Messaging (module)">Messaging</a></span></span><span class='period'>.</span><span class='id identifier rubyid_xml_encode'>xml_encode</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello, World!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1222,7 +1263,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>The message to encode.</p>
+        <div class='inline'>
+<p>The message to encode.</p>
 </div>
       
     </li>
@@ -1240,7 +1282,8 @@ Sends a message in mono format.</p>
       
       
         &mdash;
-        <div class='inline'><p>The encoded XML message.</p>
+        <div class='inline'>
+<p>The XML-encoded message.</p>
 </div>
       
     </li>
@@ -1253,16 +1296,16 @@ Sends a message in mono format.</p>
       <pre class="lines">
 
 
-17
-18
 19
 20
 21
 22
-23</pre>
+23
+24
+25</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'messaging.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/messaging.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_xml_encode'>xml_encode</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='gvar'>$frontend</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(wizard|avalon)$</span><span class='regexp_end'>/i</span></span>
@@ -1281,7 +1324,7 @@ Sends a message in mono format.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:51 2025 by
+  Generated on Fri Nov  7 05:08:35 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

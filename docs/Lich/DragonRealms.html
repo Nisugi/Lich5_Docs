@@ -6,7 +6,7 @@
 <title>
   Module: Lich::DragonRealms
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -83,8 +83,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>games.rb<span class="defines">,<br />
-  common.rb,<br /> drdefs.rb,<br /> drroom.rb,<br /> events.rb,<br /> drskill.rb,<br /> drstats.rb,<br /> drparser.rb,<br /> drspells.rb,<br /> slackbot.rb,<br /> drinfomon.rb,<br /> drvariables.rb,<br /> common-items.rb,<br /> common-money.rb,<br /> equipmanager.rb,<br /> common-arcana.rb,<br /> common-travel.rb,<br /> common-healing.rb,<br /> common-theurgy.rb,<br /> common-crafting.rb,<br /> common-moonmage.rb,<br /> common-summoning.rb,<br /> common-validation.rb,<br /> common-healing-data.rb</span>
+    <dd>output/latest/documented/games.rb<span class="defines">,<br />
+  output/latest/documented/dragonrealms/drinfomon.rb,<br /> output/latest/documented/dragonrealms/commons/common.rb,<br /> output/latest/documented/dragonrealms/commons/slackbot.rb,<br /> output/latest/documented/dragonrealms/drinfomon/drdefs.rb,<br /> output/latest/documented/dragonrealms/drinfomon/drroom.rb,<br /> output/latest/documented/dragonrealms/drinfomon/events.rb,<br /> output/latest/documented/dragonrealms/drinfomon/drskill.rb,<br /> output/latest/documented/dragonrealms/drinfomon/drstats.rb,<br /> output/latest/documented/dragonrealms/drinfomon/drparser.rb,<br /> output/latest/documented/dragonrealms/drinfomon/drspells.rb,<br /> output/latest/documented/dragonrealms/commons/common-items.rb,<br /> output/latest/documented/dragonrealms/commons/common-money.rb,<br /> output/latest/documented/dragonrealms/commons/equipmanager.rb,<br /> output/latest/documented/dragonrealms/commons/common-arcana.rb,<br /> output/latest/documented/dragonrealms/commons/common-travel.rb,<br /> output/latest/documented/dragonrealms/drinfomon/drvariables.rb,<br /> output/latest/documented/dragonrealms/commons/common-healing.rb,<br /> output/latest/documented/dragonrealms/commons/common-theurgy.rb,<br /> output/latest/documented/dragonrealms/commons/common-crafting.rb,<br /> output/latest/documented/dragonrealms/commons/common-moonmage.rb,<br /> output/latest/documented/dragonrealms/commons/common-summoning.rb,<br /> output/latest/documented/dragonrealms/commons/common-validation.rb,<br /> output/latest/documented/dragonrealms/commons/common-healing-data.rb</span>
 </dd>
   </dl>
   
@@ -92,7 +92,10 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Provides mappings and regex patterns for health-related data in the DragonRealms game.</p>
+    
+<p>Maps bleed rates from ‘health` command to severity number. A partially tended wound is considered more severe than its non-tended counterpart because once the bandages come off then the wound is much worse so they should be triaged first. <a href="https://elanthipedia.play.net/Damage#Bleeding_Levels">elanthipedia.play.net/Damage#Bleeding_Levels</a></p>
+
+<p>Skill to tend based on <a href="https://elanthipedia.play.net/First_Aid_skill#Skill_to_Tend">elanthipedia.play.net/First_Aid_skill#Skill_to_Tend</a> A ‘nil’ value means that can’t be tended because already is tended or isn’t bleeding.</p>
 
 
   </div>
@@ -103,10 +106,11 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Usage</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Usage of the module</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_severity'>severity</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'>DragonRealms</span><span class='op'>::</span><span class='const'>DRCH_BLEED_RATE_TO_SEVERITY_MAP</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>slight</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_severity'>severity</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'>DragonRealms</span><span class='op'>::</span><span class='const'>DRCH_BLEED_RATE_TO_SEVERITY_MAP</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>slight</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span></code></pre>
     
   </div>
 
@@ -135,24 +139,32 @@
         <dt id="DR_LEARNING_RATES-constant" class="">DR_LEARNING_RATES =
           <div class="docstring">
   <div class="discussion">
-    <p>An array of learning rates used in the game.</p>
+    
+<p>Array of learning rates used in the game.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
       
-        <h5 class="example_title"><div class='inline'><p>Accessing a learning rate</p>
-</div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms (module)">DragonRealms</a></span></span><span class='op'>::</span><span class='const'>DR_LEARNING_RATES</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='comment'># =&gt; &#39;clear&#39;</span></code></pre>
-    
-  </div>
-
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An array of strings representing different learning rates.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
         </dt>
@@ -197,24 +209,32 @@
         <dt id="DR_BALANCE_VALUES-constant" class="">DR_BALANCE_VALUES =
           <div class="docstring">
   <div class="discussion">
-    <p>An array of balance values used in the game.</p>
+    
+<p>Array of balance values used in the game.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
       
-        <h5 class="example_title"><div class='inline'><p>Accessing a balance value</p>
-</div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms (module)">DragonRealms</a></span></span><span class='op'>::</span><span class='const'>DR_BALANCE_VALUES</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='comment'># =&gt; &#39;completely&#39;</span></code></pre>
-    
-  </div>
-
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An array of strings representing different balance values.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
         </dt>
@@ -236,24 +256,32 @@
         <dt id="DR_SKILLS_DATA-constant" class="">DR_SKILLS_DATA =
           <div class="docstring">
   <div class="discussion">
-    <p>A hash containing skillsets and their respective skills in the game.</p>
+    
+<p>Hash containing skill data for various skillsets in the game.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
       
-        <h5 class="example_title"><div class='inline'><p>Accessing skills for Armor</p>
-</div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms (module)">DragonRealms</a></span></span><span class='op'>::</span><span class='const'>DR_SKILLS_DATA</span><span class='lbracket'>[</span><span class='symbol'>:skillsets</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:Armor</span><span class='rbracket'>]</span></code></pre>
-    
-  </div>
-
+        <span class='type'>(<tt><span class='object_link'><a href="../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A hash with skillsets and their corresponding skills.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
         </dt>
@@ -358,24 +386,32 @@
         <dt id="KRONAR_BANKS-constant" class="">KRONAR_BANKS =
           <div class="docstring">
   <div class="discussion">
-    <p>An array of bank names in the Kronar region.</p>
+    
+<p>Array of bank names in the Kronar region.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
       
-        <h5 class="example_title"><div class='inline'><p>Accessing a Kronar bank</p>
-</div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms (module)">DragonRealms</a></span></span><span class='op'>::</span><span class='const'>KRONAR_BANKS</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='comment'># =&gt; &#39;Crossings&#39;</span></code></pre>
-    
-  </div>
-
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An array of strings representing bank names.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
         </dt>
@@ -384,24 +420,32 @@
         <dt id="LIRUM_BANKS-constant" class="">LIRUM_BANKS =
           <div class="docstring">
   <div class="discussion">
-    <p>An array of bank names in the Lirum region.</p>
+    
+<p>Array of bank names in the Lirum region.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
       
-        <h5 class="example_title"><div class='inline'><p>Accessing a Lirum bank</p>
-</div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms (module)">DragonRealms</a></span></span><span class='op'>::</span><span class='const'>LIRUM_BANKS</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='comment'># =&gt; &#39;Aesry Surlaenis&#39;a&#39;</span></code></pre>
-    
-  </div>
-
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An array of strings representing bank names.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
         </dt>
@@ -410,24 +454,32 @@
         <dt id="DOKORA_BANKS-constant" class="">DOKORA_BANKS =
           <div class="docstring">
   <div class="discussion">
-    <p>An array of bank names in the Dokora region.</p>
+    
+<p>Array of bank names in the Dokora region.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
       
-        <h5 class="example_title"><div class='inline'><p>Accessing a Dokora bank</p>
-</div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms (module)">DragonRealms</a></span></span><span class='op'>::</span><span class='const'>DOKORA_BANKS</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='comment'># =&gt; &#39;Ain Ghazal&#39;</span></code></pre>
-    
-  </div>
-
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../String.html" title="String (class)">String</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An array of strings representing bank names.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
         </dt>
@@ -436,24 +488,32 @@
         <dt id="BANK_TITLES-constant" class="">BANK_TITLES =
           <div class="docstring">
   <div class="discussion">
-    <p>A hash mapping bank names to their titles in the game.</p>
+    
+<p>Hash mapping bank names to their titles.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
       
-        <h5 class="example_title"><div class='inline'><p>Accessing titles for a bank</p>
-</div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms (module)">DragonRealms</a></span></span><span class='op'>::</span><span class='const'>BANK_TITLES</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Crossings</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span></code></pre>
-    
-  </div>
-
+        <span class='type'>(<tt><span class='object_link'><a href="../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A hash where keys are bank names and values are arrays of titles.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
         </dt>
@@ -483,24 +543,32 @@
         <dt id="VAULT_TITLES-constant" class="">VAULT_TITLES =
           <div class="docstring">
   <div class="discussion">
-    <p>A hash mapping vault names to their titles in the game.</p>
+    
+<p>Hash mapping vault names to their titles.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
       
-        <h5 class="example_title"><div class='inline'><p>Accessing titles for a vault</p>
-</div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms (module)">DragonRealms</a></span></span><span class='op'>::</span><span class='const'>VAULT_TITLES</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Crossings</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span></code></pre>
-    
-  </div>
-
+        <span class='type'>(<tt><span class='object_link'><a href="../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A hash where keys are vault names and values are arrays of titles.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
         </dt>
@@ -519,31 +587,32 @@
         <dt id="UNKNOWN_DURATION-constant" class="">UNKNOWN_DURATION =
           <div class="docstring">
   <div class="discussion">
-    <p>Some spells may last for an unknown duration,
-such as cyclic spells that last as long as
-the caster can harness mana for it.
-Or, barbarian abilities when the character
-doesn&#39;t have Power Monger mastery to see true
-durations but only vague guestimates.
-In those situations, we set use this value.
-A constant representing an unknown duration for spells.</p>
+    
+<p>Some spells may last for an unknown duration, such as cyclic spells that last as long as the caster can harness mana for it. Or, barbarian abilities when the character doesn’t have Power Monger mastery to see true durations but only vague guestimates. In those situations, we set use this value. Constant representing an unknown duration for spells.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
       
-        <h5 class="example_title"><div class='inline'><p>Using UNKNOWN_DURATION</p>
-</div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_duration'>duration</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms (module)">DragonRealms</a></span></span><span class='op'>::</span><span class='const'>UNKNOWN_DURATION</span></code></pre>
-    
-  </div>
-
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A default value indicating unknown duration.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
         </dt>
@@ -583,7 +652,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Adds ordinal numbers to duplicate NPC names in the list.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Adds ordinal numbers to duplicate NPC names in the list.</p>
 </div></span>
   
 </li>
@@ -606,7 +676,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks the experience modifiers currently in effect.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks the experience modifiers currently in effect.</p>
 </div></span>
   
 </li>
@@ -629,7 +700,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Cleans and splits room objects into an array.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Cleans and splits room objects into an array.</p>
 </div></span>
   
 </li>
@@ -652,7 +724,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Cleans and normalizes a list of NPC names.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Cleans and normalizes a list of NPC names.</p>
 </div></span>
   
 </li>
@@ -675,7 +748,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Converts a given amount to copper based on the denomination.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Converts a given amount to copper based on the denomination.</p>
 </div></span>
   
 </li>
@@ -698,7 +772,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Converts a given amount of copper to various denominations.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Converts a given amount of copper to various denominations.</p>
 </div></span>
   
 </li>
@@ -721,7 +796,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Extracts just the creature name from the text.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Extracts just the creature name from the text.</p>
 </div></span>
   
 </li>
@@ -744,7 +820,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Extracts the last creature name from the text after &#39;and&#39;.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Extracts the last creature name from a string after ‘and’.</p>
 </div></span>
   
 </li>
@@ -767,7 +844,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Finds all non-player characters (NPCs) in the room.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Finds all non-player characters (NPCs) in the room description.</p>
 </div></span>
   
 </li>
@@ -790,7 +868,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Finds all dead NPCs in the room.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Finds all NPCs in the room that are dead.</p>
 </div></span>
   
 </li>
@@ -813,7 +892,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Finds all NPCs in the room that are not dead.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Finds all NPCs in the room that are not dead.</p>
 </div></span>
   
 </li>
@@ -836,7 +916,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Finds and cleans object names in the room.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Finds and cleans object names in the room description.</p>
 </div></span>
   
 </li>
@@ -859,7 +940,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Finds player characters in the room.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Finds player characters in the room description.</p>
 </div></span>
   
 </li>
@@ -882,7 +964,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Finds player characters that are lying down in the room.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Finds player characters that are lying down in the room description.</p>
 </div></span>
   
 </li>
@@ -905,7 +988,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Finds player characters that are sitting in the room.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Finds player characters that are sitting in the room description.</p>
 </div></span>
   
 </li>
@@ -928,7 +1012,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Normalizes specific creature names in the text.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Normalizes specific creature names in the text.</p>
 </div></span>
   
 </li>
@@ -951,7 +1036,8 @@ A constant representing an unknown duration for spells.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Removes HTML tags from the given text.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Removes HTML tags from the given text.</p>
 </div></span>
   
 </li>
@@ -988,7 +1074,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Adds ordinal numbers to duplicate NPC names in the list.</p>
+    
+<p>Adds ordinal numbers to duplicate NPC names in the list.</p>
 
 
   </div>
@@ -999,7 +1086,7 @@ A constant representing an unknown duration for spells.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_add_ordinals_to_duplicates'>add_ordinals_to_duplicates</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dragon</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dragon</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='comment'># =&gt; [&#39;dragon&#39;, &#39;1st dragon&#39;]</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_add_ordinals_to_duplicates'>add_ordinals_to_duplicates</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>goblin</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>goblin</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>troll</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='comment'>#=&gt; [&#39;1 goblin&#39;, &#39;2 goblin&#39;, &#39;troll&#39;]</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1015,7 +1102,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The list of NPC names.</p>
+        <div class='inline'>
+<p>The list of NPC names.</p>
 </div>
       
     </li>
@@ -1033,7 +1121,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The list of NPC names with ordinals.</p>
+        <div class='inline'>
+<p>The list with ordinals added to duplicates.</p>
 </div>
       
     </li>
@@ -1046,6 +1135,7 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+174
 175
 176
 177
@@ -1060,11 +1150,10 @@ A constant representing an unknown duration for spells.</p>
 186
 187
 188
-189
-190</pre>
+189</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 175</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 174</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_add_ordinals_to_duplicates'>add_ordinals_to_duplicates</span><span class='lparen'>(</span><span class='id identifier rubyid_npc_list'>npc_list</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_flat_npcs'>flat_npcs</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -1098,7 +1187,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks the experience modifiers currently in effect.</p>
+    
+<p>Checks the experience modifiers currently in effect.</p>
 
 
   </div>
@@ -1124,7 +1214,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The output of the command issued.</p>
+        <div class='inline'>
+<p>The output of the command issued.</p>
 </div>
       
     </li>
@@ -1137,12 +1228,12 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+30
 31
-32
-33</pre>
+32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 30</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check_exp_mods'>check_exp_mods</span>
   <span class='const'><span class='object_link'><a href="../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Util.html" title="Lich::Util (module)">Util</a></span></span><span class='period'>.</span><span class='id identifier rubyid_issue_command'><span class='object_link'><a href="Util.html#issue_command-class_method" title="Lich::Util.issue_command (method)">issue_command</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>exp mods</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>The following skills are currently under the influence of a modifier</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^&lt;output class=&quot;&quot;</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='label'>quiet:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>include_end:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>usexml:</span> <span class='kw'>false</span><span class='rparen'>)</span>
@@ -1163,7 +1254,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Cleans and splits room objects into an array.</p>
+    
+<p>Cleans and splits room objects into an array.</p>
 
 
   </div>
@@ -1174,7 +1266,7 @@ A constant representing an unknown duration for spells.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_clean_and_split'>clean_and_split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You also see a dragon, a knight.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; [&#39;a dragon&#39;, &#39;a knight&#39;]</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_clean_and_split'>clean_and_split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You also see a dragon, a knight.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'>#=&gt; [&#39;a dragon&#39;, &#39;a knight&#39;]</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1190,7 +1282,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The string containing room objects.</p>
+        <div class='inline'>
+<p>The string containing room objects.</p>
 </div>
       
     </li>
@@ -1208,7 +1301,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of cleaned room object names.</p>
+        <div class='inline'>
+<p>An array of cleaned room object names.</p>
 </div>
       
     </li>
@@ -1221,12 +1315,12 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+56
 57
-58
-59</pre>
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clean_and_split'>clean_and_split</span><span class='lparen'>(</span><span class='id identifier rubyid_room_objs'>room_objs</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_room_objs'>room_objs</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You also see</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'> with a [\w\s]+ sitting astride its back</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>,|\sand\s</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
@@ -1247,7 +1341,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Cleans and normalizes a list of NPC names.</p>
+    
+<p>Cleans and normalizes a list of NPC names.</p>
 
 
   </div>
@@ -1258,7 +1353,7 @@ A constant representing an unknown duration for spells.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_clean_npc_string'>clean_npc_string</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;pushBold/&gt;a dragon&lt;popBold/&gt;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;pushBold/&gt;a knight&lt;popBold/&gt;</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='comment'># =&gt; [&#39;a dragon&#39;, &#39;a knight&#39;]</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_clean_npc_string'>clean_npc_string</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>goblin</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>goblin</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>troll</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='comment'>#=&gt; [&#39;1 goblin&#39;, &#39;2 goblin&#39;, &#39;troll&#39;]</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1274,7 +1369,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The array of NPC names to clean.</p>
+        <div class='inline'>
+<p>An array of NPC names.</p>
 </div>
       
     </li>
@@ -1292,7 +1388,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of cleaned NPC names.</p>
+        <div class='inline'>
+<p>A sorted array of cleaned NPC names with ordinals for duplicates.</p>
 </div>
       
     </li>
@@ -1305,6 +1402,7 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+113
 114
 115
 116
@@ -1315,11 +1413,10 @@ A constant representing an unknown duration for spells.</p>
 121
 122
 123
-124
-125</pre>
+124</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 114</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_clean_npc_string'>clean_npc_string</span><span class='lparen'>(</span><span class='id identifier rubyid_npc_string'>npc_string</span><span class='rparen'>)</span>
   <span class='comment'># Normalize NPC names
@@ -1349,7 +1446,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Converts a given amount to copper based on the denomination.</p>
+    
+<p>Converts a given amount to copper based on the denomination.</p>
 
 
   </div>
@@ -1360,7 +1458,7 @@ A constant representing an unknown duration for spells.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_convert2copper'>convert2copper</span><span class='lparen'>(</span><span class='int'>10</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>gold</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; 10000</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_convert2copper'>convert2copper</span><span class='lparen'>(</span><span class='int'>10</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>gold</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'>#=&gt; 10000</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1376,7 +1474,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The amount to convert.</p>
+        <div class='inline'>
+<p>The amount to convert.</p>
 </div>
       
     </li>
@@ -1391,7 +1490,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The type of denomination (platinum, gold, silver, bronze).</p>
+        <div class='inline'>
+<p>The type of denomination (e.g., ‘platinum’, ‘gold’, ‘silver’, ‘bronze’).</p>
 </div>
       
     </li>
@@ -1409,7 +1509,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The equivalent amount in copper.</p>
+        <div class='inline'>
+<p>The equivalent amount in copper.</p>
 </div>
       
     </li>
@@ -1422,6 +1523,7 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+12
 13
 14
 15
@@ -1433,11 +1535,10 @@ A constant representing an unknown duration for spells.</p>
 21
 22
 23
-24
-25</pre>
+24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_convert2copper'>convert2copper</span><span class='lparen'>(</span><span class='id identifier rubyid_amt'>amt</span><span class='comma'>,</span> <span class='id identifier rubyid_denomination'>denomination</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_denomination'>denomination</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>platinum</span><span class='regexp_end'>/</span></span>
@@ -1468,7 +1569,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Converts a given amount of copper to various denominations.</p>
+    
+<p>Converts a given amount of copper to various denominations.</p>
 
 
   </div>
@@ -1479,7 +1581,7 @@ A constant representing an unknown duration for spells.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_convert2plats'>convert2plats</span><span class='lparen'>(</span><span class='int'>10000</span><span class='rparen'>)</span> <span class='comment'># =&gt; &#39;1 platinum&#39;</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_convert2plats'>convert2plats</span><span class='lparen'>(</span><span class='int'>25000</span><span class='rparen'>)</span> <span class='comment'>#=&gt; &#39;2 platinum, 5 gold&#39;</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1495,7 +1597,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The amount of copper to convert.</p>
+        <div class='inline'>
+<p>The amount of copper to convert.</p>
 </div>
       
     </li>
@@ -1513,7 +1616,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>A string representation of the amount in different denominations.</p>
+        <div class='inline'>
+<p>A string representation of the amount in different denominations.</p>
 </div>
       
     </li>
@@ -1526,6 +1630,7 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+39
 40
 41
 42
@@ -1535,11 +1640,10 @@ A constant representing an unknown duration for spells.</p>
 46
 47
 48
-49
-50</pre>
+49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_convert2plats'>convert2plats</span><span class='lparen'>(</span><span class='id identifier rubyid_copper'>copper</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_denominations'>denominations</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>10_000</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>platinum</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1000</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>gold</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>100</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>silver</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>bronze</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>copper</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span>
@@ -1568,7 +1672,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Extracts just the creature name from the text.</p>
+    
+<p>Extracts just the creature name from the text.</p>
 
 
   </div>
@@ -1579,7 +1684,7 @@ A constant representing an unknown duration for spells.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_extract_final_name'>extract_final_name</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>a dragon</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; &#39;dragon&#39;</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_extract_final_name'>extract_final_name</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>a goblin</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'>#=&gt; &#39;goblin&#39;</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1595,7 +1700,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The text containing the creature name.</p>
+        <div class='inline'>
+<p>The text containing the creature name.</p>
 </div>
       
     </li>
@@ -1613,7 +1719,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The extracted creature name.</p>
+        <div class='inline'>
+<p>The extracted creature name.</p>
 </div>
       
     </li>
@@ -1626,13 +1733,13 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+164
 165
 166
-167
-168</pre>
+167</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 165</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 164</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_extract_final_name'>extract_final_name</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
   <span class='comment'># Extract just the creature name (letters, hyphens, apostrophes)
@@ -1654,7 +1761,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Extracts the last creature name from the text after &#39;and&#39;.</p>
+    
+<p>Extracts the last creature name from a string after ‘and’.</p>
 
 
   </div>
@@ -1665,7 +1773,7 @@ A constant representing an unknown duration for spells.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_extract_last_creature'>extract_last_creature</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>a dragon and a knight</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; &#39;a knight&#39;</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_extract_last_creature'>extract_last_creature</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>a goblin and a troll</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'>#=&gt; &#39;a troll&#39;</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1681,7 +1789,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The text containing creature names.</p>
+        <div class='inline'>
+<p>The text containing creature names.</p>
 </div>
       
     </li>
@@ -1699,7 +1808,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The last creature name extracted.</p>
+        <div class='inline'>
+<p>The last creature name extracted.</p>
 </div>
       
     </li>
@@ -1712,13 +1822,13 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+154
 155
 156
-157
-158</pre>
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 155</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 154</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_extract_last_creature'>extract_last_creature</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
   <span class='comment'># Get the last creature name after &quot;and&quot;, removing modifiers like &quot;glowing with&quot;
@@ -1740,7 +1850,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Finds all non-player characters (NPCs) in the room.</p>
+    
+<p>Finds all non-player characters (NPCs) in the room description.</p>
 
 
   </div>
@@ -1751,7 +1862,7 @@ A constant representing an unknown duration for spells.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_find_all_npcs'>find_all_npcs</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You also see a dragon, a knight.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; [&#39;a dragon&#39;, &#39;a knight&#39;]</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_find_all_npcs'>find_all_npcs</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You also see a goblin, a troll.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'>#=&gt; [&#39;a goblin&#39;, &#39;a troll&#39;]</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1767,7 +1878,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The string containing room objects.</p>
+        <div class='inline'>
+<p>The string containing room objects.</p>
 </div>
       
     </li>
@@ -1785,7 +1897,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of NPC names.</p>
+        <div class='inline'>
+<p>An array of NPC names.</p>
 </div>
       
     </li>
@@ -1798,13 +1911,13 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+103
 104
 105
-106
-107</pre>
+106</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 104</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 103</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_all_npcs'>find_all_npcs</span><span class='lparen'>(</span><span class='id identifier rubyid_room_objs'>room_objs</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_room_objs'>room_objs</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You also see</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'> with a [\w\s]+ sitting astride its back</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
@@ -1826,7 +1939,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Finds all dead NPCs in the room.</p>
+    
+<p>Finds all NPCs in the room that are dead.</p>
 
 
   </div>
@@ -1837,7 +1951,7 @@ A constant representing an unknown duration for spells.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_find_dead_npcs'>find_dead_npcs</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You also see a dragon which appears dead.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; [&#39;a dragon&#39;]</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_find_dead_npcs'>find_dead_npcs</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You also see a goblin which appears dead, a troll.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'>#=&gt; [&#39;a goblin&#39;]</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1853,7 +1967,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The string containing room objects.</p>
+        <div class='inline'>
+<p>The string containing room objects.</p>
 </div>
       
     </li>
@@ -1871,7 +1986,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of dead NPC names.</p>
+        <div class='inline'>
+<p>An array of dead NPC names.</p>
 </div>
       
     </li>
@@ -1884,13 +2000,13 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+206
 207
 208
-209
-210</pre>
+209</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 207</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 206</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_dead_npcs'>find_dead_npcs</span><span class='lparen'>(</span><span class='id identifier rubyid_room_objs'>room_objs</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_dead_npcs'>dead_npcs</span> <span class='op'>=</span> <span class='id identifier rubyid_find_all_npcs'>find_all_npcs</span><span class='lparen'>(</span><span class='id identifier rubyid_room_objs'>room_objs</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_obj'>obj</span><span class='op'>|</span> <span class='id identifier rubyid_obj'>obj</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>which appears dead|\(dead\)</span><span class='regexp_end'>/</span></span> <span class='rbrace'>}</span>
@@ -1912,7 +2028,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Finds all NPCs in the room that are not dead.</p>
+    
+<p>Finds all NPCs in the room that are not dead.</p>
 
 
   </div>
@@ -1923,7 +2040,7 @@ A constant representing an unknown duration for spells.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_find_npcs'>find_npcs</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You also see a dragon which appears dead.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; [&#39;a dragon&#39;]</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_find_npcs'>find_npcs</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You also see a goblin which appears dead, a troll.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'>#=&gt; [&#39;a troll&#39;]</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1939,7 +2056,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The string containing room objects.</p>
+        <div class='inline'>
+<p>The string containing room objects.</p>
 </div>
       
     </li>
@@ -1957,7 +2075,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of living NPC names.</p>
+        <div class='inline'>
+<p>An array of living NPC names.</p>
 </div>
       
     </li>
@@ -1970,13 +2089,13 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+196
 197
 198
-199
-200</pre>
+199</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 197</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 196</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_npcs'>find_npcs</span><span class='lparen'>(</span><span class='id identifier rubyid_room_objs'>room_objs</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_npcs'>npcs</span> <span class='op'>=</span> <span class='id identifier rubyid_find_all_npcs'>find_all_npcs</span><span class='lparen'>(</span><span class='id identifier rubyid_room_objs'>room_objs</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_reject'>reject</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_obj'>obj</span><span class='op'>|</span> <span class='id identifier rubyid_obj'>obj</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>which appears dead|\(dead\)</span><span class='regexp_end'>/</span></span> <span class='rbrace'>}</span>
@@ -1998,7 +2117,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Finds and cleans object names in the room.</p>
+    
+<p>Finds and cleans object names in the room description.</p>
 
 
   </div>
@@ -2009,7 +2129,7 @@ A constant representing an unknown duration for spells.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_find_objects'>find_objects</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You also see &lt;pushBold/&gt;a dragon&lt;popBold/&gt;.</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; [&#39;a dragon&#39;]</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_find_objects'>find_objects</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;pushBold/&gt;a goblin&lt;popBold/&gt;, a troll.</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'>#=&gt; [&#39;goblin&#39;, &#39;a troll&#39;]</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -2025,7 +2145,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The string containing room objects.</p>
+        <div class='inline'>
+<p>The string containing room objects.</p>
 </div>
       
     </li>
@@ -2043,7 +2164,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of cleaned object names.</p>
+        <div class='inline'>
+<p>An array of cleaned object names.</p>
 </div>
       
     </li>
@@ -2056,15 +2178,15 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+216
 217
 218
 219
 220
-221
-222</pre>
+221</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 217</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 216</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_objects'>find_objects</span><span class='lparen'>(</span><span class='id identifier rubyid_room_objs'>room_objs</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_room_objs'>room_objs</span><span class='period'>.</span><span class='id identifier rubyid_sub!'>sub!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;pushBold/&gt;a domesticated gelapod&lt;popBold/&gt;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>domesticated gelapod</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -2088,7 +2210,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Finds player characters in the room.</p>
+    
+<p>Finds player characters in the room description.</p>
 
 
   </div>
@@ -2099,7 +2222,7 @@ A constant representing an unknown duration for spells.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_find_pcs'>find_pcs</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>John who is glowing, Mary who is sitting</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; [&#39;John&#39;, &#39;Mary&#39;]</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_find_pcs'>find_pcs</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>John who is glowing, Mary who is sitting</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'>#=&gt; [&#39;John&#39;, &#39;Mary&#39;]</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -2115,7 +2238,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The string containing room players.</p>
+        <div class='inline'>
+<p>The string containing room players.</p>
 </div>
       
     </li>
@@ -2133,7 +2257,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of player character names.</p>
+        <div class='inline'>
+<p>An array of player character names.</p>
 </div>
       
     </li>
@@ -2146,15 +2271,15 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+65
 66
 67
 68
 69
-70
-71</pre>
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_pcs'>find_pcs</span><span class='lparen'>(</span><span class='id identifier rubyid_room_players'>room_players</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_room_players'>room_players</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'> and (.*)$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
@@ -2178,7 +2303,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Finds player characters that are lying down in the room.</p>
+    
+<p>Finds player characters that are lying down in the room description.</p>
 
 
   </div>
@@ -2189,7 +2315,7 @@ A constant representing an unknown duration for spells.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_find_pcs_prone'>find_pcs_prone</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>John who is lying down, Mary who is sitting</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; [&#39;John&#39;]</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_find_pcs_prone'>find_pcs_prone</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>John who is lying down, Mary who is sitting</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'>#=&gt; [&#39;John&#39;]</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -2205,7 +2331,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The string containing room players.</p>
+        <div class='inline'>
+<p>The string containing room players.</p>
 </div>
       
     </li>
@@ -2223,7 +2350,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of prone player character names.</p>
+        <div class='inline'>
+<p>An array of prone player character names.</p>
 </div>
       
     </li>
@@ -2236,16 +2364,16 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+77
 78
 79
 80
 81
 82
-83
-84</pre>
+83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_pcs_prone'>find_pcs_prone</span><span class='lparen'>(</span><span class='id identifier rubyid_room_players'>room_players</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_room_players'>room_players</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'> and (.*)$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
@@ -2270,7 +2398,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Finds player characters that are sitting in the room.</p>
+    
+<p>Finds player characters that are sitting in the room description.</p>
 
 
   </div>
@@ -2281,7 +2410,7 @@ A constant representing an unknown duration for spells.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_find_pcs_sitting'>find_pcs_sitting</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>John who is sitting, Mary who is standing</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; [&#39;John&#39;]</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_find_pcs_sitting'>find_pcs_sitting</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>John who is sitting, Mary who is standing</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'>#=&gt; [&#39;John&#39;]</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -2297,7 +2426,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The string containing room players.</p>
+        <div class='inline'>
+<p>The string containing room players.</p>
 </div>
       
     </li>
@@ -2315,7 +2445,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of sitting player character names.</p>
+        <div class='inline'>
+<p>An array of sitting player character names.</p>
 </div>
       
     </li>
@@ -2328,16 +2459,16 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+90
 91
 92
 93
 94
 95
-96
-97</pre>
+96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 91</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_pcs_sitting'>find_pcs_sitting</span><span class='lparen'>(</span><span class='id identifier rubyid_room_players'>room_players</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_room_players'>room_players</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'> and (.*)$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_last_match'>last_match</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
@@ -2362,7 +2493,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Normalizes specific creature names in the text.</p>
+    
+<p>Normalizes specific creature names in the text.</p>
 
 
   </div>
@@ -2373,7 +2505,7 @@ A constant representing an unknown duration for spells.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_normalize_creature_names'>normalize_creature_names</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>an alfar warrior</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; &#39;alfar warrior&#39;</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_normalize_creature_names'>normalize_creature_names</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>an alfar warrior</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'>#=&gt; &#39;alfar warrior&#39;</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -2389,7 +2521,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The text containing creature names.</p>
+        <div class='inline'>
+<p>The text containing creature names.</p>
 </div>
       
     </li>
@@ -2407,7 +2540,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The normalized text.</p>
+        <div class='inline'>
+<p>The normalized text.</p>
 </div>
       
     </li>
@@ -2420,15 +2554,15 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+131
 132
 133
 134
 135
-136
-137</pre>
+136</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 132</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 131</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_normalize_creature_names'>normalize_creature_names</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_text'>text</span>
@@ -2452,7 +2586,8 @@ A constant representing an unknown duration for spells.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Removes HTML tags from the given text.</p>
+    
+<p>Removes HTML tags from the given text.</p>
 
 
   </div>
@@ -2463,7 +2598,7 @@ A constant representing an unknown duration for spells.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_remove_html_tags'>remove_html_tags</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;pushBold/&gt;a dragon&lt;popBold/&gt;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'># =&gt; &#39;a dragon&#39;</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_remove_html_tags'>remove_html_tags</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;pushBold/&gt;a goblin&lt;popBold/&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='comment'>#=&gt; &#39;a goblin&#39;</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -2479,7 +2614,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The text containing HTML tags.</p>
+        <div class='inline'>
+<p>The text containing HTML tags.</p>
 </div>
       
     </li>
@@ -2497,7 +2633,8 @@ A constant representing an unknown duration for spells.</p>
       
       
         &mdash;
-        <div class='inline'><p>The text without HTML tags.</p>
+        <div class='inline'>
+<p>The text without HTML tags.</p>
 </div>
       
     </li>
@@ -2510,14 +2647,14 @@ A constant representing an unknown duration for spells.</p>
       <pre class="lines">
 
 
+143
 144
 145
 146
-147
-148</pre>
+147</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drdefs.rb', line 144</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drdefs.rb', line 143</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_remove_html_tags'>remove_html_tags</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_text'>text</span>
@@ -2534,7 +2671,7 @@ A constant representing an unknown duration for spells.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:49 2025 by
+  Generated on Fri Nov  7 05:08:34 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

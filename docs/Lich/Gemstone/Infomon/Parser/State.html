@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Gemstone::Infomon::Parser::State
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,22 +78,12 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>parser.rb</dd>
+    <dd>output/latest/documented/gemstone/infomon/parser.rb</dd>
   </dl>
   
 </div>
 
-<h2>Overview</h2><div class="docstring">
-  <div class="discussion">
-    <p>This module manages the state of the parser</p>
 
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
   
     <h2>
       Constant Summary
@@ -151,7 +141,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Gets the current state of the parser.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Gets the current state.</p>
 </div></span>
   
 </li>
@@ -174,7 +165,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Sets the current state of the parser.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Sets the current state.</p>
 </div></span>
   
 </li>
@@ -200,13 +192,22 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Gets the current state of the parser</p>
+    
+<p>Gets the current state</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_current_state'>current_state</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Infomon::Parser::State (module)">State</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -218,7 +219,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The current state</p>
+        <div class='inline'>
+<p>The current state</p>
 </div>
       
     </li>
@@ -231,12 +233,12 @@
       <pre class="lines">
 
 
-195
-196
-197</pre>
+208
+209
+210</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'parser.rb', line 195</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/infomon/parser.rb', line 208</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="../../../../top-level-namespace.html#get-instance_method" title="#get (method)">get</a></span></span>
   <span class='ivar'>@state</span>
@@ -257,7 +259,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Sets the current state of the parser</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Sets the current state</p>
 
 
   </div>
@@ -284,7 +287,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The state to set</p>
+        <div class='inline'>
+<p>The state to set</p>
 </div>
       
     </li>
@@ -302,7 +306,8 @@
       
       
         &mdash;
-        <div class='inline'><p>if the state is invalid</p>
+        <div class='inline'>
+<p>if the state is invalid</p>
 </div>
       
     </li>
@@ -315,19 +320,19 @@
       <pre class="lines">
 
 
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191</pre>
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'parser.rb', line 182</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/infomon/parser.rb', line 193</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_state'>state</span>
@@ -349,7 +354,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:50 2025 by
+  Generated on Fri Nov  7 05:08:37 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

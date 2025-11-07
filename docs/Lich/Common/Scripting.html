@@ -6,7 +6,7 @@
 <title>
   Class: Lich::Common::Scripting
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -94,15 +94,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>script.rb</dd>
+    <dd>output/latest/documented/common/script.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>module Gemstone
-Class for handling script bindings</p>
+    
+<p>module Gemstone Class for handling script bindings This class provides methods to create script bindings.</p>
 
 
   </div>
@@ -113,10 +113,11 @@ Class for handling script bindings</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Creating a scripting instance</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Creating a script binding</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_scripting'>scripting</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'>Scripting</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_binding'>binding</span> <span class='op'>=</span> <span class='const'>Scripting</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_script'><span class='object_link'><a href="#script-instance_method" title="Lich::Common::Scripting#script (method)">script</a></span></span></code></pre>
     
   </div>
 
@@ -153,7 +154,8 @@ Class for handling script bindings</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a binding for a new script.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Creates a new script binding.</p>
 </div></span>
   
 </li>
@@ -179,7 +181,8 @@ Class for handling script bindings</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a binding for a new script</p>
+    
+<p>Creates a new script binding</p>
 
 
   </div>
@@ -197,7 +200,8 @@ Class for handling script bindings</p>
       
       
         &mdash;
-        <div class='inline'><p>A new script binding</p>
+        <div class='inline'>
+<p>A new binding for a script</p>
 </div>
       
     </li>
@@ -210,12 +214,12 @@ Class for handling script bindings</p>
       <pre class="lines">
 
 
-23
 24
-25</pre>
+25
+26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'script.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/script.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_script'>script</span>
   <span class='const'>Proc</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_binding'>binding</span>
@@ -230,7 +234,7 @@ Class for handling script bindings</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:55 2025 by
+  Generated on Fri Nov  7 05:08:40 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

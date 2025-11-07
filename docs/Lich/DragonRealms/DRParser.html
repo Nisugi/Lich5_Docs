@@ -6,7 +6,7 @@
 <title>
   Module: Lich::DragonRealms::DRParser
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,14 +78,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>drparser.rb</dd>
+    <dd>output/latest/documented/dragonrealms/drinfomon/drparser.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Parses server output for DragonRealms</p>
+    
+<p>Handles the parsing of DragonRealms server output This module contains methods to interpret server messages and update game state accordingly.</p>
 
 
   </div>
@@ -96,7 +97,8 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Using the DRParser module</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Using the DRParser</p>
 </div></h5>
       
       <pre class="example code"><code><span class='const'>DRParser</span><span class='period'>.</span><span class='id identifier rubyid_parse'><span class='object_link'><a href="#parse-class_method" title="Lich::DragonRealms::DRParser.parse (method)">parse</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_server_output'>server_output</span><span class='rparen'>)</span></code></pre>
@@ -146,7 +148,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks for events in the server string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks for events in the server string This method iterates through defined matchers and updates flags based on the server output.</p>
 </div></span>
   
 </li>
@@ -169,7 +172,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Parses the output from <code>exp mods</code> command and updates the DRSkill.exp_modifiers hash with the skill and value.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Parses the output from ‘exp mods` command This method updates the DRSkill.exp_modifiers hash with the skill and value based on the server output.</p>
 </div></span>
   
 </li>
@@ -192,7 +196,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Parses the output from <code>ability</code> command for Barbarians and populates the known spells/feats based on the known abilities/masteries.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Parses the output from ‘ability` command for Barbarians This method populates the known spells/feats based on the known abilities/masteries.</p>
 </div></span>
   
 </li>
@@ -215,7 +220,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Parses the output from <code>spells</code> command for magic users and populates the known spells/feats based on the output.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Parses the output from ‘spells` command for magic users This method populates the known spells/feats based on the output.</p>
 </div></span>
   
 </li>
@@ -238,7 +244,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Parses the output from <code>ability</code> command for Thieves and populates the known spells/feats based on the known khri.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Parses the output from ‘ability` command for Thieves This method populates the known spells/feats based on the known khri.</p>
 </div></span>
   
 </li>
@@ -247,7 +254,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#parse-class_method" title="parse (class method)">.<strong>parse</strong>(line)  &#x21d2; void </a>
+      <a href="#parse-class_method" title="parse (class method)">.<strong>parse</strong>(line)  &#x21d2; String </a>
     
 
     
@@ -261,7 +268,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Parses a line of server output.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Parses a line of server output This method checks for various patterns in the server output and updates the game state accordingly.</p>
 </div></span>
   
 </li>
@@ -287,7 +295,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks for events in the server string</p>
+    
+<p>Checks for events in the server string This method iterates through defined matchers and updates flags based on the server output.</p>
 
 
   </div>
@@ -298,7 +307,7 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_check_events'>check_events</span><span class='lparen'>(</span><span class='id identifier rubyid_server_output'>server_output</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_check_events'>check_events</span><span class='lparen'>(</span><span class='id identifier rubyid_server_output'>server_output</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -314,7 +323,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The server output string</p>
+        <div class='inline'>
+<p>The server output string to check</p>
 </div>
       
     </li>
@@ -332,7 +342,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The original server string</p>
+        <div class='inline'>
+<p>The original server string</p>
 </div>
       
     </li>
@@ -345,20 +356,20 @@
       <pre class="lines">
 
 
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110</pre>
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drparser.rb', line 100</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drparser.rb', line 159</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_events'>check_events</span><span class='lparen'>(</span><span class='id identifier rubyid_server_string'>server_string</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="Flags.html" title="Lich::DragonRealms::Flags (class)">Flags</a></span></span><span class='period'>.</span><span class='id identifier rubyid_matchers'><span class='object_link'><a href="Flags.html#matchers-class_method" title="Lich::DragonRealms::Flags.matchers (method)">matchers</a></span></span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_regexes'>regexes</span><span class='op'>|</span>
@@ -390,13 +401,13 @@
     
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p>This method expects specific output format.</p>
+    <div class='inline'>
+<p>This method is primarily used by the ‘skill-recorder` script.</p>
 </div>
   </div>
 
-<p>Parses the output from <code>exp mods</code> command
-and updates the DRSkill.exp_modifiers hash with the skill and value.
-This is primarily used by the <code>skill-recorder</code> script.</p>
+
+<p>Parses the output from ‘exp mods` command This method updates the DRSkill.exp_modifiers hash with the skill and value based on the server output.</p>
 
 
   </div>
@@ -407,7 +418,7 @@ This is primarily used by the <code>skill-recorder</code> script.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_check_exp_mods'>check_exp_mods</span><span class='lparen'>(</span><span class='id identifier rubyid_server_output'>server_output</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_check_exp_mods'>check_exp_mods</span><span class='lparen'>(</span><span class='id identifier rubyid_server_output'>server_output</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -423,7 +434,8 @@ This is primarily used by the <code>skill-recorder</code> script.</p>
       
       
         &mdash;
-        <div class='inline'><p>The server output string</p>
+        <div class='inline'>
+<p>The server output string to parse</p>
 </div>
       
     </li>
@@ -441,7 +453,8 @@ This is primarily used by the <code>skill-recorder</code> script.</p>
       
       
         &mdash;
-        <div class='inline'><p>The original server string</p>
+        <div class='inline'>
+<p>The original server string</p>
 </div>
       
     </li>
@@ -454,51 +467,51 @@ This is primarily used by the <code>skill-recorder</code> script.</p>
       <pre class="lines">
 
 
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157
-158
-159
-160
-161</pre>
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drparser.rb', line 120</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drparser.rb', line 179</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_exp_mods'>check_exp_mods</span><span class='lparen'>(</span><span class='id identifier rubyid_server_string'>server_string</span><span class='rparen'>)</span>
   <span class='comment'># This method parses the output from `exp mods` command
@@ -558,8 +571,8 @@ This is primarily used by the <code>skill-recorder</code> script.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Parses the output from <code>ability</code> command for Barbarians
-and populates the known spells/feats based on the known abilities/masteries.</p>
+    
+<p>Parses the output from ‘ability` command for Barbarians This method populates the known spells/feats based on the known abilities/masteries.</p>
 
 
   </div>
@@ -570,7 +583,7 @@ and populates the known spells/feats based on the known abilities/masteries.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_check_known_barbarian_abilities'>check_known_barbarian_abilities</span><span class='lparen'>(</span><span class='id identifier rubyid_server_output'>server_output</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_check_known_barbarian_abilities'>check_known_barbarian_abilities</span><span class='lparen'>(</span><span class='id identifier rubyid_server_output'>server_output</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -586,7 +599,8 @@ and populates the known spells/feats based on the known abilities/masteries.</p>
       
       
         &mdash;
-        <div class='inline'><p>The server output string</p>
+        <div class='inline'>
+<p>The server output string to parse</p>
 </div>
       
     </li>
@@ -604,7 +618,8 @@ and populates the known spells/feats based on the known abilities/masteries.</p>
       
       
         &mdash;
-        <div class='inline'><p>The original server string</p>
+        <div class='inline'>
+<p>The original server string</p>
 </div>
       
     </li>
@@ -617,50 +632,50 @@ and populates the known spells/feats based on the known abilities/masteries.</p>
       <pre class="lines">
 
 
-276
-277
-278
-279
-280
-281
-282
-283
-284
-285
-286
-287
-288
-289
-290
-291
-292
-293
-294
-295
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309
-310
-311
-312
-313
-314
-315
-316</pre>
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drparser.rb', line 276</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drparser.rb', line 335</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_known_barbarian_abilities'>check_known_barbarian_abilities</span><span class='lparen'>(</span><span class='id identifier rubyid_server_string'>server_string</span><span class='rparen'>)</span>
   <span class='comment'># This method parses the output from `ability` command for Barbarians
@@ -722,12 +737,13 @@ and populates the known spells/feats based on the known abilities/masteries.</p>
     
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p>This method handles both column-formatted and non-column output.</p>
+    <div class='inline'>
+<p>As of June 2022, there are two different output formats: column-formatted and non-column.</p>
 </div>
   </div>
 
-<p>Parses the output from <code>spells</code> command for magic users
-and populates the known spells/feats based on the output.</p>
+
+<p>Parses the output from ‘spells` command for magic users This method populates the known spells/feats based on the output.</p>
 
 
   </div>
@@ -738,7 +754,7 @@ and populates the known spells/feats based on the output.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_check_known_spells'>check_known_spells</span><span class='lparen'>(</span><span class='id identifier rubyid_server_output'>server_output</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_check_known_spells'>check_known_spells</span><span class='lparen'>(</span><span class='id identifier rubyid_server_output'>server_output</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -754,7 +770,8 @@ and populates the known spells/feats based on the output.</p>
       
       
         &mdash;
-        <div class='inline'><p>The server output string</p>
+        <div class='inline'>
+<p>The server output string to parse</p>
 </div>
       
     </li>
@@ -772,7 +789,8 @@ and populates the known spells/feats based on the output.</p>
       
       
         &mdash;
-        <div class='inline'><p>The original server string</p>
+        <div class='inline'>
+<p>The original server string</p>
 </div>
       
     </li>
@@ -785,65 +803,6 @@ and populates the known spells/feats based on the output.</p>
       <pre class="lines">
 
 
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191
-192
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202
-203
-204
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224
-225
-226
-227
-228
 229
 230
 231
@@ -883,10 +842,69 @@ and populates the known spells/feats based on the output.</p>
 265
 266
 267
-268</pre>
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drparser.rb', line 170</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drparser.rb', line 229</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_known_spells'>check_known_spells</span><span class='lparen'>(</span><span class='id identifier rubyid_server_string'>server_string</span><span class='rparen'>)</span>
   <span class='comment'># This method parses the output from `spells` command for magic users
@@ -1003,8 +1021,8 @@ and populates the known spells/feats based on the output.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Parses the output from <code>ability</code> command for Thieves
-and populates the known spells/feats based on the known khri.</p>
+    
+<p>Parses the output from ‘ability` command for Thieves This method populates the known spells/feats based on the known khri.</p>
 
 
   </div>
@@ -1015,7 +1033,7 @@ and populates the known spells/feats based on the known khri.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_check_known_thief_khri'>check_known_thief_khri</span><span class='lparen'>(</span><span class='id identifier rubyid_server_output'>server_output</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_check_known_thief_khri'>check_known_thief_khri</span><span class='lparen'>(</span><span class='id identifier rubyid_server_output'>server_output</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1031,7 +1049,8 @@ and populates the known spells/feats based on the known khri.</p>
       
       
         &mdash;
-        <div class='inline'><p>The server output string</p>
+        <div class='inline'>
+<p>The server output string to parse</p>
 </div>
       
     </li>
@@ -1049,7 +1068,8 @@ and populates the known spells/feats based on the known khri.</p>
       
       
         &mdash;
-        <div class='inline'><p>The original server string</p>
+        <div class='inline'>
+<p>The original server string</p>
 </div>
       
     </li>
@@ -1062,37 +1082,37 @@ and populates the known spells/feats based on the known khri.</p>
       <pre class="lines">
 
 
-324
-325
-326
-327
-328
-329
-330
-331
-332
-333
-334
-335
-336
-337
-338
-339
-340
-341
-342
-343
-344
-345
-346
-347
-348
-349
-350
-351</pre>
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drparser.rb', line 324</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drparser.rb', line 383</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_known_thief_khri'>check_known_thief_khri</span><span class='lparen'>(</span><span class='id identifier rubyid_server_string'>server_string</span><span class='rparen'>)</span>
   <span class='comment'># This method parses the output from `ability` command for Thieves
@@ -1130,7 +1150,7 @@ and populates the known spells/feats based on the known khri.</p>
       <div class="method_details ">
   <h3 class="signature " id="parse-class_method">
   
-    .<strong>parse</strong>(line)  &#x21d2; <tt>void</tt> 
+    .<strong>parse</strong>(line)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt> 
   
 
   
@@ -1138,7 +1158,8 @@ and populates the known spells/feats based on the known khri.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Parses a line of server output</p>
+    
+<p>Parses a line of server output This method checks for various patterns in the server output and updates the game state accordingly.</p>
 
 
   </div>
@@ -1149,7 +1170,7 @@ and populates the known spells/feats based on the known khri.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_server_output_line'>server_output_line</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::DragonRealms::DRParser (module)">DRParser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_server_line'>server_line</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1165,13 +1186,32 @@ and populates the known spells/feats based on the known khri.</p>
       
       
         &mdash;
-        <div class='inline'><p>The server output line</p>
+        <div class='inline'>
+<p>The server output line to parse</p>
 </div>
       
     </li>
   
 </ul>
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The original server line</p>
+</div>
+      
+    </li>
+  
+</ul>
 <p class="tag_title">Raises:</p>
 <ul class="raise">
   
@@ -1183,7 +1223,8 @@ and populates the known spells/feats based on the known khri.</p>
       
       
         &mdash;
-        <div class='inline'><p>Raises an error if parsing fails.</p>
+        <div class='inline'>
+<p>If an error occurs during parsing.</p>
 </div>
       
     </li>
@@ -1196,67 +1237,6 @@ and populates the known spells/feats based on the known khri.</p>
       <pre class="lines">
 
 
-359
-360
-361
-362
-363
-364
-365
-366
-367
-368
-369
-370
-371
-372
-373
-374
-375
-376
-377
-378
-379
-380
-381
-382
-383
-384
-385
-386
-387
-388
-389
-390
-391
-392
-393
-394
-395
-396
-397
-398
-399
-400
-401
-402
-403
-404
-405
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415
-416
-417
-418
-419
 420
 421
 422
@@ -1316,10 +1296,71 @@ and populates the known spells/feats based on the known khri.</p>
 476
 477
 478
-479</pre>
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'drparser.rb', line 359</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/drinfomon/drparser.rb', line 420</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_check_events'>check_events</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
@@ -1452,7 +1493,7 @@ and populates the known spells/feats based on the known khri.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:51 2025 by
+  Generated on Fri Nov  7 05:08:38 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

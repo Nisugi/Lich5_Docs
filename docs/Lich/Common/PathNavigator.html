@@ -6,7 +6,7 @@
 <title>
   Class: Lich::Common::PathNavigator
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -94,17 +94,17 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>path_navigator.rb</dd>
+    <dd>output/latest/documented/common/settings/path_navigator.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Path navigator to encapsulate path navigation logic
-Path navigator to encapsulate path navigation logic</p>
+    
+<p>Path navigator to encapsulate path navigation logic Path navigator to encapsulate path navigation logic</p>
 
-<p>This class provides methods to manage and navigate through a path structure.</p>
+<p>This class provides methods to manage and navigate through a path structure. It interacts with a database adapter to retrieve and manipulate settings.</p>
 
 
   </div>
@@ -115,7 +115,8 @@ Path navigator to encapsulate path navigation logic</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Creating a path navigator</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Creating a path navigator</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_navigator'>navigator</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Common.html" title="Lich::Common (module)">Common</a></span></span><span class='op'>::</span><span class='const'>PathNavigator</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Lich::Common::PathNavigator#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_db_adapter'>db_adapter</span><span class='rparen'>)</span></code></pre>
@@ -152,7 +153,8 @@ Path navigator to encapsulate path navigation logic</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute path.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute path.</p>
 </div></span>
   
 </li>
@@ -190,7 +192,8 @@ Path navigator to encapsulate path navigation logic</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>A new instance of PathNavigator.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of PathNavigator.</p>
 </div></span>
   
 </li>
@@ -213,7 +216,8 @@ Path navigator to encapsulate path navigation logic</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Navigate to the node at &quot;path&quot; (or @path if nil).</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Navigate to the node at “path” (or @path if nil).</p>
 </div></span>
   
 </li>
@@ -236,7 +240,8 @@ Path navigator to encapsulate path navigation logic</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Resets the current path to an empty array.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Resets the current path to an empty state.</p>
 </div></span>
   
 </li>
@@ -259,7 +264,8 @@ Path navigator to encapsulate path navigation logic</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Resets the path and returns the provided value.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Resets the path and returns a specified value.</p>
 </div></span>
   
 </li>
@@ -282,7 +288,8 @@ Path navigator to encapsulate path navigation logic</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Allow external callers to drive the effective path Allow external callers to drive the effective path.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Allow external callers to drive the effective path Allow external callers to drive the effective path.</p>
 </div></span>
   
 </li>
@@ -305,7 +312,8 @@ Path navigator to encapsulate path navigation logic</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new instance of PathNavigator.</p>
+    
+<p>Returns a new instance of PathNavigator.</p>
 
 
   </div>
@@ -319,13 +327,13 @@ Path navigator to encapsulate path navigation logic</p>
       <pre class="lines">
 
 
-12
 13
 14
-15</pre>
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'path_navigator.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings/path_navigator.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_db_adapter'>db_adapter</span><span class='rparen'>)</span>
   <span class='ivar'>@db_adapter</span> <span class='op'>=</span> <span class='id identifier rubyid_db_adapter'>db_adapter</span>
@@ -354,7 +362,8 @@ Path navigator to encapsulate path navigation logic</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the value of attribute path.</p>
+    
+<p>Returns the value of attribute path.</p>
 
 
   </div>
@@ -368,12 +377,12 @@ Path navigator to encapsulate path navigation logic</p>
       <pre class="lines">
 
 
-17
 18
-19</pre>
+19
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'path_navigator.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings/path_navigator.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_path'>path</span>
   <span class='ivar'>@path</span>
@@ -401,13 +410,12 @@ Path navigator to encapsulate path navigation logic</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Navigate to the node at &quot;path&quot; (or @path if nil).
-Returns [target, root]</p>
+    
+<p>Navigate to the node at “path” (or @path if nil). Returns [target, root]</p>
 
-<p>Navigate to the node at &#39;path&#39; (or @path if nil).
-Returns [target, root]</p>
+<p>Navigate to the node at “path” (or @path if nil). Returns [target, root]</p>
 
-<p>This method navigates through the path structure and retrieves the target node and root object.</p>
+<p>This method navigates through the path segments to find the target node. It can create missing containers if specified.</p>
 
 
   </div>
@@ -418,10 +426,11 @@ Returns [target, root]</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Navigating to a path</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Navigating to a path</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_target'>target</span><span class='comma'>,</span> <span class='id identifier rubyid_root'><span class='object_link'><a href="../../top-level-namespace.html" title="Top Level Namespace (root)">root</a></span></span> <span class='op'>=</span> <span class='id identifier rubyid_navigator'>navigator</span><span class='period'>.</span><span class='id identifier rubyid_navigate_to_path'>navigate_to_path</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>script_name</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>scope</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>level1</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>level2</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_target'>target</span><span class='comma'>,</span> <span class='id identifier rubyid_root'><span class='object_link'><a href="../../top-level-namespace.html" title="Top Level Namespace (root)">root</a></span></span> <span class='op'>=</span> <span class='id identifier rubyid_navigator'>navigator</span><span class='period'>.</span><span class='id identifier rubyid_navigate_to_path'>navigate_to_path</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>my_script</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GS3:CharName</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>level1</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>level2</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -437,7 +446,8 @@ Returns [target, root]</p>
       
       
         &mdash;
-        <div class='inline'><p>the script namespace (e.g., Script.current.name)</p>
+        <div class='inline'>
+<p>the script namespace (e.g., Script.current.name)</p>
 </div>
       
     </li>
@@ -454,7 +464,8 @@ Returns [target, root]</p>
       
       
         &mdash;
-        <div class='inline'><p>whether to create intermediate containers</p>
+        <div class='inline'>
+<p>whether to create intermediate containers</p>
 </div>
       
     </li>
@@ -471,7 +482,8 @@ Returns [target, root]</p>
       
       
         &mdash;
-        <div class='inline'><p>settings scope (e.g., &quot;GS3:CharName&quot;)</p>
+        <div class='inline'>
+<p>settings scope (e.g., “GS3:CharName”)</p>
 </div>
       
     </li>
@@ -488,7 +500,8 @@ Returns [target, root]</p>
       
       
         &mdash;
-        <div class='inline'><p>path segments; integers index arrays, symbols/strings index hashes</p>
+        <div class='inline'>
+<p>path segments; integers index arrays, symbols/strings index hashes</p>
 </div>
       
     </li>
@@ -503,7 +516,8 @@ Returns [target, root]</p>
       
       
         &mdash;
-        <div class='inline'><p>the script namespace (e.g., Script.current.name)</p>
+        <div class='inline'>
+<p>the script namespace (e.g., Script.current.name)</p>
 </div>
       
     </li>
@@ -520,7 +534,8 @@ Returns [target, root]</p>
       
       
         &mdash;
-        <div class='inline'><p>whether to create intermediate containers</p>
+        <div class='inline'>
+<p>whether to create intermediate containers</p>
 </div>
       
     </li>
@@ -537,7 +552,8 @@ Returns [target, root]</p>
       
       
         &mdash;
-        <div class='inline'><p>settings scope (e.g., &#39;GS3:CharName&#39;)</p>
+        <div class='inline'>
+<p>settings scope (e.g., “GS3:CharName”)</p>
 </div>
       
     </li>
@@ -554,7 +570,8 @@ Returns [target, root]</p>
       
       
         &mdash;
-        <div class='inline'><p>path segments; integers index arrays, symbols/strings index hashes</p>
+        <div class='inline'>
+<p>path segments; integers index arrays, symbols/strings index hashes</p>
 </div>
       
     </li>
@@ -572,7 +589,8 @@ Returns [target, root]</p>
       
       
         &mdash;
-        <div class='inline'><p>[target_node, root_object]</p>
+        <div class='inline'><dl class="rdoc-list label-list"><dt>target_node, root_object
+<dd></dd></dl>
 </div>
       
     </li>
@@ -585,7 +603,8 @@ Returns [target, root]</p>
       
       
         &mdash;
-        <div class='inline'><p>[target_node, root_object]</p>
+        <div class='inline'><dl class="rdoc-list label-list"><dt>target_node, root_object
+<dd></dd></dl>
 </div>
       
     </li>
@@ -602,7 +621,8 @@ Returns [target, root]</p>
       
       
         
-        <div class='inline'><p>ArgumentError if an invalid array index is encountered</p>
+        <div class='inline'>
+<p>ArgumentError if an invalid array index is encountered</p>
 </div>
       
     </li>
@@ -615,8 +635,6 @@ Returns [target, root]</p>
       <pre class="lines">
 
 
-74
-75
 76
 77
 78
@@ -659,10 +677,12 @@ Returns [target, root]</p>
 115
 116
 117
-118</pre>
+118
+119
+120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'path_navigator.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings/path_navigator.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_navigate_to_path'>navigate_to_path</span><span class='lparen'>(</span><span class='id identifier rubyid_script_name'>script_name</span><span class='comma'>,</span> <span class='id identifier rubyid_create_missing'>create_missing</span> <span class='op'>=</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid_scope'>scope</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>:</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_work_path'>work_path</span> <span class='op'>=</span> <span class='id identifier rubyid_path'>path</span> <span class='op'>?</span> <span class='const'>Array</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='ivar'>@path</span>
@@ -725,9 +745,10 @@ Returns [target, root]</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Resets the current path to an empty array.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Resets the current path to an empty state.</p>
 
-<p>This method clears the current path.</p>
+<p>This method clears the existing path.</p>
 
 
   </div>
@@ -738,7 +759,8 @@ Returns [target, root]</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Resetting the path</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Resetting the path</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_navigator'>navigator</span><span class='period'>.</span><span class='id identifier rubyid_reset_path'>reset_path</span></code></pre>
@@ -752,12 +774,12 @@ Returns [target, root]</p>
       <pre class="lines">
 
 
-37
 38
-39</pre>
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'path_navigator.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings/path_navigator.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reset_path'>reset_path</span>
   <span class='ivar'>@path</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -778,9 +800,10 @@ Returns [target, root]</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Resets the path and returns the provided value.</p>
+    
+<p>Resets the path and returns a specified value.</p>
 
-<p>This method clears the current path and returns the specified value.</p>
+<p>This method clears the current path and returns the provided value.</p>
 
 
   </div>
@@ -791,10 +814,11 @@ Returns [target, root]</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Resetting the path and returning a value</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Resetting the path and returning a value</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_navigator'>navigator</span><span class='period'>.</span><span class='id identifier rubyid_reset_path_and_return'>reset_path_and_return</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>some_value</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_navigator'>navigator</span><span class='period'>.</span><span class='id identifier rubyid_reset_path_and_return'>reset_path_and_return</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -810,7 +834,8 @@ Returns [target, root]</p>
       
       
         &mdash;
-        <div class='inline'><p>The value to return after resetting the path.</p>
+        <div class='inline'>
+<p>The value to return after resetting the path.</p>
 </div>
       
     </li>
@@ -828,7 +853,8 @@ Returns [target, root]</p>
       
       
         &mdash;
-        <div class='inline'><p>The provided value.</p>
+        <div class='inline'>
+<p>The provided value.</p>
 </div>
       
     </li>
@@ -841,13 +867,13 @@ Returns [target, root]</p>
       <pre class="lines">
 
 
-48
 49
 50
-51</pre>
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'path_navigator.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings/path_navigator.rb', line 49</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reset_path_and_return'>reset_path_and_return</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_reset_path'>reset_path</span>
@@ -869,8 +895,8 @@ Returns [target, root]</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Allow external callers to drive the effective path
-Allow external callers to drive the effective path</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Allow external callers to drive the effective path Allow external callers to drive the effective path</p>
 
 <p>This method sets the current path to the provided new path.</p>
 
@@ -883,10 +909,11 @@ Allow external callers to drive the effective path</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Setting a new path</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Setting a new path</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_navigator'>navigator</span><span class='period'>.</span><span class='id identifier rubyid_set_path'>set_path</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>level1</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>level2</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_navigator'>navigator</span><span class='period'>.</span><span class='id identifier rubyid_set_path'>set_path</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>level1</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>level2</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -902,7 +929,8 @@ Allow external callers to drive the effective path</p>
       
       
         &mdash;
-        <div class='inline'><p>The new path to set, can be an array or a single object.</p>
+        <div class='inline'>
+<p>The new path to set, can be an array or a single object.</p>
 </div>
       
     </li>
@@ -916,12 +944,12 @@ Allow external callers to drive the effective path</p>
       <pre class="lines">
 
 
-27
 28
-29</pre>
+29
+30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'path_navigator.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/common/settings/path_navigator.rb', line 28</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_set_path'>set_path</span><span class='lparen'>(</span><span class='id identifier rubyid_new_path'>new_path</span><span class='rparen'>)</span>
   <span class='ivar'>@path</span> <span class='op'>=</span> <span class='const'>Array</span><span class='lparen'>(</span><span class='id identifier rubyid_new_path'>new_path</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
@@ -936,7 +964,7 @@ Allow external callers to drive the effective path</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:57 2025 by
+  Generated on Fri Nov  7 05:08:44 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

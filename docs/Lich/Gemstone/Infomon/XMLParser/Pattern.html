@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Lich::Gemstone::Infomon::XMLParser::Pattern
+  
+    &mdash; Lich 5 Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../../../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Lich::Gemstone::Infomon::XMLParser::Pattern";
+  relpath = '../../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../../Lich.html" title="Lich (module)">Lich</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../XMLParser.html" title="Lich::Gemstone::Infomon::XMLParser (module)">XMLParser</a></span></span>
+     &raquo; 
+    <span class="title">Pattern</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Lich::Gemstone::Infomon::XMLParser::Pattern
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>output/latest/documented/gemstone/infomon/xmlparser.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="Group_Short-constant" class="">Group_Short =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Regular expression for matching short group messages</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?:group|following you|IconJOINED)|^You are leading|(?:&#39;s&lt;\/a&gt;|your) hand(?: tenderly)?\.\r?\n?$</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="Also_Here_Arrival-constant" class="">Also_Here_Arrival =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Regular expression for matching arrival messages of other players</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^Also here: </span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="NpcDeathPrefix-constant" class="">NpcDeathPrefix =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Regular expression for matching the prefix of NPC death messages</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>The fire in the</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>With a surprised grunt, the</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>A sudden blue fire bursts over the hair of a</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>You hear a sound like a weeping child as a white glow separates itself from the</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>A low gurgling sound comes from deep within the chest of the</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?:The|An?)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>One last prolonged bovine moan escapes from the</span><span class='regexp_end'>/</span></span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="NpcDeathPostfix-constant" class="">NpcDeathPostfix =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Regular expression for matching the postfix of NPC death messages</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>body as it rises, disappearing into the heavens</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>falls to the ground and dies(?:, its feelers twitching)?</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>falls back into a heap and dies</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>body goes rigid and collapses to the ground, dead</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>body goes rigid and collapses to the floor, dead</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>slowly settles to the ground and begins to dissipate</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>falls to the ground motionless</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>body goes rigid and &lt;pushBold\/&gt;&lt;a.*?&gt;\w+&lt;\/a&gt;&lt;popBold\/&gt; eyes roll back into &lt;pushBold\/&gt;&lt;a.*?&gt;\w+&lt;\/a&gt;&lt;popBold\/&gt; head as &lt;pushBold\/&gt;&lt;a.*?&gt;\w+&lt;\/a&gt;&lt;popBold\/&gt; dies</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>growls one last time, and crumples to the ground in a heap</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>spins backwards and collapses dead</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>falls to the ground as the stillness of death overtakes &lt;pushBold\/&gt;&lt;a.*?&gt;(?:him|her|it)&lt;\/a&gt;&lt;popBold\/&gt;</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>crumples to the ground motionless</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>howls in agony one last time and dies</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>howls in agony while falling to the ground motionless</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>moans pitifully as &lt;pushBold\/&gt;&lt;a.*?&gt;(?:he|she|it)&lt;\/a&gt;&lt;popBold\/&gt; is released</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>careens to the ground and crumples in a heap</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>hisses one last time and dies</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>flutters its wings one last time and dies</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>slumps to the ground with a final snarl</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>horn dims as (?:his|her) lifeforce fades away</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>blinks in astonishment, then collapses in a motionless heap</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>collapses in a heap, its huge girth shaking the floor around it</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>goes limp and .*? falls over as the fire slowly fades from .*? eyes</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>eyes slowly fades</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>sputters violently, cascading flames all around as .*? collapses in a final fiery display</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>falls to the ground in a clattering, motionless heap</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>goes limp and .*? falls over as the fire slowly fades from .*? eyes</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>collapses to the ground and shudders once before finally going still</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>crumbles into a pile of rubble</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>shudders once before .*? finally goes still</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>totters for a moment and then falls to the ground like a pillar, breaking into pieces that fly out in every direction</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>collapses into a pile of rubble</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>rumbles in agony as .*? teeters for a moment, then falls directly at you</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>twists and coils violently in .*? death throes, finally going still</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>twitches one final time before falling still upon the floor</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>, consuming .*? form in the space of a breath</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>screams one last time and dies</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>breathes .*? last gasp and dies</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>rolls over and dies</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>as .*? falls (?:slack|still) against the (?:floor|ground)</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>collapses to the ground, emits a final squeal, and dies</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>cries out in pain one last time and dies</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>crumples to a heap on the ground and dies</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>collapses to the ground, emits a final sigh, and dies</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>crumples to the ground and dies</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>lets out a final caterwaul and dies</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>screams evilly one last time and goes still</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>gurgles eerily and collapses into a puddle of water</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>shudders, then topples to the ground</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>shudders one last time before lying still</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>violently for a moment, then goes still</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>grumbles in pain one last time before lying still</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>rumbles in agony and goes still</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>falls to the ground dead</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>collapses to the ground, emits a final bleat, and dies</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>topples to the ground motionless</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>shudders violently for a moment, then goes still</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>rumbles in agony as .*? teeters for a moment, then tumbles to the ground with a thundering crash</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>sinks to the ground, the fell light in (?:his|her) eyes guttering before going out entirely</span><span class='regexp_end'>/</span></span><span class='comma'>,</span>
+<span class='rparen'>)</span></pre></dd>
+      
+        <dt id="NpcDeathMessage-constant" class="">NpcDeathMessage =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Regular expression for matching complete NPC death messages</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(?:&lt;pushBold\/&gt;)?</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#NpcDeathPrefix-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::NpcDeathPrefix (constant)">NpcDeathPrefix</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'> (?:&lt;pushBold\/&gt;)?&lt;a.*?exist=[&quot;&#39;](?&lt;npc_id&gt;\-?[0-9]+)[&quot;&#39;].*?&gt;.*?&lt;\/a&gt;(?:&lt;popBold\/&gt;)?(?:&#39;s)? </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#NpcDeathPostfix-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::NpcDeathPostfix (constant)">NpcDeathPostfix</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>[\.!]\r?\n?$</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="StowListOutputStart-constant" class="">StowListOutputStart =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>the following are for parsing STOW LIST and setting of STOW containers Regular expression for matching the start of the stow list output</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^You have the following containers set as stow targets:\r?\n?$</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="StowListContainer-constant" class="">StowListContainer =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Regular expression for matching individual stow containers</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^  (?:(?:an?|some) )?(?&lt;before&gt;[^&lt;]+)?&lt;a exist=&quot;(?&lt;id&gt;\d+)&quot; noun=&quot;(?&lt;noun&gt;[^&quot;]+)&quot;&gt;(?&lt;name&gt;[^&lt;]+)&lt;\/a&gt;(?&lt;after&gt; [^\(]+)? \((?&lt;type&gt;box|gem|herb|skin|wand|scroll|potion|trinket|reagent|lockpick|treasure|forageable|collectible|default)\)\r?\n?$</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="StowSetContainer1-constant" class="">StowSetContainer1 =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Regular expression for matching the setting of a stow container</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^Set &quot;(?:(?:an?|some) )?(?&lt;before&gt;[^&lt;]+)?&lt;a exist=&quot;(?&lt;id&gt;[^&quot;]+)&quot; noun=&quot;(?&lt;noun&gt;[^&quot;]+)&quot;&gt;(?&lt;name&gt;[^&lt;]+)&lt;\/a&gt;(?&lt;after&gt; [^&quot;]+)?&quot; to be your STOW (?&lt;type&gt;BOX|GEM|HERB|SKIN|WAND|SCROLL|POTION|TRINKET|REAGENT|LOCKPICK|TREASURE|FORAGEABLE|COLLECTIBLE) container\.\r?\n?$</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="StowSetContainer2-constant" class="">StowSetContainer2 =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Regular expression for matching the setting of a default stow container</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>Set &quot;(?:(?:an?|some) )?(?&lt;before&gt;[^&lt;]+)?&lt;a exist=&quot;(?&lt;id&gt;[^&quot;]+)&quot; noun=&quot;(?&lt;noun&gt;[^&quot;]+)&quot;&gt;(?&lt;name&gt;[^&lt;]+)&lt;\/a&gt;(?&lt;after&gt; [^&quot;]+)?&quot; to be your (?&lt;type&gt;default) STOW container\.\r?\n?$</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="ReadyListOutputStart-constant" class="">ReadyListOutputStart =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>the following are for parsing READY LIST and setting of READY items Regular expression for matching the start of the ready list output</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^Your current settings are:\r?\n?$</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="ReadyListNormal-constant" class="">ReadyListNormal =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Regular expression for matching normal ready list items</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^  (?&lt;type&gt;shield|(?:secondary |ranged )?weapon|ammo bundle|wand): \(?&lt;d cmd=[&#39;&quot;](?:store|ready) (?:SHIELD|2?WEAPON|RANGED|AMMO|WAND)(?: clear)?[&#39;&quot;]&gt;(?:(?:(?:an?|some) )?(?&lt;before&gt;[^&lt;]+)?&lt;a exist=&quot;(?&lt;id&gt;[^&quot;]+)&quot; noun=&quot;(?&lt;noun&gt;[^&quot;]+)&quot;&gt;(?&lt;name&gt;[^&lt;]+)&lt;\/a&gt;(?&lt;after&gt; [^&lt;]+)?|none)&lt;\/d&gt;\)? \(&lt;d cmd=&#39;store set&#39;&gt;(?&lt;store&gt;worn if possible, stowed otherwise|stowed|put in (?:secondary )?sheath)&lt;\/d&gt;\)\r?\n?$</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="ReadyListAmmo2-constant" class="">ReadyListAmmo2 =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Regular expression for matching ammo2 bundle in the ready list</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^  (?&lt;type&gt;ammo2 bundle): &lt;d cmd=&quot;store AMMO2 clear&quot;&gt;(?:(?:an?|some) )?(?&lt;before&gt;[^&lt;]+)?&lt;a exist=&quot;(?&lt;id&gt;[^&quot;]+)&quot; noun=&quot;(?&lt;noun&gt;[^&quot;]+)&quot;&gt;(?&lt;name&gt;[^&lt;]+)&lt;\/a&gt;(?&lt;after&gt; [^&lt;]+)?&lt;\/d&gt;\r?\n?$</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="ReadyListSheathsSet-constant" class="">ReadyListSheathsSet =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Regular expression for matching the setting of sheaths in the ready list</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^  (?&lt;type&gt;(?:secondary )?sheath): &lt;d cmd=&quot;store 2?SHEATH clear&quot;&gt;(?:(?:an?|some) )?(?&lt;before&gt;[^&lt;]+)?&lt;a exist=&quot;(?&lt;id&gt;[^&quot;]+)&quot; noun=&quot;(?&lt;noun&gt;[^&quot;]+)&quot;&gt;(?&lt;name&gt;[^&lt;]+)&lt;\/a&gt;(?&lt;after&gt; [^&lt;]+)?&lt;\/d&gt;\r?\n?$</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="ReadyListFinished-constant" class="">ReadyListFinished =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Regular expression for matching the finished state of the ready list</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>To change your default item for a category that is already set, clear the category first by clicking on the item in the list above.  Click &lt;d cmd=&quot;ready list&quot;&gt;here&lt;\/d&gt; to update the list\.\r?\n?$</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="ReadyItemClear-constant" class="">ReadyItemClear =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Regular expression for matching the clearing of a ready item</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^Cleared your default (?&lt;type&gt;shield|(?:secondary |ranged )?weapon|ammo2? bundle|(?:secondary )?sheath|wand)\.\r?\n?$</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="ReadyItemSet-constant" class="">ReadyItemSet =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Regular expression for matching the setting of a ready item</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^Setting (?:(?:an?|some) )?(?&lt;before&gt;[^&lt;]+)?&lt;a exist=&quot;(?&lt;id&gt;[^&quot;]+)&quot; noun=&quot;(?&lt;noun&gt;[^&quot;]+)&quot;&gt;(?&lt;name&gt;[^&lt;]+)&lt;\/a&gt;(?&lt;after&gt; [^&lt;]+)? to be your default (?&lt;type&gt;shield|(?:secondary |ranged )?weapon|ammo2? bundle|(?:secondary )?sheath|wand)\.\r?\n?$</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="ReadyStoreSet-constant" class="">ReadyStoreSet =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Regular expression for matching the storage setting of ready items</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^When storing your (?&lt;type&gt;shield|(?:ranged |secondary )?weapon|ammo bundle|wand), it will be (?&lt;store&gt;worn if possible and stowed if not|stowed|stored in your (?:secondary )?sheath)\.\r?\n?$</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="StatusPrompt-constant" class="">StatusPrompt =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Regular expression for matching the status prompt</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&lt;prompt time=&quot;[0-9]+&quot;&gt;</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="All-constant" class="">All =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Combined regular expression for all patterns used in parsing</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#NpcDeathMessage-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::NpcDeathMessage (constant)">NpcDeathMessage</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#Group_Short-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::Group_Short (constant)">Group_Short</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#Also_Here_Arrival-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::Also_Here_Arrival (constant)">Also_Here_Arrival</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#StowListOutputStart-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::StowListOutputStart (constant)">StowListOutputStart</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#StowListContainer-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::StowListContainer (constant)">StowListContainer</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#StowSetContainer1-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::StowSetContainer1 (constant)">StowSetContainer1</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#StowSetContainer2-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::StowSetContainer2 (constant)">StowSetContainer2</a></span></span><span class='comma'>,</span>
+<span class='const'><span class='object_link'><a href="#ReadyListOutputStart-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::ReadyListOutputStart (constant)">ReadyListOutputStart</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#ReadyListNormal-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::ReadyListNormal (constant)">ReadyListNormal</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#ReadyListAmmo2-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::ReadyListAmmo2 (constant)">ReadyListAmmo2</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#ReadyListSheathsSet-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::ReadyListSheathsSet (constant)">ReadyListSheathsSet</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#ReadyListFinished-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::ReadyListFinished (constant)">ReadyListFinished</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#ReadyItemClear-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::ReadyItemClear (constant)">ReadyItemClear</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#ReadyItemSet-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::ReadyItemSet (constant)">ReadyItemSet</a></span></span><span class='comma'>,</span>
+<span class='const'><span class='object_link'><a href="#ReadyStoreSet-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::ReadyStoreSet (constant)">ReadyStoreSet</a></span></span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#StatusPrompt-constant" title="Lich::Gemstone::Infomon::XMLParser::Pattern::StatusPrompt (constant)">StatusPrompt</a></span></span><span class='rparen'>)</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Nov  7 05:08:37 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.1.7).
+</div>
+
+    </div>
+  </body>
+</html>

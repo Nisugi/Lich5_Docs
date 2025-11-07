@@ -6,7 +6,7 @@
 <title>
   Class: Lich::DragonRealms::SlackBot
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -94,15 +94,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>slackbot.rb</dd>
+    <dd>output/latest/documented/dragonrealms/commons/slackbot.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>A bot for interacting with Slack API.
-This class handles authentication, user management, and sending messages.</p>
+    
+<p>A bot for interacting with Slack API This class handles authentication, user management, and sending messages.</p>
 
 
   </div>
@@ -113,7 +113,8 @@ This class handles authentication, user management, and sending messages.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Creating a SlackBot instance</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Creating a SlackBot instance</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_bot'>bot</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../DragonRealms.html" title="Lich::DragonRealms (module)">DragonRealms</a></span></span><span class='op'>::</span><span class='const'>SlackBot</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Lich::DragonRealms::SlackBot#initialize (method)">new</a></span></span></code></pre>
@@ -153,7 +154,8 @@ This class handles authentication, user management, and sending messages.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks if the provided token is authenticated with Slack.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if the provided token is authenticated with Slack.</p>
 </div></span>
   
 </li>
@@ -176,7 +178,8 @@ This class handles authentication, user management, and sending messages.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Sends a direct message to a specified user on Slack.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Sends a direct message to a specified user.</p>
 </div></span>
   
 </li>
@@ -199,7 +202,8 @@ This class handles authentication, user management, and sending messages.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Attempts to find a valid Slack token from known lichbots.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Attempts to find a valid Slack token from known lichbots Searches through predefined lichbots and updates the UserVars with a valid token if found.</p>
 </div></span>
   
 </li>
@@ -222,7 +226,8 @@ This class handles authentication, user management, and sending messages.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Retrieves the direct message channel ID for a given username.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the direct message channel ID for a given username.</p>
 </div></span>
   
 </li>
@@ -247,7 +252,8 @@ This class handles authentication, user management, and sending messages.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Initializes a new SlackBot instance.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Initializes a new SlackBot instance Sets up the API URL and retrieves the user list.</p>
 </div></span>
   
 </li>
@@ -270,7 +276,8 @@ This class handles authentication, user management, and sending messages.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Sends a POST request to the Slack API.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Sends a POST request to the Slack API.</p>
 </div></span>
   
 </li>
@@ -293,7 +300,8 @@ This class handles authentication, user management, and sending messages.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Requests a Slack token from a specified lichbot.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Requests a Slack token from a specified lichbot.</p>
 </div></span>
   
 </li>
@@ -316,8 +324,8 @@ This class handles authentication, user management, and sending messages.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Initializes a new SlackBot instance.
-Sets up the API URL and retrieves the user list.</p>
+    
+<p>Initializes a new SlackBot instance Sets up the API URL and retrieves the user list.</p>
 
 
   </div>
@@ -342,7 +350,7 @@ Sets up the API URL and retrieves the user list.</p>
 19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'slackbot.rb', line 11</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/slackbot.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
   <span class='ivar'>@api_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://slack.com/api/</span><span class='tstring_end'>&#39;</span></span>
@@ -376,7 +384,8 @@ Sets up the API URL and retrieves the user list.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks if the provided token is authenticated with Slack.</p>
+    
+<p>Checks if the provided token is authenticated with Slack</p>
 
 
   </div>
@@ -387,7 +396,7 @@ Sets up the API URL and retrieves the user list.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_bot'>bot</span><span class='period'>.</span><span class='id identifier rubyid_authed?'>authed?</span><span class='lparen'>(</span><span class='const'>UserVars</span><span class='period'>.</span><span class='id identifier rubyid_slack_token'>slack_token</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_bot'>bot</span><span class='period'>.</span><span class='id identifier rubyid_authed?'>authed?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>xoxb-1234567890</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -403,7 +412,8 @@ Sets up the API URL and retrieves the user list.</p>
       
       
         &mdash;
-        <div class='inline'><p>The Slack token to verify.</p>
+        <div class='inline'>
+<p>The Slack token to verify</p>
 </div>
       
     </li>
@@ -421,7 +431,26 @@ Sets up the API URL and retrieves the user list.</p>
       
       
         &mdash;
-        <div class='inline'><p>True if authenticated, false otherwise.</p>
+        <div class='inline'>
+<p>Returns true if authenticated, false otherwise</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>StandardError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Raises an error if the request fails</p>
 </div>
       
     </li>
@@ -434,15 +463,15 @@ Sets up the API URL and retrieves the user list.</p>
       <pre class="lines">
 
 
-26
 27
 28
 29
 30
-31</pre>
+31
+32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'slackbot.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/slackbot.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_authed?'>authed?</span><span class='lparen'>(</span><span class='id identifier rubyid_token'>token</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>token</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_token'>token</span> <span class='rbrace'>}</span>
@@ -466,7 +495,8 @@ Sets up the API URL and retrieves the user list.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Sends a direct message to a specified user on Slack.</p>
+    
+<p>Sends a direct message to a specified user</p>
 
 
   </div>
@@ -477,7 +507,7 @@ Sets up the API URL and retrieves the user list.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_bot'>bot</span><span class='period'>.</span><span class='id identifier rubyid_direct_message'>direct_message</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>john_doe</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hello there!</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_bot'>bot</span><span class='period'>.</span><span class='id identifier rubyid_direct_message'>direct_message</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>john_doe</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello, John!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -493,7 +523,8 @@ Sets up the API URL and retrieves the user list.</p>
       
       
         &mdash;
-        <div class='inline'><p>The username of the recipient.</p>
+        <div class='inline'>
+<p>The username of the recipient</p>
 </div>
       
     </li>
@@ -508,7 +539,8 @@ Sets up the API URL and retrieves the user list.</p>
       
       
         &mdash;
-        <div class='inline'><p>The message to send.</p>
+        <div class='inline'>
+<p>The message to send</p>
 </div>
       
     </li>
@@ -526,7 +558,26 @@ Sets up the API URL and retrieves the user list.</p>
       
       
         &mdash;
-        <div class='inline'><p>The response from the Slack API.</p>
+        <div class='inline'>
+<p>The response from the Slack API</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>StandardError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Raises an error if the request fails</p>
 </div>
       
     </li>
@@ -539,15 +590,15 @@ Sets up the API URL and retrieves the user list.</p>
       <pre class="lines">
 
 
-95
-96
-97
-98
-99
-100</pre>
+102
+103
+104
+105
+106
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'slackbot.rb', line 95</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/slackbot.rb', line 102</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_direct_message'>direct_message</span><span class='lparen'>(</span><span class='id identifier rubyid_username'>username</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_dm_channel'>dm_channel</span> <span class='op'>=</span> <span class='id identifier rubyid_get_dm_channel'>get_dm_channel</span><span class='lparen'>(</span><span class='id identifier rubyid_username'>username</span><span class='rparen'>)</span>
@@ -571,7 +622,8 @@ Sets up the API URL and retrieves the user list.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Attempts to find a valid Slack token from known lichbots.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Attempts to find a valid Slack token from known lichbots Searches through predefined lichbots and updates the UserVars with a valid token if found.</p>
 
 
   </div>
@@ -593,10 +645,6 @@ Sets up the API URL and retrieves the user list.</p>
       <pre class="lines">
 
 
-60
-61
-62
-63
 64
 65
 66
@@ -605,10 +653,14 @@ Sets up the API URL and retrieves the user list.</p>
 69
 70
 71
-72</pre>
+72
+73
+74
+75
+76</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'slackbot.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/slackbot.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_token'>find_token</span>
   <span class='id identifier rubyid_lichbots'>lichbots</span> <span class='op'>=</span> <span class='qwords_beg'>%w[</span><span class='tstring_content'>Quilsilgas</span><span class='tstring_end'>]</span></span>
@@ -639,7 +691,8 @@ Sets up the API URL and retrieves the user list.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Retrieves the direct message channel ID for a given username.</p>
+    
+<p>Retrieves the direct message channel ID for a given username</p>
 
 
   </div>
@@ -650,7 +703,7 @@ Sets up the API URL and retrieves the user list.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_channel_id'>channel_id</span> <span class='op'>=</span> <span class='id identifier rubyid_bot'>bot</span><span class='period'>.</span><span class='id identifier rubyid_get_dm_channel'>get_dm_channel</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>john_doe</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_channel_id'>channel_id</span> <span class='op'>=</span> <span class='id identifier rubyid_bot'>bot</span><span class='period'>.</span><span class='id identifier rubyid_get_dm_channel'>get_dm_channel</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>john_doe</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -666,7 +719,8 @@ Sets up the API URL and retrieves the user list.</p>
       
       
         &mdash;
-        <div class='inline'><p>The username to find the DM channel for.</p>
+        <div class='inline'>
+<p>The username to find the DM channel for</p>
 </div>
       
     </li>
@@ -684,7 +738,26 @@ Sets up the API URL and retrieves the user list.</p>
       
       
         &mdash;
-        <div class='inline'><p>The channel ID for direct messaging.</p>
+        <div class='inline'>
+<p>The ID of the DM channel</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>StandardError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Raises an error if the user is not found</p>
 </div>
       
     </li>
@@ -697,13 +770,13 @@ Sets up the API URL and retrieves the user list.</p>
       <pre class="lines">
 
 
-107
-108
-109
-110</pre>
+115
+116
+117
+118</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'slackbot.rb', line 107</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/slackbot.rb', line 115</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get_dm_channel'>get_dm_channel</span><span class='lparen'>(</span><span class='id identifier rubyid_username'>username</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_user'>user</span> <span class='op'>=</span> <span class='ivar'>@users_list</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>members</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_u'><span class='object_link'><a href="../../top-level-namespace.html#u-instance_method" title="#u (method)">u</a></span></span><span class='op'>|</span> <span class='id identifier rubyid_u'><span class='object_link'><a href="../../top-level-namespace.html#u-instance_method" title="#u (method)">u</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id identifier rubyid_username'>username</span> <span class='rbrace'>}</span>
@@ -725,13 +798,22 @@ Sets up the API URL and retrieves the user list.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Sends a POST request to the Slack API.</p>
+    
+<p>Sends a POST request to the Slack API</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_bot'>bot</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>auth.test</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>token</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>xoxb-1234567890</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -744,7 +826,8 @@ Sets up the API URL and retrieves the user list.</p>
       
       
         &mdash;
-        <div class='inline'><p>The API method to call.</p>
+        <div class='inline'>
+<p>The API method to call</p>
 </div>
       
     </li>
@@ -759,7 +842,8 @@ Sets up the API URL and retrieves the user list.</p>
       
       
         &mdash;
-        <div class='inline'><p>The parameters to send with the request.</p>
+        <div class='inline'>
+<p>The parameters to send with the request</p>
 </div>
       
     </li>
@@ -777,7 +861,8 @@ Sets up the API URL and retrieves the user list.</p>
       
       
         &mdash;
-        <div class='inline'><p>The response from the Slack API.</p>
+        <div class='inline'>
+<p>The response from the Slack API</p>
 </div>
       
     </li>
@@ -794,7 +879,8 @@ Sets up the API URL and retrieves the user list.</p>
       
       
         &mdash;
-        <div class='inline'><p>Raises an error if the request fails.</p>
+        <div class='inline'>
+<p>Raises an error if the request fails</p>
 </div>
       
     </li>
@@ -807,18 +893,18 @@ Sets up the API URL and retrieves the user list.</p>
       <pre class="lines">
 
 
-79
-80
-81
-82
-83
-84
 85
 86
-87</pre>
+87
+88
+89
+90
+91
+92
+93</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'slackbot.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/slackbot.rb', line 85</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_uri'>uri</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@api_url</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method'>method</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -846,19 +932,21 @@ Sets up the API URL and retrieves the user list.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method will block until a response is received or the timeout is reached.</p>
-</div>
-  </div>
-
-<p>Requests a Slack token from a specified lichbot.</p>
+<p>Requests a Slack token from a specified lichbot</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_token'>token</span> <span class='op'>=</span> <span class='id identifier rubyid_bot'>bot</span><span class='period'>.</span><span class='id identifier rubyid_request_token'>request_token</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Quilsilgas</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -871,7 +959,8 @@ Sets up the API URL and retrieves the user list.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the lichbot to request the token from.</p>
+        <div class='inline'>
+<p>The name of the lichbot to request the token from</p>
 </div>
       
     </li>
@@ -889,7 +978,26 @@ Sets up the API URL and retrieves the user list.</p>
       
       
         &mdash;
-        <div class='inline'><p>The token if found, false otherwise.</p>
+        <div class='inline'>
+<p>Returns the token if found, false otherwise</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Timeout::Error</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Raises an error if the request times out</p>
 </div>
       
     </li>
@@ -902,9 +1010,6 @@ Sets up the API URL and retrieves the user list.</p>
       <pre class="lines">
 
 
-37
-38
-39
 40
 41
 42
@@ -919,10 +1024,13 @@ Sets up the API URL and retrieves the user list.</p>
 51
 52
 53
-54</pre>
+54
+55
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'slackbot.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/slackbot.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_request_token'>request_token</span><span class='lparen'>(</span><span class='id identifier rubyid_lichbot'>lichbot</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_ttl'>ttl</span> <span class='op'>=</span> <span class='int'>10</span>
@@ -952,7 +1060,7 @@ Sets up the API URL and retrieves the user list.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:56 2025 by
+  Generated on Fri Nov  7 05:08:44 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

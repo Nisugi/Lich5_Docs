@@ -6,7 +6,7 @@
 <title>
   Class: Lich::Gemstone::Scars
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -96,18 +96,17 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>scars.rb</dd>
+    <dd>output/latest/documented/gemstone/scars.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Scars class for tracking character scars
-Scars class for tracking character scars</p>
+    
+<p>Scars class for tracking character scars Scars class for tracking character scars</p>
 
-<p>This class provides methods to access and manage scars on various body parts of a character.
-It defines both primary and alias methods for body parts, as well as composite methods for groups of body parts.</p>
+<p>This class provides methods to access and manage scars on various body parts of a character. It defines both primary and alias methods for body parts, as well as composite methods for groups of body parts.</p>
 
 
   </div>
@@ -118,11 +117,12 @@ It defines both primary and alias methods for body parts, as well as composite m
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Accessing a character&#39;s left eye scar</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Accessing a character’s left eye scar</p>
 </div></h5>
       
       <pre class="example code"><code><span class='id identifier rubyid_scars'>scars</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'>Scars</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
-<span class='id identifier rubyid_scars'>scars</span><span class='period'>.</span><span class='id identifier rubyid_leftEye'>leftEye</span></code></pre>
+<span class='id identifier rubyid_scar_level'>scar_level</span> <span class='op'>=</span> <span class='id identifier rubyid_scars'>scars</span><span class='period'>.</span><span class='id identifier rubyid_leftEye'>leftEye</span></code></pre>
     
   </div>
 
@@ -139,11 +139,8 @@ It defines both primary and alias methods for body parts, as well as composite m
         <dt id="BODY_PARTS-constant" class="">BODY_PARTS =
           <div class="docstring">
   <div class="discussion">
-    <p>Body part accessor methods
-XML from Simutronics drives the structure of the scar naming (eg. leftEye)
-The following is a hash of the body parts and shorthand aliases created for more idiomatic Ruby
-A hash of body parts and their shorthand aliases.
-This constant is used to define methods for accessing scars on different body parts.</p>
+    
+<p>Body part accessor methods XML from Simutronics drives the structure of the scar naming (eg. leftEye) The following is a hash of the body parts and shorthand aliases created for more idiomatic Ruby A hash of body parts and their shorthand aliases. This constant drives the structure of the scar naming convention.</p>
 
 
   </div>
@@ -192,7 +189,7 @@ This constant is used to define methods for accessing scars on different body pa
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#all_scars-class_method" title="all_scars (class method)">.<strong>all_scars</strong>  &#x21d2; Hash&lt;Symbol, Integer&gt; </a>
+      <a href="#all_scars-class_method" title="all_scars (class method)">.<strong>all_scars</strong>  &#x21d2; Hash </a>
     
 
     
@@ -206,7 +203,8 @@ This constant is used to define methods for accessing scars on different body pa
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Helper method to get all scar levels Returns a hash of all scar levels for each body part.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Helper method to get all scar levels Retrieves the scar levels for all body parts.</p>
 </div></span>
   
 </li>
@@ -229,7 +227,8 @@ This constant is used to define methods for accessing scars on different body pa
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Composite scar methods Returns the maximum scar level for both arms and hands.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Composite scar methods Retrieves the maximum scar level for both arms and hands.</p>
 </div></span>
   
 </li>
@@ -274,7 +273,8 @@ This constant is used to define methods for accessing scars on different body pa
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Alias snake_case methods for overachievers Returns the scar level for the left eye using snake_case.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Alias snake_case methods for overachievers Retrieves the scar level for the left eye using snake_case.</p>
 </div></span>
   
 </li>
@@ -363,7 +363,8 @@ This constant is used to define methods for accessing scars on different body pa
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the maximum scar level for both arms and legs.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the maximum scar level for all limbs (arms and legs).</p>
 </div></span>
   
 </li>
@@ -496,7 +497,8 @@ This constant is used to define methods for accessing scars on different body pa
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Helper method to get scar level for any body part Returns the scar level for a specified body part.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Helper method to get scar level for any body part Retrieves the scar level for a specified body part.</p>
 </div></span>
   
 </li>
@@ -519,7 +521,8 @@ This constant is used to define methods for accessing scars on different body pa
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the maximum scar level for the torso.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Retrieves the maximum scar level for the torso.</p>
 </div></span>
   
 </li>
@@ -548,7 +551,7 @@ This constant is used to define methods for accessing scars on different body pa
       <div class="method_details first">
   <h3 class="signature first" id="all_scars-class_method">
   
-    .<strong>all_scars</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&lt;Symbol, Integer&gt;</tt> 
+    .<strong>all_scars</strong>  &#x21d2; <tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt> 
   
 
   
@@ -559,47 +562,40 @@ This constant is used to define methods for accessing scars on different body pa
     
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p>This method temporarily changes the injury mode to &#39;scar&#39; to retrieve actual scar level data.</p>
+    <div class='inline'>
+<p>This method temporarily changes the injury mode to ‘scar’ to retrieve actual scar level data.</p>
 </div>
   </div>
 
-<p>Helper method to get all scar levels
-Returns a hash of all scar levels for each body part.</p>
+
+<p>Helper method to get all scar levels Retrieves the scar levels for all body parts.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_all_scar_levels'>all_scar_levels</span> <span class='op'>=</span> <span class='id identifier rubyid_scars'>scars</span><span class='period'>.</span><span class='id identifier rubyid_all_scars'>all_scars</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span>&lt;Symbol, Integer&gt;</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>A hash mapping body parts to their scar levels.</p>
-</div>
-      
-    </li>
-  
-</ul>
-<p class="tag_title">Raises:</p>
-<ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>StandardError</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'><p>If there is an issue retrieving the scar data.</p>
+        <div class='inline'>
+<p>A hash mapping body parts to their scar levels.</p>
 </div>
       
     </li>
@@ -612,18 +608,18 @@ Returns a hash of all scar levels for each body part.</p>
       <pre class="lines">
 
 
-127
-128
-129
-130
-131
-132
-133
-134
-135</pre>
+144
+145
+146
+147
+148
+149
+150
+151
+152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'scars.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/scars.rb', line 144</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_all_scars'>all_scars</span>
   <span class='kw'>begin</span>
@@ -653,18 +649,27 @@ Returns a hash of all scar levels for each body part.</p>
     
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p>This method uses &#39;both&#39; injury mode for consistency.</p>
+    <div class='inline'>
+<p>This method uses ‘both’ injury mode for consistency.</p>
 </div>
   </div>
 
-<p>Composite scar methods
-Returns the maximum scar level for both arms and hands.</p>
+
+<p>Composite scar methods Retrieves the maximum scar level for both arms and hands.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_max_scar'>max_scar</span> <span class='op'>=</span> <span class='id identifier rubyid_scars'>scars</span><span class='period'>.</span><span class='id identifier rubyid_arms'>arms</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -676,7 +681,8 @@ Returns the maximum scar level for both arms and hands.</p>
       
       
         &mdash;
-        <div class='inline'><p>The maximum scar level for arms or nil if not present.</p>
+        <div class='inline'>
+<p>The maximum scar level among the arms and hands or nil if not present.</p>
 </div>
       
     </li>
@@ -689,18 +695,18 @@ Returns the maximum scar level for both arms and hands.</p>
       <pre class="lines">
 
 
-73
-74
-75
-76
-77
-78
 79
 80
-81</pre>
+81
+82
+83
+84
+85
+86
+87</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'scars.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/scars.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_arms'>arms</span>
   <span class='id identifier rubyid_fix_injury_mode'><span class='object_link'><a href="../../top-level-namespace.html#fix_injury_mode-instance_method" title="#fix_injury_mode (method)">fix_injury_mode</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>both</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -731,10 +737,10 @@ Returns the maximum scar level for both arms and hands.</p>
       <pre class="lines">
 
 
-60</pre>
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'scars.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/scars.rb', line 63</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_left_arm'>left_arm</span><span class='semicolon'>;</span> <span class='id identifier rubyid_leftArm'>leftArm</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -756,18 +762,27 @@ Returns the maximum scar level for both arms and hands.</p>
     
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p>This method is an alias for leftEye.</p>
+    <div class='inline'>
+<p>This method is an alias for leftEye.</p>
 </div>
   </div>
 
-<p>Alias snake_case methods for overachievers
-Returns the scar level for the left eye using snake_case.</p>
+
+<p>Alias snake_case methods for overachievers Retrieves the scar level for the left eye using snake_case.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_scar_level'>scar_level</span> <span class='op'>=</span> <span class='id identifier rubyid_scars'>scars</span><span class='period'>.</span><span class='id identifier rubyid_left_eye'>left_eye</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -779,7 +794,8 @@ Returns the scar level for the left eye using snake_case.</p>
       
       
         &mdash;
-        <div class='inline'><p>The scar level for the left eye or nil if not present.</p>
+        <div class='inline'>
+<p>The scar level for the left eye or nil if not present.</p>
 </div>
       
     </li>
@@ -792,10 +808,10 @@ Returns the scar level for the left eye using snake_case.</p>
       <pre class="lines">
 
 
-58</pre>
+61</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'scars.rb', line 58</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/scars.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_left_eye'>left_eye</span><span class='semicolon'>;</span> <span class='id identifier rubyid_leftEye'>leftEye</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -818,10 +834,10 @@ Returns the scar level for the left eye using snake_case.</p>
       <pre class="lines">
 
 
-66</pre>
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'scars.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/scars.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_left_foot'>left_foot</span><span class='semicolon'>;</span> <span class='id identifier rubyid_leftFoot'>leftFoot</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -844,10 +860,10 @@ Returns the scar level for the left eye using snake_case.</p>
       <pre class="lines">
 
 
-62</pre>
+65</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'scars.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/scars.rb', line 65</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_left_hand'>left_hand</span><span class='semicolon'>;</span> <span class='id identifier rubyid_leftHand'>leftHand</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -870,10 +886,10 @@ Returns the scar level for the left eye using snake_case.</p>
       <pre class="lines">
 
 
-64</pre>
+67</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'scars.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/scars.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_left_leg'>left_leg</span><span class='semicolon'>;</span> <span class='id identifier rubyid_leftLeg'>leftLeg</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -895,17 +911,27 @@ Returns the scar level for the left eye using snake_case.</p>
     
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p>This method uses &#39;both&#39; injury mode for consistency.</p>
+    <div class='inline'>
+<p>This method uses ‘both’ injury mode for consistency.</p>
 </div>
   </div>
 
-<p>Returns the maximum scar level for both arms and legs.</p>
+
+<p>Retrieves the maximum scar level for all limbs (arms and legs).</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_max_scar'>max_scar</span> <span class='op'>=</span> <span class='id identifier rubyid_scars'>scars</span><span class='period'>.</span><span class='id identifier rubyid_limbs'>limbs</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -917,7 +943,8 @@ Returns the scar level for the left eye using snake_case.</p>
       
       
         &mdash;
-        <div class='inline'><p>The maximum scar level for limbs or nil if not present.</p>
+        <div class='inline'>
+<p>The maximum scar level among all limbs or nil if not present.</p>
 </div>
       
     </li>
@@ -930,20 +957,20 @@ Returns the scar level for the left eye using snake_case.</p>
       <pre class="lines">
 
 
-86
-87
-88
-89
-90
-91
-92
-93
-94
 95
-96</pre>
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'scars.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/scars.rb', line 95</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_limbs'>limbs</span>
   <span class='id identifier rubyid_fix_injury_mode'><span class='object_link'><a href="../../top-level-namespace.html#fix_injury_mode-instance_method" title="#fix_injury_mode (method)">fix_injury_mode</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>both</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -976,10 +1003,10 @@ Returns the scar level for the left eye using snake_case.</p>
       <pre class="lines">
 
 
-61</pre>
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'scars.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/scars.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_right_arm'>right_arm</span><span class='semicolon'>;</span> <span class='id identifier rubyid_rightArm'>rightArm</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1002,10 +1029,10 @@ Returns the scar level for the left eye using snake_case.</p>
       <pre class="lines">
 
 
-59</pre>
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'scars.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/scars.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_right_eye'>right_eye</span><span class='semicolon'>;</span> <span class='id identifier rubyid_rightEye'>rightEye</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1028,10 +1055,10 @@ Returns the scar level for the left eye using snake_case.</p>
       <pre class="lines">
 
 
-67</pre>
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'scars.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/scars.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_right_foot'>right_foot</span><span class='semicolon'>;</span> <span class='id identifier rubyid_rightFoot'>rightFoot</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1054,10 +1081,10 @@ Returns the scar level for the left eye using snake_case.</p>
       <pre class="lines">
 
 
-63</pre>
+66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'scars.rb', line 63</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/scars.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_right_hand'>right_hand</span><span class='semicolon'>;</span> <span class='id identifier rubyid_rightHand'>rightHand</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1080,10 +1107,10 @@ Returns the scar level for the left eye using snake_case.</p>
       <pre class="lines">
 
 
-65</pre>
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'scars.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/scars.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_right_leg'>right_leg</span><span class='semicolon'>;</span> <span class='id identifier rubyid_rightLeg'>rightLeg</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -1105,18 +1132,27 @@ Returns the scar level for the left eye using snake_case.</p>
     
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p>This method uses &#39;both&#39; injury mode for consistency.</p>
+    <div class='inline'>
+<p>This method uses ‘both’ injury mode for consistency.</p>
 </div>
   </div>
 
-<p>Helper method to get scar level for any body part
-Returns the scar level for a specified body part.</p>
+
+<p>Helper method to get scar level for any body part Retrieves the scar level for a specified body part.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <p class="tag_title">Parameters:</p>
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_scar_level'>scar_level</span> <span class='op'>=</span> <span class='id identifier rubyid_scars'>scars</span><span class='period'>.</span><span class='id identifier rubyid_scar_level'>scar_level</span><span class='lparen'>(</span><span class='symbol'>:leftEye</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -1129,7 +1165,8 @@ Returns the scar level for a specified body part.</p>
       
       
         &mdash;
-        <div class='inline'><p>The body part to check (e.g., :leftEye).</p>
+        <div class='inline'>
+<p>The body part to check (e.g., :leftEye).</p>
 </div>
       
     </li>
@@ -1147,7 +1184,8 @@ Returns the scar level for a specified body part.</p>
       
       
         &mdash;
-        <div class='inline'><p>The scar level for the specified body part or nil if not present.</p>
+        <div class='inline'>
+<p>The scar level for the specified body part or nil if not present.</p>
 </div>
       
     </li>
@@ -1160,13 +1198,13 @@ Returns the scar level for a specified body part.</p>
       <pre class="lines">
 
 
-117
-118
-119
-120</pre>
+132
+133
+134
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'scars.rb', line 117</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/scars.rb', line 132</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_scar_level'>scar_level</span><span class='lparen'>(</span><span class='id identifier rubyid_part'>part</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_fix_injury_mode'><span class='object_link'><a href="../../top-level-namespace.html#fix_injury_mode-instance_method" title="#fix_injury_mode (method)">fix_injury_mode</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>both</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1191,17 +1229,27 @@ Returns the scar level for a specified body part.</p>
     
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p>This method uses &#39;both&#39; injury mode for consistency.</p>
+    <div class='inline'>
+<p>This method uses ‘both’ injury mode for consistency.</p>
 </div>
   </div>
 
-<p>Returns the maximum scar level for the torso.</p>
+
+<p>Retrieves the maximum scar level for the torso.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_max_scar'>max_scar</span> <span class='op'>=</span> <span class='id identifier rubyid_scars'>scars</span><span class='period'>.</span><span class='id identifier rubyid_torso'>torso</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1213,7 +1261,8 @@ Returns the scar level for a specified body part.</p>
       
       
         &mdash;
-        <div class='inline'><p>The maximum scar level for the torso or nil if not present.</p>
+        <div class='inline'>
+<p>The maximum scar level for the torso or nil if not present.</p>
 </div>
       
     </li>
@@ -1226,19 +1275,19 @@ Returns the scar level for a specified body part.</p>
       <pre class="lines">
 
 
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110</pre>
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'scars.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/scars.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_torso'>torso</span>
   <span class='id identifier rubyid_fix_injury_mode'><span class='object_link'><a href="../../top-level-namespace.html#fix_injury_mode-instance_method" title="#fix_injury_mode (method)">fix_injury_mode</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>both</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1260,7 +1309,7 @@ Returns the scar level for a specified body part.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:54 2025 by
+  Generated on Fri Nov  7 05:08:41 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

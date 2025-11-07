@@ -6,7 +6,7 @@
 <title>
   Class: Lich::Gemstone::StowList
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -94,15 +94,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>stowlist.rb</dd>
+    <dd>output/latest/documented/gemstone/stowlist.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Represents a list of items to stow in the game.
-This class manages the stow list and provides methods to check and reset it.</p>
+    
+<p>Represents a list of items to stow in the Lich game. This class manages the stow list and provides methods to check, reset, and validate the stow targets.</p>
 
 
   </div>
@@ -113,11 +113,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Creating a stow list and checking its validity</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_stow_list'>stow_list</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'>StowList</span>
-<span class='id identifier rubyid_stow_list'>stow_list</span><span class='period'>.</span><span class='id identifier rubyid_check'>check</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'>StowList</span><span class='period'>.</span><span class='id identifier rubyid_checked'>checked</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'>StowList</span><span class='period'>.</span><span class='id identifier rubyid_check'><span class='object_link'><a href="#check-class_method" title="Lich::Gemstone::StowList.check (method)">check</a></span></span></code></pre>
     
   </div>
 
@@ -134,7 +131,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
         <dt id="ORIGINAL_STOW_LIST-constant" class="">ORIGINAL_STOW_LIST =
           <div class="docstring">
   <div class="discussion">
-    <p>The original list of stowable item types.</p>
+    
+<p>The original list of stowable item types.</p>
 
 
   </div>
@@ -180,7 +178,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks the stow list and updates the checked state.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks the stow list and updates the checked status.</p>
 </div></span>
   
 </li>
@@ -203,7 +202,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Sets the checked state of the stow list.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Sets the checked status of the stow list.</p>
 </div></span>
   
 </li>
@@ -226,7 +226,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks if the stow list has been validated.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if the stow list has been validated.</p>
 </div></span>
   
 </li>
@@ -249,7 +250,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Resets the stow list entries to nil.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Resets the stow list entries to nil.</p>
 </div></span>
   
 </li>
@@ -272,7 +274,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the current stow list.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the current stow list.</p>
 </div></span>
   
 </li>
@@ -295,7 +298,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Validates the stow list entries.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Validates the stow list entries.</p>
 </div></span>
   
 </li>
@@ -324,11 +328,13 @@ This class manages the stow list and provides methods to check and reset it.</p>
     
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p>This method will set the checked state to true after execution.</p>
+    <div class='inline'>
+<p>This method will set the checked status to true after execution.</p>
 </div>
   </div>
 
-<p class="note returns_void">This method returns an undefined value.</p><p>Checks the stow list and updates the checked state.</p>
+<p class="note returns_void">This method returns an undefined value.</p>
+<p>Checks the stow list and updates the checked status.</p>
 
 
   </div>
@@ -357,7 +363,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
       
       
         &mdash;
-        <div class='inline'><p>If true, suppresses output.</p>
+        <div class='inline'>
+<p>If true, suppresses output.</p>
 </div>
       
     </li>
@@ -374,7 +381,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
       
       
         &mdash;
-        <div class='inline'><p>If true, uses a quiet output pattern.</p>
+        <div class='inline'>
+<p>If true, uses a quiet output pattern.</p>
 </div>
       
     </li>
@@ -388,19 +396,19 @@ This class manages the stow list and provides methods to check and reset it.</p>
       <pre class="lines">
 
 
+92
+93
+94
+95
+96
+97
+98
 99
 100
-101
-102
-103
-104
-105
-106
-107
-108</pre>
+101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stowlist.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/stowlist.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check'>check</span><span class='lparen'>(</span><span class='label'>silent:</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='label'>quiet:</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_quiet'>quiet</span>
@@ -428,21 +436,14 @@ This class manages the stow list and provides methods to check and reset it.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Sets the checked state of the stow list.</p>
+    
+<p>Sets the checked status of the stow list.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::StowList (class)">StowList</a></span></span><span class='period'>.</span><span class='id identifier rubyid_checked'>checked</span> <span class='op'>=</span> <span class='kw'>true</span></code></pre>
-    
-  </div>
-<p class="tag_title">Parameters:</p>
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -455,7 +456,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
       
       
         &mdash;
-        <div class='inline'><p>The new checked state.</p>
+        <div class='inline'>
+<p>The new checked status.</p>
 </div>
       
     </li>
@@ -473,7 +475,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
       
       
         &mdash;
-        <div class='inline'><p>The updated checked state.</p>
+        <div class='inline'>
+<p>The updated checked status.</p>
 </div>
       
     </li>
@@ -486,12 +489,12 @@ This class manages the stow list and provides methods to check and reset it.</p>
       <pre class="lines">
 
 
-57
-58
-59</pre>
+54
+55
+56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stowlist.rb', line 57</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/stowlist.rb', line 54</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_checked='>checked=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
   <span class='ivar'>@checked</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
@@ -512,7 +515,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks if the stow list has been validated.</p>
+    
+<p>Checks if the stow list has been validated.</p>
 
 
   </div>
@@ -530,7 +534,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
       
       
         &mdash;
-        <div class='inline'><p>True if the stow list has been checked, false otherwise.</p>
+        <div class='inline'>
+<p>True if the stow list has been checked, false otherwise.</p>
 </div>
       
     </li>
@@ -543,12 +548,12 @@ This class manages the stow list and provides methods to check and reset it.</p>
       <pre class="lines">
 
 
+47
 48
-49
-50</pre>
+49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stowlist.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/stowlist.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_checked?'>checked?</span>
   <span class='ivar'>@checked</span>
@@ -569,21 +574,14 @@ This class manages the stow list and provides methods to check and reset it.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Resets the stow list entries to nil.</p>
+    
+<p>Resets the stow list entries to nil.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::StowList (class)">StowList</a></span></span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span></code></pre>
-    
-  </div>
-<p class="tag_title">Parameters:</p>
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -598,7 +596,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
       
       
         &mdash;
-        <div class='inline'><p>If true, resets all entries; otherwise, only resets original stow list entries.</p>
+        <div class='inline'>
+<p>If true, resets all entries; otherwise, only resets original stow list.</p>
 </div>
       
     </li>
@@ -612,16 +611,16 @@ This class manages the stow list and provides methods to check and reset it.</p>
       <pre class="lines">
 
 
-84
-85
-86
-87
-88
-89
-90</pre>
+77
+78
+79
+80
+81
+82
+83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stowlist.rb', line 84</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/stowlist.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reset'>reset</span><span class='lparen'>(</span><span class='label'>all:</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='ivar'>@checked</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -646,21 +645,14 @@ This class manages the stow list and provides methods to check and reset it.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the current stow list.</p>
+    
+<p>Returns the current stow list.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-      <pre class="example code"><code><span class='id identifier rubyid_current_stow_list'>current_stow_list</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::StowList (class)">StowList</a></span></span><span class='period'>.</span><span class='id identifier rubyid_stow_list'>stow_list</span></code></pre>
-    
-  </div>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -672,7 +664,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
       
       
         &mdash;
-        <div class='inline'><p>The stow list containing item types and their values.</p>
+        <div class='inline'>
+<p>The stow list with item types as keys and their values.</p>
 </div>
       
     </li>
@@ -685,12 +678,12 @@ This class manages the stow list and provides methods to check and reset it.</p>
       <pre class="lines">
 
 
+41
 42
-43
-44</pre>
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stowlist.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/stowlist.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_stow_list'>stow_list</span>
   <span class='ivar'>@stow_list</span>
@@ -714,9 +707,11 @@ This class manages the stow list and provides methods to check and reset it.</p>
     
   <div class="note notetag">
     <strong>Note:</strong>
-    <div class='inline'><p>This method requires the stow list to be checked first.</p>
+    <div class='inline'>
+<p>This method requires that the stow list has been checked.</p>
 </div>
   </div>
+
 
 <p>Validates the stow list entries.</p>
 
@@ -724,15 +719,7 @@ This class manages the stow list and provides methods to check and reset it.</p>
   </div>
 </div>
 <div class="tags">
-  
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-      <pre class="example code"><code><span class='id identifier rubyid_is_valid'>is_valid</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::StowList (class)">StowList</a></span></span><span class='period'>.</span><span class='id identifier rubyid_valid?'>valid?</span></code></pre>
-    
-  </div>
-<p class="tag_title">Parameters:</p>
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -747,7 +734,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
       
       
         &mdash;
-        <div class='inline'><p>If true, checks all entries; otherwise, only checks original stow list entries.</p>
+        <div class='inline'>
+<p>If true, checks all entries; otherwise, only checks original stow list.</p>
 </div>
       
     </li>
@@ -765,7 +753,8 @@ This class manages the stow list and provides methods to check and reset it.</p>
       
       
         &mdash;
-        <div class='inline'><p>True if all checked entries are valid, false otherwise.</p>
+        <div class='inline'>
+<p>True if all checked entries are valid, false otherwise.</p>
 </div>
       
     </li>
@@ -778,21 +767,21 @@ This class manages the stow list and provides methods to check and reset it.</p>
       <pre class="lines">
 
 
+62
+63
+64
+65
+66
 67
 68
 69
 70
 71
 72
-73
-74
-75
-76
-77
-78</pre>
+73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'stowlist.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/stowlist.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_valid?'>valid?</span><span class='lparen'>(</span><span class='label'>all:</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='comment'># check if existing containers are valid or not
@@ -816,7 +805,7 @@ This class manages the stow list and provides methods to check and reset it.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:56 2025 by
+  Generated on Fri Nov  7 05:08:43 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

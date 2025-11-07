@@ -6,7 +6,7 @@
 <title>
   Module: Lich::GameBase::GameInstanceFactory
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,15 +78,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>games.rb</dd>
+    <dd>output/latest/documented/games.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Factory for creating game-specific objects
-Factory for creating game-specific objects</p>
+    
+<p>Factory for creating game-specific objects Factory for creating game-specific objects</p>
 
 
   </div>
@@ -97,10 +97,11 @@ Factory for creating game-specific objects</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Creating a game instance</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Creating a game instance</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='id identifier rubyid_instance'>instance</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../GameBase.html" title="Lich::GameBase (module)">GameBase</a></span></span><span class='op'>::</span><span class='const'>GameInstanceFactory</span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="#create-class_method" title="Lich::GameBase::GameInstanceFactory.create (method)">create</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>GS</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_instance'>instance</span> <span class='op'>=</span> <span class='const'>GameInstanceFactory</span><span class='period'>.</span><span class='id identifier rubyid_create'><span class='object_link'><a href="#create-class_method" title="Lich::GameBase::GameInstanceFactory.create (method)">create</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GS</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -123,7 +124,7 @@ Factory for creating game-specific objects</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#create-class_method" title="create (class method)">.<strong>create</strong>(game_type)  &#x21d2; GameBase::GameInstance::Base </a>
+      <a href="#create-class_method" title="create (class method)">.<strong>create</strong>(game_type)  &#x21d2; GameInstance </a>
     
 
     
@@ -137,7 +138,8 @@ Factory for creating game-specific objects</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Creates a game instance based on the game type.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Creates a game instance based on the game type.</p>
 </div></span>
   
 </li>
@@ -155,7 +157,7 @@ Factory for creating game-specific objects</p>
       <div class="method_details first">
   <h3 class="signature first" id="create-class_method">
   
-    .<strong>create</strong>(game_type)  &#x21d2; <tt><span class='object_link'><a href="GameInstance/Base.html" title="Lich::GameBase::GameInstance::Base (class)">GameBase::GameInstance::Base</a></span></tt> 
+    .<strong>create</strong>(game_type)  &#x21d2; <tt><span class='object_link'><a href="GameInstance.html" title="Lich::GameBase::GameInstance (module)">GameInstance</a></span></tt> 
   
 
   
@@ -163,7 +165,8 @@ Factory for creating game-specific objects</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Creates a game instance based on the game type</p>
+    
+<p>Creates a game instance based on the game type</p>
 
 
   </div>
@@ -174,7 +177,7 @@ Factory for creating game-specific objects</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_instance'>instance</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::GameBase::GameInstanceFactory (module)">GameInstanceFactory</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>GS</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_instance'>instance</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::GameBase::GameInstanceFactory (module)">GameInstanceFactory</a></span></span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GS</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -190,7 +193,8 @@ Factory for creating game-specific objects</p>
       
       
         &mdash;
-        <div class='inline'><p>The type of game (e.g., &#39;GS&#39;, &#39;DR&#39;)</p>
+        <div class='inline'>
+<p>The type of game (e.g., “GS”, “DR”)</p>
 </div>
       
     </li>
@@ -203,12 +207,13 @@ Factory for creating game-specific objects</p>
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="GameInstance/Base.html" title="Lich::GameBase::GameInstance::Base (class)">GameBase::GameInstance::Base</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="GameInstance.html" title="Lich::GameBase::GameInstance (module)">GameInstance</a></span></tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>The created game instance</p>
+        <div class='inline'>
+<p>The created game instance</p>
 </div>
       
     </li>
@@ -225,7 +230,8 @@ Factory for creating game-specific objects</p>
       
       
         &mdash;
-        <div class='inline'><p>If the game type is unknown</p>
+        <div class='inline'>
+<p>If the game type is unknown</p>
 </div>
       
     </li>
@@ -238,20 +244,20 @@ Factory for creating game-specific objects</p>
       <pre class="lines">
 
 
-37
-38
-39
-40
-41
-42
-43
-44
 45
 46
-47</pre>
+47
+48
+49
+50
+51
+52
+53
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'games.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/games.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_game_type'>game_type</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_game_type'>game_type</span>
@@ -274,7 +280,7 @@ Factory for creating game-specific objects</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:49 2025 by
+  Generated on Fri Nov  7 05:08:34 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

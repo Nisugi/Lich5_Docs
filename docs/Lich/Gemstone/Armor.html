@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Gemstone::Armor
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,34 +78,32 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>armor.rb</dd>
+    <dd>output/latest/documented/gemstone/psms/armor.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Provides logic for detecting, checking, and using PSM3 armor techniques in GemStone IV.</p>
+    
+<p>Provides logic for detecting, checking, and using PSM3 armor techniques in GemStone IV.</p>
 
-<p>This module defines a registry of available armor-related abilities and wraps common queries
-like whether a technique is known, affordable, or currently usable. It also provides the
-<code>use</code> method to execute the appropriate command in-game, handling roundtime and feedback matching.</p>
+<p>This module defines a registry of available armor-related abilities and wraps common queries like whether a technique is known, affordable, or currently usable. It also provides the ‘use` method to execute the appropriate command in-game, handling roundtime and feedback matching.</p>
 
-<p>Techniques are stored in a constant hash, and dynamic methods are defined for both long and short
-names of each technique.</p>
+<p>Techniques are stored in a constant hash, and dynamic methods are defined for both long and short names of each technique.</p>
 
-<p>Example:
-  if Armor.available?(&quot;armor_blessing&quot;)
-    Armor.use(&quot;armor_blessing&quot;)
-  end
-Provides logic for detecting, checking, and using PSM3 armor techniques in GemStone IV.</p>
+<p>Example:</p>
 
-<p>This module defines a registry of available armor-related abilities and wraps common queries
-like whether a technique is known, affordable, or currently usable. It also provides the
-<code>use</code> method to execute the appropriate command in-game, handling roundtime and feedback matching.</p>
+<pre class="code ruby"><code class="ruby"><span class='kw'>if</span> <span class='const'>Armor</span><span class='period'>.</span><span class='id identifier rubyid_available?'><span class='object_link'><a href="#available%3F-class_method" title="Lich::Gemstone::Armor.available? (method)">available?</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>armor_blessing</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='const'>Armor</span><span class='period'>.</span><span class='id identifier rubyid_use'><span class='object_link'><a href="#use-class_method" title="Lich::Gemstone::Armor.use (method)">use</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>armor_blessing</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span>
+</code></pre>
 
-<p>Techniques are stored in a constant hash, and dynamic methods are defined for both long and short
-names of each technique.</p>
+<p>Provides logic for detecting, checking, and using PSM3 armor techniques in GemStone IV.</p>
+
+<p>This module defines a registry of available armor-related abilities and wraps common queries like whether a technique is known, affordable, or currently usable. It also provides the ‘use` method to execute the appropriate command in-game, handling roundtime and feedback matching.</p>
+
+<p>Techniques are stored in a constant hash, and dynamic methods are defined for both long and short names of each technique.</p>
 
 
   </div>
@@ -135,25 +133,32 @@ names of each technique.</p>
         <dt id="armor_techniques-classvariable" class="">@@armor_techniques =
           <div class="docstring">
   <div class="discussion">
-    <p>Mapping of armor technique identifiers to their associated data, including:</p>
-
-<ul>
-<li>short name</li>
-<li>usage command</li>
-<li>regex to match expected in-game output</li>
-<li>cost to use</li>
-<li>type of technique (buff, passive, etc.)</li>
-</ul>
+    
+<p>Mapping of armor technique identifiers to their associated data, including:</p>
+<ul><li>
+<p>short name</p>
+</li><li>
+<p>usage command</p>
+</li><li>
+<p>regex to match expected in-game output</p>
+</li><li>
+<p>cost to use</p>
+</li><li>
+<p>type of technique (buff, passive, etc.)</p>
+</li></ul>
 
 <p>Mapping of armor technique identifiers to their associated data, including:</p>
-
-<ul>
-<li>short name</li>
-<li>usage command</li>
-<li>regex to match expected in-game output</li>
-<li>cost to use</li>
-<li>type of technique (buff, passive, etc.)</li>
-</ul>
+<ul><li>
+<p>short name</p>
+</li><li>
+<p>usage command</p>
+</li><li>
+<p>regex to match expected in-game output</p>
+</li><li>
+<p>cost to use</p>
+</li><li>
+<p>type of technique (buff, passive, etc.)</p>
+</li></ul>
 
 
   </div>
@@ -171,7 +176,8 @@ names of each technique.</p>
       
       
         &mdash;
-        <div class='inline'><p>A lookup table of armor techniques</p>
+        <div class='inline'>
+<p>A lookup table of armor techniques</p>
 </div>
       
     </li>
@@ -184,7 +190,8 @@ names of each technique.</p>
       
       
         &mdash;
-        <div class='inline'><p>A lookup table of armor techniques</p>
+        <div class='inline'>
+<p>A lookup table of armor techniques</p>
 </div>
       
     </li>
@@ -319,7 +326,8 @@ names of each technique.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Looks up the rank known of an armor technique.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Looks up the rank known of an armor technique.</p>
 </div></span>
   
 </li>
@@ -342,7 +350,8 @@ names of each technique.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Determines if an armor technique is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Determines if an armor technique is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
 </div></span>
   
 </li>
@@ -365,7 +374,8 @@ names of each technique.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns a simplified array, for lookup purposes, of armor technique hashes with long name, short name, and cost.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns a simplified array, for lookup purposes, of armor technique hashes with long name, short name, and cost.</p>
 </div></span>
   
 </li>
@@ -388,7 +398,8 @@ names of each technique.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Determines if an armor technique is available to use right now by testing: - if the technique is known - if the technique is affordable - if the technique is not on cooldown - if the character is not overexerted - if the character is capable of performing the number of FORCERTs specified.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Determines if an armor technique is available to use right now by testing: - if the technique is known - if the technique is affordable - if the technique is not on cooldown - if the character is not overexerted - if the character is capable of performing the number of FORCERTs specified.</p>
 </div></span>
   
 </li>
@@ -411,7 +422,8 @@ names of each technique.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks whether the technique&#39;s buff is currently active.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks whether the technique’s buff is currently active.</p>
 </div></span>
   
 </li>
@@ -434,7 +446,8 @@ names of each technique.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Determines if the character knows an armor technique at all, and optionally if the character knows it at the specified rank.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Determines if the character knows an armor technique at all, and optionally if the character knows it at the specified rank.</p>
 </div></span>
   
 </li>
@@ -457,7 +470,8 @@ names of each technique.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the &quot;success&quot; regex associated with a given armor technique name.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the “success” regex associated with a given armor technique name.</p>
 </div></span>
   
 </li>
@@ -480,7 +494,8 @@ names of each technique.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Attempts to use an armor technique, optionally on a target.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Attempts to use an armor technique, optionally on a target.</p>
 </div></span>
   
 </li>
@@ -506,7 +521,8 @@ names of each technique.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Looks up the rank known of an armor technique.</p>
+    
+<p>Looks up the rank known of an armor technique.</p>
 
 <p>Looks up the rank known of an armor technique.</p>
 
@@ -540,7 +556,8 @@ names of each technique.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the armor technique</p>
+        <div class='inline'>
+<p>The name of the armor technique</p>
 </div>
       
     </li>
@@ -555,7 +572,8 @@ names of each technique.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the armor technique</p>
+        <div class='inline'>
+<p>The name of the armor technique</p>
 </div>
       
     </li>
@@ -573,7 +591,8 @@ names of each technique.</p>
       
       
         &mdash;
-        <div class='inline'><p>The rank of the technique, or 0 if unknown</p>
+        <div class='inline'>
+<p>The rank of the technique, or 0 if unknown</p>
 </div>
       
     </li>
@@ -586,7 +605,8 @@ names of each technique.</p>
       
       
         &mdash;
-        <div class='inline'><p>The rank of the technique, or 0 if unknown</p>
+        <div class='inline'>
+<p>The rank of the technique, or 0 if unknown</p>
 </div>
       
     </li>
@@ -604,7 +624,7 @@ names of each technique.</p>
 176</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'armor.rb', line 174</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/armor.rb', line 174</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Armor (module)">Armor</a></span></span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_assess'><span class='object_link'><a href="PSMS.html#assess-class_method" title="Lich::Gemstone::PSMS.assess (method)">assess</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Armor</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -625,11 +645,10 @@ names of each technique.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Determines if an armor technique is affordable, and optionally tests
-affordability with a given number of FORCERTs having been used (including the current one).</p>
+    
+<p>Determines if an armor technique is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
 
-<p>Determines if an armor technique is affordable, and optionally tests
-affordability with a given number of FORCERTs having been used (including the current one).</p>
+<p>Determines if an armor technique is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
 
 
   </div>
@@ -661,7 +680,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>The name of the armor technique</p>
+        <div class='inline'>
+<p>The name of the armor technique</p>
 </div>
       
     </li>
@@ -678,7 +698,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the count of FORCERTs being used, including for this execution (default: 0)</p>
+        <div class='inline'>
+<p>Optionally, the count of FORCERTs being used, including for this execution (default: 0)</p>
 </div>
       
     </li>
@@ -693,7 +714,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>The name of the armor technique</p>
+        <div class='inline'>
+<p>The name of the armor technique</p>
 </div>
       
     </li>
@@ -710,7 +732,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the count of FORCERTs being used, including for this execution (default: 0)</p>
+        <div class='inline'>
+<p>Optionally, the count of FORCERTs being used, including for this execution (default: 0)</p>
 </div>
       
     </li>
@@ -728,7 +751,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>True if the technique can be used with available FORCERTs</p>
+        <div class='inline'>
+<p>True if the technique can be used with available FORCERTs</p>
 </div>
       
     </li>
@@ -741,7 +765,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>True if the technique can be used with available FORCERTs</p>
+        <div class='inline'>
+<p>True if the technique can be used with available FORCERTs</p>
 </div>
       
     </li>
@@ -759,7 +784,7 @@ affordability with a given number of FORCERTs having been used (including the cu
 221</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'armor.rb', line 219</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/armor.rb', line 219</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Armor (module)">Armor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_assess'><span class='object_link'><a href="PSMS.html#assess-class_method" title="Lich::Gemstone::PSMS.assess (method)">assess</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Armor</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='id identifier rubyid_forcert_count'>forcert_count</span><span class='rparen'>)</span>
@@ -780,11 +805,10 @@ affordability with a given number of FORCERTs having been used (including the cu
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a simplified array, for lookup purposes, of armor technique hashes with
-long name, short name, and cost.</p>
+    
+<p>Returns a simplified array, for lookup purposes, of armor technique hashes with long name, short name, and cost.</p>
 
-<p>Returns a simplified array, for lookup purposes, of armor technique hashes with
-long name, short name, and cost.</p>
+<p>Returns a simplified array, for lookup purposes, of armor technique hashes with long name, short name, and cost.</p>
 
 
   </div>
@@ -802,7 +826,8 @@ long name, short name, and cost.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of hashes with keys :long_name, :short_name, and :cost</p>
+        <div class='inline'>
+<p>An array of hashes with keys :long_name, :short_name, and :cost</p>
 </div>
       
     </li>
@@ -815,7 +840,8 @@ long name, short name, and cost.</p>
       
       
         &mdash;
-        <div class='inline'><p>An array of hashes with keys :long_name, :short_name, and :cost</p>
+        <div class='inline'>
+<p>An array of hashes with keys :long_name, :short_name, and :cost</p>
 </div>
       
     </li>
@@ -839,7 +865,7 @@ long name, short name, and cost.</p>
 158</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'armor.rb', line 150</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/armor.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_armor_lookups'>armor_lookups</span>
   <span class='cvar'>@@armor_techniques</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_long_name'>long_name</span><span class='comma'>,</span> <span class='id identifier rubyid_psm'>psm</span><span class='op'>|</span>
@@ -866,26 +892,32 @@ long name, short name, and cost.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Determines if an armor technique is available to use right now by testing:</p>
+    
+<p>Determines if an armor technique is available to use right now by testing:</p>
+<ul><li>
+<p>if the technique is known</p>
+</li><li>
+<p>if the technique is affordable</p>
+</li><li>
+<p>if the technique is not on cooldown</p>
+</li><li>
+<p>if the character is not overexerted</p>
+</li><li>
+<p>if the character is capable of performing the number of FORCERTs specified</p>
+</li></ul>
 
-<ul>
-<li>if the technique is known</li>
-<li>if the technique is affordable</li>
-<li>if the technique is not on cooldown</li>
-<li>if the character is not overexerted</li>
-<li>if the character is capable of performing the number of FORCERTs specified</li>
-</ul>
-
-<p>blocked by overexertion
-Determines if an armor technique is available to use right now by testing:</p>
-
-<ul>
-<li>if the technique is known</li>
-<li>if the technique is affordable</li>
-<li>if the technique is not on cooldown</li>
-<li>if the character is not overexerted</li>
-<li>if the character is capable of performing the number of FORCERTs specified</li>
-</ul>
+<p>blocked by overexertion Determines if an armor technique is available to use right now by testing:</p>
+<ul><li>
+<p>if the technique is known</p>
+</li><li>
+<p>if the technique is affordable</p>
+</li><li>
+<p>if the technique is not on cooldown</p>
+</li><li>
+<p>if the character is not overexerted</p>
+</li><li>
+<p>if the character is capable of performing the number of FORCERTs specified</p>
+</li></ul>
 
 <p>blocked by overexertion</p>
 
@@ -917,7 +949,8 @@ Determines if an armor technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the armor technique</p>
+        <div class='inline'>
+<p>The name of the armor technique</p>
 </div>
       
     </li>
@@ -934,7 +967,8 @@ Determines if an armor technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the minimum rank to check (default: 1)</p>
+        <div class='inline'>
+<p>Optionally, the minimum rank to check (default: 1)</p>
 </div>
       
     </li>
@@ -951,7 +985,8 @@ Determines if an armor technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the count of FORCERTs being used (default: 0)</p>
+        <div class='inline'>
+<p>Optionally, the count of FORCERTs being used (default: 0)</p>
 </div>
       
     </li>
@@ -966,7 +1001,8 @@ Determines if an armor technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the armor technique</p>
+        <div class='inline'>
+<p>The name of the armor technique</p>
 </div>
       
     </li>
@@ -983,7 +1019,8 @@ Determines if an armor technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the minimum rank to check (default: 1)</p>
+        <div class='inline'>
+<p>Optionally, the minimum rank to check (default: 1)</p>
 </div>
       
     </li>
@@ -1000,7 +1037,8 @@ Determines if an armor technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the count of FORCERTs being used (default: 0)</p>
+        <div class='inline'>
+<p>Optionally, the count of FORCERTs being used (default: 0)</p>
 </div>
       
     </li>
@@ -1018,7 +1056,8 @@ Determines if an armor technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>True if the technique is known, affordable, and not on cooldown or</p>
+        <div class='inline'>
+<p>True if the technique is known, affordable, and not on cooldown or</p>
 </div>
       
     </li>
@@ -1031,7 +1070,8 @@ Determines if an armor technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>True if the technique is known, affordable, and not on cooldown or</p>
+        <div class='inline'>
+<p>True if the technique is known, affordable, and not on cooldown or</p>
 </div>
       
     </li>
@@ -1051,7 +1091,7 @@ Determines if an armor technique is available to use right now by testing:</p>
 255</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'armor.rb', line 251</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/armor.rb', line 251</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Armor (module)">Armor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Armor (module)">Armor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'><span class='object_link'><a href="#known%3F-class_method" title="Lich::Gemstone::Armor.known? (method)">known?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='id identifier rubyid_min_rank'>min_rank</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
@@ -1074,9 +1114,10 @@ Determines if an armor technique is available to use right now by testing:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks whether the technique&#39;s buff is currently active.</p>
+    
+<p>Checks whether the technique’s buff is currently active.</p>
 
-<p>Checks whether the technique&#39;s buff is currently active.</p>
+<p>Checks whether the technique’s buff is currently active.</p>
 
 
   </div>
@@ -1095,7 +1136,8 @@ Determines if an armor technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>The technique&#39;s name</p>
+        <div class='inline'>
+<p>The technique’s name</p>
 </div>
       
     </li>
@@ -1110,7 +1152,8 @@ Determines if an armor technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>The technique&#39;s name</p>
+        <div class='inline'>
+<p>The technique’s name</p>
 </div>
       
     </li>
@@ -1128,7 +1171,8 @@ Determines if an armor technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>True if buff is already active</p>
+        <div class='inline'>
+<p>True if buff is already active</p>
 </div>
       
     </li>
@@ -1141,7 +1185,8 @@ Determines if an armor technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>True if buff is already active</p>
+        <div class='inline'>
+<p>True if buff is already active</p>
 </div>
       
     </li>
@@ -1160,7 +1205,7 @@ Determines if an armor technique is available to use right now by testing:</p>
 268</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'armor.rb', line 265</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/armor.rb', line 265</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Armor (module)">Armor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_buff_active?'>buff_active?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='cvar'>@@armor_techniques</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'><span class='object_link'><a href="PSMS.html#find_name-class_method" title="Lich::Gemstone::PSMS.find_name (method)">find_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Armor</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='symbol'>:buff</span><span class='rparen'>)</span>
@@ -1182,11 +1227,10 @@ Determines if an armor technique is available to use right now by testing:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Determines if the character knows an armor technique at all, and
-optionally if the character knows it at the specified rank.</p>
+    
+<p>Determines if the character knows an armor technique at all, and optionally if the character knows it at the specified rank.</p>
 
-<p>Determines if the character knows an armor technique at all, and
-optionally if the character knows it at the specified rank.</p>
+<p>Determines if the character knows an armor technique at all, and optionally if the character knows it at the specified rank.</p>
 
 
   </div>
@@ -1218,7 +1262,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the armor technique</p>
+        <div class='inline'>
+<p>The name of the armor technique</p>
 </div>
       
     </li>
@@ -1235,7 +1280,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the minimum rank to test against (default: 1, so known)</p>
+        <div class='inline'>
+<p>Optionally, the minimum rank to test against (default: 1, so known)</p>
 </div>
       
     </li>
@@ -1250,7 +1296,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the armor technique</p>
+        <div class='inline'>
+<p>The name of the armor technique</p>
 </div>
       
     </li>
@@ -1267,7 +1314,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the minimum rank to test against (default: 1, so known)</p>
+        <div class='inline'>
+<p>Optionally, the minimum rank to test against (default: 1, so known)</p>
 </div>
       
     </li>
@@ -1285,7 +1333,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>True if the technique is known at or above the given rank</p>
+        <div class='inline'>
+<p>True if the technique is known at or above the given rank</p>
 </div>
       
     </li>
@@ -1298,7 +1347,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>True if the technique is known at or above the given rank</p>
+        <div class='inline'>
+<p>True if the technique is known at or above the given rank</p>
 </div>
       
     </li>
@@ -1317,7 +1367,7 @@ optionally if the character knows it at the specified rank.</p>
 199</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'armor.rb', line 196</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/armor.rb', line 196</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Armor (module)">Armor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='int'>1</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_min_rank'>min_rank</span> <span class='op'>=</span> <span class='int'>1</span> <span class='kw'>unless</span> <span class='id identifier rubyid_min_rank'>min_rank</span> <span class='op'>&gt;=</span> <span class='int'>1</span> <span class='comment'># in case a 0 or below is passed
@@ -1339,15 +1389,10 @@ optionally if the character knows it at the specified rank.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the &quot;success&quot; regex associated with a given armor technique name.
-This regex is used to match the expected output when the technique is successfully <em>attempted</em>.
-It does not necessarily indicate that the technique was successful in its effect, or even
-that the technique was executed at all.</p>
+    
+<p>Returns the “success” regex associated with a given armor technique name. This regex is used to match the expected output when the technique is successfully <strong>attempted</strong>. It does not necessarily indicate that the technique was successful in its effect, or even that the technique was executed at all.</p>
 
-<p>Returns the &quot;success&quot; regex associated with a given armor technique name.
-This regex is used to match the expected output when the technique is successfully <em>attempted</em>.
-It does not necessarily indicate that the technique was successful in its effect, or even
-that the technique was executed at all.</p>
+<p>Returns the “success” regex associated with a given armor technique name. This regex is used to match the expected output when the technique is successfully <strong>attempted</strong>. It does not necessarily indicate that the technique was successful in its effect, or even that the technique was executed at all.</p>
 
 
   </div>
@@ -1377,7 +1422,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The technique name</p>
+        <div class='inline'>
+<p>The technique name</p>
 </div>
       
     </li>
@@ -1392,7 +1438,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The technique name</p>
+        <div class='inline'>
+<p>The technique name</p>
 </div>
       
     </li>
@@ -1410,7 +1457,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The regex used to match technique success or effects</p>
+        <div class='inline'>
+<p>The regex used to match technique success or effects</p>
 </div>
       
     </li>
@@ -1423,7 +1471,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The regex used to match technique success or effects</p>
+        <div class='inline'>
+<p>The regex used to match technique success or effects</p>
 </div>
       
     </li>
@@ -1441,7 +1490,7 @@ that the technique was executed at all.</p>
 355</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'armor.rb', line 353</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/armor.rb', line 353</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Armor (module)">Armor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_regexp'>regexp</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='cvar'>@@armor_techniques</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'><span class='object_link'><a href="PSMS.html#find_name-class_method" title="Lich::Gemstone::PSMS.find_name (method)">find_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Armor</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:regex</span><span class='rbracket'>]</span>
@@ -1462,7 +1511,8 @@ that the technique was executed at all.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Attempts to use an armor technique, optionally on a target.</p>
+    
+<p>Attempts to use an armor technique, optionally on a target.</p>
 
 <p>Attempts to use an armor technique, optionally on a target.</p>
 
@@ -1496,7 +1546,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the armor technique</p>
+        <div class='inline'>
+<p>The name of the armor technique</p>
 </div>
       
     </li>
@@ -1513,7 +1564,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target of the technique (optional). If unspecified, the technique will be used on the character.</p>
+        <div class='inline'>
+<p>The target of the technique (optional). If unspecified, the technique will be used on the character.</p>
 </div>
       
     </li>
@@ -1530,7 +1582,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>Additional regex to capture from result (optional)</p>
+        <div class='inline'>
+<p>Additional regex to capture from result (optional)</p>
 </div>
       
     </li>
@@ -1547,7 +1600,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>Number of FORCERTs to use (default: 0)</p>
+        <div class='inline'>
+<p>Number of FORCERTs to use (default: 0)</p>
 </div>
       
     </li>
@@ -1562,7 +1616,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the armor technique</p>
+        <div class='inline'>
+<p>The name of the armor technique</p>
 </div>
       
     </li>
@@ -1579,7 +1634,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target of the technique (optional). If unspecified, the technique will be used on the character.</p>
+        <div class='inline'>
+<p>The target of the technique (optional). If unspecified, the technique will be used on the character.</p>
 </div>
       
     </li>
@@ -1596,7 +1652,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>Additional regex to capture from result (optional)</p>
+        <div class='inline'>
+<p>Additional regex to capture from result (optional)</p>
 </div>
       
     </li>
@@ -1613,7 +1670,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>Number of FORCERTs to use (default: 0)</p>
+        <div class='inline'>
+<p>Number of FORCERTs to use (default: 0)</p>
 </div>
       
     </li>
@@ -1631,7 +1689,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The result of the regex match, or nil if unavailable</p>
+        <div class='inline'>
+<p>The result of the regex match, or nil if unavailable</p>
 </div>
       
     </li>
@@ -1644,7 +1703,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The result of the regex match, or nil if unavailable</p>
+        <div class='inline'>
+<p>The result of the regex match, or nil if unavailable</p>
 </div>
       
     </li>
@@ -1703,7 +1763,7 @@ that the technique was executed at all.</p>
 333</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'armor.rb', line 290</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/armor.rb', line 290</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Armor (module)">Armor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>results_of_interest:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Armor (module)">Armor</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'><span class='object_link'><a href="#available%3F-class_method" title="Lich::Gemstone::Armor.available? (method)">available?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='id identifier rubyid_forcert_count'>forcert_count</span><span class='rparen'>)</span>
@@ -1759,7 +1819,7 @@ that the technique was executed at all.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:49 2025 by
+  Generated on Fri Nov  7 05:08:36 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

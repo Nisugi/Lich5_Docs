@@ -6,7 +6,7 @@
 <title>
   Module: Lich::DragonRealms::DRCH
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,14 +78,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>common-healing.rb</dd>
+    <dd>output/latest/documented/dragonrealms/commons/common-healing.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Module containing healing-related methods and functionality.</p>
+    
+<p>Module for DragonRealms Combat Healing This module provides methods for checking health and managing wounds.</p>
 
 
   </div>
@@ -135,7 +136,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Tends to a specified wound on the body.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Tends to a specified wound on the body.</p>
 </div></span>
   
 </li>
@@ -158,7 +160,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Compute a weighted summary score from a wound list.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Compute a weighted summary score from a wound list.</p>
 </div></span>
   
 </li>
@@ -181,7 +184,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Uses HEALTH command to check for poisons, diseases, bleeders, parasites, and lodged items.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Uses HEALTH command to check for poisons, diseases, bleeders, parasites, and lodged items.</p>
 </div></span>
   
 </li>
@@ -204,7 +208,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks if there are any tendable bleeding wounds.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if there are any tendable bleeders.</p>
 </div></span>
   
 </li>
@@ -227,7 +232,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Given lines of text from the HEALTH command output in reverse, returns a map of any bleeding wounds where the keys are the severity and the values are the list of bleeding wounds.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Given lines of text from the HEALTH command output in reverse, returns a map of any bleeding wounds where the keys are the severity and the values are the list of bleeding wounds.</p>
 </div></span>
   
 </li>
@@ -250,7 +256,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Given the line of text from the HEALTH command output that expresses items lodged into you, returns a map of any lodged items where the keys are the severity and the values are the list of wounds.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Given the line of text from the HEALTH command output that expresses items lodged into you, returns a map of any lodged items where the keys are the severity and the values are the list of wounds.</p>
 </div></span>
   
 </li>
@@ -273,7 +280,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Given the line of text from the HEALTH command output that expresses parasites latched to you, returns a map of any parasites where the keys are the severity and the values are the list of wounds.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Given the line of text from the HEALTH command output that expresses parasites latched to you, returns a map of any parasites where the keys are the severity and the values are the list of wounds.</p>
 </div></span>
   
 </li>
@@ -296,7 +304,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Examples of what this parses can be found in test/test_check_health.rb Parses the output of the PERCEIVE HEALTH command.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Examples of what this parses can be found in test/test_check_health.rb Parses the perceived health data of a target.</p>
 </div></span>
   
 </li>
@@ -319,7 +328,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Given the line of text from the HEALTH command output that expresses external and internal wounds and scars, returns a map of any wounds where the keys are the severity and the values are the list of wounds.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Given the line of text from the HEALTH command output that expresses external and internal wounds and scars, returns a map of any wounds where the keys are the severity and the values are the list of wounds.</p>
 </div></span>
   
 </li>
@@ -342,7 +352,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Uses PERCEIVE HEALTH SELF command to check for wounds and scars.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Uses PERCEIVE HEALTH SELF command to check for wounds and scars.</p>
 </div></span>
   
 </li>
@@ -365,7 +376,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks the health of another target using the PERCEIVE HEALTH command.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks the health of another target using empathic abilities.</p>
 </div></span>
   
 </li>
@@ -388,7 +400,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Skill check to tend a bleeding wound.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Skill check to tend a bleeding wound.</p>
 </div></span>
   
 </li>
@@ -411,7 +424,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Unwraps bandages from a specified wound.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Unwraps the bandages from a specified wound.</p>
 </div></span>
   
 </li>
@@ -437,7 +451,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Tends to a specified wound on the body.</p>
+    
+<p>Tends to a specified wound on the body.</p>
 
 
   </div>
@@ -448,8 +463,7 @@
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_success'>success</span> <span class='op'>=</span> <span class='id identifier rubyid_bind_wound'>bind_wound</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>left arm</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Wound tended successfully!</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_success'>success</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_success'>success</span> <span class='op'>=</span> <span class='id identifier rubyid_bind_wound'>bind_wound</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>left arm</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -465,7 +479,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The body part to tend.</p>
+        <div class='inline'>
+<p>The body part to tend</p>
 </div>
       
     </li>
@@ -482,7 +497,8 @@
       
       
         &mdash;
-        <div class='inline'><p>The person to tend, defaults to &#39;my&#39;.</p>
+        <div class='inline'>
+<p>The person to tend, defaults to ‘my’</p>
 </div>
       
     </li>
@@ -500,7 +516,8 @@
       
       
         &mdash;
-        <div class='inline'><p>true if tending was successful, false otherwise.</p>
+        <div class='inline'>
+<p>true if tending was successful, false otherwise</p>
 </div>
       
     </li>
@@ -513,9 +530,6 @@
       <pre class="lines">
 
 
-380
-381
-382
 383
 384
 385
@@ -546,10 +560,13 @@
 410
 411
 412
-413</pre>
+413
+414
+415
+416</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common-healing.rb', line 380</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 383</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bind_wound'>bind_wound</span><span class='lparen'>(</span><span class='id identifier rubyid_body_part'>body_part</span><span class='comma'>,</span> <span class='id identifier rubyid_person'>person</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>my</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='comment'># Either you tended it or it already has bandages on. Good job!
@@ -601,9 +618,8 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Compute a weighted summary score from a wound list.
-Commonly used for thresholding for healing activities
-Computes a weighted summary score from a list of wounds.</p>
+    
+<p>Compute a weighted summary score from a wound list. Commonly used for thresholding for healing activities Compute a weighted summary score from a wound list. Commonly used for thresholding for healing activities</p>
 
 
   </div>
@@ -614,8 +630,7 @@ Computes a weighted summary score from a list of wounds.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_score'>score</span> <span class='op'>=</span> <span class='id identifier rubyid_calculate_score'>calculate_score</span><span class='lparen'>(</span><span class='id identifier rubyid_wounds'>wounds</span><span class='rparen'>)</span>
-<span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Total score: #{score}</span><span class='tstring_end'>&#39;</span></span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_score'>score</span> <span class='op'>=</span> <span class='id identifier rubyid_calculate_score'>calculate_score</span><span class='lparen'>(</span><span class='id identifier rubyid_wounds'>wounds</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -631,7 +646,8 @@ Computes a weighted summary score from a list of wounds.</p>
       
       
         &mdash;
-        <div class='inline'><p>A hash of wounds categorized by severity.</p>
+        <div class='inline'>
+<p>A hash of wounds categorized by severity</p>
 </div>
       
     </li>
@@ -649,7 +665,8 @@ Computes a weighted summary score from a list of wounds.</p>
       
       
         &mdash;
-        <div class='inline'><p>The calculated score based on the wounds.</p>
+        <div class='inline'>
+<p>The calculated score</p>
 </div>
       
     </li>
@@ -662,12 +679,12 @@ Computes a weighted summary score from a list of wounds.</p>
       <pre class="lines">
 
 
-452
-453
-454</pre>
+454
+455
+456</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common-healing.rb', line 452</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 454</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_calculate_score'>calculate_score</span><span class='lparen'>(</span><span class='id identifier rubyid_wounds_by_severity'>wounds_by_severity</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_wounds_by_severity'>wounds_by_severity</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_severity'>severity</span><span class='comma'>,</span> <span class='id identifier rubyid_wound_list'>wound_list</span><span class='op'>|</span> <span class='lparen'>(</span><span class='id identifier rubyid_severity'>severity</span><span class='op'>**</span><span class='int'>2</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='id identifier rubyid_wound_list'>wound_list</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_reduce'>reduce</span><span class='lparen'>(</span><span class='symbol'>:+</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='int'>0</span>
@@ -689,17 +706,7 @@ Computes a weighted summary score from a list of wounds.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-  <div class="note notetag">
-    <strong>Note:</strong>
-    <div class='inline'><p>This method may incur a delay due to server response.</p>
-</div>
-  </div>
-
-<p>Uses HEALTH command to check for poisons, diseases, bleeders, parasites, and lodged items.
-Based on this diagnostic information, you should be able to prioritize how you heal
-yourself with medicinal potions and salves, or healing spells.
-Uses the HEALTH command to check for poisons, diseases, bleeders, parasites, and lodged items.
-Based on this diagnostic information, you should be able to prioritize how you heal yourself.</p>
+<p>Uses HEALTH command to check for poisons, diseases, bleeders, parasites, and lodged items. Based on this diagnostic information, you should be able to prioritize how you heal yourself with medicinal potions and salves, or healing spells. Uses HEALTH command to check for poisons, diseases, bleeders, parasites, and lodged items. Based on this diagnostic information, you should be able to prioritize how you heal yourself with medicinal potions and salves, or healing spells.</p>
 
 
   </div>
@@ -711,7 +718,7 @@ Based on this diagnostic information, you should be able to prioritize how you h
     
       
       <pre class="example code"><code><span class='id identifier rubyid_health_data'>health_data</span> <span class='op'>=</span> <span class='id identifier rubyid_check_health'>check_health</span>
-<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_health_data'>health_data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>wounds</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span></code></pre>
+<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_health_data'>health_data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wounds</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span></code></pre>
     
   </div>
 
@@ -726,7 +733,8 @@ Based on this diagnostic information, you should be able to prioritize how you h
       
       
         &mdash;
-        <div class='inline'><p>A hash containing health data including wounds, bleeders, parasites, lodged items, poisoned, diseased, and score.</p>
+        <div class='inline'>
+<p>A hash containing health data including wounds, bleeders, parasites, lodged items, poisoned, diseased, and score</p>
 </div>
       
     </li>
@@ -739,7 +747,6 @@ Based on this diagnostic information, you should be able to prioritize how you h
       <pre class="lines">
 
 
-32
 33
 34
 35
@@ -792,10 +799,11 @@ Based on this diagnostic information, you should be able to prioritize how you h
 82
 83
 84
-85</pre>
+85
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common-healing.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 33</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check_health'>check_health</span>
   <span class='id identifier rubyid_parasites_regex'>parasites_regex</span> <span class='op'>=</span> <span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_union'>union</span><span class='lparen'>(</span><span class='gvar'>$DRCH_PARASITES_REGEX_LIST</span><span class='rparen'>)</span>
@@ -867,7 +875,8 @@ Based on this diagnostic information, you should be able to prioritize how you h
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks if there are any tendable bleeding wounds.</p>
+    
+<p>Checks if there are any tendable bleeders</p>
 
 
   </div>
@@ -878,9 +887,7 @@ Based on this diagnostic information, you should be able to prioritize how you h
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='kw'>if</span> <span class='id identifier rubyid_has_tendable_bleeders?'>has_tendable_bleeders?</span>
-  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You have wounds that can be tended.</span><span class='tstring_end'>&#39;</span></span>
-<span class='kw'>end</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_has_tendable_bleeders?'>has_tendable_bleeders?</span> <span class='comment'>#=&gt; true</span></code></pre>
     
   </div>
 
@@ -895,7 +902,8 @@ Based on this diagnostic information, you should be able to prioritize how you h
       
       
         &mdash;
-        <div class='inline'><p>true if there are tendable bleeders, false otherwise</p>
+        <div class='inline'>
+<p>true if there are tendable bleeders, false otherwise</p>
 </div>
       
     </li>
@@ -908,15 +916,15 @@ Based on this diagnostic information, you should be able to prioritize how you h
       <pre class="lines">
 
 
-15
 16
 17
 18
 19
-20</pre>
+20
+21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common-healing.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_has_tendable_bleeders?'>has_tendable_bleeders?</span>
   <span class='id identifier rubyid_health_data'>health_data</span> <span class='op'>=</span> <span class='id identifier rubyid_check_health'>check_health</span>
@@ -940,10 +948,8 @@ Based on this diagnostic information, you should be able to prioritize how you h
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Given lines of text from the HEALTH command output in reverse,
-returns a map of any bleeding wounds where the keys
-are the severity and the values are the list of bleeding wounds.
-Parses the bleeding wounds from the HEALTH command output.</p>
+    
+<p>Given lines of text from the HEALTH command output in reverse, returns a map of any bleeding wounds where the keys are the severity and the values are the list of bleeding wounds. Given lines of text from the HEALTH command output in reverse, returns a map of any bleeding wounds where the keys are the severity and the values are the list of bleeding wounds.</p>
 
 
   </div>
@@ -954,8 +960,7 @@ Parses the bleeding wounds from the HEALTH command output.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_bleeders'>bleeders</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_bleeders'>parse_bleeders</span><span class='lparen'>(</span><span class='id identifier rubyid_health_lines'>health_lines</span><span class='rparen'>)</span>
-<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_bleeders'>bleeders</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_bleeders'>bleeders</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_bleeders'>parse_bleeders</span><span class='lparen'>(</span><span class='id identifier rubyid_health_lines'>health_lines</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -971,7 +976,8 @@ Parses the bleeding wounds from the HEALTH command output.</p>
       
       
         &mdash;
-        <div class='inline'><p>Lines of text from the HEALTH command output.</p>
+        <div class='inline'>
+<p>Lines of health command output</p>
 </div>
       
     </li>
@@ -989,7 +995,8 @@ Parses the bleeding wounds from the HEALTH command output.</p>
       
       
         &mdash;
-        <div class='inline'><p>A hash of bleeding wounds categorized by severity.</p>
+        <div class='inline'>
+<p>A hash containing bleeding wounds categorized by severity</p>
 </div>
       
     </li>
@@ -1034,7 +1041,7 @@ Parses the bleeding wounds from the HEALTH command output.</p>
 274</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common-healing.rb', line 245</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 245</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_bleeders'>parse_bleeders</span><span class='lparen'>(</span><span class='id identifier rubyid_health_lines'>health_lines</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_bleeders'>bleeders</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
@@ -1082,11 +1089,8 @@ Parses the bleeding wounds from the HEALTH command output.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Given the line of text from the HEALTH command output
-that expresses items lodged into you,
-returns a map of any lodged items where the keys
-are the severity and the values are the list of wounds.
-Parses the lodged items from the HEALTH command output.</p>
+    
+<p>Given the line of text from the HEALTH command output that expresses items lodged into you, returns a map of any lodged items where the keys are the severity and the values are the list of wounds. Given the line of text from the HEALTH command output that expresses items lodged into you, returns a map of any lodged items where the keys are the severity and the values are the list of wounds.</p>
 
 
   </div>
@@ -1097,8 +1101,7 @@ Parses the lodged items from the HEALTH command output.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_lodged_items'>lodged_items</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_lodged_items'>parse_lodged_items</span><span class='lparen'>(</span><span class='id identifier rubyid_lodged_line'>lodged_line</span><span class='rparen'>)</span>
-<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_lodged_items'>lodged_items</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_lodged_items'>lodged_items</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_lodged_items'>parse_lodged_items</span><span class='lparen'>(</span><span class='id identifier rubyid_lodged_line'>lodged_line</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1114,7 +1117,8 @@ Parses the lodged items from the HEALTH command output.</p>
       
       
         &mdash;
-        <div class='inline'><p>The line of text containing lodged item descriptions.</p>
+        <div class='inline'>
+<p>The line containing lodged item descriptions</p>
 </div>
       
     </li>
@@ -1132,7 +1136,8 @@ Parses the lodged items from the HEALTH command output.</p>
       
       
         &mdash;
-        <div class='inline'><p>A hash of lodged items categorized by severity.</p>
+        <div class='inline'>
+<p>A hash containing lodged items categorized by severity</p>
 </div>
       
     </li>
@@ -1145,10 +1150,6 @@ Parses the lodged items from the HEALTH command output.</p>
       <pre class="lines">
 
 
-350
-351
-352
-353
 354
 355
 356
@@ -1166,10 +1167,14 @@ Parses the lodged items from the HEALTH command output.</p>
 368
 369
 370
-371</pre>
+371
+372
+373
+374
+375</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common-healing.rb', line 350</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 354</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_lodged_items'>parse_lodged_items</span><span class='lparen'>(</span><span class='id identifier rubyid_lodged_line'>lodged_line</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_lodged_items'>lodged_items</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
@@ -1209,10 +1214,8 @@ Parses the lodged items from the HEALTH command output.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Given the line of text from the HEALTH command output that expresses
-parasites latched to you, returns a map of any parasites where the keys
-are the severity and the values are the list of wounds.
-Parses the parasites from the HEALTH command output.</p>
+    
+<p>Given the line of text from the HEALTH command output that expresses parasites latched to you, returns a map of any parasites where the keys are the severity and the values are the list of wounds. Given the line of text from the HEALTH command output that expresses parasites latched to you, returns a map of any parasites where the keys are the severity and the values are the list of wounds.</p>
 
 
   </div>
@@ -1223,8 +1226,7 @@ Parses the parasites from the HEALTH command output.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_parasites'>parasites</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_parasites'>parse_parasites</span><span class='lparen'>(</span><span class='id identifier rubyid_parasites_line'>parasites_line</span><span class='rparen'>)</span>
-<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_parasites'>parasites</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_parasites'>parasites</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_parasites'>parse_parasites</span><span class='lparen'>(</span><span class='id identifier rubyid_parasites_line'>parasites_line</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1240,7 +1242,8 @@ Parses the parasites from the HEALTH command output.</p>
       
       
         &mdash;
-        <div class='inline'><p>The line of text containing parasite descriptions.</p>
+        <div class='inline'>
+<p>The line containing parasite descriptions</p>
 </div>
       
     </li>
@@ -1258,7 +1261,8 @@ Parses the parasites from the HEALTH command output.</p>
       
       
         &mdash;
-        <div class='inline'><p>A hash of parasites categorized by severity.</p>
+        <div class='inline'>
+<p>A hash containing parasites categorized by severity</p>
 </div>
       
     </li>
@@ -1271,8 +1275,6 @@ Parses the parasites from the HEALTH command output.</p>
       <pre class="lines">
 
 
-320
-321
 322
 323
 324
@@ -1289,10 +1291,12 @@ Parses the parasites from the HEALTH command output.</p>
 335
 336
 337
-338</pre>
+338
+339
+340</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common-healing.rb', line 320</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 322</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_parasites'>parse_parasites</span><span class='lparen'>(</span><span class='id identifier rubyid_parasites_line'>parasites_line</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_parasites'>parasites</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
@@ -1329,8 +1333,8 @@ Parses the parasites from the HEALTH command output.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Examples of what this parses can be found in test/test_check_health.rb
-Parses the output of the PERCEIVE HEALTH command.</p>
+    
+<p>Examples of what this parses can be found in test/test_check_health.rb Parses the perceived health data of a target.</p>
 
 
   </div>
@@ -1341,8 +1345,7 @@ Parses the output of the PERCEIVE HEALTH command.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_health_data'>health_data</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_perceived_health'>parse_perceived_health</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>John</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_health_data'>health_data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>wounds</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_health_data'>health_data</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_perceived_health'>parse_perceived_health</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>John</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1360,7 +1363,8 @@ Parses the output of the PERCEIVE HEALTH command.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target to perceive health for, defaults to nil for self.</p>
+        <div class='inline'>
+<p>The name of the target to perceive health, defaults to nil for self</p>
 </div>
       
     </li>
@@ -1378,7 +1382,8 @@ Parses the output of the PERCEIVE HEALTH command.</p>
       
       
         &mdash;
-        <div class='inline'><p>A hash containing perceived health data or nil if parsing fails.</p>
+        <div class='inline'>
+<p>A hash containing perceived health data or nil if not found</p>
 </div>
       
     </li>
@@ -1391,6 +1396,7 @@ Parses the output of the PERCEIVE HEALTH command.</p>
       <pre class="lines">
 
 
+147
 148
 149
 150
@@ -1476,11 +1482,10 @@ Parses the output of the PERCEIVE HEALTH command.</p>
 230
 231
 232
-233
-234</pre>
+233</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common-healing.rb', line 148</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_perceived_health'>parse_perceived_health</span><span class='lparen'>(</span><span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_pause'><span class='object_link'><a href="../../top-level-namespace.html#pause-instance_method" title="#pause (method)">pause</a></span></span> <span class='float'>0.5</span> <span class='comment'># Pause to wait for the full response to come back from the server
@@ -1585,10 +1590,8 @@ Parses the output of the PERCEIVE HEALTH command.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Given the line of text from the HEALTH command output that expresses
-external and internal wounds and scars, returns a map of any wounds where
-the keys are the severity and the values are the list of wounds.
-Parses the wounds from the HEALTH command output.</p>
+    
+<p>Given the line of text from the HEALTH command output that expresses external and internal wounds and scars, returns a map of any wounds where the keys are the severity and the values are the list of wounds. Given the line of text from the HEALTH command output that expresses external and internal wounds and scars, returns a map of any wounds where the keys are the severity and the values are the list of wounds.</p>
 
 
   </div>
@@ -1599,8 +1602,7 @@ Parses the wounds from the HEALTH command output.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_wounds'>wounds</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_wounds'>parse_wounds</span><span class='lparen'>(</span><span class='id identifier rubyid_wounds_line'>wounds_line</span><span class='rparen'>)</span>
-<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_wounds'>wounds</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_wounds'>wounds</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_wounds'>parse_wounds</span><span class='lparen'>(</span><span class='id identifier rubyid_wounds_line'>wounds_line</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1616,7 +1618,8 @@ Parses the wounds from the HEALTH command output.</p>
       
       
         &mdash;
-        <div class='inline'><p>The line of text containing wound descriptions.</p>
+        <div class='inline'>
+<p>The line containing wound descriptions</p>
 </div>
       
     </li>
@@ -1634,7 +1637,8 @@ Parses the wounds from the HEALTH command output.</p>
       
       
         &mdash;
-        <div class='inline'><p>A hash of wounds categorized by severity.</p>
+        <div class='inline'>
+<p>A hash containing wounds categorized by severity</p>
 </div>
       
     </li>
@@ -1647,7 +1651,6 @@ Parses the wounds from the HEALTH command output.</p>
       <pre class="lines">
 
 
-285
 286
 287
 288
@@ -1671,10 +1674,11 @@ Parses the wounds from the HEALTH command output.</p>
 306
 307
 308
-309</pre>
+309
+310</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common-healing.rb', line 285</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 286</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_parse_wounds'>parse_wounds</span><span class='lparen'>(</span><span class='id identifier rubyid_wounds_line'>wounds_line</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_wounds'>wounds</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span> <span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbrace'>}</span>
@@ -1717,11 +1721,8 @@ Parses the wounds from the HEALTH command output.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Uses PERCEIVE HEALTH SELF command to check for wounds and scars.
-Returns a map of any wounds where the keys
-are the severity and the values are the list of wounds.
-Uses the PERCEIVE HEALTH SELF command to check for wounds and scars.
-Returns a map of any wounds where the keys are the severity and the values are the list of wounds.</p>
+    
+<p>Uses PERCEIVE HEALTH SELF command to check for wounds and scars. Returns a map of any wounds where the keys are the severity and the values are the list of wounds. Uses PERCEIVE HEALTH SELF command to check for wounds and scars. Returns a map of any wounds where the keys are the severity and the values are the list of wounds.</p>
 
 
   </div>
@@ -1732,8 +1733,7 @@ Returns a map of any wounds where the keys are the severity and the values are t
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_perceived_health'>perceived_health</span> <span class='op'>=</span> <span class='id identifier rubyid_perceive_health'>perceive_health</span>
-<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_perceived_health'>perceived_health</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>wounds</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_perceived_health_data'>perceived_health_data</span> <span class='op'>=</span> <span class='id identifier rubyid_perceive_health'>perceive_health</span></code></pre>
     
   </div>
 
@@ -1748,7 +1748,8 @@ Returns a map of any wounds where the keys are the severity and the values are t
       
       
         &mdash;
-        <div class='inline'><p>A hash containing perceived health data including wounds and score.</p>
+        <div class='inline'>
+<p>A hash containing perceived health data including wounds and score</p>
 </div>
       
     </li>
@@ -1761,7 +1762,6 @@ Returns a map of any wounds where the keys are the severity and the values are t
       <pre class="lines">
 
 
-96
 97
 98
 99
@@ -1781,10 +1781,11 @@ Returns a map of any wounds where the keys are the severity and the values are t
 113
 114
 115
-116</pre>
+116
+117</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common-healing.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_perceive_health'>perceive_health</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="DRStats.html" title="Lich::DragonRealms::DRStats (module)">DRStats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_empath?'><span class='object_link'><a href="DRStats.html#empath%3F-class_method" title="Lich::DragonRealms::DRStats.empath? (method)">empath?</a></span></span>
@@ -1823,7 +1824,8 @@ Returns a map of any wounds where the keys are the severity and the values are t
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks the health of another target using the PERCEIVE HEALTH command.</p>
+    
+<p>Checks the health of another target using empathic abilities.</p>
 
 
   </div>
@@ -1834,8 +1836,7 @@ Returns a map of any wounds where the keys are the severity and the values are t
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_target_health'>target_health</span> <span class='op'>=</span> <span class='id identifier rubyid_perceive_health_other'>perceive_health_other</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>John</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_target_health'>target_health</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>wounds</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_health_data'>health_data</span> <span class='op'>=</span> <span class='id identifier rubyid_perceive_health_other'>perceive_health_other</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>John</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1851,7 +1852,8 @@ Returns a map of any wounds where the keys are the severity and the values are t
       
       
         &mdash;
-        <div class='inline'><p>The name of the target to perceive health for.</p>
+        <div class='inline'>
+<p>The name of the target to perceive health</p>
 </div>
       
     </li>
@@ -1869,7 +1871,8 @@ Returns a map of any wounds where the keys are the severity and the values are t
       
       
         &mdash;
-        <div class='inline'><p>A hash containing perceived health data for the target or nil if unable to perceive.</p>
+        <div class='inline'>
+<p>A hash containing perceived health data or nil if unable to perceive</p>
 </div>
       
     </li>
@@ -1900,7 +1903,7 @@ Returns a map of any wounds where the keys are the severity and the values are t
 139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common-healing.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 124</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_perceive_health_other'>perceive_health_other</span><span class='lparen'>(</span><span class='id identifier rubyid_target'>target</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="DRStats.html" title="Lich::DragonRealms::DRStats (module)">DRStats</a></span></span><span class='period'>.</span><span class='id identifier rubyid_empath?'><span class='object_link'><a href="DRStats.html#empath%3F-class_method" title="Lich::DragonRealms::DRStats.empath? (method)">empath?</a></span></span>
@@ -1934,9 +1937,8 @@ Returns a map of any wounds where the keys are the severity and the values are t
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Skill check to tend a bleeding wound.
-If you&#39;re not skilled enough you may make things worse and incur long roundtime.
-Checks if the player has the required skill to tend a bleeding wound.</p>
+    
+<p>Skill check to tend a bleeding wound. If you’re not skilled enough you may make things worse and incur long roundtime. Skill check to tend a bleeding wound. If you’re not skilled enough you may make things worse and incur long roundtime.</p>
 
 
   </div>
@@ -1947,9 +1949,7 @@ Checks if the player has the required skill to tend a bleeding wound.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='kw'>if</span> <span class='id identifier rubyid_skilled_to_tend_wound?'>skilled_to_tend_wound?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>light</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You can tend this wound.</span><span class='tstring_end'>&#39;</span></span>
-<span class='kw'>end</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_is_skilled'>is_skilled</span> <span class='op'>=</span> <span class='id identifier rubyid_skilled_to_tend_wound?'>skilled_to_tend_wound?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>light</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1965,7 +1965,8 @@ Checks if the player has the required skill to tend a bleeding wound.</p>
       
       
         &mdash;
-        <div class='inline'><p>The rate of bleeding.</p>
+        <div class='inline'>
+<p>The rate of bleeding</p>
 </div>
       
     </li>
@@ -1982,7 +1983,8 @@ Checks if the player has the required skill to tend a bleeding wound.</p>
       
       
         &mdash;
-        <div class='inline'><p>Indicates if the wound is internal, defaults to false.</p>
+        <div class='inline'>
+<p>Whether the wound is internal, defaults to false</p>
 </div>
       
     </li>
@@ -2000,7 +2002,8 @@ Checks if the player has the required skill to tend a bleeding wound.</p>
       
       
         &mdash;
-        <div class='inline'><p>true if skilled enough to tend, false otherwise.</p>
+        <div class='inline'>
+<p>true if skilled enough to tend the wound, false otherwise</p>
 </div>
       
     </li>
@@ -2013,16 +2016,16 @@ Checks if the player has the required skill to tend a bleeding wound.</p>
       <pre class="lines">
 
 
-436
-437
 438
 439
 440
 441
-442</pre>
+442
+443
+444</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common-healing.rb', line 436</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 438</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_skilled_to_tend_wound?'>skilled_to_tend_wound?</span><span class='lparen'>(</span><span class='id identifier rubyid_bleed_rate'>bleed_rate</span><span class='comma'>,</span> <span class='id identifier rubyid_internal'>internal</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_skill_target'>skill_target</span> <span class='op'>=</span> <span class='id identifier rubyid_internal'>internal</span> <span class='op'>?</span> <span class='symbol'>:skill_to_tend_internal</span> <span class='op'>:</span> <span class='symbol'>:skill_to_tend</span>
@@ -2047,7 +2050,8 @@ Checks if the player has the required skill to tend a bleeding wound.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p><p>Unwraps bandages from a specified wound.</p>
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Unwraps the bandages from a specified wound.</p>
 
 
   </div>
@@ -2058,7 +2062,7 @@ Checks if the player has the required skill to tend a bleeding wound.</p>
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_unwrap_wound'>unwrap_wound</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>left arm</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_unwrap_wound'>unwrap_wound</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>left arm</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -2074,7 +2078,8 @@ Checks if the player has the required skill to tend a bleeding wound.</p>
       
       
         &mdash;
-        <div class='inline'><p>The body part to unwrap.</p>
+        <div class='inline'>
+<p>The body part to unwrap</p>
 </div>
       
     </li>
@@ -2091,7 +2096,8 @@ Checks if the player has the required skill to tend a bleeding wound.</p>
       
       
         &mdash;
-        <div class='inline'><p>The person to unwrap, defaults to &#39;my&#39;.</p>
+        <div class='inline'>
+<p>The person to unwrap, defaults to ‘my’</p>
 </div>
       
     </li>
@@ -2105,13 +2111,13 @@ Checks if the player has the required skill to tend a bleeding wound.</p>
       <pre class="lines">
 
 
-421
-422
-423
-424</pre>
+424
+425
+426
+427</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'common-healing.rb', line 421</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/dragonrealms/commons/common-healing.rb', line 424</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unwrap_wound'>unwrap_wound</span><span class='lparen'>(</span><span class='id identifier rubyid_body_part'>body_part</span><span class='comma'>,</span> <span class='id identifier rubyid_person'>person</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>my</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="DRC.html" title="Lich::DragonRealms::DRC (module)">DRC</a></span></span><span class='period'>.</span><span class='id identifier rubyid_bput'><span class='object_link'><a href="DRC.html#bput-class_method" title="Lich::DragonRealms::DRC.bput (method)">bput</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unwrap </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_person'>person</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_body_part'>body_part</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You unwrap .* bandages</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>That area is not tended</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>You may undo the affects of TENDing</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -2127,7 +2133,7 @@ Checks if the player has the required skill to tend a bleeding wound.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:52 2025 by
+  Generated on Fri Nov  7 05:08:39 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

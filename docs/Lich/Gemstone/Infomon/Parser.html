@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Gemstone::Infomon::Parser
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,15 +78,15 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>parser.rb</dd>
+    <dd>output/latest/documented/gemstone/infomon/parser.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>this module handles all of the logic for parsing game lines that infomon depends on
-This module handles all of the logic for parsing game lines that infomon depends on</p>
+    
+<p>this module handles all of the logic for parsing game lines that infomon depends on This module handles all of the logic for parsing game lines that infomon depends on</p>
 
 
   </div>
@@ -97,7 +97,8 @@ This module handles all of the logic for parsing game lines that infomon depends
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Parsing a game line</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Parsing a game line</p>
 </div></h5>
       
       <pre class="example code"><code><span class='const'>Parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'><span class='object_link'><a href="#parse-class_method" title="Lich::Gemstone::Infomon::Parser.parse (method)">parse</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span></code></pre>
@@ -147,7 +148,8 @@ This module handles all of the logic for parsing game lines that infomon depends
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Finds the category based on the given string.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Finds the category based on the given string.</p>
 </div></span>
   
 </li>
@@ -170,7 +172,8 @@ This module handles all of the logic for parsing game lines that infomon depends
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Parses a game line and updates the state accordingly.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Parses a game line and updates the state accordingly.</p>
 </div></span>
   
 </li>
@@ -196,7 +199,8 @@ This module handles all of the logic for parsing game lines that infomon depends
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Finds the category based on the given string</p>
+    
+<p>Finds the category based on the given string</p>
 
 
   </div>
@@ -207,7 +211,7 @@ This module handles all of the logic for parsing game lines that infomon depends
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_find_cat'>find_cat</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Armor</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='comment'>#=&gt; &#39;Armor&#39;</span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_category'>category</span> <span class='op'>=</span> <span class='id identifier rubyid_find_cat'>find_cat</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Armor</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -223,7 +227,8 @@ This module handles all of the logic for parsing game lines that infomon depends
       
       
         &mdash;
-        <div class='inline'><p>The category string to match</p>
+        <div class='inline'>
+<p>The category string to match</p>
 </div>
       
     </li>
@@ -241,7 +246,8 @@ This module handles all of the logic for parsing game lines that infomon depends
       
       
         &mdash;
-        <div class='inline'><p>The matched category</p>
+        <div class='inline'>
+<p>The matched category</p>
 </div>
       
     </li>
@@ -254,25 +260,25 @@ This module handles all of the logic for parsing game lines that infomon depends
       <pre class="lines">
 
 
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
 218
 219
-220</pre>
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'parser.rb', line 205</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/infomon/parser.rb', line 218</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_find_cat'>find_cat</span><span class='lparen'>(</span><span class='id identifier rubyid_category'>category</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_category'>category</span>
@@ -306,7 +312,16 @@ This module handles all of the logic for parsing game lines that infomon depends
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Parses a game line and updates the state accordingly</p>
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>This method is designed to handle various game line formats.</p>
+</div>
+  </div>
+
+
+<p>Parses a game line and updates the state accordingly</p>
 
 
   </div>
@@ -333,7 +348,8 @@ This module handles all of the logic for parsing game lines that infomon depends
       
       
         &mdash;
-        <div class='inline'><p>The line to parse</p>
+        <div class='inline'>
+<p>The line to parse</p>
 </div>
       
     </li>
@@ -351,7 +367,8 @@ This module handles all of the logic for parsing game lines that infomon depends
       
       
         &mdash;
-        <div class='inline'><p>The result of the parsing operation</p>
+        <div class='inline'>
+<p>The result of the parsing operation</p>
 </div>
       
     </li>
@@ -368,7 +385,8 @@ This module handles all of the logic for parsing game lines that infomon depends
       
       
         &mdash;
-        <div class='inline'><p>if an error occurs during parsing</p>
+        <div class='inline'>
+<p>if an error occurs during parsing</p>
 </div>
       
     </li>
@@ -381,20 +399,6 @@ This module handles all of the logic for parsing game lines that infomon depends
       <pre class="lines">
 
 
-228
-229
-230
-231
-232
-233
-234
-235
-236
-237
-238
-239
-240
-241
 242
 243
 244
@@ -769,10 +773,22 @@ This module handles all of the logic for parsing game lines that infomon depends
 613
 614
 615
-616</pre>
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'parser.rb', line 228</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/infomon/parser.rb', line 242</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
   <span class='comment'># O(1) vs O(N)
@@ -1107,8 +1123,7 @@ This module handles all of the logic for parsing game lines that infomon depends
     <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="Parser/Pattern.html" title="Lich::Gemstone::Infomon::Parser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Parser/Pattern.html#SleepActive-constant" title="Lich::Gemstone::Infomon::Parser::Pattern::SleepActive (constant)">SleepActive</a></span></span>
       <span class='const'><span class='object_link'><a href="../Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_set'><span class='object_link'><a href="../Infomon.html#set-class_method" title="Lich::Gemstone::Infomon.set (method)">set</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>status.sleeping</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
       <span class='symbol'>:ok</span>
-    <span class='comment'># Regex pattern for sleep inactive state parsing
-</span>    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="Parser/Pattern.html" title="Lich::Gemstone::Infomon::Parser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Parser/Pattern.html#SleepNoActive-constant" title="Lich::Gemstone::Infomon::Parser::Pattern::SleepNoActive (constant)">SleepNoActive</a></span></span>
+    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="Parser/Pattern.html" title="Lich::Gemstone::Infomon::Parser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Parser/Pattern.html#SleepNoActive-constant" title="Lich::Gemstone::Infomon::Parser::Pattern::SleepNoActive (constant)">SleepNoActive</a></span></span>
       <span class='const'><span class='object_link'><a href="../Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_set'><span class='object_link'><a href="../Infomon.html#set-class_method" title="Lich::Gemstone::Infomon.set (method)">set</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>status.sleeping</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span>
       <span class='symbol'>:ok</span>
     <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="Parser/Pattern.html" title="Lich::Gemstone::Infomon::Parser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Parser/Pattern.html#BindActive-constant" title="Lich::Gemstone::Infomon::Parser::Pattern::BindActive (constant)">BindActive</a></span></span>
@@ -1132,8 +1147,7 @@ This module handles all of the logic for parsing game lines that infomon depends
     <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="Parser/Pattern.html" title="Lich::Gemstone::Infomon::Parser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Parser/Pattern.html#CutthroatActive-constant" title="Lich::Gemstone::Infomon::Parser::Pattern::CutthroatActive (constant)">CutthroatActive</a></span></span>
       <span class='const'><span class='object_link'><a href="../Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_set'><span class='object_link'><a href="../Infomon.html#set-class_method" title="Lich::Gemstone::Infomon.set (method)">set</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>status.cutthroat</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
       <span class='symbol'>:ok</span>
-    <span class='comment'># Regex pattern for cutthroat inactive state parsing
-</span>    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="Parser/Pattern.html" title="Lich::Gemstone::Infomon::Parser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Parser/Pattern.html#CutthroatNoActive-constant" title="Lich::Gemstone::Infomon::Parser::Pattern::CutthroatNoActive (constant)">CutthroatNoActive</a></span></span>
+    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="Parser/Pattern.html" title="Lich::Gemstone::Infomon::Parser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Parser/Pattern.html#CutthroatNoActive-constant" title="Lich::Gemstone::Infomon::Parser::Pattern::CutthroatNoActive (constant)">CutthroatNoActive</a></span></span>
       <span class='const'><span class='object_link'><a href="../Infomon.html" title="Lich::Gemstone::Infomon (module)">Infomon</a></span></span><span class='period'>.</span><span class='id identifier rubyid_set'><span class='object_link'><a href="../Infomon.html#set-class_method" title="Lich::Gemstone::Infomon.set (method)">set</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>status.cutthroat</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span>
       <span class='symbol'>:ok</span>
     <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="Parser/Pattern.html" title="Lich::Gemstone::Infomon::Parser::Pattern (module)">Pattern</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Parser/Pattern.html#SpellUpMsgs-constant" title="Lich::Gemstone::Infomon::Parser::Pattern::SpellUpMsgs (constant)">SpellUpMsgs</a></span></span>
@@ -1173,7 +1187,7 @@ This module handles all of the logic for parsing game lines that infomon depends
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:50 2025 by
+  Generated on Fri Nov  7 05:08:37 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>

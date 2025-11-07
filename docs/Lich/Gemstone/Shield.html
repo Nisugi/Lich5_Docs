@@ -6,7 +6,7 @@
 <title>
   Module: Lich::Gemstone::Shield
   
-    &mdash; Lich-5 Documentation
+    &mdash; Lich 5 Documentation
   
 </title>
 
@@ -78,25 +78,21 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>shield.rb</dd>
+    <dd>output/latest/documented/gemstone/psms/shield.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Provides logic for shield-based PSM techniques in GemStone IV.</p>
+    
+<p>Provides logic for shield-based PSM techniques in GemStone IV.</p>
 
-<p>This module defines metadata for each known shield technique, including passive and active skills,
-usage commands, costs, and expected success message regexes. It offers methods for checking whether
-a technique is known, affordable, or currently available, and for attempting to use a technique.</p>
+<p>This module defines metadata for each known shield technique, including passive and active skills, usage commands, costs, and expected success message regexes. It offers methods for checking whether a technique is known, affordable, or currently available, and for attempting to use a technique.</p>
 
-<p>Dynamic shortcut methods are also defined for each shield technique using both long and short names.
-Provides logic for shield-based PSM techniques in GemStone IV.</p>
+<p>Dynamic shortcut methods are also defined for each shield technique using both long and short names. Provides logic for shield-based PSM techniques in GemStone IV.</p>
 
-<p>This module defines metadata for each known shield technique, including passive and active skills,
-usage commands, costs, and expected success message regexes. It offers methods for checking whether
-a technique is known, affordable, or currently available, and for attempting to use a technique.</p>
+<p>This module defines metadata for each known shield technique, including passive and active skills, usage commands, costs, and expected success message regexes. It offers methods for checking whether a technique is known, affordable, or currently available, and for attempting to use a technique.</p>
 
 <p>Dynamic shortcut methods are also defined for each shield technique using both long and short names.</p>
 
@@ -109,10 +105,11 @@ a technique is known, affordable, or currently available, and for attempting to 
     <h4 class="tag_title">Examples:</h4>
     
       
-        <h5 class="example_title"><div class='inline'><p>Using a shield technique</p>
+        <h5 class="example_title"><div class='inline'>
+<p>Using a shield technique</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'>Shield</span><span class='period'>.</span><span class='id identifier rubyid_use'><span class='object_link'><a href="#use-class_method" title="Lich::Gemstone::Shield.use (method)">use</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code><span class='const'>Shield</span><span class='period'>.</span><span class='id identifier rubyid_use'><span class='object_link'><a href="#use-class_method" title="Lich::Gemstone::Shield.use (method)">use</a></span></span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -129,7 +126,8 @@ a technique is known, affordable, or currently available, and for attempting to 
         <dt id="shield_techniques-classvariable" class="">@@shield_techniques =
           <div class="docstring">
   <div class="discussion">
-    <p>Internal registry of all shield techniques and their metadata.</p>
+    
+<p>Internal registry of all shield techniques and their metadata.</p>
 
 <p>Internal registry of all shield techniques and their metadata.</p>
 
@@ -149,15 +147,19 @@ a technique is known, affordable, or currently available, and for attempting to 
       
       
         &mdash;
-        <div class='inline'><p>Each key is a long name and maps to:</p>
-
-<ul>
-<li><code>:short_name</code> [String] shorthand reference</li>
-<li><code>:type</code> [String, nil] type of skill (e.g., passive, stance)</li>
-<li><code>:cost</code> [Integer] stamina cost</li>
-<li><code>:regex</code> [Regexp] expected in-game output</li>
-<li><code>:usage</code> [String, nil] usage string if applicable</li>
-</ul>
+        <div class='inline'>
+<p>Each key is a long name and maps to:</p>
+<ul><li>
+<p>‘:short_name` [String] shorthand reference</p>
+</li><li>
+<p>‘:type` [String, nil] type of skill (e.g., passive, stance)</p>
+</li><li>
+<p>‘:cost` [Integer] stamina cost</p>
+</li><li>
+<p>‘:regex` [Regexp] expected in-game output</p>
+</li><li>
+<p>‘:usage` [String, nil] usage string if applicable</p>
+</li></ul>
 </div>
       
     </li>
@@ -170,15 +172,19 @@ a technique is known, affordable, or currently available, and for attempting to 
       
       
         &mdash;
-        <div class='inline'><p>Each key is a long name and maps to:</p>
-
-<ul>
-<li><code>:short_name</code> [String] shorthand reference</li>
-<li><code>:type</code> [String, nil] type of skill (e.g., passive, stance)</li>
-<li><code>:cost</code> [Integer] stamina cost</li>
-<li><code>:regex</code> [Regexp] expected in-game output</li>
-<li><code>:usage</code> [String, nil] usage string if applicable</li>
-</ul>
+        <div class='inline'>
+<p>Each key is a long name and maps to:</p>
+<ul><li>
+<p>‘:short_name` [String] shorthand reference</p>
+</li><li>
+<p>‘:type` [String, nil] type of skill (e.g., passive, stance)</p>
+</li><li>
+<p>‘:cost` [Integer] stamina cost</p>
+</li><li>
+<p>‘:regex` [Regexp] expected in-game output</p>
+</li><li>
+<p>‘:usage` [String, nil] usage string if applicable</p>
+</li></ul>
 </div>
       
     </li>
@@ -459,7 +465,8 @@ a technique is known, affordable, or currently available, and for attempting to 
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Looks up the rank known of a shield technique.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Looks up the rank known of a shield technique.</p>
 </div></span>
   
 </li>
@@ -482,7 +489,8 @@ a technique is known, affordable, or currently available, and for attempting to 
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Determines if an Shield technique is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Determines if an Shield technique is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
 </div></span>
   
 </li>
@@ -505,7 +513,8 @@ a technique is known, affordable, or currently available, and for attempting to 
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Determines if a Shield technique is available to use right now by testing: - if the technique is known - if the technique is affordable - if the technique is not on cooldown - if the character is not overexerted - if the character is capable of performing the number of FORCERTs specified.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Determines if a Shield technique is available to use right now by testing: - if the technique is known - if the technique is affordable - if the technique is not on cooldown - if the character is not overexerted - if the character is capable of performing the number of FORCERTs specified.</p>
 </div></span>
   
 </li>
@@ -528,7 +537,8 @@ a technique is known, affordable, or currently available, and for attempting to 
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Checks whether the technique&#39;s buff is currently active.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Checks whether the technique’s buff is currently active.</p>
 </div></span>
   
 </li>
@@ -551,7 +561,8 @@ a technique is known, affordable, or currently available, and for attempting to 
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Determines if the character knows a shield technique at all, and optionally if the character knows it at the specified rank.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Determines if the character knows a shield technique at all, and optionally if the character knows it at the specified rank.</p>
 </div></span>
   
 </li>
@@ -574,7 +585,8 @@ a technique is known, affordable, or currently available, and for attempting to 
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns the &quot;success&quot; regex associated with a given Shield technique name.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the “success” regex associated with a given Shield technique name.</p>
 </div></span>
   
 </li>
@@ -597,7 +609,8 @@ a technique is known, affordable, or currently available, and for attempting to 
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Returns an array of simplified technique metadata.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns an array of simplified technique metadata.</p>
 </div></span>
   
 </li>
@@ -620,7 +633,8 @@ a technique is known, affordable, or currently available, and for attempting to 
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Attempts to use an Shield technique, optionally on a target.</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Attempts to use an Shield technique, optionally on a target.</p>
 </div></span>
   
 </li>
@@ -646,7 +660,8 @@ a technique is known, affordable, or currently available, and for attempting to 
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Looks up the rank known of a shield technique.</p>
+    
+<p>Looks up the rank known of a shield technique.</p>
 
 <p>Looks up the rank known of a shield technique.</p>
 
@@ -659,12 +674,12 @@ a technique is known, affordable, or currently available, and for attempting to 
     <h4 class="tag_title">Examples:</h4>
     
       
-      <pre class="example code"><code><span class='const'>Feat</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>2</span>
-<span class='const'>Feat</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>0</span> <span class='comment'># if not known</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="Feat.html" title="Lich::Gemstone::Feat (module)">Feat</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>2</span>
+<span class='const'><span class='object_link'><a href="Feat.html" title="Lich::Gemstone::Feat (module)">Feat</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>0</span> <span class='comment'># if not known</span></code></pre>
     
       
-      <pre class="example code"><code><span class='const'>Feat</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>2</span>
-<span class='const'>Feat</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>0</span> <span class='comment'># if not known</span></code></pre>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>2</span>
+<span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>shield_trample</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=&gt;</span> <span class='int'>0</span> <span class='comment'># if not known</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -680,7 +695,8 @@ a technique is known, affordable, or currently available, and for attempting to 
       
       
         &mdash;
-        <div class='inline'><p>The name of the shield technique</p>
+        <div class='inline'>
+<p>The name of the shield technique</p>
 </div>
       
     </li>
@@ -695,7 +711,8 @@ a technique is known, affordable, or currently available, and for attempting to 
       
       
         &mdash;
-        <div class='inline'><p>The name of the shield technique</p>
+        <div class='inline'>
+<p>The name of the shield technique</p>
 </div>
       
     </li>
@@ -713,7 +730,8 @@ a technique is known, affordable, or currently available, and for attempting to 
       
       
         &mdash;
-        <div class='inline'><p>The rank of the technique, or 0 if unknown</p>
+        <div class='inline'>
+<p>The rank of the technique, or 0 if unknown</p>
 </div>
       
     </li>
@@ -726,7 +744,8 @@ a technique is known, affordable, or currently available, and for attempting to 
       
       
         &mdash;
-        <div class='inline'><p>The rank of the technique, or 0 if unknown</p>
+        <div class='inline'>
+<p>The rank of the technique, or 0 if unknown</p>
 </div>
       
     </li>
@@ -739,12 +758,12 @@ a technique is known, affordable, or currently available, and for attempting to 
       <pre class="lines">
 
 
-308
-309
-310</pre>
+310
+311
+312</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'shield.rb', line 308</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/shield.rb', line 310</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_assess'><span class='object_link'><a href="PSMS.html#assess-class_method" title="Lich::Gemstone::PSMS.assess (method)">assess</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Shield</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -765,11 +784,10 @@ a technique is known, affordable, or currently available, and for attempting to 
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Determines if an Shield technique is affordable, and optionally tests
-affordability with a given number of FORCERTs having been used (including the current one).</p>
+    
+<p>Determines if an Shield technique is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
 
-<p>Determines if an Shield technique is affordable, and optionally tests
-affordability with a given number of FORCERTs having been used (including the current one).</p>
+<p>Determines if an Shield technique is affordable, and optionally tests affordability with a given number of FORCERTs having been used (including the current one).</p>
 
 
   </div>
@@ -801,7 +819,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>The name of the Shield technique</p>
+        <div class='inline'>
+<p>The name of the Shield technique</p>
 </div>
       
     </li>
@@ -818,7 +837,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the count of FORCERTs being used, including for this execution (default: 0)</p>
+        <div class='inline'>
+<p>Optionally, the count of FORCERTs being used, including for this execution (default: 0)</p>
 </div>
       
     </li>
@@ -833,7 +853,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>The name of the Shield technique</p>
+        <div class='inline'>
+<p>The name of the Shield technique</p>
 </div>
       
     </li>
@@ -850,7 +871,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the count of FORCERTs being used, including for this execution (default: 0)</p>
+        <div class='inline'>
+<p>Optionally, the count of FORCERTs being used, including for this execution (default: 0)</p>
 </div>
       
     </li>
@@ -868,7 +890,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>True if the technique can be used with available FORCERTs</p>
+        <div class='inline'>
+<p>True if the technique can be used with available FORCERTs</p>
 </div>
       
     </li>
@@ -881,7 +904,8 @@ affordability with a given number of FORCERTs having been used (including the cu
       
       
         &mdash;
-        <div class='inline'><p>True if the technique can be used with available FORCERTs</p>
+        <div class='inline'>
+<p>True if the technique can be used with available FORCERTs</p>
 </div>
       
     </li>
@@ -894,13 +918,13 @@ affordability with a given number of FORCERTs having been used (including the cu
       <pre class="lines">
 
 
-353
-354
 355
-356</pre>
+356
+357
+358</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'shield.rb', line 353</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/shield.rb', line 355</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_affordable?'>affordable?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='cvar'>@@shield_techniques</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'><span class='object_link'><a href="PSMS.html#find_name-class_method" title="Lich::Gemstone::PSMS.find_name (method)">find_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shield</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:type</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='symbol'>:area_of_effect</span> <span class='op'>&amp;&amp;</span> <span class='const'><span class='object_link'><a href="Effects.html" title="Lich::Gemstone::Effects (module)">Effects</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Effects.html#Buffs-constant" title="Lich::Gemstone::Effects::Buffs (constant)">Buffs</a></span></span><span class='period'>.</span><span class='id identifier rubyid_active?'>active?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Glorious Momentum</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -922,26 +946,32 @@ affordability with a given number of FORCERTs having been used (including the cu
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Determines if a Shield technique is available to use right now by testing:</p>
+    
+<p>Determines if a Shield technique is available to use right now by testing:</p>
+<ul><li>
+<p>if the technique is known</p>
+</li><li>
+<p>if the technique is affordable</p>
+</li><li>
+<p>if the technique is not on cooldown</p>
+</li><li>
+<p>if the character is not overexerted</p>
+</li><li>
+<p>if the character is capable of performing the number of FORCERTs specified</p>
+</li></ul>
 
-<ul>
-<li>if the technique is known</li>
-<li>if the technique is affordable</li>
-<li>if the technique is not on cooldown</li>
-<li>if the character is not overexerted</li>
-<li>if the character is capable of performing the number of FORCERTs specified</li>
-</ul>
-
-<p>blocked by overexertion
-Determines if a Shield technique is available to use right now by testing:</p>
-
-<ul>
-<li>if the technique is known</li>
-<li>if the technique is affordable</li>
-<li>if the technique is not on cooldown</li>
-<li>if the character is not overexerted</li>
-<li>if the character is capable of performing the number of FORCERTs specified</li>
-</ul>
+<p>blocked by overexertion Determines if a Shield technique is available to use right now by testing:</p>
+<ul><li>
+<p>if the technique is known</p>
+</li><li>
+<p>if the technique is affordable</p>
+</li><li>
+<p>if the technique is not on cooldown</p>
+</li><li>
+<p>if the character is not overexerted</p>
+</li><li>
+<p>if the character is capable of performing the number of FORCERTs specified</p>
+</li></ul>
 
 <p>blocked by overexertion</p>
 
@@ -973,7 +1003,8 @@ Determines if a Shield technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the Shield technique</p>
+        <div class='inline'>
+<p>The name of the Shield technique</p>
 </div>
       
     </li>
@@ -990,7 +1021,8 @@ Determines if a Shield technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the minimum rank to check (default: 1)</p>
+        <div class='inline'>
+<p>Optionally, the minimum rank to check (default: 1)</p>
 </div>
       
     </li>
@@ -1007,7 +1039,8 @@ Determines if a Shield technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the count of FORCERTs being used (default: 0)</p>
+        <div class='inline'>
+<p>Optionally, the count of FORCERTs being used (default: 0)</p>
 </div>
       
     </li>
@@ -1022,7 +1055,8 @@ Determines if a Shield technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the Shield technique</p>
+        <div class='inline'>
+<p>The name of the Shield technique</p>
 </div>
       
     </li>
@@ -1039,7 +1073,8 @@ Determines if a Shield technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the minimum rank to check (default: 1)</p>
+        <div class='inline'>
+<p>Optionally, the minimum rank to check (default: 1)</p>
 </div>
       
     </li>
@@ -1056,7 +1091,8 @@ Determines if a Shield technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the count of FORCERTs being used (default: 0)</p>
+        <div class='inline'>
+<p>Optionally, the count of FORCERTs being used (default: 0)</p>
 </div>
       
     </li>
@@ -1074,7 +1110,8 @@ Determines if a Shield technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>True if the technique is known, affordable, and not on cooldown or</p>
+        <div class='inline'>
+<p>True if the technique is known, affordable, and not on cooldown or</p>
 </div>
       
     </li>
@@ -1087,7 +1124,8 @@ Determines if a Shield technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>True if the technique is known, affordable, and not on cooldown or</p>
+        <div class='inline'>
+<p>True if the technique is known, affordable, and not on cooldown or</p>
 </div>
       
     </li>
@@ -1100,14 +1138,14 @@ Determines if a Shield technique is available to use right now by testing:</p>
       <pre class="lines">
 
 
-386
-387
 388
 389
-390</pre>
+390
+391
+392</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'shield.rb', line 386</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/shield.rb', line 388</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'>available?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'><span class='object_link'><a href="#known%3F-class_method" title="Lich::Gemstone::Shield.known? (method)">known?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='id identifier rubyid_min_rank'>min_rank</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span>
@@ -1130,9 +1168,10 @@ Determines if a Shield technique is available to use right now by testing:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Checks whether the technique&#39;s buff is currently active.</p>
+    
+<p>Checks whether the technique’s buff is currently active.</p>
 
-<p>Checks whether the technique&#39;s buff is currently active.</p>
+<p>Checks whether the technique’s buff is currently active.</p>
 
 
   </div>
@@ -1151,7 +1190,8 @@ Determines if a Shield technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>The technique&#39;s name</p>
+        <div class='inline'>
+<p>The technique’s name</p>
 </div>
       
     </li>
@@ -1166,7 +1206,8 @@ Determines if a Shield technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>The technique&#39;s name</p>
+        <div class='inline'>
+<p>The technique’s name</p>
 </div>
       
     </li>
@@ -1184,7 +1225,8 @@ Determines if a Shield technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>True if buff is already active</p>
+        <div class='inline'>
+<p>True if buff is already active</p>
 </div>
       
     </li>
@@ -1197,7 +1239,8 @@ Determines if a Shield technique is available to use right now by testing:</p>
       
       
         &mdash;
-        <div class='inline'><p>True if buff is already active</p>
+        <div class='inline'>
+<p>True if buff is already active</p>
 </div>
       
     </li>
@@ -1210,13 +1253,13 @@ Determines if a Shield technique is available to use right now by testing:</p>
       <pre class="lines">
 
 
-400
-401
 402
-403</pre>
+403
+404
+405</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'shield.rb', line 400</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/shield.rb', line 402</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_buff_active?'>buff_active?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='cvar'>@@shield_techniques</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'><span class='object_link'><a href="PSMS.html#find_name-class_method" title="Lich::Gemstone::PSMS.find_name (method)">find_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shield</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='symbol'>:buff</span><span class='rparen'>)</span>
@@ -1238,11 +1281,10 @@ Determines if a Shield technique is available to use right now by testing:</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Determines if the character knows a shield technique at all, and
-optionally if the character knows it at the specified rank.</p>
+    
+<p>Determines if the character knows a shield technique at all, and optionally if the character knows it at the specified rank.</p>
 
-<p>Determines if the character knows a shield technique at all, and
-optionally if the character knows it at the specified rank.</p>
+<p>Determines if the character knows a shield technique at all, and optionally if the character knows it at the specified rank.</p>
 
 
   </div>
@@ -1274,7 +1316,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the shield technique</p>
+        <div class='inline'>
+<p>The name of the shield technique</p>
 </div>
       
     </li>
@@ -1291,7 +1334,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the minimum rank to test against (default: 1, so known)</p>
+        <div class='inline'>
+<p>Optionally, the minimum rank to test against (default: 1, so known)</p>
 </div>
       
     </li>
@@ -1306,7 +1350,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the shield technique</p>
+        <div class='inline'>
+<p>The name of the shield technique</p>
 </div>
       
     </li>
@@ -1323,7 +1368,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>Optionally, the minimum rank to test against (default: 1, so known)</p>
+        <div class='inline'>
+<p>Optionally, the minimum rank to test against (default: 1, so known)</p>
 </div>
       
     </li>
@@ -1341,7 +1387,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>True if the technique is known at or above the given rank</p>
+        <div class='inline'>
+<p>True if the technique is known at or above the given rank</p>
 </div>
       
     </li>
@@ -1354,7 +1401,8 @@ optionally if the character knows it at the specified rank.</p>
       
       
         &mdash;
-        <div class='inline'><p>True if the technique is known at or above the given rank</p>
+        <div class='inline'>
+<p>True if the technique is known at or above the given rank</p>
 </div>
       
     </li>
@@ -1367,13 +1415,13 @@ optionally if the character knows it at the specified rank.</p>
       <pre class="lines">
 
 
-330
-331
 332
-333</pre>
+333
+334
+335</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'shield.rb', line 330</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/shield.rb', line 332</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_known?'>known?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>min_rank:</span> <span class='int'>1</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_min_rank'>min_rank</span> <span class='op'>=</span> <span class='int'>1</span> <span class='kw'>unless</span> <span class='id identifier rubyid_min_rank'>min_rank</span> <span class='op'>&gt;=</span> <span class='int'>1</span> <span class='comment'># in case a 0 or below is passed
@@ -1395,15 +1443,10 @@ optionally if the character knows it at the specified rank.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns the &quot;success&quot; regex associated with a given Shield technique name.
-This regex is used to match the expected output when the technique is successfully <em>attempted</em>.
-It does not necessarily indicate that the technique was successful in its effect, or even
-that the technique was executed at all.</p>
+    
+<p>Returns the “success” regex associated with a given Shield technique name. This regex is used to match the expected output when the technique is successfully <strong>attempted</strong>. It does not necessarily indicate that the technique was successful in its effect, or even that the technique was executed at all.</p>
 
-<p>Returns the &quot;success&quot; regex associated with a given Shield technique name.
-This regex is used to match the expected output when the technique is successfully <em>attempted</em>.
-It does not necessarily indicate that the technique was successful in its effect, or even
-that the technique was executed at all.</p>
+<p>Returns the “success” regex associated with a given Shield technique name. This regex is used to match the expected output when the technique is successfully <strong>attempted</strong>. It does not necessarily indicate that the technique was successful in its effect, or even that the technique was executed at all.</p>
 
 
   </div>
@@ -1433,7 +1476,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The technique name</p>
+        <div class='inline'>
+<p>The technique name</p>
 </div>
       
     </li>
@@ -1448,7 +1492,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The technique name</p>
+        <div class='inline'>
+<p>The technique name</p>
 </div>
       
     </li>
@@ -1466,7 +1511,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The regex used to match technique success or effects</p>
+        <div class='inline'>
+<p>The regex used to match technique success or effects</p>
 </div>
       
     </li>
@@ -1479,7 +1525,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The regex used to match technique success or effects</p>
+        <div class='inline'>
+<p>The regex used to match technique success or effects</p>
 </div>
       
     </li>
@@ -1492,12 +1539,12 @@ that the technique was executed at all.</p>
       <pre class="lines">
 
 
-488
-489
-490</pre>
+490
+491
+492</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'shield.rb', line 488</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/shield.rb', line 490</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_regexp'>regexp</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='cvar'>@@shield_techniques</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="PSMS.html" title="Lich::Gemstone::PSMS (module)">PSMS</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_name'><span class='object_link'><a href="PSMS.html#find_name-class_method" title="Lich::Gemstone::PSMS.find_name (method)">find_name</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Shield</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:long_name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='symbol'>:regex</span><span class='rbracket'>]</span>
@@ -1518,7 +1565,8 @@ that the technique was executed at all.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns an array of simplified technique metadata.</p>
+    
+<p>Returns an array of simplified technique metadata.</p>
 
 <p>Returns an array of simplified technique metadata.</p>
 
@@ -1527,6 +1575,14 @@ that the technique was executed at all.</p>
 </div>
 <div class="tags">
   
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_shield_lookups'>shield_lookups</span> <span class='comment'># returns an array of shield technique metadata</span></code></pre>
+    
+  </div>
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -1538,7 +1594,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>Each contains :long_name, :short_name, and :cost</p>
+        <div class='inline'>
+<p>Each contains :long_name, :short_name, and :cost</p>
 </div>
       
     </li>
@@ -1551,7 +1608,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>Each contains :long_name, :short_name, and :cost</p>
+        <div class='inline'>
+<p>Each contains :long_name, :short_name, and :cost</p>
 </div>
       
     </li>
@@ -1564,18 +1622,18 @@ that the technique was executed at all.</p>
       <pre class="lines">
 
 
-284
-285
 286
 287
 288
 289
 290
 291
-292</pre>
+292
+293
+294</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'shield.rb', line 284</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/shield.rb', line 286</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_shield_lookups'>shield_lookups</span>
   <span class='cvar'>@@shield_techniques</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_long_name'>long_name</span><span class='comma'>,</span> <span class='id identifier rubyid_psm'>psm</span><span class='op'>|</span>
@@ -1602,7 +1660,8 @@ that the technique was executed at all.</p>
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Attempts to use an Shield technique, optionally on a target.</p>
+    
+<p>Attempts to use an Shield technique, optionally on a target.</p>
 
 <p>Attempts to use an Shield technique, optionally on a target.</p>
 
@@ -1636,7 +1695,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the Shield technique</p>
+        <div class='inline'>
+<p>The name of the Shield technique</p>
 </div>
       
     </li>
@@ -1653,7 +1713,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target of the technique (optional).  If unspecified, the technique will be used on the character.</p>
+        <div class='inline'>
+<p>The target of the technique (optional).  If unspecified, the technique will be used on the character.</p>
 </div>
       
     </li>
@@ -1670,7 +1731,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>Additional regex to capture from result (optional)</p>
+        <div class='inline'>
+<p>Additional regex to capture from result (optional)</p>
 </div>
       
     </li>
@@ -1687,7 +1749,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>Number of FORCERTs to use (default: 0)</p>
+        <div class='inline'>
+<p>Number of FORCERTs to use (default: 0)</p>
 </div>
       
     </li>
@@ -1702,7 +1765,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The name of the Shield technique</p>
+        <div class='inline'>
+<p>The name of the Shield technique</p>
 </div>
       
     </li>
@@ -1719,7 +1783,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The target of the technique (optional).  If unspecified, the technique will be used on the character.</p>
+        <div class='inline'>
+<p>The target of the technique (optional).  If unspecified, the technique will be used on the character.</p>
 </div>
       
     </li>
@@ -1736,7 +1801,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>Additional regex to capture from result (optional)</p>
+        <div class='inline'>
+<p>Additional regex to capture from result (optional)</p>
 </div>
       
     </li>
@@ -1753,7 +1819,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>Number of FORCERTs to use (default: 0)</p>
+        <div class='inline'>
+<p>Number of FORCERTs to use (default: 0)</p>
 </div>
       
     </li>
@@ -1771,7 +1838,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The result of the regex match, or nil if unavailable</p>
+        <div class='inline'>
+<p>The result of the regex match, or nil if unavailable</p>
 </div>
       
     </li>
@@ -1784,7 +1852,8 @@ that the technique was executed at all.</p>
       
       
         &mdash;
-        <div class='inline'><p>The result of the regex match, or nil if unavailable</p>
+        <div class='inline'>
+<p>The result of the regex match, or nil if unavailable</p>
 </div>
       
     </li>
@@ -1797,8 +1866,6 @@ that the technique was executed at all.</p>
       <pre class="lines">
 
 
-425
-426
 427
 428
 429
@@ -1840,10 +1907,12 @@ that the technique was executed at all.</p>
 465
 466
 467
-468</pre>
+468
+469
+470</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'shield.rb', line 425</span>
+      <pre class="code"><span class="info file"># File 'output/latest/documented/gemstone/psms/shield.rb', line 427</span>
 
 <span class='kw'>def</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_use'>use</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>results_of_interest:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='int'>0</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Shield (module)">Shield</a></span></span><span class='period'>.</span><span class='id identifier rubyid_available?'><span class='object_link'><a href="#available%3F-class_method" title="Lich::Gemstone::Shield.available? (method)">available?</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>forcert_count:</span> <span class='id identifier rubyid_forcert_count'>forcert_count</span><span class='rparen'>)</span>
@@ -1899,7 +1968,7 @@ that the technique was executed at all.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 02:56:50 2025 by
+  Generated on Fri Nov  7 05:08:36 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.1.7).
 </div>
