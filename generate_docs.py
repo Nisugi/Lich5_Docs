@@ -377,25 +377,76 @@ IMPORTANT:
 
     def soft_match_anchor(self, anchor: str, line: str) -> bool:
         """
-        Soft match anchor against line by comparing key tokens
+        Soft match anchor against line using Ruby-specific pattern matching
 
         Args:
             anchor: The anchor string (e.g., "def initialize", "class GameObj")
             line: The line of code to match against
 
         Returns:
-            True if key tokens from anchor appear in line
+            True if anchor matches line using Ruby syntax patterns
         """
-        # Remove common noise: params, 'self.', extra whitespace
-        anchor_clean = anchor.replace('self.', '').split('(')[0].strip()
+        anchor_stripped = anchor.strip()
+        line_stripped = line.strip()
 
-        # Extract tokens (words)
+        # Pattern 1: Class/Module definitions
+        # Anchor: "class GameObj" or "module Lich"
+        if anchor_stripped.startswith(('class ', 'module ')):
+            keyword, name = anchor_stripped.split(None, 1)
+            name = name.split('(')[0].strip()  # Remove any params
+            return re.search(rf'^\s*{keyword}\s+{re.escape(name)}\b', line)
+
+        # Pattern 2: Method definitions (instance or class methods)
+        # Anchor: "def method_name" or "def self.method" or "def ClassName.method"
+        if anchor_stripped.startswith('def '):
+            method_sig = anchor_stripped[4:].split('(')[0].strip()
+            # Check for exact match first
+            if f'def {method_sig}' in line:
+                return True
+            # Handle self. variations: "def self.method" might match "def method" in line
+            if 'self.' in method_sig:
+                method_name = method_sig.split('.')[-1]
+                return re.search(rf'\bdef\s+(self\.)?{re.escape(method_name)}\b', line)
+            # Handle ClassName.method variations
+            if '.' in method_sig:
+                method_name = method_sig.split('.')[-1]
+                return re.search(rf'\bdef\s+\w+\.{re.escape(method_name)}\b', line)
+            # Simple method name match
+            return re.search(rf'\bdef\s+{re.escape(method_sig)}\b', line)
+
+        # Pattern 3: Attribute readers/writers/accessors
+        # Anchor: "attr_reader :mana" or "attr_accessor"
+        if anchor_stripped.startswith('attr_'):
+            # Extract the attribute type and symbol
+            parts = anchor_stripped.split()
+            attr_type = parts[0]  # attr_reader, attr_accessor, etc.
+            if len(parts) > 1:
+                symbol = parts[1].lstrip(':')
+                return re.search(rf'{attr_type}\s+:{re.escape(symbol)}\b', line)
+            else:
+                return attr_type in line
+
+        # Pattern 4: Constants (all caps with =)
+        # Anchor: "CONSTANT_NAME" or "CONSTANT_NAME ="
+        if anchor_stripped.replace('_', '').replace('=', '').strip().isupper():
+            const_name = anchor_stripped.split('=')[0].strip()
+            return re.search(rf'\b{re.escape(const_name)}\s*=', line)
+
+        # Pattern 5: Class variables (@@var) or instance variables (@var)
+        # Anchor: "@@variable" or "@variable"
+        if anchor_stripped.startswith(('@@', '@')):
+            var_name = anchor_stripped.split()[0].split('=')[0].strip()
+            return re.search(rf'{re.escape(var_name)}\s*(=|\|\|=)', line)
+
+        # Fallback: Token-based matching (original approach)
+        # Remove params and clean up
+        anchor_clean = anchor_stripped.split('(')[0].strip()
         tokens = anchor_clean.split()
 
         if not tokens:
             return False
 
-        # Check if all tokens appear in the line
+        # Check if all key tokens appear in the line
         return all(token in line for token in tokens)
 
     def find_insertion_line(self, lines: List[str], line_number: int, anchor: str,
