@@ -264,7 +264,9 @@ module Lich
       on conflict(`key`) do update set value = excluded.value;" % [self.db.literal(self.table_name), pairs]
       end
 
-      # Background thread for processing SQL statements from the queue
+      # @!method Background SQL Queue Processor
+      # Background thread for processing SQL statements from the queue.
+      # This thread continuously processes queued SQL statements asynchronously.
       # @return [void]
       Thread.new do
         loop do

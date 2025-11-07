@@ -142,6 +142,7 @@ if (RUBY_PLATFORM =~ /mingw|win/i) and (RUBY_PLATFORM !~ /darwin/i)
     MB_YESNO = 0x00000004
     MB_ICONERROR = 0x00000010
     MB_ICONQUESTION = 0x00000020
+    # Windows MessageBox icon constant for warning dialogs
     MB_ICONWARNING = 0x00000030
     IDIOK = 1
     IDICANCEL = 2

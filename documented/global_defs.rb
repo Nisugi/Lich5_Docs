@@ -3252,6 +3252,16 @@ def do_client(client_string)
   Script.new_upstream(client_string)
 end
 
+# Executes a block of code with comprehensive error handling and logging.
+#
+# Catches and reports various types of errors including StandardError, SyntaxError,
+# SecurityError, ThreadError, and SystemStackError. Errors are both logged to the
+# Lich log and displayed to the user via respond.
+#
+# @param block [Proc] The block of code to execute with error handling
+# @return [void]
+# @example
+#   report_errors { risky_operation() }
 def report_errors(&block)
   begin
     block.call

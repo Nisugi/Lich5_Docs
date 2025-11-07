@@ -110,10 +110,10 @@ module Lich
       # Looks up an ability definition from a society hash using a normalized short or long name.
       #
       # @param name [String] The user-facing name (short or long) of the ability
-      # @param entries [Hash<String, Hash>] The base hash keyed by short_name
+      # @param lookups [Hash<String, Hash>] The base hash keyed by short_name
       # @return [Hash, nil] The matching entry from the base hash, or nil if not found
       # @example Looking up an ability
-      #   ability = Lich::Gemstone::Society.lookup("Ability Name", entries)
+      #   ability = Lich::Gemstone::Society.lookup("Ability Name", lookups)
       def self.lookup(name, lookups)
         normalized = Lich::Util.normalize_name(name)
 

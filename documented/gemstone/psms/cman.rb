@@ -731,10 +731,6 @@ module Lich
       #
       # @param name [String] The maneuver's name
       # @return [Boolean] True if buff is already active
-      # Checks whether the maneuver's buff is currently active.
-      #
-      # @param name [String] The maneuver's name
-      # @return [Boolean] True if buff is already active
       def CMan.buff_active?(name)
         return unless @@combat_mans.fetch(PSMS.find_name(name, "CMan")[:long_name]).key?(:buff)
         Effects::Buffs.active?(@@combat_mans.fetch(PSMS.find_name(name, "CMan")[:long_name])[:buff])
