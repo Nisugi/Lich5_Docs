@@ -18,13 +18,6 @@ module Lich
     #
     # @example Using ||= operator
     #   Vars['config'] ||= { setting: 'default' }
-    #
-    # Provides a persistent variable storage system for game/character combinations.
-    # Variables can be accessed and modified using both bracket notation and method syntax.
-    # @example Basic usage
-    #   Vars["my_var"] = "value"
-    #   Vars["my_var"]  #=> "value"
-    #   Vars[:my_var]   #=> "value" (symbols are converted to strings)
     module Vars
       # @!visibility private
       # Load states for the variables system
@@ -43,9 +36,6 @@ module Lich
       # @param key [String, Symbol, Object] the key to normalize
       # @return [String] the normalized string key
       # @api private
-      # Normalizes a key to a string for consistent storage and retrieval
-      # @param key [String, Symbol, Object] the key to normalize
-      # @return [String] the normalized string key
       def self.normalize_key(key)
         key.to_s
       end
@@ -128,14 +118,6 @@ module Lich
       # @example
       #   Vars['my_setting']  #=> "some value"
       #   Vars[:my_setting]   #=> "some value" (same result)
-      #
-      # Retrieves a variable value by name
-      # Keys are normalized to strings, so symbols and strings are equivalent.
-      # @param name [String, Symbol] the variable name
-      # @return [Object, nil] the variable value, or nil if not set
-      # @example
-      #   Vars["my_setting"]  #=> "some value"
-      #   Vars[:my_setting]   #=> "some value" (same result)
       def Vars.[](name)
         @@load.call unless @@load_state == LoadState::LOADED
         @@vars[normalize_key(name)]
@@ -153,16 +135,6 @@ module Lich
       #   Vars['my_setting'] = 'new value'
       #   Vars[:my_setting] = 'new value'  # equivalent
       #   Vars['my_setting'] = nil  # deletes the variable
-      #
-      # Sets a variable value by name
-      # Keys are normalized to strings, so symbols and strings are equivalent.
-      # @param name [String, Symbol] the variable name
-      # @param val [Object, nil] the value to set; nil deletes the variable
-      # @return [Object, nil] the value that was set
-      # @example
-      #   Vars["my_setting"] = "new value"
-      #   Vars[:my_setting] = "new value"  # equivalent
-      #   Vars["my_setting"] = nil  # deletes the variable
       def Vars.[]=(name, val)
         @@load.call unless @@load_state == LoadState::LOADED
         key = normalize_key(name)
@@ -180,12 +152,6 @@ module Lich
       # @example
       #   all_vars = Vars.list
       #   all_vars.keys  #=> ['var1', 'var2', ...]
-      #
-      # Returns a duplicate of all variables as a Hash
-      # @return [Hash] a copy of all stored variables with string keys
-      # @example
-      #   all_vars = Vars.list
-      #   all_vars.keys  #=> ["var1", "var2", ...]
       def Vars.list
         @@load.call unless @@load_state == LoadState::LOADED
         @@vars.dup
@@ -197,12 +163,6 @@ module Lich
       #
       # @example
       #   Vars['important'] = 'data'
-      #   Vars.save  # Force immediate save instead of waiting for auto-save
-      #
-      # Immediately saves all variables to the database
-      # @return [nil]
-      # @example
-      #   Vars["important"] = "data"
       #   Vars.save  # Force immediate save instead of waiting for auto-save
       def Vars.save
         @@save.call
@@ -222,15 +182,6 @@ module Lich
       # @example
       #   Vars.my_setting = 'value'
       #   Vars.my_setting  #=> 'value'
-      #
-      # Handles dynamic method calls for variable access
-      # Supports both getter and setter syntax. All keys are normalized to strings.
-      # @param method_name [Symbol] the method name being called
-      # @param args [Array] arguments passed to the method
-      # @return [Object, nil] the variable value or result of setter
-      # @example
-      #   Vars.my_setting = "value"
-      #   Vars.my_setting  #=> "value"
       def Vars.method_missing(method_name, *args)
         @@load.call unless @@load_state == LoadState::LOADED
 
@@ -265,14 +216,6 @@ module Lich
       # or the bracket operators. This helps catch obvious typos while still
       # allowing dynamic variable access.
       #
-      # @param method_name [Symbol] the method name to check
-      # @param include_private [Boolean] whether to include private methods
-      # @return [Boolean] true if the method name is a valid variable name
-      #
-      # Declares that method_missing can respond to valid Ruby method names
-      # Only returns true for method names that could be valid Ruby identifiers
-      # or the bracket operators. This helps catch obvious typos while still
-      # allowing dynamic variable access.
       # @param method_name [Symbol] the method name to check
       # @param include_private [Boolean] whether to include private methods
       # @return [Boolean] true if the method name is a valid variable name
