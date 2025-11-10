@@ -15,6 +15,16 @@ on:
           - openai
           - anthropic
         default: 'openai'
+      source_repo:
+        description: 'Source repository (owner/repo)'
+        required: false
+        type: string
+        default: 'elanthia-online/lich-5'
+      source_branch:
+        description: 'Branch to use from source repository'
+        required: false
+        type: string
+        default: 'main'
 
 jobs:
   generate-single:
@@ -39,15 +49,22 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Clone source repository
+        run: |
+          git clone https://github.com/${{ inputs.source_repo }}.git lich-source
+          cd lich-source
+          git checkout ${{ inputs.source_branch }}
+          echo "✅ Cloned ${{ inputs.source_repo }} (branch: ${{ inputs.source_branch }})"
+
       - name: Validate file exists
         id: validate
         run: |
-          if [ ! -f "${{ inputs.file_path }}" ]; then
-            echo "Error: File not found: ${{ inputs.file_path }}"
+          if [ ! -f "lich-source/${{ inputs.file_path }}" ]; then
+            echo "Error: File not found: lich-source/${{ inputs.file_path }}"
             exit 1
           fi
           echo "file_name=$(basename ${{ inputs.file_path }})" >> $GITHUB_OUTPUT
-          echo "✅ File found: ${{ inputs.file_path }}"
+          echo "✅ File found: lich-source/${{ inputs.file_path }}"
 
       - name: Generate documentation
         env:
@@ -61,7 +78,7 @@ jobs:
 
           # Run generate_docs.py with --file parameter and mirror structure
           python generate_docs.py \
-            --file "${{ inputs.file_path }}" \
+            --file "lich-source/${{ inputs.file_path }}" \
             --provider ${{ inputs.provider }} \
             --output-structure mirror
 
@@ -92,8 +109,8 @@ jobs:
           echo "\`\`\`diff" >> $GITHUB_STEP_SUMMARY
 
           if [ -f "${{ steps.verify.outputs.output_file }}" ]; then
-            # Compare with original file to show what was added
-            git diff --no-index "${{ inputs.file_path }}" "${{ steps.verify.outputs.output_file }}" | head -100 >> $GITHUB_STEP_SUMMARY || true
+            # Compare with original file from lich-source to show what was added
+            git diff --no-index "lich-source/${{ inputs.file_path }}" "${{ steps.verify.outputs.output_file }}" | head -100 >> $GITHUB_STEP_SUMMARY || true
           fi
 
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
