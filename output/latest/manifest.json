@@ -31,9 +31,9 @@
       "file_name": "constants.rb"
     },
     "lich-source/lib/version.rb": {
-      "timestamp": "2025-11-07T07:29:43.322985",
+      "timestamp": "2025-11-10T02:21:31.309906",
       "provider": "openai",
-      "content_hash": "538191969d5f4277",
+      "content_hash": "ace3f79a471d0898",
       "file_name": "version.rb"
     },
     "lich-source/lib/stash.rb": {
@@ -235,9 +235,9 @@
       "file_name": "group.rb"
     },
     "lich-source/lib/gemstone/infomon/parser.rb": {
-      "timestamp": "2025-11-07T07:31:37.893645",
+      "timestamp": "2025-11-10T02:23:12.268345",
       "provider": "openai",
-      "content_hash": "68d8fc828e9cb49b",
+      "content_hash": "2a87a048ed3cbd5d",
       "file_name": "parser.rb"
     },
     "lich-source/lib/gemstone/infomon/activespell.rb": {
@@ -361,9 +361,9 @@
       "file_name": "account.rb"
     },
     "lich-source/lib/common/vars.rb": {
-      "timestamp": "2025-11-07T07:32:50.297994",
+      "timestamp": "2025-11-10T02:21:47.384928",
       "provider": "openai",
-      "content_hash": "30258dab078b073e",
+      "content_hash": "8ca3282064fc485d",
       "file_name": "vars.rb"
     },
     "lich-source/lib/common/eaccess.rb": {
@@ -403,9 +403,9 @@
       "file_name": "log.rb"
     },
     "lich-source/lib/common/uservars.rb": {
-      "timestamp": "2025-11-07T07:33:10.382251",
+      "timestamp": "2025-11-10T02:21:31.860504",
       "provider": "openai",
-      "content_hash": "8bd7e58b2034d59f",
+      "content_hash": "95dea5c35265fdbb",
       "file_name": "uservars.rb"
     },
     "lich-source/lib/common/gui-manual-login.rb": {
@@ -721,6 +721,8 @@
       "file_name": "global_defs.rb"
     }
   },
-  "failed_files": [],
+  "failed_files": [
+    "lich-source/lib/update.rb"
+  ],
   "timestamp": "2025-11-07T07:29:24.533529"
 }
