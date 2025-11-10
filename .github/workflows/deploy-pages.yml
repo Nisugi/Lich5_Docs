@@ -1,0 +1,93 @@
+name: Deploy to GitHub Pages
+
+on:
+  workflow_run:
+    workflows: ["Build HTML Documentation"]
+    types:
+      - completed
+    branches:
+      - main
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  # Check if the triggering workflow succeeded
+  check-success:
+    runs-on: ubuntu-latest
+    outputs:
+      should_deploy: ${{ steps.check.outputs.should_deploy }}
+    steps:
+      - name: Check workflow conclusion
+        id: check
+        run: |
+          if [ "${{ github.event.workflow_run.conclusion }}" == "success" ]; then
+            echo "should_deploy=true" >> $GITHUB_OUTPUT
+            echo "✅ Build HTML workflow succeeded - proceeding with deployment"
+          else
+            echo "should_deploy=false" >> $GITHUB_OUTPUT
+            echo "❌ Build HTML workflow did not succeed - skipping deployment"
+          fi
+
+  # Deploy to GitHub Pages
+  deploy:
+    needs: check-success
+    if: needs.check-success.outputs.should_deploy == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main  # Ensure we're on main branch with latest docs/
+
+      - name: Verify docs directory exists
+        run: |
+          if [ ! -d "docs" ]; then
+            echo "❌ docs/ directory not found"
+            exit 1
+          fi
+
+          if [ ! -f "docs/index.html" ]; then
+            echo "❌ docs/index.html not found"
+            exit 1
+          fi
+
+          file_count=$(find docs -name "*.html" | wc -l)
+          echo "✅ Found $file_count HTML files in docs/"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'docs'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### GitHub Pages Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ "${{ steps.deployment.outcome }}" == "success" ]; then
+            echo "**Status:** ✅ Deployed successfully" >> $GITHUB_STEP_SUMMARY
+            echo "**URL:** ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "**Status:** ❌ Deployment failed" >> $GITHUB_STEP_SUMMARY
+          fi
