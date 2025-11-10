@@ -83,30 +83,7 @@
   
 </div>
 
-<h2>Overview</h2><div class="docstring">
-  <div class="discussion">
-    
-<p>Module for updating Lich5 This module handles the update process for Lich5, including downloading and applying updates.</p>
 
-
-  </div>
-</div>
-<div class="tags">
-  
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Updating Lich5</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'>Update</span><span class='period'>.</span><span class='id identifier rubyid_download_update'><span class='object_link'><a href="#download_update-class_method" title="Lich::Util::Update.download_update (method)">download_update</a></span></span></code></pre>
-    
-  </div>
-
-
-</div>
   
     <h2>
       Constant Summary
@@ -119,7 +96,7 @@
           <div class="docstring">
   <div class="discussion">
     
-<p>Update channel constants Update channel constant for stable releases The main branch reference for stable updates.</p>
+<p>Update channel constants Update channel constant for the stable version</p>
 
 
   </div>
@@ -135,7 +112,7 @@
           <div class="docstring">
   <div class="discussion">
     
-<p>Fallback branch prefix for beta updates This prefix is used to identify beta branches.</p>
+<p>Fallback branch prefix for beta updates</p>
 
 
   </div>
@@ -151,7 +128,7 @@
           <div class="docstring">
   <div class="discussion">
     
-<p>Name of the asset tarball for updates The expected name of the tarball containing the update files.</p>
+<p>fallback branch prefix for beta</p>
 
 
   </div>
@@ -183,7 +160,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#announce-class_method" title="announce (class method)">.<strong>announce</strong>  &#x21d2; void </a>
+      <a href="#announce-class_method" title="announce (class method)">.<strong>announce</strong>  &#x21d2; Object </a>
     
 
     
@@ -198,7 +175,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Announces the availability of a new version This method checks for updates and notifies the user if a new version is available.</p>
+<p>Announces the availability of a new version if applicable.</p>
 </div></span>
   
 </li>
@@ -207,7 +184,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#download_update-class_method" title="download_update (class method)">.<strong>download_update</strong>  &#x21d2; void </a>
+      <a href="#download_update-class_method" title="download_update (class method)">.<strong>download_update</strong>  &#x21d2; Object </a>
     
 
     
@@ -222,7 +199,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Downloads and applies the update to Lich5 This method handles the entire process of downloading and applying an update.</p>
+<p>Downloads and applies the update to the Lich5 ecosystem.</p>
 </div></span>
   
 </li>
@@ -231,7 +208,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#fetch_github_json-class_method" title="fetch_github_json (class method)">.<strong>fetch_github_json</strong>(url)  &#x21d2; Hash<sup>?</sup> </a>
+      <a href="#fetch_github_json-class_method" title="fetch_github_json (class method)">.<strong>fetch_github_json</strong>(url)  &#x21d2; Object </a>
     
 
     
@@ -246,7 +223,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Minimal GitHub JSON fetch with tiny cache and friendly errors Fetches JSON data from GitHub with caching This method retrieves JSON data from a specified URL, caching the result for a short time.</p>
+<p>Minimal GitHub JSON fetch with tiny cache and friendly errors Fetches JSON data from GitHub with caching and error handling.</p>
 </div></span>
   
 </li>
@@ -255,7 +232,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#help-class_method" title="help (class method)">.<strong>help</strong>  &#x21d2; void </a>
+      <a href="#help-class_method" title="help (class method)">.<strong>help</strong>  &#x21d2; Object </a>
     
 
     
@@ -270,7 +247,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Displays help information for update commands This method provides a summary of available commands and their usage.</p>
+<p>Displays help information for the update commands.</p>
 </div></span>
   
 </li>
@@ -279,7 +256,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#latest_prefixed_branch_greater_than-class_method" title="latest_prefixed_branch_greater_than (class method)">.<strong>latest_prefixed_branch_greater_than</strong>(prefix, stable_major, stable_minor)  &#x21d2; String<sup>?</sup> </a>
+      <a href="#latest_prefixed_branch_greater_than-class_method" title="latest_prefixed_branch_greater_than (class method)">.<strong>latest_prefixed_branch_greater_than</strong>(prefix, stable_major, stable_minor)  &#x21d2; Object </a>
     
 
     
@@ -303,7 +280,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#latest_prerelease_tag_greater_than-class_method" title="latest_prerelease_tag_greater_than (class method)">.<strong>latest_prerelease_tag_greater_than</strong>(stable_major, stable_minor)  &#x21d2; String<sup>?</sup> </a>
+      <a href="#latest_prerelease_tag_greater_than-class_method" title="latest_prerelease_tag_greater_than (class method)">.<strong>latest_prerelease_tag_greater_than</strong>(stable_major, stable_minor)  &#x21d2; Object </a>
     
 
     
@@ -318,7 +295,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Finds the latest prerelease tag greater than the specified version This method checks for prerelease tags that are newer than the given stable version.</p>
+<p>Finds the latest prerelease tag that is greater than the specified stable version.</p>
 </div></span>
   
 </li>
@@ -327,7 +304,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#latest_stable_tag-class_method" title="latest_stable_tag (class method)">.<strong>latest_stable_tag</strong>  &#x21d2; String<sup>?</sup> </a>
+      <a href="#latest_stable_tag-class_method" title="latest_stable_tag (class method)">.<strong>latest_stable_tag</strong>  &#x21d2; Object </a>
     
 
     
@@ -342,7 +319,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Retrieves the latest stable tag from GitHub This method fetches the latest stable release tag from the Lich5 repository.</p>
+<p>Retrieves the latest stable tag from GitHub releases.</p>
 </div></span>
   
 </li>
@@ -351,7 +328,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#major_minor_from-class_method" title="major_minor_from (class method)">.<strong>major_minor_from</strong>(str)  &#x21d2; Array&lt;Integer, Integer&gt; </a>
+      <a href="#major_minor_from-class_method" title="major_minor_from (class method)">.<strong>major_minor_from</strong>(str)  &#x21d2; Object </a>
     
 
     
@@ -366,7 +343,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Extracts major and minor version numbers from a version string This method parses a version string and returns its major and minor components.</p>
+<p>Extracts the major and minor version numbers from a version string.</p>
 </div></span>
   
 </li>
@@ -375,7 +352,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#prep_betatest-class_method" title="prep_betatest (class method)">.<strong>prep_betatest</strong>(type = nil, requested_file = nil)  &#x21d2; void </a>
+      <a href="#prep_betatest-class_method" title="prep_betatest (class method)">.<strong>prep_betatest</strong>(type = nil, requested_file = nil)  &#x21d2; Object </a>
     
 
     
@@ -390,7 +367,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Prepares for beta testing of the next Lich release This method handles user confirmation and sets up the beta test environment.</p>
+<p>Prepares for beta testing by confirming user participation.</p>
 </div></span>
   
 </li>
@@ -399,7 +376,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#prep_update-class_method" title="prep_update (class method)">.<strong>prep_update</strong>  &#x21d2; void </a>
+      <a href="#prep_update-class_method" title="prep_update (class method)">.<strong>prep_update</strong>  &#x21d2; Object </a>
     
 
     
@@ -414,7 +391,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Prepares for an update by fetching the latest release information This method retrieves the latest release data from GitHub.</p>
+<p>Prepares for an update by fetching the latest release information.</p>
 </div></span>
   
 </li>
@@ -423,7 +400,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#request-class_method" title="request (class method)">.<strong>request</strong>(type = &#39;--announce&#39;)  &#x21d2; void </a>
+      <a href="#request-class_method" title="request (class method)">.<strong>request</strong>(type = &#39;--announce&#39;)  &#x21d2; Object </a>
     
 
     
@@ -438,7 +415,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Handles update requests based on command line arguments.</p>
+<p>Handles various update commands based on the provided type.</p>
 </div></span>
   
 </li>
@@ -447,7 +424,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#resolve_channel_ref-class_method" title="resolve_channel_ref (class method)">.<strong>resolve_channel_ref</strong>(channel)  &#x21d2; String<sup>?</sup> </a>
+      <a href="#resolve_channel_ref-class_method" title="resolve_channel_ref (class method)">.<strong>resolve_channel_ref</strong>(channel)  &#x21d2; Object </a>
     
 
     
@@ -462,7 +439,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Resolve a Git ref for stable/beta everywhere it’s needed Resolves a Git reference for stable or beta channels This method determines the appropriate reference for the specified channel.</p>
+<p>Resolve a Git ref for stable/beta everywhere it’s needed Resolves a Git reference for stable or beta channels.</p>
 </div></span>
   
 </li>
@@ -471,7 +448,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#revert-class_method" title="revert (class method)">.<strong>revert</strong>  &#x21d2; void </a>
+      <a href="#revert-class_method" title="revert (class method)">.<strong>revert</strong>  &#x21d2; Object </a>
     
 
     
@@ -486,7 +463,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Reverts Lich5 to the previously installed version This method restores the last snapshot of Lich5 files.</p>
+<p>Reverts the Lich5 ecosystem to the most recent snapshot.</p>
 </div></span>
   
 </li>
@@ -495,7 +472,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#snapshot-class_method" title="snapshot (class method)">.<strong>snapshot</strong>  &#x21d2; void </a>
+      <a href="#snapshot-class_method" title="snapshot (class method)">.<strong>snapshot</strong>  &#x21d2; Object </a>
     
 
     
@@ -510,7 +487,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Creates a snapshot of the current Lich5 ecosystem This method backs up the current state of Lich5 files.</p>
+<p>Creates a snapshot of the current Lich core files.</p>
 </div></span>
   
 </li>
@@ -519,7 +496,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#update_core_data_and_scripts-class_method" title="update_core_data_and_scripts (class method)">.<strong>update_core_data_and_scripts</strong>(version = LICH_VERSION)  &#x21d2; void </a>
+      <a href="#update_core_data_and_scripts-class_method" title="update_core_data_and_scripts (class method)">.<strong>update_core_data_and_scripts</strong>(version = LICH_VERSION)  &#x21d2; Object </a>
     
 
     
@@ -534,7 +511,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Updates core data and scripts for the Lich5 ecosystem This method updates essential scripts and data files based on the game type.</p>
+<p>Updates core data and scripts based on the current game type.</p>
 </div></span>
   
 </li>
@@ -543,7 +520,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#update_file-class_method" title="update_file (class method)">.<strong>update_file</strong>(type, rf, version = &#39;production&#39;)  &#x21d2; void </a>
+      <a href="#update_file-class_method" title="update_file (class method)">.<strong>update_file</strong>(type, rf, version = &#39;production&#39;)  &#x21d2; Object </a>
     
 
     
@@ -558,7 +535,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Updates a specific file in the Lich5 ecosystem This method downloads and replaces a specified file based on its type.</p>
+<p>Updates a specific file (script, library, or data) from the remote repository.</p>
 </div></span>
   
 </li>
@@ -567,7 +544,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#version_key-class_method" title="version_key (class method)">.<strong>version_key</strong>(tag_or_name)  &#x21d2; Gem::Version </a>
+      <a href="#version_key-class_method" title="version_key (class method)">.<strong>version_key</strong>(tag_or_name)  &#x21d2; Object </a>
     
 
     
@@ -582,7 +559,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Generates a version key from a tag or branch name This method normalizes version strings for comparison.</p>
+<p>Generates a version key from a tag or branch name for comparison.</p>
 </div></span>
   
 </li>
@@ -600,7 +577,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="announce-class_method">
   
-    .<strong>announce</strong>  &#x21d2; <tt>void</tt> 
+    .<strong>announce</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -608,26 +585,14 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p>
-<p>Announces the availability of a new version This method checks for updates and notifies the user if a new version is available.</p>
+    
+<p>Announces the availability of a new version if applicable.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Announcing a new version</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_announce'>announce</span></code></pre>
-    
-  </div>
-
 
 </div><table class="source_code">
   <tr>
@@ -635,29 +600,29 @@
       <pre class="lines">
 
 
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89</pre>
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 51</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_announce'>announce</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_prep_update'>prep_update</span>
@@ -687,7 +652,7 @@
       <div class="method_details ">
   <h3 class="signature " id="download_update-class_method">
   
-    .<strong>download_update</strong>  &#x21d2; <tt>void</tt> 
+    .<strong>download_update</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -695,26 +660,14 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p>
-<p>Downloads and applies the update to Lich5 This method handles the entire process of downloading and applying an update.</p>
+    
+<p>Downloads and applies the update to the Lich5 ecosystem.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Downloading an update</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_download_update'>download_update</span></code></pre>
-    
-  </div>
-
 
 </div><table class="source_code">
   <tr>
@@ -722,63 +675,63 @@
       <pre class="lines">
 
 
-425
-426
-427
-428
-429
-430
-431
-432
-433
-434
-435
-436
-437
-438
-439
-440
-441
-442
-443
-444
-445
-446
-447
-448
-449
-450
-451
-452
-453
-454
-455
-456
-457
-458
-459
-460
-461
-462
-463
-464
-465
-466
-467
-468
-469
-470
-471
-472
-473
-474
-475
-476
-477
-478</pre>
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 425</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 346</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_download_update'>download_update</span>
   <span class='comment'>## This is the workhorse routine that does the file moves from an update
@@ -842,7 +795,7 @@
       <div class="method_details ">
   <h3 class="signature " id="fetch_github_json-class_method">
   
-    .<strong>fetch_github_json</strong>(url)  &#x21d2; <tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt><sup>?</sup> 
+    .<strong>fetch_github_json</strong>(url)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -851,81 +804,13 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Minimal GitHub JSON fetch with tiny cache and friendly errors Fetches JSON data from GitHub with caching This method retrieves JSON data from a specified URL, caching the result for a short time.</p>
+<p>Minimal GitHub JSON fetch with tiny cache and friendly errors Fetches JSON data from GitHub with caching and error handling.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Fetching GitHub JSON</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://api.github.com/repos/elanthia-online/lich-5/releases</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
-    
-  </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>url</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The URL to fetch JSON data from</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../Hash.html" title="Hash (class)">Hash</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The parsed JSON data or nil on error</p>
-</div>
-      
-    </li>
-  
-</ul>
-<p class="tag_title">Raises:</p>
-<ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>StandardError</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>If there is a network error</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -933,25 +818,25 @@
       <pre class="lines">
 
 
-275
-276
-277
-278
-279
-280
-281
-282
-283
-284
-285
-286
-287
-288
-289
-290</pre>
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 275</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 231</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_now'>now</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
@@ -977,7 +862,7 @@
       <div class="method_details ">
   <h3 class="signature " id="help-class_method">
   
-    .<strong>help</strong>  &#x21d2; <tt>void</tt> 
+    .<strong>help</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -985,26 +870,14 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p>
-<p>Displays help information for update commands This method provides a summary of available commands and their usage.</p>
+    
+<p>Displays help information for the update commands.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Displaying help</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_help'>help</span></code></pre>
-    
-  </div>
-
 
 </div><table class="source_code">
   <tr>
@@ -1012,35 +885,35 @@
       <pre class="lines">
 
 
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
 96
 97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121</pre>
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 96</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_help'>help</span>
   <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>
@@ -1076,7 +949,7 @@
       <div class="method_details ">
   <h3 class="signature " id="latest_prefixed_branch_greater_than-class_method">
   
-    .<strong>latest_prefixed_branch_greater_than</strong>(prefix, stable_major, stable_minor)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt><sup>?</sup> 
+    .<strong>latest_prefixed_branch_greater_than</strong>(prefix, stable_major, stable_minor)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1085,95 +958,13 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Optional fallback: newest branch whose name starts with prefix and encodes a version Only branches with (major,minor) &gt; stable’s (major,minor) are considered. Accepts names like “pre/beta/5.15” or “pre/beta-5.15.0”. Finds the latest branch with a specified prefix that is greater than the stable version This method checks for branches that match the prefix and are newer than the stable version.</p>
+<p>Optional fallback: newest branch whose name starts with prefix and encodes a version Only branches with (major,minor) &gt; stable’s (major,minor) are considered. Accepts names like “pre/beta/5.15” or “pre/beta-5.15.0”. Finds the latest branch with a name starting with the specified prefix and greater version.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Finding the latest prefixed branch</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_branch'>branch</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_latest_prefixed_branch_greater_than'>latest_prefixed_branch_greater_than</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>pre/beta</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span></code></pre>
-    
-  </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>prefix</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The prefix to match against branch names</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>stable_major</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The major version of the stable release</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>stable_minor</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The minor version of the stable release</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The latest matching branch or nil if not found</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1181,26 +972,26 @@
       <pre class="lines">
 
 
-337
-338
-339
-340
-341
-342
-343
-344
-345
-346
-347
-348
-349
-350
-351
-352
-353</pre>
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 337</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 276</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_latest_prefixed_branch_greater_than'>latest_prefixed_branch_greater_than</span><span class='lparen'>(</span><span class='id identifier rubyid_prefix'>prefix</span><span class='comma'>,</span> <span class='id identifier rubyid_stable_major'>stable_major</span><span class='comma'>,</span> <span class='id identifier rubyid_stable_minor'>stable_minor</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_branches'>branches</span> <span class='op'>=</span> <span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://api.github.com/repos/elanthia-online/lich-5/branches?per_page=100</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1227,7 +1018,7 @@
       <div class="method_details ">
   <h3 class="signature " id="latest_prerelease_tag_greater_than-class_method">
   
-    .<strong>latest_prerelease_tag_greater_than</strong>(stable_major, stable_minor)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt><sup>?</sup> 
+    .<strong>latest_prerelease_tag_greater_than</strong>(stable_major, stable_minor)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1236,79 +1027,13 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Finds the latest prerelease tag greater than the specified version This method checks for prerelease tags that are newer than the given stable version.</p>
+<p>Finds the latest prerelease tag that is greater than the specified stable version.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Finding the latest prerelease tag</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_tag'>tag</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_latest_prerelease_tag_greater_than'>latest_prerelease_tag_greater_than</span><span class='lparen'>(</span><span class='int'>5</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span></code></pre>
-    
-  </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>stable_major</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The major version of the stable release</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>stable_minor</span>
-      
-      
-        <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The minor version of the stable release</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The latest prerelease tag or nil if not found</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1316,23 +1041,23 @@
       <pre class="lines">
 
 
-311
-312
-313
-314
-315
-316
-317
-318
-319
-320
-321
-322
-323
-324</pre>
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 311</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 257</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_latest_prerelease_tag_greater_than'>latest_prerelease_tag_greater_than</span><span class='lparen'>(</span><span class='id identifier rubyid_stable_major'>stable_major</span><span class='comma'>,</span> <span class='id identifier rubyid_stable_minor'>stable_minor</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_releases'>releases</span> <span class='op'>=</span> <span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://api.github.com/repos/elanthia-online/lich-5/releases</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1356,7 +1081,7 @@
       <div class="method_details ">
   <h3 class="signature " id="latest_stable_tag-class_method">
   
-    .<strong>latest_stable_tag</strong>  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt><sup>?</sup> 
+    .<strong>latest_stable_tag</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1365,43 +1090,13 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Retrieves the latest stable tag from GitHub This method fetches the latest stable release tag from the Lich5 repository.</p>
+<p>Retrieves the latest stable tag from GitHub releases.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Getting the latest stable tag</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_tag'>tag</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_latest_stable_tag'>latest_stable_tag</span></code></pre>
-    
-  </div>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The latest stable tag or nil if not found</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1409,15 +1104,15 @@
       <pre class="lines">
 
 
-297
-298
-299
-300
-301
-302</pre>
+249
+250
+251
+252
+253
+254</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 297</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 249</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_latest_stable_tag'>latest_stable_tag</span>
   <span class='id identifier rubyid_releases'>releases</span> <span class='op'>=</span> <span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://api.github.com/repos/elanthia-online/lich-5/releases</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
@@ -1433,7 +1128,7 @@
       <div class="method_details ">
   <h3 class="signature " id="major_minor_from-class_method">
   
-    .<strong>major_minor_from</strong>(str)  &#x21d2; <tt>Array&lt;Integer, Integer&gt;</tt> 
+    .<strong>major_minor_from</strong>(str)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1442,63 +1137,13 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Extracts major and minor version numbers from a version string This method parses a version string and returns its major and minor components.</p>
+<p>Extracts the major and minor version numbers from a version string.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Extracting major and minor version</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_major'>major</span><span class='comma'>,</span> <span class='id identifier rubyid_minor'>minor</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_major_minor_from'>major_minor_from</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>v5.0.1</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
-    
-  </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>str</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The version string to parse</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Array&lt;Integer, Integer&gt;</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>An array containing the major and minor version numbers</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1506,21 +1151,21 @@
       <pre class="lines">
 
 
-381
-382
-383
-384
-385
-386
-387
-388
-389
-390
-391
-392</pre>
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 381</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 310</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_major_minor_from'>major_minor_from</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='lbracket'>[</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_str'>str</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -1542,7 +1187,7 @@
       <div class="method_details ">
   <h3 class="signature " id="prep_betatest-class_method">
   
-    .<strong>prep_betatest</strong>(type = nil, requested_file = nil)  &#x21d2; <tt>void</tt> 
+    .<strong>prep_betatest</strong>(type = nil, requested_file = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1550,66 +1195,14 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p>
-<p>Prepares for beta testing of the next Lich release This method handles user confirmation and sets up the beta test environment.</p>
+    
+<p>Prepares for beta testing by confirming user participation.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Preparing for beta test</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_prep_betatest'>prep_betatest</span></code></pre>
-    
-  </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>type</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>nil</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The type of beta test (optional)</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>requested_file</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>nil</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The file to be tested (optional)</p>
-</div>
-      
-    </li>
-  
-</ul>
-
 
 </div><table class="source_code">
   <tr>
@@ -1617,6 +1210,39 @@
       <pre class="lines">
 
 
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
 170
 171
 172
@@ -1652,43 +1278,10 @@
 202
 203
 204
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223
-224
-225
-226
-227
-228
-229
-230
-231
-232
-233
-234
-235
-236
-237
-238</pre>
+205</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 170</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 137</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_prep_betatest'>prep_betatest</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_requested_file'>requested_file</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -1735,7 +1328,7 @@
           <span class='kw'>elsif</span> <span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>assets</span><span class='tstring_end'>&#39;</span></span>
             <span class='ivar'>@holder</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
           <span class='kw'>elsif</span> <span class='id identifier rubyid_entry'>entry</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>body</span><span class='tstring_end'>&#39;</span></span>
-            <span class='ivar'>@new_features</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\#\# What&#39;s Changed.+$</span><span class='regexp_end'>/m</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+            <span class='ivar'>@new_features</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\#\# What&#39;s Changed.+$</span><span class='regexp_end'>/m</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&lt;!--[\s\S]*?--&gt;</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
           <span class='kw'>end</span>
         <span class='rbrace'>}</span>
         <span class='id identifier rubyid_release_asset'>release_asset</span> <span class='op'>=</span> <span class='ivar'>@holder</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@holder</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\b</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#ASSET_TARBALL_NAME-constant" title="Lich::Util::Update::ASSET_TARBALL_NAME (constant)">ASSET_TARBALL_NAME</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>\b</span><span class='regexp_end'>/</span></span> <span class='rbrace'>}</span>
@@ -1767,7 +1360,7 @@
       <div class="method_details ">
   <h3 class="signature " id="prep_update-class_method">
   
-    .<strong>prep_update</strong>  &#x21d2; <tt>void</tt> 
+    .<strong>prep_update</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1775,26 +1368,14 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p>
-<p>Prepares for an update by fetching the latest release information This method retrieves the latest release data from GitHub.</p>
+    
+<p>Prepares for an update by fetching the latest release information.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Preparing for an update</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_prep_update'>prep_update</span></code></pre>
-    
-  </div>
-
 
 </div><table class="source_code">
   <tr>
@@ -1802,29 +1383,29 @@
       <pre class="lines">
 
 
-399
-400
-401
-402
-403
-404
-405
-406
-407
-408
-409
-410
-411
-412
-413
-414
-415
-416
-417
-418</pre>
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 399</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 324</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_prep_update'>prep_update</span>
   <span class='id identifier rubyid_latest'>latest</span> <span class='op'>=</span> <span class='id identifier rubyid_fetch_github_json'>fetch_github_json</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://api.github.com/repos/elanthia-online/lich-5/releases/latest</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1842,7 +1423,7 @@
 
   <span class='ivar'>@update_to</span> <span class='op'>=</span> <span class='id identifier rubyid_latest'>latest</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tag_name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>v</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='ivar'>@holder</span> <span class='op'>=</span> <span class='id identifier rubyid_latest'>latest</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>assets</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
-  <span class='ivar'>@new_features</span> <span class='op'>=</span> <span class='id identifier rubyid_latest'>latest</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>body</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\#\# What&#39;s Changed.+$</span><span class='regexp_end'>/m</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@new_features</span> <span class='op'>=</span> <span class='id identifier rubyid_latest'>latest</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>body</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\#\# What&#39;s Changed.+$</span><span class='regexp_end'>/m</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>&lt;!--[\s\S]*?--&gt;</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_release_asset'>release_asset</span> <span class='op'>=</span> <span class='ivar'>@holder</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@holder</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span> <span class='id identifier rubyid_x'>x</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\b</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#ASSET_TARBALL_NAME-constant" title="Lich::Util::Update::ASSET_TARBALL_NAME (constant)">ASSET_TARBALL_NAME</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>\b</span><span class='regexp_end'>/</span></span> <span class='rbrace'>}</span>
   <span class='ivar'>@zipfile</span> <span class='op'>=</span> <span class='id identifier rubyid_release_asset'>release_asset</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>browser_download_url</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -1854,7 +1435,7 @@
       <div class="method_details ">
   <h3 class="signature " id="request-class_method">
   
-    .<strong>request</strong>(type = &#39;--announce&#39;)  &#x21d2; <tt>void</tt> 
+    .<strong>request</strong>(type = &#39;--announce&#39;)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1862,66 +1443,14 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p>
-<p>Handles update requests based on command line arguments</p>
+    
+<p>Handles various update commands based on the provided type.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Requesting an update</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--update</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
-    
-  </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>type</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>&#39;--announce&#39;</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The type of request (e.g., ‘–announce’, ‘–update’)</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Raises:</p>
-<ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>StandardError</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>If the command is unknown</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1929,31 +1458,31 @@
       <pre class="lines">
 
 
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
 42
 43
 44
 45
 46
 47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63</pre>
+48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_request'>request</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--announce</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_type'>type</span>
@@ -1985,7 +1514,7 @@
       <div class="method_details ">
   <h3 class="signature " id="resolve_channel_ref-class_method">
   
-    .<strong>resolve_channel_ref</strong>(channel)  &#x21d2; <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt><sup>?</sup> 
+    .<strong>resolve_channel_ref</strong>(channel)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -1994,63 +1523,13 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Resolve a Git ref for stable/beta everywhere it’s needed Resolves a Git reference for stable or beta channels This method determines the appropriate reference for the specified channel.</p>
+<p>Resolve a Git ref for stable/beta everywhere it’s needed Resolves a Git reference for stable or beta channels.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Resolving a channel reference</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_resolve_channel_ref'>resolve_channel_ref</span><span class='lparen'>(</span><span class='symbol'>:beta</span><span class='rparen'>)</span></code></pre>
-    
-  </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>channel</span>
-      
-      
-        <span class='type'>(<tt>Symbol</tt>, <tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The channel to resolve (e.g., :stable, :beta)</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The resolved reference or nil if not found</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -2058,28 +1537,28 @@
       <pre class="lines">
 
 
-247
-248
-249
-250
-251
-252
-253
-254
-255
-256
-257
-258
-259
-260
-261
-262
-263
-264
-265</pre>
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 247</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 209</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_resolve_channel_ref'>resolve_channel_ref</span><span class='lparen'>(</span><span class='id identifier rubyid_channel'>channel</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_channel'>channel</span>
@@ -2108,7 +1587,7 @@
       <div class="method_details ">
   <h3 class="signature " id="revert-class_method">
   
-    .<strong>revert</strong>  &#x21d2; <tt>void</tt> 
+    .<strong>revert</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2116,26 +1595,14 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p>
-<p>Reverts Lich5 to the previously installed version This method restores the last snapshot of Lich5 files.</p>
+    
+<p>Reverts the Lich5 ecosystem to the most recent snapshot.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Reverting to a previous version</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_revert'>revert</span></code></pre>
-    
-  </div>
-
 
 </div><table class="source_code">
   <tr>
@@ -2143,53 +1610,53 @@
       <pre class="lines">
 
 
-485
-486
-487
-488
-489
-490
-491
-492
-493
-494
-495
-496
-497
-498
-499
-500
-501
-502
-503
-504
-505
-506
-507
-508
-509
-510
-511
-512
-513
-514
-515
-516
-517
-518
-519
-520
-521
-522
-523
-524
-525
-526
-527
-528</pre>
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 485</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 402</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_revert'>revert</span>
   <span class='comment'>## Since the request is to roll-back, we will do so destructively
@@ -2243,7 +1710,7 @@
       <div class="method_details ">
   <h3 class="signature " id="snapshot-class_method">
   
-    .<strong>snapshot</strong>  &#x21d2; <tt>void</tt> 
+    .<strong>snapshot</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2251,26 +1718,14 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p>
-<p>Creates a snapshot of the current Lich5 ecosystem This method backs up the current state of Lich5 files.</p>
+    
+<p>Creates a snapshot of the current Lich core files.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Creating a snapshot</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_snapshot'>snapshot</span></code></pre>
-    
-  </div>
-
 
 </div><table class="source_code">
   <tr>
@@ -2278,43 +1733,43 @@
       <pre class="lines">
 
 
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
 128
 129
 130
 131
 132
 133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157
-158
-159
-160
-161</pre>
+134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_snapshot'>snapshot</span>
   <span class='id identifier rubyid_respond'><span class='object_link'><a href="../../top-level-namespace.html#respond-instance_method" title="#respond (method)">respond</a></span></span>
@@ -2358,7 +1813,7 @@
       <div class="method_details ">
   <h3 class="signature " id="update_core_data_and_scripts-class_method">
   
-    .<strong>update_core_data_and_scripts</strong>(version = LICH_VERSION)  &#x21d2; <tt>void</tt> 
+    .<strong>update_core_data_and_scripts</strong>(version = LICH_VERSION)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2366,48 +1821,14 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p>
-<p>Updates core data and scripts for the Lich5 ecosystem This method updates essential scripts and data files based on the game type.</p>
+    
+<p>Updates core data and scripts based on the current game type.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Updating core data and scripts</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_update_core_data_and_scripts'>update_core_data_and_scripts</span></code></pre>
-    
-  </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>version</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>LICH_VERSION</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The version to update to (default: LICH_VERSION)</p>
-</div>
-      
-    </li>
-  
-</ul>
-
 
 </div><table class="source_code">
   <tr>
@@ -2415,43 +1836,43 @@
       <pre class="lines">
 
 
-603
-604
-605
-606
-607
-608
-609
-610
-611
-612
-613
-614
-615
-616
-617
-618
-619
-620
-621
-622
-623
-624
-625
-626
-627
-628
-629
-630
-631
-632
-633
-634
-635
-636</pre>
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 603</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 507</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update_core_data_and_scripts'>update_core_data_and_scripts</span><span class='lparen'>(</span><span class='id identifier rubyid_version'>version</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../top-level-namespace.html#LICH_VERSION-constant" title="LICH_VERSION (constant)">LICH_VERSION</a></span></span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='const'>XMLData</span><span class='period'>.</span><span class='id identifier rubyid_game'>game</span> <span class='op'>!~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^GS|^DR</span><span class='regexp_end'>/</span></span>
@@ -2495,7 +1916,7 @@
       <div class="method_details ">
   <h3 class="signature " id="update_file-class_method">
   
-    .<strong>update_file</strong>(type, rf, version = &#39;production&#39;)  &#x21d2; <tt>void</tt> 
+    .<strong>update_file</strong>(type, rf, version = &#39;production&#39;)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2503,98 +1924,14 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p class="note returns_void">This method returns an undefined value.</p>
-<p>Updates a specific file in the Lich5 ecosystem This method downloads and replaces a specified file based on its type.</p>
+    
+<p>Updates a specific file (script, library, or data) from the remote repository.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Updating a script file</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_update_file'>update_file</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>script</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>alias.lic</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
-    
-  </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>type</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The type of file to update (e.g., ‘script’, ‘library’, ‘data’)</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>rf</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The name of the file to update</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>version</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>&#39;production&#39;</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The version channel (default: ‘production’)</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Raises:</p>
-<ul class="raise">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>StandardError</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>If the file cannot be updated</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -2602,66 +1939,66 @@
       <pre class="lines">
 
 
-539
-540
-541
-542
-543
-544
-545
-546
-547
-548
-549
-550
-551
-552
-553
-554
-555
-556
-557
-558
-559
-560
-561
-562
-563
-564
-565
-566
-567
-568
-569
-570
-571
-572
-573
-574
-575
-576
-577
-578
-579
-580
-581
-582
-583
-584
-585
-586
-587
-588
-589
-590
-591
-592
-593
-594
-595</pre>
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 539</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 448</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update_file'>update_file</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_rf'>rf</span><span class='comma'>,</span> <span class='id identifier rubyid_version'>version</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>production</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_version'>version</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(?:staging|master)$</span><span class='regexp_end'>/i</span></span>
@@ -2728,7 +2065,7 @@
       <div class="method_details ">
   <h3 class="signature " id="version_key-class_method">
   
-    .<strong>version_key</strong>(tag_or_name)  &#x21d2; <tt>Gem::Version</tt> 
+    .<strong>version_key</strong>(tag_or_name)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -2737,63 +2074,13 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Generates a version key from a tag or branch name This method normalizes version strings for comparison.</p>
+<p>Generates a version key from a tag or branch name for comparison.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-        <h5 class="example_title"><div class='inline'>
-<p>Generating a version key</p>
-</div></h5>
-      
-      <pre class="example code"><code><span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Util.html" title="Lich::Util (module)">Util</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="Lich::Util::Update (module)">Update</a></span></span><span class='period'>.</span><span class='id identifier rubyid_version_key'>version_key</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>v5.0.1</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
-    
-  </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>tag_or_name</span>
-      
-      
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The tag or branch name to process</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>Gem::Version</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>The normalized version object</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -2801,22 +2088,22 @@
       <pre class="lines">
 
 
-361
-362
-363
-364
-365
-366
-367
-368
-369
-370
-371
-372
-373</pre>
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/update.rb', line 361</span>
+      <pre class="code"><span class="info file"># File 'documented/update.rb', line 295</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_version_key'>version_key</span><span class='lparen'>(</span><span class='id identifier rubyid_tag_or_name'>tag_or_name</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_s'><span class='object_link'><a href="../../top-level-namespace.html#s-instance_method" title="#s (method)">s</a></span></span> <span class='op'>=</span> <span class='id identifier rubyid_tag_or_name'>tag_or_name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
@@ -2841,7 +2128,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 08:04:16 2025 by
+  Generated on Mon Nov 10 02:56:37 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.2.9).
 </div>

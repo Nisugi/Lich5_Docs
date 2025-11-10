@@ -88,9 +88,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>CLI commands for Infomon</p>
-
-<p>This module contains command-line interface (CLI) commands for managing Infomon data.</p>
+<p>This module handles information monitoring for the game.</p>
 
 
   </div>
@@ -102,10 +100,10 @@
     
       
         <h5 class="example_title"><div class='inline'>
-<p>Using the Infomon CLI</p>
+<p>Including the Infomon module</p>
 </div></h5>
       
-      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'>Infomon</span><span class='period'>.</span><span class='id identifier rubyid_sync'><span class='object_link'><a href="#sync-class_method" title="Lich::Gemstone::Infomon.sync (method)">sync</a></span></span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_include'>include</span> <span class='const'><span class='object_link'><a href="../../Lich.html" title="Lich (module)">Lich</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Gemstone.html" title="Lich::Gemstone (module)">Gemstone</a></span></span><span class='op'>::</span><span class='const'>Infomon</span></code></pre>
     
   </div>
 
@@ -2928,7 +2926,7 @@ on conflict(`key`) do update set value = excluded.value;</span><span class='tstr
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 08:04:17 2025 by
+  Generated on Mon Nov 10 02:56:38 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.2.9).
 </div>

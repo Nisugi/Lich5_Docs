@@ -83,7 +83,30 @@
   
 </div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>This module manages the state of the parser.</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Setting the state</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'>State</span><span class='period'>.</span><span class='id identifier rubyid_set'><span class='object_link'><a href="#set-class_method" title="Lich::Gemstone::Infomon::Parser::State.set (method)">set</a></span></span><span class='lparen'>(</span><span class='const'>State</span><span class='op'>::</span><span class='const'><span class='object_link'><a href="#Goals-constant" title="Lich::Gemstone::Infomon::Parser::State::Goals (constant)">Goals</a></span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
+
+</div>
   
     <h2>
       Constant Summary
@@ -142,7 +165,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Gets the current state.</p>
+<p>Retrieves the current state of the parser.</p>
 </div></span>
   
 </li>
@@ -166,7 +189,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Sets the current state.</p>
+<p>Sets the current state of the parser.</p>
 </div></span>
   
 </li>
@@ -193,21 +216,13 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Gets the current state</p>
+<p>Retrieves the current state of the parser.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
-  <div class="examples">
-    <h4 class="tag_title">Examples:</h4>
-    
-      
-      <pre class="example code"><code><span class='id identifier rubyid_current_state'>current_state</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Infomon::Parser::State (module)">State</a></span></span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span></code></pre>
-    
-  </div>
-
 <p class="tag_title">Returns:</p>
 <ul class="return">
   
@@ -220,7 +235,7 @@
       
         &mdash;
         <div class='inline'>
-<p>The current state</p>
+<p>The current state.</p>
 </div>
       
     </li>
@@ -233,12 +248,12 @@
       <pre class="lines">
 
 
-208
-209
-210</pre>
+284
+285
+286</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/gemstone/infomon/parser.rb', line 208</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/infomon/parser.rb', line 284</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="../../../../top-level-namespace.html#get-instance_method" title="#get (method)">get</a></span></span>
   <span class='ivar'>@state</span>
@@ -260,7 +275,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note returns_void">This method returns an undefined value.</p>
-<p>Sets the current state</p>
+<p>Sets the current state of the parser.</p>
 
 
   </div>
@@ -270,6 +285,10 @@
   <div class="examples">
     <h4 class="tag_title">Examples:</h4>
     
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Setting the state</p>
+</div></h5>
       
       <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Infomon::Parser::State (module)">State</a></span></span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="" title="Lich::Gemstone::Infomon::Parser::State (module)">State</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="#Goals-constant" title="Lich::Gemstone::Infomon::Parser::State::Goals (constant)">Goals</a></span></span><span class='rparen'>)</span></code></pre>
     
@@ -288,7 +307,7 @@
       
         &mdash;
         <div class='inline'>
-<p>The state to set</p>
+<p>The state to set.</p>
 </div>
       
     </li>
@@ -307,7 +326,7 @@
       
         &mdash;
         <div class='inline'>
-<p>if the state is invalid</p>
+<p>if the state is invalid.</p>
 </div>
       
     </li>
@@ -320,19 +339,19 @@
       <pre class="lines">
 
 
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202</pre>
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/gemstone/infomon/parser.rb', line 193</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/infomon/parser.rb', line 271</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_state'>state</span>
@@ -354,7 +373,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Nov  7 08:04:18 2025 by
+  Generated on Mon Nov 10 02:56:39 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.2.9).
 </div>
