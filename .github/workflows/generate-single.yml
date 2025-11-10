@@ -82,6 +82,18 @@ jobs:
             --provider ${{ inputs.provider }} \
             --output-structure mirror
 
+      - name: Copy documented file
+        run: |
+          # Copy the documented file from output/latest/documented/ to documented/
+          if [ -d "output/latest/documented" ]; then
+            echo "Copying documented files to documented/ directory"
+            mkdir -p documented
+            cp -r output/latest/documented/* documented/ 2>/dev/null || true
+            echo "✅ Files copied to documented/"
+          else
+            echo "⚠️  No output/latest/documented directory found"
+          fi
+
       - name: Verify output
         id: verify
         run: |
