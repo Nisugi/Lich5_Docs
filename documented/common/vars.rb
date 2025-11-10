@@ -217,7 +217,7 @@ module Lich
       # allowing dynamic variable access.
       #
       # @param method_name [Symbol] the method name to check
-      # @param include_private [Boolean] whether to include private methods
+      # @param _include_private [Boolean] whether to include private methods
       # @return [Boolean] true if the method name is a valid variable name
       def Vars.respond_to_missing?(method_name, _include_private = false)
         method_str = method_name.to_s
