@@ -97,17 +97,20 @@ jobs:
       - name: Verify output
         id: verify
         run: |
-          # Check if documented file was created
-          # The mirrored path will be: documented/<original_path>
-          expected_output="documented/${{ inputs.file_path }}"
+          # Find the documented file by searching for it
+          # Mirror structure uses lich-source/lib as root, so lib/ is stripped
+          file_name=$(basename "${{ inputs.file_path }}")
 
-          if [ -f "$expected_output" ]; then
+          # Search for the file in documented/ directory
+          found_file=$(find documented/ -type f -name "$file_name" | head -1)
+
+          if [ -n "$found_file" ] && [ -f "$found_file" ]; then
             echo "has_output=true" >> $GITHUB_OUTPUT
-            echo "output_file=$expected_output" >> $GITHUB_OUTPUT
-            echo "✅ Generated: $expected_output"
+            echo "output_file=$found_file" >> $GITHUB_OUTPUT
+            echo "✅ Generated: $found_file"
           else
             echo "has_output=false" >> $GITHUB_OUTPUT
-            echo "❌ Output file not found at expected location: $expected_output"
+            echo "❌ Output file not found: $file_name"
             echo "Contents of documented/ directory:"
             find documented/ -type f -name "*.rb" | head -20
             exit 1
