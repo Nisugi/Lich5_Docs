@@ -273,9 +273,137 @@ class Lich5DocumentationGenerator:
             # Save manifest after each file (in case of interruption)
             self.save_manifest()
 
+    def strip_yard_comments(self, content: str) -> str:
+        """
+        Remove existing YARD documentation while preserving inline code comments
+
+        This prevents duplicate documentation when regenerating docs for files
+        that already have partial YARD coverage.
+
+        Strips:
+        - Lines with YARD tags (@param, @return, @example, etc.)
+        - Description comment lines that are part of YARD doc blocks
+
+        Preserves:
+        - Inline comments within code (e.g., "# Calculate total")
+        - Special directives (e.g., # encoding:, # rubocop:, # :nodoc:)
+        - Shebang lines (#!/usr/bin/env ruby)
+
+        Args:
+            content: Original Ruby source code
+
+        Returns:
+            Content with YARD documentation removed
+        """
+        lines = content.split('\n')
+        result = []
+        i = 0
+
+        while i < len(lines):
+            line = lines[i]
+            stripped = line.strip()
+
+            # Keep shebang, encoding, and other special directives
+            if stripped.startswith('#!') or 'encoding:' in stripped or 'coding:' in stripped:
+                result.append(line)
+                i += 1
+                continue
+
+            # Keep rubocop directives and :nodoc:
+            if '# rubocop:' in line or '# :nodoc:' in line or '# @!visibility' in line:
+                result.append(line)
+                i += 1
+                continue
+
+            # Check if this is a YARD tag line
+            is_yard_tag = stripped.startswith('#') and any(
+                tag in stripped for tag in [
+                    '@param', '@return', '@example', '@raise', '@yield',
+                    '@note', '@see', '@api', '@deprecated', '@since',
+                    '@version', '@attr', '@attr_reader', '@attr_writer'
+                ]
+            )
+
+            if is_yard_tag:
+                # Skip this line and any continuation lines (part of the YARD block)
+                i += 1
+                # Also skip following YARD tag lines and example code
+                while i < len(lines):
+                    next_stripped = lines[i].strip()
+                    # Continue skipping if it's:
+                    # - A YARD tag line
+                    # - Part of an @example block (indented code after @example)
+                    # - A comment line that's part of the doc block
+                    if next_stripped.startswith('#'):
+                        # Check if it's another YARD tag or example code
+                        has_tag = any(tag in next_stripped for tag in [
+                            '@param', '@return', '@example', '@raise', '@yield',
+                            '@note', '@see', '@api', '@deprecated', '@since',
+                            '@version', '@attr', '@attr_reader', '@attr_writer'
+                        ])
+                        if has_tag or next_stripped.startswith('#   '):  # Example code (indented)
+                            i += 1
+                            continue
+                    break
+                continue
+
+            # Check if this is a description comment line above a definition
+            # (part of a YARD doc block without explicit tags)
+            if stripped.startswith('#') and not stripped.startswith('##'):
+                # Look ahead to see if this is followed by a definition
+                j = i + 1
+                is_yard_description = False
+
+                # Skip blank comment lines and other description lines
+                while j < len(lines):
+                    next_line = lines[j].strip()
+
+                    # If we hit a blank line, keep looking
+                    if not next_line:
+                        j += 1
+                        continue
+
+                    # If we hit a YARD tag, this is part of a YARD block
+                    if next_line.startswith('#') and any(tag in next_line for tag in [
+                        '@param', '@return', '@example', '@raise', '@yield', '@note'
+                    ]):
+                        is_yard_description = True
+                        break
+
+                    # If we hit another comment, it might be more description
+                    if next_line.startswith('#'):
+                        j += 1
+                        if j - i > 10:  # Don't look too far ahead
+                            break
+                        continue
+
+                    # If we hit a definition (class, module, def, attr_*), this is YARD
+                    if any(next_line.startswith(kw) for kw in [
+                        'class ', 'module ', 'def ', 'attr_reader', 'attr_writer', 'attr_accessor'
+                    ]):
+                        is_yard_description = True
+
+                    # Stop looking
+                    break
+
+                if is_yard_description:
+                    # Skip this description line
+                    i += 1
+                    continue
+
+            # Keep this line (it's code or an inline comment)
+            result.append(line)
+            i += 1
+
+        return '\n'.join(result)
+
     def create_documentation_prompt(self, file_name: str, content: str) -> tuple[str, str]:
         """
         Create prompts for documentation generation
+
+        Args:
+            file_name: Name of the file being documented
+            content: Ruby source code (should already have YARD comments stripped)
 
         Returns:
             (system_prompt, user_prompt) tuple
@@ -301,11 +429,10 @@ The line numbers are shown at the start of each line (e.g., "  15: def method_na
 
 **CRITICAL RULES - READ CAREFULLY:**
 
-1. **DO NOT DOCUMENT ALREADY-DOCUMENTED CODE**
-   - If a method/class ALREADY has YARD comments (lines starting with # @param, # @return, etc.),
-     DO NOT generate documentation for it
-   - SKIP any code that already has documentation comments
-   - Only document code WITHOUT existing YARD tags
+1. **DOCUMENT ALL PUBLIC CODE**
+   - Generate documentation for all public classes, modules, methods, and constants
+   - Skip private/internal code (marked with # :nodoc: or # @!visibility private)
+   - If there's nothing to document, return an empty JSON array: []
 
 2. **PARAMETER NAME RULES**
    - @param tags MUST exactly match the method's parameter names
@@ -365,9 +492,8 @@ Example output format:
 
 IMPORTANT:
 - Return ONLY the JSON array, no other text
-- Line numbers should match the ORIGINAL file (1-indexed)
+- Line numbers should match the file (1-indexed)
 - Anchors should be concise (just the key part like "def method_name" or "class ClassName")
-- SKIP any code that already has YARD documentation (# @param, # @return, etc.)
 - @param names MUST NOT include & or * symbols (use "block" not "&block", use "args" not "*args")
 - Verify @param names match the actual method parameters exactly
 - CRITICAL: In the "comment" field, you MUST escape all special characters:
@@ -401,10 +527,18 @@ IMPORTANT:
             lines = len(original_content.split('\n'))
             logger.info(f"  Lines: {lines}, Characters: {len(original_content)}")
 
+            # Strip existing YARD comments to prevent duplicates
+            # The LLM will regenerate all documentation from scratch
+            stripped_content = self.strip_yard_comments(original_content)
+            stripped_lines = len(stripped_content.split('\n'))
+            removed_lines = lines - stripped_lines
+            if removed_lines > 0:
+                logger.info(f"  Stripped {removed_lines} lines of existing YARD documentation")
+
             # Create prompts for JSON-based documentation
             system_prompt, user_prompt = self.create_documentation_prompt(
                 file_path.name,
-                original_content
+                stripped_content
             )
 
             # Generate JSON with comments and anchors
@@ -439,11 +573,11 @@ IMPORTANT:
             if len(comments) == 0:
                 # Empty array is valid - file has nothing to document (e.g., only require statements)
                 logger.info(f"  No documentation needed (file contains only requires/imports)")
-                documented_code = original_content
+                documented_code = stripped_content
             else:
                 logger.info(f"  Extracted {len(comments)} documentation entries")
-                # Insert comments into original code
-                documented_code = self.insert_comments(original_content, comments)
+                # Insert comments into stripped code (not original, to avoid duplicates)
+                documented_code = self.insert_comments(stripped_content, comments)
 
             # Store documentation
             self.documentation[file_path.name] = {
