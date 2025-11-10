@@ -719,6 +719,12 @@
       "provider": "openai",
       "content_hash": "ba8c0123f44f1a68",
       "file_name": "global_defs.rb"
+    },
+    "/home/runner/work/lich-5-docs/lich-5-docs/lich-source/lib/common/vars.rb": {
+      "timestamp": "2025-11-10T02:54:30.574348",
+      "provider": "openai",
+      "content_hash": "8ca3282064fc485d",
+      "file_name": "vars.rb"
     }
   },
   "failed_files": [
