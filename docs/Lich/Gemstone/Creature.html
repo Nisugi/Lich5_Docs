@@ -115,8 +115,7 @@
 </span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_creature'>creature</span><span class='period'>.</span><span class='id identifier rubyid_has_status?'>has_status?</span><span class='lparen'>(</span><span class='symbol'>:stunned</span><span class='rparen'>)</span>  <span class='comment'># =&gt; true
 </span>
 <span class='comment'># Get statistics
-</span><span class='id identifier rubyid_puts'>puts</span> <span class='const'>Creature</span><span class='period'>.</span><span class='id identifier rubyid_stats'><span class='object_link'><a href="#stats-class_method" title="Lich::Gemstone::Creature.stats (method)">stats</a></span></span>
-<span class='const'>Creature</span><span class='period'>.</span><span class='id identifier rubyid_print_damage_report'><span class='object_link'><a href="#print_damage_report-class_method" title="Lich::Gemstone::Creature.print_damage_report (method)">print_damage_report</a></span></span></code></pre>
+</span><span class='id identifier rubyid_puts'>puts</span> <span class='const'>Creature</span><span class='period'>.</span><span class='id identifier rubyid_stats'><span class='object_link'><a href="#stats-class_method" title="Lich::Gemstone::Creature.stats (method)">stats</a></span></span></code></pre>
     
   </div>
 
@@ -259,54 +258,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#damage_report-class_method" title="damage_report (class method)">.<strong>damage_report</strong>(**options)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Generate damage report for HP analysis.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#print_damage_report-class_method" title="print_damage_report (class method)">.<strong>print_damage_report</strong>(**options)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Print formatted damage report.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#register-class_method" title="register (class method)">.<strong>register</strong>(name, id, noun = nil)  &#x21d2; Object </a>
     
 
@@ -387,12 +338,12 @@
       <pre class="lines">
 
 
-777
-778
-779</pre>
+661
+662
+663</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/gemstone/creature.rb', line 777</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/creature.rb', line 661</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='op'>[]</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="CreatureInstance.html" title="Lich::Gemstone::CreatureInstance (class)">CreatureInstance</a></span></span><span class='lbracket'>[</span><span class='id identifier rubyid_id'>id</span><span class='rbracket'>]</span>
@@ -428,12 +379,12 @@
       <pre class="lines">
 
 
-822
-823
-824</pre>
+696
+697
+698</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/gemstone/creature.rb', line 822</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/creature.rb', line 696</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
   <span class='const'><span class='object_link'><a href="CreatureInstance.html" title="Lich::Gemstone::CreatureInstance (class)">CreatureInstance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_all'><span class='object_link'><a href="CreatureInstance.html#all-class_method" title="Lich::Gemstone::CreatureInstance.all (method)">all</a></span></span>
@@ -469,12 +420,12 @@
       <pre class="lines">
 
 
-807
-808
-809</pre>
+691
+692
+693</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/gemstone/creature.rb', line 807</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/creature.rb', line 691</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_cleanup_old'>cleanup_old</span><span class='lparen'>(</span><span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="CreatureInstance.html" title="Lich::Gemstone::CreatureInstance (class)">CreatureInstance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_cleanup_old'><span class='object_link'><a href="CreatureInstance.html#cleanup_old-class_method" title="Lich::Gemstone::CreatureInstance.cleanup_old (method)">cleanup_old</a></span></span><span class='lparen'>(</span><span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -510,12 +461,12 @@
       <pre class="lines">
 
 
-802
-803
-804</pre>
+686
+687
+688</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/gemstone/creature.rb', line 802</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/creature.rb', line 686</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_clear'><span class='object_link'><a href="../../top-level-namespace.html#clear-instance_method" title="#clear (method)">clear</a></span></span>
   <span class='const'><span class='object_link'><a href="CreatureInstance.html" title="Lich::Gemstone::CreatureInstance (class)">CreatureInstance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_clear'><span class='object_link'><a href="CreatureInstance.html#clear-class_method" title="Lich::Gemstone::CreatureInstance.clear (method)">clear</a></span></span>
@@ -551,97 +502,15 @@
       <pre class="lines">
 
 
-787
-788
-789</pre>
+671
+672
+673</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/gemstone/creature.rb', line 787</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/creature.rb', line 671</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_configure'>configure</span><span class='lparen'>(</span><span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="CreatureInstance.html" title="Lich::Gemstone::CreatureInstance (class)">CreatureInstance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configure'><span class='object_link'><a href="CreatureInstance.html#configure-class_method" title="Lich::Gemstone::CreatureInstance.configure (method)">configure</a></span></span><span class='lparen'>(</span><span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="damage_report-class_method">
-  
-    .<strong>damage_report</strong>(**options)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Generate damage report for HP analysis</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-812
-813
-814</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'documented/gemstone/creature.rb', line 812</span>
-
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_damage_report'>damage_report</span><span class='lparen'>(</span><span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-  <span class='const'><span class='object_link'><a href="CreatureInstance.html" title="Lich::Gemstone::CreatureInstance (class)">CreatureInstance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_damage_report'><span class='object_link'><a href="CreatureInstance.html#damage_report-class_method" title="Lich::Gemstone::CreatureInstance.damage_report (method)">damage_report</a></span></span><span class='lparen'>(</span><span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="print_damage_report-class_method">
-  
-    .<strong>print_damage_report</strong>(**options)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Print formatted damage report</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-817
-818
-819</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'documented/gemstone/creature.rb', line 817</span>
-
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_print_damage_report'>print_damage_report</span><span class='lparen'>(</span><span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-  <span class='const'><span class='object_link'><a href="CreatureInstance.html" title="Lich::Gemstone::CreatureInstance (class)">CreatureInstance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_print_damage_report'><span class='object_link'><a href="CreatureInstance.html#print_damage_report-class_method" title="Lich::Gemstone::CreatureInstance.print_damage_report (method)">print_damage_report</a></span></span><span class='lparen'>(</span><span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -674,12 +543,12 @@
       <pre class="lines">
 
 
-782
-783
-784</pre>
+666
+667
+668</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/gemstone/creature.rb', line 782</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/creature.rb', line 666</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_noun'>noun</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'><span class='object_link'><a href="CreatureInstance.html" title="Lich::Gemstone::CreatureInstance (class)">CreatureInstance</a></span></span><span class='period'>.</span><span class='id identifier rubyid_register'><span class='object_link'><a href="CreatureInstance.html#register-class_method" title="Lich::Gemstone::CreatureInstance.register (method)">register</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_noun'>noun</span><span class='rparen'>)</span>
@@ -715,17 +584,17 @@
       <pre class="lines">
 
 
-792
-793
-794
-795
-796
-797
-798
-799</pre>
+676
+677
+678
+679
+680
+681
+682
+683</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'documented/gemstone/creature.rb', line 792</span>
+      <pre class="code"><span class="info file"># File 'documented/gemstone/creature.rb', line 676</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_stats'>stats</span>
   <span class='lbrace'>{</span>
@@ -745,7 +614,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Nov 23 01:38:37 2025 by
+  Generated on Sun Nov 23 03:17:20 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.2.9).
 </div>
